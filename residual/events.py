@@ -10,6 +10,7 @@ from .net import cache_file_for, fetch
 ROOT = Path(__file__).resolve().parent.parent
 EVENTS_FILE = ROOT / "data" / "events.json"
 REQUIRED = ("revenue_actual", "revenue_guidance_prior", "revenue_guidance_next", "revenue_prior_actual")
+OPTIONAL = ("eps_diluted", "gross_margin")
 
 
 def _nth_sunday(year, month, n):
@@ -35,9 +36,36 @@ def session(dt: datetime) -> str:
     return "intraday"
 
 
+SOURCES = ROOT / "data" / "sources"
+
+
+def archive_source(raw: bytes) -> str:
+    """Store a source document under its SHA-256 so replay/verify never need the network."""
+    from .extract import sha256
+    h = sha256(raw)
+    SOURCES.mkdir(parents=True, exist_ok=True)
+    p = SOURCES / f"{h}.htm"
+    if not p.exists():
+        p.write_bytes(raw)
+    return h
+
+
+def source_raw(url: str, sha: str, *, allow_network: bool = True) -> bytes:
+    """Source bytes from the committed archive; the network is only a fallback."""
+    p = SOURCES / f"{sha}.htm"
+    if p.exists():
+        return p.read_bytes()
+    if not allow_network:
+        raise FileNotFoundError(f"source {sha[:12]} not archived and network disabled ({url})")
+    raw = fetch(url)
+    archive_source(raw)
+    return raw
+
+
 def _load_release(filing: dict) -> dict:
     url = edgar.press_release_url(filing)
     raw = fetch(url)
+    archive_source(raw)
     text = edgar.html_to_text(raw)
     return {"url": url, "raw": raw, "text": text,
             "fields": extract_all(filing["ticker"], raw, text, url)}
@@ -78,9 +106,11 @@ def build_event(filing: dict, prev: dict) -> dict:
         prior_growth = _pct(g["value"], earnings["revenue_prior_actual"]["value"])
         diff = guided_growth - prior_growth
         surprise = {
-            "expected_source": "company's prior-quarter revenue outlook midpoint",
-            "revenue_expected": g["value"], "revenue_actual": a,
-            "revenue_surprise_pct": round(_pct(a, g["value"]), 3),
+            "kind": "company-guidance surprise",
+            "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint "
+                     "(not analyst consensus)",
+            "revenue_guided_mid": g["value"], "revenue_actual": a,
+            "guidance_surprise_pct": round(_pct(a, g["value"]), 3),
             "vs_guidance_band": "above" if a > g["high"] else "below" if a < g["low"] else "inside",
             "next_quarter_guidance_mid": nxt,
             "guided_sequential_growth_pct": round(guided_growth, 3),
@@ -107,7 +137,12 @@ def build_event(filing: dict, prev: dict) -> dict:
         "commentary": cur["fields"]["commentary"],
         "surprise": surprise,
         "validation": {"checks": checks, "missing_required": missing,
-                       "all_required_verified": not missing},
+                       "all_required_verified": not missing,
+                       "required_fields": list(REQUIRED),
+                       # Optional fields are displayed as evidence only; the model never reads them,
+                       # so their absence neither blocks nor resizes a trade.
+                       "optional_fields": {n: ("reported" if earnings[n] and earnings[n].get("verified")
+                                               else "not_reported") for n in OPTIONAL}},
         "status": "complete" if not missing else "data_incomplete",
     }
 
@@ -123,7 +158,7 @@ def build_dataset(since: str = "2025-10-15", until: str | None = None, tickers=N
             ev = build_event(f, filings[i - 1])
             events.append(ev)
             print(f"  {ev['event_id']:<16} {ev['status']:<16} "
-                  f"surprise={ev['surprise']['revenue_surprise_pct'] if ev['surprise'] else '-'}", flush=True)
+                  f"guidance_surprise={ev['surprise']['guidance_surprise_pct'] if ev['surprise'] else '-'}", flush=True)
     return sorted(events, key=lambda e: e["release_ms"])
 
 

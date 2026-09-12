@@ -2,7 +2,8 @@
 
 Symbols are Bitget USDT-M perpetuals (`<TICKER>USDT`). Only companies that
 publish a numeric next-quarter revenue outlook in their earnings press release
-are included, so the "expected" value always has a primary-source citation.
+are included, so the guidance baseline for the company-guidance surprise always
+has a primary-source citation. This is not an analyst-consensus surprise.
 """
 
 MARKET = "QQQUSDT"  # broad-market proxy; the only index perp listed across the full sample

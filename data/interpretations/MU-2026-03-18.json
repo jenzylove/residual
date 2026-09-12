@@ -5,21 +5,25 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "6397937a00f4684544f8b3ee83b872a05791907f49167999fd2ddda98ece710f",
- "created_at": "2026-09-12T21:13:35Z",
- "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\"]}",
+ "prompt_sha256": "31635e45a08b1ceedf552340af1f0db5b24340e5f5f3dad837be71616e4291c2",
+ "created_at": "2026-09-12T22:52:00Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Massive revenue beat, raised forward guidance to $33.5B (well above this quarter), record margins, and a 30% dividend hike all signal strength, yet the residual move is sharply negative, conflicting with the bullish guidance and outlook.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\", \"Revenue | $33.5 billion \\u00b1 $750 million\"]}",
  "attempts": [
   {
+   "detail": "quote not found verbatim in source: 'Micron set new records across revenue, gross margin, EPS, and free cash flow in '",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat prior guidance by 27.6%, next-quarter guidance raised well above this quarter's actuals, margins expanding sharply, dividend hiked 30% - all fundamentally bullish, yet residual is -4.09%. Reaction direction conflicts with guidance/commentary, suggesting mispricing or unmodeled factor rather than durable negative signal.\", \"evidence_quotes\": [\"Micron set new records across revenue, gross margin, EPS, and free cash flow in fiscal Q2... and we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"our board has approved a 30% increase in our quarterly dividend\"]}"
+  },
+  {
    "detail": "ok",
-   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\"]}"
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Massive revenue beat, raised forward guidance to $33.5B (well above this quarter), record margins, and a 30% dividend hike all signal strength, yet the residual move is sharply negative, conflicting with the bullish guidance and outlook.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\", \"Revenue | $33.5 billion \\u00b1 $750 million\"]}"
   }
  ],
  "label": "contradicted_by_guidance",
- "confidence": 0.82,
- "rationale": "Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.",
+ "confidence": 0.85,
+ "rationale": "Massive revenue beat, raised forward guidance to $33.5B (well above this quarter), record margins, and a 30% dividend hike all signal strength, yet the residual move is sharply negative, conflicting with the bullish guidance and outlook.",
  "evidence_quotes": [
   "we expect significant records again in fiscal Q3",
-  "Revenue $33.5 billion \u00b1 $750 million",
-  "Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend."
+  "Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.",
+  "Revenue | $33.5 billion \u00b1 $750 million"
  ]
 }

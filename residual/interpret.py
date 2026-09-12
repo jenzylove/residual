@@ -39,8 +39,8 @@ def build_prompt(event: dict, analysis: dict, source_text: str) -> str:
     s, d = event["surprise"], analysis["decomposition"]
     facts = {
         "company": event["ticker"], "release_utc": event["release_utc"],
-        "revenue_actual_usd_m": s["revenue_actual"], "revenue_expected_usd_m": s["revenue_expected"],
-        "expected_source": s["expected_source"], "revenue_surprise_pct": s["revenue_surprise_pct"],
+        "revenue_actual_usd_m": s["revenue_actual"], "revenue_guided_mid_usd_m": s["revenue_guided_mid"],
+        "surprise_basis": s["basis"], "guidance_surprise_pct": s["guidance_surprise_pct"],
         "next_quarter_guidance_mid_usd_m": s["next_quarter_guidance_mid"],
         "guidance_direction_vs_prior_guided_growth": s["guidance_direction"],
     }

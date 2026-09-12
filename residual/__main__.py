@@ -60,7 +60,7 @@ def cmd_verify(args):
         for name, f in ev["earnings"].items():
             if not f:
                 continue
-            raw = fetch(f["source_url"])
+            raw = events.source_raw(f["source_url"], f["source_sha256"], allow_network=not args.offline)
             ok, detail = verify_field(f, edgar.html_to_text(raw), raw)
             bad += not ok
             if not ok or args.verbose:
@@ -95,8 +95,10 @@ def main():
     b = sub.add_parser("build"); b.add_argument("--since", default="2025-10-15"); b.add_argument("--until")
     s = sub.add_parser("snapshot"); s.add_argument("--refresh", action="store_true")
     r = sub.add_parser("replay"); r.add_argument("--no-ai", action="store_true", help="disable the AI gate")
-    r.add_argument("--offline", action="store_true", help="use cached interpretations only")
+    r.add_argument("--offline", action="store_true",
+                   help="no network at all: committed sources, snapshots and cached interpretations only")
     v = sub.add_parser("verify"); v.add_argument("-v", "--verbose", action="store_true")
+    v.add_argument("--offline", action="store_true", help="use only the committed data/sources archive")
     l = sub.add_parser("live"); l.add_argument("--loop", type=int, default=0, help="poll every N seconds")
     sv = sub.add_parser("serve"); sv.add_argument("--port", type=int, default=8000)
     a = sub.add_parser("all"); a.add_argument("--no-ai", action="store_true"); a.add_argument("--offline", action="store_true")

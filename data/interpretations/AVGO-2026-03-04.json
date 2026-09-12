@@ -5,15 +5,20 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "3ede734ad70656979ca306f5b696e2920636c4e4fb724ccf1fc8193cb6b110bc",
- "created_at": "2026-09-12T21:10:21Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat modest but guidance raised sharply with accelerating AI demand, margin expansion, and record cash returns, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking\", \"we expect AI semiconductor revenue to be $10.7 billion in Q2\", \"In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%\"]}",
+ "prompt_sha256": "09815d7b86912d251f63a32a5e4e0ed38928a9fca9fb7ed318b93031d1800391",
+ "created_at": "2026-09-12T22:51:46Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance and next-quarter guidance was raised sharply (47% YoY growth) with AI segment accelerating, supporting a durable positive residual rather than a one-off pop.\", \"evidence_quotes\": [\"Second quarter fiscal year 2026 revenue guidance of approximately $22.0 billion, an increase of 47 percent from the prior year period\", \"Our AI revenue growth is accelerating, and we expect AI semiconductor revenue to be $10.7 billion in Q2.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance and next-quarter guidance was raised sharply (47% YoY growth) with AI segment accelerating, supporting a durable positive residual rather than a one-off pop.\", \"evidence_quotes\": [\"Second quarter fiscal year 2026 revenue guidance of approximately $22.0 billion, an increase of 47 percent from the prior year period\", \"Our AI revenue growth is accelerating, and we expect AI semiconductor revenue to be $10.7 billion in Q2.\"]}"
+  }
+ ],
  "label": "durable",
  "confidence": 0.78,
- "rationale": "Revenue beat modest but guidance raised sharply with accelerating AI demand, margin expansion, and record cash returns, supporting a lasting positive re-rating rather than a one-off pop.",
+ "rationale": "Revenue beat prior guidance and next-quarter guidance was raised sharply (47% YoY growth) with AI segment accelerating, supporting a durable positive residual rather than a one-off pop.",
  "evidence_quotes": [
-  "Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking",
-  "we expect AI semiconductor revenue to be $10.7 billion in Q2",
-  "In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%"
+  "Second quarter fiscal year 2026 revenue guidance of approximately $22.0 billion, an increase of 47 percent from the prior year period",
+  "Our AI revenue growth is accelerating, and we expect AI semiconductor revenue to be $10.7 billion in Q2."
  ]
 }

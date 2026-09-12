@@ -1,13 +1,15 @@
 """Live watcher: polls SEC EDGAR for the next eligible earnings release in the
 universe, builds the event record, and decides with live Bitget data.
 
-Each run appends one record to data/live_log.jsonl:
-  * no new release   -> NO_TRADE ("no eligible event"), with estimated next dates
-                        and a live Bitget liquidity probe for the universe
-  * new release      -> event record is added to data/events.json, then
-                        PENDING (reaction window still open), NO_TRADE (gates), or
-                        TRADE (paper pair opened at live bid/ask from the order book)
-Open live positions are closed on a later run once their horizon has passed.
+Each run appends one record to data/live_log.jsonl. Lifecycle of an event:
+  new filing      -> event record added to data/events.json
+  before t_obs    -> PENDING (stored in data/live_pending.json, re-checked every run)
+  t_obs..t_obs+1h -> decision with live data: NO_TRADE (gates) or TRADE
+                     (paper pair opened at the live bid/ask from the order book)
+  after t_obs+1h  -> NO_TRADE (entry window passed); replay still scores it
+  after horizon   -> open paper position closed at the live bid/ask
+With no new filing and nothing pending the run records NO_TRADE plus a live
+Bitget liquidity probe. Paper only: no orders are sent to Bitget.
 """
 import json
 import time
@@ -21,6 +23,8 @@ from .strategy import BASE_NOTIONAL, analyze, decide, learn_params
 ROOT = Path(__file__).resolve().parent.parent
 LIVE_LOG = ROOT / "data" / "live_log.jsonl"
 POSITIONS = ROOT / "data" / "live_positions.json"
+PENDING = ROOT / "data" / "live_pending.json"
+HOUR_MS = 3_600_000
 
 
 def load_live_log(limit: int = 100) -> list[dict]:
@@ -30,14 +34,23 @@ def load_live_log(limit: int = 100) -> list[dict]:
     return [json.loads(x) for x in lines[-limit:] if x.strip()]
 
 
+def _read(p: Path, default):
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
+
+
+def _write(p: Path, obj):
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(obj, indent=1, default=str), encoding="utf-8")
+
+
 def _append(rec: dict):
     LIVE_LOG.parent.mkdir(parents=True, exist_ok=True)
     with LIVE_LOG.open("a", encoding="utf-8") as f:
         f.write(json.dumps(rec, default=str) + "\n")
 
 
-def _now_iso():
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+def _iso(ms: int) -> str:
+    return datetime.fromtimestamp(ms / 1000, timezone.utc).isoformat(timespec="seconds")
 
 
 def probe(symbol: str) -> dict:
@@ -57,49 +70,46 @@ def probe(symbol: str) -> dict:
         return {"symbol": symbol, "error": str(e)}
 
 
-def _positions() -> list[dict]:
-    return json.loads(POSITIONS.read_text(encoding="utf-8")) if POSITIONS.exists() else []
-
-
-def _save_positions(p):
-    POSITIONS.write_text(json.dumps(p, indent=1), encoding="utf-8")
-
-
 def _close_due_positions(now_ms: int) -> list[dict]:
-    closed, keep = [], []
-    for pos in _positions():
-        if pos["status"] == "open" and now_ms >= pos["exit_due_ms"]:
-            net = 0.0
-            for leg in pos["legs"]:
-                q = probe(leg["symbol"])
-                px = q["bid"] if leg["side"] > 0 else q["ask"]
-                fee = leg["fee_rate"] * leg["qty"] * px
-                leg.update({"exit_price": px, "exit_fee": fee, "exit_quote": q})
-                net += leg["side"] * (px - leg["entry_price"]) * leg["qty"] - leg["entry_fee"] - fee
-            pos.update({"status": "closed", "closed_at": _now_iso(), "net_pnl": net})
+    positions, closed = _read(POSITIONS, []), []
+    for pos in positions:
+        if pos["status"] != "open" or now_ms < pos["exit_due_ms"]:
+            continue
+        net = 0.0
+        for leg in pos["legs"]:
+            q = probe(leg["symbol"])
+            if "error" in q:
+                break
+            px = q["bid"] if leg["side"] > 0 else q["ask"]
+            fee = leg["fee_rate"] * leg["qty"] * px
+            leg.update({"exit_price": px, "exit_fee": fee, "exit_quote": q})
+            net += leg["side"] * (px - leg["entry_price"]) * leg["qty"] - leg["entry_fee"] - fee
+        else:
+            pos.update({"status": "closed", "closed_at": _iso(now_ms), "net_pnl": net,
+                        "funding": "not charged: live funding settlements are not tracked for paper positions"})
             closed.append(pos)
-        keep.append(pos)
     if closed:
-        _save_positions(keep)
+        _write(POSITIONS, positions)
     return closed
 
 
-def _open_position(event, a, dec) -> dict:
-    legs = []
+def _open_position(event, a, dec, now_ms) -> dict | None:
     n = BASE_NOTIONAL * dec["size"]
     spec = [(event["company_symbol"], dec["direction"], n)]
     if a.get("hedge"):
         spec.append((a["hedge"]["symbol"], -dec["direction"], abs(a["hedge"]["beta"]) * n))
+    legs = []
     for sym, side, notional in spec:
         q = probe(sym)
+        if "error" in q:
+            return None
         px = q["ask"] if side > 0 else q["bid"]
-        fee_rate = 0.0006
         qty = notional / px
-        legs.append({"symbol": sym, "side": side, "qty": qty, "entry_price": px, "fee_rate": fee_rate,
-                     "entry_fee": fee_rate * qty * px, "entry_quote": q})
-    pos = {"event_id": event["event_id"], "status": "open", "opened_at": _now_iso(),
-           "exit_due_ms": int(time.time() * 1000) + market.HOLD_HOURS * 3_600_000, "legs": legs}
-    _save_positions(_positions() + [pos])
+        legs.append({"symbol": sym, "side": side, "qty": qty, "entry_price": px, "fee_rate": 0.0006,
+                     "entry_fee": 0.0006 * qty * px, "entry_quote": q})
+    pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms),
+           "exit_due_ms": now_ms + market.HOLD_HOURS * HOUR_MS, "legs": legs}
+    _write(POSITIONS, _read(POSITIONS, []) + [pos])
     return pos
 
 
@@ -108,11 +118,39 @@ def _history_params(dataset, before_ms):
     for ev in dataset:
         if ev["release_ms"] >= before_ms:
             continue
-        snap = market.load_snapshot(ev["event_id"])
-        a = analyze(ev, snap)
+        a = analyze(ev, market.load_snapshot(ev["event_id"]))
         if "times" in a and a["times"]["t_exit"] <= before_ms:
             hist.append(a)
     return learn_params(hist)
+
+
+def evaluate(ev: dict, dataset: list[dict], now_ms: int, contracts: dict) -> dict:
+    tm = market.event_times(ev["release_ms"])
+    out = {"event_id": ev["event_id"], "event_status": ev["status"], "release_utc": ev["release_utc"]}
+    if now_ms < tm["t_obs"]:
+        out.update({"decision": "PENDING", "reason": f"reaction window closes {_iso(tm['t_obs'])}"})
+        return out
+    snap = market.build_snapshot(ev, contracts, now_ms=now_ms)
+    market.save_snapshot(snap)
+    a = analyze(ev, snap)
+    params = _history_params(dataset, ev["release_ms"])
+    interp = None
+    if "residual" in a and ev["surprise"]:
+        raw = events.source_raw(ev["source"]["press_release_url"], ev["source"]["sha256"])
+        interp = interpret(ev, a, edgar.html_to_text(raw))
+    dec = decide(ev, a, params, interp)
+    if dec["decision"] == "TRADE" and not (tm["t_obs"] <= now_ms < tm["t_obs"] + HOUR_MS):
+        dec = {**dec, "decision": "NO_TRADE", "reasons": ["entry_window_passed"]}
+    out.update({"decision": dec["decision"], "reason": ", ".join(dec["reasons"]) or dec.get("structure"),
+                "residual": a.get("residual"), "params": params, "gates": dec["gates"],
+                "interpretation": {k: interp.get(k) for k in ("status", "label", "confidence", "detail")} if interp else None})
+    if dec["decision"] == "TRADE":
+        pos = _open_position(ev, a, dec, now_ms)
+        if pos is None:
+            out.update({"decision": "NO_TRADE", "reason": "live order book unavailable at entry"})
+        else:
+            out["position"] = pos
+    return out
 
 
 def watch(now_ms: int | None = None) -> dict:
@@ -131,49 +169,39 @@ def watch(now_ms: int | None = None) -> dict:
             last = datetime.fromisoformat(filings[-1]["accepted_et"])
             next_est[t] = (last + timedelta(days=91)).date().isoformat()
         for i, f in enumerate(filings):
-            if i and f["accession"] not in known and f["accepted_et"][:10] > last_known.get(t, "2025-10-15"):
+            if i and f["accession"] not in known and f["accepted_et"][:10] >= last_known.get(t, "2025-10-15"):
                 new.append((f, filings[i - 1]))
 
-    rec = {"checked_at": _now_iso(), "universe": list(universe.COMPANIES),
+    rec = {"checked_at": _iso(now_ms), "universe": list(universe.COMPANIES),
            "next_estimated_release": dict(sorted(next_est.items(), key=lambda kv: kv[1])),
            "closed_positions": closed}
-    if not new:
+    for f, prev in new:
+        ev = events.build_event(f, prev)
+        dataset = sorted([e for e in dataset if e["event_id"] != ev["event_id"]] + [ev],
+                         key=lambda e: e["release_ms"])
+        events.save_events(dataset)
+        pending = _read(PENDING, [])
+        if ev["event_id"] not in pending:
+            _write(PENDING, pending + [ev["event_id"]])
+
+    pending = _read(PENDING, [])
+    if not pending:
         rec.update({"decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event",
                     "market_probe": [probe(universe.sym(t)) for t in universe.COMPANIES] + [probe(universe.MARKET)]})
         _append(rec)
         return rec
 
     contracts = bitget.contracts(cache=False)
-    outcomes = []
-    for f, prev in new:
-        ev = events.build_event(f, prev)
-        dataset = sorted([e for e in dataset if e["event_id"] != ev["event_id"]] + [ev], key=lambda e: e["release_ms"])
-        events.save_events(dataset)
-        tm = market.event_times(ev["release_ms"])
-        out = {"event_id": ev["event_id"], "event_status": ev["status"], "release_utc": ev["release_utc"]}
-        if now_ms < tm["t_obs"]:
-            out.update({"decision": "PENDING", "reason": f"reaction window closes {datetime.fromtimestamp(tm['t_obs'] / 1000, timezone.utc).isoformat()}"})
-            outcomes.append(out)
-            continue
-        snap = market.build_snapshot(ev, contracts, now_ms=now_ms)
-        market.save_snapshot(snap)
-        a = analyze(ev, snap)
-        params = _history_params(dataset, ev["release_ms"])
-        interp = None
-        if "residual" in a and ev["surprise"]:
-            interp = interpret(ev, a, edgar.html_to_text(edgar.fetch(ev["source"]["press_release_url"])))
-        dec = decide(ev, a, params, interp)
-        entry_open = tm["t_obs"] <= now_ms < tm["t_obs"] + 3_600_000
-        if dec["decision"] == "TRADE" and not entry_open:
-            dec = {**dec, "decision": "NO_TRADE", "reasons": ["entry_window_passed"],
-                   "note": "signal qualified but the live entry window (t_obs to t_obs+1h) has passed; see replay"}
-        out.update({"decision": dec["decision"], "reason": ", ".join(dec["reasons"]) or dec.get("structure"),
-                    "residual": a.get("residual"), "params": params, "gates": dec["gates"],
-                    "interpretation": {k: interp.get(k) for k in ("status", "label", "confidence", "detail")} if interp else None})
-        if dec["decision"] == "TRADE":
-            out["position"] = _open_position(ev, a, dec)
+    by_id = {e["event_id"]: e for e in dataset}
+    outcomes, still = [], []
+    for eid in pending:
+        out = evaluate(by_id[eid], dataset, now_ms, contracts)
         outcomes.append(out)
+        if out["decision"] == "PENDING":
+            still.append(eid)
+    _write(PENDING, still)
     rec.update({"decision": ",".join(o["decision"] for o in outcomes),
-                "reason": f"{len(outcomes)} new event record(s) added", "new_events": outcomes})
+                "reason": f"{len(new)} new event record(s) added; {len(outcomes)} event(s) evaluated",
+                "new_events": outcomes})
     _append(rec)
     return rec

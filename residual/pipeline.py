@@ -26,9 +26,21 @@ def iso(ms):
     return datetime.fromtimestamp(ms / 1000, timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z")
 
 
-def metrics(rows: list[dict], key: str) -> dict:
-    pnl = [r[key]["net"] if r.get(key) else 0.0 for r in rows]
-    traded = [r[key] for r in rows if r.get(key)]
+def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
+    """primary: only trades with complete Bitget funding data count (others are excluded, P&L 0).
+    conservative: every trade counts, unavailable funding charged at the worst observed rate."""
+    pnl, traded, excluded = [], [], 0
+    for r in rows:
+        t = r.get(key)
+        if not t:
+            pnl.append(0.0)
+        elif basis == "primary" and t["funding_data"] != "complete":
+            excluded += 1
+            pnl.append(0.0)
+        else:
+            v = t["net"] if basis == "primary" else t["net_conservative"]
+            pnl.append(v)
+            traded.append({**t, "net": v})
     eq, peak, mdd = 0.0, 0.0, 0.0
     curve = []
     for p in pnl:
@@ -38,8 +50,9 @@ def metrics(rows: list[dict], key: str) -> dict:
         curve.append(round(eq, 2))
     tp = [t["net"] for t in traded]
     return {
-        "total_net_pnl": round(sum(pnl), 2), "trades": len(traded),
-        "no_trades": len(rows) - len(traded),
+        "basis": basis, "total_net_pnl": round(sum(pnl), 2), "trades": len(traded),
+        "excluded_funding_unavailable": excluded,
+        "no_trades": len(rows) - len(traded) - excluded,
         "hit_rate": round(sum(p > 0 for p in tp) / len(tp), 3) if tp else None,
         "avg_pnl_per_trade": round(statistics.fmean(tp), 2) if tp else None,
         "pnl_std_per_trade": round(statistics.stdev(tp), 2) if len(tp) > 1 else None,
@@ -50,22 +63,42 @@ def metrics(rows: list[dict], key: str) -> dict:
     }
 
 
-def _source_text(event):
-    return edgar.html_to_text(fetch(event["source"]["press_release_url"]))
+def _source_text(event, allow_network=True):
+    from .events import source_raw
+    return edgar.html_to_text(source_raw(event["source"]["press_release_url"], event["source"]["sha256"],
+                                         allow_network=allow_network))
 
 
 def _slim_sim(sim):
     if not sim:
         return None
-    return {k: sim[k] for k in ("net", "gross_mid", "fees", "slippage", "funding", "entry_ms", "exit_ms",
-                                "stopped", "holding_hours", "funding_data", "legs")}
+    return {k: sim[k] for k in ("net", "net_conservative", "gross_mid", "fees", "slippage", "funding",
+                                "funding_conservative", "entry_ms", "exit_ms", "stopped", "holding_hours",
+                                "funding_data", "legs")}
+
+
+def funding_caps(snaps) -> dict[str, float]:
+    """Largest absolute funding rate observed per symbol across all stored settlements."""
+    caps: dict[str, float] = {}
+    for snap in snaps:
+        for s, info in (snap or {}).get("funding", {}).items():
+            for x in info.get("settlements", []):
+                caps[s] = max(caps.get(s, 0.0), abs(x["rate"]))
+    return caps
 
 
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True) -> dict:
     events = load_events()
+    snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}
+    caps = funding_caps(snaps.values())
+    worst = max(caps.values(), default=0.0)
+    for snap in snaps.values():
+        for s, info in (snap or {}).get("funding", {}).items():
+            # a symbol with no nonzero observed settlement gets the worst rate seen on any symbol
+            info["max_abs_rate_observed"] = caps.get(s) or worst
     analyzed = []
     for ev in events:
-        snap = load_snapshot(ev["event_id"])
+        snap = snaps[ev["event_id"]]
         analyzed.append((ev, snap, analyze(ev, snap)))
 
     rows, orders, balance = [], [], START_BALANCE
@@ -75,7 +108,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         params = learn_params(history)
         interp = None
         if use_ai and "residual" in a and ev["surprise"]:
-            interp = interpret(ev, a, _source_text(ev), allow_call=allow_llm_calls)
+            interp = interpret(ev, a, _source_text(ev, allow_network=allow_llm_calls), allow_call=allow_llm_calls)
         dec = decide(ev, a, params, interp if use_ai else None)
 
         row = {"event_id": ev["event_id"], "params": params, "decision": dec,
@@ -86,14 +119,18 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                 row["residual"] = {**_slim_sim(sim), "attribution": attribute(ev, snap, a, sim, dec["direction"])}
                 for o in sim["orders"]:
                     orders.append({**o, "time_utc": iso(o["time_ms"])})
-                balance += sim["net"]
+                balance += sim["net_conservative"]  # equals net when funding data is complete
                 row["balance_after"] = balance
             unh = run_trade(ev, snap, a, dec["direction"], dec["size"], hedged=False, tag="unhedged")
             row["unhedged"] = _slim_sim(unh)
         if ev["surprise"] and a["gates"].get("market_data", (False,))[0]:
-            d = 1 if ev["surprise"]["revenue_surprise_pct"] > 0 else -1
+            d = 1 if ev["surprise"]["guidance_surprise_pct"] > 0 else -1
             row["naive_direction"] = d
             row["naive"] = _slim_sim(run_trade(ev, snap, a, d, 1.0, hedged=False, tag="naive"))
+            # like-for-like baseline: headline direction on exactly the events Residual traded, same size
+            if row["residual"]:
+                row["naive_same_events"] = _slim_sim(run_trade(ev, snap, a, d, dec["size"], hedged=False,
+                                                               tag="naive_same"))
         row["analysis"] = {k: v for k, v in a.items() if k not in ("counterfactual",)}
         row["analysis"]["gates"] = {k: {"pass": v[0], "detail": v[1]} for k, v in a["gates"].items()}
         rows.append(row)
@@ -104,8 +141,11 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                   f"params={params['mode']:+d}/{params['k']} "
                   f"pnl={r['net'] if r else 0:+9.2f}  {','.join(dec['reasons'])}", flush=True)
 
-    summary = {k: metrics(rows, k) for k in ("residual", "naive", "unhedged")}
+    keys = ("residual", "unhedged", "naive_same_events", "naive")
+    summary = {k: metrics(rows, k) for k in keys}
     summary["no_trade"] = metrics(rows, "__none__")
+    summary_conservative = {k: metrics(rows, k, "conservative") for k in keys}
+    summary_conservative["no_trade"] = metrics(rows, "__none__", "conservative")
     warm = [r for r in rows if r["params"]["source"] == "walk-forward"]
     summary_post_warmup = {k: metrics(warm, k) for k in ("residual", "naive", "unhedged")}
     return {
@@ -117,7 +157,8 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events "
                       "whose exit precedes that event's release; no event is scored with parameters "
                       "trained on itself",
-        "summary": summary, "summary_post_warmup": summary_post_warmup,
+        "summary": summary, "summary_conservative_funding": summary_conservative,
+        "funding_caps": caps, "summary_post_warmup": summary_post_warmup,
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }

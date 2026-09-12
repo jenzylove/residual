@@ -81,10 +81,11 @@
    "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 13100.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 13100.0,
    "revenue_actual": 13700.0,
-   "revenue_surprise_pct": 4.58,
+   "guidance_surprise_pct": 4.58,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 13300.0,
    "guided_sequential_growth_pct": -2.92,
@@ -125,7 +126,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -215,10 +226,11 @@
   },
   "commentary": null,
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 49000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 49000.0,
    "revenue_actual": 51240.0,
-   "revenue_surprise_pct": 4.571,
+   "guidance_surprise_pct": 4.571,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 57500.0,
    "guided_sequential_growth_pct": 12.217,
@@ -259,7 +271,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -345,10 +367,11 @@
    "source_sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 176750.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 176750.0,
    "revenue_actual": 180200.0,
-   "revenue_surprise_pct": 1.952,
+   "guidance_surprise_pct": 1.952,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 209500.0,
    "guided_sequential_growth_pct": 16.26,
@@ -389,7 +412,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -485,10 +518,11 @@
    "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 1085.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 1085.0,
    "revenue_actual": 1181.0,
-   "revenue_surprise_pct": 8.848,
+   "guidance_surprise_pct": 8.848,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 1329.0,
    "guided_sequential_growth_pct": 12.532,
@@ -529,7 +563,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -625,10 +669,11 @@
    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 8700.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 8700.0,
    "revenue_actual": 9200.0,
-   "revenue_surprise_pct": 5.747,
+   "guidance_surprise_pct": 5.747,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 9600.0,
    "guided_sequential_growth_pct": 4.348,
@@ -669,7 +714,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -749,10 +804,11 @@
   },
   "commentary": null,
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 54000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 54000.0,
    "revenue_actual": 57000.0,
-   "revenue_surprise_pct": 5.556,
+   "guidance_surprise_pct": 5.556,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 65000.0,
    "guided_sequential_growth_pct": 14.035,
@@ -793,7 +849,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -879,10 +945,11 @@
    "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 2060.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2060.0,
    "revenue_actual": 2075.0,
-   "revenue_surprise_pct": 0.728,
+   "guidance_surprise_pct": 0.728,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 2200.0,
    "guided_sequential_growth_pct": 6.024,
@@ -923,7 +990,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1019,10 +1096,11 @@
    "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 17400.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 17400.0,
    "revenue_actual": 18015.0,
-   "revenue_surprise_pct": 3.534,
+   "guidance_surprise_pct": 3.534,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 19100.0,
    "guided_sequential_growth_pct": 6.023,
@@ -1063,7 +1141,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1149,10 +1237,11 @@
    "source_sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 12500.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 12500.0,
    "revenue_actual": 13640.0,
-   "revenue_surprise_pct": 9.12,
+   "guidance_surprise_pct": 9.12,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 18700.0,
    "guided_sequential_growth_pct": 37.097,
@@ -1193,7 +1282,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1279,10 +1378,11 @@
    "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 13300.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 13300.0,
    "revenue_actual": 13700.0,
-   "revenue_surprise_pct": 3.008,
+   "guidance_surprise_pct": 3.008,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 12200.0,
    "guided_sequential_growth_pct": -10.949,
@@ -1323,7 +1423,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1403,10 +1513,11 @@
   },
   "commentary": null,
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 57500.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 57500.0,
    "revenue_actual": 59890.0,
-   "revenue_surprise_pct": 4.157,
+   "guidance_surprise_pct": 4.157,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 55000.0,
    "guided_sequential_growth_pct": -8.165,
@@ -1447,7 +1558,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1543,10 +1664,11 @@
    "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 1329.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 1329.0,
    "revenue_actual": 1407.0,
-   "revenue_surprise_pct": 5.869,
+   "guidance_surprise_pct": 5.869,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 1534.0,
    "guided_sequential_growth_pct": 9.026,
@@ -1587,7 +1709,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1683,10 +1815,11 @@
    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 9600.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 9600.0,
    "revenue_actual": 10300.0,
-   "revenue_surprise_pct": 7.292,
+   "guidance_surprise_pct": 7.292,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 9800.0,
    "guided_sequential_growth_pct": -4.854,
@@ -1727,7 +1860,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1813,10 +1956,11 @@
    "source_sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 209500.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 209500.0,
    "revenue_actual": 213400.0,
-   "revenue_surprise_pct": 1.862,
+   "guidance_surprise_pct": 1.862,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 176000.0,
    "guided_sequential_growth_pct": -17.526,
@@ -1857,7 +2001,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -1953,10 +2107,11 @@
    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 65000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 65000.0,
    "revenue_actual": 68100.0,
-   "revenue_surprise_pct": 4.769,
+   "guidance_surprise_pct": 4.769,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 78000.0,
    "guided_sequential_growth_pct": 14.537,
@@ -1997,7 +2152,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2093,10 +2258,11 @@
    "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 19100.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 19100.0,
    "revenue_actual": 19311.0,
-   "revenue_surprise_pct": 1.105,
+   "guidance_surprise_pct": 1.105,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 22000.0,
    "guided_sequential_growth_pct": 13.925,
@@ -2137,7 +2303,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2233,10 +2409,11 @@
    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 2200.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2200.0,
    "revenue_actual": 2219.0,
-   "revenue_surprise_pct": 0.864,
+   "guidance_surprise_pct": 0.864,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 2400.0,
    "guided_sequential_growth_pct": 8.157,
@@ -2277,7 +2454,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2363,10 +2550,11 @@
    "source_sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 18700.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 18700.0,
    "revenue_actual": 23860.0,
-   "revenue_surprise_pct": 27.594,
+   "guidance_surprise_pct": 27.594,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 33500.0,
    "guided_sequential_growth_pct": 40.402,
@@ -2407,7 +2595,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2493,10 +2691,11 @@
    "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 12200.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 12200.0,
    "revenue_actual": 13600.0,
-   "revenue_surprise_pct": 11.475,
+   "guidance_surprise_pct": 11.475,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 14300.0,
    "guided_sequential_growth_pct": 5.147,
@@ -2537,7 +2736,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2623,10 +2832,11 @@
    "source_sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 55000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 55000.0,
    "revenue_actual": 56310.0,
-   "revenue_surprise_pct": 2.382,
+   "guidance_surprise_pct": 2.382,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 59500.0,
    "guided_sequential_growth_pct": 5.665,
@@ -2667,7 +2877,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2753,10 +2973,11 @@
    "source_sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 176000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 176000.0,
    "revenue_actual": 181500.0,
-   "revenue_surprise_pct": 3.125,
+   "guidance_surprise_pct": 3.125,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 196500.0,
    "guided_sequential_growth_pct": 8.264,
@@ -2797,7 +3018,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -2893,10 +3124,11 @@
    "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 1534.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 1534.0,
    "revenue_actual": 1633.0,
-   "revenue_surprise_pct": 6.454,
+   "guidance_surprise_pct": 6.454,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 1799.0,
    "guided_sequential_growth_pct": 10.165,
@@ -2937,7 +3169,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3033,10 +3275,11 @@
    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 9800.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 9800.0,
    "revenue_actual": 10300.0,
-   "revenue_surprise_pct": 5.102,
+   "guidance_surprise_pct": 5.102,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 11200.0,
    "guided_sequential_growth_pct": 8.738,
@@ -3077,7 +3320,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3173,10 +3426,11 @@
    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 78000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 78000.0,
    "revenue_actual": 81600.0,
-   "revenue_surprise_pct": 4.615,
+   "guidance_surprise_pct": 4.615,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 91000.0,
    "guided_sequential_growth_pct": 11.52,
@@ -3217,7 +3471,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3303,10 +3567,11 @@
    "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 2400.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2400.0,
    "revenue_actual": 2418.0,
-   "revenue_surprise_pct": 0.75,
+   "guidance_surprise_pct": 0.75,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 2700.0,
    "guided_sequential_growth_pct": 11.663,
@@ -3347,7 +3612,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3443,10 +3718,11 @@
    "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 22000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 22000.0,
    "revenue_actual": 22187.0,
-   "revenue_surprise_pct": 0.85,
+   "guidance_surprise_pct": 0.85,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 29400.0,
    "guided_sequential_growth_pct": 32.51,
@@ -3487,7 +3763,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3573,10 +3859,11 @@
    "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 33500.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 33500.0,
    "revenue_actual": 41460.0,
-   "revenue_surprise_pct": 23.761,
+   "guidance_surprise_pct": 23.761,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 50000.0,
    "guided_sequential_growth_pct": 20.598,
@@ -3617,7 +3904,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3703,10 +4000,11 @@
    "source_sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 14300.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 14300.0,
    "revenue_actual": 16100.0,
-   "revenue_surprise_pct": 12.587,
+   "guidance_surprise_pct": 12.587,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 16300.0,
    "guided_sequential_growth_pct": 1.242,
@@ -3747,7 +4045,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3833,10 +4141,11 @@
    "source_sha256": "96497fb80bc902097c756499df1f673303488652aa5460cfcc567546ed6cc31c"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 59500.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 59500.0,
    "revenue_actual": 60800.0,
-   "revenue_surprise_pct": 2.185,
+   "guidance_surprise_pct": 2.185,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 62500.0,
    "guided_sequential_growth_pct": 2.796,
@@ -3877,7 +4186,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -3963,10 +4282,11 @@
    "source_sha256": "3a867450183833d4b7f4ed73d81e9492f8117cb49ea6bd1986e9ad0ecd231895"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 196500.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 196500.0,
    "revenue_actual": 200600.0,
-   "revenue_surprise_pct": 2.087,
+   "guidance_surprise_pct": 2.087,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 199500.0,
    "guided_sequential_growth_pct": -0.548,
@@ -4007,7 +4327,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -4103,10 +4433,11 @@
    "source_sha256": "6f9f63ea7846f2a33710e5fad73699b5cb556b9d7d25b130e8b797eb6618af37"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 1799.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 1799.0,
    "revenue_actual": 1935.0,
-   "revenue_surprise_pct": 7.56,
+   "guidance_surprise_pct": 7.56,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 2162.0,
    "guided_sequential_growth_pct": 11.731,
@@ -4147,7 +4478,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -4243,10 +4584,11 @@
    "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 11200.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 11200.0,
    "revenue_actual": 11500.0,
-   "revenue_surprise_pct": 2.679,
+   "guidance_surprise_pct": 2.679,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 13000.0,
    "guided_sequential_growth_pct": 13.043,
@@ -4287,7 +4629,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -4383,10 +4735,11 @@
    "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 91000.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 91000.0,
    "revenue_actual": 96200.0,
-   "revenue_surprise_pct": 5.714,
+   "guidance_surprise_pct": 5.714,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 108000.0,
    "guided_sequential_growth_pct": 12.266,
@@ -4427,7 +4780,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -4513,10 +4876,11 @@
    "source_sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 2700.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2700.0,
    "revenue_actual": 2739.0,
-   "revenue_surprise_pct": 1.444,
+   "guidance_surprise_pct": 1.444,
    "vs_guidance_band": "inside",
    "next_quarter_guidance_mid": 3150.0,
    "guided_sequential_growth_pct": 15.005,
@@ -4557,7 +4921,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  },
@@ -4653,10 +5027,11 @@
    "source_sha256": "cce08d125724af16210eb7480ea5486a145ffc44ba66f5e25b8311158fa3b07b"
   },
   "surprise": {
-   "expected_source": "company's prior-quarter revenue outlook midpoint",
-   "revenue_expected": 29400.0,
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 29400.0,
    "revenue_actual": 29600.0,
-   "revenue_surprise_pct": 0.68,
+   "guidance_surprise_pct": 0.68,
    "vs_guidance_band": "above",
    "next_quarter_guidance_mid": 34800.0,
    "guided_sequential_growth_pct": 17.568,
@@ -4697,7 +5072,17 @@
     }
    ],
    "missing_required": [],
-   "all_required_verified": true
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
   },
   "status": "complete"
  }

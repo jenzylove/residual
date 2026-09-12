@@ -27,13 +27,13 @@ document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
 });
 
 function render() {
-  const s = D.summary.residual, n = D.summary.naive;
+  const s = D.summary.residual, n = D.summary.naive_same_events;
   const rej = D.rows.filter(r => r.decision.decision !== "TRADE").length;
   $("#kpis").innerHTML = [
     ["Events", D.rows.length], ["Paired trades", s.trades], ["NO_TRADE", rej],
     ["Net P&L", `<span class="${cls(s.total_net_pnl)}">${usd(s.total_net_pnl, 0)}</span>`],
     ["Hit rate", s.hit_rate == null ? "n/a" : (s.hit_rate * 100).toFixed(0) + "%"],
-    ["Naive headline", `<span class="${cls(n.total_net_pnl)}">${usd(n.total_net_pnl, 0)}</span>`],
+    ["Naive, same events", `<span class="${cls(n.total_net_pnl)}">${usd(n.total_net_pnl, 0)}</span>`],
   ].map(([k, v]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join("");
   renderBoard(); renderResults(); renderLive(); renderMethod();
   $("#foot").innerHTML = `Generated ${esc(D.generated_at)} · model ${esc(D.model_version)} · extractor ${esc(D.extractor_version)} · AI gate ${D.config.ai_gate ? "on" : "off"} · paper trading only, Bitget USDT-M perpetual market data`;
@@ -49,14 +49,14 @@ function badge(dec) {
 
 function renderBoard() {
   const rows = [...D.rows].sort((a, b) => EV[b.event_id].release_ms - EV[a.event_id].release_ms);
-  $("#board").innerHTML = `<thead><tr><th>Company</th><th>Release</th><th class="num">Revenue</th><th class="num">Expected</th>
-    <th class="num">Surprise</th><th>Guidance</th><th class="num">Residual</th><th>Decision</th><th class="num">P&amp;L</th></tr></thead><tbody>` +
+  $("#board").innerHTML = `<thead><tr><th>Company</th><th>Release</th><th class="num">Revenue</th><th class="num">Guided mid</th>
+    <th class="num">Guidance surprise</th><th>Guidance</th><th class="num">Residual</th><th>Decision</th><th class="num">P&amp;L</th></tr></thead><tbody>` +
     rows.map(r => {
       const e = EV[r.event_id], s = e.surprise || {}, res = r.analysis.residual;
       const pnl = r.residual ? r.residual.net : null;
       return `<tr data-id="${esc(r.event_id)}"><td><b>${esc(e.ticker)}</b></td><td>${esc(e.release_utc.slice(0, 16).replace("T", " "))}</td>
-        <td class="num">${bn(s.revenue_actual)}</td><td class="num">${bn(s.revenue_expected)}</td>
-        <td class="num ${cls(s.revenue_surprise_pct)}">${s.revenue_surprise_pct == null ? "n/a" : pp(s.revenue_surprise_pct, 1)}</td>
+        <td class="num">${bn(s.revenue_actual)}</td><td class="num">${bn(s.revenue_guided_mid)}</td>
+        <td class="num ${cls(s.guidance_surprise_pct)}">${s.guidance_surprise_pct == null ? "n/a" : pp(s.guidance_surprise_pct, 1)}</td>
         <td>${esc(s.guidance_direction || "n/a")}</td><td class="num ${cls(res)}">${res == null ? "n/a" : pct(res)}</td>
         <td>${badge(r.decision.decision)}</td><td class="num ${cls(pnl)}">${pnl == null ? "" : usd(pnl, 0)}</td></tr>`;
     }).join("") + "</tbody>";
@@ -75,7 +75,8 @@ function select(id) {
   if (d) {
     const dirTxt = dec.decision === "TRADE" ? dec.structure : "NO_TRADE (" + dec.reasons.map(k => GATE_NAMES[k] || k).join(", ") + ")";
     html += `<div class="card"><h3>Surprise decomposition</h3><pre class="decomp">` + esc(
-      `Reported revenue:        ${bn(s.revenue_actual)} vs ${bn(s.revenue_expected)} expected (${pp(s.revenue_surprise_pct, 1)}, ${s.vs_guidance_band} guided range)\n` +
+      `Reported revenue:        ${bn(s.revenue_actual)} vs ${bn(s.revenue_guided_mid)} company guidance midpoint\n` +
+      `Company-guidance surprise: ${pp(s.guidance_surprise_pct, 1)} (${s.vs_guidance_band} the guided range; not analyst consensus)\n` +
       `Guidance:                ${s.guidance_direction} (next quarter ${bn(s.next_quarter_guidance_mid)}, guided growth ${pp(s.guided_sequential_growth_pct, 1)} vs ${pp(s.prior_guided_sequential_growth_pct, 1)} prior)\n` +
       `Market contribution:     ${pct(d.market)}   (beta ${a.model.beta_market.toFixed(2)} x QQQ ${pct(a.window_returns.market)})\n` +
       `Sector contribution:     ${pct(d.sector)}   (beta ${a.model.beta_sector.toFixed(2)} x ${a.window_returns.sector_members}-name basket ex-market)\n` +
@@ -84,7 +85,7 @@ function select(id) {
       `Estimated residual:      ${pct(d.residual)}\n` +
       `Decision:                ${dirTxt}`) + `</pre>` + decompBar(d) + `</div>`;
   } else {
-    html += `<div class="card"><h3>Surprise decomposition</h3><p>${s.revenue_surprise_pct != null ? `Reported ${bn(s.revenue_actual)} vs ${bn(s.revenue_expected)} expected (${pp(s.revenue_surprise_pct, 1)}).` : "Earnings data incomplete."} No decomposition: ${esc((a.gates.market_data || a.gates.event_data || {}).detail || "")}</p></div>`;
+    html += `<div class="card"><h3>Surprise decomposition</h3><p>${s.guidance_surprise_pct != null ? `Reported ${bn(s.revenue_actual)} vs ${bn(s.revenue_guided_mid)} company guidance midpoint (company-guidance surprise ${pp(s.guidance_surprise_pct, 1)}).` : "Earnings data incomplete."} No decomposition: ${esc((a.gates.market_data || a.gates.event_data || {}).detail || "")}</p></div>`;
   }
 
   // Strategy card
@@ -151,7 +152,7 @@ function evidenceCard(e, a, r) {
   const E = e.earnings;
   let h = `<div class="card"><h3>Evidence</h3><dl class="kv">
     <dt>Press release</dt><dd><a href="${esc(e.source.press_release_url)}" target="_blank" rel="noopener">${esc(e.source.press_release_url.split("/").pop())}</a> · <a href="${esc(e.source.filing_index_url)}" target="_blank" rel="noopener">8-K ${esc(e.accession)}</a></dd>
-    <dt>Expectation source</dt><dd><a href="${esc(e.prior_source.press_release_url)}" target="_blank" rel="noopener">prior release ${esc(e.prior_source.accession)}</a> (company outlook midpoint)</dd>
+    <dt>Guidance baseline</dt><dd><a href="${esc(e.prior_source.press_release_url)}" target="_blank" rel="noopener">prior release ${esc(e.prior_source.accession)}</a> (company outlook midpoint, not consensus)</dd>
     <dt>Event timestamp</dt><dd>${esc(e.release_utc)} (SEC acceptance time)</dd>`;
   if (a.times) h += `<dt>Market timestamps</dt><dd>pre ${when(a.times.t_pre)} · observe ${when(a.times.t_obs)} · exit ${when(a.times.t_exit)}</dd>`;
   if (a.prices) h += `<dt>Market snapshot</dt><dd>${esc(e.company_symbol)} ${a.prices.company_pre} → ${a.prices.company_obs} · QQQUSDT ${a.prices.market_pre} → ${a.prices.market_obs}</dd>`;
@@ -183,18 +184,24 @@ function lineChart(series, W = 640, H = 220) {
 }
 
 function renderResults() {
-  const S = D.summary, order = [["residual", "Residual (hedged pair)"], ["unhedged", "Unhedged company trade"], ["naive", "Naive headline (beat→long)"], ["no_trade", "No-trade"]];
+  const S = D.summary, C = D.summary_conservative_funding;
+  const order = [["residual", "Residual (hedged pair)"], ["unhedged", "Unhedged company trade (same signals)"],
+    ["naive_same_events", "Naive headline on the same events (like-for-like)"], ["naive", "Naive headline on every event"], ["no_trade", "No-trade"]];
   const ab = D.ablation_no_ai;
-  const row = (name, m) => `<tr><td>${name}</td><td class="num ${cls(m.total_net_pnl)}">${usd(m.total_net_pnl)}</td><td class="num">${m.trades}</td><td class="num">${m.hit_rate == null ? "n/a" : (m.hit_rate * 100).toFixed(0) + "%"}</td><td class="num">${m.avg_pnl_per_trade == null ? "n/a" : usd(m.avg_pnl_per_trade)}</td><td class="num neg">${usd(m.max_drawdown)}</td><td class="num">${m.avg_holding_hours ?? "n/a"}</td><td class="num">${m.return_on_start_balance_pct.toFixed(2)}%</td></tr>`;
-  let h = `<div class="card"><h3>Walk-forward comparison · ${D.rows.length} real events</h3><div class="table-scroll"><table><thead><tr><th>Strategy</th><th class="num">Net P&amp;L</th><th class="num">Trades</th><th class="num">Hit rate</th><th class="num">Avg/trade</th><th class="num">Max DD</th><th class="num">Avg hold (h)</th><th class="num">Return</th></tr></thead><tbody>` +
-    order.map(([k, n]) => row(n, S[k])).join("") + (ab ? row("Residual without AI gate (ablation)", ab.summary.residual) : "") +
-    `</tbody></table></div><p class="note">${esc(D.evaluation)}. Every strategy uses the same entry time (release hour +${D.config.obs_hours}h), ${D.config.hold_hours}h horizon, Bitget taker fees, estimated slippage and funding where Bitget still serves it. Start balance $${D.config.start_balance.toLocaleString()}.</p></div>`;
+  const row = (name, m) => `<tr><td>${name}</td><td class="num ${cls(m.total_net_pnl)}">${usd(m.total_net_pnl)}</td><td class="num">${m.trades}</td><td class="num">${m.excluded_funding_unavailable || 0}</td><td class="num">${m.hit_rate == null ? "n/a" : (m.hit_rate * 100).toFixed(0) + "%"}</td><td class="num">${m.avg_pnl_per_trade == null ? "n/a" : usd(m.avg_pnl_per_trade)}</td><td class="num neg">${usd(m.max_drawdown)}</td><td class="num">${m.avg_holding_hours ?? "n/a"}</td></tr>`;
+  const table = (title, T, note, withAb) => `<div class="card"><h3>${title}</h3><div class="table-scroll"><table><thead><tr><th>Strategy</th><th class="num">Net P&amp;L</th><th class="num">Trades counted</th><th class="num">Excluded (no funding data)</th><th class="num">Hit rate</th><th class="num">Avg/trade</th><th class="num">Max DD</th><th class="num">Avg hold (h)</th></tr></thead><tbody>` +
+    order.map(([k, n]) => T[k] ? row(n, T[k]) : "").join("") + (withAb && ab ? row("Residual without AI gate (ablation)", ab.summary.residual) : "") +
+    `</tbody></table></div><p class="note">${note}</p></div>`;
+  let h = table(`Primary result · walk-forward over ${D.rows.length} real events`, S,
+    `Only trades whose holding period has complete Bitget funding history are counted; trades in periods where Bitget no longer serves funding are excluded (counted as $0). ${esc(D.evaluation)}. Same entry time (release hour +${D.config.obs_hours}h), ${D.config.hold_hours}h horizon, Bitget taker fees and estimated slippage for every strategy. Small sample: not evidence of a statistically significant edge.`, true);
+  if (C) h += table("Sensitivity · all trades with conservative funding", C,
+    "Every trade is counted. Where Bitget funding history is unavailable, each settlement is charged against the position at the largest absolute funding rate observed for that symbol (or the worst across symbols if none was observed).", false);
   const pw = D.summary_post_warmup;
-  if (pw) h += `<div class="card"><h3>After warm-up (parameters learned walk-forward)</h3><p>Residual ${usd(pw.residual.total_net_pnl)} over ${pw.residual.trades} trades · unhedged ${usd(pw.unhedged.total_net_pnl)} · naive ${usd(pw.naive.total_net_pnl)}</p></div>`;
+  if (pw) h += `<div class="card"><h3>After warm-up (parameters learned walk-forward)</h3><p>Residual ${usd(pw.residual.total_net_pnl)} over ${pw.residual.trades} trades · unhedged ${usd(pw.unhedged.total_net_pnl)} · naive (same events) ${usd((pw.naive_same_events || {}).total_net_pnl)}</p></div>`;
   h += `<div class="grid2"><div class="card"><h3>Cumulative net P&amp;L by event</h3>` + lineChart([
     { name: "Residual pair", values: S.residual.equity_curve, color: "var(--accent)", w: 2.5 },
     { name: "Unhedged", values: S.unhedged.equity_curve, color: "#b08a3e" },
-    { name: "Naive headline", values: S.naive.equity_curve, color: "var(--neg)", dash: 1 },
+    { name: "Naive (same events)", values: S.naive_same_events.equity_curve, color: "var(--neg)", dash: 1 },
     { name: "No-trade", values: S.no_trade.equity_curve, color: "#8b8f98" }]) + `</div>`;
   const traded = D.rows.filter(r => r.residual);
   const tot = k => traded.reduce((a, r) => a + (r.residual.attribution[k] || 0), 0);
@@ -206,11 +213,11 @@ function renderResults() {
   h += `<div class="card"><h3>Event-by-event</h3><div class="table-scroll"><table><thead><tr><th>Event</th><th>Decision</th><th>Params</th><th class="num">Residual</th><th class="num">Pair net</th><th class="num">Company leg</th><th class="num">Hedge leg</th><th class="num">Unhedged</th><th class="num">Naive</th><th>Rejected because</th></tr></thead><tbody>` +
     D.rows.map(r => `<tr><td><a href="#" data-go="${esc(r.event_id)}">${esc(r.event_id)}</a></td><td>${badge(r.decision.decision)}</td><td>${r.params.mode > 0 ? "cont" : "rev"} k=${r.params.k}</td>
       <td class="num ${cls(r.analysis.residual)}">${r.analysis.residual == null ? "n/a" : pct(r.analysis.residual)}</td>
-      <td class="num ${cls(r.residual?.net)}">${r.residual ? usd(r.residual.net) : ""}</td>
+      <td class="num ${cls(r.residual?.net)}">${r.residual ? usd(r.residual.net) + (r.residual.funding_data !== "complete" ? ' <span class="muted" title="excluded from primary result: Bitget funding history unavailable">*</span>' : "") : ""}</td>
       <td class="num">${r.residual ? usd(r.residual.attribution.company_leg) : ""}</td><td class="num">${r.residual ? usd(r.residual.attribution.hedge_leg) : ""}</td>
       <td class="num ${cls(r.unhedged?.net)}">${r.unhedged ? usd(r.unhedged.net) : ""}</td><td class="num ${cls(r.naive?.net)}">${r.naive ? usd(r.naive.net) : ""}</td>
       <td class="muted">${esc(r.decision.reasons.map(k => GATE_NAMES[k] || k).join(", "))}</td></tr>`).join("") + `</tbody></table></div>
-    <p class="note">Paper ledger with every order for both legs: <code>data/ledger.csv</code> (${D.orders.length} orders).</p></div>`;
+    <p class="note">* excluded from the primary result: Bitget funding history unavailable for the holding period. Paper ledger with every order for both legs: <code>data/ledger.csv</code> (${D.orders.length} orders). These are local paper records built from Bitget public market data; no Bitget Demo Trading orders are placed.</p></div>`;
   $("#tab-results").innerHTML = h;
   $("#tab-results").querySelectorAll("[data-go]").forEach(a => a.onclick = ev => {
     ev.preventDefault(); document.querySelector('[data-tab="board"]').click(); select(a.dataset.go);
@@ -221,7 +228,8 @@ function renderLive() {
   const log = (D.live_log || []).slice().reverse();
   if (!log.length) { $("#tab-live").innerHTML = `<div class="card"><p>No live watcher runs recorded yet. Run <code>python -m residual live</code>.</p></div>`; return; }
   const last = log[0];
-  let h = `<div class="card"><h3>Latest check · ${esc(last.checked_at)}</h3><p>${badge(last.decision.split(",")[0])} ${esc(last.reason)}</p>
+  let h = `<div class="card"><p class="note" style="margin:0"><b>Static snapshot.</b> This page is a static site; it shows the watcher log as of the last local <code>python -m residual live</code> run and last export. It does not update on its own.</p></div>`;
+  h += `<div class="card"><h3>Latest check · ${esc(last.checked_at)}</h3><p>${badge(last.decision.split(",")[0])} ${esc(last.reason)}</p>
     <p class="note">Next estimated releases (last filing + 91 days): ${Object.entries(last.next_estimated_release || {}).slice(0, 5).map(([t, d]) => `${esc(t)} ~${esc(d)}`).join(" · ")}</p></div>`;
   if (last.market_probe) h += `<div class="card"><h3>Live Bitget liquidity probe</h3><div class="table-scroll"><table><thead><tr><th>Symbol</th><th class="num">Bid</th><th class="num">Ask</th><th class="num">Spread</th><th class="num">Bid depth ≤10bps</th><th class="num">Ask depth ≤10bps</th><th class="num">Funding</th></tr></thead><tbody>` +
     last.market_probe.map(p => p.error ? `<tr><td>${esc(p.symbol)}</td><td colspan="6" class="neg">${esc(p.error)}</td></tr>` : `<tr><td>${esc(p.symbol)}</td><td class="num">${p.bid}</td><td class="num">${p.ask}</td><td class="num">${p.spread_bps} bps</td><td class="num">$${p.bid_depth_10bps_usdt.toLocaleString()}</td><td class="num">$${p.ask_depth_10bps_usdt.toLocaleString()}</td><td class="num">${(p.funding_rate * 100).toFixed(4)}%</td></tr>`).join("") + `</tbody></table></div></div>`;
@@ -235,7 +243,7 @@ function renderMethod() {
   $("#tab-method").innerHTML = `<div class="card" style="max-width:900px"><h3>How RESIDUAL decides</h3>
   <ol>
     <li><b>Event collector.</b> SEC EDGAR Item 2.02 8-K filings; the event timestamp is the SEC acceptance time.</li>
-    <li><b>Earnings extractor.</b> Deterministic patterns pull reported revenue and the next-quarter revenue outlook from the Exhibit 99.1 press release. Each value keeps its verbatim snippet, source URL and document SHA-256, and is re-derived before use. <i>Expected</i> = the company's own prior-quarter outlook midpoint, cited to the prior release.</li>
+    <li><b>Earnings extractor.</b> Deterministic patterns pull reported revenue and the next-quarter revenue outlook from the Exhibit 99.1 press release. Each value keeps its verbatim snippet, source URL and document SHA-256, and is re-derived before use. The surprise is a <b>company-guidance surprise</b>: reported revenue vs the company's own prior-quarter outlook midpoint, cited to the prior release. It is not an analyst-consensus surprise. EPS and gross margin are optional evidence fields; the model does not use them.</li>
     <li><b>Factor estimator.</b> Hourly Bitget perp returns over the ${c.lookback_days} days before the event: company on QQQ (market) and an equal-weight basket of sector peers orthogonalized to the market. Betas at ${c.beta_windows_days.join("/")}-day windows.</li>
     <li><b>Residual calculator.</b> Observed move from the release hour to +${c.obs_hours}h minus market contribution, sector contribution and a liquidity (half-spread) effect.</li>
     <li><b>Trade constructor.</b> Company leg vs a single hedge instrument (SMH/QQQ/SPY, best historical R²); hedge ratio = OLS beta, never an LLM value.</li>
@@ -244,5 +252,5 @@ function renderMethod() {
     <li><b>Paper executor.</b> Both legs filled at the next hourly open with slippage, Bitget taker fees and funding; ${c.hold_hours}h horizon, stop at ${(c.max_loss_frac * 100).toFixed(1)}% of company notional.</li>
     <li><b>Evaluator.</b> Realized P&amp;L split into company leg, hedge leg, residual, factor error, slippage, fees, funding and timing. Direction (continuation vs reversal) and k are learned walk-forward from earlier events only.</li>
   </ol>
-  <p class="note">Reproduce: <code>python -m residual build && python -m residual snapshot && python -m residual replay</code>. Paper trading only; no orders are sent to Bitget.</p></div>`;
+  <p class="note">Reproduce offline from the committed dataset: <code>python -m residual verify --offline && python -m residual replay --offline</code>. Market data comes from Bitget's public REST API; execution is local paper accounting. No Bitget Demo Trading or live orders are placed.</p></div>`;
 }

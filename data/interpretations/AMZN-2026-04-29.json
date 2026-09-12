@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "3b20de2e9c1ba8a6caf529bcf3a1537888f92c52286b73464eac7ac6bbed3efb",
- "created_at": "2026-09-12T21:10:49Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Revenue beat, raised forward guidance, AWS acceleration to 28% growth, operating income up sharply across segments, and strong AI-driven demand commitments support a lasting positive residual, though large FCF decline and one-time Anthropic gain add some noise.\", \"evidence_quotes\": [\"AWS segment sales increased 28% year-over-year to $37.6 billion.\", \"First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.\", \"Free cash flow decreased to $1.2 billion for the trailing twelve months\"]}",
+ "prompt_sha256": "4024c02b18f675376b6bc714416441c9cd4c977617f4996ede3157ab2b84c54e",
+ "created_at": "2026-09-12T22:52:18Z",
+ "raw_response": "{\"label\":\"durable\",\"confidence\":0.68,\"rationale\":\"Revenue beat own guidance by 3.1%, next-quarter guidance raised, AWS accelerated to 28% growth with strong AI demand signals (OpenAI, Anthropic capacity deals) supporting continued momentum, though large one-time Anthropic equity gain and FCF decline add some noise.\",\"evidence_quotes\":[\"AWS segment sales increased 28% year-over-year to $37.6 billion.\",\"AWS is growing 28% (our fastest growth in 15 quarters) on a very large base\",\"Secured a commitment from OpenAI to consume approximately two gigawatts (GW) of Trainium capacity through AWS infrastructure\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\":\"durable\",\"confidence\":0.68,\"rationale\":\"Revenue beat own guidance by 3.1%, next-quarter guidance raised, AWS accelerated to 28% growth with strong AI demand signals (OpenAI, Anthropic capacity deals) supporting continued momentum, though large one-time Anthropic equity gain and FCF decline add some noise.\",\"evidence_quotes\":[\"AWS segment sales increased 28% year-over-year to $37.6 billion.\",\"AWS is growing 28% (our fastest growth in 15 quarters) on a very large base\",\"Secured a commitment from OpenAI to consume approximately two gigawatts (GW) of Trainium capacity through AWS infrastructure\"]}"
+  }
+ ],
  "label": "durable",
  "confidence": 0.68,
- "rationale": "Revenue beat, raised forward guidance, AWS acceleration to 28% growth, operating income up sharply across segments, and strong AI-driven demand commitments support a lasting positive residual, though large FCF decline and one-time Anthropic gain add some noise.",
+ "rationale": "Revenue beat own guidance by 3.1%, next-quarter guidance raised, AWS accelerated to 28% growth with strong AI demand signals (OpenAI, Anthropic capacity deals) supporting continued momentum, though large one-time Anthropic equity gain and FCF decline add some noise.",
  "evidence_quotes": [
   "AWS segment sales increased 28% year-over-year to $37.6 billion.",
-  "First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.",
-  "Free cash flow decreased to $1.2 billion for the trailing twelve months"
+  "AWS is growing 28% (our fastest growth in 15 quarters) on a very large base",
+  "Secured a commitment from OpenAI to consume approximately two gigawatts (GW) of Trainium capacity through AWS infrastructure"
  ]
 }

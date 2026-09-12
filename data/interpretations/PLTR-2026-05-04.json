@@ -5,12 +5,18 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "0ace553c94545d391d3a1d62eedcac626b43a8a5305350f5812fcd3d24e76829",
- "created_at": "2026-09-12T21:08:30Z",
- "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 6.5%, guidance raised for FY26 and Q2, margins and Rule of 40 strong, yet residual is negative -1.33%, conflicting with clearly bullish fundamentals and outlook.\", \"evidence_quotes\": [\"Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion\", \"We are raising our revenue guidance to between $7.650 - $7.662 billion.\", \"Rule of 40 score of 145%\"]}",
+ "prompt_sha256": "c130a4f8bfdbd59ec548e2042d12cac462b73bf756f4158bf3245c727bca8aeb",
+ "created_at": "2026-09-12T22:52:21Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Negative residual conflicts with strong beat, raised FY guidance, accelerating US growth and record Rule of 40, suggesting fundamentals do not support the sell-off; likely noise or positioning, not fundamentally justified.\", \"evidence_quotes\": [\"Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion\", \"We are raising our revenue guidance to between $7.650 - $7.662 billion.\", \"Rule of 40 score of 145%\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Negative residual conflicts with strong beat, raised FY guidance, accelerating US growth and record Rule of 40, suggesting fundamentals do not support the sell-off; likely noise or positioning, not fundamentally justified.\", \"evidence_quotes\": [\"Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion\", \"We are raising our revenue guidance to between $7.650 - $7.662 billion.\", \"Rule of 40 score of 145%\"]}"
+  }
+ ],
  "label": "contradicted_by_guidance",
- "confidence": 0.82,
- "rationale": "Revenue beat by 6.5%, guidance raised for FY26 and Q2, margins and Rule of 40 strong, yet residual is negative -1.33%, conflicting with clearly bullish fundamentals and outlook.",
+ "confidence": 0.72,
+ "rationale": "Negative residual conflicts with strong beat, raised FY guidance, accelerating US growth and record Rule of 40, suggesting fundamentals do not support the sell-off; likely noise or positioning, not fundamentally justified.",
  "evidence_quotes": [
   "Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion",
   "We are raising our revenue guidance to between $7.650 - $7.662 billion.",

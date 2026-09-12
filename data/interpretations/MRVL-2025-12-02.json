@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "4a1c565b561c25ee210dffad9773fa02fe6ceb4ecc1142e1ffec0ad2740ed303",
- "created_at": "2026-09-12T21:09:41Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Revenue beat was modest (0.7%) but forward guidance raised, data center demand accelerating, and management raised next-year growth outlook plus strategic AI interconnect acquisition; large residual reflects strengthening fundamentals rather than a one-off beat.\", \"evidence_quotes\": [\"our data center revenue growth forecast for next year is now higher than prior expectations\", \"Net revenue is expected to be $2.200 billion +/- 5%.\", \"This acquisition further strengthens Marvell's position at the forefront of one of the fastest-growing opportunities in AI datacenter infrastructure.\"]}",
+ "prompt_sha256": "9890762452646d7812d4536e953514c1b86bce04f415ebabf8329674babec3cf",
+ "created_at": "2026-09-12T22:51:06Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Beat was modest but company raised Q4 guidance well above prior quarter, cited accelerating data center demand and higher next-year growth outlook, plus strategic Celestial AI acquisition\u2014supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Net revenue is expected to be $2.200 billion +/- 5%.\", \"our data center revenue growth forecast for next year is now higher than prior expectations\", \"I am also excited to announce the acquisition of Celestial AI - a transformational milestone that accelerates our scale-up roadmap for interconnect.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Beat was modest but company raised Q4 guidance well above prior quarter, cited accelerating data center demand and higher next-year growth outlook, plus strategic Celestial AI acquisition\u2014supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Net revenue is expected to be $2.200 billion +/- 5%.\", \"our data center revenue growth forecast for next year is now higher than prior expectations\", \"I am also excited to announce the acquisition of Celestial AI - a transformational milestone that accelerates our scale-up roadmap for interconnect.\"]}"
+  }
+ ],
  "label": "durable",
- "confidence": 0.68,
- "rationale": "Revenue beat was modest (0.7%) but forward guidance raised, data center demand accelerating, and management raised next-year growth outlook plus strategic AI interconnect acquisition; large residual reflects strengthening fundamentals rather than a one-off beat.",
+ "confidence": 0.62,
+ "rationale": "Beat was modest but company raised Q4 guidance well above prior quarter, cited accelerating data center demand and higher next-year growth outlook, plus strategic Celestial AI acquisition\u2014supporting a lasting positive re-rating rather than a one-off pop.",
  "evidence_quotes": [
-  "our data center revenue growth forecast for next year is now higher than prior expectations",
   "Net revenue is expected to be $2.200 billion +/- 5%.",
-  "This acquisition further strengthens Marvell's position at the forefront of one of the fastest-growing opportunities in AI datacenter infrastructure."
+  "our data center revenue growth forecast for next year is now higher than prior expectations",
+  "I am also excited to announce the acquisition of Celestial AI - a transformational milestone that accelerates our scale-up roadmap for interconnect."
  ]
 }

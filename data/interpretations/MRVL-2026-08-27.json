@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "d6b5e5437984bad2c819e394ad68962de2d42ef2f95adf6efc6bde0a6861f159",
- "created_at": "2026-09-12T21:11:59Z",
- "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Beat on revenue, raised guidance, accelerating Data Center/AI demand and higher next-quarter outlook contradict the strongly negative -5.96% company-specific residual; fundamentals do not support the selloff.\", \"evidence_quotes\": [\"we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter\", \"AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further through the remainder of fiscal 2027\", \"Net revenue is expected to be $3.150 billion +/- 5%.\"]}",
+ "prompt_sha256": "5c2e27b5af8ec0315db38442aa86d2bae112e30e96eddb4b0fe202065ff86f90",
+ "created_at": "2026-09-12T22:53:43Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance, next-quarter guidance raised ~15% qoq, and management raised full-year outlook citing accelerating AI demand\u2014yet residual reaction is strongly negative, conflicting with the bullish guidance signal.\", \"evidence_quotes\": [\"we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter\", \"Net revenue is expected to be $3.150 billion +/- 5%.\", \"AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance, next-quarter guidance raised ~15% qoq, and management raised full-year outlook citing accelerating AI demand\u2014yet residual reaction is strongly negative, conflicting with the bullish guidance signal.\", \"evidence_quotes\": [\"we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter\", \"Net revenue is expected to be $3.150 billion +/- 5%.\", \"AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further\"]}"
+  }
+ ],
  "label": "contradicted_by_guidance",
- "confidence": 0.85,
- "rationale": "Beat on revenue, raised guidance, accelerating Data Center/AI demand and higher next-quarter outlook contradict the strongly negative -5.96% company-specific residual; fundamentals do not support the selloff.",
+ "confidence": 0.72,
+ "rationale": "Revenue beat prior guidance, next-quarter guidance raised ~15% qoq, and management raised full-year outlook citing accelerating AI demand\u2014yet residual reaction is strongly negative, conflicting with the bullish guidance signal.",
  "evidence_quotes": [
   "we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter",
-  "AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further through the remainder of fiscal 2027",
-  "Net revenue is expected to be $3.150 billion +/- 5%."
+  "Net revenue is expected to be $3.150 billion +/- 5%.",
+  "AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further"
  ]
 }

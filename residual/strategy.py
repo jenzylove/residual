@@ -145,7 +145,8 @@ def analyze(event: dict, snap: dict | None) -> dict:
     if best:
         for d in (1, -1):
             sim = run_trade(event, snap, a, d, 1.0)
-            a["counterfactual"][str(d)] = sim["net"] if sim else None
+            # train on the conservative-funding outcome so missing funding never flatters a rule
+            a["counterfactual"][str(d)] = sim["net_conservative"] if sim else None
     a["residual"] = residual
     return a
 

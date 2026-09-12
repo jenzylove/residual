@@ -1,8 +1,12 @@
 """HTTP access with a disk cache.
 
-api.bitget.com is DNS-filtered on some networks, so Bitget hosts are resolved
-through Cloudflare DNS-over-HTTPS. Every response used by the model is cached
-under data/cache so replays are reproducible offline.
+Every response used by the model is cached under data/cache (and market inputs
+are frozen in data/snapshots), so replays are reproducible offline.
+
+DNS: system resolution is always used. An opt-in fallback to Cloudflare
+DNS-over-HTTPS exists only for local resolver faults; it is OFF unless
+RESIDUAL_DOH_FALLBACK=1, and must not be used to get around Bitget's
+regional access restrictions.
 """
 import hashlib
 import json
@@ -18,6 +22,7 @@ CACHE = ROOT / "data" / "cache"
 SEC_UA = os.environ.get("SEC_USER_AGENT", "RESIDUAL research residual@example.com")
 
 _DOH_HOSTS = {"api.bitget.com"}
+DOH_FALLBACK = os.environ.get("RESIDUAL_DOH_FALLBACK") == "1"
 _resolved: dict[str, str] = {}
 _orig_getaddrinfo = socket.getaddrinfo
 
@@ -43,7 +48,12 @@ def _getaddrinfo(host, *args, **kwargs):
             try:
                 return _orig_getaddrinfo(host, *args, **kwargs)
             except socket.gaierror:
-                _system_dns_failed.add(host)  # skip the slow failing lookup from now on
+                _system_dns_failed.add(host)
+        if not DOH_FALLBACK:
+            raise socket.gaierror(
+                f"{host} does not resolve on this network. RESIDUAL does not bypass DNS by default. "
+                "If a local resolver fault (not a Bitget regional restriction) is the cause and Bitget "
+                "access is permitted where you are, opt in with RESIDUAL_DOH_FALLBACK=1.")
         return _orig_getaddrinfo(_doh_resolve(host), *args, **kwargs)
     return _orig_getaddrinfo(host, *args, **kwargs)
 

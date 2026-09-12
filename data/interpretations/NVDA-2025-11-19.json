@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "5f65296ae19b3fb3c71caab06fa3b84e0f9b0d573830343cf16c6e59f10e9970",
- "created_at": "2026-09-12T21:09:37Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Beat was broad-based (record revenue and Data Center growth) with next-quarter guidance of $65B, well above this quarter's actual, and demand commentary (Blackwell sold out, new hyperscaler/AI deals) supports a lasting positive fundamental signal despite guided growth deceleration.\", \"evidence_quotes\": [\"Blackwell sales are off the charts, and cloud GPUs are sold out,\\\" said Jensen Huang\", \"Revenue is expected to be $65.0 billion, plus or minus 2%.\", \"Record Data Center revenue of $51.2 billion, up 25% from Q2 and up 66% from a year ago\"]}",
+ "prompt_sha256": "68e8bde904525a599a6da2211ea8d7818ba09f2a39d81c079a73124ecc7c455b",
+ "created_at": "2026-09-12T22:50:58Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance by 5.6%, next-quarter guidance of $65B implies continued strong sequential growth, Data Center demand described as sold out with major multi-gigawatt commitments (OpenAI, Anthropic), supporting a lasting fundamental driver behind the residual move rather than a one-off.\", \"evidence_quotes\": [\"Blackwell sales are off the charts, and cloud GPUs are sold out\", \"Revenue is expected to be $65.0 billion, plus or minus 2%.\", \"Announced a strategic partnership with OpenAI to deploy at least 10 gigawatts of NVIDIA systems for OpenAI's next-generation AI infrastructure.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance by 5.6%, next-quarter guidance of $65B implies continued strong sequential growth, Data Center demand described as sold out with major multi-gigawatt commitments (OpenAI, Anthropic), supporting a lasting fundamental driver behind the residual move rather than a one-off.\", \"evidence_quotes\": [\"Blackwell sales are off the charts, and cloud GPUs are sold out\", \"Revenue is expected to be $65.0 billion, plus or minus 2%.\", \"Announced a strategic partnership with OpenAI to deploy at least 10 gigawatts of NVIDIA systems for OpenAI's next-generation AI infrastructure.\"]}"
+  }
+ ],
  "label": "durable",
- "confidence": 0.62,
- "rationale": "Beat was broad-based (record revenue and Data Center growth) with next-quarter guidance of $65B, well above this quarter's actual, and demand commentary (Blackwell sold out, new hyperscaler/AI deals) supports a lasting positive fundamental signal despite guided growth deceleration.",
+ "confidence": 0.72,
+ "rationale": "Revenue beat prior guidance by 5.6%, next-quarter guidance of $65B implies continued strong sequential growth, Data Center demand described as sold out with major multi-gigawatt commitments (OpenAI, Anthropic), supporting a lasting fundamental driver behind the residual move rather than a one-off.",
  "evidence_quotes": [
-  "Blackwell sales are off the charts, and cloud GPUs are sold out,\" said Jensen Huang",
+  "Blackwell sales are off the charts, and cloud GPUs are sold out",
   "Revenue is expected to be $65.0 billion, plus or minus 2%.",
-  "Record Data Center revenue of $51.2 billion, up 25% from Q2 and up 66% from a year ago"
+  "Announced a strategic partnership with OpenAI to deploy at least 10 gigawatts of NVIDIA systems for OpenAI's next-generation AI infrastructure."
  ]
 }

@@ -5,24 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "e4fa26513eea63a7add610d352afd7d60b3c3c3cecf9d435337c6ae7574a8483",
- "created_at": "2026-09-12T21:14:10Z",
- "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.6, \"rationale\": \"Despite a large revenue beat and strong non-GAAP profitability, forward guidance growth was lowered versus prior guided trajectory, and GAAP results show a large net loss, undercutting the durability of the bullish residual.\", \"evidence_quotes\": [\"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.\", \"Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*\"]}",
+ "prompt_sha256": "f94634388c0e4f93450ed90c743fa233f9b27728dde30fc9f65cc8cdc6015531",
+ "created_at": "2026-09-12T22:53:02Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat guidance by ~12.6%, driven by broad-based growth (DCAI +59%, CCPG +13%, Foundry +31%) and margin expansion; next-quarter guidance midpoint ($16.3B) implies continued sequential growth, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).\", \"Data Center and AI (DCAI) | 6.3 billion | up | 59%\", \"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\"]}",
  "attempts": [
   {
-   "detail": "unexpected keys ['confidence', 'confidence_note', 'evidence_quotes', 'label', 'rationale']",
-   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat by ~13% with broad-based growth (DCAI +59%, Foundry +31%) and large margin expansion (GAAP GM +12.9ppts), suggesting real operational improvement (yields, cycle times) rather than a one-off. Next-quarter guidance still implies sequential growth, supporting durability despite softer growth-rate guidance.\", \"confidence_note\": \"\", \"evidence_quotes\": [\"Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).\", \"volume upside driven by higher factory yields and improved cycle times\", \"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\"]}"
-  },
-  {
    "detail": "ok",
-   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.6, \"rationale\": \"Despite a large revenue beat and strong non-GAAP profitability, forward guidance growth was lowered versus prior guided trajectory, and GAAP results show a large net loss, undercutting the durability of the bullish residual.\", \"evidence_quotes\": [\"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.\", \"Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*\"]}"
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat guidance by ~12.6%, driven by broad-based growth (DCAI +59%, CCPG +13%, Foundry +31%) and margin expansion; next-quarter guidance midpoint ($16.3B) implies continued sequential growth, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).\", \"Data Center and AI (DCAI) | 6.3 billion | up | 59%\", \"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\"]}"
   }
  ],
- "label": "contradicted_by_guidance",
- "confidence": 0.6,
- "rationale": "Despite a large revenue beat and strong non-GAAP profitability, forward guidance growth was lowered versus prior guided trajectory, and GAAP results show a large net loss, undercutting the durability of the bullish residual.",
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Revenue beat guidance by ~12.6%, driven by broad-based growth (DCAI +59%, CCPG +13%, Foundry +31%) and margin expansion; next-quarter guidance midpoint ($16.3B) implies continued sequential growth, supporting a lasting positive re-rating rather than a one-off pop.",
  "evidence_quotes": [
-  "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.",
-  "Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*"
+  "Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).",
+  "Data Center and AI (DCAI) | 6.3 billion | up | 59%",
+  "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion"
  ]
 }

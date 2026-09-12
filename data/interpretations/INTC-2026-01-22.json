@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "3ef3e82c07370abb43b3f898e4e603b7d3354c156609b9cb3825066e908623df",
- "created_at": "2026-09-12T21:09:45Z",
- "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Q4 revenue beat guidance by 3% and management cited healthy demand, yet stock dropped -12.4% company-specific. This large negative residual conflicts with the guided narrative and beat, driven instead by weak Q1 guidance implying steep sequential decline and supply constraints.\", \"evidence_quotes\": [\"Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion\", \"We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.\", \"We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages\"]}",
+ "prompt_sha256": "8ab972309cf5b22c6f4c7aca41aa643d3d03bec18e895486590f7983f8dfb159",
+ "created_at": "2026-09-12T22:51:11Z",
+ "raw_response": "{\"label\":\"contradicted_by_guidance\",\"confidence\":0.72,\"rationale\":\"Q4 beat guidance and gross margin/EPS topped expectations, but the sharp negative residual is driven by weak Q1 guidance (implied ~$12.2B mid vs $13.7B actual) and supply constraints; the drop is directionally consistent with guidance cut, not a mismatch, making it durable-guidance-driven rather than contradicted\u2014yet magnitude looks disproportionate given 'demand fundamentals remain healthy' commentary, suggesting overreaction.\",\"evidence_quotes\":[\"Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion\",\"We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.\",\"Demand fundamentals across our core markets remain healthy as the rapid adoption of AI reinforces the importance of the x86 ecosystem\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\":\"contradicted_by_guidance\",\"confidence\":0.72,\"rationale\":\"Q4 beat guidance and gross margin/EPS topped expectations, but the sharp negative residual is driven by weak Q1 guidance (implied ~$12.2B mid vs $13.7B actual) and supply constraints; the drop is directionally consistent with guidance cut, not a mismatch, making it durable-guidance-driven rather than contradicted\u2014yet magnitude looks disproportionate given 'demand fundamentals remain healthy' commentary, suggesting overreaction.\",\"evidence_quotes\":[\"Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion\",\"We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.\",\"Demand fundamentals across our core markets remain healthy as the rapid adoption of AI reinforces the importance of the x86 ecosystem\"]}"
+  }
+ ],
  "label": "contradicted_by_guidance",
  "confidence": 0.72,
- "rationale": "Q4 revenue beat guidance by 3% and management cited healthy demand, yet stock dropped -12.4% company-specific. This large negative residual conflicts with the guided narrative and beat, driven instead by weak Q1 guidance implying steep sequential decline and supply constraints.",
+ "rationale": "Q4 beat guidance and gross margin/EPS topped expectations, but the sharp negative residual is driven by weak Q1 guidance (implied ~$12.2B mid vs $13.7B actual) and supply constraints; the drop is directionally consistent with guidance cut, not a mismatch, making it durable-guidance-driven rather than contradicted\u2014yet magnitude looks disproportionate given 'demand fundamentals remain healthy' commentary, suggesting overreaction.",
  "evidence_quotes": [
   "Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion",
   "We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.",
-  "We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages"
+  "Demand fundamentals across our core markets remain healthy as the rapid adoption of AI reinforces the importance of the x86 ecosystem"
  ]
 }

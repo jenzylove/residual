@@ -5,12 +5,18 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "c01bca31735a41749942d62de9ae831cee029b64c4e4659821b69fd40a5cd662",
- "created_at": "2026-09-12T21:10:28Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.6, \"rationale\": \"Revenue beat was small, but guidance raised meaningfully (2.4B vs prior ~2.2B) with commentary on accelerating YoY growth, record bookings, and record design wins, supporting a lasting re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.\", \"Net revenue is expected to be $2.400 billion +/- 5%.\", \"our design wins in fiscal 2026 hit an all-time record, which we expect will continue to fuel our future growth.\"]}",
+ "prompt_sha256": "2a876ee9518e7344c05e8586f8062250547554c35c308caea64f320c1c7bf64d",
+ "created_at": "2026-09-12T22:51:53Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Guidance raised for Q1 FY27 to $2.4B (accelerating growth) with commentary on record bookings and design wins, supporting a lasting positive re-rating rather than a one-off beat, despite the actual Q4 beat being small vs prior guidance.\", \"evidence_quotes\": [\"We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.\", \"Net revenue is expected to be $2.400 billion +/- 5%.\", \"our design wins in fiscal 2026 hit an all-time record, which we expect will continue to fuel our future growth.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Guidance raised for Q1 FY27 to $2.4B (accelerating growth) with commentary on record bookings and design wins, supporting a lasting positive re-rating rather than a one-off beat, despite the actual Q4 beat being small vs prior guidance.\", \"evidence_quotes\": [\"We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.\", \"Net revenue is expected to be $2.400 billion +/- 5%.\", \"our design wins in fiscal 2026 hit an all-time record, which we expect will continue to fuel our future growth.\"]}"
+  }
+ ],
  "label": "durable",
- "confidence": 0.6,
- "rationale": "Revenue beat was small, but guidance raised meaningfully (2.4B vs prior ~2.2B) with commentary on accelerating YoY growth, record bookings, and record design wins, supporting a lasting re-rating rather than a one-off pop.",
+ "confidence": 0.62,
+ "rationale": "Guidance raised for Q1 FY27 to $2.4B (accelerating growth) with commentary on record bookings and design wins, supporting a lasting positive re-rating rather than a one-off beat, despite the actual Q4 beat being small vs prior guidance.",
  "evidence_quotes": [
   "We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.",
   "Net revenue is expected to be $2.400 billion +/- 5%.",

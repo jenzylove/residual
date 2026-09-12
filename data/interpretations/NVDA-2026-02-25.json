@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "bf00c8099287335ee27e392307f48df278e3c8c0fd42dc7ff19fdf3c006b2b80",
- "created_at": "2026-09-12T21:10:18Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat 4.8%, Data Center up 75% YoY, guidance of $78B implies continued acceleration, and margins expanded; no contradictory signals. Residual positive move aligns with strong fundamental momentum, though modest size suggests some prior pricing.\", \"evidence_quotes\": [\"Revenue is expected to be $78.0 billion, plus or minus 2%.\", \"Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago\", \"Computing demand is growing exponentially - the agentic AI inflection point has arrived.\"]}",
+ "prompt_sha256": "030b40aa45cd349eb224b37a2b71d7f0647fc7e4d740b2bb9ed06d44900e0cb8",
+ "created_at": "2026-09-12T22:51:43Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Beat vs own guidance, next-quarter guide of $78B implies further acceleration, Data Center demand and Rubin ramp commentary support fundamentals; residual is modest (+0.94%) relative to magnitude of beat/guide, suggesting not fully priced yet.\", \"evidence_quotes\": [\"Revenue is expected to be $78.0 billion, plus or minus 2%.\", \"Computing demand is growing exponentially - the agentic AI inflection point has arrived.\", \"Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Beat vs own guidance, next-quarter guide of $78B implies further acceleration, Data Center demand and Rubin ramp commentary support fundamentals; residual is modest (+0.94%) relative to magnitude of beat/guide, suggesting not fully priced yet.\", \"evidence_quotes\": [\"Revenue is expected to be $78.0 billion, plus or minus 2%.\", \"Computing demand is growing exponentially - the agentic AI inflection point has arrived.\", \"Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago\"]}"
+  }
+ ],
  "label": "durable",
- "confidence": 0.62,
- "rationale": "Revenue beat 4.8%, Data Center up 75% YoY, guidance of $78B implies continued acceleration, and margins expanded; no contradictory signals. Residual positive move aligns with strong fundamental momentum, though modest size suggests some prior pricing.",
+ "confidence": 0.68,
+ "rationale": "Beat vs own guidance, next-quarter guide of $78B implies further acceleration, Data Center demand and Rubin ramp commentary support fundamentals; residual is modest (+0.94%) relative to magnitude of beat/guide, suggesting not fully priced yet.",
  "evidence_quotes": [
   "Revenue is expected to be $78.0 billion, plus or minus 2%.",
-  "Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago",
-  "Computing demand is growing exponentially - the agentic AI inflection point has arrived."
+  "Computing demand is growing exponentially - the agentic AI inflection point has arrived.",
+  "Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago"
  ]
 }

@@ -5,21 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "00cd7eacec35e013407b9e0f96960f03bc07793c760de501cbc928f1721ef54c",
- "created_at": "2026-09-12T21:13:23Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat consensus by 5.9%, with record TCV, RDV, and margin expansion; FY26 guidance of $7.18-7.20B still implies robust growth despite a modest deceleration flagged as 'lowered', supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion\", \"For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.\", \"Rule of 40 score of 127%\"]}",
+ "prompt_sha256": "250777e1e32945459da8a2d60fde6227d2f40c59d6f177b33d97d0657405dbbe",
+ "created_at": "2026-09-12T22:51:32Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance by ~5.9%, driven by broad-based accelerating U.S. commercial (137% YoY) and government growth, record TCV, and FY26 guide of 61% YoY revenue growth with rising margins\u2014supports a lasting re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"U.S. commercial revenue grew 137% year-over-year and 28% quarter-over-quarter to $507 million\", \"Closed a record-setting $4.262 billion of total contract value (\\\"TCV\\\"), up 138% year-over-year\", \"For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.\"]}",
  "attempts": [
   {
    "detail": "ok",
-   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat consensus by 5.9%, with record TCV, RDV, and margin expansion; FY26 guidance of $7.18-7.20B still implies robust growth despite a modest deceleration flagged as 'lowered', supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion\", \"For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.\", \"Rule of 40 score of 127%\"]}"
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance by ~5.9%, driven by broad-based accelerating U.S. commercial (137% YoY) and government growth, record TCV, and FY26 guide of 61% YoY revenue growth with rising margins\u2014supports a lasting re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"U.S. commercial revenue grew 137% year-over-year and 28% quarter-over-quarter to $507 million\", \"Closed a record-setting $4.262 billion of total contract value (\\\"TCV\\\"), up 138% year-over-year\", \"For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.\"]}"
   }
  ],
  "label": "durable",
- "confidence": 0.72,
- "rationale": "Revenue beat consensus by 5.9%, with record TCV, RDV, and margin expansion; FY26 guidance of $7.18-7.20B still implies robust growth despite a modest deceleration flagged as 'lowered', supporting a lasting positive re-rating rather than a one-off pop.",
+ "confidence": 0.62,
+ "rationale": "Revenue beat prior guidance by ~5.9%, driven by broad-based accelerating U.S. commercial (137% YoY) and government growth, record TCV, and FY26 guide of 61% YoY revenue growth with rising margins\u2014supports a lasting re-rating rather than a one-off pop.",
  "evidence_quotes": [
-  "Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion",
-  "For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.",
-  "Rule of 40 score of 127%"
+  "U.S. commercial revenue grew 137% year-over-year and 28% quarter-over-quarter to $507 million",
+  "Closed a record-setting $4.262 billion of total contract value (\"TCV\"), up 138% year-over-year",
+  "For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion."
  ]
 }

@@ -5,15 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "dd49b1ac3826c0ffbb9f343f12d863fe28410d81fc8f52eb09f3b1c23310839b",
- "created_at": "2026-09-12T21:11:47Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Strong beat (7.6% surprise) plus raised FY guidance, accelerating US commercial growth (149% YoY), record TCV/RDV, and expanding margins support a durable positive residual, not a one-off.\", \"evidence_quotes\": [\"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial remaining deal value (\\\"RDV\\\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter\"]}",
+ "prompt_sha256": "1477eac594a492bdee75d19ca3f8582d9ad14d6c88e363c5fd31cbd46d5664e9",
+ "created_at": "2026-09-12T22:53:29Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance by 7.6%, next-quarter guidance raised well above prior implied growth, full-year guidance raised across revenue, margins, and FCF, with accelerating US commercial growth (149% YoY) signaling broad-based, sustained demand rather than a one-off.\", \"evidence_quotes\": [\"Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance by 7.6%, next-quarter guidance raised well above prior implied growth, full-year guidance raised across revenue, margins, and FCF, with accelerating US commercial growth (149% YoY) signaling broad-based, sustained demand rather than a one-off.\", \"evidence_quotes\": [\"Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\"]}"
+  }
+ ],
  "label": "durable",
  "confidence": 0.78,
- "rationale": "Strong beat (7.6% surprise) plus raised FY guidance, accelerating US commercial growth (149% YoY), record TCV/RDV, and expanding margins support a durable positive residual, not a one-off.",
+ "rationale": "Revenue beat prior guidance by 7.6%, next-quarter guidance raised well above prior implied growth, full-year guidance raised across revenue, margins, and FCF, with accelerating US commercial growth (149% YoY) signaling broad-based, sustained demand rather than a one-off.",
  "evidence_quotes": [
-  "U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million",
+  "Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion",
   "We are raising our revenue guidance to between $8.150 - $8.158 billion.",
-  "U.S. commercial remaining deal value (\"RDV\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter"
+  "U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million"
  ]
 }

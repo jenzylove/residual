@@ -5,18 +5,18 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "a9643cbb0a1197957ce073467c0de031a876ed24c4321e451b9e4d028b3f23cb",
- "created_at": "2026-09-12T21:13:31Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Next-quarter guidance was lowered and FCF collapsed to $11.2B from $50.7B higher capex, aligning with the negative residual; $200B 2026 capex signals a sustained margin/cash-flow drag rather than a one-off, so the negative reaction looks fundamentally supported.\", \"evidence_quotes\": [\"we expect to invest about $200 billion in capital expenditures across Amazon in 2026\", \"Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment\"]}",
+ "prompt_sha256": "821966cff904fd1e3beb792e3c55f27971afe3c37c812e09e5174e3b6cdb9230",
+ "created_at": "2026-09-12T22:51:39Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite a Q4 beat, next-quarter guidance implies decelerating growth and 2026 capex of ~$200B is pressuring free cash flow (FCF fell to $11.2B from $38.2B), both lasting fundamental concerns that justify the negative residual.\", \"evidence_quotes\": [\"we expect to invest about $200 billion in capital expenditures across Amazon in 2026\", \"Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment\"]}",
  "attempts": [
   {
    "detail": "ok",
-   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Next-quarter guidance was lowered and FCF collapsed to $11.2B from $50.7B higher capex, aligning with the negative residual; $200B 2026 capex signals a sustained margin/cash-flow drag rather than a one-off, so the negative reaction looks fundamentally supported.\", \"evidence_quotes\": [\"we expect to invest about $200 billion in capital expenditures across Amazon in 2026\", \"Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment\"]}"
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite a Q4 beat, next-quarter guidance implies decelerating growth and 2026 capex of ~$200B is pressuring free cash flow (FCF fell to $11.2B from $38.2B), both lasting fundamental concerns that justify the negative residual.\", \"evidence_quotes\": [\"we expect to invest about $200 billion in capital expenditures across Amazon in 2026\", \"Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment\"]}"
   }
  ],
  "label": "durable",
  "confidence": 0.62,
- "rationale": "Next-quarter guidance was lowered and FCF collapsed to $11.2B from $50.7B higher capex, aligning with the negative residual; $200B 2026 capex signals a sustained margin/cash-flow drag rather than a one-off, so the negative reaction looks fundamentally supported.",
+ "rationale": "Despite a Q4 beat, next-quarter guidance implies decelerating growth and 2026 capex of ~$200B is pressuring free cash flow (FCF fell to $11.2B from $38.2B), both lasting fundamental concerns that justify the negative residual.",
  "evidence_quotes": [
   "we expect to invest about $200 billion in capital expenditures across Amazon in 2026",
   "Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment"
