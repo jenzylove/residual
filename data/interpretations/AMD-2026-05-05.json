@@ -1,0 +1,19 @@
+{
+ "event_id": "AMD-2026-05-05",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "1909efbbc0204208d2bcdc91a79a8784548adec026bd8d652d41ee7c288edde8",
+ "created_at": "2026-09-12T21:10:52Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Beat plus raised guidance (46% Y/Y, 9% Q/Q growth) driven by Data Center/AI strength, with strong customer visibility (MI450/Helios, Meta 6GW deal) supporting continued momentum, aligning with the positive residual.\", \"evidence_quotes\": [\"AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million\", \"customer engagement around MI450 Series and Helios is strengthening, with leading customer forecasts exceeding our initial expectations\", \"Data Center segment revenue was $5.8 billion, up 57% year-over-year\"]}",
+ "label": "durable",
+ "confidence": 0.78,
+ "rationale": "Beat plus raised guidance (46% Y/Y, 9% Q/Q growth) driven by Data Center/AI strength, with strong customer visibility (MI450/Helios, Meta 6GW deal) supporting continued momentum, aligning with the positive residual.",
+ "evidence_quotes": [
+  "AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million",
+  "customer engagement around MI450 Series and Helios is strengthening, with leading customer forecasts exceeding our initial expectations",
+  "Data Center segment revenue was $5.8 billion, up 57% year-over-year"
+ ]
+}

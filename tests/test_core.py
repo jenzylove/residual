@@ -145,6 +145,12 @@ class InterpretValidationTests(unittest.TestCase):
         self.assertEqual(detail, "ok")
         self.assertEqual(out["label"], "durable")
 
+    def test_accepts_quote_spanning_table_cell(self):
+        from residual.interpret import validate
+        src = "Revenue | $33.5 billion ± $750 million | next"
+        out, detail = validate('{"label":"durable","confidence":0.5,"rationale":"r","evidence_quotes":["Revenue $33.5 billion ± $750 million"]}', src)
+        self.assertEqual(detail, "ok")
+
     def test_rejects_fabricated_quote_and_extra_numbers(self):
         from residual.interpret import validate
         self.assertIsNone(validate('{"label":"durable","confidence":0.7,"rationale":"r","evidence_quotes":["Revenue tripled"]}', self.SRC)[0])

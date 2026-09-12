@@ -1,0 +1,19 @@
+{
+ "event_id": "AVGO-2026-03-04",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "3ede734ad70656979ca306f5b696e2920636c4e4fb724ccf1fc8193cb6b110bc",
+ "created_at": "2026-09-12T21:10:21Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat modest but guidance raised sharply with accelerating AI demand, margin expansion, and record cash returns, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking\", \"we expect AI semiconductor revenue to be $10.7 billion in Q2\", \"In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%\"]}",
+ "label": "durable",
+ "confidence": 0.78,
+ "rationale": "Revenue beat modest but guidance raised sharply with accelerating AI demand, margin expansion, and record cash returns, supporting a lasting positive re-rating rather than a one-off pop.",
+ "evidence_quotes": [
+  "Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking",
+  "we expect AI semiconductor revenue to be $10.7 billion in Q2",
+  "In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%"
+ ]
+}

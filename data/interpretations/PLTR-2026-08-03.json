@@ -1,0 +1,19 @@
+{
+ "event_id": "PLTR-2026-08-03",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "dd49b1ac3826c0ffbb9f343f12d863fe28410d81fc8f52eb09f3b1c23310839b",
+ "created_at": "2026-09-12T21:11:47Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Strong beat (7.6% surprise) plus raised FY guidance, accelerating US commercial growth (149% YoY), record TCV/RDV, and expanding margins support a durable positive residual, not a one-off.\", \"evidence_quotes\": [\"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial remaining deal value (\\\"RDV\\\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter\"]}",
+ "label": "durable",
+ "confidence": 0.78,
+ "rationale": "Strong beat (7.6% surprise) plus raised FY guidance, accelerating US commercial growth (149% YoY), record TCV/RDV, and expanding margins support a durable positive residual, not a one-off.",
+ "evidence_quotes": [
+  "U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million",
+  "We are raising our revenue guidance to between $8.150 - $8.158 billion.",
+  "U.S. commercial remaining deal value (\"RDV\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter"
+ ]
+}

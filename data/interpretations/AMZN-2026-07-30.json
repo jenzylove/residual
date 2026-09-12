@@ -1,0 +1,18 @@
+{
+ "event_id": "AMZN-2026-07-30",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "3eae94f7684b4a762f7f582af81c54d9c8baf79753f79c3df0b8e3cdf5a63dc8",
+ "created_at": "2026-09-12T21:11:43Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Revenue and AWS growth beat strongly, but next-quarter guidance was explicitly lowered vs prior growth trajectory, and net income was inflated by a one-time $53.4B non-operating gain from Anthropic stake, not core operations. The +8.99% residual rally appears disconnected from the guided deceleration and FCF outflow.\", \"evidence_quotes\": [\"Second quarter 2026 net income includes non-operating pre-tax other income of $53.4 billion, primarily from our investments in Anthropic.\", \"Free cash flow decreased to an outflow of $7.6 billion for the trailing twelve months\"]}",
+ "label": "contradicted_by_guidance",
+ "confidence": 0.62,
+ "rationale": "Revenue and AWS growth beat strongly, but next-quarter guidance was explicitly lowered vs prior growth trajectory, and net income was inflated by a one-time $53.4B non-operating gain from Anthropic stake, not core operations. The +8.99% residual rally appears disconnected from the guided deceleration and FCF outflow.",
+ "evidence_quotes": [
+  "Second quarter 2026 net income includes non-operating pre-tax other income of $53.4 billion, primarily from our investments in Anthropic.",
+  "Free cash flow decreased to an outflow of $7.6 billion for the trailing twelve months"
+ ]
+}

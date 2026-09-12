@@ -1,0 +1,25 @@
+{
+ "event_id": "META-2026-04-29",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "7b1ffb939646e8eca1eb339c3584df1d5f6fea31260990cd21e9ab8d2bdb3389",
+ "created_at": "2026-09-12T21:13:43Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat and raised guidance both above expectations, yet stock dropped ~6% specific to company. Negative residual conflicts with strong fundamentals, raised capex outlook reflecting growth investment, and above-consensus Q2 guidance, suggesting reaction driven by capex/margin fears rather than actual negative fundamentals.\", \"evidence_quotes\": [\"We expect second quarter 2026 total revenue to be in the range of $58-61 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.\", \"Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat and raised guidance both above expectations, yet stock dropped ~6% specific to company. Negative residual conflicts with strong fundamentals, raised capex outlook reflecting growth investment, and above-consensus Q2 guidance, suggesting reaction driven by capex/margin fears rather than actual negative fundamentals.\", \"evidence_quotes\": [\"We expect second quarter 2026 total revenue to be in the range of $58-61 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.\", \"Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.72,
+ "rationale": "Revenue beat and raised guidance both above expectations, yet stock dropped ~6% specific to company. Negative residual conflicts with strong fundamentals, raised capex outlook reflecting growth investment, and above-consensus Q2 guidance, suggesting reaction driven by capex/margin fears rather than actual negative fundamentals.",
+ "evidence_quotes": [
+  "We expect second quarter 2026 total revenue to be in the range of $58-61 billion.",
+  "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.",
+  "Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year."
+ ]
+}

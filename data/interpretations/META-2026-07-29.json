@@ -1,0 +1,25 @@
+{
+ "event_id": "META-2026-07-29",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "19df22ec086b24bcdd04e2fd97df34af9bde57a3eb22b68954b7e131a4ee5624",
+ "created_at": "2026-09-12T21:14:20Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat but guidance midpoint lowered vs prior growth path, capex raised, tax rate guidance raised, and opex surged 55% with margin compression and FCF collapse to $784M\u2014structural drivers beyond one-off legal/severance charges support a lasting negative re-rating.\", \"evidence_quotes\": [\"We expect third quarter 2026 total revenue to be in the range of $61-64 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.\", \"we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat but guidance midpoint lowered vs prior growth path, capex raised, tax rate guidance raised, and opex surged 55% with margin compression and FCF collapse to $784M\u2014structural drivers beyond one-off legal/severance charges support a lasting negative re-rating.\", \"evidence_quotes\": [\"We expect third quarter 2026 total revenue to be in the range of $61-64 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.\", \"we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%.\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Revenue beat but guidance midpoint lowered vs prior growth path, capex raised, tax rate guidance raised, and opex surged 55% with margin compression and FCF collapse to $784M\u2014structural drivers beyond one-off legal/severance charges support a lasting negative re-rating.",
+ "evidence_quotes": [
+  "We expect third quarter 2026 total revenue to be in the range of $61-64 billion.",
+  "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.",
+  "we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%."
+ ]
+}

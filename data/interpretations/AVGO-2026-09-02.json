@@ -1,0 +1,25 @@
+{
+ "event_id": "AVGO-2026-09-02",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "46cfb3d6c3f8c221f6dc78827b85c54aacdbe8e921cd3e5f799890de1520e13f",
+ "created_at": "2026-09-12T21:14:30Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.6, \"rationale\": \"Modest revenue beat plus accelerating AI semiconductor revenue guidance ($21.7B, +236% YoY) and maintained 66% margin support a positive fundamental read, even though the 'lowered' tag reflects a growth-rate deceleration versus prior pace, not an actual guidance cut.\", \"evidence_quotes\": [\"In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.\", \"Fourth quarter revenue guidance of approximately $34.8 billion\", \"we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.6, \"rationale\": \"Modest revenue beat plus accelerating AI semiconductor revenue guidance ($21.7B, +236% YoY) and maintained 66% margin support a positive fundamental read, even though the 'lowered' tag reflects a growth-rate deceleration versus prior pace, not an actual guidance cut.\", \"evidence_quotes\": [\"In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.\", \"Fourth quarter revenue guidance of approximately $34.8 billion\", \"we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago.\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.6,
+ "rationale": "Modest revenue beat plus accelerating AI semiconductor revenue guidance ($21.7B, +236% YoY) and maintained 66% margin support a positive fundamental read, even though the 'lowered' tag reflects a growth-rate deceleration versus prior pace, not an actual guidance cut.",
+ "evidence_quotes": [
+  "In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.",
+  "Fourth quarter revenue guidance of approximately $34.8 billion",
+  "we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago."
+ ]
+}

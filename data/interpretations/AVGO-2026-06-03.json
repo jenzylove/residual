@@ -1,0 +1,19 @@
+{
+ "event_id": "AVGO-2026-06-03",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "1c0f04f8c09e56aac9ee9f0ddbded82842b6e83c15ee78aefbad80a880815a36",
+ "created_at": "2026-09-12T21:11:10Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Fundamentals beat and forward guidance raised revenue growth to 84% YoY with AI semis guided to grow >200% YoY, yet residual reaction is -12%. This large negative move directly contradicts the strong beat-and-raise, suggesting a disconnect likely to correct.\", \"evidence_quotes\": [\"Third quarter fiscal year 2026 revenue guidance of approximately $29.4 billion, an increase of 84 percent from the prior year period\", \"In Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.\", \"Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast\"]}",
+ "label": "contradicted_by_guidance",
+ "confidence": 0.85,
+ "rationale": "Fundamentals beat and forward guidance raised revenue growth to 84% YoY with AI semis guided to grow >200% YoY, yet residual reaction is -12%. This large negative move directly contradicts the strong beat-and-raise, suggesting a disconnect likely to correct.",
+ "evidence_quotes": [
+  "Third quarter fiscal year 2026 revenue guidance of approximately $29.4 billion, an increase of 84 percent from the prior year period",
+  "In Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.",
+  "Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast"
+ ]
+}

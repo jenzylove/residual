@@ -1,0 +1,19 @@
+{
+ "event_id": "NVDA-2026-08-26",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "04ed9409c2f946dcd3a3a87584817cd25b82e7209d1c56e879b2cb3db960456a",
+ "created_at": "2026-09-12T21:11:55Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat by 5.7%, Data Center up 117% Y/Y, and next-quarter guidance of $108B implies continued strong growth (maintained trajectory), supporting the positive residual as reflecting durable demand rather than a one-off.\", \"evidence_quotes\": [\"Data Center revenue of $89.0 billion, up 117% from a year ago\", \"Revenue is expected to be $108.0 billion, plus or minus 2%.\", \"demand is accelerating\"]}",
+ "label": "durable",
+ "confidence": 0.78,
+ "rationale": "Revenue beat by 5.7%, Data Center up 117% Y/Y, and next-quarter guidance of $108B implies continued strong growth (maintained trajectory), supporting the positive residual as reflecting durable demand rather than a one-off.",
+ "evidence_quotes": [
+  "Data Center revenue of $89.0 billion, up 117% from a year ago",
+  "Revenue is expected to be $108.0 billion, plus or minus 2%.",
+  "demand is accelerating"
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "event_id": "MRVL-2026-05-27",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "f4120a11b014130d76970ebb464fba880780c8f4a56e6760c2a35c24eccc30e6",
+ "created_at": "2026-09-12T21:11:06Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat was modest but guidance was significantly raised with accelerating growth across quarters, driven by broad AI-related demand, supporting a lasting positive residual rather than a one-off beat.\", \"evidence_quotes\": [\"We are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter.\", \"We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business\", \"Net revenue is expected to be $2.700 billion +/- 5%.\"]}",
+ "label": "durable",
+ "confidence": 0.72,
+ "rationale": "Revenue beat was modest but guidance was significantly raised with accelerating growth across quarters, driven by broad AI-related demand, supporting a lasting positive residual rather than a one-off beat.",
+ "evidence_quotes": [
+  "We are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter.",
+  "We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business",
+  "Net revenue is expected to be $2.700 billion +/- 5%."
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "event_id": "AMZN-2026-04-29",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "3b20de2e9c1ba8a6caf529bcf3a1537888f92c52286b73464eac7ac6bbed3efb",
+ "created_at": "2026-09-12T21:10:49Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Revenue beat, raised forward guidance, AWS acceleration to 28% growth, operating income up sharply across segments, and strong AI-driven demand commitments support a lasting positive residual, though large FCF decline and one-time Anthropic gain add some noise.\", \"evidence_quotes\": [\"AWS segment sales increased 28% year-over-year to $37.6 billion.\", \"First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.\", \"Free cash flow decreased to $1.2 billion for the trailing twelve months\"]}",
+ "label": "durable",
+ "confidence": 0.68,
+ "rationale": "Revenue beat, raised forward guidance, AWS acceleration to 28% growth, operating income up sharply across segments, and strong AI-driven demand commitments support a lasting positive residual, though large FCF decline and one-time Anthropic gain add some noise.",
+ "evidence_quotes": [
+  "AWS segment sales increased 28% year-over-year to $37.6 billion.",
+  "First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.",
+  "Free cash flow decreased to $1.2 billion for the trailing twelve months"
+ ]
+}

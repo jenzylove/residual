@@ -1,0 +1,19 @@
+{
+ "event_id": "AMD-2026-08-04",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "aa03874b3d587edb47da9a7e9698ff91701e8ad49702d7e9dee0314cafce0954",
+ "created_at": "2026-09-12T21:11:50Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue beat, raised guidance, accelerating Data Center demand and strong forward commentary all contradict the sharp negative company-specific residual; fundamentals point positive, not negative.\", \"evidence_quotes\": [\"Revenue increased 50% year-over-year to a record $11.5 billion\", \"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"deliver substantial revenue and earnings growth in the years ahead\"]}",
+ "label": "contradicted_by_guidance",
+ "confidence": 0.78,
+ "rationale": "Revenue beat, raised guidance, accelerating Data Center demand and strong forward commentary all contradict the sharp negative company-specific residual; fundamentals point positive, not negative.",
+ "evidence_quotes": [
+  "Revenue increased 50% year-over-year to a record $11.5 billion",
+  "We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.",
+  "deliver substantial revenue and earnings growth in the years ahead"
+ ]
+}

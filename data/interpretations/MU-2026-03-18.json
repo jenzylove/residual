@@ -1,0 +1,25 @@
+{
+ "event_id": "MU-2026-03-18",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "6397937a00f4684544f8b3ee83b872a05791907f49167999fd2ddda98ece710f",
+ "created_at": "2026-09-12T21:13:35Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.82,
+ "rationale": "Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.",
+ "evidence_quotes": [
+  "we expect significant records again in fiscal Q3",
+  "Revenue $33.5 billion \u00b1 $750 million",
+  "Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend."
+ ]
+}

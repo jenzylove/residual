@@ -67,7 +67,7 @@ def build_prompt(event: dict, analysis: dict, source_text: str) -> str:
 
 
 def _call_anthropic(prompt: str, model: str) -> str:
-    body = json.dumps({"model": model, "max_tokens": 700, "temperature": 0, "system": SYSTEM,
+    body = json.dumps({"model": model, "max_tokens": 4000, "system": SYSTEM,
                        "messages": [{"role": "user", "content": prompt}]}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={
         "x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01",
@@ -115,9 +115,11 @@ def validate(raw_text: str, source_text: str) -> tuple[dict | None, str]:
     q = obj["evidence_quotes"]
     if not isinstance(q, list) or not 1 <= len(q) <= 3:
         return None, "evidence_quotes must hold 1-3 quotes"
-    norm = normalize(source_text).lower()
+    # table cells are flattened with "|" separators; compare wording, not layout
+    flat = lambda s: re.sub(r"\s+", " ", normalize(s).replace("|", " ")).lower().strip(' ."')
+    norm = flat(source_text)
     for quote in q:
-        if not isinstance(quote, str) or normalize(quote).lower().strip(' ."') not in norm:
+        if not isinstance(quote, str) or not flat(quote) or flat(quote) not in norm:
             return None, f"quote not found verbatim in source: {str(quote)[:80]!r}"
     return {"label": obj["label"], "confidence": float(c), "rationale": obj["rationale"],
             "evidence_quotes": q}, "ok"
@@ -135,16 +137,27 @@ def interpret(event: dict, analysis: dict, source_text: str, *, allow_call: bool
     if not prov or not allow_call:
         return {"status": "unavailable", "detail": "no LLM API key configured" if not prov else "calls disabled"}
     name, model = prov
-    try:
-        raw = (_call_anthropic if name == "anthropic" else _call_openai)(prompt, model)
-    except urllib.error.HTTPError as e:
-        return {"status": "unavailable", "detail": f"{name} HTTP {e.code}: {e.read()[:200].decode(errors='replace')}"}
-    except Exception as e:  # network errors: do not fabricate an interpretation
-        return {"status": "unavailable", "detail": f"{name} error: {e}"}
-    parsed, detail = validate(raw, source_text)
+    call = _call_anthropic if name == "anthropic" else _call_openai
+    attempts = []
+    parsed, detail, raw = None, "", ""
+    for attempt in range(2):  # one retry, told exactly which validation failed
+        p = prompt if attempt == 0 else (
+            prompt + f"\n\nYour previous answer was rejected by the validator: {detail}. "
+            "Return only the JSON object; every quote must be copied character-for-character from the press release.")
+        try:
+            raw = call(p, model)
+        except urllib.error.HTTPError as e:
+            return {"status": "unavailable", "detail": f"{name} HTTP {e.code}: {e.read()[:200].decode(errors='replace')}"}
+        except Exception as e:  # network errors: do not fabricate an interpretation
+            return {"status": "unavailable", "detail": f"{name} error: {e}"}
+        parsed, detail = validate(raw, source_text)
+        attempts.append({"detail": detail, "raw_response": raw})
+        if parsed:
+            break
     rec = {"event_id": event["event_id"], "status": "ok" if parsed else "invalid", "detail": detail,
            "provider": name, "model": model, "prompt_version": PROMPT_VERSION, "prompt_sha256": phash,
            "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "raw_response": raw,
+           "attempts": attempts,
            **(parsed or {})}
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(rec, indent=1), encoding="utf-8")

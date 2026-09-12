@@ -1,0 +1,19 @@
+{
+ "event_id": "MU-2026-06-24",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "93984437dbf2616ccf25534a657fce19a143464aa37ff61e6e97d955a29038d8",
+ "created_at": "2026-09-12T21:11:16Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Guidance of $50B (up sharply from $41.46B actual) plus 86% gross margin outlook and multi-year Strategic Customer Agreements support a lasting positive re-rating, despite the 'lowered' growth-rate flag versus prior guided trajectory.\", \"evidence_quotes\": [\"Revenue | $50.0 billion \u00b1 $1.0 billion\", \"We believe our multi-year Strategic Customer Agreements will significantly enhance the durability and predictability of Micron's strong financial performance.\", \"Gross margin | Approximately 86%\"]}",
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Guidance of $50B (up sharply from $41.46B actual) plus 86% gross margin outlook and multi-year Strategic Customer Agreements support a lasting positive re-rating, despite the 'lowered' growth-rate flag versus prior guided trajectory.",
+ "evidence_quotes": [
+  "Revenue | $50.0 billion \u00b1 $1.0 billion",
+  "We believe our multi-year Strategic Customer Agreements will significantly enhance the durability and predictability of Micron's strong financial performance.",
+  "Gross margin | Approximately 86%"
+ ]
+}

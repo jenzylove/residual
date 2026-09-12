@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T19:55:50+00:00",
+ "generated_at": "2026-09-12T21:14:30+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -17,21 +17,21 @@
    "mode": 1,
    "k": 2.0
   },
-  "ai_gate": false,
+  "ai_gate": true,
   "start_balance": 100000.0
  },
  "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events whose exit precedes that event's release; no event is scored with parameters trained on itself",
  "summary": {
   "residual": {
-   "total_net_pnl": 65.64,
+   "total_net_pnl": 264.55,
    "trades": 9,
    "no_trades": 26,
    "hit_rate": 0.333,
-   "avg_pnl_per_trade": 7.29,
-   "pnl_std_per_trade": 575.67,
-   "max_drawdown": -704.95,
+   "avg_pnl_per_trade": 29.39,
+   "pnl_std_per_trade": 464.57,
+   "max_drawdown": -509.17,
    "avg_holding_hours": 19.4,
-   "return_on_start_balance_pct": 0.066,
+   "return_on_start_balance_pct": 0.265,
    "equity_curve": [
     0.0,
     0.0,
@@ -50,24 +50,24 @@
     -328.74,
     -328.74,
     -328.74,
-    -681.15,
-    -681.15,
-    -681.15,
-    -681.15,
-    107.25,
-    107.25,
-    107.25,
-    107.25,
-    75.3,
-    75.3,
-    -475.39,
-    -475.39,
-    -475.39,
-    630.19,
-    238.63,
-    -74.75,
-    65.64,
-    65.64
+    -504.94,
+    -504.94,
+    -504.94,
+    -504.94,
+    -110.74,
+    -110.74,
+    -110.74,
+    -110.74,
+    -126.72,
+    -126.72,
+    -402.06,
+    -402.06,
+    -402.06,
+    703.52,
+    507.74,
+    194.35,
+    264.55,
+    264.55
    ]
   },
   "naive": {
@@ -119,15 +119,15 @@
    ]
   },
   "unhedged": {
-   "total_net_pnl": -257.29,
+   "total_net_pnl": 129.82,
    "trades": 9,
    "no_trades": 26,
    "hit_rate": 0.222,
-   "avg_pnl_per_trade": -28.59,
-   "pnl_std_per_trade": 620.84,
-   "max_drawdown": -1055.75,
+   "avg_pnl_per_trade": 14.42,
+   "pnl_std_per_trade": 555.44,
+   "max_drawdown": -711.78,
    "avg_holding_hours": 16.8,
-   "return_on_start_balance_pct": -0.257,
+   "return_on_start_balance_pct": 0.13,
    "equity_curve": [
     0.0,
     0.0,
@@ -146,24 +146,24 @@
     -489.4,
     -489.4,
     -489.4,
-    -597.39,
-    -597.39,
-    -597.39,
-    -597.39,
-    29.64,
-    29.64,
-    29.64,
-    29.64,
-    -274.57,
-    -274.57,
-    -575.67,
-    -575.67,
-    -575.67,
-    798.46,
-    494.51,
-    126.7,
-    -257.29,
-    -257.29
+    -543.39,
+    -543.39,
+    -543.39,
+    -543.39,
+    -229.88,
+    -229.88,
+    -229.88,
+    -229.88,
+    -381.98,
+    -381.98,
+    -532.53,
+    -532.53,
+    -532.53,
+    841.6,
+    689.62,
+    321.81,
+    129.82,
+    129.82
    ]
   },
   "no_trade": {
@@ -217,19 +217,19 @@
  },
  "summary_post_warmup": {
   "residual": {
-   "total_net_pnl": -172.99,
+   "total_net_pnl": -243.19,
    "trades": 2,
    "no_trades": 1,
    "hit_rate": 0.5,
-   "avg_pnl_per_trade": -86.49,
-   "pnl_std_per_trade": 320.87,
+   "avg_pnl_per_trade": -121.59,
+   "pnl_std_per_trade": 271.23,
    "max_drawdown": -313.38,
    "avg_holding_hours": 17.5,
-   "return_on_start_balance_pct": -0.173,
+   "return_on_start_balance_pct": -0.243,
    "equity_curve": [
     -313.38,
-    -172.99,
-    -172.99
+    -243.19,
+    -243.19
    ]
   },
   "naive": {
@@ -249,19 +249,19 @@
    ]
   },
   "unhedged": {
-   "total_net_pnl": -751.8,
+   "total_net_pnl": -559.8,
    "trades": 2,
    "no_trades": 1,
    "hit_rate": 0.0,
-   "avg_pnl_per_trade": -375.9,
-   "pnl_std_per_trade": 11.44,
-   "max_drawdown": -751.8,
+   "avg_pnl_per_trade": -279.9,
+   "pnl_std_per_trade": 124.32,
+   "max_drawdown": -559.8,
    "avg_holding_hours": 14.5,
-   "return_on_start_balance_pct": -0.752,
+   "return_on_start_balance_pct": -0.56,
    "equity_curve": [
     -367.81,
-    -751.8,
-    -751.8
+    -559.8,
+    -559.8
    ]
   }
  },
@@ -5308,12 +5308,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.62) -> size x1.0"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "NVDA-2025-11-19",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "5f65296ae19b3fb3c71caab06fa3b84e0f9b0d573830343cf16c6e59f10e9970",
+    "created_at": "2026-09-12T21:09:37Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Beat was broad-based (record revenue and Data Center growth) with next-quarter guidance of $65B, well above this quarter's actual, and demand commentary (Blackwell sold out, new hyperscaler/AI deals) supports a lasting positive fundamental signal despite guided growth deceleration.\", \"evidence_quotes\": [\"Blackwell sales are off the charts, and cloud GPUs are sold out,\\\" said Jensen Huang\", \"Revenue is expected to be $65.0 billion, plus or minus 2%.\", \"Record Data Center revenue of $51.2 billion, up 25% from Q2 and up 66% from a year ago\"]}",
+    "label": "durable",
+    "confidence": 0.62,
+    "rationale": "Beat was broad-based (record revenue and Data Center growth) with next-quarter guidance of $65B, well above this quarter's actual, and demand commentary (Blackwell sold out, new hyperscaler/AI deals) supports a lasting positive fundamental signal despite guided growth deceleration.",
+    "evidence_quotes": [
+     "Blackwell sales are off the charts, and cloud GPUs are sold out,\" said Jensen Huang",
+     "Revenue is expected to be $65.0 billion, plus or minus 2%.",
+     "Record Data Center revenue of $51.2 billion, up 25% from Q2 and up 66% from a year ago"
+    ]
+   },
    "residual": {
     "net": -328.7368149553715,
     "gross_mid": -269.9603984553188,
@@ -5623,12 +5641,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.68) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "MRVL-2025-12-02",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "4a1c565b561c25ee210dffad9773fa02fe6ceb4ecc1142e1ffec0ad2740ed303",
+    "created_at": "2026-09-12T21:09:41Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Revenue beat was modest (0.7%) but forward guidance raised, data center demand accelerating, and management raised next-year growth outlook plus strategic AI interconnect acquisition; large residual reflects strengthening fundamentals rather than a one-off beat.\", \"evidence_quotes\": [\"our data center revenue growth forecast for next year is now higher than prior expectations\", \"Net revenue is expected to be $2.200 billion +/- 5%.\", \"This acquisition further strengthens Marvell's position at the forefront of one of the fastest-growing opportunities in AI datacenter infrastructure.\"]}",
+    "label": "durable",
+    "confidence": 0.68,
+    "rationale": "Revenue beat was modest (0.7%) but forward guidance raised, data center demand accelerating, and management raised next-year growth outlook plus strategic AI interconnect acquisition; large residual reflects strengthening fundamentals rather than a one-off beat.",
+    "evidence_quotes": [
+     "our data center revenue growth forecast for next year is now higher than prior expectations",
+     "Net revenue is expected to be $2.200 billion +/- 5%.",
+     "This acquisition further strengthens Marvell's position at the forefront of one of the fastest-growing opportunities in AI datacenter infrastructure."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -367.21804377772736,
@@ -5960,12 +5996,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.72) -> size x0.5"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "INTC-2026-01-22",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "3ef3e82c07370abb43b3f898e4e603b7d3354c156609b9cb3825066e908623df",
+    "created_at": "2026-09-12T21:09:45Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Q4 revenue beat guidance by 3% and management cited healthy demand, yet stock dropped -12.4% company-specific. This large negative residual conflicts with the guided narrative and beat, driven instead by weak Q1 guidance implying steep sequential decline and supply constraints.\", \"evidence_quotes\": [\"Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion\", \"We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.\", \"We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.72,
+    "rationale": "Q4 revenue beat guidance by 3% and management cited healthy demand, yet stock dropped -12.4% company-specific. This large negative residual conflicts with the guided narrative and beat, driven instead by weak Q1 guidance implying steep sequential decline and supply constraints.",
+    "evidence_quotes": [
+     "Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion",
+     "We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.",
+     "We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -434.77150325397577,
@@ -6177,12 +6231,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.62) -> size x0.5"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "META-2026-01-28",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "ede2cf9124a981a64e5c4f2698d17484a144a96d2ab84f755222c805b0d8e9eb",
+    "created_at": "2026-09-12T21:09:53Z",
+    "raw_response": "{\"label\":\"contradicted_by_guidance\",\"confidence\":0.62,\"rationale\":\"Q4 beat was strong, but next quarter guidance mid ($55B) implies slower growth after a lowered outlook, and 2026 capex ($115-135B) and opex ($162-169B) guidance signal heavy margin pressure ahead, undercutting the bullish residual move.\",\"evidence_quotes\":[\"We expect first quarter 2026 total revenue to be in the range of $53.5-56.5 billion.\",\"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115-135 billion\",\"We expect full year 2026 total expenses to be in the range of $162-169 billion.\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.62,
+    "rationale": "Q4 beat was strong, but next quarter guidance mid ($55B) implies slower growth after a lowered outlook, and 2026 capex ($115-135B) and opex ($162-169B) guidance signal heavy margin pressure ahead, undercutting the bullish residual move.",
+    "evidence_quotes": [
+     "We expect first quarter 2026 total revenue to be in the range of $53.5-56.5 billion.",
+     "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115-135 billion",
+     "We expect full year 2026 total expenses to be in the range of $162-169 billion."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 78.5079601319036,
@@ -6394,12 +6466,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.72) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "PLTR-2026-02-02",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "00cd7eacec35e013407b9e0f96960f03bc07793c760de501cbc928f1721ef54c",
+    "created_at": "2026-09-12T21:13:23Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat consensus by 5.9%, with record TCV, RDV, and margin expansion; FY26 guidance of $7.18-7.20B still implies robust growth despite a modest deceleration flagged as 'lowered', supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion\", \"For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.\", \"Rule of 40 score of 127%\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat consensus by 5.9%, with record TCV, RDV, and margin expansion; FY26 guidance of $7.18-7.20B still implies robust growth despite a modest deceleration flagged as 'lowered', supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion\", \"For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.\", \"Rule of 40 score of 127%\"]}"
+     }
+    ],
+    "label": "durable",
+    "confidence": 0.72,
+    "rationale": "Revenue beat consensus by 5.9%, with record TCV, RDV, and margin expansion; FY26 guidance of $7.18-7.20B still implies robust growth despite a modest deceleration flagged as 'lowered', supporting a lasting positive re-rating rather than a one-off pop.",
+    "evidence_quotes": [
+     "Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion",
+     "For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.",
+     "Rule of 40 score of 127%"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 27.61911978178982,
@@ -6669,12 +6765,35 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.62) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AMZN-2026-02-05",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "a9643cbb0a1197957ce073467c0de031a876ed24c4321e451b9e4d028b3f23cb",
+    "created_at": "2026-09-12T21:13:31Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Next-quarter guidance was lowered and FCF collapsed to $11.2B from $50.7B higher capex, aligning with the negative residual; $200B 2026 capex signals a sustained margin/cash-flow drag rather than a one-off, so the negative reaction looks fundamentally supported.\", \"evidence_quotes\": [\"we expect to invest about $200 billion in capital expenditures across Amazon in 2026\", \"Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Next-quarter guidance was lowered and FCF collapsed to $11.2B from $50.7B higher capex, aligning with the negative residual; $200B 2026 capex signals a sustained margin/cash-flow drag rather than a one-off, so the negative reaction looks fundamentally supported.\", \"evidence_quotes\": [\"we expect to invest about $200 billion in capital expenditures across Amazon in 2026\", \"Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment\"]}"
+     }
+    ],
+    "label": "durable",
+    "confidence": 0.62,
+    "rationale": "Next-quarter guidance was lowered and FCF collapsed to $11.2B from $50.7B higher capex, aligning with the negative residual; $200B 2026 capex signals a sustained margin/cash-flow drag rather than a one-off, so the negative reaction looks fundamentally supported.",
+    "evidence_quotes": [
+     "we expect to invest about $200 billion in capital expenditures across Amazon in 2026",
+     "Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 408.57570600538736,
@@ -6886,12 +7005,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.62) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "NVDA-2026-02-25",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "bf00c8099287335ee27e392307f48df278e3c8c0fd42dc7ff19fdf3c006b2b80",
+    "created_at": "2026-09-12T21:10:18Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat 4.8%, Data Center up 75% YoY, guidance of $78B implies continued acceleration, and margins expanded; no contradictory signals. Residual positive move aligns with strong fundamental momentum, though modest size suggests some prior pricing.\", \"evidence_quotes\": [\"Revenue is expected to be $78.0 billion, plus or minus 2%.\", \"Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago\", \"Computing demand is growing exponentially - the agentic AI inflection point has arrived.\"]}",
+    "label": "durable",
+    "confidence": 0.62,
+    "rationale": "Revenue beat 4.8%, Data Center up 75% YoY, guidance of $78B implies continued acceleration, and margins expanded; no contradictory signals. Residual positive move aligns with strong fundamental momentum, though modest size suggests some prior pricing.",
+    "evidence_quotes": [
+     "Revenue is expected to be $78.0 billion, plus or minus 2%.",
+     "Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago",
+     "Computing demand is growing exponentially - the agentic AI inflection point has arrived."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -424.93840570220755,
@@ -7111,12 +7248,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.78) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AVGO-2026-03-04",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "3ede734ad70656979ca306f5b696e2920636c4e4fb724ccf1fc8193cb6b110bc",
+    "created_at": "2026-09-12T21:10:21Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat modest but guidance raised sharply with accelerating AI demand, margin expansion, and record cash returns, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking\", \"we expect AI semiconductor revenue to be $10.7 billion in Q2\", \"In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%\"]}",
+    "label": "durable",
+    "confidence": 0.78,
+    "rationale": "Revenue beat modest but guidance raised sharply with accelerating AI demand, margin expansion, and record cash returns, supporting a lasting positive re-rating rather than a one-off pop.",
+    "evidence_quotes": [
+     "Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking",
+     "we expect AI semiconductor revenue to be $10.7 billion in Q2",
+     "In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -81.26698198542464,
@@ -7336,12 +7491,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.60) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "MRVL-2026-03-05",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "c01bca31735a41749942d62de9ae831cee029b64c4e4659821b69fd40a5cd662",
+    "created_at": "2026-09-12T21:10:28Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.6, \"rationale\": \"Revenue beat was small, but guidance raised meaningfully (2.4B vs prior ~2.2B) with commentary on accelerating YoY growth, record bookings, and record design wins, supporting a lasting re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.\", \"Net revenue is expected to be $2.400 billion +/- 5%.\", \"our design wins in fiscal 2026 hit an all-time record, which we expect will continue to fuel our future growth.\"]}",
+    "label": "durable",
+    "confidence": 0.6,
+    "rationale": "Revenue beat was small, but guidance raised meaningfully (2.4B vs prior ~2.2B) with commentary on accelerating YoY growth, record bookings, and record design wins, supporting a lasting re-rating rather than a one-off pop.",
+    "evidence_quotes": [
+     "We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.",
+     "Net revenue is expected to be $2.400 billion +/- 5%.",
+     "our design wins in fiscal 2026 hit an all-time record, which we expect will continue to fuel our future growth."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -328.9129731397699,
@@ -7528,7 +7701,7 @@
    "decision": {
     "decision": "TRADE",
     "direction": -1,
-    "size": 1.0,
+    "size": 0.5,
     "structure": "short company / long hedge",
     "gates": {
      "event_data": {
@@ -7561,17 +7734,41 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.82) -> size x0.5"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "MU-2026-03-18",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "6397937a00f4684544f8b3ee83b872a05791907f49167999fd2ddda98ece710f",
+    "created_at": "2026-09-12T21:13:35Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.\", \"evidence_quotes\": [\"we expect significant records again in fiscal Q3\", \"Revenue $33.5 billion \\u00b1 $750 million\", \"Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend.\"]}"
+     }
+    ],
+    "label": "contradicted_by_guidance",
+    "confidence": 0.82,
+    "rationale": "Revenue beat by 28%, guidance raised well above consensus with 81% gross margin outlook and record EPS forecast, yet stock fell -4.09% company-specific. Negative residual conflicts with strongly positive fundamentals and forward guidance.",
+    "evidence_quotes": [
+     "we expect significant records again in fiscal Q3",
+     "Revenue $33.5 billion \u00b1 $750 million",
+     "Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend."
+    ]
+   },
    "residual": {
-    "net": -352.40858600198334,
-    "gross_mid": -280.90360460712805,
-    "fees": 36.71737860007751,
-    "slippage": 34.787602794777804,
+    "net": -176.20429300099167,
+    "gross_mid": -140.45180230356402,
+    "fees": 18.358689300038755,
+    "slippage": 17.393801397388902,
     "funding": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773932400000,
@@ -7583,49 +7780,49 @@
       "role": "company",
       "symbol": "MUUSDT",
       "side": "short",
-      "qty": 22.602956466705844,
-      "notional": 10000.0,
+      "qty": 11.301478233352922,
+      "notional": 5000.0,
       "entry_mid": 442.42,
       "entry_fill": 442.01906912363694,
       "exit_mid": 450.35,
       "exit_fill": 450.7581172193167,
       "fee_rate": 0.0006,
-      "fees": 12.107642326426745,
-      "slippage": 18.28687888612112,
+      "fees": 6.053821163213373,
+      "slippage": 9.14343944306056,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": -179.2414447809775,
-      "net": -209.63596599352536
+      "gross_mid": -89.62072239048875,
+      "net": -104.81798299676268
      },
      {
       "role": "hedge",
       "symbol": "QQQUSDT",
       "side": "long",
-      "qty": 34.578965927262786,
-      "notional": 20558.924192054088,
+      "qty": 17.289482963631393,
+      "notional": 10279.462096027044,
       "entry_mid": 594.55,
       "entry_fill": 594.7891861921595,
       "exit_mid": 591.61,
       "exit_fill": 591.3719965635464,
       "fee_rate": 0.0006,
-      "fees": 24.60973627365076,
-      "slippage": 16.500723908656685,
+      "fees": 12.30486813682538,
+      "slippage": 8.250361954328342,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": -101.66215982615054,
-      "net": -142.77262000845798
+      "gross_mid": -50.83107991307527,
+      "net": -71.38631000422899
      }
     ],
     "attribution": {
-     "company_leg": -209.63596599352536,
-     "hedge_leg": -142.77262000845798,
-     "residual": -228.47640426738485,
-     "factor_error": -52.427200339743194,
-     "slippage": -34.787602794777804,
-     "fees": -36.71737860007751,
+     "company_leg": -104.81798299676268,
+     "hedge_leg": -71.38631000422899,
+     "residual": -114.23820213369243,
+     "factor_error": -26.213600169871597,
+     "slippage": -17.393801397388902,
+     "fees": -18.358689300038755,
      "funding": 0.0,
      "timing_signal_to_fill": 0.0,
-     "net": -352.40858600198334,
+     "net": -176.20429300099167,
      "hold_returns": {
       "company": 0.017765401086875326,
       "market": -0.004957182876753078,
@@ -7667,10 +7864,10 @@
     ]
    },
    "unhedged": {
-    "net": -107.99577387845657,
-    "gross_mid": -77.75417024546806,
-    "fees": 12.04669477968575,
-    "slippage": 18.194908853302774,
+    "net": -53.99788693922829,
+    "gross_mid": -38.87708512273403,
+    "fees": 6.023347389842875,
+    "slippage": 9.097454426651387,
     "funding": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773957600000,
@@ -7682,23 +7879,23 @@
       "role": "company",
       "symbol": "MUUSDT",
       "side": "short",
-      "qty": 22.602956466705844,
-      "notional": 10000.0,
+      "qty": 11.301478233352922,
+      "notional": 5000.0,
       "entry_mid": 442.42,
       "entry_fill": 442.01906912363694,
       "exit_mid": 445.86,
       "exit_fill": 446.26404828112476,
       "fee_rate": 0.0006,
-      "fees": 12.04669477968575,
-      "slippage": 18.194908853302774,
+      "fees": 6.023347389842875,
+      "slippage": 9.097454426651387,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": -77.75417024546806,
-      "net": -107.99577387845657
+      "gross_mid": -38.87708512273403,
+      "net": -53.99788693922829
      }
     ]
    },
-   "balance_after": 99318.85459904265,
+   "balance_after": 99495.05889204364,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MU-2026-03-18",
@@ -7885,12 +8082,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.72) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "INTC-2026-04-23",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "b5b0ff6734c78152fe906f70be3e5a592549b9ba7e8656373a62e22a82dc71c7",
+    "created_at": "2026-09-12T21:13:39Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Beat driven by broad-based demand: DCAI +22%, Foundry +16%, sixth straight quarter above expectations, and Q2 guidance raised above consensus revenue trajectory, suggesting fundamental strength rather than one-off. GAAP net loss due to charges tempers but doesn't reverse signal.\", \"evidence_quotes\": [\"a sixth consecutive quarter of revenue above our expectations\", \"Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion\", \"Data Center and AI (DCAI) | | 5.1 billion | | up | 22%\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Beat driven by broad-based demand: DCAI +22%, Foundry +16%, sixth straight quarter above expectations, and Q2 guidance raised above consensus revenue trajectory, suggesting fundamental strength rather than one-off. GAAP net loss due to charges tempers but doesn't reverse signal.\", \"evidence_quotes\": [\"a sixth consecutive quarter of revenue above our expectations\", \"Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion\", \"Data Center and AI (DCAI) | | 5.1 billion | | up | 22%\"]}"
+     }
+    ],
+    "label": "durable",
+    "confidence": 0.72,
+    "rationale": "Beat driven by broad-based demand: DCAI +22%, Foundry +16%, sixth straight quarter above expectations, and Q2 guidance raised above consensus revenue trajectory, suggesting fundamental strength rather than one-off. GAAP net loss due to charges tempers but doesn't reverse signal.",
+    "evidence_quotes": [
+     "a sixth consecutive quarter of revenue above our expectations",
+     "Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion",
+     "Data Center and AI (DCAI) | | 5.1 billion | | up | 22%"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 256.28454853560356,
@@ -8111,12 +8332,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.72) -> size x0.5"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "META-2026-04-29",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "7b1ffb939646e8eca1eb339c3584df1d5f6fea31260990cd21e9ab8d2bdb3389",
+    "created_at": "2026-09-12T21:13:43Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat and raised guidance both above expectations, yet stock dropped ~6% specific to company. Negative residual conflicts with strong fundamentals, raised capex outlook reflecting growth investment, and above-consensus Q2 guidance, suggesting reaction driven by capex/margin fears rather than actual negative fundamentals.\", \"evidence_quotes\": [\"We expect second quarter 2026 total revenue to be in the range of $58-61 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.\", \"Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year.\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat and raised guidance both above expectations, yet stock dropped ~6% specific to company. Negative residual conflicts with strong fundamentals, raised capex outlook reflecting growth investment, and above-consensus Q2 guidance, suggesting reaction driven by capex/margin fears rather than actual negative fundamentals.\", \"evidence_quotes\": [\"We expect second quarter 2026 total revenue to be in the range of $58-61 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.\", \"Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year.\"]}"
+     }
+    ],
+    "label": "contradicted_by_guidance",
+    "confidence": 0.72,
+    "rationale": "Revenue beat and raised guidance both above expectations, yet stock dropped ~6% specific to company. Negative residual conflicts with strong fundamentals, raised capex outlook reflecting growth investment, and above-consensus Q2 guidance, suggesting reaction driven by capex/margin fears rather than actual negative fundamentals.",
+    "evidence_quotes": [
+     "We expect second quarter 2026 total revenue to be in the range of $58-61 billion.",
+     "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.",
+     "Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -352.91252525095297,
@@ -8335,12 +8580,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.68) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AMZN-2026-04-29",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "3b20de2e9c1ba8a6caf529bcf3a1537888f92c52286b73464eac7ac6bbed3efb",
+    "created_at": "2026-09-12T21:10:49Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.68, \"rationale\": \"Revenue beat, raised forward guidance, AWS acceleration to 28% growth, operating income up sharply across segments, and strong AI-driven demand commitments support a lasting positive residual, though large FCF decline and one-time Anthropic gain add some noise.\", \"evidence_quotes\": [\"AWS segment sales increased 28% year-over-year to $37.6 billion.\", \"First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.\", \"Free cash flow decreased to $1.2 billion for the trailing twelve months\"]}",
+    "label": "durable",
+    "confidence": 0.68,
+    "rationale": "Revenue beat, raised forward guidance, AWS acceleration to 28% growth, operating income up sharply across segments, and strong AI-driven demand commitments support a lasting positive residual, though large FCF decline and one-time Anthropic gain add some noise.",
+    "evidence_quotes": [
+     "AWS segment sales increased 28% year-over-year to $37.6 billion.",
+     "First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.",
+     "Free cash flow decreased to $1.2 billion for the trailing twelve months"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -302.1379177540712,
@@ -8526,7 +8789,7 @@
    "decision": {
     "decision": "TRADE",
     "direction": -1,
-    "size": 1.0,
+    "size": 0.5,
     "structure": "short company / long hedge",
     "gates": {
      "event_data": {
@@ -8559,17 +8822,35 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.82) -> size x0.5"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "PLTR-2026-05-04",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "0ace553c94545d391d3a1d62eedcac626b43a8a5305350f5812fcd3d24e76829",
+    "created_at": "2026-09-12T21:08:30Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.82, \"rationale\": \"Revenue beat by 6.5%, guidance raised for FY26 and Q2, margins and Rule of 40 strong, yet residual is negative -1.33%, conflicting with clearly bullish fundamentals and outlook.\", \"evidence_quotes\": [\"Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion\", \"We are raising our revenue guidance to between $7.650 - $7.662 billion.\", \"Rule of 40 score of 145%\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.82,
+    "rationale": "Revenue beat by 6.5%, guidance raised for FY26 and Q2, margins and Rule of 40 strong, yet residual is negative -1.33%, conflicting with clearly bullish fundamentals and outlook.",
+    "evidence_quotes": [
+     "Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion",
+     "We are raising our revenue guidance to between $7.650 - $7.662 billion.",
+     "Rule of 40 score of 145%"
+    ]
+   },
    "residual": {
-    "net": 788.39339541189,
-    "gross_mid": 850.297185532861,
-    "fees": 34.65109599486561,
-    "slippage": 27.252694126105276,
+    "net": 394.196697705945,
+    "gross_mid": 425.1485927664305,
+    "fees": 17.325547997432803,
+    "slippage": 13.626347063052638,
     "funding": 0.0,
     "entry_ms": 1777932000000,
     "exit_ms": 1778018400000,
@@ -8581,49 +8862,49 @@
       "role": "company",
       "symbol": "PLTRUSDT",
       "side": "short",
-      "qty": 69.31928462498267,
-      "notional": 10000.0,
+      "qty": 34.659642312491336,
+      "notional": 5000.0,
       "entry_mid": 144.26,
       "entry_fill": 144.14269676389827,
       "exit_mid": 134.82,
       "exit_fill": 134.92962721676992,
       "fee_rate": 0.0006,
-      "fees": 11.60705631418279,
-      "slippage": 15.730656652685555,
+      "fees": 5.803528157091395,
+      "slippage": 7.865328326342778,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": 654.3740468598363,
-      "net": 627.0363338929678
+      "gross_mid": 327.18702342991816,
+      "net": 313.5181669464839
      },
      {
       "role": "hedge",
       "symbol": "SPYUSDT",
       "side": "long",
-      "qty": 26.619991667530478,
-      "notional": 19105.4342197033,
+      "qty": 13.309995833765239,
+      "notional": 9552.71710985165,
       "entry_mid": 717.71,
       "entry_fill": 717.925313,
       "exit_mid": 725.07,
       "exit_fill": 724.8524790000001,
       "fee_rate": 0.0006,
-      "fees": 23.044039680682815,
-      "slippage": 11.522037473419719,
+      "fees": 11.522019840341407,
+      "slippage": 5.761018736709859,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": 195.92313867302468,
-      "net": 161.35706151892214
+      "gross_mid": 97.96156933651234,
+      "net": 80.67853075946107
      }
     ],
     "attribution": {
-     "company_leg": 627.0363338929678,
-     "hedge_leg": 161.35706151892214,
-     "residual": 818.9256476293608,
-     "factor_error": 31.37153790350021,
-     "slippage": -27.252694126105276,
-     "fees": -34.65109599486561,
+     "company_leg": 313.5181669464839,
+     "hedge_leg": 80.67853075946107,
+     "residual": 409.4628238146804,
+     "factor_error": 15.685768951750106,
+     "slippage": -13.626347063052638,
+     "fees": -17.325547997432803,
      "funding": 0.0,
      "timing_signal_to_fill": 0.0,
-     "net": 788.39339541189,
+     "net": 394.196697705945,
      "hold_returns": {
       "company": -0.06767667165023371,
       "market": 0.017691487648866435,
@@ -8665,10 +8946,10 @@
     ]
    },
    "unhedged": {
-    "net": 627.0363338929678,
-    "gross_mid": 654.3740468598363,
-    "fees": 11.60705631418279,
-    "slippage": 15.730656652685555,
+    "net": 313.5181669464839,
+    "gross_mid": 327.18702342991816,
+    "fees": 5.803528157091395,
+    "slippage": 7.865328326342778,
     "funding": 0.0,
     "entry_ms": 1777932000000,
     "exit_ms": 1778018400000,
@@ -8680,23 +8961,23 @@
       "role": "company",
       "symbol": "PLTRUSDT",
       "side": "short",
-      "qty": 69.31928462498267,
-      "notional": 10000.0,
+      "qty": 34.659642312491336,
+      "notional": 5000.0,
       "entry_mid": 144.26,
       "entry_fill": 144.14269676389827,
       "exit_mid": 134.82,
       "exit_fill": 134.92962721676992,
       "fee_rate": 0.0006,
-      "fees": 11.60705631418279,
-      "slippage": 15.730656652685555,
+      "fees": 5.803528157091395,
+      "slippage": 7.865328326342778,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": 654.3740468598363,
-      "net": 627.0363338929678
+      "gross_mid": 327.18702342991816,
+      "net": 313.5181669464839
      }
     ]
    },
-   "balance_after": 100107.24799445453,
+   "balance_after": 99889.25558974959,
    "naive_direction": 1,
    "analysis": {
     "event_id": "PLTR-2026-05-04",
@@ -8878,12 +9159,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.78) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AMD-2026-05-05",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "1909efbbc0204208d2bcdc91a79a8784548adec026bd8d652d41ee7c288edde8",
+    "created_at": "2026-09-12T21:10:52Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Beat plus raised guidance (46% Y/Y, 9% Q/Q growth) driven by Data Center/AI strength, with strong customer visibility (MI450/Helios, Meta 6GW deal) supporting continued momentum, aligning with the positive residual.\", \"evidence_quotes\": [\"AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million\", \"customer engagement around MI450 Series and Helios is strengthening, with leading customer forecasts exceeding our initial expectations\", \"Data Center segment revenue was $5.8 billion, up 57% year-over-year\"]}",
+    "label": "durable",
+    "confidence": 0.78,
+    "rationale": "Beat plus raised guidance (46% Y/Y, 9% Q/Q growth) driven by Data Center/AI strength, with strong customer visibility (MI450/Helios, Meta 6GW deal) supporting continued momentum, aligning with the positive residual.",
+    "evidence_quotes": [
+     "AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million",
+     "customer engagement around MI450 Series and Helios is strengthening, with leading customer forecasts exceeding our initial expectations",
+     "Data Center segment revenue was $5.8 billion, up 57% year-over-year"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 420.99694502171235,
@@ -9107,12 +9406,35 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.62) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "NVDA-2026-05-20",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "a264d471df6c7d487923b9607c8e2f0cfc1cf820450150cf2386898c82454b4c",
+    "created_at": "2026-09-12T21:13:52Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite a strong revenue beat, next-quarter guidance implies decelerating growth (~11.5% q/q vs 20% prior) and excludes China compute revenue, aligning with the negative company-specific residual reflecting a real slowdown rather than a temporary or already-priced move.\", \"evidence_quotes\": [\"Revenue is expected to be $91.0 billion, plus or minus 2%. NVIDIA is not assuming any Data Center compute revenue from China in its outlook.\", \"Revenue | $81,615 | $68,127 | $44,062 | 20 | % | 85 | %\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite a strong revenue beat, next-quarter guidance implies decelerating growth (~11.5% q/q vs 20% prior) and excludes China compute revenue, aligning with the negative company-specific residual reflecting a real slowdown rather than a temporary or already-priced move.\", \"evidence_quotes\": [\"Revenue is expected to be $91.0 billion, plus or minus 2%. NVIDIA is not assuming any Data Center compute revenue from China in its outlook.\", \"Revenue | $81,615 | $68,127 | $44,062 | 20 | % | 85 | %\"]}"
+     }
+    ],
+    "label": "durable",
+    "confidence": 0.62,
+    "rationale": "Despite a strong revenue beat, next-quarter guidance implies decelerating growth (~11.5% q/q vs 20% prior) and excludes China compute revenue, aligning with the negative company-specific residual reflecting a real slowdown rather than a temporary or already-priced move.",
+    "evidence_quotes": [
+     "Revenue is expected to be $91.0 billion, plus or minus 2%. NVIDIA is not assuming any Data Center compute revenue from China in its outlook.",
+     "Revenue | $81,615 | $68,127 | $44,062 | 20 | % | 85 | %"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -81.63904020041338,
@@ -9336,12 +9658,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.72) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "MRVL-2026-05-27",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "f4120a11b014130d76970ebb464fba880780c8f4a56e6760c2a35c24eccc30e6",
+    "created_at": "2026-09-12T21:11:06Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat was modest but guidance was significantly raised with accelerating growth across quarters, driven by broad AI-related demand, supporting a lasting positive residual rather than a one-off beat.\", \"evidence_quotes\": [\"We are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter.\", \"We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business\", \"Net revenue is expected to be $2.700 billion +/- 5%.\"]}",
+    "label": "durable",
+    "confidence": 0.72,
+    "rationale": "Revenue beat was modest but guidance was significantly raised with accelerating growth across quarters, driven by broad AI-related demand, supporting a lasting positive residual rather than a one-off beat.",
+    "evidence_quotes": [
+     "We are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter.",
+     "We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business",
+     "Net revenue is expected to be $2.700 billion +/- 5%."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -320.26024383957616,
@@ -9531,7 +9871,7 @@
    "decision": {
     "decision": "TRADE",
     "direction": -1,
-    "size": 1.0,
+    "size": 0.5,
     "structure": "short company / long hedge",
     "gates": {
      "event_data": {
@@ -9564,17 +9904,35 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.85) -> size x0.5"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AVGO-2026-06-03",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "1c0f04f8c09e56aac9ee9f0ddbded82842b6e83c15ee78aefbad80a880815a36",
+    "created_at": "2026-09-12T21:11:10Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Fundamentals beat and forward guidance raised revenue growth to 84% YoY with AI semis guided to grow >200% YoY, yet residual reaction is -12%. This large negative move directly contradicts the strong beat-and-raise, suggesting a disconnect likely to correct.\", \"evidence_quotes\": [\"Third quarter fiscal year 2026 revenue guidance of approximately $29.4 billion, an increase of 84 percent from the prior year period\", \"In Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.\", \"Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.85,
+    "rationale": "Fundamentals beat and forward guidance raised revenue growth to 84% YoY with AI semis guided to grow >200% YoY, yet residual reaction is -12%. This large negative move directly contradicts the strong beat-and-raise, suggesting a disconnect likely to correct.",
+    "evidence_quotes": [
+     "Third quarter fiscal year 2026 revenue guidance of approximately $29.4 billion, an increase of 84 percent from the prior year period",
+     "In Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.",
+     "Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast"
+    ]
+   },
    "residual": {
-    "net": -31.948440403864765,
-    "gross_mid": 33.66617385029167,
-    "fees": 32.20956164913826,
-    "slippage": 33.40505260501818,
+    "net": -15.974220201932383,
+    "gross_mid": 16.833086925145835,
+    "fees": 16.10478082456913,
+    "slippage": 16.70252630250909,
     "funding": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780610400000,
@@ -9586,49 +9944,49 @@
       "role": "company",
       "symbol": "AVGOUSDT",
       "side": "short",
-      "qty": 23.751840767659495,
-      "notional": 10000.0,
+      "qty": 11.875920383829747,
+      "notional": 5000.0,
       "entry_mid": 421.02,
       "entry_fill": 420.5829671976392,
       "exit_mid": 418.19,
       "exit_fill": 418.62409516797123,
       "fee_rate": 0.0006,
-      "fees": 11.959627509841962,
-      "slippage": 20.690892839580005,
+      "fees": 5.979813754920981,
+      "slippage": 10.345446419790003,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": 67.217709372476,
-      "net": 34.56718902305403
+      "gross_mid": 33.608854686238,
+      "net": 17.283594511527014
      },
      {
       "role": "hedge",
       "symbol": "QQQUSDT",
       "side": "long",
-      "qty": 22.824173824614764,
-      "notional": 16891.714564120895,
+      "qty": 11.412086912307382,
+      "notional": 8445.857282060448,
       "entry_mid": 740.08,
       "entry_fill": 740.358800873673,
       "exit_mid": 738.61,
       "exit_fill": 738.3317529006275,
       "fee_rate": 0.0006,
-      "fees": 20.249934139296297,
-      "slippage": 12.71415976543817,
+      "fees": 10.124967069648148,
+      "slippage": 6.357079882719085,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": -33.551535522184324,
-      "net": -66.51562942691879
+      "gross_mid": -16.775767761092162,
+      "net": -33.257814713459396
      }
     ],
     "attribution": {
-     "company_leg": 34.56718902305403,
-     "hedge_leg": -66.51562942691879,
-     "residual": 28.3736179011227,
-     "factor_error": 5.292555949168971,
-     "slippage": -33.40505260501818,
-     "fees": -32.20956164913826,
+     "company_leg": 17.283594511527014,
+     "hedge_leg": -33.257814713459396,
+     "residual": 14.18680895056135,
+     "factor_error": 2.6462779745844855,
+     "slippage": -16.70252630250909,
+     "fees": -16.10478082456913,
      "funding": 0.0,
      "timing_signal_to_fill": 0.0,
-     "net": -31.948440403864765,
+     "net": -15.974220201932383,
      "hold_returns": {
       "company": -0.006744463787441527,
       "market": -0.0019882470081733295,
@@ -9670,10 +10028,10 @@
     ]
    },
    "unhedged": {
-    "net": -304.21325997952016,
-    "gross_mid": -271.00850315899544,
-    "fees": 12.162773891414563,
-    "slippage": 21.041982929110134,
+    "net": -152.10662998976008,
+    "gross_mid": -135.50425157949772,
+    "fees": 6.0813869457072816,
+    "slippage": 10.520991464555067,
     "funding": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780556400000,
@@ -9685,23 +10043,23 @@
       "role": "company",
       "symbol": "AVGOUSDT",
       "side": "short",
-      "qty": 23.751840767659495,
-      "notional": 10000.0,
+      "qty": 11.875920383829747,
+      "notional": 5000.0,
       "entry_mid": 421.02,
       "entry_fill": 420.5829671976392,
       "exit_mid": 432.43,
       "exit_fill": 432.87887676292064,
       "fee_rate": 0.0006,
-      "fees": 12.162773891414563,
-      "slippage": 21.041982929110134,
+      "fees": 6.0813869457072816,
+      "slippage": 10.520991464555067,
       "funding": 0.0,
       "funding_settlements": 0,
-      "gross_mid": -271.00850315899544,
-      "net": -304.21325997952016
+      "gross_mid": -135.50425157949772,
+      "net": -152.10662998976008
      }
     ]
    },
-   "balance_after": 100075.29955405067,
+   "balance_after": 99873.28136954767,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AVGO-2026-06-03",
@@ -9891,12 +10249,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.62) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "MU-2026-06-24",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "93984437dbf2616ccf25534a657fce19a143464aa37ff61e6e97d955a29038d8",
+    "created_at": "2026-09-12T21:11:16Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Guidance of $50B (up sharply from $41.46B actual) plus 86% gross margin outlook and multi-year Strategic Customer Agreements support a lasting positive re-rating, despite the 'lowered' growth-rate flag versus prior guided trajectory.\", \"evidence_quotes\": [\"Revenue | $50.0 billion \u00b1 $1.0 billion\", \"We believe our multi-year Strategic Customer Agreements will significantly enhance the durability and predictability of Micron's strong financial performance.\", \"Gross margin | Approximately 86%\"]}",
+    "label": "durable",
+    "confidence": 0.62,
+    "rationale": "Guidance of $50B (up sharply from $41.46B actual) plus 86% gross margin outlook and multi-year Strategic Customer Agreements support a lasting positive re-rating, despite the 'lowered' growth-rate flag versus prior guided trajectory.",
+    "evidence_quotes": [
+     "Revenue | $50.0 billion \u00b1 $1.0 billion",
+     "We believe our multi-year Strategic Customer Agreements will significantly enhance the durability and predictability of Micron's strong financial performance.",
+     "Gross margin | Approximately 86%"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -480.09175267905636,
@@ -10087,7 +10463,7 @@
    "decision": {
     "decision": "TRADE",
     "direction": 1,
-    "size": 1.0,
+    "size": 0.5,
     "structure": "long company / short hedge",
     "gates": {
      "event_data": {
@@ -10120,17 +10496,44 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.60) -> size x0.5"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "INTC-2026-07-23",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "e4fa26513eea63a7add610d352afd7d60b3c3c3cecf9d435337c6ae7574a8483",
+    "created_at": "2026-09-12T21:14:10Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.6, \"rationale\": \"Despite a large revenue beat and strong non-GAAP profitability, forward guidance growth was lowered versus prior guided trajectory, and GAAP results show a large net loss, undercutting the durability of the bullish residual.\", \"evidence_quotes\": [\"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.\", \"Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*\"]}",
+    "attempts": [
+     {
+      "detail": "unexpected keys ['confidence', 'confidence_note', 'evidence_quotes', 'label', 'rationale']",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat by ~13% with broad-based growth (DCAI +59%, Foundry +31%) and large margin expansion (GAAP GM +12.9ppts), suggesting real operational improvement (yields, cycle times) rather than a one-off. Next-quarter guidance still implies sequential growth, supporting durability despite softer growth-rate guidance.\", \"confidence_note\": \"\", \"evidence_quotes\": [\"Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).\", \"volume upside driven by higher factory yields and improved cycle times\", \"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\"]}"
+     },
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.6, \"rationale\": \"Despite a large revenue beat and strong non-GAAP profitability, forward guidance growth was lowered versus prior guided trajectory, and GAAP results show a large net loss, undercutting the durability of the bullish residual.\", \"evidence_quotes\": [\"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.\", \"Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*\"]}"
+     }
+    ],
+    "label": "contradicted_by_guidance",
+    "confidence": 0.6,
+    "rationale": "Despite a large revenue beat and strong non-GAAP profitability, forward guidance growth was lowered versus prior guided trajectory, and GAAP results show a large net loss, undercutting the durability of the bullish residual.",
+    "evidence_quotes": [
+     "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.",
+     "Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*"
+    ]
+   },
    "residual": {
-    "net": -550.689526779514,
-    "gross_mid": -468.06973888841776,
-    "fees": 26.865508360314017,
-    "slippage": 55.75427953078233,
+    "net": -275.344763389757,
+    "gross_mid": -234.03486944420888,
+    "fees": 13.432754180157009,
+    "slippage": 27.877139765391163,
     "funding": 0.0,
     "entry_ms": 1784844000000,
     "exit_ms": 1784901600000,
@@ -10142,49 +10545,49 @@
       "role": "company",
       "symbol": "INTCUSDT",
       "side": "long",
-      "qty": 94.42870632672332,
-      "notional": 10000.0,
+      "qty": 47.21435316336166,
+      "notional": 5000.0,
       "entry_mid": 105.9,
       "entry_fill": 106.05364210572839,
       "exit_mid": 96.55,
       "exit_fill": 96.40992308490956,
       "fee_rate": 0.0006,
-      "fees": 11.47102352354889,
-      "slippage": 27.735507159472398,
+      "fees": 5.735511761774445,
+      "slippage": 13.867753579736199,
       "funding": 0.0,
       "funding_settlements": 2,
-      "gross_mid": -882.9084041548638,
-      "net": -922.114934837885
+      "gross_mid": -441.4542020774319,
+      "net": -461.0574674189425
      },
      {
       "role": "hedge",
       "symbol": "SMHUSDT",
       "side": "short",
-      "qty": 22.32716174738671,
-      "notional": 13036.383201064153,
+      "qty": 11.163580873693355,
+      "notional": 6518.191600532076,
       "entry_mid": 583.88,
       "entry_fill": 583.2423958653271,
       "exit_mid": 565.3,
       "exit_fill": 565.9173145463632,
       "fee_rate": 0.0006,
-      "fees": 15.394484836765129,
-      "slippage": 28.01877237130993,
+      "fees": 7.697242418382564,
+      "slippage": 14.009386185654964,
       "funding": 0.0,
       "funding_settlements": 2,
-      "gross_mid": 414.838665266446,
-      "net": 371.425408058371
+      "gross_mid": 207.419332633223,
+      "net": 185.7127040291855
      }
     ],
     "attribution": {
-     "company_leg": -922.114934837885,
-     "hedge_leg": 371.425408058371,
-     "residual": -414.1509037903432,
-     "factor_error": -53.91883509807457,
-     "slippage": -55.75427953078233,
-     "fees": -26.865508360314017,
+     "company_leg": -461.0574674189425,
+     "hedge_leg": 185.7127040291855,
+     "residual": -207.0754518951716,
+     "factor_error": -26.959417549037283,
+     "slippage": -27.877139765391163,
+     "fees": -13.432754180157009,
      "funding": 0.0,
      "timing_signal_to_fill": 0.0,
-     "net": -550.689526779514,
+     "net": -275.344763389757,
      "hold_returns": {
       "company": -0.09243424373283743,
       "market": -0.01211311564082252,
@@ -10226,10 +10629,10 @@
     ]
    },
    "unhedged": {
-    "net": -301.1054149047455,
-    "gross_mid": -260.6232294617568,
-    "fees": 11.843852933154537,
-    "slippage": 28.63833250983412,
+    "net": -150.55270745237274,
+    "gross_mid": -130.3116147308784,
+    "fees": 5.921926466577268,
+    "slippage": 14.31916625491706,
     "funding": 0.0,
     "entry_ms": 1784844000000,
     "exit_ms": 1784898000000,
@@ -10241,23 +10644,23 @@
       "role": "company",
       "symbol": "INTCUSDT",
       "side": "long",
-      "qty": 94.42870632672332,
-      "notional": 10000.0,
+      "qty": 47.21435316336166,
+      "notional": 5000.0,
       "entry_mid": 105.9,
       "entry_fill": 106.05364210572839,
       "exit_mid": 103.14,
       "exit_fill": 102.99036216444924,
       "fee_rate": 0.0006,
-      "fees": 11.843852933154537,
-      "slippage": 28.63833250983412,
+      "fees": 5.921926466577268,
+      "slippage": 14.31916625491706,
       "funding": 0.0,
       "funding_settlements": 2,
-      "gross_mid": -260.6232294617568,
-      "net": -301.1054149047455
+      "gross_mid": -130.3116147308784,
+      "net": -150.55270745237274
      }
     ]
    },
-   "balance_after": 99524.61002727115,
+   "balance_after": 99597.9366061579,
    "naive_direction": 1,
    "analysis": {
     "event_id": "INTC-2026-07-23",
@@ -10453,12 +10856,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.62) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "META-2026-07-29",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "19df22ec086b24bcdd04e2fd97df34af9bde57a3eb22b68954b7e131a4ee5624",
+    "created_at": "2026-09-12T21:14:20Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat but guidance midpoint lowered vs prior growth path, capex raised, tax rate guidance raised, and opex surged 55% with margin compression and FCF collapse to $784M\u2014structural drivers beyond one-off legal/severance charges support a lasting negative re-rating.\", \"evidence_quotes\": [\"We expect third quarter 2026 total revenue to be in the range of $61-64 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.\", \"we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%.\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat but guidance midpoint lowered vs prior growth path, capex raised, tax rate guidance raised, and opex surged 55% with margin compression and FCF collapse to $784M\u2014structural drivers beyond one-off legal/severance charges support a lasting negative re-rating.\", \"evidence_quotes\": [\"We expect third quarter 2026 total revenue to be in the range of $61-64 billion.\", \"We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.\", \"we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%.\"]}"
+     }
+    ],
+    "label": "durable",
+    "confidence": 0.62,
+    "rationale": "Revenue beat but guidance midpoint lowered vs prior growth path, capex raised, tax rate guidance raised, and opex surged 55% with margin compression and FCF collapse to $784M\u2014structural drivers beyond one-off legal/severance charges support a lasting negative re-rating.",
+    "evidence_quotes": [
+     "We expect third quarter 2026 total revenue to be in the range of $61-64 billion.",
+     "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.",
+     "we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 232.27129943875363,
@@ -10677,12 +11104,29 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.62) -> size x0.5"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AMZN-2026-07-30",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "3eae94f7684b4a762f7f582af81c54d9c8baf79753f79c3df0b8e3cdf5a63dc8",
+    "created_at": "2026-09-12T21:11:43Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Revenue and AWS growth beat strongly, but next-quarter guidance was explicitly lowered vs prior growth trajectory, and net income was inflated by a one-time $53.4B non-operating gain from Anthropic stake, not core operations. The +8.99% residual rally appears disconnected from the guided deceleration and FCF outflow.\", \"evidence_quotes\": [\"Second quarter 2026 net income includes non-operating pre-tax other income of $53.4 billion, primarily from our investments in Anthropic.\", \"Free cash flow decreased to an outflow of $7.6 billion for the trailing twelve months\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.62,
+    "rationale": "Revenue and AWS growth beat strongly, but next-quarter guidance was explicitly lowered vs prior growth trajectory, and net income was inflated by a one-time $53.4B non-operating gain from Anthropic stake, not core operations. The +8.99% residual rally appears disconnected from the guided deceleration and FCF outflow.",
+    "evidence_quotes": [
+     "Second quarter 2026 net income includes non-operating pre-tax other income of $53.4 billion, primarily from our investments in Anthropic.",
+     "Free cash flow decreased to an outflow of $7.6 billion for the trailing twelve months"
+    ]
+   },
    "residual": null,
    "naive": {
     "net": 488.26827360624054,
@@ -10901,12 +11345,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.78) -> size x1.0"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "PLTR-2026-08-03",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "dd49b1ac3826c0ffbb9f343f12d863fe28410d81fc8f52eb09f3b1c23310839b",
+    "created_at": "2026-09-12T21:11:47Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Strong beat (7.6% surprise) plus raised FY guidance, accelerating US commercial growth (149% YoY), record TCV/RDV, and expanding margins support a durable positive residual, not a one-off.\", \"evidence_quotes\": [\"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial remaining deal value (\\\"RDV\\\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter\"]}",
+    "label": "durable",
+    "confidence": 0.78,
+    "rationale": "Strong beat (7.6% surprise) plus raised FY guidance, accelerating US commercial growth (149% YoY), record TCV/RDV, and expanding margins support a durable positive residual, not a one-off.",
+    "evidence_quotes": [
+     "U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million",
+     "We are raising our revenue guidance to between $8.150 - $8.158 billion.",
+     "U.S. commercial remaining deal value (\"RDV\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter"
+    ]
+   },
    "residual": {
     "net": 1105.5842731833795,
     "gross_mid": 1156.6485762057,
@@ -11038,7 +11500,7 @@
      }
     ]
    },
-   "balance_after": 100630.19430045453,
+   "balance_after": 100703.52087934129,
    "naive_direction": 1,
    "analysis": {
     "event_id": "PLTR-2026-08-03",
@@ -11192,7 +11654,7 @@
    "decision": {
     "decision": "TRADE",
     "direction": -1,
-    "size": 1.0,
+    "size": 0.5,
     "structure": "short company / long hedge",
     "gates": {
      "event_data": {
@@ -11225,18 +11687,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.78) -> size x0.5"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AMD-2026-08-04",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "aa03874b3d587edb47da9a7e9698ff91701e8ad49702d7e9dee0314cafce0954",
+    "created_at": "2026-09-12T21:11:50Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue beat, raised guidance, accelerating Data Center demand and strong forward commentary all contradict the sharp negative company-specific residual; fundamentals point positive, not negative.\", \"evidence_quotes\": [\"Revenue increased 50% year-over-year to a record $11.5 billion\", \"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"deliver substantial revenue and earnings growth in the years ahead\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.78,
+    "rationale": "Revenue beat, raised guidance, accelerating Data Center demand and strong forward commentary all contradict the sharp negative company-specific residual; fundamentals point positive, not negative.",
+    "evidence_quotes": [
+     "Revenue increased 50% year-over-year to a record $11.5 billion",
+     "We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.",
+     "deliver substantial revenue and earnings growth in the years ahead"
+    ]
+   },
    "residual": {
-    "net": -391.56513854728473,
-    "gross_mid": -288.42127702645837,
-    "fees": 47.513803108545304,
-    "slippage": 59.09124586339409,
-    "funding": 3.461187451113038,
+    "net": -195.78256927364237,
+    "gross_mid": -144.21063851322918,
+    "fees": 23.756901554272652,
+    "slippage": 29.545622931697046,
+    "funding": 1.730593725556519,
     "entry_ms": 1785880800000,
     "exit_ms": 1785945600000,
     "stopped": true,
@@ -11247,49 +11727,49 @@
       "role": "company",
       "symbol": "AMDUSDT",
       "side": "short",
-      "qty": 21.140308225693932,
-      "notional": 10000.0,
+      "qty": 10.570154112846966,
+      "notional": 5000.0,
       "entry_mid": 473.03,
       "entry_fill": 472.2975333326167,
       "exit_mid": 484.47,
       "exit_fill": 485.2201810167372,
       "fee_rate": 0.0006,
-      "fees": 12.145331767744377,
-      "slippage": 31.343629032417027,
-      "funding": 3.461187451113038,
+      "fees": 6.0726658838721885,
+      "slippage": 15.671814516208514,
+      "funding": 1.730593725556519,
       "funding_settlements": 3,
-      "gross_mid": -241.84512610193974,
-      "net": -281.8728994509881
+      "gross_mid": -120.92256305096987,
+      "net": -140.93644972549404
      },
      {
       "role": "hedge",
       "symbol": "QQQUSDT",
       "side": "long",
-      "qty": 40.85627274080631,
-      "notional": 29497.003230679933,
+      "qty": 20.428136370403156,
+      "notional": 14748.501615339967,
       "entry_mid": 721.97,
       "entry_fill": 722.3098442785031,
       "exit_mid": 720.83,
       "exit_fill": 720.4906923400233,
       "fee_rate": 0.0006,
-      "fees": 35.36847134080092,
-      "slippage": 27.747616830977062,
+      "fees": 17.68423567040046,
+      "slippage": 13.873808415488531,
       "funding": 0.0,
       "funding_settlements": 3,
-      "gross_mid": -46.576150924518636,
-      "net": -109.69223909629662
+      "gross_mid": -23.288075462259318,
+      "net": -54.84611954814831
      }
     ],
     "attribution": {
-     "company_leg": -281.8728994509881,
-     "hedge_leg": -109.69223909629662,
-     "residual": -197.07342392399624,
-     "factor_error": -91.34785310246212,
-     "slippage": -59.09124586339409,
-     "fees": -47.513803108545304,
-     "funding": 3.461187451113038,
+     "company_leg": -140.93644972549404,
+     "hedge_leg": -54.84611954814831,
+     "residual": -98.53671196199812,
+     "factor_error": -45.67392655123106,
+     "slippage": -29.545622931697046,
+     "fees": -23.756901554272652,
+     "funding": 1.730593725556519,
      "timing_signal_to_fill": 0.0,
-     "net": -391.56513854728473,
+     "net": -195.78256927364237,
      "hold_returns": {
       "company": 0.02389669848128356,
       "market": -0.0015802609332358196,
@@ -11331,11 +11811,11 @@
     ]
    },
    "unhedged": {
-    "net": -303.9502648986583,
-    "gross_mid": -263.61964357440394,
-    "fees": 12.158416708371712,
-    "slippage": 31.37734593884323,
-    "funding": 3.2051413229604893,
+    "net": -151.97513244932915,
+    "gross_mid": -131.80982178720197,
+    "fees": 6.079208354185856,
+    "slippage": 15.688672969421615,
+    "funding": 1.6025706614802446,
     "entry_ms": 1785880800000,
     "exit_ms": 1785909600000,
     "stopped": true,
@@ -11346,23 +11826,23 @@
       "role": "company",
       "symbol": "AMDUSDT",
       "side": "short",
-      "qty": 21.140308225693932,
-      "notional": 10000.0,
+      "qty": 10.570154112846966,
+      "notional": 5000.0,
       "entry_mid": 473.03,
       "entry_fill": 472.2975333326167,
       "exit_mid": 485.5,
       "exit_fill": 486.2517759275618,
       "fee_rate": 0.0006,
-      "fees": 12.158416708371712,
-      "slippage": 31.37734593884323,
-      "funding": 3.2051413229604893,
+      "fees": 6.079208354185856,
+      "slippage": 15.688672969421615,
+      "funding": 1.6025706614802446,
       "funding_settlements": 1,
-      "gross_mid": -263.61964357440394,
-      "net": -303.9502648986583
+      "gross_mid": -131.80982178720197,
+      "net": -151.97513244932915
      }
     ]
    },
-   "balance_after": 100238.62916190724,
+   "balance_after": 100507.73831006765,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AMD-2026-08-04",
@@ -11568,12 +12048,30 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.78) -> size x1.0"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "NVDA-2026-08-26",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "04ed9409c2f946dcd3a3a87584817cd25b82e7209d1c56e879b2cb3db960456a",
+    "created_at": "2026-09-12T21:11:55Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat by 5.7%, Data Center up 117% Y/Y, and next-quarter guidance of $108B implies continued strong growth (maintained trajectory), supporting the positive residual as reflecting durable demand rather than a one-off.\", \"evidence_quotes\": [\"Data Center revenue of $89.0 billion, up 117% from a year ago\", \"Revenue is expected to be $108.0 billion, plus or minus 2%.\", \"demand is accelerating\"]}",
+    "label": "durable",
+    "confidence": 0.78,
+    "rationale": "Revenue beat by 5.7%, Data Center up 117% Y/Y, and next-quarter guidance of $108B implies continued strong growth (maintained trajectory), supporting the positive residual as reflecting durable demand rather than a one-off.",
+    "evidence_quotes": [
+     "Data Center revenue of $89.0 billion, up 117% from a year ago",
+     "Revenue is expected to be $108.0 billion, plus or minus 2%.",
+     "demand is accelerating"
+    ]
+   },
    "residual": {
     "net": -313.3840353017688,
     "gross_mid": -276.28902356881974,
@@ -11705,7 +12203,7 @@
      }
     ]
    },
-   "balance_after": 99925.24512660547,
+   "balance_after": 100194.35427476588,
    "naive_direction": 1,
    "analysis": {
     "event_id": "NVDA-2026-08-26",
@@ -11878,7 +12376,7 @@
    "decision": {
     "decision": "TRADE",
     "direction": 1,
-    "size": 1.0,
+    "size": 0.5,
     "structure": "long company / short hedge",
     "gates": {
      "event_data": {
@@ -11911,18 +12409,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "contradicted_by_guidance (confidence 0.85) -> size x0.5"
      }
     },
     "reasons": []
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "MRVL-2026-08-27",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "d6b5e5437984bad2c819e394ad68962de2d42ef2f95adf6efc6bde0a6861f159",
+    "created_at": "2026-09-12T21:11:59Z",
+    "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Beat on revenue, raised guidance, accelerating Data Center/AI demand and higher next-quarter outlook contradict the strongly negative -5.96% company-specific residual; fundamentals do not support the selloff.\", \"evidence_quotes\": [\"we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter\", \"AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further through the remainder of fiscal 2027\", \"Net revenue is expected to be $3.150 billion +/- 5%.\"]}",
+    "label": "contradicted_by_guidance",
+    "confidence": 0.85,
+    "rationale": "Beat on revenue, raised guidance, accelerating Data Center/AI demand and higher next-quarter outlook contradict the strongly negative -5.96% company-specific residual; fundamentals do not support the selloff.",
+    "evidence_quotes": [
+     "we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter",
+     "AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further through the remainder of fiscal 2027",
+     "Net revenue is expected to be $3.150 billion +/- 5%."
+    ]
+   },
    "residual": {
-    "net": 140.39407046550218,
-    "gross_mid": 233.5975859691269,
-    "fees": 36.02834538360849,
-    "slippage": 49.92843085457963,
-    "funding": -7.24673926543648,
+    "net": 70.19703523275109,
+    "gross_mid": 116.79879298456345,
+    "fees": 18.014172691804244,
+    "slippage": 24.964215427289815,
+    "funding": -3.62336963271824,
     "entry_ms": 1787868000000,
     "exit_ms": 1787954400000,
     "stopped": false,
@@ -11933,49 +12449,49 @@
       "role": "company",
       "symbol": "MRVLUSDT",
       "side": "long",
-      "qty": 44.357700496806245,
-      "notional": 10000.0,
+      "qty": 22.178850248403123,
+      "notional": 5000.0,
       "entry_mid": 225.44,
       "entry_fill": 225.70318829636096,
       "exit_mid": 217.19,
       "exit_fill": 216.93644310642907,
       "fee_rate": 0.0006,
-      "fees": 11.780685718669002,
-      "slippage": 22.92162836816431,
-      "funding": -7.24673926543648,
+      "fees": 5.890342859334501,
+      "slippage": 11.460814184082155,
+      "funding": -3.62336963271824,
       "funding_settlements": 3,
-      "gross_mid": -365.95102909865153,
-      "net": -407.90008245092133
+      "gross_mid": -182.97551454932577,
+      "net": -203.95004122546067
      },
      {
       "role": "hedge",
       "symbol": "SMHUSDT",
       "side": "short",
-      "qty": 35.90111467471717,
-      "notional": 20506.357691051704,
+      "qty": 17.950557337358585,
+      "notional": 10253.178845525852,
       "entry_mid": 571.19,
       "entry_fill": 570.8082923352397,
       "exit_mid": 554.49,
       "exit_fill": 554.8605475989302,
       "fee_rate": 0.0006,
-      "fees": 24.247659664939487,
-      "slippage": 27.00680248641532,
+      "fees": 12.123829832469744,
+      "slippage": 13.50340124320766,
       "funding": 0.0,
       "funding_settlements": 3,
-      "gross_mid": 599.5486150677784,
-      "net": 548.2941529164235
+      "gross_mid": 299.7743075338892,
+      "net": 274.14707645821176
      }
     ],
     "attribution": {
-     "company_leg": -407.90008245092133,
-     "hedge_leg": 548.2941529164235,
-     "residual": 81.49380022578062,
-     "factor_error": 152.1037857433463,
-     "slippage": -49.92843085457963,
-     "fees": -36.02834538360849,
-     "funding": -7.24673926543648,
+     "company_leg": -203.95004122546067,
+     "hedge_leg": 274.14707645821176,
+     "residual": 40.74690011289031,
+     "factor_error": 76.05189287167315,
+     "slippage": -24.964215427289815,
+     "fees": -18.014172691804244,
+     "funding": -3.62336963271824,
      "timing_signal_to_fill": 0.0,
-     "net": 140.39407046550218,
+     "net": 70.19703523275109,
      "hold_returns": {
       "company": -0.037281501666140526,
       "market": -0.004301261512075687,
@@ -12017,11 +12533,11 @@
     ]
    },
    "unhedged": {
-    "net": -383.98924324050046,
-    "gross_mid": -341.9978708303765,
-    "fees": 11.795040835265212,
-    "slippage": 22.94959230942232,
-    "funding": -7.24673926543648,
+    "net": -191.99462162025023,
+    "gross_mid": -170.99893541518824,
+    "fees": 5.897520417632606,
+    "slippage": 11.47479615471116,
+    "funding": -3.62336963271824,
     "entry_ms": 1787868000000,
     "exit_ms": 1787932800000,
     "stopped": true,
@@ -12032,23 +12548,23 @@
       "role": "company",
       "symbol": "MRVLUSDT",
       "side": "long",
-      "qty": 44.357700496806245,
-      "notional": 10000.0,
+      "qty": 22.178850248403123,
+      "notional": 5000.0,
       "entry_mid": 225.44,
       "entry_fill": 225.70318829636096,
       "exit_mid": 217.73,
       "exit_fill": 217.47581268733734,
       "fee_rate": 0.0006,
-      "fees": 11.795040835265212,
-      "slippage": 22.94959230942232,
-      "funding": -7.24673926543648,
+      "fees": 5.897520417632606,
+      "slippage": 11.47479615471116,
+      "funding": -3.62336963271824,
       "funding_settlements": 3,
-      "gross_mid": -341.9978708303765,
-      "net": -383.98924324050046
+      "gross_mid": -170.99893541518824,
+      "net": -191.99462162025023
      }
     ]
    },
-   "balance_after": 100065.63919707097,
+   "balance_after": 100264.55130999863,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MRVL-2026-08-27",
@@ -12259,12 +12775,36 @@
      },
      "ai_interpretation": {
       "pass": true,
-      "detail": "AI gate disabled for this run"
+      "detail": "durable (confidence 0.60) -> size x1.0"
      }
     },
     "size": 0.0
    },
-   "interpretation": null,
+   "interpretation": {
+    "event_id": "AVGO-2026-09-02",
+    "status": "ok",
+    "detail": "ok",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_version": "interp-v1",
+    "prompt_sha256": "46cfb3d6c3f8c221f6dc78827b85c54aacdbe8e921cd3e5f799890de1520e13f",
+    "created_at": "2026-09-12T21:14:30Z",
+    "raw_response": "{\"label\": \"durable\", \"confidence\": 0.6, \"rationale\": \"Modest revenue beat plus accelerating AI semiconductor revenue guidance ($21.7B, +236% YoY) and maintained 66% margin support a positive fundamental read, even though the 'lowered' tag reflects a growth-rate deceleration versus prior pace, not an actual guidance cut.\", \"evidence_quotes\": [\"In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.\", \"Fourth quarter revenue guidance of approximately $34.8 billion\", \"we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago.\"]}",
+    "attempts": [
+     {
+      "detail": "ok",
+      "raw_response": "{\"label\": \"durable\", \"confidence\": 0.6, \"rationale\": \"Modest revenue beat plus accelerating AI semiconductor revenue guidance ($21.7B, +236% YoY) and maintained 66% margin support a positive fundamental read, even though the 'lowered' tag reflects a growth-rate deceleration versus prior pace, not an actual guidance cut.\", \"evidence_quotes\": [\"In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.\", \"Fourth quarter revenue guidance of approximately $34.8 billion\", \"we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago.\"]}"
+     }
+    ],
+    "label": "durable",
+    "confidence": 0.6,
+    "rationale": "Modest revenue beat plus accelerating AI semiconductor revenue guidance ($21.7B, +236% YoY) and maintained 66% margin support a positive fundamental read, even though the 'lowered' tag reflects a growth-rate deceleration versus prior pace, not an actual guidance cut.",
+    "evidence_quotes": [
+     "In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.",
+     "Fourth quarter revenue guidance of approximately $34.8 billion",
+     "we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago."
+    ]
+   },
    "residual": null,
    "naive": {
     "net": -311.6724455630873,
@@ -12511,10 +13051,10 @@
    "type": "entry",
    "time_ms": 1773871200000,
    "side": "sell",
-   "qty": 22.602956466705844,
+   "qty": 11.301478233352922,
    "price": 442.01906912363694,
-   "notional": 9990.937776855408,
-   "fee": 5.994562666113244,
+   "notional": 4995.468888427704,
+   "fee": 2.997281333056622,
    "time_utc": "2026-03-18T22:00Z"
   },
   {
@@ -12524,10 +13064,10 @@
    "type": "exit",
    "time_ms": 1773932400000,
    "side": "buy",
-   "qty": 22.602956466705844,
+   "qty": 11.301478233352922,
    "price": 450.7581172193167,
-   "notional": 10188.466100522506,
-   "fee": 6.1130796603135025,
+   "notional": 5094.233050261253,
+   "fee": 3.0565398301567512,
    "time_utc": "2026-03-19T15:00Z"
   },
   {
@@ -12537,10 +13077,10 @@
    "type": "entry",
    "time_ms": 1773871200000,
    "side": "buy",
-   "qty": 34.578965927262786,
+   "qty": 17.289482963631393,
    "price": 594.7891861921595,
-   "notional": 20567.195003243043,
-   "fee": 12.340317001945824,
+   "notional": 10283.597501621522,
+   "fee": 6.170158500972912,
    "time_utc": "2026-03-18T22:00Z"
   },
   {
@@ -12550,10 +13090,10 @@
    "type": "exit",
    "time_ms": 1773932400000,
    "side": "sell",
-   "qty": 34.578965927262786,
+   "qty": 17.289482963631393,
    "price": 591.3719965635464,
-   "notional": 20449.032119508236,
-   "fee": 12.26941927170494,
+   "notional": 10224.516059754118,
+   "fee": 6.13470963585247,
    "time_utc": "2026-03-19T15:00Z"
   },
   {
@@ -12563,10 +13103,10 @@
    "type": "entry",
    "time_ms": 1777932000000,
    "side": "sell",
-   "qty": 69.31928462498267,
+   "qty": 34.659642312491336,
    "price": 144.14269676389827,
-   "notional": 9991.868623589233,
-   "fee": 5.99512117415354,
+   "notional": 4995.934311794616,
+   "fee": 2.99756058707677,
    "time_utc": "2026-05-04T22:00Z"
   },
   {
@@ -12576,10 +13116,10 @@
    "type": "exit",
    "time_ms": 1778018400000,
    "side": "buy",
-   "qty": 69.31928462498267,
+   "qty": 34.659642312491336,
    "price": 134.92962721676992,
-   "notional": 9353.225233382082,
-   "fee": 5.611935140029249,
+   "notional": 4676.612616691041,
+   "fee": 2.8059675700146247,
    "time_utc": "2026-05-05T22:00Z"
   },
   {
@@ -12589,10 +13129,10 @@
    "type": "entry",
    "time_ms": 1777932000000,
    "side": "buy",
-   "qty": 26.619991667530478,
+   "qty": 13.309995833765239,
    "price": 717.925313,
-   "notional": 19111.16584996921,
-   "fee": 11.466699509981526,
+   "notional": 9555.582924984605,
+   "fee": 5.733349754990763,
    "time_utc": "2026-05-04T22:00Z"
   },
   {
@@ -12602,10 +13142,10 @@
    "type": "exit",
    "time_ms": 1778018400000,
    "side": "sell",
-   "qty": 26.619991667530478,
+   "qty": 13.309995833765239,
    "price": 724.8524790000001,
-   "notional": 19295.566951168814,
-   "fee": 11.577340170701287,
+   "notional": 9647.783475584407,
+   "fee": 5.788670085350644,
    "time_utc": "2026-05-05T22:00Z"
   },
   {
@@ -12615,10 +13155,10 @@
    "type": "entry",
    "time_ms": 1780524000000,
    "side": "sell",
-   "qty": 23.751840767659495,
+   "qty": 11.875920383829747,
    "price": 420.5829671976392,
-   "notional": 9989.619666468083,
-   "fee": 5.993771799880849,
+   "notional": 4994.809833234041,
+   "fee": 2.9968858999404246,
    "time_utc": "2026-06-03T22:00Z"
   },
   {
@@ -12628,10 +13168,10 @@
    "type": "exit",
    "time_ms": 1780610400000,
    "side": "buy",
-   "qty": 23.751840767659495,
+   "qty": 11.875920383829747,
    "price": 418.62409516797123,
-   "notional": 9943.092849935187,
-   "fee": 5.965855709961112,
+   "notional": 4971.546424967593,
+   "fee": 2.982927854980556,
    "time_utc": "2026-06-04T22:00Z"
   },
   {
@@ -12641,10 +13181,10 @@
    "type": "entry",
    "time_ms": 1780524000000,
    "side": "buy",
-   "qty": 22.824173824614764,
+   "qty": 11.412086912307382,
    "price": 740.358800873673,
-   "notional": 16898.07796372406,
-   "fee": 10.138846778234436,
+   "notional": 8449.03898186203,
+   "fee": 5.069423389117218,
    "time_utc": "2026-06-03T22:00Z"
   },
   {
@@ -12654,10 +13194,10 @@
    "type": "exit",
    "time_ms": 1780610400000,
    "side": "sell",
-   "qty": 22.824173824614764,
+   "qty": 11.412086912307382,
    "price": 738.3317529006275,
-   "notional": 16851.81226843644,
-   "fee": 10.111087361061863,
+   "notional": 8425.90613421822,
+   "fee": 5.055543680530931,
    "time_utc": "2026-06-04T22:00Z"
   },
   {
@@ -12667,10 +13207,10 @@
    "type": "entry",
    "time_ms": 1784844000000,
    "side": "buy",
-   "qty": 94.42870632672332,
+   "qty": 47.21435316336166,
    "price": 106.05364210572839,
-   "notional": 10014.508225281244,
-   "fee": 6.008704935168746,
+   "notional": 5007.254112640622,
+   "fee": 3.004352467584373,
    "time_utc": "2026-07-23T22:00Z"
   },
   {
@@ -12680,10 +13220,10 @@
    "type": "exit",
    "time_ms": 1784901600000,
    "side": "sell",
-   "qty": 94.42870632672332,
+   "qty": 47.21435316336166,
    "price": 96.40992308490956,
-   "notional": 9103.864313966908,
-   "fee": 5.462318588380144,
+   "notional": 4551.932156983454,
+   "fee": 2.731159294190072,
    "time_utc": "2026-07-24T14:00Z"
   },
   {
@@ -12693,10 +13233,10 @@
    "type": "entry",
    "time_ms": 1784844000000,
    "side": "sell",
-   "qty": 22.32716174738671,
+   "qty": 11.163580873693355,
    "price": 583.2423958653271,
-   "notional": 13022.14731041851,
-   "fee": 7.813288386251105,
+   "notional": 6511.073655209255,
+   "fee": 3.9066441931255524,
    "time_utc": "2026-07-23T22:00Z"
   },
   {
@@ -12706,10 +13246,10 @@
    "type": "exit",
    "time_ms": 1784901600000,
    "side": "buy",
-   "qty": 22.32716174738671,
+   "qty": 11.163580873693355,
    "price": 565.9173145463632,
-   "notional": 12635.327417523373,
-   "fee": 7.581196450514023,
+   "notional": 6317.663708761686,
+   "fee": 3.7905982252570114,
    "time_utc": "2026-07-24T14:00Z"
   },
   {
@@ -12771,10 +13311,10 @@
    "type": "entry",
    "time_ms": 1785880800000,
    "side": "sell",
-   "qty": 21.140308225693932,
+   "qty": 10.570154112846966,
    "price": 472.2975333326167,
-   "notional": 9984.51542888647,
-   "fee": 5.990709257331882,
+   "notional": 4992.257714443235,
+   "fee": 2.995354628665941,
    "time_utc": "2026-08-04T22:00Z"
   },
   {
@@ -12784,10 +13324,10 @@
    "type": "exit",
    "time_ms": 1785945600000,
    "side": "buy",
-   "qty": 21.140308225693932,
+   "qty": 10.570154112846966,
    "price": 485.2201810167372,
-   "notional": 10257.704184020828,
-   "fee": 6.154622510412496,
+   "notional": 5128.852092010414,
+   "fee": 3.077311255206248,
    "time_utc": "2026-08-05T16:00Z"
   },
   {
@@ -12797,10 +13337,10 @@
    "type": "entry",
    "time_ms": 1785880800000,
    "side": "buy",
-   "qty": 40.85627274080631,
+   "qty": 20.428136370403156,
    "price": 722.3098442785031,
-   "notional": 29510.888001211857,
-   "fee": 17.70653280072711,
+   "notional": 14755.444000605929,
+   "fee": 8.853266400363555,
    "time_utc": "2026-08-04T22:00Z"
   },
   {
@@ -12810,10 +13350,10 @@
    "type": "exit",
    "time_ms": 1785945600000,
    "side": "sell",
-   "qty": 40.85627274080631,
+   "qty": 20.428136370403156,
    "price": 720.4906923400233,
-   "notional": 29436.56423345636,
-   "fee": 17.661938540073812,
+   "notional": 14718.28211672818,
+   "fee": 8.830969270036906,
    "time_utc": "2026-08-05T16:00Z"
   },
   {
@@ -12875,10 +13415,10 @@
    "type": "entry",
    "time_ms": 1787868000000,
    "side": "buy",
-   "qty": 44.357700496806245,
+   "qty": 22.178850248403123,
    "price": 225.70318829636096,
-   "notional": 10011.674427624244,
-   "fee": 6.007004656574546,
+   "notional": 5005.837213812122,
+   "fee": 3.003502328287273,
    "time_utc": "2026-08-27T22:00Z"
   },
   {
@@ -12888,10 +13428,10 @@
    "type": "exit",
    "time_ms": 1787954400000,
    "side": "sell",
-   "qty": 44.357700496806245,
+   "qty": 22.178850248403123,
    "price": 216.93644310642907,
-   "notional": 9622.801770157428,
-   "fee": 5.7736810620944565,
+   "notional": 4811.400885078714,
+   "fee": 2.8868405310472283,
    "time_utc": "2026-08-28T22:00Z"
   },
   {
@@ -12901,10 +13441,10 @@
    "type": "entry",
    "time_ms": 1787868000000,
    "side": "sell",
-   "qty": 35.90111467471717,
+   "qty": 17.950557337358585,
    "price": 570.8082923352397,
-   "notional": 20492.653960406922,
-   "fee": 12.295592376244153,
+   "notional": 10246.326980203461,
+   "fee": 6.147796188122077,
    "time_utc": "2026-08-27T22:00Z"
   },
   {
@@ -12914,12 +13454,245 @@
    "type": "exit",
    "time_ms": 1787954400000,
    "side": "buy",
-   "qty": 35.90111467471717,
+   "qty": 17.950557337358585,
    "price": 554.8605475989302,
-   "notional": 19920.11214782556,
-   "fee": 11.952067288695336,
+   "notional": 9960.05607391278,
+   "fee": 5.976033644347668,
    "time_utc": "2026-08-28T22:00Z"
   }
  ],
- "final_balance": 100065.63919707097
+ "final_balance": 100264.55130999863,
+ "ablation_no_ai": {
+  "summary": {
+   "residual": {
+    "total_net_pnl": 65.64,
+    "trades": 9,
+    "no_trades": 26,
+    "hit_rate": 0.333,
+    "avg_pnl_per_trade": 7.29,
+    "pnl_std_per_trade": 575.67,
+    "max_drawdown": -704.95,
+    "avg_holding_hours": 19.4,
+    "return_on_start_balance_pct": 0.066,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -328.74,
+     -681.15,
+     -681.15,
+     -681.15,
+     -681.15,
+     107.25,
+     107.25,
+     107.25,
+     107.25,
+     75.3,
+     75.3,
+     -475.39,
+     -475.39,
+     -475.39,
+     630.19,
+     238.63,
+     -74.75,
+     65.64,
+     65.64
+    ]
+   },
+   "naive": {
+    "total_net_pnl": -1612.61,
+    "trades": 27,
+    "no_trades": 8,
+    "hit_rate": 0.407,
+    "avg_pnl_per_trade": -59.73,
+    "pnl_std_per_trade": 422.22,
+    "max_drawdown": -3456.01,
+    "avg_holding_hours": 18.4,
+    "return_on_start_balance_pct": -1.613,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -489.4,
+     -856.61,
+     -856.61,
+     -856.61,
+     -1291.39,
+     -1212.88,
+     -1185.26,
+     -1185.26,
+     -776.68,
+     -1201.62,
+     -1282.89,
+     -1611.8,
+     -1564.29,
+     -1308.0,
+     -1660.92,
+     -1963.05,
+     -2369.96,
+     -1948.96,
+     -2030.6,
+     -2350.86,
+     -2674.82,
+     -3154.91,
+     -3456.01,
+     -3223.74,
+     -2735.47,
+     -1361.34,
+     -1219.6,
+     -916.95,
+     -1300.94,
+     -1612.61
+    ]
+   },
+   "unhedged": {
+    "total_net_pnl": -257.29,
+    "trades": 9,
+    "no_trades": 26,
+    "hit_rate": 0.222,
+    "avg_pnl_per_trade": -28.59,
+    "pnl_std_per_trade": 620.84,
+    "max_drawdown": -1055.75,
+    "avg_holding_hours": 16.8,
+    "return_on_start_balance_pct": -0.257,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -489.4,
+     -597.39,
+     -597.39,
+     -597.39,
+     -597.39,
+     29.64,
+     29.64,
+     29.64,
+     29.64,
+     -274.57,
+     -274.57,
+     -575.67,
+     -575.67,
+     -575.67,
+     798.46,
+     494.51,
+     126.7,
+     -257.29,
+     -257.29
+    ]
+   },
+   "no_trade": {
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "no_trades": 35,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "decisions": {
+   "INTC-2025-10-23": "NO_TRADE",
+   "META-2025-10-29": "NO_TRADE",
+   "AMZN-2025-10-30": "NO_TRADE",
+   "PLTR-2025-11-03": "NO_TRADE",
+   "AMD-2025-11-04": "NO_TRADE",
+   "NVDA-2025-11-19": "TRADE",
+   "MRVL-2025-12-02": "NO_TRADE",
+   "AVGO-2025-12-11": "NO_TRADE",
+   "MU-2025-12-17": "NO_TRADE",
+   "INTC-2026-01-22": "NO_TRADE",
+   "META-2026-01-28": "NO_TRADE",
+   "PLTR-2026-02-02": "NO_TRADE",
+   "AMD-2026-02-03": "NO_TRADE",
+   "AMZN-2026-02-05": "NO_TRADE",
+   "NVDA-2026-02-25": "NO_TRADE",
+   "AVGO-2026-03-04": "NO_TRADE",
+   "MRVL-2026-03-05": "NO_TRADE",
+   "MU-2026-03-18": "TRADE",
+   "INTC-2026-04-23": "NO_TRADE",
+   "META-2026-04-29": "NO_TRADE",
+   "AMZN-2026-04-29": "NO_TRADE",
+   "PLTR-2026-05-04": "TRADE",
+   "AMD-2026-05-05": "NO_TRADE",
+   "NVDA-2026-05-20": "NO_TRADE",
+   "MRVL-2026-05-27": "NO_TRADE",
+   "AVGO-2026-06-03": "TRADE",
+   "MU-2026-06-24": "NO_TRADE",
+   "INTC-2026-07-23": "TRADE",
+   "META-2026-07-29": "NO_TRADE",
+   "AMZN-2026-07-30": "NO_TRADE",
+   "PLTR-2026-08-03": "TRADE",
+   "AMD-2026-08-04": "TRADE",
+   "NVDA-2026-08-26": "TRADE",
+   "MRVL-2026-08-27": "TRADE",
+   "AVGO-2026-09-02": "NO_TRADE"
+  }
+ }
 }
