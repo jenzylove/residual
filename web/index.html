@@ -3,35 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RESIDUAL · Event-Neutral Earnings Agent</title>
-<link rel="stylesheet" href="style.css">
+<title>RESIDUAL · Event Neutral Earnings Agent</title>
+<meta name="description" content="RESIDUAL strips market, sector and liquidity effects out of an earnings reaction and trades only what belongs to the company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<header class="top">
-  <div class="brand">
-    <h1>RESIDUAL</h1>
-    <p class="thesis">The market moved. How much of that move actually belonged to the company?</p>
-  </div>
-  <div id="kpis" class="kpis"></div>
+<header class="nav reveal" style="--d:0">
+  <a class="logo" href="/">RESIDUAL<sup>®</sup></a>
+  <nav class="links">
+    <a href="#method">Method</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#results">Results</a>
+    <a href="/dashboard">Dashboard</a>
+  </nav>
+  <a class="pill" href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">
+    <span>View source</span><i class="dot"></i>
+  </a>
 </header>
-<nav class="tabs" role="tablist">
-  <button data-tab="board" class="on">Event board</button>
-  <button data-tab="results">Results</button>
-  <button data-tab="live">Live watcher</button>
-  <button data-tab="method">Method</button>
-</nav>
-<main>
-  <section id="tab-board" class="tab on">
-    <div class="board-wrap">
-      <div class="table-scroll"><table id="board" class="board"></table></div>
-      <div id="detail" class="detail"><p class="muted">Select an event to see its decomposition, strategy card, evidence and paper execution.</p></div>
+
+<main class="hero">
+  <section class="copy">
+    <p class="eyebrow reveal" style="--d:1"><i class="dot"></i>Event neutral earnings agent</p>
+    <h1>
+      <span class="line reveal" style="--d:2">Trading only</span>
+      <span class="line accent reveal" style="--d:3">what belongs</span>
+      <span class="line reveal" style="--d:4">to the company<em>.</em></span>
+    </h1>
+    <p class="lede reveal" style="--d:5">
+      RESIDUAL strips market, sector and liquidity effects out of an earnings reaction on
+      Bitget stock perpetuals, then trades what is left as a hedged pair.
+    </p>
+    <div class="cta-row reveal" style="--d:6">
+      <a class="cta" href="/dashboard">
+        <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Open the dashboard
+      </a>
+      <div class="status">
+        <p class="eyebrow small"><i class="dot live"></i>Walk forward replay</p>
+        <p class="status-val">35 real earnings events · SEC verified</p>
+      </div>
     </div>
   </section>
-  <section id="tab-results" class="tab"></section>
-  <section id="tab-live" class="tab"></section>
-  <section id="tab-method" class="tab"></section>
+
+  <div class="orb-wrap" aria-hidden="true">
+    <div class="orb-glow"></div>
+    <canvas id="orb"></canvas>
+    <div class="orb-fallback"></div>
+  </div>
+
+  <a class="scroll-btn reveal" style="--d:7" href="#method" aria-label="Scroll to explore">
+    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <p class="scroll-label reveal" style="--d:7">Scroll to explore</p>
 </main>
-<footer class="foot" id="foot"></footer>
-<script src="app.js"></script>
+
+<section id="method" class="placeholder"><p>Body sections come next.</p></section>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module" src="orb.js"></script>
 </body>
 </html>

@@ -105,7 +105,7 @@ Network notes:
 
 With nothing new, a run records NO_TRADE plus a live Bitget liquidity probe. `tests/test_live.py` covers this whole path with fixtures. No real new release has occurred since the dataset was built, so no live event has been recorded yet.
 
-The deployed dashboard (https://residual-teal.vercel.app) is a static export. Its live-watcher panel shows the log as of the last local run and does not update itself.
+The deployed site is a static export: landing page at https://residual-teal.vercel.app and dashboard at https://residual-teal.vercel.app/dashboard. Its live-watcher panel shows the log as of the last local run and does not update itself.
 
 ## Bitget Demo Trading (live-mode execution)
 
