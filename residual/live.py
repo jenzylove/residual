@@ -16,7 +16,7 @@ from pathlib import Path
 
 from . import bitget, edgar, events, market, universe
 from .interpret import interpret
-from .strategy import BASE_NOTIONAL, analyze, decide, learn_params
+from .strategy import BASE_NOTIONAL, MAX_LOSS_FRAC, analyze, decide, learn_params
 
 ROOT = Path(__file__).resolve().parent.parent
 LIVE_LOG = ROOT / "data" / "live_log.jsonl"
@@ -65,40 +65,75 @@ def _save_positions(p):
     POSITIONS.write_text(json.dumps(p, indent=1), encoding="utf-8")
 
 
+def _mark_position(pos: dict):
+    """Return current combined mid P&L and quotes, or None on probe failure."""
+    pnl, quotes = 0.0, {}
+    for leg in pos["legs"]:
+        q = probe(leg["symbol"])
+        if q.get("error") or q.get("bid") is None or q.get("ask") is None:
+            return None, None
+        quotes[leg["symbol"]] = q
+        mid = (q["bid"] + q["ask"]) / 2
+        pnl += leg["side"] * (mid - leg["entry_price"]) * leg["qty"]
+    return pnl, quotes
+
+
+def _close_position(pos: dict, reason: str, quotes: dict | None = None):
+    net = 0.0
+    for leg in pos["legs"]:
+        q = (quotes or {}).get(leg["symbol"]) or probe(leg["symbol"])
+        if q.get("error") or q.get("bid") is None or q.get("ask") is None:
+            return None
+        px = q["bid"] if leg["side"] > 0 else q["ask"]
+        fee = leg["fee_rate"] * leg["qty"] * px
+        leg.update({"exit_price": px, "exit_fee": fee, "exit_quote": q})
+        net += leg["side"] * (px - leg["entry_price"]) * leg["qty"] - leg["entry_fee"] - fee
+    pos.update({"status": "closed", "closed_at": _now_iso(), "close_reason": reason, "net_pnl": net})
+    return pos
+
+
 def _close_due_positions(now_ms: int) -> list[dict]:
     closed, keep = [], []
     for pos in _positions():
-        if pos["status"] == "open" and now_ms >= pos["exit_due_ms"]:
-            net = 0.0
-            for leg in pos["legs"]:
-                q = probe(leg["symbol"])
-                px = q["bid"] if leg["side"] > 0 else q["ask"]
-                fee = leg["fee_rate"] * leg["qty"] * px
-                leg.update({"exit_price": px, "exit_fee": fee, "exit_quote": q})
-                net += leg["side"] * (px - leg["entry_price"]) * leg["qty"] - leg["entry_fee"] - fee
-            pos.update({"status": "closed", "closed_at": _now_iso(), "net_pnl": net})
-            closed.append(pos)
-        keep.append(pos)
+        if pos["status"] != "open":
+            keep.append(pos)
+            continue
+        reason = "horizon" if now_ms >= pos["exit_due_ms"] else None
+        pnl, quotes = _mark_position(pos)
+        if reason is None and pnl is not None and pnl <= -float(pos.get("max_loss", float("inf"))):
+            reason = "stop"
+        if reason:
+            done = _close_position(pos, reason, quotes)
+            if done is not None:
+                closed.append(done)
+            else:
+                keep.append(pos)
+        else:
+            keep.append(pos)
     if closed:
         _save_positions(keep)
     return closed
 
 
-def _open_position(event, a, dec) -> dict:
+def _open_position(event, a, dec, contracts: dict | None = None) -> dict:
     legs = []
     n = BASE_NOTIONAL * dec["size"]
+    contracts = contracts or {}
     spec = [(event["company_symbol"], dec["direction"], n)]
     if a.get("hedge"):
         spec.append((a["hedge"]["symbol"], -dec["direction"], abs(a["hedge"]["beta"]) * n))
     for sym, side, notional in spec:
         q = probe(sym)
+        if q.get("error") or q.get("ask") is None or q.get("bid") is None:
+            raise RuntimeError(f"live quote unavailable for {sym}: {q.get('error', 'missing bid/ask')}")
         px = q["ask"] if side > 0 else q["bid"]
-        fee_rate = 0.0006
+        fee_rate = float(contracts.get(sym, {}).get("takerFeeRate") or 0.0006)
         qty = notional / px
         legs.append({"symbol": sym, "side": side, "qty": qty, "entry_price": px, "fee_rate": fee_rate,
                      "entry_fee": fee_rate * qty * px, "entry_quote": q})
     pos = {"event_id": event["event_id"], "status": "open", "opened_at": _now_iso(),
-           "exit_due_ms": int(time.time() * 1000) + market.HOLD_HOURS * 3_600_000, "legs": legs}
+           "exit_due_ms": int(time.time() * 1000) + market.HOLD_HOURS * 3_600_000,
+           "max_loss": MAX_LOSS_FRAC * BASE_NOTIONAL * dec["size"], "legs": legs}
     _save_positions(_positions() + [pos])
     return pos
 
@@ -171,7 +206,7 @@ def watch(now_ms: int | None = None) -> dict:
                     "residual": a.get("residual"), "params": params, "gates": dec["gates"],
                     "interpretation": {k: interp.get(k) for k in ("status", "label", "confidence", "detail")} if interp else None})
         if dec["decision"] == "TRADE":
-            out["position"] = _open_position(ev, a, dec)
+            out["position"] = _open_position(ev, a, dec, contracts)
         outcomes.append(out)
     rec.update({"decision": ",".join(o["decision"] for o in outcomes),
                 "reason": f"{len(outcomes)} new event record(s) added", "new_events": outcomes})

@@ -1,8 +1,12 @@
+import json
 import math
 import random
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
-from residual import extract, factors, paper, strategy
+from residual import extract, factors, paper, pipeline, strategy
 from residual.factors import DAY, HOUR
 
 
@@ -92,6 +96,7 @@ class PaperTests(unittest.TestCase):
         self.assertAlmostEqual(sim["gross_mid"] - sim["fees"] - sim["slippage"] + sim["funding"], sim["net"], places=6)
         self.assertEqual(len(sim["orders"]), 4)
         self.assertEqual(sim["funding_data"], "unavailable_for_period")
+        self.assertEqual(sim["funding_assumption"], "missing_settlements_treated_as_zero_for_simulation")
         self.assertGreater(sim["legs"][0]["net"], 0)
 
     def test_stop_loss_triggers(self):
@@ -156,6 +161,80 @@ class InterpretValidationTests(unittest.TestCase):
         self.assertIsNone(validate('{"label":"durable","confidence":0.7,"rationale":"r","evidence_quotes":["Revenue tripled"]}', self.SRC)[0])
         self.assertIsNone(validate('{"label":"durable","confidence":0.7,"rationale":"r","evidence_quotes":["Revenue grew"],"hedge_ratio":1.4}', self.SRC)[0])
         self.assertIsNone(validate('{"label":"buy","confidence":0.7,"rationale":"r","evidence_quotes":["Revenue grew"]}', self.SRC)[0])
+
+    def test_offline_uses_committed_interpretation_without_source_fetch(self):
+        import residual.interpret as interpret_module
+
+        event = {"event_id": "offline-event"}
+        with tempfile.TemporaryDirectory() as temp:
+            old_cache_dir = interpret_module.CACHE_DIR
+            try:
+                interpret_module.CACHE_DIR = Path(temp)
+                (Path(temp) / "offline-event.json").write_text(json.dumps({
+                    "event_id": "offline-event",
+                    "prompt_version": interpret_module.PROMPT_VERSION,
+                    "status": "ok",
+                    "label": "durable",
+                    "confidence": 0.8,
+                }), encoding="utf-8")
+                out = interpret_module.interpret(event, {}, None, allow_call=False, offline=True)
+                self.assertEqual(out["status"], "ok")
+                self.assertEqual(out["cache_validation"], "committed_offline")
+            finally:
+                interpret_module.CACHE_DIR = old_cache_dir
+
+    def test_offline_refuses_missing_interpretation(self):
+        import residual.interpret as interpret_module
+
+        old_cache_dir = interpret_module.CACHE_DIR
+        try:
+            with tempfile.TemporaryDirectory() as temp:
+                interpret_module.CACHE_DIR = Path(temp)
+                out = interpret_module.interpret({"event_id": "missing"}, {}, None,
+                                                  allow_call=False, offline=True)
+                self.assertEqual(out["status"], "unavailable")
+        finally:
+            interpret_module.CACHE_DIR = old_cache_dir
+
+
+class HardeningTests(unittest.TestCase):
+    def test_funding_complete_metrics_exclude_unknown_trade(self):
+        rows = [
+            {"residual": {"net": 10.0, "funding_data": "complete", "holding_hours": 24}},
+            {"residual": {"net": 20.0, "funding_data": "unavailable_for_period", "holding_hours": 24}},
+            {"residual": None},
+        ]
+        out = pipeline.metrics(rows, "residual", funding_complete_only=True)
+        self.assertEqual(out["trades"], 1)
+        self.assertAlmostEqual(out["total_net_pnl"], 10.0)
+        self.assertEqual(pipeline.funding_quality(rows, "residual"),
+                         {"trades": 2, "complete": 1, "unknown": 1})
+
+    def test_demo_adapter_builds_read_only_request_with_demo_header(self):
+        from residual.execution import BitgetDemoExecutionAdapter
+
+        adapter = BitgetDemoExecutionAdapter("key", "secret", "pass", "https://example.test")
+        req = adapter.build_account_read_request("1700000000000")
+        self.assertEqual(req.method, "GET")
+        self.assertEqual(req.url, "https://example.test/api/v2/mix/account/accounts?productType=USDT-FUTURES")
+        self.assertEqual(req.headers["paptrading"], "1")
+        self.assertEqual(req.headers["ACCESS-KEY"], "key")
+        self.assertTrue(req.headers["ACCESS-SIGN"])
+
+    def test_live_mark_requires_quotes_for_each_leg(self):
+        from residual import live
+
+        pos = {"legs": [
+            {"symbol": "C", "side": 1, "qty": 1.0, "entry_price": 100.0},
+            {"symbol": "H", "side": -1, "qty": 2.0, "entry_price": 50.0},
+        ]}
+        with patch.object(live, "probe", side_effect=[
+            {"bid": 89.0, "ask": 91.0},
+            {"bid": 54.0, "ask": 56.0},
+        ]):
+            pnl, quotes = live._mark_position(pos)
+        self.assertAlmostEqual(pnl, -20.0)
+        self.assertEqual(set(quotes), {"C", "H"})
 
 
 if __name__ == "__main__":

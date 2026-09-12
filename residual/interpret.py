@@ -125,10 +125,27 @@ def validate(raw_text: str, source_text: str) -> tuple[dict | None, str]:
             "evidence_quotes": q}, "ok"
 
 
-def interpret(event: dict, analysis: dict, source_text: str, *, allow_call: bool = True) -> dict:
+def interpret(event: dict, analysis: dict, source_text: str | None, *,
+              allow_call: bool = True, offline: bool = False) -> dict:
+    path = CACHE_DIR / f"{event['event_id']}.json"
+
+    # Offline replay intentionally trusts only a committed, successful
+    # interpretation with the current prompt version. It does not fetch the
+    # SEC source merely to rebuild a prompt hash.
+    if offline:
+        if path.exists():
+            cached = json.loads(path.read_text(encoding="utf-8"))
+            if (cached.get("event_id") == event["event_id"]
+                    and cached.get("prompt_version") == PROMPT_VERSION
+                    and cached.get("status") == "ok"):
+                return {**cached, "cache_validation": "committed_offline"}
+        return {"status": "unavailable",
+                "detail": "offline interpretation cache missing or incompatible"}
+
+    if source_text is None:
+        return {"status": "unavailable", "detail": "source text unavailable"}
     prompt = build_prompt(event, analysis, source_text)
     phash = hashlib.sha256((PROMPT_VERSION + SYSTEM + prompt).encode()).hexdigest()
-    path = CACHE_DIR / f"{event['event_id']}.json"
     if path.exists():
         cached = json.loads(path.read_text(encoding="utf-8"))
         if cached.get("prompt_sha256") == phash and cached.get("status") == "ok":

@@ -26,7 +26,9 @@ def iso(ms):
     return datetime.fromtimestamp(ms / 1000, timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z")
 
 
-def metrics(rows: list[dict], key: str) -> dict:
+def metrics(rows: list[dict], key: str, *, funding_complete_only: bool = False) -> dict:
+    if funding_complete_only:
+        rows = [r for r in rows if not r.get(key) or r[key].get("funding_data") == "complete"]
     pnl = [r[key]["net"] if r.get(key) else 0.0 for r in rows]
     traded = [r[key] for r in rows if r.get(key)]
     eq, peak, mdd = 0.0, 0.0, 0.0
@@ -50,6 +52,12 @@ def metrics(rows: list[dict], key: str) -> dict:
     }
 
 
+def funding_quality(rows: list[dict], key: str) -> dict:
+    sims = [r[key] for r in rows if r.get(key)]
+    complete = sum(s.get("funding_data") == "complete" for s in sims)
+    return {"trades": len(sims), "complete": complete, "unknown": len(sims) - complete}
+
+
 def _source_text(event):
     return edgar.html_to_text(fetch(event["source"]["press_release_url"]))
 
@@ -58,7 +66,7 @@ def _slim_sim(sim):
     if not sim:
         return None
     return {k: sim[k] for k in ("net", "gross_mid", "fees", "slippage", "funding", "entry_ms", "exit_ms",
-                                "stopped", "holding_hours", "funding_data", "legs")}
+                                "stopped", "holding_hours", "funding_data", "funding_assumption", "legs")}
 
 
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True) -> dict:
@@ -75,7 +83,10 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         params = learn_params(history)
         interp = None
         if use_ai and "residual" in a and ev["surprise"]:
-            interp = interpret(ev, a, _source_text(ev), allow_call=allow_llm_calls)
+            if allow_llm_calls:
+                interp = interpret(ev, a, _source_text(ev), allow_call=True)
+            else:
+                interp = interpret(ev, a, None, allow_call=False, offline=True)
         dec = decide(ev, a, params, interp if use_ai else None)
 
         row = {"event_id": ev["event_id"], "params": params, "decision": dec,
@@ -104,10 +115,25 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                   f"params={params['mode']:+d}/{params['k']} "
                   f"pnl={r['net'] if r else 0:+9.2f}  {','.join(dec['reasons'])}", flush=True)
 
-    summary = {k: metrics(rows, k) for k in ("residual", "naive", "unhedged")}
+    summary_including_unknown_funding = {
+        k: metrics(rows, k) for k in ("residual", "naive", "unhedged")
+    }
+    summary_including_unknown_funding["no_trade"] = metrics(rows, "__none__")
+    summary = {
+        k: metrics(rows, k, funding_complete_only=True)
+        for k in ("residual", "naive", "unhedged")
+    }
     summary["no_trade"] = metrics(rows, "__none__")
     warm = [r for r in rows if r["params"]["source"] == "walk-forward"]
-    summary_post_warmup = {k: metrics(warm, k) for k in ("residual", "naive", "unhedged")}
+    summary_post_warmup_including_unknown_funding = {
+        k: metrics(warm, k) for k in ("residual", "naive", "unhedged")
+    }
+    summary_post_warmup_including_unknown_funding["no_trade"] = metrics(warm, "__none__")
+    summary_post_warmup = {
+        k: metrics(warm, k, funding_complete_only=True)
+        for k in ("residual", "naive", "unhedged")
+    }
+    summary_post_warmup["no_trade"] = metrics(warm, "__none__")
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "model_version": MODEL_VERSION, "extractor_version": EXTRACTOR_VERSION,
@@ -116,8 +142,12 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                    "default_params": DEFAULT_PARAMS, "ai_gate": use_ai, "start_balance": START_BALANCE},
         "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events "
                       "whose exit precedes that event's release; no event is scored with parameters "
-                      "trained on itself",
+                      "trained on itself. Primary aggregates exclude trades whose funding history is "
+                      "unavailable; the observed-zero funding view is retained separately.",
         "summary": summary, "summary_post_warmup": summary_post_warmup,
+        "summary_including_unknown_funding": summary_including_unknown_funding,
+        "summary_post_warmup_including_unknown_funding": summary_post_warmup_including_unknown_funding,
+        "funding_quality": {k: funding_quality(rows, k) for k in ("residual", "naive", "unhedged")},
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }

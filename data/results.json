@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T21:14:30+00:00",
+ "generated_at": "2026-09-12T23:02:34+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -20,8 +20,242 @@
   "ai_gate": true,
   "start_balance": 100000.0
  },
- "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events whose exit precedes that event's release; no event is scored with parameters trained on itself",
+ "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events whose exit precedes that event's release; no event is scored with parameters trained on itself. Primary aggregates exclude trades whose funding history is unavailable; the observed-zero funding view is retained separately.",
  "summary": {
+  "residual": {
+   "total_net_pnl": 391.27,
+   "trades": 5,
+   "no_trades": 26,
+   "hit_rate": 0.4,
+   "avg_pnl_per_trade": 78.25,
+   "pnl_std_per_trade": 593.5,
+   "max_drawdown": -509.17,
+   "avg_holding_hours": 18.6,
+   "return_on_start_balance_pct": 0.391,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -275.34,
+    -275.34,
+    -275.34,
+    830.24,
+    634.46,
+    321.07,
+    391.27,
+    391.27
+   ]
+  },
+  "naive": {
+   "total_net_pnl": 1062.2,
+   "trades": 9,
+   "no_trades": 8,
+   "hit_rate": 0.556,
+   "avg_pnl_per_trade": 118.02,
+   "pnl_std_per_trade": 584.45,
+   "max_drawdown": -781.2,
+   "avg_holding_hours": 20.0,
+   "return_on_start_balance_pct": 1.062,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -480.09,
+    -781.2,
+    -548.93,
+    -60.66,
+    1313.47,
+    1455.21,
+    1757.86,
+    1373.88,
+    1062.2
+   ]
+  },
+  "unhedged": {
+   "total_net_pnl": 511.8,
+   "trades": 5,
+   "no_trades": 26,
+   "hit_rate": 0.2,
+   "avg_pnl_per_trade": 102.36,
+   "pnl_std_per_trade": 716.55,
+   "max_drawdown": -711.78,
+   "avg_holding_hours": 15.2,
+   "return_on_start_balance_pct": 0.512,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -150.55,
+    -150.55,
+    -150.55,
+    1223.58,
+    1071.6,
+    703.79,
+    511.8,
+    511.8
+   ]
+  },
+  "no_trade": {
+   "total_net_pnl": 0.0,
+   "trades": 0,
+   "no_trades": 35,
+   "hit_rate": null,
+   "avg_pnl_per_trade": null,
+   "pnl_std_per_trade": null,
+   "max_drawdown": 0.0,
+   "avg_holding_hours": null,
+   "return_on_start_balance_pct": 0.0,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "summary_post_warmup": {
+  "residual": {
+   "total_net_pnl": -243.19,
+   "trades": 2,
+   "no_trades": 1,
+   "hit_rate": 0.5,
+   "avg_pnl_per_trade": -121.59,
+   "pnl_std_per_trade": 271.23,
+   "max_drawdown": -313.38,
+   "avg_holding_hours": 17.5,
+   "return_on_start_balance_pct": -0.243,
+   "equity_curve": [
+    -313.38,
+    -243.19,
+    -243.19
+   ]
+  },
+  "naive": {
+   "total_net_pnl": -393.01,
+   "trades": 3,
+   "no_trades": 0,
+   "hit_rate": 0.333,
+   "avg_pnl_per_trade": -131.0,
+   "pnl_std_per_trade": 377.29,
+   "max_drawdown": -695.66,
+   "avg_holding_hours": 17.7,
+   "return_on_start_balance_pct": -0.393,
+   "equity_curve": [
+    302.65,
+    -81.34,
+    -393.01
+   ]
+  },
+  "unhedged": {
+   "total_net_pnl": -559.8,
+   "trades": 2,
+   "no_trades": 1,
+   "hit_rate": 0.0,
+   "avg_pnl_per_trade": -279.9,
+   "pnl_std_per_trade": 124.32,
+   "max_drawdown": -559.8,
+   "avg_holding_hours": 14.5,
+   "return_on_start_balance_pct": -0.56,
+   "equity_curve": [
+    -367.81,
+    -559.8,
+    -559.8
+   ]
+  },
+  "no_trade": {
+   "total_net_pnl": 0.0,
+   "trades": 0,
+   "no_trades": 3,
+   "hit_rate": null,
+   "avg_pnl_per_trade": null,
+   "pnl_std_per_trade": null,
+   "max_drawdown": 0.0,
+   "avg_holding_hours": null,
+   "return_on_start_balance_pct": 0.0,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "summary_including_unknown_funding": {
   "residual": {
    "total_net_pnl": 264.55,
    "trades": 9,
@@ -215,7 +449,7 @@
    ]
   }
  },
- "summary_post_warmup": {
+ "summary_post_warmup_including_unknown_funding": {
   "residual": {
    "total_net_pnl": -243.19,
    "trades": 2,
@@ -263,6 +497,39 @@
     -559.8,
     -559.8
    ]
+  },
+  "no_trade": {
+   "total_net_pnl": 0.0,
+   "trades": 0,
+   "no_trades": 3,
+   "hit_rate": null,
+   "avg_pnl_per_trade": null,
+   "pnl_std_per_trade": null,
+   "max_drawdown": 0.0,
+   "avg_holding_hours": null,
+   "return_on_start_balance_pct": 0.0,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "funding_quality": {
+  "residual": {
+   "trades": 9,
+   "complete": 5,
+   "unknown": 4
+  },
+  "naive": {
+   "trades": 27,
+   "complete": 9,
+   "unknown": 18
+  },
+  "unhedged": {
+   "trades": 9,
+   "complete": 5,
+   "unknown": 4
   }
  },
  "events": [
@@ -5330,7 +5597,8 @@
      "Blackwell sales are off the charts, and cloud GPUs are sold out,\" said Jensen Huang",
      "Revenue is expected to be $65.0 billion, plus or minus 2%.",
      "Record Data Center revenue of $51.2 billion, up 25% from Q2 and up 66% from a year ago"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": -328.7368149553715,
@@ -5343,6 +5611,7 @@
     "stopped": true,
     "holding_hours": 17.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -5410,6 +5679,7 @@
     "stopped": true,
     "holding_hours": 18.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -5442,6 +5712,7 @@
     "stopped": true,
     "holding_hours": 18.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -5663,7 +5934,8 @@
      "our data center revenue growth forecast for next year is now higher than prior expectations",
      "Net revenue is expected to be $2.200 billion +/- 5%.",
      "This acquisition further strengthens Marvell's position at the forefront of one of the fastest-growing opportunities in AI datacenter infrastructure."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -5677,6 +5949,7 @@
     "stopped": true,
     "holding_hours": 1.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -6018,7 +6291,8 @@
      "Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion",
      "We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.",
      "We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -6032,6 +6306,7 @@
     "stopped": true,
     "holding_hours": 16.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -6253,7 +6528,8 @@
      "We expect first quarter 2026 total revenue to be in the range of $53.5-56.5 billion.",
      "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115-135 billion",
      "We expect full year 2026 total expenses to be in the range of $162-169 billion."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -6267,6 +6543,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -6494,7 +6771,8 @@
      "Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion",
      "For full year 2026, we expect: \u2022 Revenue of between $7.182 - $7.198 billion.",
      "Rule of 40 score of 127%"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -6508,6 +6786,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -6792,7 +7071,8 @@
     "evidence_quotes": [
      "we expect to invest about $200 billion in capital expenditures across Amazon in 2026",
      "Free cash flow decreased to $11.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $50.7 billion in purchases of property and equipment"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -6806,6 +7086,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -7027,7 +7308,8 @@
      "Revenue is expected to be $78.0 billion, plus or minus 2%.",
      "Fourth-quarter revenue was a record $62.3 billion, up 22% from the previous quarter and up 75% from a year ago",
      "Computing demand is growing exponentially - the agentic AI inflection point has arrived."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -7041,6 +7323,7 @@
     "stopped": true,
     "holding_hours": 16.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -7270,7 +7553,8 @@
      "Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking",
      "we expect AI semiconductor revenue to be $10.7 billion in Q2",
      "In Q2 we expect revenue growth to increase 47% year-over-year to $22.0 billion, with adjusted EBITDA of 68%"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -7284,6 +7568,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -7513,7 +7798,8 @@
      "We expect year-over-year revenue growth to accelerate each quarter in fiscal 2027, driven by continued strength in our data center business, with bookings continuing to grow at a record pace.",
      "Net revenue is expected to be $2.400 billion +/- 5%.",
      "our design wins in fiscal 2026 hit an all-time record, which we expect will continue to fuel our future growth."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -7527,6 +7813,7 @@
     "stopped": true,
     "holding_hours": 11.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -7762,7 +8049,8 @@
      "we expect significant records again in fiscal Q3",
      "Revenue $33.5 billion \u00b1 $750 million",
      "Reflecting confidence in the sustained strength of our business, our board has approved a 30% increase in our quarterly dividend."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": -176.20429300099167,
@@ -7775,6 +8063,7 @@
     "stopped": true,
     "holding_hours": 17.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -7842,6 +8131,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -7874,6 +8164,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -8110,7 +8401,8 @@
      "a sixth consecutive quarter of revenue above our expectations",
      "Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion",
      "Data Center and AI (DCAI) | | 5.1 billion | | up | 22%"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -8124,6 +8416,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -8360,7 +8653,8 @@
      "We expect second quarter 2026 total revenue to be in the range of $58-61 billion.",
      "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.",
      "Revenue - Revenue was $56.31 billion, an increase of 33% year-over-year."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -8374,6 +8668,7 @@
     "stopped": true,
     "holding_hours": 12.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -8602,7 +8897,8 @@
      "AWS segment sales increased 28% year-over-year to $37.6 billion.",
      "First quarter 2026 net income includes pre-tax gains of $16.8 billion included in non-operating income from our investments in Anthropic.",
      "Free cash flow decreased to $1.2 billion for the trailing twelve months"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -8616,6 +8912,7 @@
     "stopped": true,
     "holding_hours": 18.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -8844,7 +9141,8 @@
      "Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion",
      "We are raising our revenue guidance to between $7.650 - $7.662 billion.",
      "Rule of 40 score of 145%"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": 394.196697705945,
@@ -8857,6 +9155,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -8924,6 +9223,7 @@
     "stopped": true,
     "holding_hours": 16.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -8956,6 +9256,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -9181,7 +9482,8 @@
      "AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million",
      "customer engagement around MI450 Series and Helios is strengthening, with leading customer forecasts exceeding our initial expectations",
      "Data Center segment revenue was $5.8 billion, up 57% year-over-year"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -9195,6 +9497,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -9433,7 +9736,8 @@
     "evidence_quotes": [
      "Revenue is expected to be $91.0 billion, plus or minus 2%. NVIDIA is not assuming any Data Center compute revenue from China in its outlook.",
      "Revenue | $81,615 | $68,127 | $44,062 | 20 | % | 85 | %"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -9447,6 +9751,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -9680,7 +9985,8 @@
      "We are significantly raising Marvell's revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter.",
      "We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business",
      "Net revenue is expected to be $2.700 billion +/- 5%."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -9694,6 +10000,7 @@
     "stopped": true,
     "holding_hours": 2.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -9926,7 +10233,8 @@
      "Third quarter fiscal year 2026 revenue guidance of approximately $29.4 billion, an increase of 84 percent from the prior year period",
      "In Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.",
      "Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": -15.974220201932383,
@@ -9939,6 +10247,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -10006,6 +10315,7 @@
     "stopped": true,
     "holding_hours": 14.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -10038,6 +10348,7 @@
     "stopped": true,
     "holding_hours": 9.0,
     "funding_data": "unavailable_for_period",
+    "funding_assumption": "missing_settlements_treated_as_zero_for_simulation",
     "legs": [
      {
       "role": "company",
@@ -10271,7 +10582,8 @@
      "Revenue | $50.0 billion \u00b1 $1.0 billion",
      "We believe our multi-year Strategic Customer Agreements will significantly enhance the durability and predictability of Micron's strong financial performance.",
      "Gross margin | Approximately 86%"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -10285,6 +10597,7 @@
     "stopped": true,
     "holding_hours": 16.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -10527,7 +10840,8 @@
     "evidence_quotes": [
      "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion; expecting third-quarter EPS attributable to Intel of $0.31 and non-GAAP EPS attributable to Intel of $0.38.",
      "Net income (loss) attributable to Intel ($B) | $(11.0) | $(2.9) | n/m*"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": -275.344763389757,
@@ -10540,6 +10854,7 @@
     "stopped": true,
     "holding_hours": 16.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -10607,6 +10922,7 @@
     "stopped": true,
     "holding_hours": 15.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -10639,6 +10955,7 @@
     "stopped": true,
     "holding_hours": 15.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -10884,7 +11201,8 @@
      "We expect third quarter 2026 total revenue to be in the range of $61-64 billion.",
      "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.",
      "we expect our tax rate for the remaining quarters of 2026 to be between 15-17%, an increase from our prior outlook of 13-16%."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -10898,6 +11216,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11125,7 +11444,8 @@
     "evidence_quotes": [
      "Second quarter 2026 net income includes non-operating pre-tax other income of $53.4 billion, primarily from our investments in Anthropic.",
      "Free cash flow decreased to an outflow of $7.6 billion for the trailing twelve months"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -11139,6 +11459,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11367,7 +11688,8 @@
      "U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million",
      "We are raising our revenue guidance to between $8.150 - $8.158 billion.",
      "U.S. commercial remaining deal value (\"RDV\") of $6.238 billion, up 124% year-over-year and 27% quarter-over-quarter"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": 1105.5842731833795,
@@ -11380,6 +11702,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11447,6 +11770,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11479,6 +11803,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11709,7 +12034,8 @@
      "Revenue increased 50% year-over-year to a record $11.5 billion",
      "We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.",
      "deliver substantial revenue and earnings growth in the years ahead"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": -195.78256927364237,
@@ -11722,6 +12048,7 @@
     "stopped": true,
     "holding_hours": 18.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11789,6 +12116,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -11821,6 +12149,7 @@
     "stopped": true,
     "holding_hours": 8.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12070,7 +12399,8 @@
      "Data Center revenue of $89.0 billion, up 117% from a year ago",
      "Revenue is expected to be $108.0 billion, plus or minus 2%.",
      "demand is accelerating"
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": -313.3840353017688,
@@ -12083,6 +12413,7 @@
     "stopped": true,
     "holding_hours": 11.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12150,6 +12481,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12182,6 +12514,7 @@
     "stopped": true,
     "holding_hours": 11.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12431,7 +12764,8 @@
      "we are again raising our revenue outlook for both fiscal 2027 and fiscal 2028 compared with the guidance we provided last quarter",
      "AI-related bookings remain exceptionally robust, and we expect our revenue growth to accelerate further through the remainder of fiscal 2027",
      "Net revenue is expected to be $3.150 billion +/- 5%."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": {
     "net": 70.19703523275109,
@@ -12444,6 +12778,7 @@
     "stopped": false,
     "holding_hours": 24.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12511,6 +12846,7 @@
     "stopped": true,
     "holding_hours": 18.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12543,6 +12879,7 @@
     "stopped": true,
     "holding_hours": 18.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -12803,7 +13140,8 @@
      "In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.",
      "Fourth quarter revenue guidance of approximately $34.8 billion",
      "we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago."
-    ]
+    ],
+    "cache_validation": "committed_offline"
    },
    "residual": null,
    "naive": {
@@ -12817,6 +13155,7 @@
     "stopped": true,
     "holding_hours": 11.0,
     "funding_data": "complete",
+    "funding_assumption": "observed_settlements_only",
     "legs": [
      {
       "role": "company",
@@ -13465,147 +13804,121 @@
  "ablation_no_ai": {
   "summary": {
    "residual": {
-    "total_net_pnl": 65.64,
-    "trades": 9,
+    "total_net_pnl": -9.66,
+    "trades": 5,
     "no_trades": 26,
-    "hit_rate": 0.333,
-    "avg_pnl_per_trade": 7.29,
-    "pnl_std_per_trade": 575.67,
+    "hit_rate": 0.4,
+    "avg_pnl_per_trade": -1.93,
+    "pnl_std_per_trade": 670.22,
     "max_drawdown": -704.95,
-    "avg_holding_hours": 19.4,
-    "return_on_start_balance_pct": 0.066,
+    "avg_holding_hours": 18.6,
+    "return_on_start_balance_pct": -0.01,
     "equity_curve": [
      0.0,
      0.0,
      0.0,
      0.0,
      0.0,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -328.74,
-     -681.15,
-     -681.15,
-     -681.15,
-     -681.15,
-     107.25,
-     107.25,
-     107.25,
-     107.25,
-     75.3,
-     75.3,
-     -475.39,
-     -475.39,
-     -475.39,
-     630.19,
-     238.63,
-     -74.75,
-     65.64,
-     65.64
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -550.69,
+     -550.69,
+     -550.69,
+     554.89,
+     163.33,
+     -150.05,
+     -9.66,
+     -9.66
     ]
    },
    "naive": {
-    "total_net_pnl": -1612.61,
-    "trades": 27,
+    "total_net_pnl": 1062.2,
+    "trades": 9,
     "no_trades": 8,
-    "hit_rate": 0.407,
-    "avg_pnl_per_trade": -59.73,
-    "pnl_std_per_trade": 422.22,
-    "max_drawdown": -3456.01,
-    "avg_holding_hours": 18.4,
-    "return_on_start_balance_pct": -1.613,
+    "hit_rate": 0.556,
+    "avg_pnl_per_trade": 118.02,
+    "pnl_std_per_trade": 584.45,
+    "max_drawdown": -781.2,
+    "avg_holding_hours": 20.0,
+    "return_on_start_balance_pct": 1.062,
     "equity_curve": [
      0.0,
      0.0,
      0.0,
      0.0,
      0.0,
-     -489.4,
-     -856.61,
-     -856.61,
-     -856.61,
-     -1291.39,
-     -1212.88,
-     -1185.26,
-     -1185.26,
-     -776.68,
-     -1201.62,
-     -1282.89,
-     -1611.8,
-     -1564.29,
-     -1308.0,
-     -1660.92,
-     -1963.05,
-     -2369.96,
-     -1948.96,
-     -2030.6,
-     -2350.86,
-     -2674.82,
-     -3154.91,
-     -3456.01,
-     -3223.74,
-     -2735.47,
-     -1361.34,
-     -1219.6,
-     -916.95,
-     -1300.94,
-     -1612.61
+     0.0,
+     0.0,
+     0.0,
+     -480.09,
+     -781.2,
+     -548.93,
+     -60.66,
+     1313.47,
+     1455.21,
+     1757.86,
+     1373.88,
+     1062.2
     ]
    },
    "unhedged": {
-    "total_net_pnl": -257.29,
-    "trades": 9,
+    "total_net_pnl": 17.28,
+    "trades": 5,
     "no_trades": 26,
-    "hit_rate": 0.222,
-    "avg_pnl_per_trade": -28.59,
-    "pnl_std_per_trade": 620.84,
+    "hit_rate": 0.2,
+    "avg_pnl_per_trade": 3.46,
+    "pnl_std_per_trade": 767.13,
     "max_drawdown": -1055.75,
-    "avg_holding_hours": 16.8,
-    "return_on_start_balance_pct": -0.257,
+    "avg_holding_hours": 15.2,
+    "return_on_start_balance_pct": 0.017,
     "equity_curve": [
      0.0,
      0.0,
      0.0,
      0.0,
      0.0,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -489.4,
-     -597.39,
-     -597.39,
-     -597.39,
-     -597.39,
-     29.64,
-     29.64,
-     29.64,
-     29.64,
-     -274.57,
-     -274.57,
-     -575.67,
-     -575.67,
-     -575.67,
-     798.46,
-     494.51,
-     126.7,
-     -257.29,
-     -257.29
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -301.11,
+     -301.11,
+     -301.11,
+     1073.03,
+     769.08,
+     401.27,
+     17.28,
+     17.28
     ]
    },
    "no_trade": {

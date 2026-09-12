@@ -49,7 +49,7 @@ function badge(dec) {
 
 function renderBoard() {
   const rows = [...D.rows].sort((a, b) => EV[b.event_id].release_ms - EV[a.event_id].release_ms);
-  $("#board").innerHTML = `<thead><tr><th>Company</th><th>Release</th><th class="num">Revenue</th><th class="num">Expected</th>
+  $("#board").innerHTML = `<thead><tr><th>Company</th><th>Release</th><th class="num">Revenue</th><th class="num">Guidance baseline</th>
     <th class="num">Surprise</th><th>Guidance</th><th class="num">Residual</th><th>Decision</th><th class="num">P&amp;L</th></tr></thead><tbody>` +
     rows.map(r => {
       const e = EV[r.event_id], s = e.surprise || {}, res = r.analysis.residual;
@@ -101,7 +101,7 @@ function select(id) {
       <dt>Event horizon</dt><dd>${D.config.hold_hours}h → exit ${when(t.exit_ms)}${t.stopped ? " (stopped)" : ""}</dd>
       <dt>Maximum loss</dt><dd>$${(D.config.max_loss_frac * comp.notional).toFixed(0)} (stop on hourly close)</dd>
       <dt>Exit condition</dt><dd>horizon reached or pair mark-to-market ≤ −max loss</dd>
-      <dt>Realized</dt><dd class="${cls(t.net)}"><b>${usd(t.net)}</b> net · fees ${usd(-t.fees)} · slippage ${usd(-t.slippage)} · funding ${usd(t.funding)} (${esc(t.funding_data)})</dd>
+      <dt>Realized</dt><dd class="${cls(t.net)}"><b>${usd(t.net)}</b> net · fees ${usd(-t.fees)} · slippage ${usd(-t.slippage)} · funding ${usd(t.funding)} (${esc(t.funding_data)}) · ${esc(t.funding_assumption)}</dd>
     </dl></div>`;
     html += attributionCard(t.attribution);
     html += `<div class="card"><h3>Paper execution · both legs</h3><div class="table-scroll"><table><thead><tr><th>Leg</th><th>Symbol</th><th>Side</th><th class="num">Qty</th><th class="num">Entry</th><th class="num">Exit</th><th class="num">Fees</th><th class="num">Funding</th><th class="num">Net</th></tr></thead><tbody>` +
@@ -183,12 +183,14 @@ function lineChart(series, W = 640, H = 220) {
 }
 
 function renderResults() {
-  const S = D.summary, order = [["residual", "Residual (hedged pair)"], ["unhedged", "Unhedged company trade"], ["naive", "Naive headline (beat→long)"], ["no_trade", "No-trade"]];
+  const S = D.summary, observed = D.summary_including_unknown_funding || D.summary;
+  const fq = (D.funding_quality || {}).residual || { trades: S.residual.trades, complete: S.residual.trades, unknown: 0 };
+  const order = [["residual", "Residual (hedged pair · funding-complete)"], ["unhedged", "Unhedged company trade · funding-complete"], ["naive", "Naive headline (beat→long) · funding-complete"], ["no_trade", "No-trade"]];
   const ab = D.ablation_no_ai;
   const row = (name, m) => `<tr><td>${name}</td><td class="num ${cls(m.total_net_pnl)}">${usd(m.total_net_pnl)}</td><td class="num">${m.trades}</td><td class="num">${m.hit_rate == null ? "n/a" : (m.hit_rate * 100).toFixed(0) + "%"}</td><td class="num">${m.avg_pnl_per_trade == null ? "n/a" : usd(m.avg_pnl_per_trade)}</td><td class="num neg">${usd(m.max_drawdown)}</td><td class="num">${m.avg_holding_hours ?? "n/a"}</td><td class="num">${m.return_on_start_balance_pct.toFixed(2)}%</td></tr>`;
   let h = `<div class="card"><h3>Walk-forward comparison · ${D.rows.length} real events</h3><div class="table-scroll"><table><thead><tr><th>Strategy</th><th class="num">Net P&amp;L</th><th class="num">Trades</th><th class="num">Hit rate</th><th class="num">Avg/trade</th><th class="num">Max DD</th><th class="num">Avg hold (h)</th><th class="num">Return</th></tr></thead><tbody>` +
     order.map(([k, n]) => row(n, S[k])).join("") + (ab ? row("Residual without AI gate (ablation)", ab.summary.residual) : "") +
-    `</tbody></table></div><p class="note">${esc(D.evaluation)}. Every strategy uses the same entry time (release hour +${D.config.obs_hours}h), ${D.config.hold_hours}h horizon, Bitget taker fees, estimated slippage and funding where Bitget still serves it. Start balance $${D.config.start_balance.toLocaleString()}.</p></div>`;
+    `</tbody></table></div><p class="note">${esc(D.evaluation)}. Primary totals exclude ${fq.unknown} residual trade${fq.unknown === 1 ? "" : "s"} with unavailable funding (${fq.complete} of ${fq.trades} residual trades have complete settlements). The observed-settlements-only residual view is ${usd(observed.residual.total_net_pnl)} across ${observed.residual.trades} trades. Every strategy uses the same entry time (release hour +${D.config.obs_hours}h), ${D.config.hold_hours}h horizon, Bitget taker fees, estimated slippage and observed funding where available. Start balance $${D.config.start_balance.toLocaleString()}.</p></div>`;
   const pw = D.summary_post_warmup;
   if (pw) h += `<div class="card"><h3>After warm-up (parameters learned walk-forward)</h3><p>Residual ${usd(pw.residual.total_net_pnl)} over ${pw.residual.trades} trades · unhedged ${usd(pw.unhedged.total_net_pnl)} · naive ${usd(pw.naive.total_net_pnl)}</p></div>`;
   h += `<div class="grid2"><div class="card"><h3>Cumulative net P&amp;L by event</h3>` + lineChart([
@@ -221,7 +223,7 @@ function renderLive() {
   const log = (D.live_log || []).slice().reverse();
   if (!log.length) { $("#tab-live").innerHTML = `<div class="card"><p>No live watcher runs recorded yet. Run <code>python -m residual live</code>.</p></div>`; return; }
   const last = log[0];
-  let h = `<div class="card"><h3>Latest check · ${esc(last.checked_at)}</h3><p>${badge(last.decision.split(",")[0])} ${esc(last.reason)}</p>
+  let h = `<div class="card"><h3>Latest recorded local watcher check · ${esc(last.checked_at)}</h3><p>${badge(last.decision.split(",")[0])} ${esc(last.reason)}</p>
     <p class="note">Next estimated releases (last filing + 91 days): ${Object.entries(last.next_estimated_release || {}).slice(0, 5).map(([t, d]) => `${esc(t)} ~${esc(d)}`).join(" · ")}</p></div>`;
   if (last.market_probe) h += `<div class="card"><h3>Live Bitget liquidity probe</h3><div class="table-scroll"><table><thead><tr><th>Symbol</th><th class="num">Bid</th><th class="num">Ask</th><th class="num">Spread</th><th class="num">Bid depth ≤10bps</th><th class="num">Ask depth ≤10bps</th><th class="num">Funding</th></tr></thead><tbody>` +
     last.market_probe.map(p => p.error ? `<tr><td>${esc(p.symbol)}</td><td colspan="6" class="neg">${esc(p.error)}</td></tr>` : `<tr><td>${esc(p.symbol)}</td><td class="num">${p.bid}</td><td class="num">${p.ask}</td><td class="num">${p.spread_bps} bps</td><td class="num">$${p.bid_depth_10bps_usdt.toLocaleString()}</td><td class="num">$${p.ask_depth_10bps_usdt.toLocaleString()}</td><td class="num">${(p.funding_rate * 100).toFixed(4)}%</td></tr>`).join("") + `</tbody></table></div></div>`;
@@ -235,7 +237,7 @@ function renderMethod() {
   $("#tab-method").innerHTML = `<div class="card" style="max-width:900px"><h3>How RESIDUAL decides</h3>
   <ol>
     <li><b>Event collector.</b> SEC EDGAR Item 2.02 8-K filings; the event timestamp is the SEC acceptance time.</li>
-    <li><b>Earnings extractor.</b> Deterministic patterns pull reported revenue and the next-quarter revenue outlook from the Exhibit 99.1 press release. Each value keeps its verbatim snippet, source URL and document SHA-256, and is re-derived before use. <i>Expected</i> = the company's own prior-quarter outlook midpoint, cited to the prior release.</li>
+    <li><b>Earnings extractor.</b> Deterministic patterns pull reported revenue and the next-quarter revenue outlook from the Exhibit 99.1 press release. Each value keeps its verbatim snippet, source URL and document SHA-256, and is re-derived before use. <i>Guidance baseline</i> = the company's own prior-quarter outlook midpoint, cited to the prior release; it is not analyst consensus.</li>
     <li><b>Factor estimator.</b> Hourly Bitget perp returns over the ${c.lookback_days} days before the event: company on QQQ (market) and an equal-weight basket of sector peers orthogonalized to the market. Betas at ${c.beta_windows_days.join("/")}-day windows.</li>
     <li><b>Residual calculator.</b> Observed move from the release hour to +${c.obs_hours}h minus market contribution, sector contribution and a liquidity (half-spread) effect.</li>
     <li><b>Trade constructor.</b> Company leg vs a single hedge instrument (SMH/QQQ/SPY, best historical R²); hedge ratio = OLS beta, never an LLM value.</li>
@@ -244,5 +246,5 @@ function renderMethod() {
     <li><b>Paper executor.</b> Both legs filled at the next hourly open with slippage, Bitget taker fees and funding; ${c.hold_hours}h horizon, stop at ${(c.max_loss_frac * 100).toFixed(1)}% of company notional.</li>
     <li><b>Evaluator.</b> Realized P&amp;L split into company leg, hedge leg, residual, factor error, slippage, fees, funding and timing. Direction (continuation vs reversal) and k are learned walk-forward from earlier events only.</li>
   </ol>
-  <p class="note">Reproduce: <code>python -m residual build && python -m residual snapshot && python -m residual replay</code>. Paper trading only; no orders are sent to Bitget.</p></div>`;
+  <p class="note">Reproduce: <code>python -m residual build && python -m residual snapshot && python -m residual replay</code>. Offline replay reads only committed interpretation caches and makes no network calls. Paper trading only; the isolated private adapter builds a Demo read request but sends no request and exposes no order method.</p></div>`;
 }

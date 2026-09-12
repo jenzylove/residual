@@ -74,4 +74,6 @@ def simulate(snap: dict, legs: list[dict], t_entry: int, t_exit: int, max_loss: 
         "entry_ms": t_entry, "exit_ms": exit_t, "stopped": stopped,
         "holding_hours": (exit_t - t_entry) / HOUR,
         "funding_data": "complete" if funding_complete else "unavailable_for_period",
+        "funding_assumption": "observed_settlements_only" if funding_complete else
+        "missing_settlements_treated_as_zero_for_simulation",
     }

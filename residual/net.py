@@ -1,8 +1,9 @@
 """HTTP access with a disk cache.
 
-api.bitget.com is DNS-filtered on some networks, so Bitget hosts are resolved
-through Cloudflare DNS-over-HTTPS. Every response used by the model is cached
-under data/cache so replays are reproducible offline.
+Every request uses the operating system's normal DNS by default. Cloudflare
+DNS-over-HTTPS is available only as an explicit ``RESIDUAL_ENABLE_DOH=1``
+override for networks where that is permitted. Every cached response used by
+the model is stored under data/cache so replays can be reproducible offline.
 """
 import hashlib
 import json
@@ -17,7 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / "data" / "cache"
 SEC_UA = os.environ.get("SEC_USER_AGENT", "RESIDUAL research residual@example.com")
 
-_DOH_HOSTS = {"api.bitget.com"}
+_DOH_ENABLED = os.environ.get("RESIDUAL_ENABLE_DOH", "").lower() in {"1", "true", "yes"}
+_DOH_HOSTS = {"api.bitget.com"} if _DOH_ENABLED else set()
 _resolved: dict[str, str] = {}
 _orig_getaddrinfo = socket.getaddrinfo
 
