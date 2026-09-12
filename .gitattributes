@@ -1,0 +1,2 @@
+# Source documents are verified by SHA-256 of their exact bytes: never convert line endings.
+data/sources/** binary
