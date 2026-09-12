@@ -16,7 +16,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import bitget, edgar, events, market, universe
+from . import bitget, demo, edgar, events, market, universe
 from .interpret import interpret
 from .strategy import BASE_NOTIONAL, analyze, decide, learn_params
 
@@ -75,6 +75,17 @@ def _close_due_positions(now_ms: int) -> list[dict]:
     for pos in positions:
         if pos["status"] != "open" or now_ms < pos["exit_due_ms"]:
             continue
+        if pos.get("execution") == "bitget_demo":
+            try:
+                client = demo.BitgetDemo()
+                legs = client.close_pair(pos["demo_legs"], f"{pos['event_id']}-close")
+                pos.update({"status": "closed", "closed_at": _iso(now_ms), "demo_legs": legs,
+                            "realized": demo.realized(legs), "net_pnl": demo.realized(legs)["net"],
+                            "exchange_log": pos.get("exchange_log", []) + client.log})
+                closed.append(pos)
+            except Exception as e:
+                pos["close_error"] = str(e)  # retried on the next run
+            continue
         net = 0.0
         for leg in pos["legs"]:
             q = probe(leg["symbol"])
@@ -93,24 +104,38 @@ def _close_due_positions(now_ms: int) -> list[dict]:
     return closed
 
 
-def _open_position(event, a, dec, now_ms) -> dict | None:
+def _open_position(event, a, dec, now_ms) -> tuple[dict | None, str | None]:
+    """Open the pair. With Bitget Demo credentials, both legs are real Demo Trading orders
+    (all-or-nothing); otherwise they are local paper fills at the live bid/ask."""
     n = BASE_NOTIONAL * dec["size"]
     spec = [(event["company_symbol"], dec["direction"], n)]
     if a.get("hedge"):
         spec.append((a["hedge"]["symbol"], -dec["direction"], abs(a["hedge"]["beta"]) * n))
+    if demo.configured():
+        try:
+            client = demo.BitgetDemo()
+            legs = client.open_pair([{"live_symbol": s, "side": sd, "notional": nt} for s, sd, nt in spec],
+                                    event["event_id"].replace("-", "")[:20])
+        except Exception as e:
+            return None, f"bitget demo execution failed: {e}"
+        pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms),
+               "execution": "bitget_demo", "exit_due_ms": now_ms + market.HOLD_HOURS * HOUR_MS,
+               "demo_legs": legs, "exchange_log": client.log}
+        _write(POSITIONS, _read(POSITIONS, []) + [pos])
+        return pos, None
     legs = []
     for sym, side, notional in spec:
         q = probe(sym)
         if "error" in q:
-            return None
+            return None, "live order book unavailable at entry"
         px = q["ask"] if side > 0 else q["bid"]
         qty = notional / px
         legs.append({"symbol": sym, "side": side, "qty": qty, "entry_price": px, "fee_rate": 0.0006,
                      "entry_fee": 0.0006 * qty * px, "entry_quote": q})
-    pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms),
+    pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms), "execution": "local_paper",
            "exit_due_ms": now_ms + market.HOLD_HOURS * HOUR_MS, "legs": legs}
     _write(POSITIONS, _read(POSITIONS, []) + [pos])
-    return pos
+    return pos, None
 
 
 def _history_params(dataset, before_ms):
@@ -145,9 +170,9 @@ def evaluate(ev: dict, dataset: list[dict], now_ms: int, contracts: dict) -> dic
                 "residual": a.get("residual"), "params": params, "gates": dec["gates"],
                 "interpretation": {k: interp.get(k) for k in ("status", "label", "confidence", "detail")} if interp else None})
     if dec["decision"] == "TRADE":
-        pos = _open_position(ev, a, dec, now_ms)
+        pos, err = _open_position(ev, a, dec, now_ms)
         if pos is None:
-            out.update({"decision": "NO_TRADE", "reason": "live order book unavailable at entry"})
+            out.update({"decision": "NO_TRADE", "reason": err})
         else:
             out["position"] = pos
     return out

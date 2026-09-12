@@ -79,6 +79,39 @@ def cmd_live(args):
         time.sleep(args.loop)
 
 
+def cmd_demo_check(args):
+    """Authenticate against Bitget Demo Trading and map the universe to demo contracts."""
+    from . import demo, universe
+    c = demo.BitgetDemo()
+    acct = c.accounts()
+    print("auth ok · product", demo.PRODUCT_TYPE, "· accounts:",
+          [(a.get("marginCoin"), a.get("available")) for a in acct])
+    syms = [universe.sym(t) for t in universe.COMPANIES] + ["QQQUSDT", "SPYUSDT", "SMHUSDT"]
+    for s in syms:
+        print(f"  {s:<10} -> {c.demo_symbol(s) or 'NOT LISTED on demo'}")
+    print(f"{len(c.contracts())} demo contracts listed")
+
+
+def cmd_demo_roundtrip(args):
+    """Open and immediately close one small hedged pair on Bitget Demo; save exchange records."""
+    from pathlib import Path
+    from . import demo
+    c = demo.BitgetDemo()
+    tag = "rt" + time.strftime("%m%d%H%M%S")
+    legs = c.open_pair([{"live_symbol": args.company, "side": 1, "notional": args.notional},
+                        {"live_symbol": args.hedge, "side": -1, "notional": args.notional}], tag)
+    closed = c.close_pair(legs, tag)
+    rec = {"tag": tag, "executed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+           "legs": closed, "realized": demo.realized(closed), "exchange_log": c.log}
+    out = Path(__file__).resolve().parent.parent / "data" / "demo_roundtrips.jsonl"
+    with out.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, default=str) + "\n")
+    for l in closed:
+        print(f"  {l['demo_symbol']:<12} open {l['open_order']['orderId']} @ {l['open_order']['priceAvg']}"
+              f"  close {l['close_order']['orderId']} @ {l['close_order']['priceAvg']}")
+    print("realized", rec["realized"], "->", out)
+
+
 def cmd_serve(args):
     import functools
     import http.server
@@ -101,14 +134,27 @@ def main():
     v.add_argument("--offline", action="store_true", help="use only the committed data/sources archive")
     l = sub.add_parser("live"); l.add_argument("--loop", type=int, default=0, help="poll every N seconds")
     sv = sub.add_parser("serve"); sv.add_argument("--port", type=int, default=8000)
+    sub.add_parser("demo-check", help="verify Bitget Demo credentials and demo symbol coverage")
+    rt = sub.add_parser("demo-roundtrip", help="open+close one small hedged pair on Bitget Demo")
+    rt.add_argument("--company", default="NVDAUSDT"); rt.add_argument("--hedge", default="QQQUSDT")
+    rt.add_argument("--notional", type=float, default=50.0)
     a = sub.add_parser("all"); a.add_argument("--no-ai", action="store_true"); a.add_argument("--offline", action="store_true")
     args = p.parse_args()
     if args.cmd == "all":
         args.since, args.until, args.refresh = "2025-10-15", None, False
         cmd_build(args); cmd_snapshot(args); cmd_replay(args)
+    elif args.cmd.startswith("demo-"):
+        from .demo import DemoError
+        try:
+            {"demo-check": cmd_demo_check, "demo-roundtrip": cmd_demo_roundtrip}[args.cmd](args)
+        except DemoError as e:
+            print(f"Bitget Demo: {e}\nSet BITGET_DEMO_API_KEY / BITGET_DEMO_API_SECRET / BITGET_DEMO_API_PASSPHRASE "
+                  "in .env.local (see .env.example).")
+            sys.exit(2)
     else:
         {"build": cmd_build, "snapshot": cmd_snapshot, "replay": cmd_replay, "verify": cmd_verify,
-         "live": cmd_live, "serve": cmd_serve}[args.cmd](args)
+         "live": cmd_live, "serve": cmd_serve, "demo-check": cmd_demo_check,
+         "demo-roundtrip": cmd_demo_roundtrip}[args.cmd](args)
 
 
 if __name__ == "__main__":

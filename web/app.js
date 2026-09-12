@@ -234,7 +234,12 @@ function renderLive() {
   if (last.market_probe) h += `<div class="card"><h3>Live Bitget liquidity probe</h3><div class="table-scroll"><table><thead><tr><th>Symbol</th><th class="num">Bid</th><th class="num">Ask</th><th class="num">Spread</th><th class="num">Bid depth ≤10bps</th><th class="num">Ask depth ≤10bps</th><th class="num">Funding</th></tr></thead><tbody>` +
     last.market_probe.map(p => p.error ? `<tr><td>${esc(p.symbol)}</td><td colspan="6" class="neg">${esc(p.error)}</td></tr>` : `<tr><td>${esc(p.symbol)}</td><td class="num">${p.bid}</td><td class="num">${p.ask}</td><td class="num">${p.spread_bps} bps</td><td class="num">$${p.bid_depth_10bps_usdt.toLocaleString()}</td><td class="num">$${p.ask_depth_10bps_usdt.toLocaleString()}</td><td class="num">${(p.funding_rate * 100).toFixed(4)}%</td></tr>`).join("") + `</tbody></table></div></div>`;
   h += `<div class="card"><h3>Watcher log</h3><div class="table-scroll"><table><thead><tr><th>Checked</th><th>Decision</th><th>Detail</th></tr></thead><tbody>` +
-    log.map(l => `<tr><td>${esc(l.checked_at)}</td><td>${esc(l.decision)}</td><td class="muted" style="white-space:normal">${esc(l.reason)}${(l.new_events || []).map(n => ` · ${esc(n.event_id)}: ${esc(n.decision)} (${esc(n.reason || "")})`).join("")}</td></tr>`).join("") + `</tbody></table></div></div>`;
+    log.map(l => {
+      const demoOrders = [...(l.new_events || []).map(n => n.position), ...(l.closed_positions || [])]
+        .filter(p => p && p.execution === "bitget_demo")
+        .flatMap(p => p.demo_legs.flatMap(g => [g.open_order, g.close_order].filter(Boolean).map(o => `${g.demo_symbol} ${o.side} #${o.orderId} @ ${o.priceAvg}`)));
+      return `<tr><td>${esc(l.checked_at)}</td><td>${esc(l.decision)}</td><td class="muted" style="white-space:normal">${esc(l.reason)}${(l.new_events || []).map(n => ` · ${esc(n.event_id)}: ${esc(n.decision)} (${esc(n.reason || "")})`).join("")}${demoOrders.length ? `<br><b>Bitget Demo orders:</b> ${demoOrders.map(esc).join(" · ")}` : ""}</td></tr>`;
+    }).join("") + `</tbody></table></div></div>`;
   $("#tab-live").innerHTML = h;
 }
 
@@ -252,5 +257,5 @@ function renderMethod() {
     <li><b>Paper executor.</b> Both legs filled at the next hourly open with slippage, Bitget taker fees and funding; ${c.hold_hours}h horizon, stop at ${(c.max_loss_frac * 100).toFixed(1)}% of company notional.</li>
     <li><b>Evaluator.</b> Realized P&amp;L split into company leg, hedge leg, residual, factor error, slippage, fees, funding and timing. Direction (continuation vs reversal) and k are learned walk-forward from earlier events only.</li>
   </ol>
-  <p class="note">Reproduce offline from the committed dataset: <code>python -m residual verify --offline && python -m residual replay --offline</code>. Market data comes from Bitget's public REST API; execution is local paper accounting. No Bitget Demo Trading or live orders are placed.</p></div>`;
+  <p class="note">Reproduce offline from the committed dataset: <code>python -m residual verify --offline && python -m residual replay --offline</code>. Market data comes from Bitget's public REST API. Historical replay is local paper accounting; live-mode trades execute on Bitget Demo Trading when demo credentials are configured. No real-money orders are ever placed.</p></div>`;
 }

@@ -37,7 +37,11 @@ Numbers refer to the committed `data/results.json`.
 - [~] Live watcher: lifecycle proven by the deterministic fixture `tests/test_live.py` (new filing → record → PENDING → trade → close) and by one real run that recorded NO_TRADE. It has not yet added a real new event, because none has been released
 - [x] LLM never supplies numbers to execution (extra keys rejected; size from a fixed label table)
 - [~] Deployed dashboard: https://residual-teal.vercel.app is a static export; the live-watcher panel is a snapshot of the last local run
-- [~] Trading usage is **Bitget public market data + local paper accounting**. No Bitget Demo Trading orders or exchange records are created
+- [~] Trading usage: historical replay is **Bitget public market data + local paper accounting**. Live mode executes on **Bitget Demo Trading** when credentials are set:
+  - signed v2 requests with `paptrading: 1`;
+  - all-or-nothing pairs with rollback, reduce-only closes;
+  - exchange order records stored; `demo-check` and `demo-roundtrip` provided.
+  - Tested against a fake exchange only; **the run with real demo keys is pending.**
 - [x] Independent of AFTERSHOCK
 
 ## Result claims (not an edge)

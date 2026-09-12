@@ -5,7 +5,8 @@
 RESIDUAL isolates the company-specific part of an earnings reaction. It takes a stock's early post-earnings move on Bitget stock perpetuals, removes the broad-market, sector and liquidity contributions, and expresses what is left as a hedged pair (long company / short hedge, or the reverse). It is built for the Bitget S2 Alpha Factory track: earnings-driven trading, cross-market correlation and factor mining.
 
 **Scope, stated plainly:**
-- Market data comes from Bitget's public REST API. Execution is **local paper accounting**. RESIDUAL does not place Bitget Demo Trading or live orders, so it produces no exchange-side trading records.
+- Market data comes from Bitget's public REST API. Historical replay execution is **local paper accounting**, with no exchange-side records.
+- Live-mode trades can execute on **Bitget Demo Trading** when demo API credentials are configured (see below). RESIDUAL never places real-money orders.
 - The surprise is a **company-guidance surprise**: reported revenue vs the company's own prior-quarter outlook. It is **not** an analyst-consensus surprise.
 
 ## What happens for each event
@@ -105,6 +106,24 @@ Network notes:
 With nothing new, a run records NO_TRADE plus a live Bitget liquidity probe. `tests/test_live.py` covers this whole path with fixtures. No real new release has occurred since the dataset was built, so no live event has been recorded yet.
 
 The deployed dashboard (https://residual-teal.vercel.app) is a static export. Its live-watcher panel shows the log as of the last local run and does not update itself.
+
+## Bitget Demo Trading (live-mode execution)
+
+When `BITGET_DEMO_API_KEY`, `BITGET_DEMO_API_SECRET` and `BITGET_DEMO_API_PASSPHRASE` are set in `.env.local`, live-mode trades are placed as **Bitget Demo Trading orders** instead of local paper fills. How it works:
+- Requests are signed per API v2 and carry the `paptrading: 1` header, so they reach the demo environment only.
+- Both legs are market orders, all-or-nothing. If the second leg fails, the first is flattened with a reduce-only order.
+- At the 24h horizon both legs are closed with reduce-only orders.
+- Exchange order IDs, fill prices, fees and every request/response are stored with the position.
+
+Demo contracts are discovered at runtime (`demo-check`). A universe symbol that Bitget Demo does not list is rejected before any order is sent.
+
+```bash
+python -m residual demo-check                         # auth, balance, which universe symbols exist on demo
+python -m residual demo-roundtrip --notional 50       # open+close one small NVDA/QQQ pair; records -> data/demo_roundtrips.jsonl
+python -m residual live                               # live watcher now executes on Bitget Demo
+```
+
+Historical replay results remain local paper accounting; only live-mode trades can have exchange-side Demo records. Status: implemented and tested against a fake exchange (`tests/test_demo.py`, `tests/test_live.py`). **The run against real Bitget Demo credentials has not happened yet.**
 
 ## Layout
 

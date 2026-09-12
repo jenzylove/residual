@@ -66,6 +66,8 @@ class LiveLifecycleTest(unittest.TestCase):
             mock.patch.object(live, "_history_params", lambda ds, before: {"mode": 1, "k": 2.0, "source": "fixture"}),
             mock.patch.object(live, "interpret", lambda ev, a, text: {"status": "ok", "label": "durable", "confidence": 0.8}),
             mock.patch.object(live, "probe", self.book),
+            # never touch a real exchange from tests, even if demo keys are in .env.local
+            mock.patch.object(live.demo, "configured", lambda: False),
         ]
         for p in patches:
             p.start()
@@ -103,6 +105,28 @@ class LiveLifecycleTest(unittest.TestCase):
             - sum(l["entry_fee"] + l["exit_fee"] for l in closed["legs"])
         self.assertAlmostEqual(closed["net_pnl"], expected, places=6)
         self.assertEqual(len(live.load_live_log()), 3)
+
+    def test_lifecycle_through_bitget_demo(self):
+        from test_demo import FakeExchange
+        ex = FakeExchange()
+        real_client = live.demo.BitgetDemo  # capture before patching, or the factory calls itself
+        make = lambda: real_client("k", "s", "p", transport=ex)
+        with mock.patch.object(live.demo, "configured", lambda: True), \
+             mock.patch.object(live.demo, "BitgetDemo", make):
+            t_obs = market.event_times(RELEASE)["t_obs"]
+            live.watch(now_ms=RELEASE + 10 * 60_000)                      # PENDING
+            r2 = live.watch(now_ms=t_obs + 10 * 60_000)                  # demo orders placed
+            pos = r2["new_events"][0]["position"]
+            self.assertEqual(pos["execution"], "bitget_demo")
+            self.assertEqual([l["demo_symbol"] for l in pos["demo_legs"]], ["SNVDASUSDT", "SQQQSUSDT"])
+            self.assertTrue(all(l["open_order"]["state"] == "filled" for l in pos["demo_legs"]))
+            ex.px["SNVDASUSDT"] = 205.0
+            r3 = live.watch(now_ms=pos["exit_due_ms"] + 1)               # closed with reduce-only orders
+            closed = r3["closed_positions"][0]
+            self.assertEqual(closed["status"], "closed")
+            self.assertGreater(closed["realized"]["gross"], 0)
+            self.assertTrue(any(e["path"].endswith("place-order") and e["body"].get("reduceOnly") == "YES"
+                                for e in closed["exchange_log"]))
 
     def test_trade_after_entry_window_is_rejected(self):
         t_obs = market.event_times(RELEASE)["t_obs"]
