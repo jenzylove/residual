@@ -1,0 +1,4704 @@
+[
+ {
+  "event_id": "INTC-2025-10-23",
+  "ticker": "INTC",
+  "company_symbol": "INTCUSDT",
+  "sector_group": "semis",
+  "cik": 50863,
+  "accession": "0000050863-25-000169",
+  "release_utc": "2025-10-23T20:10:22Z",
+  "release_ms": 1761250222000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/",
+   "sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+   "cache_file": "data/cache/f791aefd53caf50768828b2c.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000107/q225_earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000107/",
+   "accession": "0000050863-25-000107",
+   "cache_file": "data/cache/fa45f89716b4f70b9de428ee.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 13700.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.7 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+    "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 13100.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting third-quarter 2025 revenue of $12.6 billion to $13.6 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000107/q225_earningsrelease.htm",
+    "source_sha256": "ad01877682f1b6433110404f2cd03dfb4f5e48e2cc7e55063d291e29880de087",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 12600.0,
+    "high": 13600.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 13300.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting fourth-quarter 2025 revenue of $12.8 billion to $13.8 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+    "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 12800.0,
+    "high": 13800.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 12900.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $12.9 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000107/q225_earningsrelease.htm",
+    "source_sha256": "ad01877682f1b6433110404f2cd03dfb4f5e48e2cc7e55063d291e29880de087",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Our Q3 results reflect improved execution and steady progress against our strategic priorities,",
+   "speaker": "Lip-Bu Tan, Intel CEO",
+   "snippet": "\"Our Q3 results reflect improved execution and steady progress against our strategic priorities,\" said Lip-Bu Tan, Intel CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+   "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 13100.0,
+   "revenue_actual": 13700.0,
+   "revenue_surprise_pct": 4.58,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 13300.0,
+   "guided_sequential_growth_pct": -2.92,
+   "prior_guided_sequential_growth_pct": 1.55,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "META-2025-10-29",
+  "ticker": "META",
+  "company_symbol": "METAUSDT",
+  "sector_group": "internet",
+  "cik": 1326801,
+  "accession": "0001628280-25-047114",
+  "release_utc": "2025-10-29T20:08:34Z",
+  "release_ms": 1761768514000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/",
+   "sha256": "dbefb536b68cda7c970b994c5ef39995bb3dd2374d6cbda6dc3dd540f28bbe19",
+   "cache_file": "data/cache/819b52ed72864191201deb9a.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036719/meta-06302025xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036719/",
+   "accession": "0001628280-25-036719",
+   "cache_file": "data/cache/4faf8f2d8efd7bed92be0567.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 51240.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $51.24 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+    "source_sha256": "dbefb536b68cda7c970b994c5ef39995bb3dd2374d6cbda6dc3dd540f28bbe19",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 49000.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $47.5-50.5 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036719/meta-06302025xexhibit991.htm",
+    "source_sha256": "f42e1a8029b6644895882603a5c688314c7722cf7bc6fb31306c20fb5344093f",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 47500.0,
+    "high": 50500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 57500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $56-59 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+    "source_sha256": "dbefb536b68cda7c970b994c5ef39995bb3dd2374d6cbda6dc3dd540f28bbe19",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 56000.0,
+    "high": 59000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 47520.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $47.52 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036719/meta-06302025xexhibit991.htm",
+    "source_sha256": "f42e1a8029b6644895882603a5c688314c7722cf7bc6fb31306c20fb5344093f",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.05,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $1.05",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+    "source_sha256": "dbefb536b68cda7c970b994c5ef39995bb3dd2374d6cbda6dc3dd540f28bbe19",
+    "extractor": "regex-v1:META:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 49000.0,
+   "revenue_actual": 51240.0,
+   "revenue_surprise_pct": 4.571,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 57500.0,
+   "guided_sequential_growth_pct": 12.217,
+   "prior_guided_sequential_growth_pct": 3.114,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMZN-2025-10-30",
+  "ticker": "AMZN",
+  "company_symbol": "AMZNUSDT",
+  "sector_group": "internet",
+  "cik": 1018724,
+  "accession": "0001018724-25-000121",
+  "release_utc": "2025-10-30T20:13:01Z",
+  "release_ms": 1761855181000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/",
+   "sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306",
+   "cache_file": "data/cache/ed6c52eb2e822bcb87e7d8c3.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000084/amzn-20250630xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000084/",
+   "accession": "0001018724-25-000084",
+   "cache_file": "data/cache/0109cba30db9c1524ac70a74.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 180200.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 13% to $180.2 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+    "source_sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 176750.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $174.0 billion and $179.5 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000084/amzn-20250630xex991.htm",
+    "source_sha256": "d22d3ba588c4319ef0f0d8701fd966deb77526101b8de5ff857961dfb518e2a0",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 174000.0,
+    "high": 179500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 209500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $206.0 billion and $213.0 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+    "source_sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 206000.0,
+    "high": 213000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 167700.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 13% to $167.7 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000084/amzn-20250630xex991.htm",
+    "source_sha256": "d22d3ba588c4319ef0f0d8701fd966deb77526101b8de5ff857961dfb518e2a0",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We continue to see strong momentum and growth across Amazon as AI drives meaningful improvements in every corner of our business,",
+   "speaker": "Andy Jassy, President and CEO, Amazon",
+   "snippet": "\"We continue to see strong momentum and growth across Amazon as AI drives meaningful improvements in every corner of our business,\" said Andy Jassy, President and CEO, Amazon",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+   "source_sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 176750.0,
+   "revenue_actual": 180200.0,
+   "revenue_surprise_pct": 1.952,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 209500.0,
+   "guided_sequential_growth_pct": 16.26,
+   "prior_guided_sequential_growth_pct": 5.397,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "PLTR-2025-11-03",
+  "ticker": "PLTR",
+  "company_symbol": "PLTRUSDT",
+  "sector_group": "software",
+  "cik": 1321655,
+  "accession": "0001321655-25-000130",
+  "release_utc": "2025-11-03T21:06:20Z",
+  "release_ms": 1762203980000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/",
+   "sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b",
+   "cache_file": "data/cache/dc3605a406d0d64bd973104f.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000105/a2025q2ex991pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000105/",
+   "accession": "0001321655-25-000105",
+   "cache_file": "data/cache/4c6c807ca5aaa841c21edfca.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 1181.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 63% year-over-year and 18% quarter-over-quarter to $1.181 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+    "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 1085.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.083 - $1.087 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000105/a2025q2ex991pressrelease.htm",
+    "source_sha256": "08ddc52f51fa671055b701b5c2c72bcb218e5640a7e98e34028d5c6a0322e0ad",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1083.0,
+    "high": 1087.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 1329.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.327 - $1.331 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+    "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1327.0,
+    "high": 1331.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 1004.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 48% year-over-year and 14% quarter-over-quarter to $1.004 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000105/a2025q2ex991pressrelease.htm",
+    "source_sha256": "08ddc52f51fa671055b701b5c2c72bcb218e5640a7e98e34028d5c6a0322e0ad",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.21,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $0.21",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+    "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b",
+    "extractor": "regex-v1:PLTR:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "114% - our Rule of 40 score! These results make undeniable the transformational impact of using AIP to compound AI leverage. Year-over-year growth in our U.S. business surged to 77%, and year-over-year growth in U.S. commercial climbed to 121%. We are yet again announcing the highest sequential quarterly revenue growth guide in our company's history, representing 61% year-over-year growth,",
+   "speaker": "Alex C",
+   "snippet": "\"114% - our Rule of 40 score! These results make undeniable the transformational impact of using AIP to compound AI leverage. Year-over-year growth in our U.S. business surged to 77%, and year-over-year growth in U.S. commercial climbed to 121%. We are yet again announcing the highest sequential quarterly revenue growth guide in our company's history, representing 61% year-over-year growth,\" said Alex C",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+   "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 1085.0,
+   "revenue_actual": 1181.0,
+   "revenue_surprise_pct": 8.848,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 1329.0,
+   "guided_sequential_growth_pct": 12.532,
+   "prior_guided_sequential_growth_pct": 8.068,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMD-2025-11-04",
+  "ticker": "AMD",
+  "company_symbol": "AMDUSDT",
+  "sector_group": "semis",
+  "cik": 2488,
+  "accession": "0000002488-25-000163",
+  "release_utc": "2025-11-04T21:16:10Z",
+  "release_ms": 1762290970000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/",
+   "sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+   "cache_file": "data/cache/c2da7cfd62dcbf9d5f2af852.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/",
+   "accession": "0000002488-25-000106",
+   "cache_file": "data/cache/2f9a5e9b21c45a94d0c06240.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 9200.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was a record $9.2 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 8700.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $8.7 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm",
+    "source_sha256": "c7018ec6f078fd41e6696d1ac131299b556114f3236b2c2cd94997c4251a52d4",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 8400.0,
+    "high": 9000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 9600.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $9.6 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 9300.0,
+    "high": 9900.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 7700.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was a record $7.7 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm",
+    "source_sha256": "c7018ec6f078fd41e6696d1ac131299b556114f3236b2c2cd94997c4251a52d4",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.2,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share was $1.20",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+    "extractor": "regex-v1:AMD:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We delivered record quarterly revenue of $9.2 billion, up 36% year-over-year, and generated record free cash flow, reflecting the strength of our leadership portfolio and disciplined execution,",
+   "speaker": "Jean Hu, AMD executive vice president, chief financial officer and treasurer",
+   "snippet": "\"We delivered record quarterly revenue of $9.2 billion, up 36% year-over-year, and generated record free cash flow, reflecting the strength of our leadership portfolio and disciplined execution,\" said Jean Hu, AMD executive vice president, chief financial officer and treasurer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+   "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 8700.0,
+   "revenue_actual": 9200.0,
+   "revenue_surprise_pct": 5.747,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 9600.0,
+   "guided_sequential_growth_pct": 4.348,
+   "prior_guided_sequential_growth_pct": 12.987,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "NVDA-2025-11-19",
+  "ticker": "NVDA",
+  "company_symbol": "NVDAUSDT",
+  "sector_group": "semis",
+  "cik": 1045810,
+  "accession": "0001045810-25-000228",
+  "release_utc": "2025-11-19T21:20:44Z",
+  "release_ms": 1763587244000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/",
+   "sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+   "cache_file": "data/cache/1794c943c693000e4807d49a.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207/q2fy26pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207/",
+   "accession": "0001045810-25-000207",
+   "cache_file": "data/cache/3a4145a0c124593fdb156857.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 57000.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the third quarter ended October 26, 2025, of $57.0 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+    "source_sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 54000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $54.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207/q2fy26pr.htm",
+    "source_sha256": "5a02be022e680567c06a6a64244ae5de7a2775958452041da44fde40b4af34fb",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 52920.0,
+    "high": 55080.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 65000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $65.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+    "source_sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 63700.0,
+    "high": 66300.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 46700.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the second quarter ended July 27, 2025, of $46.7 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207/q2fy26pr.htm",
+    "source_sha256": "5a02be022e680567c06a6a64244ae5de7a2775958452041da44fde40b4af34fb",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 54000.0,
+   "revenue_actual": 57000.0,
+   "revenue_surprise_pct": 5.556,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 65000.0,
+   "guided_sequential_growth_pct": 14.035,
+   "prior_guided_sequential_growth_pct": 15.632,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MRVL-2025-12-02",
+  "ticker": "MRVL",
+  "company_symbol": "MRVLUSDT",
+  "sector_group": "semis",
+  "cik": 1835632,
+  "accession": "0001835632-25-000193",
+  "release_utc": "2025-12-02T21:11:39Z",
+  "release_ms": 1764709899000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/",
+   "sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+   "cache_file": "data/cache/9e8df7f0597baeb3938d8fc3.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000187/q226_8kx822025ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000187/",
+   "accession": "0001835632-25-000187",
+   "cache_file": "data/cache/235df42147f1be9aa0903bc6.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2075.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the third quarter of fiscal 2026 was $2.075 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+    "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2060.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.060 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000187/q226_8kx822025ex-991.htm",
+    "source_sha256": "a61f209c9c97f9f6f7931c9fae6791dbdd2f309fbeb6551b1593dc55c3b94a70",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 1957.0,
+    "high": 2163.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 2200.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.200 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+    "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2090.0,
+    "high": 2310.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2006.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the second quarter of fiscal 2026 was $2.006 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000187/q226_8kx822025ex-991.htm",
+    "source_sha256": "a61f209c9c97f9f6f7931c9fae6791dbdd2f309fbeb6551b1593dc55c3b94a70",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Marvell delivered record third-quarter revenue of $2.075 billion, exceeding the midpoint of guidance, driven by strong demand for our data center products. We are guiding for robust growth in the fourth quarter and are on track for a strong finish to the fiscal year, with full-year revenue growth forecasted to exceed 40%. Looking ahead, we see demand for our products continuing to accelerate, and as a result, our data center revenue growth forecast for next year is now higher than prior expectations,",
+   "speaker": "Matt Murphy, Marvell's Chairman and CEO",
+   "snippet": "\"Marvell delivered record third-quarter revenue of $2.075 billion, exceeding the midpoint of guidance, driven by strong demand for our data center products. We are guiding for robust growth in the fourth quarter and are on track for a strong finish to the fiscal year, with full-year revenue growth forecasted to exceed 40%. Looking ahead, we see demand for our products continuing to accelerate, and as a result, our data center revenue growth forecast for next year is now higher than prior expectations,\" said Matt Murphy, Marvell's Chairman and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+   "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 2060.0,
+   "revenue_actual": 2075.0,
+   "revenue_surprise_pct": 0.728,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 2200.0,
+   "guided_sequential_growth_pct": 6.024,
+   "prior_guided_sequential_growth_pct": 2.692,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AVGO-2025-12-11",
+  "ticker": "AVGO",
+  "company_symbol": "AVGOUSDT",
+  "sector_group": "semis",
+  "cik": 1730168,
+  "accession": "0001730168-25-000116",
+  "release_utc": "2025-12-11T21:17:37Z",
+  "release_ms": 1765487857000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/",
+   "sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702",
+   "cache_file": "data/cache/afba0351724edd867dbb62fe.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000094/avgo-08032025x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000094/",
+   "accession": "0001730168-25-000094",
+   "cache_file": "data/cache/2fcc927df7227b7162a42030.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 18015.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $18,015 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+    "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 17400.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $17.4 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000094/avgo-08032025x8kxex99.htm",
+    "source_sha256": "a0f39d0e8804c688cf641ee9b1daa2ee1132e1253f9a30e7965c904f476e93ab",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 17400.0,
+    "high": 17400.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 19100.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $19.1 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+    "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 19100.0,
+    "high": 19100.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 15952.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $15,952 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000094/avgo-08032025x8kxex99.htm",
+    "source_sha256": "a0f39d0e8804c688cf641ee9b1daa2ee1132e1253f9a30e7965c904f476e93ab",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.74,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $1.74",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+    "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702",
+    "extractor": "regex-v1:AVGO:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "In Q4, record revenue of $18.0 billion grew 28% year-over-year, driven primarily by AI semiconductor revenue increasing 74% year-over-year,",
+   "speaker": "Hock Tan, President and CEO of Broadcom Inc",
+   "snippet": "\"In Q4, record revenue of $18.0 billion grew 28% year-over-year, driven primarily by AI semiconductor revenue increasing 74% year-over-year,\" said Hock Tan, President and CEO of Broadcom Inc",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+   "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 17400.0,
+   "revenue_actual": 18015.0,
+   "revenue_surprise_pct": 3.534,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 19100.0,
+   "guided_sequential_growth_pct": 6.023,
+   "prior_guided_sequential_growth_pct": 9.077,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MU-2025-12-17",
+  "ticker": "MU",
+  "company_symbol": "MUUSDT",
+  "sector_group": "semis",
+  "cik": 723125,
+  "accession": "0000723125-25-000044",
+  "release_utc": "2025-12-17T21:03:26Z",
+  "release_ms": 1766005406000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/",
+   "sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6",
+   "cache_file": "data/cache/913290429b61005e8c91ee08.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/",
+   "accession": "0000723125-25-000024",
+   "cache_file": "data/cache/0bb59b34e8d79bfc4c37e2ec.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 13640.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $13.64 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+    "source_sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 12500.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $12.50 billion \u00b1 $300 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+    "source_sha256": "21cd4bed358903d7e5ee4c695ce08697e25f6f223318a48b0197397f386dfdf8",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 12200.0,
+    "high": 12800.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 18700.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $18.70 billion \u00b1 $400 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+    "source_sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 18300.0,
+    "high": 19100.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 11320.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $11.32 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+    "source_sha256": "21cd4bed358903d7e5ee4c695ce08697e25f6f223318a48b0197397f386dfdf8",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "In fiscal Q1, Micron delivered record revenue and significant margin expansion at the company level and also in each of our business units,",
+   "speaker": "Sanjay Mehrotra, Chairman, President and CEO of Micron Technology",
+   "snippet": "\"In fiscal Q1, Micron delivered record revenue and significant margin expansion at the company level and also in each of our business units,\" said Sanjay Mehrotra, Chairman, President and CEO of Micron Technology",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+   "source_sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 12500.0,
+   "revenue_actual": 13640.0,
+   "revenue_surprise_pct": 9.12,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 18700.0,
+   "guided_sequential_growth_pct": 37.097,
+   "prior_guided_sequential_growth_pct": 10.424,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "INTC-2026-01-22",
+  "ticker": "INTC",
+  "company_symbol": "INTCUSDT",
+  "sector_group": "semis",
+  "cik": 50863,
+  "accession": "0000050863-26-000009",
+  "release_utc": "2026-01-22T21:10:56Z",
+  "release_ms": 1769116256000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/",
+   "sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+   "cache_file": "data/cache/6aec2983a318528b5adef556.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/",
+   "accession": "0000050863-25-000169",
+   "cache_file": "data/cache/f791aefd53caf50768828b2c.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 13700.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.7 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+    "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 13300.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting fourth-quarter 2025 revenue of $12.8 billion to $13.8 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+    "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 12800.0,
+    "high": 13800.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 12200.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+    "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 11700.0,
+    "high": 12700.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 13700.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.7 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+    "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages,",
+   "speaker": "David Zinsner, Intel CFO",
+   "snippet": "\"We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages,\" said David Zinsner, Intel CFO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+   "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 13300.0,
+   "revenue_actual": 13700.0,
+   "revenue_surprise_pct": 3.008,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 12200.0,
+   "guided_sequential_growth_pct": -10.949,
+   "prior_guided_sequential_growth_pct": -2.92,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "META-2026-01-28",
+  "ticker": "META",
+  "company_symbol": "METAUSDT",
+  "sector_group": "internet",
+  "cik": 1326801,
+  "accession": "0001628280-26-003832",
+  "release_utc": "2026-01-28T21:04:20Z",
+  "release_ms": 1769634260000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/",
+   "sha256": "0428bd5297e97c910c77566767eb48db35fc2c9ff7e2aa88ff8f7f3f340c0bca",
+   "cache_file": "data/cache/d8bdd9a2ff94f26880ef21bf.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/",
+   "accession": "0001628280-25-047114",
+   "cache_file": "data/cache/819b52ed72864191201deb9a.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 59890.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $59.89 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+    "source_sha256": "0428bd5297e97c910c77566767eb48db35fc2c9ff7e2aa88ff8f7f3f340c0bca",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 57500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $56-59 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+    "source_sha256": "dbefb536b68cda7c970b994c5ef39995bb3dd2374d6cbda6dc3dd540f28bbe19",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 56000.0,
+    "high": 59000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 55000.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $53.5-56.5 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+    "source_sha256": "0428bd5297e97c910c77566767eb48db35fc2c9ff7e2aa88ff8f7f3f340c0bca",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 53500.0,
+    "high": 56500.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 51240.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $51.24 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047114/meta-09302025xexhibit991.htm",
+    "source_sha256": "dbefb536b68cda7c970b994c5ef39995bb3dd2374d6cbda6dc3dd540f28bbe19",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 57500.0,
+   "revenue_actual": 59890.0,
+   "revenue_surprise_pct": 4.157,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 55000.0,
+   "guided_sequential_growth_pct": -8.165,
+   "prior_guided_sequential_growth_pct": 12.217,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "PLTR-2026-02-02",
+  "ticker": "PLTR",
+  "company_symbol": "PLTRUSDT",
+  "sector_group": "software",
+  "cik": 1321655,
+  "accession": "0001321655-26-000004",
+  "release_utc": "2026-02-02T21:06:08Z",
+  "release_ms": 1770066368000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/",
+   "sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3",
+   "cache_file": "data/cache/3e4256a415bd91f6d10a8ba8.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/",
+   "accession": "0001321655-25-000130",
+   "cache_file": "data/cache/dc3605a406d0d64bd973104f.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 1407.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+    "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 1329.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.327 - $1.331 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+    "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1327.0,
+    "high": 1331.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 1534.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.532 - $1.536 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+    "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1532.0,
+    "high": 1536.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 1181.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 63% year-over-year and 18% quarter-over-quarter to $1.181 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000130/a2025q3ex991earningsrelease.htm",
+    "source_sha256": "3bc3ac2169fef5bb592bc27d4153fec584e7c7de0ce1901fccb4026d7540752b",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.25,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $0.25",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+    "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3",
+    "extractor": "regex-v1:PLTR:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Palantir's Rule of 40 score is now an incredible 127%. Last quarter, our U.S. revenue grew 93% year-over-year and U.S. commercial revenue grew 137% year-over-year. We are also announcing a 2026 revenue growth guide of 61% year-over-year. We are an n of 1, and these numbers prove it. Palantir is alone in choosing to exclusively focus on scaling the operational leverage made possible by the rapid advancements of AI models, a trend that we first called 'commodity cognition' well before others started repeating it,",
+   "speaker": "Alex C",
+   "snippet": "\"Palantir's Rule of 40 score is now an incredible 127%. Last quarter, our U.S. revenue grew 93% year-over-year and U.S. commercial revenue grew 137% year-over-year. We are also announcing a 2026 revenue growth guide of 61% year-over-year. We are an n of 1, and these numbers prove it. Palantir is alone in choosing to exclusively focus on scaling the operational leverage made possible by the rapid advancements of AI models, a trend that we first called 'commodity cognition' well before others started repeating it,\" said Alex C",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+   "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 1329.0,
+   "revenue_actual": 1407.0,
+   "revenue_surprise_pct": 5.869,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 1534.0,
+   "guided_sequential_growth_pct": 9.026,
+   "prior_guided_sequential_growth_pct": 12.532,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMD-2026-02-03",
+  "ticker": "AMD",
+  "company_symbol": "AMDUSDT",
+  "sector_group": "semis",
+  "cik": 2488,
+  "accession": "0000002488-26-000014",
+  "release_utc": "2026-02-03T21:16:18Z",
+  "release_ms": 1770153378000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/",
+   "sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+   "cache_file": "data/cache/1a74955c8643c5df2a70c589.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/",
+   "accession": "0000002488-25-000163",
+   "cache_file": "data/cache/c2da7cfd62dcbf9d5f2af852.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 10300.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was a record $10.3 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 9600.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $9.6 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 9300.0,
+    "high": 9900.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 9800.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $9.8 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 9500.0,
+    "high": 10100.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 9200.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was a record $9.2 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.92,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share was $0.92",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+    "extractor": "regex-v1:AMD:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Our record fourth quarter and full-year results demonstrate AMD's ability to deliver profitable growth at scale,",
+   "speaker": "Jean Hu, AMD executive vice president, CFO and treasurer",
+   "snippet": "\"Our record fourth quarter and full-year results demonstrate AMD's ability to deliver profitable growth at scale,\" said Jean Hu, AMD executive vice president, CFO and treasurer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+   "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 9600.0,
+   "revenue_actual": 10300.0,
+   "revenue_surprise_pct": 7.292,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 9800.0,
+   "guided_sequential_growth_pct": -4.854,
+   "prior_guided_sequential_growth_pct": 4.348,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMZN-2026-02-05",
+  "ticker": "AMZN",
+  "company_symbol": "AMZNUSDT",
+  "sector_group": "internet",
+  "cik": 1018724,
+  "accession": "0001018724-26-000002",
+  "release_utc": "2026-02-05T21:25:12Z",
+  "release_ms": 1770326712000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/",
+   "sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668",
+   "cache_file": "data/cache/397348252c9b4cc3cb0071c4.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/",
+   "accession": "0001018724-25-000121",
+   "cache_file": "data/cache/ed6c52eb2e822bcb87e7d8c3.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 213400.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 14% to $213.4 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+    "source_sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 209500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $206.0 billion and $213.0 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+    "source_sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 206000.0,
+    "high": 213000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 176000.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $173.5 billion and $178.5 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+    "source_sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 173500.0,
+    "high": 178500.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 180200.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 13% to $180.2 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000121/amzn-20250930xex991.htm",
+    "source_sha256": "1e8046257ab94b99a3c24aa6752bc8498fbee2381f2911c7df3da0967fac1306",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "AWS growing 24% (our fastest growth in 13 quarters), Advertising growing 22%, Stores growing briskly across North America and International, our chips business growing triple digit percentages year-over-year-this growth is happening because we're continuing to innovate at a rapid rate, and identify and knock down customer problems,",
+   "speaker": "Andy Jassy, President and CEO, Amazon",
+   "snippet": "\"AWS growing 24% (our fastest growth in 13 quarters), Advertising growing 22%, Stores growing briskly across North America and International, our chips business growing triple digit percentages year-over-year-this growth is happening because we're continuing to innovate at a rapid rate, and identify and knock down customer problems,\" said Andy Jassy, President and CEO, Amazon",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+   "source_sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 209500.0,
+   "revenue_actual": 213400.0,
+   "revenue_surprise_pct": 1.862,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 176000.0,
+   "guided_sequential_growth_pct": -17.526,
+   "prior_guided_sequential_growth_pct": 16.26,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "NVDA-2026-02-25",
+  "ticker": "NVDA",
+  "company_symbol": "NVDAUSDT",
+  "sector_group": "semis",
+  "cik": 1045810,
+  "accession": "0001045810-26-000019",
+  "release_utc": "2026-02-25T21:31:25Z",
+  "release_ms": 1772055085000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/",
+   "sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+   "cache_file": "data/cache/d2a2f334601f1d88daa66d29.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/",
+   "accession": "0001045810-25-000228",
+   "cache_file": "data/cache/1794c943c693000e4807d49a.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 68100.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the fourth quarter ended January 25, 2026, of $68.1 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 65000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $65.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+    "source_sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 63700.0,
+    "high": 66300.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 78000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $78.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 76440.0,
+    "high": 79560.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 57000.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the third quarter ended October 26, 2025, of $57.0 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+    "source_sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.76,
+    "unit": "USD_per_share",
+    "snippet": "GAAP earnings per diluted share were $1.76",
+    "pattern": "(?:GAAP )?earnings per diluted share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+    "extractor": "regex-v1:NVDA:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Computing demand is growing exponentially - the agentic AI inflection point has arrived. Grace Blackwell with NVLink is the king of inference today - delivering an order-of-magnitude lower cost per token - and Vera Rubin will extend that leadership even further,",
+   "speaker": "Jensen Huang, founder and CEO of NVIDIA",
+   "snippet": "\"Computing demand is growing exponentially - the agentic AI inflection point has arrived. Grace Blackwell with NVLink is the king of inference today - delivering an order-of-magnitude lower cost per token - and Vera Rubin will extend that leadership even further,\" said Jensen Huang, founder and CEO of NVIDIA",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+   "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 65000.0,
+   "revenue_actual": 68100.0,
+   "revenue_surprise_pct": 4.769,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 78000.0,
+   "guided_sequential_growth_pct": 14.537,
+   "prior_guided_sequential_growth_pct": 14.035,
+   "guidance_direction": "maintained"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AVGO-2026-03-04",
+  "ticker": "AVGO",
+  "company_symbol": "AVGOUSDT",
+  "sector_group": "semis",
+  "cik": 1730168,
+  "accession": "0001730168-26-000011",
+  "release_utc": "2026-03-04T21:16:10Z",
+  "release_ms": 1772658970000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/",
+   "sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e",
+   "cache_file": "data/cache/7d01cbe6dcf7820ad3a6b9d8.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/",
+   "accession": "0001730168-25-000116",
+   "cache_file": "data/cache/afba0351724edd867dbb62fe.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 19311.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $19,311 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+    "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 19100.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $19.1 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+    "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 19100.0,
+    "high": 19100.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 22000.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $22.0 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+    "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 22000.0,
+    "high": 22000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 18015.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $18,015 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm",
+    "source_sha256": "5578734ef4db64d5ee523491163e937236368941da3f7d49ec5ad532e4de7702",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.5,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $1.50",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+    "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e",
+    "extractor": "regex-v1:AVGO:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Broadcom achieved record first quarter revenue on continued strength in AI semiconductor solutions. Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking,",
+   "speaker": "Hock Tan, President and CEO of Broadcom Inc",
+   "snippet": "\"Broadcom achieved record first quarter revenue on continued strength in AI semiconductor solutions. Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast, driven by robust demand for custom AI accelerators and AI networking,\" said Hock Tan, President and CEO of Broadcom Inc",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+   "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 19100.0,
+   "revenue_actual": 19311.0,
+   "revenue_surprise_pct": 1.105,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 22000.0,
+   "guided_sequential_growth_pct": 13.925,
+   "prior_guided_sequential_growth_pct": 6.023,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MRVL-2026-03-05",
+  "ticker": "MRVL",
+  "company_symbol": "MRVLUSDT",
+  "sector_group": "semis",
+  "cik": 1835632,
+  "accession": "0001835632-26-000006",
+  "release_utc": "2026-03-05T21:06:03Z",
+  "release_ms": 1772744763000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/",
+   "sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+   "cache_file": "data/cache/3a032d8434806bca8fc8852b.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/",
+   "accession": "0001835632-25-000193",
+   "cache_file": "data/cache/9e8df7f0597baeb3938d8fc3.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2219.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the fourth quarter of fiscal 2026 was $2.219 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2200.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.200 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+    "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2090.0,
+    "high": 2310.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 2400.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.400 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2280.0,
+    "high": 2520.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2075.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the third quarter of fiscal 2026 was $2.075 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+    "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 3.07,
+    "unit": "USD_per_share",
+    "snippet": "GAAP EPS of $3.07",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+    "extractor": "regex-v1:MRVL:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Marvell delivered record fiscal 2026 revenue of $8.195 billion, growing 42% year-over-year, driven by robust AI demand. We also delivered GAAP EPS of $3.07 and non-GAAP EPS of $2.84, up 81% year-over-year, demonstrating the strong operating leverage in our business model,",
+   "speaker": "Matt Murphy, Marvell's Chairman and CEO",
+   "snippet": "\"Marvell delivered record fiscal 2026 revenue of $8.195 billion, growing 42% year-over-year, driven by robust AI demand. We also delivered GAAP EPS of $3.07 and non-GAAP EPS of $2.84, up 81% year-over-year, demonstrating the strong operating leverage in our business model,\" said Matt Murphy, Marvell's Chairman and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+   "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 2200.0,
+   "revenue_actual": 2219.0,
+   "revenue_surprise_pct": 0.864,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 2400.0,
+   "guided_sequential_growth_pct": 8.157,
+   "prior_guided_sequential_growth_pct": 6.024,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MU-2026-03-18",
+  "ticker": "MU",
+  "company_symbol": "MUUSDT",
+  "sector_group": "semis",
+  "cik": 723125,
+  "accession": "0000723125-26-000004",
+  "release_utc": "2026-03-18T20:02:14Z",
+  "release_ms": 1773864134000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/",
+   "sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c",
+   "cache_file": "data/cache/a654b348821e0109ebf12948.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/",
+   "accession": "0000723125-25-000044",
+   "cache_file": "data/cache/913290429b61005e8c91ee08.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 23860.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $23.86 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+    "source_sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 18700.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $18.70 billion \u00b1 $400 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+    "source_sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 18300.0,
+    "high": 19100.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 33500.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $33.5 billion \u00b1 $750 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+    "source_sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 32750.0,
+    "high": 34250.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 13640.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $13.64 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+    "source_sha256": "a4e510db1e241ee8f2a90a0cafdcefb8cc28a02fc2b105593df810e55064c8b6",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Micron set new records across revenue, gross margin, EPS, and free cash flow in fiscal Q2, driven by a strong demand environment, tight industry supply, and our strong execution, and we expect significant records again in fiscal Q3,",
+   "speaker": "Sanjay Mehrotra, Chairman, President and CEO of Micron Technology",
+   "snippet": "\"Micron set new records across revenue, gross margin, EPS, and free cash flow in fiscal Q2, driven by a strong demand environment, tight industry supply, and our strong execution, and we expect significant records again in fiscal Q3,\" said Sanjay Mehrotra, Chairman, President and CEO of Micron Technology",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+   "source_sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 18700.0,
+   "revenue_actual": 23860.0,
+   "revenue_surprise_pct": 27.594,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 33500.0,
+   "guided_sequential_growth_pct": 40.402,
+   "prior_guided_sequential_growth_pct": 37.097,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "INTC-2026-04-23",
+  "ticker": "INTC",
+  "company_symbol": "INTCUSDT",
+  "sector_group": "semis",
+  "cik": 50863,
+  "accession": "0000050863-26-000077",
+  "release_utc": "2026-04-23T20:07:02Z",
+  "release_ms": 1776974822000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/",
+   "sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+   "cache_file": "data/cache/c384c60c38730d642093a867.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/",
+   "accession": "0000050863-26-000009",
+   "cache_file": "data/cache/6aec2983a318528b5adef556.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 13600.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.6 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+    "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 12200.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+    "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 11700.0,
+    "high": 12700.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 14300.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+    "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 13800.0,
+    "high": 14800.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 13700.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.7 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+    "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "The next wave of AI will bring intelligence closer to the end user, moving from foundational models to inference to agentic. This shift is significantly increasing the need for Intel's CPUs and wafer and advanced packaging offerings,",
+   "speaker": "Lip-Bu Tan, Intel CEO",
+   "snippet": "\"The next wave of AI will bring intelligence closer to the end user, moving from foundational models to inference to agentic. This shift is significantly increasing the need for Intel's CPUs and wafer and advanced packaging offerings,\" said Lip-Bu Tan, Intel CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+   "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 12200.0,
+   "revenue_actual": 13600.0,
+   "revenue_surprise_pct": 11.475,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 14300.0,
+   "guided_sequential_growth_pct": 5.147,
+   "prior_guided_sequential_growth_pct": -10.949,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "META-2026-04-29",
+  "ticker": "META",
+  "company_symbol": "METAUSDT",
+  "sector_group": "internet",
+  "cik": 1326801,
+  "accession": "0001628280-26-028364",
+  "release_utc": "2026-04-29T20:05:41Z",
+  "release_ms": 1777493141000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/",
+   "sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664",
+   "cache_file": "data/cache/011909320d11bb8894dceb3e.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/",
+   "accession": "0001628280-26-003832",
+   "cache_file": "data/cache/d8bdd9a2ff94f26880ef21bf.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 56310.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $56.31 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+    "source_sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 55000.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $53.5-56.5 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+    "source_sha256": "0428bd5297e97c910c77566767eb48db35fc2c9ff7e2aa88ff8f7f3f340c0bca",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 53500.0,
+    "high": 56500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 59500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $58-61 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+    "source_sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 58000.0,
+    "high": 61000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 59890.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $59.89 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+    "source_sha256": "0428bd5297e97c910c77566767eb48db35fc2c9ff7e2aa88ff8f7f3f340c0bca",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We had a milestone quarter with strong momentum across our apps and the release of our first model from Meta Superintelligence Labs,",
+   "speaker": "Mark Zuckerberg, Meta founder and CEO",
+   "snippet": "\"We had a milestone quarter with strong momentum across our apps and the release of our first model from Meta Superintelligence Labs,\" said Mark Zuckerberg, Meta founder and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+   "source_sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 55000.0,
+   "revenue_actual": 56310.0,
+   "revenue_surprise_pct": 2.382,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 59500.0,
+   "guided_sequential_growth_pct": 5.665,
+   "prior_guided_sequential_growth_pct": -8.165,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMZN-2026-04-29",
+  "ticker": "AMZN",
+  "company_symbol": "AMZNUSDT",
+  "sector_group": "internet",
+  "cik": 1018724,
+  "accession": "0001018724-26-000012",
+  "release_utc": "2026-04-29T20:18:55Z",
+  "release_ms": 1777493935000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/",
+   "sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58",
+   "cache_file": "data/cache/5f81890a2c6e0f9a9becf15b.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/",
+   "accession": "0001018724-26-000002",
+   "cache_file": "data/cache/397348252c9b4cc3cb0071c4.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 181500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 17% to $181.5 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+    "source_sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 176000.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $173.5 billion and $178.5 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+    "source_sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 173500.0,
+    "high": 178500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 196500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $194.0 billion and $199.0 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+    "source_sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 194000.0,
+    "high": 199000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 213400.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 14% to $213.4 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+    "source_sha256": "2b7b66a640be10e8d8882c83de795b46a61f6de4e9fec055aab938df83716668",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We're making customers' lives easier and better every day across all our businesses, and their response is driving significant growth,",
+   "speaker": "Andy Jassy, President and CEO, Amazon",
+   "snippet": "\"We're making customers' lives easier and better every day across all our businesses, and their response is driving significant growth,\" said Andy Jassy, President and CEO, Amazon",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+   "source_sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 176000.0,
+   "revenue_actual": 181500.0,
+   "revenue_surprise_pct": 3.125,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 196500.0,
+   "guided_sequential_growth_pct": 8.264,
+   "prior_guided_sequential_growth_pct": -17.526,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "PLTR-2026-05-04",
+  "ticker": "PLTR",
+  "company_symbol": "PLTRUSDT",
+  "sector_group": "software",
+  "cik": 1321655,
+  "accession": "0001321655-26-000026",
+  "release_utc": "2026-05-04T20:06:32Z",
+  "release_ms": 1777925192000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/",
+   "sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2",
+   "cache_file": "data/cache/176280f3adcdad18c89b5b5d.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/",
+   "accession": "0001321655-26-000004",
+   "cache_file": "data/cache/3e4256a415bd91f6d10a8ba8.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 1633.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+    "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 1534.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.532 - $1.536 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+    "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1532.0,
+    "high": 1536.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 1799.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.797 - $1.801 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+    "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1797.0,
+    "high": 1801.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 1407.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 70% year-over-year and 19% quarter-over-quarter to $1.407 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+    "source_sha256": "f2da08a4ef429b62d4af01a707cb7e696f1d11f0e1edfaa34b8b1af1a48e6ac3",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.33,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $0.33",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+    "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2",
+    "extractor": "regex-v1:PLTR:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Palantir's Rule of 40 score has soared to 145%. We have shattered the metric, a feat matched only by other fellow AI infrastructure companies: NVIDIA, Micron and SK hynix. Momentum surged as we grew 85% last quarter-our highest-ever year-over-year growth rate-by more than doubling our U.S. business, and now we are raising our full-year revenue guidance to 71% growth, 10 points ahead of our guidance from last quarter, driven by our confidence in an accelerating U.S. market,",
+   "speaker": "Alex Karp, Co-Founder and Chief Executive Officer of Palantir Technologies",
+   "snippet": "\"Palantir's Rule of 40 score has soared to 145%. We have shattered the metric, a feat matched only by other fellow AI infrastructure companies: NVIDIA, Micron and SK hynix. Momentum surged as we grew 85% last quarter-our highest-ever year-over-year growth rate-by more than doubling our U.S. business, and now we are raising our full-year revenue guidance to 71% growth, 10 points ahead of our guidance from last quarter, driven by our confidence in an accelerating U.S. market,\" said Alex Karp, Co-Founder and Chief Executive Officer of Palantir Technologies",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+   "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 1534.0,
+   "revenue_actual": 1633.0,
+   "revenue_surprise_pct": 6.454,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 1799.0,
+   "guided_sequential_growth_pct": 10.165,
+   "prior_guided_sequential_growth_pct": 9.026,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMD-2026-05-05",
+  "ticker": "AMD",
+  "company_symbol": "AMDUSDT",
+  "sector_group": "semis",
+  "cik": 2488,
+  "accession": "0000002488-26-000072",
+  "release_utc": "2026-05-05T20:16:06Z",
+  "release_ms": 1778012166000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/",
+   "sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+   "cache_file": "data/cache/fe55f72a3f19bd611dd12aa8.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/",
+   "accession": "0000002488-26-000014",
+   "cache_file": "data/cache/1a74955c8643c5df2a70c589.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 10300.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $10.3 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 9800.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $9.8 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 9500.0,
+    "high": 10100.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 11200.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 10900.0,
+    "high": 11500.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 10300.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was a record $10.3 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.84,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share was $0.84",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+    "extractor": "regex-v1:AMD:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "First quarter results reflect strong performance across all key financial metrics, with accelerating revenue growth, earnings expansion and record quarterly free cash flow,",
+   "speaker": "Jean Hu, AMD executive vice president, CFO and treasurer",
+   "snippet": "\"First quarter results reflect strong performance across all key financial metrics, with accelerating revenue growth, earnings expansion and record quarterly free cash flow,\" said Jean Hu, AMD executive vice president, CFO and treasurer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+   "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 9800.0,
+   "revenue_actual": 10300.0,
+   "revenue_surprise_pct": 5.102,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 11200.0,
+   "guided_sequential_growth_pct": 8.738,
+   "prior_guided_sequential_growth_pct": -4.854,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "NVDA-2026-05-20",
+  "ticker": "NVDA",
+  "company_symbol": "NVDAUSDT",
+  "sector_group": "semis",
+  "cik": 1045810,
+  "accession": "0001045810-26-000051",
+  "release_utc": "2026-05-20T20:21:19Z",
+  "release_ms": 1779308479000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/",
+   "sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+   "cache_file": "data/cache/1c6eafef1b93215558d6d256.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/",
+   "accession": "0001045810-26-000019",
+   "cache_file": "data/cache/d2a2f334601f1d88daa66d29.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 81600.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the first quarter ended April 26, 2026, of $81.6 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 78000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $78.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 76440.0,
+    "high": 79560.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 91000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $91.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 89180.0,
+    "high": 92820.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 68100.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the fourth quarter ended January 25, 2026, of $68.1 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 2.39,
+    "unit": "USD_per_share",
+    "snippet": "GAAP earnings per diluted share were $2.39",
+    "pattern": "(?:GAAP )?earnings per diluted share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+    "extractor": "regex-v1:NVDA:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "The buildout of AI factories - the largest infrastructure expansion in human history - is accelerating at extraordinary speed,",
+   "speaker": "Jensen Huang, founder and CEO of NVIDIA",
+   "snippet": "\"The buildout of AI factories - the largest infrastructure expansion in human history - is accelerating at extraordinary speed,\" said Jensen Huang, founder and CEO of NVIDIA",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+   "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 78000.0,
+   "revenue_actual": 81600.0,
+   "revenue_surprise_pct": 4.615,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 91000.0,
+   "guided_sequential_growth_pct": 11.52,
+   "prior_guided_sequential_growth_pct": 14.537,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MRVL-2026-05-27",
+  "ticker": "MRVL",
+  "company_symbol": "MRVLUSDT",
+  "sector_group": "semis",
+  "cik": 1835632,
+  "accession": "0001835632-26-000014",
+  "release_utc": "2026-05-27T20:06:07Z",
+  "release_ms": 1779912367000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/",
+   "sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+   "cache_file": "data/cache/4b0598ec6a036a0cc52fc284.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/",
+   "accession": "0001835632-26-000006",
+   "cache_file": "data/cache/3a032d8434806bca8fc8852b.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2418.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the first quarter of fiscal 2027 was $2.418 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+    "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2400.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.400 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2280.0,
+    "high": 2520.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 2700.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.700 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+    "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2565.0,
+    "high": 2835.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2219.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the fourth quarter of fiscal 2026 was $2.219 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Marvell delivered record first-quarter fiscal 2027 revenue of $2.418 billion, up 28% year-over-year, and guided second-quarter revenue to $2.7 billion at the mid-point, representing 35% year-over-year growth. We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business,",
+   "speaker": "Matt Murphy, Marvell's Chairman and CEO",
+   "snippet": "\"Marvell delivered record first-quarter fiscal 2027 revenue of $2.418 billion, up 28% year-over-year, and guided second-quarter revenue to $2.7 billion at the mid-point, representing 35% year-over-year growth. We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business,\" said Matt Murphy, Marvell's Chairman and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+   "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 2400.0,
+   "revenue_actual": 2418.0,
+   "revenue_surprise_pct": 0.75,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 2700.0,
+   "guided_sequential_growth_pct": 11.663,
+   "prior_guided_sequential_growth_pct": 8.157,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AVGO-2026-06-03",
+  "ticker": "AVGO",
+  "company_symbol": "AVGOUSDT",
+  "sector_group": "semis",
+  "cik": 1730168,
+  "accession": "0001730168-26-000051",
+  "release_utc": "2026-06-03T20:21:35Z",
+  "release_ms": 1780518095000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/",
+   "sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695",
+   "cache_file": "data/cache/c6e969b0bb4a490963fded5c.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/",
+   "accession": "0001730168-26-000011",
+   "cache_file": "data/cache/7d01cbe6dcf7820ad3a6b9d8.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 22187.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $22,187 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+    "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 22000.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $22.0 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+    "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 22000.0,
+    "high": 22000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 29400.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $29.4 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+    "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 29400.0,
+    "high": 29400.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 19311.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $19,311 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm",
+    "source_sha256": "cead86e7a100c4e8f5ebd7ce83d6d681133d8a2c5bcab848b01539068563c15e",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.91,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $1.91",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+    "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695",
+    "extractor": "regex-v1:AVGO:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Broadcom achieved record revenue, operating profit and free cash flow in Q2 driven by accelerating growth in AI semiconductor revenue and strong operating leverage. Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast, driven by increasing demand for custom AI accelerators and AI networking,",
+   "speaker": "Hock Tan, President and CEO of Broadcom Inc",
+   "snippet": "\"Broadcom achieved record revenue, operating profit and free cash flow in Q2 driven by accelerating growth in AI semiconductor revenue and strong operating leverage. Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast, driven by increasing demand for custom AI accelerators and AI networking,\" said Hock Tan, President and CEO of Broadcom Inc",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+   "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 22000.0,
+   "revenue_actual": 22187.0,
+   "revenue_surprise_pct": 0.85,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 29400.0,
+   "guided_sequential_growth_pct": 32.51,
+   "prior_guided_sequential_growth_pct": 13.925,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MU-2026-06-24",
+  "ticker": "MU",
+  "company_symbol": "MUUSDT",
+  "sector_group": "semis",
+  "cik": 723125,
+  "accession": "0000723125-26-000013",
+  "release_utc": "2026-06-24T20:02:01Z",
+  "release_ms": 1782331321000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/",
+   "sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+   "cache_file": "data/cache/bee82c2bf90ac4283d27fd81.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/",
+   "accession": "0000723125-26-000004",
+   "cache_file": "data/cache/a654b348821e0109ebf12948.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 41460.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $41.46 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+    "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 33500.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $33.5 billion \u00b1 $750 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+    "source_sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 32750.0,
+    "high": 34250.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 50000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $50.0 billion \u00b1 $1.0 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+    "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 49000.0,
+    "high": 51000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 23860.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $23.86 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+    "source_sha256": "ea0eabd425a84d4387ff4b66226f12a333d5bb57ee07b424df1b9cca3d9baf9c",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Micron's record fiscal Q3 financial results and even stronger outlook for Q4 reflect the strategic value of memory in the AI era,",
+   "speaker": "Sanjay Mehrotra, Chairman, President and CEO of Micron Technology",
+   "snippet": "\"Micron's record fiscal Q3 financial results and even stronger outlook for Q4 reflect the strategic value of memory in the AI era,\" said Sanjay Mehrotra, Chairman, President and CEO of Micron Technology",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+   "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 33500.0,
+   "revenue_actual": 41460.0,
+   "revenue_surprise_pct": 23.761,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 50000.0,
+   "guided_sequential_growth_pct": 20.598,
+   "prior_guided_sequential_growth_pct": 40.402,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "INTC-2026-07-23",
+  "ticker": "INTC",
+  "company_symbol": "INTCUSDT",
+  "sector_group": "semis",
+  "cik": 50863,
+  "accession": "0000050863-26-000155",
+  "release_utc": "2026-07-23T20:09:00Z",
+  "release_ms": 1784837340000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/",
+   "sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a",
+   "cache_file": "data/cache/6d89c7fa2a6f65a302ac4753.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/",
+   "accession": "0000050863-26-000077",
+   "cache_file": "data/cache/c384c60c38730d642093a867.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 16100.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $16.1 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+    "source_sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 14300.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+    "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 13800.0,
+    "high": 14800.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 16300.0,
+    "unit": "USD_millions",
+    "snippet": "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion",
+    "pattern": "Forecasting [a-z]+-quarter \\d{4} revenue of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+    "source_sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a",
+    "extractor": "regex-v1:INTC:revenue_guidance",
+    "low": 15800.0,
+    "high": 16800.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 13600.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.6 billion",
+    "pattern": "revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+    "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+    "extractor": "regex-v1:INTC:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "AI is driving unprecedented demand for compute, and as we continue to execute, Intel is well-positioned to capture sustainable growth across our CPU franchise, ASICs, advanced packaging and vast wafer foundry network,",
+   "speaker": "Lip-Bu Tan, Intel CEO",
+   "snippet": "\"AI is driving unprecedented demand for compute, and as we continue to execute, Intel is well-positioned to capture sustainable growth across our CPU franchise, ASICs, advanced packaging and vast wafer foundry network,\" said Lip-Bu Tan, Intel CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+   "source_sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 14300.0,
+   "revenue_actual": 16100.0,
+   "revenue_surprise_pct": 12.587,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 16300.0,
+   "guided_sequential_growth_pct": 1.242,
+   "prior_guided_sequential_growth_pct": 5.147,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "META-2026-07-29",
+  "ticker": "META",
+  "company_symbol": "METAUSDT",
+  "sector_group": "internet",
+  "cik": 1326801,
+  "accession": "0001628280-26-050596",
+  "release_utc": "2026-07-29T20:03:23Z",
+  "release_ms": 1785355403000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/",
+   "sha256": "96497fb80bc902097c756499df1f673303488652aa5460cfcc567546ed6cc31c",
+   "cache_file": "data/cache/ca063fe0f48acfe864b4d851.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/",
+   "accession": "0001628280-26-028364",
+   "cache_file": "data/cache/011909320d11bb8894dceb3e.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 60800.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $60.80 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+    "source_sha256": "96497fb80bc902097c756499df1f673303488652aa5460cfcc567546ed6cc31c",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 59500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $58-61 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+    "source_sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 58000.0,
+    "high": 61000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 62500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $61-64 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+    "source_sha256": "96497fb80bc902097c756499df1f673303488652aa5460cfcc567546ed6cc31c",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 61000.0,
+    "high": 64000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 56310.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $56.31 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+    "source_sha256": "ce4b6c18a778cc37c8daced6a09d0385b79263a907d41e1260093eb1dcc52664",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "AI is accelerating our core business today, powering our next generation of products, and opening the door to entirely new enterprise opportunities,",
+   "speaker": "Mark Zuckerberg, Meta founder and CEO",
+   "snippet": "\"AI is accelerating our core business today, powering our next generation of products, and opening the door to entirely new enterprise opportunities,\" said Mark Zuckerberg, Meta founder and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+   "source_sha256": "96497fb80bc902097c756499df1f673303488652aa5460cfcc567546ed6cc31c"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 59500.0,
+   "revenue_actual": 60800.0,
+   "revenue_surprise_pct": 2.185,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 62500.0,
+   "guided_sequential_growth_pct": 2.796,
+   "prior_guided_sequential_growth_pct": 5.665,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMZN-2026-07-30",
+  "ticker": "AMZN",
+  "company_symbol": "AMZNUSDT",
+  "sector_group": "internet",
+  "cik": 1018724,
+  "accession": "0001018724-26-000024",
+  "release_utc": "2026-07-30T20:06:23Z",
+  "release_ms": 1785441983000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/",
+   "sha256": "3a867450183833d4b7f4ed73d81e9492f8117cb49ea6bd1986e9ad0ecd231895",
+   "cache_file": "data/cache/5fd235f713f0fafcc5df9c33.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/",
+   "accession": "0001018724-26-000012",
+   "cache_file": "data/cache/5f81890a2c6e0f9a9becf15b.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 200600.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 20% to $200.6 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+    "source_sha256": "3a867450183833d4b7f4ed73d81e9492f8117cb49ea6bd1986e9ad0ecd231895",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 196500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $194.0 billion and $199.0 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+    "source_sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 194000.0,
+    "high": 199000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 199500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales are expected to be between $197.0 billion and $202.0 billion",
+    "pattern": "Net sales are expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+    "source_sha256": "3a867450183833d4b7f4ed73d81e9492f8117cb49ea6bd1986e9ad0ecd231895",
+    "extractor": "regex-v1:AMZN:revenue_guidance",
+    "low": 197000.0,
+    "high": 202000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 181500.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales increased 17% to $181.5 billion",
+    "pattern": "Net sales increased \\d+% to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+    "source_sha256": "07e948e5847992d3404698135278ae76c4f1dabf122f56ccf5163d4b82435a58",
+    "extractor": "regex-v1:AMZN:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "AWS is booming, growing 36.7% year-over-year in Q2-our fastest growth in 18 quarters-and our AI and Chips businesses each eclipsed run rates of more than $25 billion,",
+   "speaker": "Andy Jassy, President and CEO, Amazon",
+   "snippet": "\"AWS is booming, growing 36.7% year-over-year in Q2-our fastest growth in 18 quarters-and our AI and Chips businesses each eclipsed run rates of more than $25 billion,\" said Andy Jassy, President and CEO, Amazon",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+   "source_sha256": "3a867450183833d4b7f4ed73d81e9492f8117cb49ea6bd1986e9ad0ecd231895"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 196500.0,
+   "revenue_actual": 200600.0,
+   "revenue_surprise_pct": 2.087,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 199500.0,
+   "guided_sequential_growth_pct": -0.548,
+   "prior_guided_sequential_growth_pct": 8.264,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "PLTR-2026-08-03",
+  "ticker": "PLTR",
+  "company_symbol": "PLTRUSDT",
+  "sector_group": "software",
+  "cik": 1321655,
+  "accession": "0001321655-26-000039",
+  "release_utc": "2026-08-03T20:06:14Z",
+  "release_ms": 1785787574000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/",
+   "sha256": "6f9f63ea7846f2a33710e5fad73699b5cb556b9d7d25b130e8b797eb6618af37",
+   "cache_file": "data/cache/052567a0541a7ad4ac6828ab.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/",
+   "accession": "0001321655-26-000026",
+   "cache_file": "data/cache/176280f3adcdad18c89b5b5d.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 1935.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+    "source_sha256": "6f9f63ea7846f2a33710e5fad73699b5cb556b9d7d25b130e8b797eb6618af37",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 1799.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $1.797 - $1.801 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+    "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 1797.0,
+    "high": 1801.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 2162.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of between $2.160 - $2.164 billion",
+    "pattern": "Revenue of between \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+    "source_sha256": "6f9f63ea7846f2a33710e5fad73699b5cb556b9d7d25b130e8b797eb6618af37",
+    "extractor": "regex-v1:PLTR:revenue_guidance",
+    "low": 2160.0,
+    "high": 2164.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 1633.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue grew 85% year-over-year and 16% quarter-over-quarter to $1.633 billion",
+    "pattern": "Revenue grew \\d+% year-over-year and \\d+% quarter-over-quarter to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+    "source_sha256": "8bb61e349de9184f719690ca3fa8ced024c879327c7859369cad587c847ae0e2",
+    "extractor": "regex-v1:PLTR:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.41,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $0.41",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+    "source_sha256": "6f9f63ea7846f2a33710e5fad73699b5cb556b9d7d25b130e8b797eb6618af37",
+    "extractor": "regex-v1:PLTR:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Demand for AI sovereignty has now been unleashed. And Palantir is the only company that has demonstrated it can transform tokens into actual economic value. Our customers trust us to provide them with maximal control over their operations, data, and decisions. Their competitive advantage should never become the training data for future models. This quarter was otherworldly: our U.S. commercial revenue grew 149% year-over-year, our overall revenue grew 93% year-over-year, and our Rule of 40 score climbed to 155%. The sovereign AI revolution makes us very optimistic about the future,",
+   "speaker": "Alex Karp, Co-Founder and Chief Executive Officer of Palantir Technologies",
+   "snippet": "\"Demand for AI sovereignty has now been unleashed. And Palantir is the only company that has demonstrated it can transform tokens into actual economic value. Our customers trust us to provide them with maximal control over their operations, data, and decisions. Their competitive advantage should never become the training data for future models. This quarter was otherworldly: our U.S. commercial revenue grew 149% year-over-year, our overall revenue grew 93% year-over-year, and our Rule of 40 score climbed to 155%. The sovereign AI revolution makes us very optimistic about the future,\" said Alex Karp, Co-Founder and Chief Executive Officer of Palantir Technologies",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+   "source_sha256": "6f9f63ea7846f2a33710e5fad73699b5cb556b9d7d25b130e8b797eb6618af37"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 1799.0,
+   "revenue_actual": 1935.0,
+   "revenue_surprise_pct": 7.56,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 2162.0,
+   "guided_sequential_growth_pct": 11.731,
+   "prior_guided_sequential_growth_pct": 10.165,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AMD-2026-08-04",
+  "ticker": "AMD",
+  "company_symbol": "AMDUSDT",
+  "sector_group": "semis",
+  "cik": 2488,
+  "accession": "0000002488-26-000121",
+  "release_utc": "2026-08-04T20:16:24Z",
+  "release_ms": 1785874584000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/",
+   "sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39",
+   "cache_file": "data/cache/11d60f7e129ca1f5b54ef1ff.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/",
+   "accession": "0000002488-26-000072",
+   "cache_file": "data/cache/fe55f72a3f19bd611dd12aa8.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 11500.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $11.5 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+    "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 11200.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $11.2 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 10900.0,
+    "high": 11500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 13000.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $13 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+    "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 12700.0,
+    "high": 13300.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 10300.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $10.3 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.38,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share was $1.38",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+    "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39",
+    "extractor": "regex-v1:AMD:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,",
+   "speaker": "Jean Hu, AMD executive vice president, chief financial officer and treasurer",
+   "snippet": "\"Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,\" said Jean Hu, AMD executive vice president, chief financial officer and treasurer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+   "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 11200.0,
+   "revenue_actual": 11500.0,
+   "revenue_surprise_pct": 2.679,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 13000.0,
+   "guided_sequential_growth_pct": 13.043,
+   "prior_guided_sequential_growth_pct": 8.738,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "NVDA-2026-08-26",
+  "ticker": "NVDA",
+  "company_symbol": "NVDAUSDT",
+  "sector_group": "semis",
+  "cik": 1045810,
+  "accession": "0001045810-26-000073",
+  "release_utc": "2026-08-26T20:21:19Z",
+  "release_ms": 1787775679000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/",
+   "sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7",
+   "cache_file": "data/cache/973b6c1d75ea25e09c4739a9.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/",
+   "accession": "0001045810-26-000051",
+   "cache_file": "data/cache/1c6eafef1b93215558d6d256.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 96200.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the second quarter ended July 26, 2026, of $96.2 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+    "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 91000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $91.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 89180.0,
+    "high": 92820.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 108000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $108.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+    "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 105840.0,
+    "high": 110160.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 81600.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the first quarter ended April 26, 2026, of $81.6 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 2.46,
+    "unit": "USD_per_share",
+    "snippet": "GAAP earnings per diluted share were $2.46",
+    "pattern": "(?:GAAP )?earnings per diluted share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+    "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7",
+    "extractor": "regex-v1:NVDA:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue,",
+   "speaker": "Jensen Huang, founder and CEO of NVIDIA",
+   "snippet": "\"AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue,\" said Jensen Huang, founder and CEO of NVIDIA",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+   "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 91000.0,
+   "revenue_actual": 96200.0,
+   "revenue_surprise_pct": 5.714,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 108000.0,
+   "guided_sequential_growth_pct": 12.266,
+   "prior_guided_sequential_growth_pct": 11.52,
+   "guidance_direction": "maintained"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "MRVL-2026-08-27",
+  "ticker": "MRVL",
+  "company_symbol": "MRVLUSDT",
+  "sector_group": "semis",
+  "cik": 1835632,
+  "accession": "0001835632-26-000022",
+  "release_utc": "2026-08-27T20:05:59Z",
+  "release_ms": 1787861159000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/",
+   "sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313",
+   "cache_file": "data/cache/60a923bfdb4063b594678b2e.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/",
+   "accession": "0001835632-26-000014",
+   "cache_file": "data/cache/4b0598ec6a036a0cc52fc284.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2739.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the second quarter of fiscal 2027 was $2.739 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+    "source_sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2700.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $2.700 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+    "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2565.0,
+    "high": 2835.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 3150.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $3.150 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+    "source_sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2992.5,
+    "high": 3307.5,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2418.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the first quarter of fiscal 2027 was $2.418 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+    "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Marvell delivered record second-quarter fiscal 2027 revenue of $2.739 billion, up 37% year over year, driven by continued strong demand across our Data Center portfolio, where revenue growth accelerated to 46% year over year,",
+   "speaker": "Matt Murphy, Marvell's Chairman and CEO",
+   "snippet": "\"Marvell delivered record second-quarter fiscal 2027 revenue of $2.739 billion, up 37% year over year, driven by continued strong demand across our Data Center portfolio, where revenue growth accelerated to 46% year over year,\" said Matt Murphy, Marvell's Chairman and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+   "source_sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 2700.0,
+   "revenue_actual": 2739.0,
+   "revenue_surprise_pct": 1.444,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 3150.0,
+   "guided_sequential_growth_pct": 15.005,
+   "prior_guided_sequential_growth_pct": 11.663,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "AVGO-2026-09-02",
+  "ticker": "AVGO",
+  "company_symbol": "AVGOUSDT",
+  "sector_group": "semis",
+  "cik": 1730168,
+  "accession": "0001730168-26-000076",
+  "release_utc": "2026-09-02T20:26:04Z",
+  "release_ms": 1788380764000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/",
+   "sha256": "cce08d125724af16210eb7480ea5486a145ffc44ba66f5e25b8311158fa3b07b",
+   "cache_file": "data/cache/80f5308078dcdc5fe57b13aa.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/",
+   "accession": "0001730168-26-000051",
+   "cache_file": "data/cache/c6e969b0bb4a490963fded5c.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 29600.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $29.6 billion",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm",
+    "source_sha256": "cce08d125724af16210eb7480ea5486a145ffc44ba66f5e25b8311158fa3b07b",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 29400.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $29.4 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+    "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 29400.0,
+    "high": 29400.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 34800.0,
+    "unit": "USD_millions",
+    "snippet": "revenue guidance of approximately $34.8 billion",
+    "pattern": "revenue guidance of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm",
+    "source_sha256": "cce08d125724af16210eb7480ea5486a145ffc44ba66f5e25b8311158fa3b07b",
+    "extractor": "regex-v1:AVGO:revenue_guidance",
+    "low": 34800.0,
+    "high": 34800.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 22187.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $22,187 million",
+    "pattern": "Revenue of \\$([\\d,]+(?:\\.\\d+)?) (million|billion)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm",
+    "source_sha256": "e142b67577a310f1cdc676d404f9e86851980555f0cdc916923fbe79f1fae695",
+    "extractor": "regex-v1:AVGO:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 2.68,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $2.68",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm",
+    "source_sha256": "cce08d125724af16210eb7480ea5486a145ffc44ba66f5e25b8311158fa3b07b",
+    "extractor": "regex-v1:AVGO:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Demand for our custom AI accelerators and networking continues to be very strong. Q3 AI semiconductor revenue of $16.7 billion grew 221% year-over-year, and 54% quarter-over-quarter,",
+   "speaker": "Hock Tan, President and CEO of Broadcom Inc",
+   "snippet": "\"Demand for our custom AI accelerators and networking continues to be very strong. Q3 AI semiconductor revenue of $16.7 billion grew 221% year-over-year, and 54% quarter-over-quarter,\" said Hock Tan, President and CEO of Broadcom Inc",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm",
+   "source_sha256": "cce08d125724af16210eb7480ea5486a145ffc44ba66f5e25b8311158fa3b07b"
+  },
+  "surprise": {
+   "expected_source": "company's prior-quarter revenue outlook midpoint",
+   "revenue_expected": 29400.0,
+   "revenue_actual": 29600.0,
+   "revenue_surprise_pct": 0.68,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 34800.0,
+   "guided_sequential_growth_pct": 17.568,
+   "prior_guided_sequential_growth_pct": 32.51,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true
+  },
+  "status": "complete"
+ }
+]

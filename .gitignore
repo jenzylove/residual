@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/cache/
+data/snapshot_run.log
+.env
+.vercel

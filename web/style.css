@@ -1,0 +1,58 @@
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --ink:#16181d; --muted:#5f6570; --line:#e2e0da;
+  --accent:#2f5bd3; --pos:#157a48; --neg:#b3322b; --warn:#9a6a00; --chip:#efeee9;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#111317; --panel:#181b21; --ink:#e7e8eb; --muted:#9aa1ad; --line:#2a2e36;
+    --accent:#7ea2ff; --pos:#4cc38a; --neg:#ff7b72; --warn:#e0b04f; --chip:#22262e; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}
+.top{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;padding:20px 24px 12px}
+.brand h1{margin:0;font-size:22px;letter-spacing:.14em}
+.thesis{margin:4px 0 0;color:var(--muted)}
+.kpis{display:flex;flex-wrap:wrap;gap:8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 12px;min-width:92px}
+.kpi b{display:block;font-size:17px;font-variant-numeric:tabular-nums}
+.kpi span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tabs{display:flex;gap:4px;padding:0 24px;border-bottom:1px solid var(--line)}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 12px;color:var(--muted);font:inherit;cursor:pointer}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--accent)}
+main{padding:16px 24px}
+.tab{display:none}.tab.on{display:block}
+.board-wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:1100px){.board-wrap{grid-template-columns:1fr}}
+.table-scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.board tbody tr{cursor:pointer}
+.board tbody tr:hover{background:var(--chip)}
+.board tbody tr.sel{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.badge{display:inline-block;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600;letter-spacing:.03em}
+.b-trade{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
+.b-no{background:var(--chip);color:var(--muted)}
+.b-pend{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.pos{color:var(--pos)}.neg{color:var(--neg)}.muted{color:var(--muted)}
+.detail{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card h2{margin:0 0 2px;font-size:18px}
+pre.decomp{font-family:var(--mono);font-size:13px;margin:0;white-space:pre-wrap;line-height:1.6}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;font-size:13px}
+.kv dt{color:var(--muted)}.kv dd{margin:0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.gates{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:13px}
+.gates li{display:grid;grid-template-columns:18px 150px 1fr;gap:6px}
+.snip{font-family:var(--mono);font-size:12px;background:var(--chip);padding:2px 6px;border-radius:4px}
+.evid td{white-space:normal;vertical-align:top;font-size:12.5px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+svg text{fill:var(--muted);font-size:11px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.note{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.foot{padding:16px 24px 28px;color:var(--muted);font-size:12px}
+.bar{height:8px;border-radius:4px;background:var(--chip);position:relative;min-width:120px}
+.bar i{position:absolute;top:0;bottom:0;border-radius:4px}
