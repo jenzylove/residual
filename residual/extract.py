@@ -37,6 +37,10 @@ def _abs_band_millions(g):
     return mid - band, mid + band
 
 
+def _range_millions(g):
+    return _num(g[0]), _num(g[1])
+
+
 def _abs_band_unit(g):
     mid = _num(g[0]) * B
     band = _num(g[1]) * (B if g[2].lower() == "billion" else 1)
@@ -55,6 +59,17 @@ ACTUAL = {
     "MU": (r"Revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
     "INTC": (r"revenue was \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
     "MRVL": (r"revenue for the \w+ quarter of fiscal \d{4} was \$(\d+(?:\.\d+)?) billion", re.I, lambda g: _num(g[0]) * B),
+    # universe expansion (Sep 2026): Bitget listed US filers with a numeric next-quarter revenue outlook
+    "QCOM": (r"Revenues \| \$([\d,]+) \|", 0, lambda g: _num(g[0])),  # GAAP income statement, USD millions
+    "KLAC": (r"total revenues were \$(\d+(?:\.\d+)?) billion", re.I, lambda g: _num(g[0]) * B),
+    "TXN": (r"reported \w+ quarter revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    # headline line only; segment lines ("Networking revenue was ...") must never match
+    "HPE": (r"Revenue : \$(\d+(?:\.\d+)?) billion, (?:up|down) \d+% from the prior-year period", 0, lambda g: _num(g[0]) * B),
+    "SMCI": (r"Net sales of \$(\d+(?:\.\d+)?) billion versus", 0, lambda g: _num(g[0]) * B),
+    "CRM": (r"(?:• Revenue|quarter revenue) of \$(\d+(?:\.\d+)?) billion, up", 0, lambda g: _num(g[0]) * B),
+    "PANW": (r"Total revenue for the fiscal \w+ quarter \d{4} grew \d+% year over year to \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "CRWD": (r"Total revenue was \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "MDB": (r"Total revenue was \$(\d+(?:\.\d+)?) million", 0, lambda g: _num(g[0])),
 }
 
 # Next-quarter revenue outlook -> (low, high) in USD millions
@@ -68,6 +83,15 @@ GUIDE = {
     "MU": (r"Revenue \| \$(\d+(?:\.\d+)?) billion ± \$(\d+(?:\.\d+)?) (billion|million)", 0, _abs_band_unit),
     "INTC": (r"Forecasting [a-z]+-quarter \d{4} revenue of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
     "MRVL": (r"Net revenue is expected to be \$(\d+(?:\.\d+)?) billion \+/- (\d+(?:\.\d+)?)%", 0, _pct_band),
+    "QCOM": (r"Revenues \| \| \$(\d+(?:\.\d+)?)B - \$(\d+(?:\.\d+)?)B", 0, _range),
+    "KLAC": (r"Total revenues are expected to be in a range of \$(\d+(?:\.\d+)?) billion \+/- \$(\d+(?:\.\d+)?) million", 0, _abs_band_millions),
+    "TXN": (r"outlook is for revenue in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "HPE": (r"HPE estimates revenue to be in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "SMCI": (r"The Company expects net sales in the range of \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "CRM": (r"quarter FY\d+ revenue guidance of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "PANW": (r"Total revenue in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "CRWD": (r"Total revenue \| \$([\d,]+(?:\.\d+)?) - \$([\d,]+(?:\.\d+)?) million", 0, _range_millions),
+    "MDB": (r"Revenues are expected to be in the range of: \| \$(\d+(?:\.\d+)?) million to \$(\d+(?:\.\d+)?) million", 0, _range_millions),
 }
 
 EPS = [

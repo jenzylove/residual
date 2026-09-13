@@ -1,0 +1,25 @@
+{
+ "event_id": "SMCI-2026-08-11",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "59f8f653e7547161b965dd73bf0e80bacea5b398e2cfe529e2080a8dcc626ec1",
+ "created_at": "2026-09-13T17:03:42Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue missed prior guidance but gross margin nearly doubled and forward guidance was raised sharply (Q1'27 net sales $14.5-15.5B vs $11.75B prior mid, FY27 $65-72B), signaling durable margin and demand improvement despite an ongoing export-control review overhang.\", \"evidence_quotes\": [\"Gross margin of 17.5% versus 9.9% in Q3'26 and 9.5% in Q4'25.\", \"The Company expects net sales in the range of $14.5 billion and $15.5 billion for the first quarter of fiscal year 2027\", \"For fiscal year 2027, the Company expects net sales in the range of $65.0 billion to $72.0 billion.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue missed prior guidance but gross margin nearly doubled and forward guidance was raised sharply (Q1'27 net sales $14.5-15.5B vs $11.75B prior mid, FY27 $65-72B), signaling durable margin and demand improvement despite an ongoing export-control review overhang.\", \"evidence_quotes\": [\"Gross margin of 17.5% versus 9.9% in Q3'26 and 9.5% in Q4'25.\", \"The Company expects net sales in the range of $14.5 billion and $15.5 billion for the first quarter of fiscal year 2027\", \"For fiscal year 2027, the Company expects net sales in the range of $65.0 billion to $72.0 billion.\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Revenue missed prior guidance but gross margin nearly doubled and forward guidance was raised sharply (Q1'27 net sales $14.5-15.5B vs $11.75B prior mid, FY27 $65-72B), signaling durable margin and demand improvement despite an ongoing export-control review overhang.",
+ "evidence_quotes": [
+  "Gross margin of 17.5% versus 9.9% in Q3'26 and 9.5% in Q4'25.",
+  "The Company expects net sales in the range of $14.5 billion and $15.5 billion for the first quarter of fiscal year 2027",
+  "For fiscal year 2027, the Company expects net sales in the range of $65.0 billion to $72.0 billion."
+ ]
+}

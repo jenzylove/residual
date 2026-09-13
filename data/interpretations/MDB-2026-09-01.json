@@ -1,0 +1,25 @@
+{
+ "event_id": "MDB-2026-09-01",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "3a9aabd6d29149610d60aa6aa672fe966d010583b6ae316e66bca8b6d0ad0d8f",
+ "created_at": "2026-09-13T17:04:13Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"MDB beat its own prior revenue guide by 5.5%, raised full-year guidance, and cited accelerating Atlas/EA growth, margin expansion and cash flow - yet the residual shows a sharp -13.35% drop, directly at odds with the positive guidance and commentary in the release.\", \"evidence_quotes\": [\"Raising full year fiscal 2027 guidance, with H2 raise mainly due to Atlas\", \"This gives us the confidence to raise our full year fiscal 2027 guidance\", \"We delivered a non-GAAP operating margin of 24%, up significantly from 15% a year ago\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"MDB beat its own prior revenue guide by 5.5%, raised full-year guidance, and cited accelerating Atlas/EA growth, margin expansion and cash flow - yet the residual shows a sharp -13.35% drop, directly at odds with the positive guidance and commentary in the release.\", \"evidence_quotes\": [\"Raising full year fiscal 2027 guidance, with H2 raise mainly due to Atlas\", \"This gives us the confidence to raise our full year fiscal 2027 guidance\", \"We delivered a non-GAAP operating margin of 24%, up significantly from 15% a year ago\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.62,
+ "rationale": "MDB beat its own prior revenue guide by 5.5%, raised full-year guidance, and cited accelerating Atlas/EA growth, margin expansion and cash flow - yet the residual shows a sharp -13.35% drop, directly at odds with the positive guidance and commentary in the release.",
+ "evidence_quotes": [
+  "Raising full year fiscal 2027 guidance, with H2 raise mainly due to Atlas",
+  "This gives us the confidence to raise our full year fiscal 2027 guidance",
+  "We delivered a non-GAAP operating margin of 24%, up significantly from 15% a year ago"
+ ]
+}

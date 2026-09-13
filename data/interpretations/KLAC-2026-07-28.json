@@ -1,0 +1,25 @@
+{
+ "event_id": "KLAC-2026-07-28",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "91d307bcabfbc10e4f2ee36cada2875d30ffc773f39245fba5e9e11c3caf0bc5",
+ "created_at": "2026-09-13T17:03:27Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Revenue and EPS beat, next-quarter guidance raised well above prior quarter with bullish AI-driven demand commentary, yet residual move is sharply negative (-9.45%), directly conflicting with fundamentals and outlook.\", \"evidence_quotes\": [\"Total revenues are expected to be in a range of $4.0 billion +/- $200 million\", \"we see momentum across our business accelerating in the second half of calendar 2026 and continuing through 2027\", \"total revenues were $3.66 billion, above the midpoint of the guidance range\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.85, \"rationale\": \"Revenue and EPS beat, next-quarter guidance raised well above prior quarter with bullish AI-driven demand commentary, yet residual move is sharply negative (-9.45%), directly conflicting with fundamentals and outlook.\", \"evidence_quotes\": [\"Total revenues are expected to be in a range of $4.0 billion +/- $200 million\", \"we see momentum across our business accelerating in the second half of calendar 2026 and continuing through 2027\", \"total revenues were $3.66 billion, above the midpoint of the guidance range\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.85,
+ "rationale": "Revenue and EPS beat, next-quarter guidance raised well above prior quarter with bullish AI-driven demand commentary, yet residual move is sharply negative (-9.45%), directly conflicting with fundamentals and outlook.",
+ "evidence_quotes": [
+  "Total revenues are expected to be in a range of $4.0 billion +/- $200 million",
+  "we see momentum across our business accelerating in the second half of calendar 2026 and continuing through 2027",
+  "total revenues were $3.66 billion, above the midpoint of the guidance range"
+ ]
+}

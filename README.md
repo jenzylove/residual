@@ -34,15 +34,27 @@ The direction (continuation vs reversal) and the threshold k are learned **walk-
 
 ## Dataset
 
-- **Universe:** NVDA, AMD, AVGO, MU, INTC, MRVL (semiconductors) · META, AMZN (internet) · PLTR (software). These are the Bitget stock perpetuals whose companies print a numeric revenue outlook in the press release.
-- **Events:** 35 real earnings releases, Oct 2025 to Sep 2026, in `data/events.json`. All required fields are verified against archived sources.
+- **Universe (18):**
+  - Semiconductors: NVDA, AMD, AVGO, MU, INTC, MRVL, QCOM, KLAC, TXN
+  - Internet: META, AMZN
+  - Software: PLTR, CRM, PANW, CRWD, MDB
+  - Hardware: HPE, SMCI
+
+  These are the Bitget stock perpetuals whose companies print a numeric next-quarter revenue outlook in the press release.
+- **Events:** 75 real earnings releases, Oct 2025 to Sep 2026, in `data/events.json`. 59 have every required field verified against archived sources. The other 16 are mostly older releases from newly added companies, written in a format the extractors do not cover; they predate those stocks' Bitget listing and would be NO_TRADE for market data regardless.
 - **Market inputs:** one reproducible file per event in `data/snapshots/<event_id>.json`, containing Bitget hourly candles, fees and funding.
 - **AI outputs:** `data/interpretations/<event_id>.json`, containing the prompt hash, model, raw responses and validation result.
 
-## Results (walk-forward, 35 events)
+## Results (walk-forward, 75 events)
 
-- **Outcomes:** 9 paired paper trades and 26 NO_TRADE decisions.
-- **NO_TRADE reasons** (some events have several): liquidity 14, market data 8, reaction complete 4, below cost 3, not robust 2, AI label 2.
+- **Outcomes:** 9 paired paper trades and 66 NO_TRADE decisions.
+- **NO_TRADE reasons** (some events have several): market data 38, liquidity 24, data incomplete 16, reaction complete 4, below cost 4, not robust 3, AI label 3, no hedge 3.
+
+**Universe expansion (Sep 2026) added no trades.** Nine companies were added: QCOM, KLAC, TXN, HPE, SMCI, CRM, PANW, CRWD and MDB. Each of their releases after listing ended in NO_TRADE:
+- All nine because the newly listed Bitget perpetuals are too thin after hours for a $10,000 position.
+- CRM, MDB and PANW also because none of QQQ, SPY or XLK tracks them closely enough to hedge.
+
+The binding constraint on sample size is Bitget liquidity, not the number of companies covered.
 
 **Primary result.** Only trades whose holding period has complete Bitget funding history are counted. Bitget serves funding only from about June 2026, so 4 of the 9 trades are excluded.
 
@@ -52,17 +64,17 @@ The direction (continuation vs reversal) and the threshold k are learned **walk-
 | Residual pair, no AI (ablation) | −$9.66 | 5 | 4 |
 | Unhedged company trade, same signals | +$361.25 | 5 | 4 |
 | **Naive headline, same events** (like-for-like) | **+$1,254.55** | 5 | 4 |
-| Naive headline, every eligible event | +$1,062.20 | 9 | 18 |
+| Naive headline, every eligible event | −$26.49 | 18 | 18 |
 | No trade | $0.00 | 0 | 0 |
 
 **Sensitivity: all trades, conservative funding.** Every trade counts. Missing funding is charged against the position at the largest absolute rate observed for that symbol.
 
 | Strategy | Net P&L | Trades |
 |---|---|---|
-| Residual pair (AI-gated) | −$77.73 | 9 |
+| Residual pair (AI-gated) | −$78.01 | 9 |
 | Unhedged company trade, same signals | −$42.62 | 9 |
 | Naive headline, same events | +$401.51 | 9 |
-| Naive headline, every eligible event | −$1,775.83 | 27 |
+| Naive headline, every eligible event | −$2,864.53 | 36 |
 
 **Reading the results honestly:**
 - On the same events, the naive headline direction beat the residual strategy in this sample.

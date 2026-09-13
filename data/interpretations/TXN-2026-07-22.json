@@ -1,0 +1,24 @@
+{
+ "event_id": "TXN-2026-07-22",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "9a64a7302b65b7a6de2a2f5c59390919beefb990e400ce4d0626d71412c05424",
+ "created_at": "2026-09-13T17:03:24Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue beat guidance by 5%, next-quarter guidance midpoint ($5.9B) implies strong sequential growth, and broad-based growth commentary contradicts the -3.64% negative residual, suggesting the selloff is not fundamentally justified.\", \"evidence_quotes\": [\"Revenue increased 13% sequentially and 23% from the same quarter a year ago with broad growth led by industrial, data center and automotive.\", \"TI's third quarter outlook is for revenue in the range of $5.65 billion to $6.15 billion and earnings per share between $2.23 and $2.57.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue beat guidance by 5%, next-quarter guidance midpoint ($5.9B) implies strong sequential growth, and broad-based growth commentary contradicts the -3.64% negative residual, suggesting the selloff is not fundamentally justified.\", \"evidence_quotes\": [\"Revenue increased 13% sequentially and 23% from the same quarter a year ago with broad growth led by industrial, data center and automotive.\", \"TI's third quarter outlook is for revenue in the range of $5.65 billion to $6.15 billion and earnings per share between $2.23 and $2.57.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.78,
+ "rationale": "Revenue beat guidance by 5%, next-quarter guidance midpoint ($5.9B) implies strong sequential growth, and broad-based growth commentary contradicts the -3.64% negative residual, suggesting the selloff is not fundamentally justified.",
+ "evidence_quotes": [
+  "Revenue increased 13% sequentially and 23% from the same quarter a year ago with broad growth led by industrial, data center and automotive.",
+  "TI's third quarter outlook is for revenue in the range of $5.65 billion to $6.15 billion and earnings per share between $2.23 and $2.57."
+ ]
+}

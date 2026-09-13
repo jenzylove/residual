@@ -75,6 +75,23 @@ def _pct(a, b):
     return (a / b - 1) * 100
 
 
+def guidance_baseline(filings: list[dict], i: int, max_days: int = 120) -> dict:
+    """The most recent earlier filing whose release states a next-quarter revenue outlook.
+
+    Some companies file a preliminary Item 2.02 8-K between full releases (SMCI, Jul 2026) with no
+    guidance; skipping those keeps the baseline the last real outlook instead of an empty one.
+    """
+    cur_day = datetime.fromisoformat(filings[i]["accepted_et"])
+    for j in range(i - 1, -1, -1):
+        f = filings[j]
+        if (cur_day - datetime.fromisoformat(f["accepted_et"])).days > max_days:
+            break
+        rel = _load_release(f)
+        if rel["fields"]["revenue_guidance_next"] and rel["fields"]["revenue_actual"]:
+            return f
+    return filings[i - 1]
+
+
 def build_event(filing: dict, prev: dict) -> dict:
     cur, old = _load_release(filing), _load_release(prev)
     release = edgar.accepted_utc(filing["accepted_et"])
@@ -155,7 +172,7 @@ def build_dataset(since: str = "2025-10-15", until: str | None = None, tickers=N
             day = f["accepted_et"][:10]
             if i == 0 or day < since or (until and day > until):
                 continue
-            ev = build_event(f, filings[i - 1])
+            ev = build_event(f, guidance_baseline(filings, i))
             events.append(ev)
             print(f"  {ev['event_id']:<16} {ev['status']:<16} "
                   f"guidance_surprise={ev['surprise']['guidance_surprise_pct'] if ev['surprise'] else '-'}", flush=True)

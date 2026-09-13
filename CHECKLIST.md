@@ -10,8 +10,8 @@ Numbers refer to the committed `data/results.json`.
 - [x] Not a chat assistant, sentiment bot, beat-equals-long strategy, rebalancer or pure backtest; naive direction exists only as a baseline
 
 ## 2. Core behavior
-- [x] Curated Bitget universe: 9 stock perpetuals, QQQ market proxy, SMH/QQQ/SPY hedges, sector peer baskets
-- [x] Insufficient market data → NO_TRADE: **8** events
+- [x] Curated Bitget universe: 18 stock perpetuals in four sector groups, QQQ market proxy, SMH/QQQ/SPY/XLK hedges, sector peer baskets
+- [x] Insufficient market data → NO_TRADE: **38** events
 - [x] Earnings from a primary source (SEC 8-K Item 2.02, Ex. 99.1) with source URL, verbatim snippet and SHA-256; `verify --offline` passes against archived sources
 - [~] Surprise is a **company-guidance surprise** (vs prior-quarter company outlook), not a consensus surprise; renamed throughout code, UI and prompt
 - [~] Margins: explicitly optional evidence (`validation.optional_fields`); not found in these releases; never used by the model
@@ -27,11 +27,11 @@ Numbers refer to the committed `data/results.json`.
 - [x] UI: event board, surprise decomposition, strategy card, evidence panel, results panel
 
 ## 3. Build and demo acceptance
-- [x] 35 real historical events, replayable with sources, timestamps, extracted values and decisions
+- [x] 75 real historical events (59 fully verified), replayable with sources, timestamps, extracted values and decisions
 - [x] ≥15 events; documented universe
 - [x] Baselines: residual, unhedged (same signals), **naive on the same events** (like-for-like), naive on all events, no-trade, plus a no-AI ablation
 - [x] Walk-forward evaluation (parameters fit only on events exited before each release)
-- [x] ≥1 paired trade (9) and ≥1 NO_TRADE (26); both legs logged in `data/ledger.csv` (36 orders)
+- [x] ≥1 paired trade (9) and ≥1 NO_TRADE (66); both legs logged in `data/ledger.csv` (36 orders)
 - [x] Slippage and fees included
 - [x] Results regenerate from code **without network**: `replay --offline` uses committed sources, snapshots and cached interpretations
 - [~] Live watcher: lifecycle proven by the deterministic fixture `tests/test_live.py` (new filing → record → PENDING → trade → close) and by one real run that recorded NO_TRADE. It has not yet added a real new event, because none has been released

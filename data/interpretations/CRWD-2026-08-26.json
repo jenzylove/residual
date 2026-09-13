@@ -1,0 +1,25 @@
+{
+ "event_id": "CRWD-2026-08-26",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "4607967e36945a3846f2205436df20b018a14ca295317bb912c566e8cb8749ef",
+ "created_at": "2026-09-13T17:03:53Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat own guidance modestly, but net new ARR accelerated to 51% YoY with FY27 net new ARR guidance raised 630bps, Falcon Flex ARR up 101%, and margins/FCF at records\u2014fundamental acceleration supports a lasting re-rating beyond the beat itself.\", \"evidence_quotes\": [\"Delivers record net new ARR of $333 million, accelerates growth to 51% year-over-year\", \"Increases FY27 net new ARR growth guidance by 630 basis points to 34% year-over-year growth at the midpoint\", \"Exceeds $2.29 billion in ending ARR from accounts that have adopted Falcon Flex, accelerates growth to 101% year-over-year\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat own guidance modestly, but net new ARR accelerated to 51% YoY with FY27 net new ARR guidance raised 630bps, Falcon Flex ARR up 101%, and margins/FCF at records\u2014fundamental acceleration supports a lasting re-rating beyond the beat itself.\", \"evidence_quotes\": [\"Delivers record net new ARR of $333 million, accelerates growth to 51% year-over-year\", \"Increases FY27 net new ARR growth guidance by 630 basis points to 34% year-over-year growth at the midpoint\", \"Exceeds $2.29 billion in ending ARR from accounts that have adopted Falcon Flex, accelerates growth to 101% year-over-year\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.78,
+ "rationale": "Revenue beat own guidance modestly, but net new ARR accelerated to 51% YoY with FY27 net new ARR guidance raised 630bps, Falcon Flex ARR up 101%, and margins/FCF at records\u2014fundamental acceleration supports a lasting re-rating beyond the beat itself.",
+ "evidence_quotes": [
+  "Delivers record net new ARR of $333 million, accelerates growth to 51% year-over-year",
+  "Increases FY27 net new ARR growth guidance by 630 basis points to 34% year-over-year growth at the midpoint",
+  "Exceeds $2.29 billion in ending ARR from accounts that have adopted Falcon Flex, accelerates growth to 101% year-over-year"
+ ]
+}

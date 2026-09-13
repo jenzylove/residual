@@ -34,6 +34,30 @@ class ExtractTests(unittest.TestCase):
         f = extract.extract_all("NVDA", raw, self.TEXT, "u")["revenue_actual"]
         self.assertFalse(extract.verify_field(f, self.TEXT, raw + b" ")[0])
 
+    def _one(self, ticker, text):
+        return extract.extract_all(ticker, text.encode(), text, "u")
+
+    def test_expansion_extractors_on_real_wording(self):
+        cases = [
+            ("QCOM", "Revenues | $9,947 | | $10,365 | | (4%) Current Guidance Q4 FY26 Estimates 1 | | Revenues | | $9.7B - $10.5B | |", 9947.0, 10100.0),
+            ("KLAC", "For the quarter, total revenues were $3.66 billion, above the midpoint. Total revenues are expected to be in a range of $4.0 billion +/- $200 million", 3660.0, 4000.0),
+            ("TXN", "today reported second quarter revenue of $5.46 billion, net income. TI's third quarter outlook is for revenue in the range of $5.65 billion to $6.15 billion", 5460.0, 5900.0),
+            ("SMCI", "Net sales of $11.1 billion versus $10.2 billion. Business Outlook The Company expects net sales in the range of $14.5 billion and $15.5 billion", 11100.0, 15000.0),
+            ("CRM", "• Subscription and support revenue of $10.8 billion, up 12% Y/Y • Revenue of $11.3 billion, up 11% Y/Y • Initiates third quarter FY27 revenue guidance of $11.42 billion to $11.50 billion", 11300.0, 11460.0),
+            ("PANW", "Total revenue for the fiscal fourth quarter 2026 grew 34% year over year to $3.41 billion. • Total revenue in the range of $3.300 billion to $3.310 billion", 3410.0, 3305.0),
+            ("CRWD", "Total revenue was $1.47 billion, a 26% increase. Guidance | Total revenue | $1,523.2 - $1,529.2 million |", 1470.0, 1526.2),
+            ("MDB", "Total revenue was $771.8 million for the second quarter. Revenues are expected to be in the range of: | $756 million to $761 million |", 771.8, 758.5),
+        ]
+        for t, text, actual, guide in cases:
+            f = self._one(t, text)
+            self.assertAlmostEqual(f["revenue_actual"]["value"], actual, places=3, msg=t)
+            self.assertAlmostEqual(f["revenue_guidance_next"]["value"], guide, places=3, msg=t)
+            self.assertTrue(extract.verify_field(f["revenue_actual"], text, text.encode())[0], t)
+
+    def test_hpe_ignores_segment_lines(self):
+        text = "• Networking revenue was $2.7 billion, up 148% • Revenue : $10.7 billion, up 40% from the prior-year period"
+        self.assertEqual(self._one("HPE", text)["revenue_actual"]["value"], 10700.0)
+
     def test_number_does_not_swallow_period(self):
         t = "Diluted EPS was $1.20."
         self.assertEqual(extract.extract_all("AMD", t.encode(), t, "u")["eps_diluted"]["value"], 1.20)

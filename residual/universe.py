@@ -10,23 +10,28 @@ MARKET = "QQQUSDT"  # broad-market proxy; the only index perp listed across the 
 
 COMPANIES = {
     "NVDA": "semis", "AMD": "semis", "AVGO": "semis", "MU": "semis",
-    "INTC": "semis", "MRVL": "semis",
+    "INTC": "semis", "MRVL": "semis", "QCOM": "semis", "KLAC": "semis", "TXN": "semis",
     "META": "internet", "AMZN": "internet",
-    "PLTR": "software",
+    "PLTR": "software", "CRM": "software", "PANW": "software", "CRWD": "software", "MDB": "software",
+    "HPE": "hardware", "SMCI": "hardware",
 }
 
-# Equal-weight sector baskets (the company itself is always excluded).
+# Equal-weight sector baskets (the company itself is always excluded; peers without
+# enough Bitget history at an event are dropped automatically).
 PEERS = {
-    "semis": ["NVDA", "AMD", "AVGO", "MU", "INTC", "MRVL", "TSM", "ASML", "ARM", "QCOM", "AMAT"],
+    "semis": ["NVDA", "AMD", "AVGO", "MU", "INTC", "MRVL", "TSM", "ASML", "ARM", "QCOM", "AMAT",
+              "KLAC", "TXN", "LRCX", "ADI"],
     "internet": ["META", "AMZN", "GOOGL", "AAPL", "MSFT", "NFLX"],
-    "software": ["MSFT", "ORCL", "CRM", "NOW", "SNOW", "PANW", "CRWD"],
+    "software": ["MSFT", "ORCL", "CRM", "NOW", "SNOW", "PANW", "CRWD", "MDB", "ADBE", "PLTR"],
+    "hardware": ["HPE", "SMCI", "DELL", "WDC", "ANET", "CSCO"],
 }
 
 # Tradeable single-instrument hedge candidates; the best historical fit wins.
 HEDGES = {
     "semis": ["SMHUSDT", "QQQUSDT", "SPYUSDT"],
     "internet": ["QQQUSDT", "SPYUSDT"],
-    "software": ["QQQUSDT", "SPYUSDT"],
+    "software": ["QQQUSDT", "SPYUSDT", "XLKUSDT"],
+    "hardware": ["QQQUSDT", "SPYUSDT", "XLKUSDT"],
 }
 
 

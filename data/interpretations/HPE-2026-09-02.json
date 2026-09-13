@@ -1,0 +1,29 @@
+{
+ "event_id": "HPE-2026-09-02",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "7917ee5087b36bd5f745b33797243fe71b323212e1852df8cf67ded2e5cc384b",
+ "created_at": "2026-09-13T17:04:51Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue and EPS beat, Q4 and FY27 guidance raised across revenue, EPS, and FCF, yet residual stock reaction is sharply negative, conflicting with fundamentally strong guidance.\", \"evidence_quotes\": [\"Record results and demand drive higher outlook for fiscal 2026 and fiscal 2027\", \"HPE is raising its FY26 revenue growth outlook range to 34% to 37%.\", \"The company is raising its growth framework for FY27.\"]}",
+ "attempts": [
+  {
+   "detail": "quote not found verbatim in source: 'HPE is raising its growth framework for FY27.'",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Fundamentals beat and forward guidance were raised across Q4, FY26, and FY27, with record margins and backlog, directly conflicting with the negative -3.62% company-specific residual, suggesting a mispriced or sentiment-driven drop rather than fundamentals-justified decline.\", \"evidence_quotes\": [\"Record results and demand drive higher outlook for fiscal 2026 and fiscal 2027\", \"HPE is raising its FY26 revenue growth outlook range to 34% to 37%.\", \"HPE is raising its growth framework for FY27.\"]}"
+  },
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue and EPS beat, Q4 and FY27 guidance raised across revenue, EPS, and FCF, yet residual stock reaction is sharply negative, conflicting with fundamentally strong guidance.\", \"evidence_quotes\": [\"Record results and demand drive higher outlook for fiscal 2026 and fiscal 2027\", \"HPE is raising its FY26 revenue growth outlook range to 34% to 37%.\", \"The company is raising its growth framework for FY27.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.78,
+ "rationale": "Revenue and EPS beat, Q4 and FY27 guidance raised across revenue, EPS, and FCF, yet residual stock reaction is sharply negative, conflicting with fundamentally strong guidance.",
+ "evidence_quotes": [
+  "Record results and demand drive higher outlook for fiscal 2026 and fiscal 2027",
+  "HPE is raising its FY26 revenue growth outlook range to 34% to 37%.",
+  "The company is raising its growth framework for FY27."
+ ]
+}

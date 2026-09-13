@@ -1,0 +1,25 @@
+{
+ "event_id": "QCOM-2026-07-29",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "ee91a8fc69cf961615fbb96631f8cf3c1c1ef9a6695d62edeb3dbfe14a96c197",
+ "created_at": "2026-09-13T17:03:35Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite revenue topping guidance, EPS/EBT fell 20-25% YoY, handsets down 20%, and company flags broad-based rising input costs pressuring margins going forward, justifying a lasting negative reaction beyond the top-line beat.\", \"evidence_quotes\": [\"The semiconductor industry is experiencing a broad-based increase in input costs, across wafer fabrication, assembly, test, advanced packaging, memory and other materials.\", \"Handsets | $5,086 | | $6,328 | | (20%)\", \"Diluted earnings per share (EPS) | $1.87 | | $2.43 | | (23%)\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite revenue topping guidance, EPS/EBT fell 20-25% YoY, handsets down 20%, and company flags broad-based rising input costs pressuring margins going forward, justifying a lasting negative reaction beyond the top-line beat.\", \"evidence_quotes\": [\"The semiconductor industry is experiencing a broad-based increase in input costs, across wafer fabrication, assembly, test, advanced packaging, memory and other materials.\", \"Handsets | $5,086 | | $6,328 | | (20%)\", \"Diluted earnings per share (EPS) | $1.87 | | $2.43 | | (23%)\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Despite revenue topping guidance, EPS/EBT fell 20-25% YoY, handsets down 20%, and company flags broad-based rising input costs pressuring margins going forward, justifying a lasting negative reaction beyond the top-line beat.",
+ "evidence_quotes": [
+  "The semiconductor industry is experiencing a broad-based increase in input costs, across wafer fabrication, assembly, test, advanced packaging, memory and other materials.",
+  "Handsets | $5,086 | | $6,328 | | (20%)",
+  "Diluted earnings per share (EPS) | $1.87 | | $2.43 | | (23%)"
+ ]
+}
