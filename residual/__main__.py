@@ -47,7 +47,12 @@ def cmd_replay(args):
         core = replay(use_ai=False, verbose=False)
         res["ablation_no_ai"] = {"summary": core["summary"],
                                  "decisions": {r["event_id"]: r["decision"]["decision"] for r in core["rows"]}}
-    write_outputs(res, {"live_log": load_live_log()})
+    from . import demo, net
+    operator = {"execution_adapter": "bitget_demo" if demo.configured() else "local_paper",
+                "demo_credentials_configured": demo.configured(), "demo_product_type": demo.PRODUCT_TYPE,
+                "doh_fallback_enabled": net.DOH_FALLBACK, "replay_mode": "offline" if args.offline else "online",
+                "ai_gate": not args.no_ai}
+    write_outputs(res, {"live_log": load_live_log(), "operator": operator})
     s = res["summary"]
     for k in ("residual", "unhedged", "naive", "no_trade"):
         m = s[k]

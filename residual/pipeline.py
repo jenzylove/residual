@@ -28,7 +28,8 @@ def iso(ms):
 
 def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
     """primary: only trades with complete Bitget funding data count (others are excluded, P&L 0).
-    conservative: every trade counts, unavailable funding charged at the worst observed rate."""
+    conservative: every trade counts, unavailable funding charged at the worst observed rate.
+    observed_zero: every trade counts, unavailable funding taken as zero (comparison only)."""
     pnl, traded, excluded = [], [], 0
     for r in rows:
         t = r.get(key)
@@ -38,7 +39,7 @@ def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
             excluded += 1
             pnl.append(0.0)
         else:
-            v = t["net"] if basis == "primary" else t["net_conservative"]
+            v = t["net_conservative"] if basis == "conservative" else t["net"]
             pnl.append(v)
             traded.append({**t, "net": v})
     eq, peak, mdd = 0.0, 0.0, 0.0
@@ -146,6 +147,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
     summary["no_trade"] = metrics(rows, "__none__")
     summary_conservative = {k: metrics(rows, k, "conservative") for k in keys}
     summary_conservative["no_trade"] = metrics(rows, "__none__", "conservative")
+    summary_observed_zero = {k: metrics(rows, k, "observed_zero") for k in keys}
     warm = [r for r in rows if r["params"]["source"] == "walk-forward"]
     summary_post_warmup = {k: metrics(warm, k) for k in ("residual", "naive", "unhedged")}
     return {
@@ -158,15 +160,29 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                       "whose exit precedes that event's release; no event is scored with parameters "
                       "trained on itself",
         "summary": summary, "summary_conservative_funding": summary_conservative,
+        "summary_observed_zero_funding": summary_observed_zero,
         "funding_caps": caps, "summary_post_warmup": summary_post_warmup,
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }
 
 
+def _finite(o):
+    """Replace NaN/Infinity with None: browsers reject them in JSON (Python's json accepts them)."""
+    if isinstance(o, float):
+        return o if math.isfinite(o) else None
+    if isinstance(o, dict):
+        return {k: _finite(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_finite(v) for v in o]
+    return o
+
+
 def write_outputs(result: dict, web_extra: dict | None = None):
+    result = _finite(result)
+    web_extra = _finite(web_extra or {})
     RESULTS.parent.mkdir(parents=True, exist_ok=True)
-    RESULTS.write_text(json.dumps(result, indent=1, default=_json_default), encoding="utf-8")
+    RESULTS.write_text(json.dumps(result, indent=1, allow_nan=False, default=_json_default), encoding="utf-8")
     with LEDGER.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["time_utc", "tag", "leg", "symbol", "type", "side", "qty", "price", "notional", "fee"])
@@ -174,7 +190,11 @@ def write_outputs(result: dict, web_extra: dict | None = None):
             w.writerow([o["time_utc"], o["tag"], o["leg"], o["symbol"], o["type"], o["side"],
                         f"{o['qty']:.6f}", f"{o['price']:.4f}", f"{o['notional']:.2f}", f"{o['fee']:.4f}"])
     WEB_DATA.parent.mkdir(parents=True, exist_ok=True)
-    WEB_DATA.write_text(json.dumps({**result, **(web_extra or {})}, default=_json_default), encoding="utf-8")
+    WEB_DATA.write_text(json.dumps({**result, **web_extra}, allow_nan=False, default=_json_default), encoding="utf-8")
+    # downloadable copies for the site
+    import shutil
+    shutil.copyfile(LEDGER, WEB_DATA.parent / "ledger.csv")
+    shutil.copyfile(ROOT / "data" / "events.json", WEB_DATA.parent / "events.json")
 
 
 def _json_default(o):

@@ -136,6 +136,16 @@ class WalkForwardTests(unittest.TestCase):
         self.assertEqual(dec["direction"], -1)
 
 
+class OutputJsonTests(unittest.TestCase):
+    def test_non_finite_numbers_become_null(self):
+        import json
+        from residual.pipeline import _finite
+        obj = {"participation": math.inf, "x": [1.0, math.nan, {"y": -math.inf}], "ok": 2.5}
+        clean = _finite(obj)
+        s = json.dumps(clean, allow_nan=False)  # raises if anything non-finite survived
+        self.assertEqual(json.loads(s), {"participation": None, "x": [1.0, None, {"y": None}], "ok": 2.5})
+
+
 class InterpretValidationTests(unittest.TestCase):
     SRC = "Revenue grew strongly. We expect demand to remain robust through next year."
 

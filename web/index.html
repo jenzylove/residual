@@ -9,13 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="body.css">
 </head>
 <body>
 <header class="nav reveal" style="--d:0">
   <a class="logo" href="/">RESIDUAL<sup>®</sup></a>
   <nav class="links">
-    <a href="#method">Method</a>
-    <a href="#evidence">Evidence</a>
+    <a href="#overview">Overview</a>
+    <a href="#timeline">Events</a>
+    <a href="#signal">Signal room</a>
     <a href="#results">Results</a>
     <a href="/dashboard">Dashboard</a>
   </nav>
@@ -54,18 +56,70 @@
     <div class="orb-fallback"></div>
   </div>
 
-  <a class="scroll-btn reveal" style="--d:7" href="#method" aria-label="Scroll to explore">
+  <a class="scroll-btn reveal" style="--d:7" href="#overview" aria-label="Scroll to explore">
     <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
   <p class="scroll-label reveal" style="--d:7">Scroll to explore</p>
 </main>
 
-<section id="method" class="placeholder"><p>Body sections come next.</p></section>
+<div id="body">
+  <section id="overview" class="sec">
+    <div class="center-head">
+      <p class="kicker rv">01 · Overview</p>
+      <h2 class="duo rv">The market moved.<br><span class="tw" data-text="Which part was the company?"></span></h2>
+      <p class="thesis-sm rv">Residual isolates the part of an earnings reaction that belongs to the company, then paper trades it as a hedged pair.</p>
+    </div>
+    <div id="ov-grid" class="ov-grid bento"></div>
+  </section>
+
+  <section id="timeline" class="sec">
+    <div class="sec-head">
+      <div><p class="kicker rv">02 · Event timeline</p><h3 class="duo left rv">Every real release<br><span class="tw" data-text="decided in order."></span></h3></div>
+      <div id="tl-filter" class="chips rv"></div>
+    </div>
+    <div id="tl-track" class="tl-track"></div>
+  </section>
+
+  <section id="signal" class="sec">
+    <div class="center-head">
+      <p class="kicker rv">03 · Signal room</p>
+      <h3 class="duo rv">Take the move apart<br><span class="tw" data-text="piece by piece."></span></h3>
+    </div>
+    <div id="sig" class="sig"></div>
+  </section>
+
+  <section id="execution" class="sec">
+    <p class="kicker rv">04 · Paper execution</p>
+    <h3 class="duo left rv">What happened<br><span class="tw" data-text="when it traded, or why not."></span></h3>
+    <div id="exec"></div>
+  </section>
+
+  <section id="results" class="sec">
+    <div class="sec-head">
+      <div><p class="kicker rv">05 · Results and proof</p><h3 class="duo left rv">Walk forward, like for like<br><span class="tw" data-text="nothing hidden."></span></h3></div>
+      <div id="res-basis" class="chips rv"></div>
+    </div>
+    <div id="res"></div>
+  </section>
+
+  <section id="operator" class="sec">
+    <details id="op" class="op rv">
+      <summary><span class="kicker">06 · Operator mode</span><span class="op-hint">CLI, dataset, schema, replay, watcher, execution adapter</span></summary>
+      <div id="op-body"></div>
+    </details>
+  </section>
+
+  <footer class="foot2">
+    <span>RESIDUAL · paper trading research · not investment advice</span>
+    <a href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">Source on GitHub</a>
+  </footer>
+</div>
 
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
 </script>
 <script type="module" src="orb.js"></script>
+<script src="landing.js"></script>
 </body>
 </html>
