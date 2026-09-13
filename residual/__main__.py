@@ -124,17 +124,37 @@ def cmd_keyrun(args):
         "set BITGET_DEMO_API_KEY / SECRET / PASSPHRASE in .env.local")))
     if not report["steps"][-1]["ok"]:
         return finish()
-    step("public Bitget API reachable", lambda: {"doh_fallback": net.DOH_FALLBACK,
-                                                  "ticker": live.probe(universe.MARKET)})
+    def reachable():
+        q = live.probe(universe.MARKET)
+        if "error" in q:
+            raise RuntimeError(f"public ticker failed: {q['error']}")
+        return {"doh_fallback": net.DOH_FALLBACK, "ticker": q}
+    step("public Bitget API reachable", reachable)
     client = step("authenticate", lambda: demo.BitgetDemo())
     if client is None:
         return finish()
-    step("demo account", lambda: [(a.get("marginCoin"), a.get("available")) for a in client.accounts()])
+    def account():
+        accts = client.accounts()
+        if not accts:
+            raise demo.DemoError(f"no demo futures account for product type {demo.PRODUCT_TYPE}; activate or fund "
+                                 "Demo Trading futures, or set BITGET_DEMO_PRODUCT_TYPE")
+        return [(a.get("marginCoin"), a.get("available")) for a in accts]
+    step("demo account", account)
+    strategy_hedges = ["QQQUSDT", "SPYUSDT", "SMHUSDT"]
     coverage = step("demo symbol coverage", lambda: {s: client.demo_symbol(s) for s in
-                    [universe.sym(t) for t in universe.COMPANIES] + ["QQQUSDT", "SPYUSDT", "SMHUSDT"]})
+                    [universe.sym(t) for t in universe.COMPANIES] + strategy_hedges + ["AAPLUSDT", "TSLAUSDT"]})
+    if coverage is not None:
+        report["strategy_tradeable_on_demo"] = {
+            "companies": [s for s in (universe.sym(t) for t in universe.COMPANIES) if coverage.get(s)],
+            "hedges": [s for s in strategy_hedges if coverage.get(s)],
+        }
+        if not report["strategy_tradeable_on_demo"]["hedges"]:
+            report["note"] = ("None of the strategy's hedge instruments (QQQ, SPY, SMH) are listed on Bitget Demo, "
+                              "so live strategy pairs will be NO_TRADE on Demo. The roundtrip below uses a Demo "
+                              "listed stock as the second leg purely to test execution.")
     if coverage and not args.skip_roundtrip:
         company = next((s for s in ("NVDAUSDT", "AMDUSDT", "METAUSDT") if coverage.get(s)), None)
-        hedge = next((s for s in ("QQQUSDT", "SPYUSDT", "SMHUSDT") if coverage.get(s)), None)
+        hedge = next((s for s in strategy_hedges + ["AAPLUSDT", "TSLAUSDT"] if coverage.get(s) and s != company), None)
         if company and hedge:
             def rt():
                 legs = client.open_pair([{"live_symbol": company, "side": 1, "notional": args.notional},

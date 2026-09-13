@@ -23,8 +23,11 @@ import urllib.request
 from . import net  # noqa: F401  (installs the resolver policy)
 
 BASE = "https://api.bitget.com"
-PRODUCT_TYPE = os.environ.get("BITGET_DEMO_PRODUCT_TYPE", "SUSDT-FUTURES")
-MARGIN_COIN = os.environ.get("BITGET_DEMO_MARGIN_COIN", "SUSDT")
+# Verified against real Bitget Demo on 2026-09-13: with the `paptrading: 1` header, Demo accepts
+# productType USDT-FUTURES (margin coin USDT) and lists 44 contracts. SUSDT-FUTURES returns an empty
+# account list and an empty contracts body.
+PRODUCT_TYPE = os.environ.get("BITGET_DEMO_PRODUCT_TYPE", "USDT-FUTURES")
+MARGIN_COIN = os.environ.get("BITGET_DEMO_MARGIN_COIN", "USDT")
 
 
 class DemoError(RuntimeError):
@@ -56,12 +59,14 @@ class BitgetDemo:
         req = urllib.request.Request(url, data=body.encode() if body else None, headers=headers, method=method)
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
-                return json.loads(r.read())
+                status, raw = r.status, r.read()
         except urllib.error.HTTPError as e:
-            try:
-                return json.loads(e.read())
-            except Exception:
-                return {"code": str(e.code), "msg": str(e)}
+            status, raw = e.code, e.read()
+        try:
+            return json.loads(raw)
+        except ValueError:  # empty or HTML body: surface it instead of a bare JSON error
+            snippet = raw[:200].decode("utf-8", errors="replace").strip() or "<empty body>"
+            return {"code": f"HTTP{status}", "msg": f"non-JSON response: {snippet}"}
 
     def request(self, method: str, path: str, params: dict | None = None, body: dict | None = None):
         query = urllib.parse.urlencode(params or {})
