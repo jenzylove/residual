@@ -88,6 +88,12 @@ python -m residual replay             # re-run, calling the LLM for any uncached
 python -m residual live               # watch EDGAR for the next eligible event (add --loop 600)
 ```
 
+CI (`.github/workflows/ci.yml`) runs on every push:
+- the tests;
+- `verify --offline`;
+- an offline replay that must reproduce the committed decisions and summaries exactly;
+- a strict JSON check on the site data.
+
 `replay` writes `data/results.json`, the paper ledger `data/ledger.csv` (every order of both legs for executed trades), and `web/data.json` for the dashboard.
 
 Network notes:
@@ -116,6 +122,14 @@ When `BITGET_DEMO_API_KEY`, `BITGET_DEMO_API_SECRET` and `BITGET_DEMO_API_PASSPH
 - Exchange order IDs, fill prices, fees and every request/response are stored with the position.
 
 Demo contracts are discovered at runtime (`demo-check`). A universe symbol that Bitget Demo does not list is rejected before any order is sent.
+
+The whole Demo test run is one command. It stops at the first failure and writes every step, plus the exchange request log, to `data/keyrun_report.json`:
+
+```bash
+python -m residual keyrun                             # credentials, public API, auth, account, symbol coverage, $50 roundtrip, live watcher pass
+```
+
+Individual steps:
 
 ```bash
 python -m residual demo-check                         # auth, balance, which universe symbols exist on demo

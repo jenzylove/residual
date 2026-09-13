@@ -75,13 +75,82 @@ def cmd_verify(args):
 
 
 def cmd_live(args):
-    from .live import watch
+    from .live import LIVE_LOG, watch
     while True:
-        rec = watch()
-        print(json.dumps({k: rec[k] for k in ("checked_at", "decision", "reason")}, indent=1))
+        try:
+            rec = watch()
+            print(json.dumps({k: rec[k] for k in ("checked_at", "decision", "reason")}, indent=1))
+        except Exception as e:  # one failed poll (network, SEC, Bitget) must not end the watcher
+            err = {"checked_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "decision": "ERROR",
+                   "reason": f"{type(e).__name__}: {e}"}
+            LIVE_LOG.parent.mkdir(parents=True, exist_ok=True)
+            with LIVE_LOG.open("a", encoding="utf-8") as f:
+                f.write(json.dumps(err) + "\n")
+            print(json.dumps(err, indent=1))
+            if not args.loop:
+                sys.exit(1)
         if not args.loop:
             break
         time.sleep(args.loop)
+
+
+def cmd_keyrun(args):
+    """The whole Bitget Demo test run in one command; writes data/keyrun_report.json."""
+    from pathlib import Path
+    from . import demo, live, net, universe
+    report = {"started_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "steps": []}
+    out = Path(__file__).resolve().parent.parent / "data" / "keyrun_report.json"
+
+    def step(name, fn):
+        t = time.time()
+        try:
+            res = fn()
+            report["steps"].append({"step": name, "ok": True, "seconds": round(time.time() - t, 1), "result": res})
+            print(f"[ok]   {name}")
+            return res
+        except Exception as e:
+            report["steps"].append({"step": name, "ok": False, "error": f"{type(e).__name__}: {e}"})
+            print(f"[FAIL] {name}: {e}")
+            return None
+
+    def finish():
+        report["finished_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        report["all_ok"] = all(s["ok"] for s in report["steps"])
+        out.write_text(json.dumps(report, indent=1, default=str), encoding="utf-8")
+        print(("ALL STEPS PASSED" if report["all_ok"] else "SOME STEPS FAILED") + f" -> {out}")
+        sys.exit(0 if report["all_ok"] else 1)
+
+    step("credentials present", lambda: demo.configured() or (_ for _ in ()).throw(demo.DemoError(
+        "set BITGET_DEMO_API_KEY / SECRET / PASSPHRASE in .env.local")))
+    if not report["steps"][-1]["ok"]:
+        return finish()
+    step("public Bitget API reachable", lambda: {"doh_fallback": net.DOH_FALLBACK,
+                                                  "ticker": live.probe(universe.MARKET)})
+    client = step("authenticate", lambda: demo.BitgetDemo())
+    if client is None:
+        return finish()
+    step("demo account", lambda: [(a.get("marginCoin"), a.get("available")) for a in client.accounts()])
+    coverage = step("demo symbol coverage", lambda: {s: client.demo_symbol(s) for s in
+                    [universe.sym(t) for t in universe.COMPANIES] + ["QQQUSDT", "SPYUSDT", "SMHUSDT"]})
+    if coverage and not args.skip_roundtrip:
+        company = next((s for s in ("NVDAUSDT", "AMDUSDT", "METAUSDT") if coverage.get(s)), None)
+        hedge = next((s for s in ("QQQUSDT", "SPYUSDT", "SMHUSDT") if coverage.get(s)), None)
+        if company and hedge:
+            def rt():
+                legs = client.open_pair([{"live_symbol": company, "side": 1, "notional": args.notional},
+                                         {"live_symbol": hedge, "side": -1, "notional": args.notional}], "keyrun")
+                closed = client.close_pair(legs, "keyrun")
+                return {"orders": [{"symbol": l["demo_symbol"], "open": l["open_order"]["orderId"],
+                                    "close": l["close_order"]["orderId"], "open_px": l["open_order"]["priceAvg"],
+                                    "close_px": l["close_order"]["priceAvg"]} for l in closed],
+                        "realized": demo.realized(closed)}
+            step(f"roundtrip {company}/{hedge} ${args.notional}", rt)
+        else:
+            step("roundtrip", lambda: (_ for _ in ()).throw(demo.DemoError(
+                "no universe company and hedge are both listed on Bitget Demo")))
+    step("live watcher pass", lambda: {k: v for k, v in live.watch().items() if k in ("decision", "reason")})
+    report["exchange_log"] = client.log
+    finish()
 
 
 def cmd_demo_check(args):
@@ -143,11 +212,16 @@ def main():
     rt = sub.add_parser("demo-roundtrip", help="open+close one small hedged pair on Bitget Demo")
     rt.add_argument("--company", default="NVDAUSDT"); rt.add_argument("--hedge", default="QQQUSDT")
     rt.add_argument("--notional", type=float, default=50.0)
+    kr = sub.add_parser("keyrun", help="full Bitget Demo test run -> data/keyrun_report.json")
+    kr.add_argument("--notional", type=float, default=50.0)
+    kr.add_argument("--skip-roundtrip", action="store_true")
     a = sub.add_parser("all"); a.add_argument("--no-ai", action="store_true"); a.add_argument("--offline", action="store_true")
     args = p.parse_args()
     if args.cmd == "all":
         args.since, args.until, args.refresh = "2025-10-15", None, False
         cmd_build(args); cmd_snapshot(args); cmd_replay(args)
+    elif args.cmd == "keyrun":
+        cmd_keyrun(args)
     elif args.cmd.startswith("demo-"):
         from .demo import DemoError
         try:

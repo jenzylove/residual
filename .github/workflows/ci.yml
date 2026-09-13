@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Provenance, offline (every number re-derived from archived SEC sources)
+        run: python -m residual verify --offline
+      - name: Replay, offline, and check it reproduces the committed results
+        run: |
+          cp data/results.json /tmp/committed.json
+          python -m residual replay --offline
+          python - <<'EOF'
+          import json
+          a = json.load(open("/tmp/committed.json"))
+          b = json.load(open("data/results.json"))
+          for k in ("summary", "summary_conservative_funding", "summary_observed_zero_funding"):
+              assert a[k] == b[k], f"{k} changed on replay"
+          da = {r["event_id"]: r["decision"]["decision"] for r in a["rows"]}
+          db = {r["event_id"]: r["decision"]["decision"] for r in b["rows"]}
+          assert da == db, "decisions changed on replay"
+          print("replay reproduces committed results:", len(db), "events")
+          EOF
+      - name: Site data is strict JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('web/data.json','utf8')); console.log('web/data.json ok')"

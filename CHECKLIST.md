@@ -49,6 +49,17 @@ Numbers refer to the committed `data/results.json`.
 - Conservative funding, all 9 trades: residual −$77.73 vs naive on the same events +$401.51
 - The sample is too small to support any claim of alpha; like-for-like, the residual signal did not beat the headline direction
 
+## Hardening done without keys
+- [x] `python -m residual keyrun`: one-command Demo test run.
+  - Steps: credentials, public API, auth, account, symbol coverage, $50 roundtrip, live watcher pass.
+  - Report goes to `data/keyrun_report.json`; exits non-zero on the first failure.
+- [x] `live --loop` survives a failed poll: the error is logged to `data/live_log.jsonl` and polling continues.
+- [x] CI on every push: tests, offline provenance, offline replay must reproduce the committed results, strict JSON for the site.
+- [x] Site data written as strict JSON (no NaN/Infinity), with a test.
+- [ ] Pending keys: `keyrun` against real Bitget Demo. Unconfirmed until then:
+  - the demo product type (`SUSDT-FUTURES`) and margin coin (`SUSDT`); both can be overridden in `.env.local`;
+  - whether demo lists stock perpetuals.
+
 ## Infrastructure
 - [x] DNS-over-HTTPS fallback is opt-in (`RESIDUAL_DOH_FALLBACK=1`), off by default, documented as not for bypassing regional restrictions
 - [x] Env file is `.env.local` (git-ignored); `.env.example` committed
