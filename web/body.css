@@ -125,6 +125,11 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .track .zero{position:absolute;top:-4px;bottom:-4px;width:1px;background:rgba(20,20,24,.3);left:50%}
 .track i{position:absolute;top:0;bottom:0;border-radius:99px;transition:all 1s cubic-bezier(.2,.7,.2,1)}
 .barrow .val{text-align:right;font-variant-numeric:tabular-nums}
+.ratios{margin-top:26px}
+.ratios table{border-collapse:collapse;width:100%}
+.ratios th,.ratios td{padding:8px 6px;border-bottom:1px solid rgba(20,20,24,.07);font-size:13px;text-align:left;white-space:nowrap}
+.ratios th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.ratios .num{text-align:right;font-variant-numeric:tabular-nums}
 .res-note{margin:26px 0 0;font-size:14px;line-height:1.65;color:#55555f}
 .chart{width:100%;height:auto;display:block}
 .chart text{fill:var(--muted);font-size:11px}

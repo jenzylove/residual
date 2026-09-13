@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-13T17:08:33+00:00",
+ "generated_at": "2026-09-13T17:34:46+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -23,6 +23,11 @@
  "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events whose exit precedes that event's release; no event is scored with parameters trained on itself",
  "summary": {
   "residual": {
+   "sharpe_per_trade": -0.003,
+   "sortino_per_trade": -0.006,
+   "sharpe_daily_ann": 0.095,
+   "sortino_daily_ann": 0.186,
+   "days": 323,
    "basis": "primary",
    "total_net_pnl": 115.93,
    "trades": 5,
@@ -113,6 +118,11 @@
    ]
   },
   "unhedged": {
+   "sharpe_per_trade": 0.005,
+   "sortino_per_trade": 0.011,
+   "sharpe_daily_ann": 0.26,
+   "sortino_daily_ann": 0.718,
+   "days": 323,
    "basis": "primary",
    "total_net_pnl": 361.25,
    "trades": 5,
@@ -203,6 +213,11 @@
    ]
   },
   "naive_same_events": {
+   "sharpe_per_trade": 0.322,
+   "sortino_per_trade": 1.039,
+   "sharpe_daily_ann": 0.917,
+   "sortino_daily_ann": 3.735,
+   "days": 323,
    "basis": "primary",
    "total_net_pnl": 1254.55,
    "trades": 5,
@@ -293,6 +308,11 @@
    ]
   },
   "naive": {
+   "sharpe_per_trade": -0.003,
+   "sortino_per_trade": -0.005,
+   "sharpe_daily_ann": -0.013,
+   "sortino_daily_ann": -0.021,
+   "days": 324,
    "basis": "primary",
    "total_net_pnl": -26.49,
    "trades": 18,
@@ -383,6 +403,11 @@
    ]
   },
   "no_trade": {
+   "sharpe_per_trade": null,
+   "sortino_per_trade": null,
+   "sharpe_daily_ann": null,
+   "sortino_daily_ann": null,
+   "days": 0,
    "basis": "primary",
    "total_net_pnl": 0.0,
    "trades": 0,
@@ -475,6 +500,11 @@
  },
  "summary_conservative_funding": {
   "residual": {
+   "sharpe_per_trade": -0.009,
+   "sortino_per_trade": -0.018,
+   "sharpe_daily_ann": -0.059,
+   "sortino_daily_ann": -0.107,
+   "days": 323,
    "basis": "conservative",
    "total_net_pnl": -78.01,
    "trades": 9,
@@ -565,6 +595,11 @@
    ]
   },
   "unhedged": {
+   "sharpe_per_trade": -0.053,
+   "sortino_per_trade": -0.109,
+   "sharpe_daily_ann": -0.028,
+   "sortino_daily_ann": -0.061,
+   "days": 323,
    "basis": "conservative",
    "total_net_pnl": -42.62,
    "trades": 9,
@@ -655,6 +690,11 @@
    ]
   },
   "naive_same_events": {
+   "sharpe_per_trade": -0.015,
+   "sortino_per_trade": -0.03,
+   "sharpe_daily_ann": 0.274,
+   "sortino_daily_ann": 0.642,
+   "days": 323,
    "basis": "conservative",
    "total_net_pnl": 401.51,
    "trades": 9,
@@ -745,6 +785,11 @@
    ]
   },
   "naive": {
+   "sharpe_per_trade": -0.182,
+   "sortino_per_trade": -0.263,
+   "sharpe_daily_ann": -1.16,
+   "sortino_daily_ann": -1.625,
+   "days": 324,
    "basis": "conservative",
    "total_net_pnl": -2864.53,
    "trades": 36,
@@ -835,6 +880,11 @@
    ]
   },
   "no_trade": {
+   "sharpe_per_trade": null,
+   "sortino_per_trade": null,
+   "sharpe_daily_ann": null,
+   "sortino_daily_ann": null,
+   "days": 0,
    "basis": "conservative",
    "total_net_pnl": 0.0,
    "trades": 0,
@@ -927,6 +977,11 @@
  },
  "summary_observed_zero_funding": {
   "residual": {
+   "sharpe_per_trade": 0.013,
+   "sortino_per_trade": 0.025,
+   "sharpe_daily_ann": -0.008,
+   "sortino_daily_ann": -0.015,
+   "days": 323,
    "basis": "observed_zero",
    "total_net_pnl": -10.79,
    "trades": 9,
@@ -1017,6 +1072,11 @@
    ]
   },
   "unhedged": {
+   "sharpe_per_trade": -0.046,
+   "sortino_per_trade": -0.095,
+   "sharpe_daily_ann": -0.014,
+   "sortino_daily_ann": -0.03,
+   "days": 323,
    "basis": "observed_zero",
    "total_net_pnl": -20.73,
    "trades": 9,
@@ -1107,6 +1167,11 @@
    ]
   },
   "naive_same_events": {
+   "sharpe_per_trade": -0.007,
+   "sortino_per_trade": -0.015,
+   "sharpe_daily_ann": 0.289,
+   "sortino_daily_ann": 0.683,
+   "days": 323,
    "basis": "observed_zero",
    "total_net_pnl": 423.49,
    "trades": 9,
@@ -1197,6 +1262,11 @@
    ]
   },
   "naive": {
+   "sharpe_per_trade": -0.172,
+   "sortino_per_trade": -0.25,
+   "sharpe_daily_ann": -1.097,
+   "sortino_daily_ann": -1.547,
+   "days": 324,
    "basis": "observed_zero",
    "total_net_pnl": -2701.3,
    "trades": 36,
@@ -1287,6 +1357,169 @@
    ]
   }
  },
+ "summary_last_90d": {
+  "residual": {
+   "sharpe_per_trade": -0.003,
+   "sortino_per_trade": -0.006,
+   "sharpe_daily_ann": 0.202,
+   "sortino_daily_ann": 0.396,
+   "days": 71,
+   "basis": "primary",
+   "total_net_pnl": 115.93,
+   "trades": 5,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 14,
+   "hit_rate": 0.4,
+   "avg_pnl_per_trade": 23.19,
+   "pnl_std_per_trade": 645.05,
+   "max_drawdown": -550.69,
+   "avg_holding_hours": 18.6,
+   "return_on_start_balance_pct": 0.116,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    -550.69,
+    -550.69,
+    -550.69,
+    -550.69,
+    -550.69,
+    554.89,
+    359.11,
+    359.11,
+    359.11,
+    359.11,
+    45.73,
+    115.93,
+    115.93,
+    115.93,
+    115.93,
+    115.93
+   ]
+  },
+  "unhedged": {
+   "sharpe_per_trade": 0.005,
+   "sortino_per_trade": 0.011,
+   "sharpe_daily_ann": 0.552,
+   "sortino_daily_ann": 1.532,
+   "days": 71,
+   "basis": "primary",
+   "total_net_pnl": 361.25,
+   "trades": 5,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 14,
+   "hit_rate": 0.2,
+   "avg_pnl_per_trade": 72.25,
+   "pnl_std_per_trade": 732.81,
+   "max_drawdown": -711.78,
+   "avg_holding_hours": 15.2,
+   "return_on_start_balance_pct": 0.361,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    -301.11,
+    -301.11,
+    -301.11,
+    -301.11,
+    -301.11,
+    1073.03,
+    921.05,
+    921.05,
+    921.05,
+    921.05,
+    553.24,
+    361.25,
+    361.25,
+    361.25,
+    361.25,
+    361.25
+   ]
+  },
+  "naive_same_events": {
+   "sharpe_per_trade": 0.322,
+   "sortino_per_trade": 1.039,
+   "sharpe_daily_ann": 1.954,
+   "sortino_daily_ann": 7.965,
+   "days": 71,
+   "basis": "primary",
+   "total_net_pnl": 1254.55,
+   "trades": 5,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 14,
+   "hit_rate": 0.6,
+   "avg_pnl_per_trade": 250.91,
+   "pnl_std_per_trade": 670.37,
+   "max_drawdown": -301.11,
+   "avg_holding_hours": 21.0,
+   "return_on_start_balance_pct": 1.255,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    -301.11,
+    -301.11,
+    -301.11,
+    -301.11,
+    -301.11,
+    1073.03,
+    1143.9,
+    1143.9,
+    1143.9,
+    1143.9,
+    1446.55,
+    1254.55,
+    1254.55,
+    1254.55,
+    1254.55,
+    1254.55
+   ]
+  },
+  "naive": {
+   "sharpe_per_trade": -0.003,
+   "sortino_per_trade": -0.005,
+   "sharpe_daily_ann": -0.027,
+   "sortino_daily_ann": -0.045,
+   "days": 72,
+   "basis": "primary",
+   "total_net_pnl": -26.49,
+   "trades": 18,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 1,
+   "hit_rate": 0.389,
+   "avg_pnl_per_trade": -1.47,
+   "pnl_std_per_trade": 541.34,
+   "max_drawdown": -1820.86,
+   "avg_holding_hours": 18.8,
+   "return_on_start_balance_pct": -0.026,
+   "equity_curve": [
+    -480.09,
+    -480.09,
+    -488.86,
+    -789.97,
+    -1089.54,
+    -604.68,
+    -372.41,
+    115.86,
+    1489.99,
+    1631.73,
+    1227.32,
+    675.94,
+    1491.72,
+    1794.37,
+    1410.38,
+    1356.36,
+    609.41,
+    285.18,
+    -26.49
+   ]
+  }
+ },
+ "summary_last_90d_window": {
+  "from_ms": 1782331321000,
+  "to_ms": 1788380764000,
+  "events": 19
+ },
  "funding_caps": {
   "MUUSDT": 0.000507,
   "SMHUSDT": 0.000334,
@@ -1313,6 +1546,11 @@
  },
  "summary_post_warmup": {
   "residual": {
+   "sharpe_per_trade": -0.27,
+   "sortino_per_trade": -0.39,
+   "sharpe_daily_ann": -2.988,
+   "sortino_daily_ann": -3.091,
+   "days": 23,
    "basis": "primary",
    "total_net_pnl": -243.19,
    "trades": 2,
@@ -1337,6 +1575,11 @@
    ]
   },
   "naive": {
+   "sharpe_per_trade": -0.385,
+   "sortino_per_trade": -0.471,
+   "sharpe_daily_ann": -5.062,
+   "sortino_daily_ann": -5.551,
+   "days": 24,
    "basis": "primary",
    "total_net_pnl": -1658.22,
    "trades": 9,
@@ -1361,6 +1604,11 @@
    ]
   },
   "unhedged": {
+   "sharpe_per_trade": -32.856,
+   "sortino_per_trade": -1.0,
+   "sharpe_daily_ann": -5.478,
+   "sortino_daily_ann": -5.375,
+   "days": 23,
    "basis": "primary",
    "total_net_pnl": -559.8,
    "trades": 2,
@@ -1787,7 +2035,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 38.2,
+     "unit": "percent",
+     "snippet": "GAAP gross margin percentage | | 38.2 | %",
+     "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+     "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+     "extractor": "regex-v1:INTC:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Our Q3 results reflect improved execution and steady progress against our strategic priorities,",
@@ -1837,8 +2095,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -1851,7 +2109,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -2705,7 +2963,17 @@
      "extractor": "regex-v1:AMD:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 52.0,
+     "unit": "percent",
+     "snippet": "gross margin was 52%",
+     "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+     "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+     "extractor": "regex-v1:AMD:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "We delivered record quarterly revenue of $9.2 billion, up 36% year-over-year, and generated record free cash flow, reflecting the strength of our leadership portfolio and disciplined execution,",
@@ -2755,8 +3023,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -2769,7 +3037,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -3072,7 +3340,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 73.4,
+     "unit": "percent",
+     "snippet": "Gross margin | 73.4 | %",
+     "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+     "source_sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+     "extractor": "regex-v1:NVDA:gross_margin",
+     "verified": true
+    }
    },
    "commentary": null,
    "surprise": {
@@ -3116,8 +3394,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -3130,7 +3408,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -3174,11 +3452,11 @@
     "revenue_prior_actual": null,
     "eps_diluted": null,
     "gross_margin": {
-     "value": 77.0,
+     "value": 71.0,
      "unit": "percent",
-     "snippet": "GAAP gross margin of 77%",
-     "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-     "flags": 2,
+     "snippet": "representing a 71% gross margin",
+     "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+     "flags": 0,
      "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
      "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62",
      "extractor": "regex-v1:MDB:gross_margin",
@@ -3458,7 +3736,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 51.6,
+     "unit": "percent",
+     "snippet": "GAAP gross margin | | 51.6 | %",
+     "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+     "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+     "extractor": "regex-v1:MRVL:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Marvell delivered record third-quarter revenue of $2.075 billion, exceeding the midpoint of guidance, driven by strong demand for our data center products. We are guiding for robust growth in the fourth quarter and are on track for a strong finish to the fiscal year, with full-year revenue growth forecasted to exceed 40%. Looking ahead, we see demand for our products continuing to accelerate, and as a result, our data center revenue growth forecast for next year is now higher than prior expectations,",
@@ -3508,8 +3796,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -3522,7 +3810,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -4122,7 +4410,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 36.1,
+     "unit": "percent",
+     "snippet": "GAAP gross margin percentage | | 36.1 | %",
+     "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+     "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+     "extractor": "regex-v1:INTC:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages,",
@@ -4172,8 +4470,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -4186,7 +4484,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -4845,7 +5143,17 @@
      "extractor": "regex-v1:AMD:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 54.0,
+     "unit": "percent",
+     "snippet": "gross margin was 54%",
+     "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+     "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+     "extractor": "regex-v1:AMD:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Our record fourth quarter and full-year results demonstrate AMD's ability to deliver profitable growth at scale,",
@@ -4895,8 +5203,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -4909,7 +5217,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -4962,17 +5270,7 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": {
-     "value": 6.4,
-     "unit": "percent",
-     "snippet": "GAAP gross margin of 6.4%",
-     "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-     "flags": 2,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
-     "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083",
-     "extractor": "regex-v1:SMCI:gross_margin",
-     "verified": true
-    }
+    "gross_margin": null
    },
    "commentary": {
     "text": "With our leading AI server and storage technology foundation, strong customer engagements, and expanding global manufacturing footprint, we are scaling rapidly to support large AI and enterprise deployments while continuing to strengthen our operational and financial execution,",
@@ -5011,8 +5309,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": true,
-      "detail": "ok"
+      "ok": false,
+      "detail": "not found in source"
      }
     ],
     "missing_required": [
@@ -5028,7 +5326,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "reported"
+     "gross_margin": "not_reported"
     }
    },
    "status": "data_incomplete"
@@ -5617,7 +5915,17 @@
      "extractor": "regex-v1:NVDA:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 75.0,
+     "unit": "percent",
+     "snippet": "Gross margin | 75.0 | %",
+     "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+     "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+     "extractor": "regex-v1:NVDA:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Computing demand is growing exponentially - the agentic AI inflection point has arrived. Grace Blackwell with NVLink is the king of inference today - delivering an order-of-magnitude lower cost per token - and Vera Rubin will extend that leadership even further,",
@@ -5667,8 +5975,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -5681,7 +5989,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -5747,11 +6055,11 @@
     },
     "eps_diluted": null,
     "gross_margin": {
-     "value": 75.0,
+     "value": 73.0,
      "unit": "percent",
-     "snippet": "GAAP gross margin of 75%",
-     "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-     "flags": 2,
+     "snippet": "representing a 73% gross margin",
+     "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+     "flags": 0,
      "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026013199/mdb-13126xex991xrelease.htm",
      "source_sha256": "b0c3ef8531447b62a0aa603224550cc1111372ac39722d983dffae1effaf81af",
      "extractor": "regex-v1:MDB:gross_margin",
@@ -6184,7 +6492,17 @@
      "extractor": "regex-v1:MRVL:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 51.7,
+     "unit": "percent",
+     "snippet": "GAAP gross margin | | 51.7 | %",
+     "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+     "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+     "extractor": "regex-v1:MRVL:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Marvell delivered record fiscal 2026 revenue of $8.195 billion, growing 42% year-over-year, driven by robust AI demand. We also delivered GAAP EPS of $3.07 and non-GAAP EPS of $2.84, up 81% year-over-year, demonstrating the strong operating leverage in our business model,",
@@ -6234,8 +6552,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -6248,7 +6566,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -6742,7 +7060,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 39.4,
+     "unit": "percent",
+     "snippet": "GAAP gross margin percentage | | 39.4 | %",
+     "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+     "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+     "extractor": "regex-v1:INTC:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "The next wave of AI will bring intelligence closer to the end user, moving from foundational models to inference to agentic. This shift is significantly increasing the need for Intel's CPUs and wafer and advanced packaging offerings,",
@@ -6792,8 +7120,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -6806,7 +7134,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -7596,17 +7924,7 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": {
-     "value": 10.1,
-     "unit": "percent",
-     "snippet": "GAAP gross margin of 10.1%",
-     "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-     "flags": 2,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
-     "source_sha256": "59baa19738c71612928b9aff859f150b1f47384507f4a71df90706cb563eb3eb",
-     "extractor": "regex-v1:SMCI:gross_margin",
-     "verified": true
-    }
+    "gross_margin": null
    },
    "commentary": {
     "text": "Supermicro's transformation into a total datacenter infrastructure provider is accelerating,",
@@ -7645,8 +7963,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": true,
-      "detail": "ok"
+      "ok": false,
+      "detail": "not found in source"
      }
     ],
     "missing_required": [
@@ -7661,7 +7979,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "reported"
+     "gross_margin": "not_reported"
     }
    },
    "status": "data_incomplete"
@@ -7748,7 +8066,17 @@
      "extractor": "regex-v1:AMD:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 53.0,
+     "unit": "percent",
+     "snippet": "gross margin was 53%",
+     "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+     "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+     "extractor": "regex-v1:AMD:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "First quarter results reflect strong performance across all key financial metrics, with accelerating revenue growth, earnings expansion and record quarterly free cash flow,",
@@ -7798,8 +8126,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -7812,7 +8140,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -7899,7 +8227,17 @@
      "extractor": "regex-v1:NVDA:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 74.9,
+     "unit": "percent",
+     "snippet": "Gross margin | 74.9 | %",
+     "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+     "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+     "extractor": "regex-v1:NVDA:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "The buildout of AI factories - the largest infrastructure expansion in human history - is accelerating at extraordinary speed,",
@@ -7949,8 +8287,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -7963,7 +8301,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -8040,7 +8378,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 52.1,
+     "unit": "percent",
+     "snippet": "GAAP gross margin | | 52.1 | %",
+     "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+     "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+     "extractor": "regex-v1:MRVL:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Marvell delivered record first-quarter fiscal 2027 revenue of $2.418 billion, up 28% year-over-year, and guided second-quarter revenue to $2.7 billion at the mid-point, representing 35% year-over-year growth. We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business,",
@@ -8090,8 +8438,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -8104,7 +8452,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -8301,7 +8649,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 72.0,
+     "unit": "percent",
+     "snippet": "representing a 72% gross margin",
+     "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026038798/mdb-043026xex991xrelease.htm",
+     "source_sha256": "9a0c8995a841f06f8efbec5059d657f25e188e375bf78df9e8378e0e8b34bd51",
+     "extractor": "regex-v1:MDB:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "We delivered better-than-expected first quarter results, as our go-to-market teams continue to execute well and capitalize on strong end-market demand for the MongoDB platform across enterprise use cases and emerging AI opportunities. At the same time, we continue to show strong profitability, demonstrating we can drive durable revenue growth while simultaneously expanding margin. Based on the momentum we are seeing in the business, we are raising our fiscal 2027 guidance,",
@@ -8351,8 +8709,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -8365,7 +8723,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -9397,7 +9755,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 40.4,
+     "unit": "percent",
+     "snippet": "GAAP gross margin percentage | | 40.4 | %",
+     "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+     "source_sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a",
+     "extractor": "regex-v1:INTC:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "AI is driving unprecedented demand for compute, and as we continue to execute, Intel is well-positioned to capture sustainable growth across our CPU franchise, ASICs, advanced packaging and vast wafer foundry network,",
@@ -9447,8 +9815,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -9461,7 +9829,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -10273,7 +10641,17 @@
      "extractor": "regex-v1:AMD:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 54.0,
+     "unit": "percent",
+     "snippet": "gross margin was 54%",
+     "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+     "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39",
+     "extractor": "regex-v1:AMD:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,",
@@ -10323,8 +10701,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -10337,7 +10715,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -10414,17 +10792,7 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": {
-     "value": 17.6,
-     "unit": "percent",
-     "snippet": "GAAP gross margin of 17.6%",
-     "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-     "flags": 2,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
-     "source_sha256": "be2a869e0a7efdb7e171aebb92b5cb79b0e9cad1ada8e0c7dc53902c4c62eb9b",
-     "extractor": "regex-v1:SMCI:gross_margin",
-     "verified": true
-    }
+    "gross_margin": null
    },
    "commentary": {
     "text": "Our Total AI/IT Solutions strategy continues to deliver strong results, we added several hundred enterprise and other customers in the past year, generated more than $60 billion in new orders, and booked record backlog entering fiscal 2027,",
@@ -10474,8 +10842,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": true,
-      "detail": "ok"
+      "ok": false,
+      "detail": "not found in source"
      }
     ],
     "missing_required": [],
@@ -10488,7 +10856,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "reported"
+     "gross_margin": "not_reported"
     }
    },
    "status": "complete"
@@ -10851,7 +11219,17 @@
      "extractor": "regex-v1:NVDA:eps_diluted",
      "verified": true
     },
-    "gross_margin": null
+    "gross_margin": {
+     "value": 75.0,
+     "unit": "percent",
+     "snippet": "Gross margin | 75.0 | %",
+     "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+     "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7",
+     "extractor": "regex-v1:NVDA:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue,",
@@ -10901,8 +11279,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -10915,7 +11293,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -10992,7 +11370,17 @@
      "verified": true
     },
     "eps_diluted": null,
-    "gross_margin": null
+    "gross_margin": {
+     "value": 53.1,
+     "unit": "percent",
+     "snippet": "GAAP gross margin | | 53.1 | %",
+     "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+     "source_sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313",
+     "extractor": "regex-v1:MRVL:gross_margin",
+     "verified": true
+    }
    },
    "commentary": {
     "text": "Marvell delivered record second-quarter fiscal 2027 revenue of $2.739 billion, up 37% year over year, driven by continued strong demand across our Data Center portfolio, where revenue growth accelerated to 46% year over year,",
@@ -11042,8 +11430,8 @@
      },
      {
       "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      }
     ],
     "missing_required": [],
@@ -11056,7 +11444,7 @@
     ],
     "optional_fields": {
      "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
+     "gross_margin": "reported"
     }
    },
    "status": "complete"
@@ -11136,9 +11524,9 @@
     "gross_margin": {
      "value": 74.0,
      "unit": "percent",
-     "snippet": "GAAP gross margin of 74%",
-     "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-     "flags": 2,
+     "snippet": "representing a 74% gross margin",
+     "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+     "flags": 0,
      "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026059794/mdb-073126xex991xrelease.htm",
      "source_sha256": "975f7dea32d095bf623728b8bf429f7d2061ca6cd0a78d17990a435b28b83a8e",
      "extractor": "regex-v1:MDB:gross_margin",
@@ -11649,6 +12037,7 @@
  "rows": [
   {
    "event_id": "HPE-2025-10-15",
+   "_release_ms": 1760561266000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -11704,6 +12093,7 @@
   },
   {
    "event_id": "TXN-2025-10-21",
+   "_release_ms": 1761077100000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -11764,6 +12154,7 @@
   },
   {
    "event_id": "SMCI-2025-10-23",
+   "_release_ms": 1761224942000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -11819,6 +12210,7 @@
   },
   {
    "event_id": "INTC-2025-10-23",
+   "_release_ms": 1761250222000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -11878,6 +12270,7 @@
   },
   {
    "event_id": "META-2025-10-29",
+   "_release_ms": 1761768514000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -11937,6 +12330,7 @@
   },
   {
    "event_id": "KLAC-2025-10-29",
+   "_release_ms": 1761768679000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -11998,6 +12392,7 @@
   },
   {
    "event_id": "AMZN-2025-10-30",
+   "_release_ms": 1761855181000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12057,6 +12452,7 @@
   },
   {
    "event_id": "MDB-2025-11-03",
+   "_release_ms": 1762176670000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12116,6 +12512,7 @@
   },
   {
    "event_id": "PLTR-2025-11-03",
+   "_release_ms": 1762203980000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12173,6 +12570,7 @@
   },
   {
    "event_id": "SMCI-2025-11-04",
+   "_release_ms": 1762290539000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12228,6 +12626,7 @@
   },
   {
    "event_id": "AMD-2025-11-04",
+   "_release_ms": 1762290970000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12288,6 +12687,7 @@
   },
   {
    "event_id": "QCOM-2025-11-05",
+   "_release_ms": 1762376472000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12348,6 +12748,7 @@
   },
   {
    "event_id": "PANW-2025-11-19",
+   "_release_ms": 1763586992000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12407,6 +12808,7 @@
   },
   {
    "event_id": "NVDA-2025-11-19",
+   "_release_ms": 1763587244000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12796,6 +13198,7 @@
   },
   {
    "event_id": "MDB-2025-12-01",
+   "_release_ms": 1764623217000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12855,6 +13258,7 @@
   },
   {
    "event_id": "CRWD-2025-12-02",
+   "_release_ms": 1764709873000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -12913,6 +13317,7 @@
   },
   {
    "event_id": "MRVL-2025-12-02",
+   "_release_ms": 1764709899000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13158,6 +13563,7 @@
   },
   {
    "event_id": "CRM-2025-12-03",
+   "_release_ms": 1764795895000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13217,6 +13623,7 @@
   },
   {
    "event_id": "HPE-2025-12-04",
+   "_release_ms": 1764882439000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13272,6 +13679,7 @@
   },
   {
    "event_id": "AVGO-2025-12-11",
+   "_release_ms": 1765487857000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13332,6 +13740,7 @@
   },
   {
    "event_id": "MU-2025-12-17",
+   "_release_ms": 1766005406000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13392,6 +13801,7 @@
   },
   {
    "event_id": "INTC-2026-01-22",
+   "_release_ms": 1769116256000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13637,6 +14047,7 @@
   },
   {
    "event_id": "TXN-2026-01-27",
+   "_release_ms": 1769547934000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13697,6 +14108,7 @@
   },
   {
    "event_id": "META-2026-01-28",
+   "_release_ms": 1769634260000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -13942,6 +14354,7 @@
   },
   {
    "event_id": "KLAC-2026-01-29",
+   "_release_ms": 1769720784000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14002,6 +14415,7 @@
   },
   {
    "event_id": "PLTR-2026-02-02",
+   "_release_ms": 1770066368000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14245,6 +14659,7 @@
   },
   {
    "event_id": "AMD-2026-02-03",
+   "_release_ms": 1770153378000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14305,6 +14720,7 @@
   },
   {
    "event_id": "SMCI-2026-02-03",
+   "_release_ms": 1770155511000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14360,6 +14776,7 @@
   },
   {
    "event_id": "QCOM-2026-02-04",
+   "_release_ms": 1770238859000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14420,6 +14837,7 @@
   },
   {
    "event_id": "AMZN-2026-02-05",
+   "_release_ms": 1770326712000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14664,6 +15082,7 @@
   },
   {
    "event_id": "PANW-2026-02-17",
+   "_release_ms": 1771362849000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14723,6 +15142,7 @@
   },
   {
    "event_id": "CRM-2026-02-25",
+   "_release_ms": 1772053392000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -14782,6 +15202,7 @@
   },
   {
    "event_id": "NVDA-2026-02-25",
+   "_release_ms": 1772055085000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -15035,6 +15456,7 @@
   },
   {
    "event_id": "MDB-2026-03-02",
+   "_release_ms": 1772485661000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -15094,6 +15516,7 @@
   },
   {
    "event_id": "CRWD-2026-03-03",
+   "_release_ms": 1772571986000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -15152,6 +15575,7 @@
   },
   {
    "event_id": "AVGO-2026-03-04",
+   "_release_ms": 1772658970000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -15404,6 +15828,7 @@
   },
   {
    "event_id": "MRVL-2026-03-05",
+   "_release_ms": 1772744763000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -15657,6 +16082,7 @@
   },
   {
    "event_id": "HPE-2026-03-09",
+   "_release_ms": 1773086893000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -15711,6 +16137,7 @@
   },
   {
    "event_id": "MU-2026-03-18",
+   "_release_ms": 1773864134000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -16113,6 +16540,7 @@
   },
   {
    "event_id": "TXN-2026-04-22",
+   "_release_ms": 1776888239000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -16176,6 +16604,7 @@
   },
   {
    "event_id": "INTC-2026-04-23",
+   "_release_ms": 1776974822000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -16430,6 +16859,7 @@
   },
   {
    "event_id": "QCOM-2026-04-29",
+   "_release_ms": 1777492940000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -16495,6 +16925,7 @@
   },
   {
    "event_id": "META-2026-04-29",
+   "_release_ms": 1777493141000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -16747,6 +17178,7 @@
   },
   {
    "event_id": "KLAC-2026-04-29",
+   "_release_ms": 1777493175000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -16812,6 +17244,7 @@
   },
   {
    "event_id": "AMZN-2026-04-29",
+   "_release_ms": 1777493935000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -17064,6 +17497,7 @@
   },
   {
    "event_id": "PLTR-2026-05-04",
+   "_release_ms": 1777925192000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -17457,6 +17891,7 @@
   },
   {
    "event_id": "SMCI-2026-05-05",
+   "_release_ms": 1778011707000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -17512,6 +17947,7 @@
   },
   {
    "event_id": "AMD-2026-05-05",
+   "_release_ms": 1778012166000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -17772,6 +18208,7 @@
   },
   {
    "event_id": "NVDA-2026-05-20",
+   "_release_ms": 1779308479000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18030,6 +18467,7 @@
   },
   {
    "event_id": "MRVL-2026-05-27",
+   "_release_ms": 1779912367000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18287,6 +18725,7 @@
   },
   {
    "event_id": "CRM-2026-05-27",
+   "_release_ms": 1779913106000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18346,6 +18785,7 @@
   },
   {
    "event_id": "MDB-2026-05-28",
+   "_release_ms": 1779998799000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18404,6 +18844,7 @@
   },
   {
    "event_id": "HPE-2026-06-01",
+   "_release_ms": 1780344562000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18462,6 +18903,7 @@
   },
   {
    "event_id": "PANW-2026-06-02",
+   "_release_ms": 1780430909000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18520,6 +18962,7 @@
   },
   {
    "event_id": "CRWD-2026-06-03",
+   "_release_ms": 1780517180000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18578,6 +19021,7 @@
   },
   {
    "event_id": "AVGO-2026-06-03",
+   "_release_ms": 1780518095000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -18979,6 +19423,7 @@
   },
   {
    "event_id": "MU-2026-06-24",
+   "_release_ms": 1782331321000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -19236,6 +19681,7 @@
   },
   {
    "event_id": "SMCI-2026-07-21",
+   "_release_ms": 1784664655000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -19434,6 +19880,7 @@
   },
   {
    "event_id": "TXN-2026-07-22",
+   "_release_ms": 1784750646000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -19700,6 +20147,7 @@
   },
   {
    "event_id": "INTC-2026-07-23",
+   "_release_ms": 1784837340000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -20107,6 +20555,7 @@
   },
   {
    "event_id": "KLAC-2026-07-28",
+   "_release_ms": 1785269282000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -20374,6 +20823,7 @@
   },
   {
    "event_id": "QCOM-2026-07-29",
+   "_release_ms": 1785355295000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -20641,6 +21091,7 @@
   },
   {
    "event_id": "META-2026-07-29",
+   "_release_ms": 1785355403000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -20893,6 +21344,7 @@
   },
   {
    "event_id": "AMZN-2026-07-30",
+   "_release_ms": 1785441983000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -21144,6 +21596,7 @@
   },
   {
    "event_id": "PLTR-2026-08-03",
+   "_release_ms": 1785787574000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -21542,6 +21995,7 @@
   },
   {
    "event_id": "AMD-2026-08-04",
+   "_release_ms": 1785874584000,
    "params": {
     "mode": 1,
     "k": 2.0,
@@ -21949,6 +22403,7 @@
   },
   {
    "event_id": "SMCI-2026-08-11",
+   "_release_ms": 1786478776000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -22216,6 +22671,7 @@
   },
   {
    "event_id": "CRM-2026-08-26",
+   "_release_ms": 1787774633000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -22489,6 +22945,7 @@
   },
   {
    "event_id": "CRWD-2026-08-26",
+   "_release_ms": 1787774822000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -22761,6 +23218,7 @@
   },
   {
    "event_id": "NVDA-2026-08-26",
+   "_release_ms": 1787775679000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -23178,6 +23636,7 @@
   },
   {
    "event_id": "MRVL-2026-08-27",
+   "_release_ms": 1787861159000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -23595,6 +24054,7 @@
   },
   {
    "event_id": "MDB-2026-09-01",
+   "_release_ms": 1788293276000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -23870,6 +24330,7 @@
   },
   {
    "event_id": "PANW-2026-09-01",
+   "_release_ms": 1788294735000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -24147,6 +24608,7 @@
   },
   {
    "event_id": "HPE-2026-09-02",
+   "_release_ms": 1788379612000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -24421,6 +24883,7 @@
   },
   {
    "event_id": "AVGO-2026-09-02",
+   "_release_ms": 1788380764000,
    "params": {
     "mode": -1,
     "k": 3.0,
@@ -25172,6 +25635,11 @@
  "ablation_no_ai": {
   "summary": {
    "residual": {
+    "sharpe_per_trade": -0.003,
+    "sortino_per_trade": -0.006,
+    "sharpe_daily_ann": -0.008,
+    "sortino_daily_ann": -0.014,
+    "days": 323,
     "basis": "primary",
     "total_net_pnl": -9.66,
     "trades": 5,
@@ -25262,6 +25730,11 @@
     ]
    },
    "unhedged": {
+    "sharpe_per_trade": 0.005,
+    "sortino_per_trade": 0.011,
+    "sharpe_daily_ann": 0.012,
+    "sortino_daily_ann": 0.027,
+    "days": 323,
     "basis": "primary",
     "total_net_pnl": 17.28,
     "trades": 5,
@@ -25352,6 +25825,11 @@
     ]
    },
    "naive_same_events": {
+    "sharpe_per_trade": 0.322,
+    "sortino_per_trade": 1.039,
+    "sharpe_daily_ann": 0.805,
+    "sortino_daily_ann": 2.469,
+    "days": 323,
     "basis": "primary",
     "total_net_pnl": 1133.43,
     "trades": 5,
@@ -25442,6 +25920,11 @@
     ]
    },
    "naive": {
+    "sharpe_per_trade": -0.003,
+    "sortino_per_trade": -0.005,
+    "sharpe_daily_ann": -0.013,
+    "sortino_daily_ann": -0.021,
+    "days": 324,
     "basis": "primary",
     "total_net_pnl": -26.49,
     "trades": 18,
@@ -25532,6 +26015,11 @@
     ]
    },
    "no_trade": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,

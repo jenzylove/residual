@@ -180,7 +180,7 @@ function show(id) {
     <div class="stage-col">
       <div class="card">
         <div class="ev-name">${esc(e.ticker)} <em>${d ? pct(d.residual) : ""}</em></div>
-        <div class="ev-sub">${day(e.release_utc)} · revenue ${bn(s.revenue_actual)} against guidance of ${bn(s.revenue_guided_mid)} (${pp(s.guidance_surprise_pct)})</div>
+        <div class="ev-sub">${day(e.release_utc)} · revenue ${bn(s.revenue_actual)} against guidance of ${bn(s.revenue_guided_mid)} (${pp(s.guidance_surprise_pct)})${e.earnings.gross_margin ? ` · GAAP gross margin ${e.earnings.gross_margin.value}%` : ""}${e.earnings.eps_diluted ? ` · diluted EPS $${e.earnings.eps_diluted.value}` : ""}</div>
         ${d ? waterfall(d) + `<p class="plain">${plain}</p>` : `<p class="plain">No breakdown for this release: ${esc(PLAIN.market_data)}</p>`}
       </div>
     </div>
@@ -265,6 +265,13 @@ function proof(basis) {
       <div class="val ${cls(v)}">${usd(v, 0)}</div></div>`;
   }).join("");
   requestAnimationFrame(() => requestAnimationFrame(() => $("#bars").querySelectorAll("i").forEach(i => { i.style.left = i.dataset.l; i.style.width = i.dataset.w; })));
+  const f = v => v == null ? "n/a" : v.toFixed(2);
+  const W = D.summary_last_90d || {}, win = D.summary_last_90d_window;
+  const rowR = (n, m) => m ? `<tr><td>${n}</td><td class="num">${f(m.sharpe_daily_ann)}</td><td class="num">${f(m.sortino_daily_ann)}</td><td class="num">${f(m.sharpe_per_trade)}</td><td class="num neg">${usd(m.max_drawdown, 0)}</td></tr>` : "";
+  $("#bars").insertAdjacentHTML("beforeend", `<div class="ratios"><table><thead><tr><th>${esc(views[basis][0])}</th><th class="num">Sharpe</th><th class="num">Sortino</th><th class="num">Sharpe / trade</th><th class="num">Max DD</th></tr></thead><tbody>
+    ${rowR("Residual pair", S.residual)}${rowR("Plain headline, same releases", S.naive_same_events)}</tbody></table>
+    ${win && W.residual ? `<p class="note">Last 90 days of real history (${day(new Date(win.from_ms).toISOString())} to ${day(new Date(win.to_ms).toISOString())}, ${win.events} releases): residual Sharpe ${f(W.residual.sharpe_daily_ann)}, Sortino ${f(W.residual.sortino_daily_ann)}, max drawdown ${usd(W.residual.max_drawdown, 0)} over ${W.residual.trades} trades.</p>` : ""}
+    <p class="note">Sharpe and Sortino use daily paper P&amp;L on a $100,000 book, annualised over 365 days because Bitget perpetuals trade every day.</p></div>`);
   const tr = S.residual.trades;
   $("#res-note").textContent = {
     primary: `${tr} paper trades with complete funding data, $10,000 on the company side each. On these releases the plain headline trade did better than the residual pair. A sample this small proves nothing either way, which is why every trade is published.`,

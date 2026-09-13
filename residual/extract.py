@@ -100,7 +100,16 @@ EPS = [
     (r"Diluted EPS was \$(\d+(?:\.\d+)?)", 0),
     (r"(?:GAAP )?EPS (?:of|was) \$(\d+(?:\.\d+)?)", 0),
 ]
-GROSS_MARGIN = [(r"GAAP gross margin (?:was|of) (\d+(?:\.\d+)?)%", re.I)]
+# Reported GAAP gross margin (percent), per company, first match = current quarter. Only companies whose
+# release states it unambiguously; KLAC (guidance-style row), SMCI (unclear column) and AVGO/MU (dollar
+# values) are deliberately not covered. Optional evidence: never used by the model.
+GROSS_MARGIN = {
+    "NVDA": [(r"Gross margin \| (\d+(?:\.\d+)?) \| %", 0)],
+    "AMD": [(r"gross margin was (\d+(?:\.\d+)?)%", 0)],
+    "INTC": [(r"GAAP gross margin percentage \| \| (\d+(?:\.\d+)?) \| %", 0)],
+    "MRVL": [(r"GAAP gross margin \| \| (\d+(?:\.\d+)?) \| %", 0)],
+    "MDB": [(r"representing a (\d+(?:\.\d+)?)% gross margin", 0)],
+}
 COMMENTARY = r'"([^"]{80,900})[,.]?" (?:said|stated) ([^."]{3,160})'
 
 
@@ -163,7 +172,7 @@ def extract_all(ticker: str, raw: bytes, text: str, url: str) -> dict:
         "revenue_actual": extract_actual(ticker, norm, src),
         "revenue_guidance_next": extract_guidance(ticker, norm, src),
         "eps_diluted": _first(EPS, "eps_diluted", ticker, norm, src),
-        "gross_margin": _first(GROSS_MARGIN, "gross_margin", ticker, norm, src),
+        "gross_margin": _first(GROSS_MARGIN.get(ticker, []), "gross_margin", ticker, norm, src),
         "commentary": extract_commentary(norm, src),
     }
 

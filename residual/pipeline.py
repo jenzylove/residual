@@ -26,6 +26,35 @@ def iso(ms):
     return datetime.fromtimestamp(ms / 1000, timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z")
 
 
+def risk_ratios(rows: list[dict], traded: list[dict]) -> dict:
+    """Sharpe and Sortino, per trade (return on company notional) and on daily P&L (annualised, 365 days:
+    Bitget perpetuals trade every day). Daily series spans the first release to the last exit, flat days = 0."""
+    out = {"sharpe_per_trade": None, "sortino_per_trade": None, "sharpe_daily_ann": None,
+           "sortino_daily_ann": None, "days": 0}
+    if not traded:
+        return out
+    rets = [t["net"] / next(l["notional"] for l in t["legs"] if l["role"] == "company") for t in traded]
+    if len(rets) > 1 and statistics.stdev(rets) > 0:
+        out["sharpe_per_trade"] = round(statistics.fmean(rets) / statistics.stdev(rets), 3)
+    down = [r for r in rets if r < 0]
+    if down:
+        dd = math.sqrt(sum(r * r for r in down) / len(rets))
+        out["sortino_per_trade"] = round(statistics.fmean(rets) / dd, 3) if dd > 0 else None
+    t0 = min(r["_release_ms"] for r in rows) // 86_400_000
+    t1 = max([t["exit_ms"] for t in traded] + [r["_release_ms"] for r in rows]) // 86_400_000
+    daily = [0.0] * (t1 - t0 + 1)
+    for t in traded:
+        daily[t["exit_ms"] // 86_400_000 - t0] += t["net"] / START_BALANCE
+    out["days"] = len(daily)
+    if len(daily) > 1 and statistics.stdev(daily) > 0:
+        out["sharpe_daily_ann"] = round(statistics.fmean(daily) / statistics.stdev(daily) * math.sqrt(365), 3)
+    neg = [d for d in daily if d < 0]
+    if neg:
+        dd = math.sqrt(sum(d * d for d in neg) / len(daily))
+        out["sortino_daily_ann"] = round(statistics.fmean(daily) / dd * math.sqrt(365), 3) if dd > 0 else None
+    return out
+
+
 def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
     """primary: only trades with complete Bitget funding data count (others are excluded, P&L 0).
     conservative: every trade counts, unavailable funding charged at the worst observed rate.
@@ -50,7 +79,9 @@ def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
         mdd = min(mdd, eq - peak)
         curve.append(round(eq, 2))
     tp = [t["net"] for t in traded]
+    ratios = risk_ratios(rows, traded)
     return {
+        **ratios,
         "basis": basis, "total_net_pnl": round(sum(pnl), 2), "trades": len(traded),
         "excluded_funding_unavailable": excluded,
         "no_trades": len(rows) - len(traded) - excluded,
@@ -112,7 +143,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
             interp = interpret(ev, a, _source_text(ev, allow_network=allow_llm_calls), allow_call=allow_llm_calls)
         dec = decide(ev, a, params, interp if use_ai else None)
 
-        row = {"event_id": ev["event_id"], "params": params, "decision": dec,
+        row = {"event_id": ev["event_id"], "_release_ms": ev["release_ms"], "params": params, "decision": dec,
                "interpretation": interp, "residual": None, "naive": None, "unhedged": None}
         if dec["decision"] == "TRADE":
             sim = run_trade(ev, snap, a, dec["direction"], dec["size"])
@@ -148,6 +179,11 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
     summary_conservative = {k: metrics(rows, k, "conservative") for k in keys}
     summary_conservative["no_trade"] = metrics(rows, "__none__", "conservative")
     summary_observed_zero = {k: metrics(rows, k, "observed_zero") for k in keys}
+    # last 90 days of real history, as the Alpha Factory track reportedly asks for
+    last = max(r["_release_ms"] for r in rows)
+    recent = [r for r in rows if r["_release_ms"] >= last - 90 * 86_400_000]
+    summary_90d = {k: metrics(recent, k) for k in keys} if recent else {}
+    summary_90d_window = {"from_ms": min(r["_release_ms"] for r in recent), "to_ms": last, "events": len(recent)} if recent else None
     warm = [r for r in rows if r["params"]["source"] == "walk-forward"]
     summary_post_warmup = {k: metrics(warm, k) for k in ("residual", "naive", "unhedged")}
     return {
@@ -161,6 +197,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                       "trained on itself",
         "summary": summary, "summary_conservative_funding": summary_conservative,
         "summary_observed_zero_funding": summary_observed_zero,
+        "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
         "funding_caps": caps, "summary_post_warmup": summary_post_warmup,
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,

@@ -54,6 +54,18 @@ class ExtractTests(unittest.TestCase):
             self.assertAlmostEqual(f["revenue_guidance_next"]["value"], guide, places=3, msg=t)
             self.assertTrue(extract.verify_field(f["revenue_actual"], text, text.encode())[0], t)
 
+    def test_gross_margin_on_real_wording(self):
+        cases = [("NVDA", "Gross margin | 73.4 | % | 72.4 | % | 74.6 | %", 73.4),
+                 ("AMD", "revenue was $9.2 billion, gross margin was 52%, operating income", 52.0),
+                 ("INTC", "GAAP gross margin percentage | | 38.2 | % | | 15.0 | %", 38.2),
+                 ("MRVL", "GAAP gross margin | | 51.6 | % | | 50.4 | %", 51.6),
+                 ("MDB", "gross profit was $500.2 million, representing a 72% gross margin compared to 71%", 72.0)]
+        for t, text, v in cases:
+            f = self._one(t, text)["gross_margin"]
+            self.assertEqual(f["value"], v, t)
+            self.assertTrue(extract.verify_field(f, text, text.encode())[0], t)
+        self.assertIsNone(self._one("KLAC", "GAAP gross margin | | 59.62% | | 61.62% |")["gross_margin"])
+
     def test_hpe_ignores_segment_lines(self):
         text = "• Networking revenue was $2.7 billion, up 148% • Revenue : $10.7 billion, up 40% from the prior-year period"
         self.assertEqual(self._one("HPE", text)["revenue_actual"]["value"], 10700.0)
@@ -158,6 +170,23 @@ class WalkForwardTests(unittest.TestCase):
         dec = strategy.decide({}, a, {"mode": 1, "k": 2.0}, {"status": "ok", "label": "durable", "confidence": 0.8})
         self.assertEqual(dec["decision"], "TRADE")
         self.assertEqual(dec["direction"], -1)
+
+
+class RiskRatioTests(unittest.TestCase):
+    def test_sharpe_sortino(self):
+        from residual.pipeline import risk_ratios
+        day = 86_400_000
+        rows = [{"_release_ms": 0}, {"_release_ms": 9 * day}]
+        mk = lambda net, d: {"net": net, "exit_ms": d * day, "legs": [{"role": "company", "notional": 10_000}]}
+        traded = [mk(200, 1), mk(-100, 3), mk(300, 5)]
+        r = risk_ratios(rows, traded)
+        rets = [0.02, -0.01, 0.03]
+        import statistics as st
+        self.assertAlmostEqual(r["sharpe_per_trade"], round(st.fmean(rets) / st.stdev(rets), 3))
+        self.assertAlmostEqual(r["sortino_per_trade"], round(st.fmean(rets) / math.sqrt(0.0001 / 3), 3))
+        self.assertEqual(r["days"], 10)
+        self.assertGreater(r["sharpe_daily_ann"], 0)
+        self.assertIsNone(risk_ratios(rows, [])["sharpe_daily_ann"])
 
 
 class OutputJsonTests(unittest.TestCase):

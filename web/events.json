@@ -400,7 +400,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 38.2,
+    "unit": "percent",
+    "snippet": "GAAP gross margin percentage | | 38.2 | %",
+    "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm",
+    "source_sha256": "f5ebf396cc3badbc759f2ddeea703396fd25f37268d9a40f9c53deca575e5b0a",
+    "extractor": "regex-v1:INTC:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Our Q3 results reflect improved execution and steady progress against our strategic priorities,",
@@ -450,8 +460,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -464,7 +474,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -1318,7 +1328,17 @@
     "extractor": "regex-v1:AMD:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 52.0,
+    "unit": "percent",
+    "snippet": "gross margin was 52%",
+    "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm",
+    "source_sha256": "42feee8281d99488bf3542d9fae3f7e88ae7797fd72a9786ff3abe61cb4f3ed4",
+    "extractor": "regex-v1:AMD:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "We delivered record quarterly revenue of $9.2 billion, up 36% year-over-year, and generated record free cash flow, reflecting the strength of our leadership portfolio and disciplined execution,",
@@ -1368,8 +1388,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -1382,7 +1402,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -1685,7 +1705,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 73.4,
+    "unit": "percent",
+    "snippet": "Gross margin | 73.4 | %",
+    "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+    "source_sha256": "408054ae1773615a3c86ca80b6d7a62e8faf073ee37358351d7e4ce6ff9f367b",
+    "extractor": "regex-v1:NVDA:gross_margin",
+    "verified": true
+   }
   },
   "commentary": null,
   "surprise": {
@@ -1729,8 +1759,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -1743,7 +1773,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -1787,11 +1817,11 @@
    "revenue_prior_actual": null,
    "eps_diluted": null,
    "gross_margin": {
-    "value": 77.0,
+    "value": 71.0,
     "unit": "percent",
-    "snippet": "GAAP gross margin of 77%",
-    "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-    "flags": 2,
+    "snippet": "representing a 71% gross margin",
+    "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+    "flags": 0,
     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
     "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62",
     "extractor": "regex-v1:MDB:gross_margin",
@@ -2071,7 +2101,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 51.6,
+    "unit": "percent",
+    "snippet": "GAAP gross margin | | 51.6 | %",
+    "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000193/q326_8kx1112025ex-991.htm",
+    "source_sha256": "9a64359f785fff1ff1ce0f7cdc124238286b889f0d3d354bc0868fac994bfcc8",
+    "extractor": "regex-v1:MRVL:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Marvell delivered record third-quarter revenue of $2.075 billion, exceeding the midpoint of guidance, driven by strong demand for our data center products. We are guiding for robust growth in the fourth quarter and are on track for a strong finish to the fiscal year, with full-year revenue growth forecasted to exceed 40%. Looking ahead, we see demand for our products continuing to accelerate, and as a result, our data center revenue growth forecast for next year is now higher than prior expectations,",
@@ -2121,8 +2161,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -2135,7 +2175,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -2735,7 +2775,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 36.1,
+    "unit": "percent",
+    "snippet": "GAAP gross margin percentage | | 36.1 | %",
+    "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+    "source_sha256": "ce1c8aa4a531d1a293525ea0e2a00ce0bf24178a0e9618564a2d43dd032c727c",
+    "extractor": "regex-v1:INTC:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "We exceeded Q4 expectations across revenue, gross margin, and EPS even as we navigated industry-wide supply shortages,",
@@ -2785,8 +2835,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -2799,7 +2849,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -3458,7 +3508,17 @@
     "extractor": "regex-v1:AMD:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 54.0,
+    "unit": "percent",
+    "snippet": "gross margin was 54%",
+    "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+    "source_sha256": "0ba8650e37aff84dff2de86285f8dc9557249edd474749b101d7fc874deae878",
+    "extractor": "regex-v1:AMD:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Our record fourth quarter and full-year results demonstrate AMD's ability to deliver profitable growth at scale,",
@@ -3508,8 +3568,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -3522,7 +3582,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -3575,17 +3635,7 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": {
-    "value": 6.4,
-    "unit": "percent",
-    "snippet": "GAAP gross margin of 6.4%",
-    "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-    "flags": 2,
-    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
-    "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083",
-    "extractor": "regex-v1:SMCI:gross_margin",
-    "verified": true
-   }
+   "gross_margin": null
   },
   "commentary": {
    "text": "With our leading AI server and storage technology foundation, strong customer engagements, and expanding global manufacturing footprint, we are scaling rapidly to support large AI and enterprise deployments while continuing to strengthen our operational and financial execution,",
@@ -3624,8 +3674,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": true,
-     "detail": "ok"
+     "ok": false,
+     "detail": "not found in source"
     }
    ],
    "missing_required": [
@@ -3641,7 +3691,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "reported"
+    "gross_margin": "not_reported"
    }
   },
   "status": "data_incomplete"
@@ -4230,7 +4280,17 @@
     "extractor": "regex-v1:NVDA:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 75.0,
+    "unit": "percent",
+    "snippet": "Gross margin | 75.0 | %",
+    "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+    "source_sha256": "a4146bb7e363b6560edd07e3743cb20f062634df1b2ce104c37406aef702e960",
+    "extractor": "regex-v1:NVDA:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Computing demand is growing exponentially - the agentic AI inflection point has arrived. Grace Blackwell with NVLink is the king of inference today - delivering an order-of-magnitude lower cost per token - and Vera Rubin will extend that leadership even further,",
@@ -4280,8 +4340,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -4294,7 +4354,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -4360,11 +4420,11 @@
    },
    "eps_diluted": null,
    "gross_margin": {
-    "value": 75.0,
+    "value": 73.0,
     "unit": "percent",
-    "snippet": "GAAP gross margin of 75%",
-    "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-    "flags": 2,
+    "snippet": "representing a 73% gross margin",
+    "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+    "flags": 0,
     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026013199/mdb-13126xex991xrelease.htm",
     "source_sha256": "b0c3ef8531447b62a0aa603224550cc1111372ac39722d983dffae1effaf81af",
     "extractor": "regex-v1:MDB:gross_margin",
@@ -4797,7 +4857,17 @@
     "extractor": "regex-v1:MRVL:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 51.7,
+    "unit": "percent",
+    "snippet": "GAAP gross margin | | 51.7 | %",
+    "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm",
+    "source_sha256": "124a7a0503cd261e5811155bed34616df3d981c78f73698f73ddbd77aa102b79",
+    "extractor": "regex-v1:MRVL:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Marvell delivered record fiscal 2026 revenue of $8.195 billion, growing 42% year-over-year, driven by robust AI demand. We also delivered GAAP EPS of $3.07 and non-GAAP EPS of $2.84, up 81% year-over-year, demonstrating the strong operating leverage in our business model,",
@@ -4847,8 +4917,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -4861,7 +4931,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -5355,7 +5425,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 39.4,
+    "unit": "percent",
+    "snippet": "GAAP gross margin percentage | | 39.4 | %",
+    "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+    "source_sha256": "4d50f9664611af8804972ad22780f6575a833c0c0f0d46cf4e1e72f56455ec4d",
+    "extractor": "regex-v1:INTC:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "The next wave of AI will bring intelligence closer to the end user, moving from foundational models to inference to agentic. This shift is significantly increasing the need for Intel's CPUs and wafer and advanced packaging offerings,",
@@ -5405,8 +5485,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -5419,7 +5499,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -6209,17 +6289,7 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": {
-    "value": 10.1,
-    "unit": "percent",
-    "snippet": "GAAP gross margin of 10.1%",
-    "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-    "flags": 2,
-    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
-    "source_sha256": "59baa19738c71612928b9aff859f150b1f47384507f4a71df90706cb563eb3eb",
-    "extractor": "regex-v1:SMCI:gross_margin",
-    "verified": true
-   }
+   "gross_margin": null
   },
   "commentary": {
    "text": "Supermicro's transformation into a total datacenter infrastructure provider is accelerating,",
@@ -6258,8 +6328,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": true,
-     "detail": "ok"
+     "ok": false,
+     "detail": "not found in source"
     }
    ],
    "missing_required": [
@@ -6274,7 +6344,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "reported"
+    "gross_margin": "not_reported"
    }
   },
   "status": "data_incomplete"
@@ -6361,7 +6431,17 @@
     "extractor": "regex-v1:AMD:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 53.0,
+    "unit": "percent",
+    "snippet": "gross margin was 53%",
+    "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+    "source_sha256": "9dec9381cc51380746529cfd3bce1830761c29b304d2979a8ef9b611b5e3d754",
+    "extractor": "regex-v1:AMD:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "First quarter results reflect strong performance across all key financial metrics, with accelerating revenue growth, earnings expansion and record quarterly free cash flow,",
@@ -6411,8 +6491,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -6425,7 +6505,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -6512,7 +6592,17 @@
     "extractor": "regex-v1:NVDA:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 74.9,
+    "unit": "percent",
+    "snippet": "Gross margin | 74.9 | %",
+    "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "source_sha256": "736c5d15dc63b5110455150e76a796a912a44ae0c0c03928b4326299a84bb618",
+    "extractor": "regex-v1:NVDA:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "The buildout of AI factories - the largest infrastructure expansion in human history - is accelerating at extraordinary speed,",
@@ -6562,8 +6652,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -6576,7 +6666,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -6653,7 +6743,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 52.1,
+    "unit": "percent",
+    "snippet": "GAAP gross margin | | 52.1 | %",
+    "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000014/q127_8kx522026ex-991.htm",
+    "source_sha256": "20394096e2d7986625290beeb2f100cdf5c476d6c3902c4d089b558a86c094dc",
+    "extractor": "regex-v1:MRVL:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Marvell delivered record first-quarter fiscal 2027 revenue of $2.418 billion, up 28% year-over-year, and guided second-quarter revenue to $2.7 billion at the mid-point, representing 35% year-over-year growth. We expect revenue growth to continue accelerating each quarter throughout fiscal 2027, driven by continued strength in our data center business,",
@@ -6703,8 +6803,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -6717,7 +6817,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -6914,7 +7014,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 72.0,
+    "unit": "percent",
+    "snippet": "representing a 72% gross margin",
+    "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026038798/mdb-043026xex991xrelease.htm",
+    "source_sha256": "9a0c8995a841f06f8efbec5059d657f25e188e375bf78df9e8378e0e8b34bd51",
+    "extractor": "regex-v1:MDB:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "We delivered better-than-expected first quarter results, as our go-to-market teams continue to execute well and capitalize on strong end-market demand for the MongoDB platform across enterprise use cases and emerging AI opportunities. At the same time, we continue to show strong profitability, demonstrating we can drive durable revenue growth while simultaneously expanding margin. Based on the momentum we are seeing in the business, we are raising our fiscal 2027 guidance,",
@@ -6964,8 +7074,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -6978,7 +7088,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -8010,7 +8120,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 40.4,
+    "unit": "percent",
+    "snippet": "GAAP gross margin percentage | | 40.4 | %",
+    "pattern": "GAAP gross margin percentage \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+    "source_sha256": "5793462254cf215b58c508b426a914e3264b8044e623b7433f7e51696caf7e7a",
+    "extractor": "regex-v1:INTC:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "AI is driving unprecedented demand for compute, and as we continue to execute, Intel is well-positioned to capture sustainable growth across our CPU franchise, ASICs, advanced packaging and vast wafer foundry network,",
@@ -8060,8 +8180,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -8074,7 +8194,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -8886,7 +9006,17 @@
     "extractor": "regex-v1:AMD:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 54.0,
+    "unit": "percent",
+    "snippet": "gross margin was 54%",
+    "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+    "source_sha256": "251cb1dc61dc45e98d13328d5bc5151e25bb853068237b651925eb7089438d39",
+    "extractor": "regex-v1:AMD:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,",
@@ -8936,8 +9066,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -8950,7 +9080,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -9027,17 +9157,7 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": {
-    "value": 17.6,
-    "unit": "percent",
-    "snippet": "GAAP gross margin of 17.6%",
-    "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-    "flags": 2,
-    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
-    "source_sha256": "be2a869e0a7efdb7e171aebb92b5cb79b0e9cad1ada8e0c7dc53902c4c62eb9b",
-    "extractor": "regex-v1:SMCI:gross_margin",
-    "verified": true
-   }
+   "gross_margin": null
   },
   "commentary": {
    "text": "Our Total AI/IT Solutions strategy continues to deliver strong results, we added several hundred enterprise and other customers in the past year, generated more than $60 billion in new orders, and booked record backlog entering fiscal 2027,",
@@ -9087,8 +9207,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": true,
-     "detail": "ok"
+     "ok": false,
+     "detail": "not found in source"
     }
    ],
    "missing_required": [],
@@ -9101,7 +9221,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "reported"
+    "gross_margin": "not_reported"
    }
   },
   "status": "complete"
@@ -9464,7 +9584,17 @@
     "extractor": "regex-v1:NVDA:eps_diluted",
     "verified": true
    },
-   "gross_margin": null
+   "gross_margin": {
+    "value": 75.0,
+    "unit": "percent",
+    "snippet": "Gross margin | 75.0 | %",
+    "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+    "source_sha256": "1809cb206590dcfeb959f3a1a64157f4e5ee42788ec51289b74f3ea299931eb7",
+    "extractor": "regex-v1:NVDA:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "AI has reached its inflection point. It's doing useful work. Its tokens are productive and profitable. Now, compute is revenue,",
@@ -9514,8 +9644,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -9528,7 +9658,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -9605,7 +9735,17 @@
     "verified": true
    },
    "eps_diluted": null,
-   "gross_margin": null
+   "gross_margin": {
+    "value": 53.1,
+    "unit": "percent",
+    "snippet": "GAAP gross margin | | 53.1 | %",
+    "pattern": "GAAP gross margin \\| \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+    "source_sha256": "b8eb3cdd2307a3cb2aac1d9f67a3cb01ca7b2c43ac8ad726850bfb1c9b5c4313",
+    "extractor": "regex-v1:MRVL:gross_margin",
+    "verified": true
+   }
   },
   "commentary": {
    "text": "Marvell delivered record second-quarter fiscal 2027 revenue of $2.739 billion, up 37% year over year, driven by continued strong demand across our Data Center portfolio, where revenue growth accelerated to 46% year over year,",
@@ -9655,8 +9795,8 @@
     },
     {
      "field": "gross_margin",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     }
    ],
    "missing_required": [],
@@ -9669,7 +9809,7 @@
    ],
    "optional_fields": {
     "eps_diluted": "not_reported",
-    "gross_margin": "not_reported"
+    "gross_margin": "reported"
    }
   },
   "status": "complete"
@@ -9749,9 +9889,9 @@
    "gross_margin": {
     "value": 74.0,
     "unit": "percent",
-    "snippet": "GAAP gross margin of 74%",
-    "pattern": "GAAP gross margin (?:was|of) (\\d+(?:\\.\\d+)?)%",
-    "flags": 2,
+    "snippet": "representing a 74% gross margin",
+    "pattern": "representing a (\\d+(?:\\.\\d+)?)% gross margin",
+    "flags": 0,
     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026059794/mdb-073126xex991xrelease.htm",
     "source_sha256": "975f7dea32d095bf623728b8bf429f7d2061ca6cd0a78d17990a435b28b83a8e",
     "extractor": "regex-v1:MDB:gross_margin",
