@@ -15,9 +15,10 @@
 <header class="nav reveal" style="--d:0">
   <a class="logo" href="/">RESIDUAL<sup>®</sup></a>
   <nav class="links">
+    <a href="#overview">Overview</a>
     <a href="#signal">Signal room</a>
     <a href="#how">How it works</a>
-    <a href="#results">Results</a>
+    <a href="#proof">Proof</a>
     <a href="/dashboard">Audit</a>
   </nav>
   <a class="pill" href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">
@@ -55,21 +56,33 @@
     <div class="orb-fallback"></div>
   </div>
 
-  <a class="scroll-btn reveal" style="--d:7" href="#signal" aria-label="Scroll to explore">
+  <a class="scroll-btn reveal" style="--d:7" href="#overview" aria-label="Scroll to explore">
     <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
   <p class="scroll-label reveal" style="--d:7">Scroll to explore</p>
 </main>
 
 <div id="body">
-  <!-- signal room: the core experience, first -->
+
+  <!-- overview -->
+  <section id="overview" class="sec">
+    <div class="center-head">
+      <p class="kicker rv">Overview</p>
+      <h2 class="duo rv">The market moved.<br><span class="tw" data-text="Which part was the company?"></span></h2>
+      <p class="sub rv">When a company reports earnings, its stock moves for many reasons at once. RESIDUAL separates the company's own part from the rest, and only acts on that.</p>
+    </div>
+    <div id="ov-grid" class="ov-grid bento"></div>
+  </section>
+
+  <!-- signal room -->
   <section id="signal" class="sec">
     <div class="center-head">
       <p class="kicker rv">Signal room</p>
       <h2 class="duo rv">Take one earnings move apart<br><span class="tw" data-text="and keep only the company."></span></h2>
+      <p class="sub rv">Every dot is a real earnings release. Pick one, or let it play through the trades.</p>
     </div>
     <div class="strip-wrap rv">
-      <div class="strip-legend"><span><i class="lg trade"></i>Traded</span><span><i class="lg no"></i>No trade</span><span class="muted">Dot size = size of the company residual · click any release</span></div>
+      <div class="strip-legend"><span><i class="lg trade"></i>Traded</span><span><i class="lg no"></i>No trade</span><span class="muted">Dot size shows how large the company's own move was</span></div>
       <div id="strip" class="strip"></div>
     </div>
     <div id="stage" class="stage"></div>
@@ -79,33 +92,79 @@
   <section id="how" class="sec">
     <div class="center-head">
       <p class="kicker rv">How it works</p>
-      <h2 class="duo rv">Four steps, every release<br><span class="tw" data-text="no number from a guess."></span></h2>
+      <h2 class="duo rv">From filing to hedged pair<br><span class="tw" data-text="without a single guessed number."></span></h2>
     </div>
-    <div class="steps">
-      <article class="step rv"><span class="step-n">1</span><h4>Read the filing</h4><p>Revenue and guidance come from the SEC press release. Each number keeps its exact quote and a document hash.</p></article>
-      <article class="step rv"><span class="step-n">2</span><h4>Remove the market</h4><p>Hourly Bitget betas split the early move into market, sector and liquidity. What is left is the company.</p></article>
-      <article class="step rv"><span class="step-n">3</span><h4>Check the gates</h4><p>Hedge fit, liquidity, cost, robustness and a quote checked AI read. One failure means no trade.</p></article>
-      <article class="step rv"><span class="step-n">4</span><h4>Trade the pair</h4><p>Long or short the company against a beta weighted hedge, with fees, slippage and funding on both legs.</p></article>
-    </div>
+    <ol class="flow">
+      <li class="flow-step rv"><span class="flow-dot"></span><div><h4>Catch the release</h4><p>RESIDUAL watches SEC EDGAR for earnings filings from a curated set of companies that trade as Bitget stock perpetuals. The SEC acceptance time becomes the event clock.</p></div></li>
+      <li class="flow-step rv"><span class="flow-dot"></span><div><h4>Read the numbers, keep the receipts</h4><p>Reported revenue and the company's own guidance are pulled from the press release. Every number keeps the exact sentence it came from and a fingerprint of the document, and is checked again before use.</p></div></li>
+      <li class="flow-step rv"><span class="flow-dot"></span><div><h4>Remove the market and the sector</h4><p>Using weeks of hourly Bitget prices from before the release, RESIDUAL learns how the stock usually moves with the broad market and its peers, then subtracts that from the reaction. What is left belongs to the company.</p></div></li>
+      <li class="flow-step rv"><span class="flow-dot"></span><div><h4>Ask for a second reading</h4><p>An AI reads the release and says whether the company move looks durable, temporary or already priced in. It must quote the filing word for word, and it can only shrink a position, never set one.</p></div></li>
+      <li class="flow-step rv"><span class="flow-dot"></span><div><h4>Pass every gate, or stand aside</h4><p>Is there a hedge that tracks the stock? Enough volume? A move big enough to beat costs? Stable across models? One failure and the answer is no trade.</p></div></li>
+      <li class="flow-step rv"><span class="flow-dot"></span><div><h4>Trade the pair, then explain the result</h4><p>Long or short the company against a beta weighted hedge. After 24 hours, the profit or loss is split into what the company did, what the hedge missed, and what trading cost.</p></div></li>
+    </ol>
   </section>
 
-  <!-- results, simple -->
-  <section id="results" class="sec">
+  <!-- execution -->
+  <section id="execution" class="sec">
     <div class="center-head">
-      <p class="kicker rv">Results</p>
-      <h2 class="duo rv">Scored walk forward<br><span class="tw" data-text="against the obvious trade."></span></h2>
+      <p class="kicker rv">Paper execution</p>
+      <h2 class="duo rv">What happened next<br><span class="tw" data-text="for the release you picked."></span></h2>
     </div>
-    <div class="res-wrap rv">
-      <div id="basis" class="chips"></div>
-      <div id="bars" class="bars"></div>
-      <p id="res-note" class="res-note"></p>
-      <a class="audit-link" href="/dashboard">Open the full audit <span>tables, sources, hashes, ledger, operator view</span></a>
+    <div id="exec"></div>
+  </section>
+
+  <!-- proof -->
+  <section id="proof" class="sec">
+    <div class="center-head">
+      <p class="kicker rv">Proof</p>
+      <h2 class="duo rv">Scored walk forward<br><span class="tw" data-text="against the obvious trade."></span></h2>
+      <p class="sub rv">Each decision only used information from earlier events. Then we compared it with simply buying beats and selling misses, on the same releases.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="card rv">
+        <div id="basis" class="chips"></div>
+        <div id="bars" class="bars"></div>
+        <p id="res-note" class="res-note"></p>
+      </div>
+      <div class="card rv">
+        <h4>Cumulative paper result, release by release</h4>
+        <div id="curve"></div>
+      </div>
+    </div>
+    <div class="proof-links rv">
+      <a class="dl" href="data.json" download>Full results</a>
+      <a class="dl" href="ledger.csv" download>Paper order ledger</a>
+      <a class="dl" href="events.json" download>Earnings dataset</a>
+      <a class="audit-link" href="/dashboard">Open the full audit <span>every table, source and fingerprint</span></a>
     </div>
   </section>
 
-  <footer class="foot2">
-    <span>RESIDUAL · paper trading research · not investment advice</span>
-    <span><a href="/dashboard">Audit</a> · <a href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">Source on GitHub</a></span>
+  <!-- questions -->
+  <section id="faq" class="sec">
+    <div class="center-head">
+      <p class="kicker rv">Questions</p>
+      <h2 class="duo rv">Fair things to ask<br><span class="tw" data-text="with straight answers."></span></h2>
+    </div>
+    <div class="faq">
+      <details class="rv"><summary>Is this trading real money?</summary><p>No. Historical results are paper trades built from real Bitget prices. Live mode can place orders on Bitget Demo Trading when demo keys are configured. RESIDUAL never touches a real money account.</p></details>
+      <details class="rv"><summary>Where does the "expected" revenue come from?</summary><p>From the company itself: the revenue guidance it published a quarter earlier. The SEC does not publish analyst consensus, so this keeps every number traceable to a filing. It is a guidance surprise, not a consensus surprise.</p></details>
+      <details class="rv"><summary>Why do most releases end in no trade?</summary><p>Because the gates are strict. Early events predate Bitget listing the stock, and many reactions happen after hours when volume is thin. Standing aside is a decision too, and every one is explained.</p></details>
+      <details class="rv"><summary>Does the AI decide the trades?</summary><p>No. The market, sector and hedge numbers are pure statistics. The AI only labels the move and can reduce size. Any answer that invents a quote or adds a number is rejected.</p></details>
+      <details class="rv"><summary>Does it beat the market?</summary><p>Not proven. On the same releases, the plain headline trade did better in this small sample. We publish that, along with every trade, so anyone can check or improve on it.</p></details>
+      <details class="rv"><summary>Can I reproduce everything?</summary><p>Yes. The filings, prices and AI answers are stored in the repository, so the whole replay runs offline with one command: <code>python -m residual replay --offline</code>.</p></details>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-top">
+      <div><div class="logo">RESIDUAL<sup>®</sup></div><p class="muted">Event neutral earnings agent for Bitget stock perpetuals.</p></div>
+      <div class="foot-cols">
+        <div><h5>Explore</h5><a href="#signal">Signal room</a><a href="#how">How it works</a><a href="#proof">Proof</a></div>
+        <div><h5>Evidence</h5><a href="/dashboard">Audit</a><a href="ledger.csv" download>Ledger</a><a href="events.json" download>Dataset</a></div>
+        <div><h5>Build</h5><a href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/jenzylove/residual#readme" target="_blank" rel="noopener">README</a></div>
+      </div>
+    </div>
+    <p class="foot-bottom">Paper trading research built for the Bitget S2 Alpha Factory. Not investment advice.</p>
   </footer>
 </div>
 

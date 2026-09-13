@@ -1,5 +1,5 @@
 "use strict";
-// Landing body: signal room (with event strip and autoplay), how it works, results.
+// Landing body: overview, signal room (strip + stage + autoplay), paper execution, proof.
 (() => {
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -9,9 +9,20 @@ const usd = (x, d = 0) => x == null ? "n/a" : (x < 0 ? "−" : x > 0 ? "+" : "")
 const bn = m => m == null ? "n/a" : m >= 1000 ? "$" + (m / 1000).toFixed(1) + "B" : "$" + Math.round(m) + "M";
 const cls = x => x > 0 ? "pos" : x < 0 ? "neg" : "";
 const day = iso => new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+const when = ms => new Date(ms).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
 const GATE = {
   event_data: "Filing verified", market_data: "Market data", hedge: "Hedge fits", liquidity: "Liquidity",
   robust: "Robust betas", reaction_open: "Move still open", residual_vs_cost: "Clears cost", ai_interpretation: "AI read"
+};
+const PLAIN = {
+  market_data: "Bitget did not list this stock, or enough of its history, at the time.",
+  liquidity: "Too little volume after hours to trade this size cleanly.",
+  reaction_open: "The early move had already half reversed.",
+  residual_vs_cost: "The company's own move was too small to beat trading costs.",
+  robust: "The company's own move changed sign depending on the model window.",
+  hedge: "No hedge instrument tracked this stock closely enough.",
+  ai_interpretation: "The AI read the move as not tradeable.",
+  event_data: "The filing numbers could not be verified.",
 };
 const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const QS = new URLSearchParams(location.search);
@@ -20,30 +31,89 @@ let D, EV = {}, ROW = {}, current = null, IO = null, auto = null;
 
 fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
   D = d; d.events.forEach(e => EV[e.event_id] = e); d.rows.forEach(r => ROW[r.event_id] = r);
+  overview();
   strip();
   const trades = d.rows.filter(r => r.decision.decision === "TRADE");
   show((trades[trades.length - 1] || d.rows[d.rows.length - 1]).event_id);
-  results("primary");
+  proof("primary");
   reveal();
   startAuto();
-}).catch(e => { $("#stage").innerHTML = `<div class="card"><p>Could not load data.json: ${esc(e.message)}</p></div>`; });
+}).catch(e => { $("#ov-grid").innerHTML = `<div class="card wide"><p>Could not load data.json: ${esc(e.message)}</p></div>`; });
+
+/* ---------- small visuals ---------- */
+function spark(curves) {
+  const W = 600, H = 80, all = curves.flat(), n = Math.max(...curves.map(c => c.length));
+  const lo = Math.min(0, ...all), hi = Math.max(0, ...all);
+  const x = i => i / Math.max(1, n - 1) * W, y = v => H - 4 - (v - lo) / ((hi - lo) || 1) * (H - 8);
+  const path = c => c.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <line x1="0" x2="${W}" y1="${y(0)}" y2="${y(0)}" stroke="#141418" stroke-opacity=".12"/>
+    <path class="line" d="${path(curves[0])}" fill="none" stroke="#6c4ee6" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+    <path class="line" d="${path(curves[1])}" fill="none" stroke="#d0453b" stroke-width="1.4" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/>
+  </svg>`;
+}
+function dial(frac) {
+  const r = 46, c = 2 * Math.PI * r;
+  return `<svg class="dial" viewBox="0 0 112 112"><circle cx="56" cy="56" r="${r}" fill="none" stroke="rgba(20,20,24,.07)" stroke-width="10"/>
+    <circle class="arc" cx="56" cy="56" r="${r}" fill="none" stroke="#6c4ee6" stroke-width="10" stroke-linecap="round"
+      stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c * (1 - frac)}" transform="rotate(-90 56 56)"/>
+    <text x="56" y="62" text-anchor="middle" font-size="17" fill="#141418">${Math.round(frac * 100)}%</text></svg>`;
+}
+
+/* ---------- overview ---------- */
+function overview() {
+  const rows = D.rows, trades = rows.filter(r => r.decision.decision === "TRADE"), traded = trades.filter(r => r.residual);
+  const complete = traded.filter(r => r.residual.funding_data === "complete").length;
+  const P = D.summary.residual, N = D.summary.naive_same_events;
+  const latest = [...rows].sort((a, b) => EV[b.event_id].release_ms - EV[a.event_id].release_ms).slice(0, 4);
+  const live = (D.live_log || []).slice(-1)[0];
+  const next = live ? Object.entries(live.next_estimated_release || {})[0] : null;
+  const badge = d => d === "TRADE" ? '<span class="badge b-trade">Trade</span>' : '<span class="badge b-no">No trade</span>';
+  $("#ov-grid").innerHTML = `
+    <div class="card wide rv">
+      <h4>Paper result <span class="badge b-paper" style="margin-left:8px">Paper only</span></h4>
+      <div style="display:flex;gap:48px;flex-wrap:wrap;align-items:flex-end">
+        <div><div class="big ${cls(P.total_net_pnl)}">${usd(P.total_net_pnl, 0)}</div><p class="note">Residual pair</p></div>
+        <div><div class="big ${cls(N.total_net_pnl)}">${usd(N.total_net_pnl, 0)}</div><p class="note">Plain headline trade, same releases</p></div>
+      </div>
+      ${spark([P.equity_curve, N.equity_curve])}
+    </div>
+    <div class="card rv">
+      <h4>Decisions</h4>
+      <div style="display:flex;align-items:center;gap:20px">${dial(trades.length / rows.length)}
+        <div><div class="big">${trades.length}</div><p class="note" style="margin-top:6px">trades out of ${rows.length} releases</p></div></div>
+    </div>
+    <div class="card rv">
+      <h4>Latest releases</h4>
+      <ul class="mini">${latest.map(r => `<li><a href="#signal" data-open="${esc(r.event_id)}"><b>${esc(EV[r.event_id].ticker)}</b> <span class="muted">${day(EV[r.event_id].release_utc)}</span></a>${badge(r.decision.decision)}</li>`).join("")}</ul>
+    </div>
+    <div class="card rv">
+      <h4>Watcher</h4>
+      ${live ? `<div style="display:flex;gap:10px;align-items:center"><i class="dot live"></i><b>${live.decision === "NO_TRADE" ? "Watching, nothing to trade" : esc(live.decision)}</b></div>
+        <p class="note">${next ? `Next expected release: ${esc(next[0])} around ${esc(next[1])}.` : ""} Last check ${esc(live.checked_at.slice(0, 10))}.</p>` : `<p class="note">No watcher run yet.</p>`}
+    </div>
+    <div class="card rv">
+      <h4>Funding data</h4>
+      <div class="big">${complete}<span class="muted" style="font-size:.45em"> of ${traded.length} trades complete</span></div>
+      <div class="meter"><i style="background:#1f9d6c" data-w="${traded.length ? complete / traded.length * 100 : 0}%"></i><i style="background:#e3b54b" data-w="${traded.length ? (traded.length - complete) / traded.length * 100 : 0}%"></i></div>
+    </div>`;
+  document.querySelectorAll("[data-open]").forEach(a => a.onclick = e => { e.preventDefault(); stopAuto(); show(a.dataset.open); $("#signal").scrollIntoView({ behavior: "smooth" }); });
+}
 
 /* ---------- event strip ---------- */
 function strip() {
   const rows = [...D.rows].sort((a, b) => EV[a.event_id].release_ms - EV[b.event_id].release_ms);
   const t0 = EV[rows[0].event_id].release_ms, t1 = EV[rows[rows.length - 1].event_id].release_ms;
-  const W = 1000, H = 96, pad = 16;
+  const W = 1000, H = 100, pad = 16, mid = 46;
   const x = ms => pad + (ms - t0) / (t1 - t0) * (W - pad * 2);
   const maxR = Math.max(...rows.map(r => Math.abs(r.analysis.residual || 0)));
-  // stagger dots that share a date region
-  const placed = [];
-  let g = `<line x1="${pad}" x2="${W - pad}" y1="48" y2="48" stroke="#141418" stroke-opacity=".12"/>`;
-  const months = new Set();
+  const placed = [], months = new Set();
+  let g = `<line x1="${pad}" x2="${W - pad}" y1="${mid}" y2="${mid}" stroke="#141418" stroke-opacity=".12"/>`;
   rows.forEach(r => {
-    const e = EV[r.event_id], cx = x(e.release_ms);
-    const res = r.analysis.residual, rad = res == null ? 4 : 4 + Math.abs(res) / maxR * 11;
-    let cy = 48;
-    for (const p of placed) if (Math.abs(p.x - cx) < p.r + rad + 2 && Math.abs(p.y - cy) < p.r + rad + 2) cy = cy <= 48 ? 48 + (48 - cy) + p.r + rad + 2 : 48 - (cy - 48);
+    const e = EV[r.event_id], cx = x(e.release_ms), res = r.analysis.residual;
+    const rad = res == null ? 4 : 4 + Math.abs(res) / maxR * 11;
+    let cy = mid, k = 0;
+    while (placed.some(p => Math.hypot(p.x - cx, p.y - cy) < p.r + rad + 2) && k < 8) { k++; cy = mid + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * (rad + 6); }
     placed.push({ x: cx, y: cy, r: rad });
     const trade = r.decision.decision === "TRADE";
     g += `<g class="dotg" data-id="${esc(r.event_id)}" tabindex="0"><circle class="ring" cx="${cx}" cy="${cy}" r="${rad + 5}"/>
@@ -61,11 +131,9 @@ function strip() {
     el.onclick = () => { stopAuto(); show(id); };
     el.onkeydown = ev => { if (ev.key === "Enter") { stopAuto(); show(id); } };
     el.onmouseenter = () => {
-      const c = el.querySelector("circle.d"), box = $("#strip").getBoundingClientRect(), svg = $("#strip svg").getBoundingClientRect();
-      const px = +c.getAttribute("cx") / W * svg.width, py = +c.getAttribute("cy") / H * svg.height;
-      const r = ROW[id];
-      tip.innerHTML = `<b>${esc(EV[id].ticker)}</b> ${day(EV[id].release_utc)} · ${r.decision.decision === "TRADE" ? "trade" : "no trade"} · residual ${pct(r.analysis.residual)}`;
-      tip.style.left = px + "px"; tip.style.top = py + "px"; tip.style.opacity = 1;
+      const c = el.querySelector("circle.d"), svg = $("#strip svg").getBoundingClientRect();
+      tip.innerHTML = `<b>${esc(EV[id].ticker)}</b> ${day(EV[id].release_utc)} · ${ROW[id].decision.decision === "TRADE" ? "trade" : "no trade"} · company move ${pct(ROW[id].analysis.residual)}`;
+      tip.style.left = (+c.getAttribute("cx") / W * svg.width) + "px"; tip.style.top = (+c.getAttribute("cy") / H * svg.height) + "px"; tip.style.opacity = 1;
     };
     el.onmouseleave = () => tip.style.opacity = 0;
   });
@@ -77,41 +145,29 @@ function waterfall(d) {
   let cum = 0; const pts = [0];
   steps.forEach(s => { cum += s[1]; pts.push(cum); });
   const lo = Math.min(0, ...pts, d.observed), hi = Math.max(0, ...pts, d.observed);
-  const W = 640, L = 92, R = 76, rowH = 42;
-  const H = 10 + (steps.length + 1) * rowH + 12;
+  const W = 640, L = 92, R = 76, rowH = 44, H = 10 + (steps.length + 1) * rowH + 12;
   const x = v => L + (v - lo) / ((hi - lo) || 1) * (W - L - R);
-  let g = `<line x1="${x(0)}" x2="${x(0)}" y1="2" y2="${H - 4}" stroke="#141418" stroke-opacity=".16"/>`;
-  let c = 0;
+  let g = `<line x1="${x(0)}" x2="${x(0)}" y1="2" y2="${H - 4}" stroke="#141418" stroke-opacity=".16"/>`, c = 0;
   steps.forEach(([n, v, col], i) => {
     const y = 10 + i * rowH, a = x(c), b = x(c + v);
     g += `<text class="lbl" x="0" y="${y + 17}">${n}</text>
-      <rect class="bar" x="${Math.min(a, b)}" y="${y}" width="${Math.max(2, Math.abs(b - a))}" height="24" rx="6" fill="${col}" style="transform-origin:${v >= 0 ? "left" : "right"};transition-delay:${i * 170}ms"/>
+      <rect class="bar" x="${Math.min(a, b)}" y="${y}" width="${Math.max(3, Math.abs(b - a))}" height="24" rx="6" fill="${col}" style="transform-origin:${v >= 0 ? "left" : "right"};animation-delay:${i * 160}ms"/>
       <text x="${Math.max(a, b) + 8}" y="${y + 17}">${pct(v)}</text>`;
     if (i < steps.length - 1) g += `<line x1="${b}" x2="${b}" y1="${y + 24}" y2="${y + rowH}" stroke="#141418" stroke-opacity=".22" stroke-dasharray="2 3"/>`;
     c += v;
   });
   const y = 10 + steps.length * rowH + 8, a = x(0), b = x(d.observed);
   g += `<text class="lbl" x="0" y="${y + 17}" style="fill:#141418">Observed</text>
-    <rect class="bar" x="${Math.min(a, b)}" y="${y}" width="${Math.max(2, Math.abs(b - a))}" height="24" rx="6" fill="#1b1a22" style="transform-origin:${d.observed >= 0 ? "left" : "right"};transition-delay:${steps.length * 170}ms"/>
+    <rect class="bar" x="${Math.min(a, b)}" y="${y}" width="${Math.max(3, Math.abs(b - a))}" height="24" rx="6" fill="#1b1a22" style="transform-origin:${d.observed >= 0 ? "left" : "right"};animation-delay:${steps.length * 160}ms"/>
     <text x="${Math.max(a, b) + 8}" y="${y + 17}" style="fill:#141418;font-weight:600">${pct(d.observed)}</text>`;
   return `<svg class="wf" viewBox="0 0 ${W} ${H}">${g}</svg>`;
 }
 
 function reason(r) {
   const dec = r.decision;
-  if (dec.decision === "TRADE") return `Every gate passed. RESIDUAL took the pair ${dec.direction > 0 ? "long the company" : "short the company"} against the hedge${dec.size < 1 ? `, at ${dec.size * 100}% size because the AI read the move as ${r.interpretation.label.replace(/_/g, " ")}` : ""}.`;
-  const k = dec.reasons[0], g = dec.gates[k];
-  const plain = {
-    market_data: "Bitget did not list this stock, or enough history, at the time.",
-    liquidity: "Too little volume after hours to trade this size cleanly.",
-    reaction_open: "The early move had already half reversed.",
-    residual_vs_cost: "The company part of the move was too small to beat trading costs.",
-    robust: "The company part changed sign depending on the beta window.",
-    hedge: "No hedge instrument tracked this stock closely enough.",
-    ai_interpretation: "The AI read the move as not tradeable.",
-    event_data: "The filing numbers could not be verified.",
-  }[k];
-  return `${plain || (GATE[k] + " failed.")}${dec.reasons.length > 1 ? ` ${dec.reasons.length - 1} other gate${dec.reasons.length > 2 ? "s" : ""} also failed.` : ""}`;
+  if (dec.decision === "TRADE") return `Every gate passed. RESIDUAL took the pair ${dec.direction > 0 ? "long the company" : "short the company"} against the hedge${dec.size < 1 && r.interpretation ? `, at ${dec.size * 100}% size because the AI read the move as ${r.interpretation.label.replace(/_/g, " ")}` : ""}.`;
+  const k = dec.reasons[0];
+  return `${PLAIN[k] || GATE[k] + " failed."}${dec.reasons.length > 1 ? ` ${dec.reasons.length - 1} other gate${dec.reasons.length > 2 ? "s" : ""} also failed.` : ""}`;
 }
 
 function show(id) {
@@ -119,13 +175,13 @@ function show(id) {
   document.querySelectorAll(".dotg").forEach(el => el.classList.toggle("sel", el.dataset.id === id));
   const r = ROW[id], e = EV[id], a = r.analysis, s = e.surprise || {}, d = a.decomposition, dec = r.decision, it = r.interpretation;
   const trade = dec.decision === "TRADE", t = r.residual;
-  const plain = d ? `${esc(e.ticker)} moved <b>${pct(d.observed)}</b> in the two hours after its release. The market explains <b>${pct(d.market)}</b>, the sector <b>${pct(d.sector)}</b>. The part that belongs to the company is <b class="${cls(d.residual)}">${pct(d.residual)}</b>.` : "";
+  const plain = d ? `${esc(e.ticker)} moved <b>${pct(d.observed)}</b> in the two hours after its release. The market explains <b>${pct(d.market)}</b> and the sector <b>${pct(d.sector)}</b>. The part that belongs to the company is <b class="${cls(d.residual)}">${pct(d.residual)}</b>.` : "";
   $("#stage").innerHTML = `
     <div class="stage-col">
       <div class="card">
-        <div class="ev-head"><div><div class="ev-name">${esc(e.ticker)} <em>${d ? pct(d.residual) : ""}</em></div>
-          <div class="ev-sub">${day(e.release_utc)} · revenue ${bn(s.revenue_actual)} vs guidance ${bn(s.revenue_guided_mid)} (${pp(s.guidance_surprise_pct)})</div></div></div>
-        ${d ? waterfall(d) + `<p class="plain">${plain}</p>` : `<p class="plain">No breakdown: ${esc((a.gates.market_data || {}).detail || "market data missing")}.</p>`}
+        <div class="ev-name">${esc(e.ticker)} <em>${d ? pct(d.residual) : ""}</em></div>
+        <div class="ev-sub">${day(e.release_utc)} · revenue ${bn(s.revenue_actual)} against guidance of ${bn(s.revenue_guided_mid)} (${pp(s.guidance_surprise_pct)})</div>
+        ${d ? waterfall(d) + `<p class="plain">${plain}</p>` : `<p class="plain">No breakdown for this release: ${esc(PLAIN.market_data)}</p>`}
       </div>
     </div>
     <div class="stage-col">
@@ -134,53 +190,88 @@ function show(id) {
         <div class="v">${trade ? "Trade" : "No trade"}</div>
         <p class="why">${esc(reason(r))}</p>
         ${trade && a.hedge ? `<div class="pair"><div class="leg ${dec.direction > 0 ? "long" : "short"}"><div class="side">${dec.direction > 0 ? "Long" : "Short"}</div><div class="sym">${esc(e.ticker)}</div></div>
-          <div class="vs">VS</div><div class="leg ${dec.direction > 0 ? "short" : "long"}"><div class="side">${dec.direction > 0 ? "Short" : "Long"}</div><div class="sym">${esc(a.hedge.symbol.replace("USDT", ""))}</div></div></div>
-          <p class="pnl">Hedge ratio ${a.hedge.beta.toFixed(2)} · paper result <b class="${cls(t && t.net)}">${t ? usd(t.net, 0) : "n/a"}</b>${t && t.funding_data !== "complete" ? " · funding data unavailable" : ""}</p>` : ""}
+          <div class="vs">VS</div><div class="leg ${dec.direction > 0 ? "short" : "long"}"><div class="side">${dec.direction > 0 ? "Short" : "Long"}</div><div class="sym">${esc(a.hedge.symbol.replace("USDT", ""))}</div></div></div>` : ""}
       </div>
       <div class="card"><h4>Gates</h4><ul class="gates">${Object.entries(dec.gates).map(([k, g], i) =>
-        `<li style="transition-delay:${i * 70}ms" title="${esc(g.detail)}"><span class="tick ${g.pass ? "ok" : "bad"}">${g.pass ? "✓" : "✕"}</span>${esc(GATE[k] || k)}</li>`).join("")}</ul></div>
+        `<li style="animation-delay:${i * 60}ms" title="${esc(g.detail)}"><span class="tick ${g.pass ? "ok" : "bad"}">${g.pass ? "✓" : "✕"}</span>${esc(GATE[k] || k)}</li>`).join("")}</ul></div>
       ${it && it.status === "ok" ? `<div class="card"><h4>From the filing, via the AI read</h4><p class="quote">“${esc(it.evidence_quotes[0])}”</p>
-        <p class="ai-label">Read as <b>${esc(it.label.replace(/_/g, " "))}</b> · quote verified in the press release</p></div>` : ""}
+        <p class="ai-label">Read as <b>${esc(it.label.replace(/_/g, " "))}</b> · quote checked against the press release</p></div>` : ""}
     </div>`;
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    $("#stage").querySelectorAll(".wf").forEach(w => w.classList.add("go"));
-    $("#stage").querySelectorAll(".gates").forEach(w => w.classList.add("go"));
-  }));
+  execution(r, e);
 }
 
-/* ---------- autoplay through the trades until the visitor clicks ---------- */
+/* ---------- paper execution ---------- */
+function execution(r, e) {
+  const dec = r.decision, t = r.residual;
+  if (dec.decision !== "TRADE" || !t) {
+    $("#exec").innerHTML = `<div class="exec-grid"><div class="card full notrade">
+      <div class="big">No trade</div>
+      <p class="plain">${esc(e.ticker)} on ${day(e.release_utc)} was left alone. Nothing was sized and nothing was sent.</p>
+      <ul class="gates" style="margin-top:24px">${dec.reasons.map((k, i) => `<li style="animation-delay:${i * 60}ms"><span class="tick bad">✕</span><span><b>${esc(GATE[k] || k)}</b> <span class="muted">· ${esc(PLAIN[k] || (dec.gates[k] || {}).detail || "")}</span></span></li>`).join("")}</ul>
+    </div></div>`;
+    return;
+  }
+  const at = t.attribution;
+  const items = [["Company's own move", at.residual], ["Hedge mismatch", at.factor_error], ["Fees", at.fees], ["Slippage", at.slippage], ["Funding", at.funding]];
+  const max = Math.max(...items.map(i => Math.abs(i[1]))) || 1;
+  $("#exec").innerHTML = `<div class="exec-grid">
+    <div class="card">
+      <h4>The pair</h4>
+      <div class="big ${cls(t.net)}">${usd(t.net, 2)}</div>
+      <p class="note">Paper result after fees, slippage and funding · ${t.stopped ? "closed by the stop" : "closed at the 24 hour horizon"}</p>
+      <div class="legs">${t.legs.map(l => `<div class="legrow"><span><b>${esc(l.symbol.replace("USDT", ""))}</b> <small>${l.role === "company" ? "company leg" : "hedge leg"} · ${l.side}</small></span><span class="muted">${l.entry_fill.toFixed(2)} → ${l.exit_fill.toFixed(2)}</span><span class="${cls(l.net)}">${usd(l.net, 2)}</span></div>`).join("")}</div>
+      <dl class="kv"><dt>Opened</dt><dd>${when(t.entry_ms)}</dd><dt>Closed</dt><dd>${when(t.exit_ms)}</dd></dl>
+      ${t.funding_data !== "complete" ? `<div class="warn">Bitget no longer publishes funding history for this period, so this trade is left out of the main result. A worst case funding charge of ${usd(t.funding_conservative, 2)} is used in the stress view.</div>` : ""}
+    </div>
+    <div class="card">
+      <h4>Where the result came from</h4>
+      <div class="attr">${items.map(([k, v]) => `<span>${k}</span><div class="track"><i style="left:${v < 0 ? 50 - Math.abs(v) / max * 50 : 50}%;width:${Math.abs(v) / max * 50}%;background:${v < 0 ? "#d0453b" : "#1f9d6c"}"></i></div><span class="${cls(v)}">${usd(v, 2)}</span>`).join("")}</div>
+      <p class="note">Over the hold, ${esc(e.ticker)} moved ${pct(at.hold_returns.company)}. The market and sector model expected ${pct(at.hold_returns.factor_predicted)}. The gap is the company's own move, which is what the trade was betting on.</p>
+    </div></div>`;
+}
+
+/* ---------- autoplay ---------- */
 function startAuto() {
   if (REDUCE || QS.has("static")) return;
   const ids = D.rows.filter(r => r.decision.decision === "TRADE").map(r => r.event_id);
-  let i = Math.max(0, ids.indexOf(current));
-  const stage = $("#signal");
-  let visible = false;
-  new IntersectionObserver(es => { visible = es[0].isIntersecting; }, { threshold: .35 }).observe(stage);
-  auto = setInterval(() => { if (!visible) return; i = (i + 1) % ids.length; show(ids[i]); }, 6500);
+  let i = Math.max(0, ids.indexOf(current)), visible = false;
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; }, { threshold: .35 }).observe($("#stage"));
+  auto = setInterval(() => { if (!visible) return; i = (i + 1) % ids.length; show(ids[i]); }, 7000);
 }
 function stopAuto() { if (auto) { clearInterval(auto); auto = null; } }
 
-/* ---------- results ---------- */
-function results(basis) {
+/* ---------- proof ---------- */
+function curve(S) {
+  const series = [["Residual pair", S.residual.equity_curve, "#6c4ee6", 2.6], ["Unhedged", S.unhedged.equity_curve, "#b99a55", 1.6], ["Plain headline, same releases", S.naive_same_events.equity_curve, "#d0453b", 1.6]];
+  const W = 600, H = 260, pad = 52, all = series.flatMap(s => s[1]), n = Math.max(...series.map(s => s[1].length));
+  const lo = Math.min(0, ...all), hi = Math.max(0, ...all);
+  const x = i => pad + i / Math.max(1, n - 1) * (W - pad - 8), y = v => H - 24 - (v - lo) / ((hi - lo) || 1) * (H - 40);
+  let g = `<line x1="${pad}" x2="${W - 8}" y1="${y(0)}" y2="${y(0)}" stroke="#141418" stroke-opacity=".15"/><text x="0" y="${y(hi) + 4}">${usd(hi)}</text><text x="0" y="${y(0) + 4}">$0</text><text x="0" y="${y(lo)}">${usd(lo)}</text><text x="${pad}" y="${H - 4}">first release</text><text x="${W - 8}" y="${H - 4}" text-anchor="end">latest</text>`;
+  series.forEach(([, v, col, w], k) => g += `<polyline fill="none" stroke="${col}" stroke-width="${w}" ${k === 2 ? 'stroke-dasharray="5 4"' : ""} stroke-linejoin="round" points="${v.map((p, i) => x(i) + "," + y(p)).join(" ")}"/>`);
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}">${g}</svg><div class="legend">${series.map(s => `<span><i style="background:${s[2]}"></i>${esc(s[0])}</span>`).join("")}</div>`;
+}
+
+function proof(basis) {
   const views = { primary: ["Complete funding data", D.summary], conservative: ["Worst case funding", D.summary_conservative_funding], observed_zero: ["Missing funding as zero", D.summary_observed_zero_funding] };
   $("#basis").innerHTML = Object.entries(views).map(([k, [n]]) => `<button class="chip ${k === basis ? "on" : ""}" data-b="${k}">${n}</button>`).join("");
-  $("#basis").querySelectorAll("button").forEach(b => b.onclick = () => results(b.dataset.b));
+  $("#basis").querySelectorAll("button").forEach(b => b.onclick = () => proof(b.dataset.b));
   const S = views[basis][1];
-  const items = [["Residual pair", "the hedged company trade", S.residual, "#6c4ee6"], ["Unhedged", "same signals, no hedge", S.unhedged, "#b99a55"], ["Naive headline", "beat goes long, same events", S.naive_same_events, "#d0453b"]];
+  const items = [["Residual pair", "the hedged company trade", S.residual, "#6c4ee6"], ["Unhedged", "same signals, no hedge", S.unhedged, "#b99a55"], ["Plain headline", "buy beats, same releases", S.naive_same_events, "#d0453b"]];
   const max = Math.max(...items.map(i => Math.abs(i[2].total_net_pnl))) || 1;
   $("#bars").innerHTML = items.map(([n, sub, m, col]) => {
     const v = m.total_net_pnl, w = Math.abs(v) / max * 50;
     return `<div class="barrow"><div class="name">${n}<small>${sub}</small></div>
-      <div class="track"><span class="zero" style="left:50%"></span><i style="left:50%;width:0;background:${col}" data-l="${v < 0 ? 50 - w : 50}%" data-w="${w}%"></i></div>
+      <div class="track"><span class="zero"></span><i style="left:50%;width:0;background:${col}" data-l="${v < 0 ? 50 - w : 50}%" data-w="${w}%"></i></div>
       <div class="val ${cls(v)}">${usd(v, 0)}</div></div>`;
   }).join("");
   requestAnimationFrame(() => requestAnimationFrame(() => $("#bars").querySelectorAll("i").forEach(i => { i.style.left = i.dataset.l; i.style.width = i.dataset.w; })));
   const tr = S.residual.trades;
-  $("#res-note").innerHTML = {
-    primary: `${tr} paper trades with complete funding data, $10,000 company notional each. On these events the plain headline trade did better than the residual pair. A sample this small proves nothing either way, which is why every number is published in the audit.`,
+  $("#res-note").textContent = {
+    primary: `${tr} paper trades with complete funding data, $10,000 on the company side each. On these releases the plain headline trade did better than the residual pair. A sample this small proves nothing either way, which is why every trade is published.`,
     conservative: `All ${tr} paper trades, with any missing funding charged at the worst rate seen on Bitget.`,
-    observed_zero: `All ${tr} paper trades, with missing funding taken as zero. Shown for comparison; it flatters trades with unknown funding.`,
+    observed_zero: `All ${tr} paper trades, with missing funding counted as zero. Shown for comparison only.`,
   }[basis];
+  $("#curve").innerHTML = curve(S);
 }
 
 /* ---------- motion ---------- */
@@ -188,24 +279,31 @@ function typeIn(el) {
   const text = el.dataset.text || "";
   if (REDUCE || QS.has("static")) { el.textContent = text; el.classList.add("done"); return; }
   let i = 0;
-  const step = () => { el.textContent = text.slice(0, ++i); if (i < text.length) setTimeout(step, 36 + Math.random() * 36); else el.classList.add("done"); };
+  const step = () => { el.textContent = text.slice(0, ++i); if (i < text.length) setTimeout(step, 34 + Math.random() * 34); else el.classList.add("done"); };
   setTimeout(step, 250);
 }
+function activate(t) {
+  t.classList.add("in");
+  t.querySelectorAll(".tw").forEach(typeIn);
+  t.querySelectorAll(".meter i").forEach(i => i.style.width = i.dataset.w);
+  t.querySelectorAll("circle.arc").forEach(a => a.style.strokeDashoffset = a.dataset.off);
+}
 function reveal() {
-  IO = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add("in");
-    e.target.querySelectorAll(".tw").forEach(typeIn);
-    IO.unobserve(e.target);
-  }), { threshold: .12 });
+  document.querySelectorAll(".bento .card").forEach((c, i) => c.style.transitionDelay = `${i * 110}ms`);
+  IO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { activate(e.target); IO.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll(".rv").forEach(el => IO.observe(el));
   if (QS.has("nohero")) $(".hero").style.display = "none";
-  if (QS.has("static")) document.querySelectorAll(".rv").forEach(el => { el.classList.add("in"); el.querySelectorAll(".tw").forEach(typeIn); });
-  // layout self check: ?check writes horizontal overflow into the page title
+  if (QS.has("static")) document.querySelectorAll(".rv").forEach(activate);
+  const grid = $(".bento");
+  if (grid && !REDUCE) grid.addEventListener("pointermove", ev => {
+    const r = grid.getBoundingClientRect(), nx = (ev.clientX - r.left) / r.width - .5, ny = (ev.clientY - r.top) / r.height - .5;
+    grid.querySelectorAll(".card.in").forEach((c, i) => { const k = 4 + (i % 3) * 3; c.style.setProperty("--px", `${(-nx * k).toFixed(1)}px`); c.style.setProperty("--py", `${(-ny * k).toFixed(1)}px`); });
+  });
   if (QS.has("check")) setTimeout(() => {
     const over = document.documentElement.scrollWidth - innerWidth;
     const wide = [...document.querySelectorAll("#body *")].filter(n => n.getBoundingClientRect().right > innerWidth + 1).map(n => n.className || n.tagName).slice(0, 5);
-    document.title = `CHECK overflow=${over} wide=${JSON.stringify(wide)}`;
-  }, 1500);
+    const bars = [...document.querySelectorAll("#stage rect.bar")].map(b => Math.round(b.getBoundingClientRect().width));
+    document.title = `CHECK overflow=${over} wide=${JSON.stringify(wide)} wfbars=${JSON.stringify(bars)}`;
+  }, 2500);
 }
 })();
