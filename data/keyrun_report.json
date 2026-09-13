@@ -1,5 +1,5 @@
 {
- "started_at": "2026-09-13T13:34:44Z",
+ "started_at": "2026-09-13T14:04:31Z",
  "steps": [
   {
    "step": "credentials present",
@@ -10,19 +10,19 @@
   {
    "step": "public Bitget API reachable",
    "ok": true,
-   "seconds": 2.1,
+   "seconds": 4.3,
    "result": {
     "doh_fallback": false,
     "ticker": {
      "symbol": "QQQUSDT",
-     "bid": 708.36,
-     "ask": 708.37,
-     "last": 708.33,
+     "bid": 710.14,
+     "ask": 710.15,
+     "last": 710.14,
      "spread_bps": 0.14,
-     "bid_depth_10bps_usdt": 86578.0,
-     "ask_depth_10bps_usdt": 79830.0,
+     "bid_depth_10bps_usdt": 25830.0,
+     "ask_depth_10bps_usdt": 56834.0,
      "funding_rate": 0.0,
-     "ts": 1789306499831
+     "ts": 1789308287177
     }
    }
   },
@@ -30,23 +30,17 @@
    "step": "authenticate",
    "ok": true,
    "seconds": 0.0,
-   "result": "<residual.demo.BitgetDemo object at 0x000001CED8045550>"
+   "result": "<residual.demo.BitgetDemo object at 0x0000029D636B5400>"
   },
   {
    "step": "demo account",
-   "ok": true,
-   "seconds": 0.8,
-   "result": [
-    [
-     "USDT",
-     "0"
-    ]
-   ]
+   "ok": false,
+   "error": "DemoError: demo USDT-M futures balance is 0.00 USDT. Demo funds land in the demo spot wallet; in the Bitget app (Demo Trading) use Assets > Transfer, from Spot to USDT-M Futures. The Demo API does not support transfers."
   },
   {
    "step": "demo symbol coverage",
    "ok": true,
-   "seconds": 0.9,
+   "seconds": 3.1,
    "result": {
     "NVDAUSDT": "NVDAUSDT",
     "AMDUSDT": null,
@@ -65,14 +59,9 @@
    }
   },
   {
-   "step": "roundtrip NVDAUSDT/AAPLUSDT $50.0",
-   "ok": false,
-   "error": "DemoError: pair not opened: POST /api/v2/mix/order/place-order: 40774 The order type for unilateral position must also be the unilateral position type.; rolled back 0 leg(s)"
-  },
-  {
    "step": "live watcher pass",
    "ok": true,
-   "seconds": 39.6,
+   "seconds": 65.8,
    "result": {
     "decision": "NO_TRADE",
     "reason": "no eligible earnings release since the last recorded event"
@@ -90,7 +79,7 @@
  "note": "None of the strategy's hedge instruments (QQQ, SPY, SMH) are listed on Bitget Demo, so live strategy pairs will be NO_TRADE on Demo. The roundtrip below uses a Demo listed stock as the second leg purely to test execution.",
  "exchange_log": [
   {
-   "ts": "1789306486613",
+   "ts": "1789308275502",
    "method": "GET",
    "path": "/api/v2/mix/account/accounts",
    "params": {
@@ -127,7 +116,7 @@
    ]
   },
   {
-   "ts": "1789306487420",
+   "ts": "1789308280080",
    "method": "GET",
    "path": "/api/v2/mix/market/contracts",
    "params": {
@@ -1898,88 +1887,8 @@
      "isRwa": "YES"
     }
    ]
-  },
-  {
-   "ts": "1789306488319",
-   "method": "GET",
-   "path": "/api/v2/mix/market/ticker",
-   "params": {
-    "symbol": "NVDAUSDT",
-    "productType": "USDT-FUTURES"
-   },
-   "body": null,
-   "code": "00000",
-   "msg": "success",
-   "data": [
-    {
-     "symbol": "NVDAUSDT",
-     "lastPr": "217.85",
-     "askPr": "217.92",
-     "bidPr": "217.85",
-     "bidSz": "538.52",
-     "askSz": "2689.73",
-     "high24h": "218.83",
-     "low24h": "217.85",
-     "ts": "1789306503092",
-     "change24h": "-0.00297",
-     "baseVolume": "4219.48",
-     "quoteVolume": "920501.205",
-     "usdtVolume": "920501.205",
-     "openUtc": "218.78",
-     "changeUtc24h": "-0.00425",
-     "indexPrice": "217.8557307241049952",
-     "fundingRate": "0.000108",
-     "holdingAmount": "91602.98",
-     "deliveryStartTime": null,
-     "deliveryTime": null,
-     "deliveryStatus": "",
-     "open24h": "218.5",
-     "markPrice": "217.86"
-    }
-   ]
-  },
-  {
-   "ts": "1789306489179",
-   "method": "POST",
-   "path": "/api/v2/mix/account/set-leverage",
-   "params": null,
-   "body": {
-    "symbol": "NVDAUSDT",
-    "productType": "USDT-FUTURES",
-    "marginCoin": "USDT",
-    "leverage": "2"
-   },
-   "code": "00000",
-   "msg": "success",
-   "data": {
-    "symbol": "NVDAUSDT",
-    "marginCoin": "USDT",
-    "longLeverage": "2",
-    "shortLeverage": "2",
-    "crossMarginLeverage": "2",
-    "marginMode": "crossed"
-   }
-  },
-  {
-   "ts": "1789306490390",
-   "method": "POST",
-   "path": "/api/v2/mix/order/place-order",
-   "params": null,
-   "body": {
-    "symbol": "NVDAUSDT",
-    "productType": "USDT-FUTURES",
-    "marginMode": "crossed",
-    "marginCoin": "USDT",
-    "size": "0.22",
-    "side": "buy",
-    "orderType": "market",
-    "clientOid": "keyrun-o0"
-   },
-   "code": "40774",
-   "msg": "The order type for unilateral position must also be the unilateral position type.",
-   "data": null
   }
  ],
- "finished_at": "2026-09-13T13:35:32Z",
+ "finished_at": "2026-09-13T14:05:48Z",
  "all_ok": false
 }

@@ -138,6 +138,11 @@ def cmd_keyrun(args):
         if not accts:
             raise demo.DemoError(f"no demo futures account for product type {demo.PRODUCT_TYPE}; activate or fund "
                                  "Demo Trading futures, or set BITGET_DEMO_PRODUCT_TYPE")
+        avail = sum(float(a.get("available") or 0) for a in accts)
+        if avail < args.notional * 3:
+            raise demo.DemoError(f"demo USDT-M futures balance is {avail:,.2f} USDT. Demo funds land in the demo spot "
+                                 "wallet; in the Bitget app (Demo Trading) use Assets > Transfer, from Spot to "
+                                 "USDT-M Futures. The Demo API does not support transfers.")
         return [(a.get("marginCoin"), a.get("available")) for a in accts]
     step("demo account", account)
     strategy_hedges = ["QQQUSDT", "SPYUSDT", "SMHUSDT"]
@@ -247,8 +252,10 @@ def main():
         try:
             {"demo-check": cmd_demo_check, "demo-roundtrip": cmd_demo_roundtrip}[args.cmd](args)
         except DemoError as e:
-            print(f"Bitget Demo: {e}\nSet BITGET_DEMO_API_KEY / BITGET_DEMO_API_SECRET / BITGET_DEMO_API_PASSPHRASE "
-                  "in .env.local (see .env.example).")
+            print(f"Bitget Demo: {e}")
+            if "credentials missing" in str(e):
+                print("Set BITGET_DEMO_API_KEY / BITGET_DEMO_API_SECRET / BITGET_DEMO_API_PASSPHRASE in .env.local "
+                      "(see .env.example).")
             sys.exit(2)
     else:
         {"build": cmd_build, "snapshot": cmd_snapshot, "replay": cmd_replay, "verify": cmd_verify,

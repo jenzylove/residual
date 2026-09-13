@@ -104,6 +104,10 @@ class BitgetDemo:
     def accounts(self):
         return self.request("GET", "/api/v2/mix/account/accounts", {"productType": PRODUCT_TYPE})
 
+    def futures_available(self) -> float:
+        accts = self.accounts()
+        return sum(float(a.get("available") or 0) for a in accts if a.get("marginCoin") == MARGIN_COIN)
+
     def ticker(self, symbol):
         return self.request("GET", "/api/v2/mix/market/ticker", {"symbol": symbol, "productType": PRODUCT_TYPE})[0]
 
