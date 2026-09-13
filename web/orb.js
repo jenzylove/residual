@@ -156,8 +156,14 @@ addEventListener("pointermove", e => {
   target.y = (e.clientY / innerHeight - 0.5) * 0.35;
 });
 
+// only render while the sphere is on screen
+let onScreen = true;
+new IntersectionObserver(es => { onScreen = es[0].isIntersecting; }, { threshold: 0 }).observe(canvas);
+
 const clock = new THREE.Clock();
 function frame() {
+  requestAnimationFrame(frame);
+  if (!onScreen) return;
   const t = clock.getElapsedTime(), k = reduce ? 0 : 1;
   cur.x += (target.x - cur.x) * 0.04; cur.y += (target.y - cur.y) * 0.04;
   rig.rotation.y = cur.x + Math.sin(t * 0.2) * 0.15 * k;
@@ -168,7 +174,6 @@ function frame() {
   shellMat.uniforms.uTime.value = t;
   ribbon.material.uniforms.uTime.value = t * k;
   renderer.render(scene, camera);
-  requestAnimationFrame(frame);
 }
 frame();
 requestAnimationFrame(() => canvas.classList.add("on"));

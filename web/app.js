@@ -35,7 +35,7 @@ function render() {
     ["Hit rate", s.hit_rate == null ? "n/a" : (s.hit_rate * 100).toFixed(0) + "%"],
     ["Naive, same events", `<span class="${cls(n.total_net_pnl)}">${usd(n.total_net_pnl, 0)}</span>`],
   ].map(([k, v]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join("");
-  renderBoard(); renderResults(); renderLive(); renderMethod();
+  renderBoard(); renderResults(); renderLive(); renderMethod(); renderOperator();
   $("#foot").innerHTML = `Generated ${esc(D.generated_at)} · model ${esc(D.model_version)} · extractor ${esc(D.extractor_version)} · AI gate ${D.config.ai_gate ? "on" : "off"} · paper trading only, Bitget USDT-M perpetual market data`;
   const first = D.rows.find(r => r.decision.decision === "TRADE") || D.rows[0];
   if (first) select(first.event_id);
@@ -241,6 +241,31 @@ function renderLive() {
       return `<tr><td>${esc(l.checked_at)}</td><td>${esc(l.decision)}</td><td class="muted" style="white-space:normal">${esc(l.reason)}${(l.new_events || []).map(n => ` · ${esc(n.event_id)}: ${esc(n.decision)} (${esc(n.reason || "")})`).join("")}${demoOrders.length ? `<br><b>Bitget Demo orders:</b> ${demoOrders.map(esc).join(" · ")}` : ""}</td></tr>`;
     }).join("") + `</tbody></table></div></div>`;
   $("#tab-live").innerHTML = h;
+}
+
+function renderOperator() {
+  const o = D.operator || {};
+  const srcs = D.events.slice().sort((a, b) => b.release_ms - a.release_ms);
+  $("#tab-operator").innerHTML = `
+  <div class="card"><h3>Downloads</h3>
+    <p><a href="data.json" download>data.json</a> (full results) · <a href="ledger.csv" download>ledger.csv</a> (${D.orders.length} paper orders, both legs) · <a href="events.json" download>events.json</a> (earnings dataset with provenance) · <a href="https://github.com/jenzylove/residual/tree/main/data/sources" target="_blank" rel="noopener">archived SEC sources</a></p></div>
+  <div class="card"><h3>Execution and replay status</h3><dl class="kv">
+    <dt>Execution adapter</dt><dd>${esc(o.execution_adapter || "local_paper")}</dd>
+    <dt>Bitget Demo keys</dt><dd>${o.demo_credentials_configured ? "configured" : "not configured"} · product ${esc(o.demo_product_type || "n/a")}</dd>
+    <dt>DNS fallback</dt><dd>${o.doh_fallback_enabled ? "enabled" : "off (system DNS)"}</dd>
+    <dt>Replay</dt><dd>${esc(o.replay_mode || "n/a")} · generated ${esc(D.generated_at)} · ${esc(D.model_version)} · ${esc(D.extractor_version)}</dd>
+    <dt>AI gate</dt><dd>${(o.ai_gate ?? D.config.ai_gate) ? "on" : "off"}</dd></dl></div>
+  <div class="card"><h3>Commands</h3><pre style="margin:0;font-family:var(--mono);font-size:12.5px;line-height:1.7">python -m residual verify --offline
+python -m residual replay --offline
+python -m residual build
+python -m residual snapshot
+python -m residual live --loop 600
+python -m residual demo-check
+python -m residual demo-roundtrip --notional 50
+python -m unittest discover -s tests</pre></div>
+  <div class="card"><h3>Sources and hashes</h3><div class="table-scroll"><table><thead><tr><th>Event</th><th>Press release</th><th>SHA-256</th><th>8-K</th></tr></thead><tbody>
+    ${srcs.map(e => `<tr><td>${esc(e.event_id)}</td><td><a href="${esc(e.source.press_release_url)}" target="_blank" rel="noopener">${esc(e.source.press_release_url.split("/").pop())}</a></td><td style="font-family:var(--mono);font-size:12px">${esc(e.source.sha256 || "")}</td><td><a href="${esc(e.source.filing_index_url)}" target="_blank" rel="noopener">${esc(e.accession)}</a></td></tr>`).join("")}
+  </tbody></table></div></div>`;
 }
 
 function renderMethod() {

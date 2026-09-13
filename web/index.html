@@ -15,11 +15,10 @@
 <header class="nav reveal" style="--d:0">
   <a class="logo" href="/">RESIDUAL<sup>®</sup></a>
   <nav class="links">
-    <a href="#overview">Overview</a>
-    <a href="#timeline">Events</a>
     <a href="#signal">Signal room</a>
+    <a href="#how">How it works</a>
     <a href="#results">Results</a>
-    <a href="/dashboard">Dashboard</a>
+    <a href="/dashboard">Audit</a>
   </nav>
   <a class="pill" href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">
     <span>View source</span><i class="dot"></i>
@@ -39,9 +38,9 @@
       Bitget stock perpetuals, then trades what is left as a hedged pair.
     </p>
     <div class="cta-row reveal" style="--d:6">
-      <a class="cta" href="/dashboard">
+      <a class="cta" href="#signal">
         <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Open the dashboard
+        See a move taken apart
       </a>
       <div class="status">
         <p class="eyebrow small"><i class="dot live"></i>Walk forward replay</p>
@@ -56,62 +55,57 @@
     <div class="orb-fallback"></div>
   </div>
 
-  <a class="scroll-btn reveal" style="--d:7" href="#overview" aria-label="Scroll to explore">
+  <a class="scroll-btn reveal" style="--d:7" href="#signal" aria-label="Scroll to explore">
     <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
   <p class="scroll-label reveal" style="--d:7">Scroll to explore</p>
 </main>
 
 <div id="body">
-  <section id="overview" class="sec">
-    <div class="center-head">
-      <p class="kicker rv">01 · Overview</p>
-      <h2 class="duo rv">The market moved.<br><span class="tw" data-text="Which part was the company?"></span></h2>
-      <p class="thesis-sm rv">Residual isolates the part of an earnings reaction that belongs to the company, then paper trades it as a hedged pair.</p>
-    </div>
-    <div id="ov-grid" class="ov-grid bento"></div>
-  </section>
-
-  <section id="timeline" class="sec">
-    <div class="sec-head">
-      <div><p class="kicker rv">02 · Event timeline</p><h3 class="duo left rv">Every real release<br><span class="tw" data-text="decided in order."></span></h3></div>
-      <div id="tl-filter" class="chips rv"></div>
-    </div>
-    <div id="tl-track" class="tl-track"></div>
-  </section>
-
+  <!-- signal room: the core experience, first -->
   <section id="signal" class="sec">
     <div class="center-head">
-      <p class="kicker rv">03 · Signal room</p>
-      <h3 class="duo rv">Take the move apart<br><span class="tw" data-text="piece by piece."></span></h3>
+      <p class="kicker rv">Signal room</p>
+      <h2 class="duo rv">Take one earnings move apart<br><span class="tw" data-text="and keep only the company."></span></h2>
     </div>
-    <div id="sig" class="sig"></div>
+    <div class="strip-wrap rv">
+      <div class="strip-legend"><span><i class="lg trade"></i>Traded</span><span><i class="lg no"></i>No trade</span><span class="muted">Dot size = size of the company residual · click any release</span></div>
+      <div id="strip" class="strip"></div>
+    </div>
+    <div id="stage" class="stage"></div>
   </section>
 
-  <section id="execution" class="sec">
-    <p class="kicker rv">04 · Paper execution</p>
-    <h3 class="duo left rv">What happened<br><span class="tw" data-text="when it traded, or why not."></span></h3>
-    <div id="exec"></div>
+  <!-- how it works -->
+  <section id="how" class="sec">
+    <div class="center-head">
+      <p class="kicker rv">How it works</p>
+      <h2 class="duo rv">Four steps, every release<br><span class="tw" data-text="no number from a guess."></span></h2>
+    </div>
+    <div class="steps">
+      <article class="step rv"><span class="step-n">1</span><h4>Read the filing</h4><p>Revenue and guidance come from the SEC press release. Each number keeps its exact quote and a document hash.</p></article>
+      <article class="step rv"><span class="step-n">2</span><h4>Remove the market</h4><p>Hourly Bitget betas split the early move into market, sector and liquidity. What is left is the company.</p></article>
+      <article class="step rv"><span class="step-n">3</span><h4>Check the gates</h4><p>Hedge fit, liquidity, cost, robustness and a quote checked AI read. One failure means no trade.</p></article>
+      <article class="step rv"><span class="step-n">4</span><h4>Trade the pair</h4><p>Long or short the company against a beta weighted hedge, with fees, slippage and funding on both legs.</p></article>
+    </div>
   </section>
 
+  <!-- results, simple -->
   <section id="results" class="sec">
-    <div class="sec-head">
-      <div><p class="kicker rv">05 · Results and proof</p><h3 class="duo left rv">Walk forward, like for like<br><span class="tw" data-text="nothing hidden."></span></h3></div>
-      <div id="res-basis" class="chips rv"></div>
+    <div class="center-head">
+      <p class="kicker rv">Results</p>
+      <h2 class="duo rv">Scored walk forward<br><span class="tw" data-text="against the obvious trade."></span></h2>
     </div>
-    <div id="res"></div>
-  </section>
-
-  <section id="operator" class="sec">
-    <details id="op" class="op rv">
-      <summary><span class="kicker">06 · Operator mode</span><span class="op-hint">CLI, dataset, schema, replay, watcher, execution adapter</span></summary>
-      <div id="op-body"></div>
-    </details>
+    <div class="res-wrap rv">
+      <div id="basis" class="chips"></div>
+      <div id="bars" class="bars"></div>
+      <p id="res-note" class="res-note"></p>
+      <a class="audit-link" href="/dashboard">Open the full audit <span>tables, sources, hashes, ledger, operator view</span></a>
+    </div>
   </section>
 
   <footer class="foot2">
     <span>RESIDUAL · paper trading research · not investment advice</span>
-    <a href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">Source on GitHub</a>
+    <span><a href="/dashboard">Audit</a> · <a href="https://github.com/jenzylove/residual" target="_blank" rel="noopener">Source on GitHub</a></span>
   </footer>
 </div>
 
