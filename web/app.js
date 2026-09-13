@@ -255,6 +255,12 @@ function renderOperator() {
     <dt>DNS fallback</dt><dd>${o.doh_fallback_enabled ? "enabled" : "off (system DNS)"}</dd>
     <dt>Replay</dt><dd>${esc(o.replay_mode || "n/a")} · generated ${esc(D.generated_at)} · ${esc(D.model_version)} · ${esc(D.extractor_version)}</dd>
     <dt>AI gate</dt><dd>${(o.ai_gate ?? D.config.ai_gate) ? "on" : "off"}</dd></dl></div>
+  ${D.demo_evidence ? `<div class="card"><h3>Bitget Demo execution evidence</h3>
+    <p class="note">${esc(D.demo_evidence.executed_at)} · ${esc(D.demo_evidence.venue)} · ${esc(D.demo_evidence.purpose)} · ${D.demo_evidence.accepted_orders} orders accepted · position mode ${esc(D.demo_evidence.position_mode || "n/a")}</p>
+    <div class="table-scroll"><table><thead><tr><th>Symbol</th><th>Open order</th><th class="num">Open</th><th>Close order</th><th class="num">Close</th></tr></thead><tbody>
+    ${D.demo_evidence.orders.map(o => `<tr><td>${esc(o.symbol)}</td><td style="font-family:var(--mono)">${esc(o.open)}</td><td class="num">${o.open_px}</td><td style="font-family:var(--mono)">${esc(o.close)}</td><td class="num">${o.close_px}</td></tr>`).join("")}
+    </tbody></table></div>
+    <p class="note">Realized: gross ${usd(D.demo_evidence.realized.gross)}, fees ${usd(D.demo_evidence.realized.fees)}, net ${usd(D.demo_evidence.realized.net)}. Full request log in <code>data/keyrun_report.json</code>.</p></div>` : ""}
   <div class="card"><h3>Commands</h3><pre style="margin:0;font-family:var(--mono);font-size:12.5px;line-height:1.7">python -m residual verify --offline
 python -m residual replay --offline
 python -m residual build

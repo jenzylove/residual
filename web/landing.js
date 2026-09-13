@@ -272,6 +272,19 @@ function proof(basis) {
     observed_zero: `All ${tr} paper trades, with missing funding counted as zero. Shown for comparison only.`,
   }[basis];
   $("#curve").innerHTML = curve(S);
+  demoProof();
+}
+
+function demoProof() {
+  const x = D.demo_evidence, el = $("#demo-proof");
+  if (!x || !el) return;
+  el.hidden = false;
+  el.innerHTML = `
+    <div><h4>Verified on Bitget Demo</h4>
+      <div class="big">${x.accepted_orders} real orders</div>
+      <p class="note">${day(x.executed_at)} · ${esc(x.pair.replace(/USDT/g, ""))} opened and closed as a pair on Bitget Demo Trading, in ${esc((x.position_mode || "").replace("_", " "))}. An execution test of the order path, not a strategy trade. Net ${usd(x.realized.net, 2)} after Bitget's own fees.</p></div>
+    <div class="orders">${x.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> opened ${o.open_px} · closed ${o.close_px}</span><span class="muted">filled</span>
+      <code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`;
 }
 
 /* ---------- motion ---------- */

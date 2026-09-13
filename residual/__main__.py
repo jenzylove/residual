@@ -52,11 +52,29 @@ def cmd_replay(args):
                 "demo_credentials_configured": demo.configured(), "demo_product_type": demo.PRODUCT_TYPE,
                 "doh_fallback_enabled": net.DOH_FALLBACK, "replay_mode": "offline" if args.offline else "online",
                 "ai_gate": not args.no_ai}
-    write_outputs(res, {"live_log": load_live_log(), "operator": operator})
+    write_outputs(res, {"live_log": load_live_log(), "operator": operator, "demo_evidence": demo_evidence()})
     s = res["summary"]
     for k in ("residual", "unhedged", "naive", "no_trade"):
         m = s[k]
         print(f"{k:<10} pnl={m['total_net_pnl']:>10.2f} trades={m['trades']:>2} hit={m['hit_rate']} mdd={m['max_drawdown']}")
+
+
+def demo_evidence():
+    """Real Bitget Demo execution evidence from the last passing keyrun, if any (published on the site)."""
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / "data" / "keyrun_report.json"
+    if not p.exists():
+        return None
+    r = json.loads(p.read_text(encoding="utf-8"))
+    rt = next((s for s in r.get("steps", []) if s["step"].startswith("roundtrip") and s.get("ok")), None)
+    if not r.get("all_ok") or not rt:
+        return None
+    placed = [e for e in r.get("exchange_log", []) if e["path"].endswith("place-order") and e.get("code") == "00000"]
+    return {"executed_at": r["started_at"], "venue": "Bitget Demo Trading (USDT-FUTURES, paptrading header)",
+            "purpose": "execution test pair; not a strategy trade", "pair": rt["step"].split(" ")[1],
+            "orders": rt["result"]["orders"], "realized": rt["result"]["realized"],
+            "accepted_orders": len(placed), "position_mode": next(
+                (("hedge_mode" if "tradeSide" in e["body"] else "one_way_mode") for e in placed), None)}
 
 
 def cmd_verify(args):

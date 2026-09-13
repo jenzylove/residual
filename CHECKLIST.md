@@ -56,9 +56,10 @@ Numbers refer to the committed `data/results.json`.
 - [x] `live --loop` survives a failed poll: the error is logged to `data/live_log.jsonl` and polling continues.
 - [x] CI on every push: tests, offline provenance, offline replay must reproduce the committed results, strict JSON for the site.
 - [x] Site data written as strict JSON (no NaN/Infinity), with a test.
-- [ ] Pending keys: `keyrun` against real Bitget Demo. Unconfirmed until then:
-  - the demo product type (`SUSDT-FUTURES`) and margin coin (`SUSDT`); both can be overridden in `.env.local`;
-  - whether demo lists stock perpetuals.
+- [x] `keyrun` passed against real Bitget Demo on 2026-09-13. Four orders were accepted and filled: NVDA/AAPL execution-test pair, $50 per leg, net −$0.14 after fees.
+  - Order IDs are in the README and `data/keyrun_report.json`.
+  - Findings: `USDT-FUTURES`/`USDT`, hedge mode by default (handled), funds must be moved from demo spot to futures in the app.
+- [~] Demo lists no strategy hedge instrument (QQQ, SPY, SMH), so live strategy pairs on Demo resolve to NO_TRADE. This is by design (strict option (a)); the Demo run proves execution, not the strategy.
 
 ## Infrastructure
 - [x] DNS-over-HTTPS fallback is opt-in (`RESIDUAL_DOH_FALLBACK=1`), off by default, documented as not for bypassing regional restrictions

@@ -1,5 +1,5 @@
 {
- "started_at": "2026-09-13T14:04:31Z",
+ "started_at": "2026-09-13T14:09:19Z",
  "steps": [
   {
    "step": "credentials present",
@@ -10,19 +10,19 @@
   {
    "step": "public Bitget API reachable",
    "ok": true,
-   "seconds": 4.3,
+   "seconds": 3.0,
    "result": {
     "doh_fallback": false,
     "ticker": {
      "symbol": "QQQUSDT",
-     "bid": 710.14,
-     "ask": 710.15,
-     "last": 710.14,
+     "bid": 710.42,
+     "ask": 710.43,
+     "last": 710.36,
      "spread_bps": 0.14,
-     "bid_depth_10bps_usdt": 25830.0,
-     "ask_depth_10bps_usdt": 56834.0,
+     "bid_depth_10bps_usdt": 88443.0,
+     "ask_depth_10bps_usdt": 260626.0,
      "funding_rate": 0.0,
-     "ts": 1789308287177
+     "ts": 1789308575270
     }
    }
   },
@@ -30,17 +30,23 @@
    "step": "authenticate",
    "ok": true,
    "seconds": 0.0,
-   "result": "<residual.demo.BitgetDemo object at 0x0000029D636B5400>"
+   "result": "<residual.demo.BitgetDemo object at 0x000001ECF1355550>"
   },
   {
    "step": "demo account",
-   "ok": false,
-   "error": "DemoError: demo USDT-M futures balance is 0.00 USDT. Demo funds land in the demo spot wallet; in the Bitget app (Demo Trading) use Assets > Transfer, from Spot to USDT-M Futures. The Demo API does not support transfers."
+   "ok": true,
+   "seconds": 2.5,
+   "result": [
+    [
+     "USDT",
+     "10000"
+    ]
+   ]
   },
   {
    "step": "demo symbol coverage",
    "ok": true,
-   "seconds": 3.1,
+   "seconds": 1.9,
    "result": {
     "NVDAUSDT": "NVDAUSDT",
     "AMDUSDT": null,
@@ -59,9 +65,37 @@
    }
   },
   {
+   "step": "roundtrip NVDAUSDT/AAPLUSDT $50.0",
+   "ok": true,
+   "seconds": 11.0,
+   "result": {
+    "orders": [
+     {
+      "symbol": "NVDAUSDT",
+      "open": "1483033182613204993",
+      "close": "1483033203639250945",
+      "open_px": 217.85,
+      "close_px": 217.77
+     },
+     {
+      "symbol": "AAPLUSDT",
+      "open": "1483033196173389825",
+      "close": "1483033210475966465",
+      "open_px": 332.7,
+      "close_px": 332.75
+     }
+    ],
+    "realized": {
+     "gross": -0.0250999999999982,
+     "fees": -0.11739234,
+     "net": -0.1424923399999982
+    }
+   }
+  },
+  {
    "step": "live watcher pass",
    "ok": true,
-   "seconds": 65.8,
+   "seconds": 28.4,
    "result": {
     "decision": "NO_TRADE",
     "reason": "no eligible earnings release since the last recorded event"
@@ -79,7 +113,7 @@
  "note": "None of the strategy's hedge instruments (QQQ, SPY, SMH) are listed on Bitget Demo, so live strategy pairs will be NO_TRADE on Demo. The roundtrip below uses a Demo listed stock as the second leg purely to test execution.",
  "exchange_log": [
   {
-   "ts": "1789308275502",
+   "ts": "1789308562839",
    "method": "GET",
    "path": "/api/v2/mix/account/accounts",
    "params": {
@@ -92,21 +126,21 @@
     {
      "marginCoin": "USDT",
      "locked": "0",
-     "available": "0",
-     "crossedMaxAvailable": "0",
-     "isolatedMaxAvailable": "0",
-     "maxTransferOut": "0",
-     "accountEquity": "0",
-     "usdtEquity": "0",
-     "btcEquity": "0",
+     "available": "10000",
+     "crossedMaxAvailable": "10000",
+     "isolatedMaxAvailable": "10000",
+     "maxTransferOut": "10000",
+     "accountEquity": "10000",
+     "usdtEquity": "10000",
+     "btcEquity": "0.1299340437309812",
      "crossedRiskRate": "0",
      "unrealizedPL": "0",
      "coupon": "0",
      "crossedUnrealizedPL": "",
      "isolatedUnrealizedPL": "",
      "grant": "",
-     "unionTotalMargin": "0",
-     "unionAvailable": "0",
+     "unionTotalMargin": "10000",
+     "unionAvailable": "10000",
      "unionMm": "0",
      "assetList": [],
      "assetMode": "single",
@@ -116,7 +150,7 @@
    ]
   },
   {
-   "ts": "1789308280080",
+   "ts": "1789308565312",
    "method": "GET",
    "path": "/api/v2/mix/market/contracts",
    "params": {
@@ -1887,8 +1921,452 @@
      "isRwa": "YES"
     }
    ]
+  },
+  {
+   "ts": "1789308567239",
+   "method": "GET",
+   "path": "/api/v2/mix/market/ticker",
+   "params": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": [
+    {
+     "symbol": "NVDAUSDT",
+     "lastPr": "217.85",
+     "askPr": "217.85",
+     "bidPr": "217.77",
+     "bidSz": "2663.7",
+     "askSz": "2610.18",
+     "high24h": "218.83",
+     "low24h": "217.77",
+     "ts": "1789308582220",
+     "change24h": "-0.00211",
+     "baseVolume": "4753.06",
+     "quoteVolume": "1036730.1066",
+     "usdtVolume": "1036730.1066",
+     "openUtc": "218.78",
+     "changeUtc24h": "-0.00425",
+     "indexPrice": "217.7997307241049952",
+     "fundingRate": "0.000107",
+     "holdingAmount": "92680.44",
+     "deliveryStartTime": null,
+     "deliveryTime": null,
+     "deliveryStatus": "",
+     "open24h": "218.31",
+     "markPrice": "217.81"
+    }
+   ]
+  },
+  {
+   "ts": "1789308568225",
+   "method": "POST",
+   "path": "/api/v2/mix/account/set-leverage",
+   "params": null,
+   "body": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES",
+    "marginCoin": "USDT",
+    "leverage": "2"
+   },
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "symbol": "NVDAUSDT",
+    "marginCoin": "USDT",
+    "longLeverage": "2",
+    "shortLeverage": "2",
+    "crossMarginLeverage": "2",
+    "marginMode": "crossed"
+   }
+  },
+  {
+   "ts": "1789308569003",
+   "method": "GET",
+   "path": "/api/v2/mix/account/account",
+   "params": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES",
+    "marginCoin": "USDT"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "marginCoin": "USDT",
+    "locked": "0",
+    "available": "10000",
+    "crossedMaxAvailable": "10000",
+    "isolatedMaxAvailable": "10000",
+    "maxTransferOut": "10000",
+    "accountEquity": "10000",
+    "usdtEquity": "10000",
+    "btcEquity": "0.129932849894283",
+    "crossedRiskRate": "0",
+    "crossedMarginLeverage": 2,
+    "isolatedLongLever": 10,
+    "isolatedShortLever": 10,
+    "marginMode": "crossed",
+    "posMode": "hedge_mode",
+    "unrealizedPL": "0",
+    "coupon": "0",
+    "crossedUnrealizedPL": "0",
+    "isolatedUnrealizedPL": "",
+    "grant": "",
+    "assetMode": "single",
+    "isolatedMargin": null,
+    "crossedMargin": null
+   }
+  },
+  {
+   "ts": "1789308569907",
+   "method": "POST",
+   "path": "/api/v2/mix/order/place-order",
+   "params": null,
+   "body": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES",
+    "marginMode": "crossed",
+    "marginCoin": "USDT",
+    "size": "0.22",
+    "orderType": "market",
+    "clientOid": "keyrun-o0",
+    "side": "buy",
+    "tradeSide": "open"
+   },
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "clientOid": "keyrun-o0",
+    "orderId": "1483033182613204993"
+   }
+  },
+  {
+   "ts": "1789308570833",
+   "method": "GET",
+   "path": "/api/v2/mix/order/detail",
+   "params": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES",
+    "orderId": "1483033182613204993"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "symbol": "NVDAUSDT",
+    "size": "0.22",
+    "orderId": "1483033182613204993",
+    "clientOid": "keyrun-o0",
+    "baseVolume": "0.22",
+    "fee": "-0.0287562",
+    "price": "",
+    "priceAvg": "217.85",
+    "state": "filled",
+    "side": "buy",
+    "force": "gtc",
+    "totalProfits": "0",
+    "posSide": "long",
+    "marginCoin": "USDT",
+    "presetStopSurplusPrice": "",
+    "presetStopSurplusType": "",
+    "presetStopSurplusExecutePrice": "",
+    "presetStopLossPrice": "",
+    "presetStopLossExecutePrice": "",
+    "presetStopLossType": "",
+    "quoteVolume": "47.927",
+    "orderType": "market",
+    "leverage": "2",
+    "marginMode": "crossed",
+    "reduceOnly": "NO",
+    "enterPointSource": "API",
+    "tradeSide": "open",
+    "posMode": "hedge_mode",
+    "orderSource": "market",
+    "newTradeSide": "open",
+    "cancelReason": "",
+    "cTime": "1789308584841",
+    "uTime": "1789308584901"
+   }
+  },
+  {
+   "ts": "1789308571638",
+   "method": "GET",
+   "path": "/api/v2/mix/market/ticker",
+   "params": {
+    "symbol": "AAPLUSDT",
+    "productType": "USDT-FUTURES"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": [
+    {
+     "symbol": "AAPLUSDT",
+     "lastPr": "332.7",
+     "askPr": "332.75",
+     "bidPr": "332.7",
+     "bidSz": "141.03",
+     "askSz": "2220.7",
+     "high24h": "333.14",
+     "low24h": "331.87",
+     "ts": "1789308586425",
+     "change24h": "-0.00003",
+     "baseVolume": "36029.04",
+     "quoteVolume": "11981208.7133",
+     "usdtVolume": "11981208.7133",
+     "openUtc": "332.77",
+     "changeUtc24h": "-0.00021",
+     "indexPrice": "332.728136236097916",
+     "fundingRate": "0.00003",
+     "holdingAmount": "308035.19",
+     "deliveryStartTime": null,
+     "deliveryTime": null,
+     "deliveryStatus": "",
+     "open24h": "332.71",
+     "markPrice": "332.72"
+    }
+   ]
+  },
+  {
+   "ts": "1789308572391",
+   "method": "POST",
+   "path": "/api/v2/mix/account/set-leverage",
+   "params": null,
+   "body": {
+    "symbol": "AAPLUSDT",
+    "productType": "USDT-FUTURES",
+    "marginCoin": "USDT",
+    "leverage": "2"
+   },
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "symbol": "AAPLUSDT",
+    "marginCoin": "USDT",
+    "longLeverage": "2",
+    "shortLeverage": "2",
+    "crossMarginLeverage": "2",
+    "marginMode": "crossed"
+   }
+  },
+  {
+   "ts": "1789308573185",
+   "method": "POST",
+   "path": "/api/v2/mix/order/place-order",
+   "params": null,
+   "body": {
+    "symbol": "AAPLUSDT",
+    "productType": "USDT-FUTURES",
+    "marginMode": "crossed",
+    "marginCoin": "USDT",
+    "size": "0.15",
+    "orderType": "market",
+    "clientOid": "keyrun-o1",
+    "side": "sell",
+    "tradeSide": "open"
+   },
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "clientOid": "keyrun-o1",
+    "orderId": "1483033196173389825"
+   }
+  },
+  {
+   "ts": "1789308574085",
+   "method": "GET",
+   "path": "/api/v2/mix/order/detail",
+   "params": {
+    "symbol": "AAPLUSDT",
+    "productType": "USDT-FUTURES",
+    "orderId": "1483033196173389825"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "symbol": "AAPLUSDT",
+    "size": "0.15",
+    "orderId": "1483033196173389825",
+    "clientOid": "keyrun-o1",
+    "baseVolume": "0.15",
+    "fee": "-0.029943",
+    "price": "",
+    "priceAvg": "332.7",
+    "state": "filled",
+    "side": "sell",
+    "force": "gtc",
+    "totalProfits": "0",
+    "posSide": "short",
+    "marginCoin": "USDT",
+    "presetStopSurplusPrice": "",
+    "presetStopSurplusType": "",
+    "presetStopSurplusExecutePrice": "",
+    "presetStopLossPrice": "",
+    "presetStopLossExecutePrice": "",
+    "presetStopLossType": "",
+    "quoteVolume": "49.905",
+    "orderType": "market",
+    "leverage": "2",
+    "marginMode": "crossed",
+    "reduceOnly": "NO",
+    "enterPointSource": "API",
+    "tradeSide": "open",
+    "posMode": "hedge_mode",
+    "orderSource": "market",
+    "newTradeSide": "open",
+    "cancelReason": "",
+    "cTime": "1789308588073",
+    "uTime": "1789308588130"
+   }
+  },
+  {
+   "ts": "1789308574888",
+   "method": "POST",
+   "path": "/api/v2/mix/order/place-order",
+   "params": null,
+   "body": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES",
+    "marginMode": "crossed",
+    "marginCoin": "USDT",
+    "size": "0.22",
+    "orderType": "market",
+    "clientOid": "keyrun-c0",
+    "side": "buy",
+    "tradeSide": "close"
+   },
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "clientOid": "keyrun-c0",
+    "orderId": "1483033203639250945"
+   }
+  },
+  {
+   "ts": "1789308575830",
+   "method": "GET",
+   "path": "/api/v2/mix/order/detail",
+   "params": {
+    "symbol": "NVDAUSDT",
+    "productType": "USDT-FUTURES",
+    "orderId": "1483033203639250945"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "symbol": "NVDAUSDT",
+    "size": "0.22",
+    "orderId": "1483033203639250945",
+    "clientOid": "keyrun-c0",
+    "baseVolume": "0.22",
+    "fee": "-0.02874564",
+    "price": "",
+    "priceAvg": "217.77",
+    "state": "filled",
+    "side": "buy",
+    "force": "gtc",
+    "totalProfits": "-0.0176",
+    "posSide": "long",
+    "marginCoin": "USDT",
+    "presetStopSurplusPrice": "",
+    "presetStopSurplusType": "",
+    "presetStopSurplusExecutePrice": "",
+    "presetStopLossPrice": "",
+    "presetStopLossExecutePrice": "",
+    "presetStopLossType": "",
+    "quoteVolume": "47.9094",
+    "orderType": "market",
+    "leverage": "2",
+    "marginMode": "crossed",
+    "reduceOnly": "YES",
+    "enterPointSource": "API",
+    "tradeSide": "close",
+    "posMode": "hedge_mode",
+    "orderSource": "market",
+    "newTradeSide": "close",
+    "cancelReason": "",
+    "cTime": "1789308589849",
+    "uTime": "1789308589906"
+   }
+  },
+  {
+   "ts": "1789308576628",
+   "method": "POST",
+   "path": "/api/v2/mix/order/place-order",
+   "params": null,
+   "body": {
+    "symbol": "AAPLUSDT",
+    "productType": "USDT-FUTURES",
+    "marginMode": "crossed",
+    "marginCoin": "USDT",
+    "size": "0.15",
+    "orderType": "market",
+    "clientOid": "keyrun-c1",
+    "side": "sell",
+    "tradeSide": "close"
+   },
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "clientOid": "keyrun-c1",
+    "orderId": "1483033210475966465"
+   }
+  },
+  {
+   "ts": "1789308577461",
+   "method": "GET",
+   "path": "/api/v2/mix/order/detail",
+   "params": {
+    "symbol": "AAPLUSDT",
+    "productType": "USDT-FUTURES",
+    "orderId": "1483033210475966465"
+   },
+   "body": null,
+   "code": "00000",
+   "msg": "success",
+   "data": {
+    "symbol": "AAPLUSDT",
+    "size": "0.15",
+    "orderId": "1483033210475966465",
+    "clientOid": "keyrun-c1",
+    "baseVolume": "0.15",
+    "fee": "-0.0299475",
+    "price": "",
+    "priceAvg": "332.75",
+    "state": "filled",
+    "side": "sell",
+    "force": "gtc",
+    "totalProfits": "-0.0075",
+    "posSide": "short",
+    "marginCoin": "USDT",
+    "presetStopSurplusPrice": "",
+    "presetStopSurplusType": "",
+    "presetStopSurplusExecutePrice": "",
+    "presetStopLossPrice": "",
+    "presetStopLossExecutePrice": "",
+    "presetStopLossType": "",
+    "quoteVolume": "49.9125",
+    "orderType": "market",
+    "leverage": "2",
+    "marginMode": "crossed",
+    "reduceOnly": "YES",
+    "enterPointSource": "API",
+    "tradeSide": "close",
+    "posMode": "hedge_mode",
+    "orderSource": "market",
+    "newTradeSide": "close",
+    "cancelReason": "",
+    "cTime": "1789308591479",
+    "uTime": "1789308591537"
+   }
   }
  ],
- "finished_at": "2026-09-13T14:05:48Z",
- "all_ok": false
+ "finished_at": "2026-09-13T14:10:06Z",
+ "all_ok": true
 }

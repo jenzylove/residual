@@ -137,7 +137,22 @@ python -m residual demo-roundtrip --notional 50       # open+close one small NVD
 python -m residual live                               # live watcher now executes on Bitget Demo
 ```
 
-Historical replay results remain local paper accounting; only live-mode trades can have exchange-side Demo records. Status: implemented and tested against a fake exchange (`tests/test_demo.py`, `tests/test_live.py`). **The run against real Bitget Demo credentials has not happened yet.**
+Historical replay results remain local paper accounting; only live-mode trades can have exchange-side Demo records.
+
+**Verified against real Bitget Demo on 13 Sep 2026** (`data/keyrun_report.json`). The execution-test pair was NVDA long against AAPL short, $50 per leg. Four orders were accepted and filled:
+
+| Leg | Open order | Open price | Close order | Close price |
+|---|---|---|---|---|
+| NVDA long | 1483033182613204993 | 217.85 | 1483033203639250945 | 217.77 |
+| AAPL short | 1483033196173389825 | 332.70 | 1483033210475966465 | 332.75 |
+
+Net result: −$0.14 after Bitget's reported fees.
+
+What the real run established:
+- Demo uses `USDT-FUTURES` / `USDT` with the `paptrading: 1` header.
+- Demo accounts default to hedge mode; the client reads the position mode and formats orders to match.
+- Demo funds land in the demo spot wallet. Transfer them to USDT-M Futures in the app, because the Demo API has no transfer endpoint.
+- Demo lists NVDA, META and AMZN from the universe, but none of the strategy's hedge instruments (QQQ, SPY, SMH). Live strategy pairs on Demo therefore resolve to NO_TRADE. The roundtrip uses AAPL as the second leg purely to test execution.
 
 ## Layout
 
