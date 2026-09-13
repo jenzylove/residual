@@ -12,8 +12,9 @@ from .extract import EXTRACTOR_VERSION
 from .interpret import interpret
 from .market import HOLD_HOURS, LOOKBACK_DAYS, OBS_HOURS, load_snapshot
 from .net import fetch
-from .strategy import (BASE_NOTIONAL, DEFAULT_PARAMS, MAX_LOSS_FRAC, WINDOWS, analyze, attribute,
-                       decide, learn_params, run_trade)
+from . import strategy
+from .strategy import (DEFAULT_PARAMS, MAX_LOSS_FRAC, VARIANTS, WINDOWS, analyze, attribute, decide,
+                       learn_params, learn_variant, run_trade, variant_direction)
 
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "data" / "results.json"
@@ -142,9 +143,23 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         if use_ai and "residual" in a and ev["surprise"]:
             interp = interpret(ev, a, _source_text(ev, allow_network=allow_llm_calls), allow_call=allow_llm_calls)
         dec = decide(ev, a, params, interp if use_ai else None)
+        sel = learn_variant(history, params)
 
         row = {"event_id": ev["event_id"], "_release_ms": ev["release_ms"], "params": params, "decision": dec,
-               "interpretation": interp, "residual": None, "naive": None, "unhedged": None}
+               "variant": sel, "interpretation": interp, "residual": None, "naive": None, "unhedged": None}
+        if dec["decision"] == "TRADE":
+            # every pre-declared variant, scored on its own (published whether it wins or loses)
+            for v in VARIANTS:
+                d = variant_direction(v, a, params)
+                row[f"v_{v}"] = _slim_sim(run_trade(ev, snap, a, d, dec["size"], tag=f"v_{v}")) if d else None
+            # the strategy itself follows the variant chosen from earlier events only
+            d = variant_direction(sel["variant"], a, params)
+            dec["gates"]["variant"] = {"pass": d != 0, "detail": f"{sel['variant']} rule ({sel['source']})"
+                                       + ("" if d else ": company move and surprise disagree")}
+            if d == 0:
+                dec.update({"decision": "NO_TRADE", "reasons": ["variant"], "size": 0.0})
+            else:
+                dec.update({"direction": d, "structure": "long company / short hedge" if d > 0 else "short company / long hedge"})
         if dec["decision"] == "TRADE":
             sim = run_trade(ev, snap, a, dec["direction"], dec["size"])
             if sim:
@@ -173,7 +188,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                   f"params={params['mode']:+d}/{params['k']} "
                   f"pnl={r['net'] if r else 0:+9.2f}  {','.join(dec['reasons'])}", flush=True)
 
-    keys = ("residual", "unhedged", "naive_same_events", "naive")
+    keys = ("residual", "unhedged", "naive_same_events", "naive") + tuple(f"v_{v}" for v in VARIANTS)
     summary = {k: metrics(rows, k) for k in keys}
     summary["no_trade"] = metrics(rows, "__none__")
     summary_conservative = {k: metrics(rows, k, "conservative") for k in keys}
@@ -190,7 +205,8 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "model_version": MODEL_VERSION, "extractor_version": EXTRACTOR_VERSION,
         "config": {"lookback_days": LOOKBACK_DAYS, "beta_windows_days": WINDOWS, "obs_hours": OBS_HOURS,
-                   "hold_hours": HOLD_HOURS, "base_notional": BASE_NOTIONAL, "max_loss_frac": MAX_LOSS_FRAC,
+                   "hold_hours": HOLD_HOURS, "base_notional": strategy.BASE_NOTIONAL, "max_loss_frac": MAX_LOSS_FRAC,
+                   "variants": VARIANTS,
                    "default_params": DEFAULT_PARAMS, "ai_gate": use_ai, "start_balance": START_BALANCE},
         "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events "
                       "whose exit precedes that event's release; no event is scored with parameters "
@@ -213,6 +229,26 @@ def _finite(o):
     if isinstance(o, (list, tuple)):
         return [_finite(v) for v in o]
     return o
+
+
+def size_study(sizes=(1_000, 2_500, 5_000, 10_000)) -> list[dict]:
+    """Re-run the whole walk-forward at several company-leg sizes (offline, cached AI answers)."""
+    keep, out = strategy.BASE_NOTIONAL, []
+    try:
+        for n in sizes:
+            strategy.BASE_NOTIONAL = float(n)
+            r = replay(use_ai=True, allow_llm_calls=False, verbose=False)
+            rows = r["rows"]
+            out.append({"notional": n,
+                        "trades": sum(x["decision"]["decision"] == "TRADE" for x in rows),
+                        "liquidity_rejects": sum("liquidity" in x["decision"]["reasons"] for x in rows),
+                        "primary": {k: {f: r["summary"][k][f] for f in ("total_net_pnl", "trades", "sharpe_daily_ann", "max_drawdown")}
+                                    for k in ("residual", "naive_same_events")},
+                        "conservative": {k: {f: r["summary_conservative_funding"][k][f] for f in ("total_net_pnl", "trades", "sharpe_daily_ann")}
+                                         for k in ("residual", "naive_same_events")}})
+    finally:
+        strategy.BASE_NOTIONAL = keep
+    return out
 
 
 def write_outputs(result: dict, web_extra: dict | None = None):

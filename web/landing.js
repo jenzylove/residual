@@ -12,7 +12,8 @@ const day = iso => new Date(iso).toLocaleDateString(undefined, { day: "numeric",
 const when = ms => new Date(ms).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
 const GATE = {
   event_data: "Filing verified", market_data: "Market data", hedge: "Hedge fits", liquidity: "Liquidity",
-  robust: "Robust betas", reaction_open: "Move still open", residual_vs_cost: "Clears cost", ai_interpretation: "AI read"
+  robust: "Robust betas", reaction_open: "Move still open", residual_vs_cost: "Clears cost", ai_interpretation: "AI read",
+  variant: "Rule agrees"
 };
 const PLAIN = {
   market_data: "Bitget did not list this stock, or enough of its history, at the time.",
@@ -22,6 +23,7 @@ const PLAIN = {
   robust: "The company's own move changed sign depending on the model window.",
   hedge: "No hedge instrument tracked this stock closely enough.",
   ai_interpretation: "The AI read the move as not tradeable.",
+  variant: "The chosen rule needs the company move and the surprise to agree, and here they did not.",
   event_data: "The filing numbers could not be verified.",
 };
 const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -36,8 +38,13 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
   const trades = d.rows.filter(r => r.decision.decision === "TRADE");
   show((trades[trades.length - 1] || d.rows[d.rows.length - 1]).event_id);
   proof("primary");
+  realStrip();
+  variantsTable();
+  sizeStudy();
+  demoStrategy();
   reveal();
   startAuto();
+  tour();
 }).catch(e => { $("#ov-grid").innerHTML = `<div class="card wide"><p>Could not load data.json: ${esc(e.message)}</p></div>`; });
 
 /* ---------- small visuals ---------- */
@@ -165,7 +172,8 @@ function waterfall(d) {
 
 function reason(r) {
   const dec = r.decision;
-  if (dec.decision === "TRADE") return `Every gate passed. RESIDUAL took the pair ${dec.direction > 0 ? "long the company" : "short the company"} against the hedge${dec.size < 1 && r.interpretation ? `, at ${dec.size * 100}% size because the AI read the move as ${r.interpretation.label.replace(/_/g, " ")}` : ""}.`;
+  const rule = r.variant ? ` using the ${r.variant.variant} rule, picked from earlier events` : "";
+  if (dec.decision === "TRADE") return `Every gate passed. RESIDUAL took the pair ${dec.direction > 0 ? "long the company" : "short the company"} against the hedge${rule}${dec.size < 1 && r.interpretation ? `, at ${dec.size * 100}% size because the AI read the move as ${r.interpretation.label.replace(/_/g, " ")}` : ""}.`;
   const k = dec.reasons[0];
   return `${PLAIN[k] || GATE[k] + " failed."}${dec.reasons.length > 1 ? ` ${dec.reasons.length - 1} other gate${dec.reasons.length > 2 ? "s" : ""} also failed.` : ""}`;
 }
@@ -180,7 +188,7 @@ function show(id) {
     <div class="stage-col">
       <div class="card">
         <div class="ev-name">${esc(e.ticker)} <em>${d ? pct(d.residual) : ""}</em></div>
-        <div class="ev-sub">${day(e.release_utc)} · revenue ${bn(s.revenue_actual)} against guidance of ${bn(s.revenue_guided_mid)} (${pp(s.guidance_surprise_pct)})${e.earnings.gross_margin ? ` · GAAP gross margin ${e.earnings.gross_margin.value}%` : ""}${e.earnings.eps_diluted ? ` · diluted EPS $${e.earnings.eps_diluted.value}` : ""}</div>
+        <div class="ev-sub">${day(e.release_utc)} · <a href="${esc(e.source.press_release_url)}" target="_blank" rel="noopener" title="SEC press release, sha256 ${esc((e.source.sha256 || "").slice(0, 16))}">revenue ${bn(s.revenue_actual)}</a> against guidance of <a href="${esc(e.prior_source.press_release_url)}" target="_blank" rel="noopener">${bn(s.revenue_guided_mid)}</a> (${pp(s.guidance_surprise_pct)})${e.earnings.gross_margin ? ` · GAAP gross margin ${e.earnings.gross_margin.value}%` : ""}${e.earnings.eps_diluted ? ` · diluted EPS $${e.earnings.eps_diluted.value}` : ""}</div>
         ${d ? waterfall(d) + `<p class="plain">${plain}</p>` : `<p class="plain">No breakdown for this release: ${esc(PLAIN.market_data)}</p>`}
       </div>
     </div>
@@ -292,6 +300,101 @@ function demoProof() {
       <p class="note">${day(x.executed_at)} · ${esc(x.pair.replace(/USDT/g, ""))} opened and closed as a pair on Bitget Demo Trading, in ${esc((x.position_mode || "").replace("_", " "))}. An execution test of the order path, not a strategy trade. Net ${usd(x.realized.net, 2)} after Bitget's own fees.</p></div>
     <div class="orders">${x.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> opened ${o.open_px} · closed ${o.close_px}</span><span class="muted">filled</span>
       <code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`;
+}
+
+/* ---------- what is real ---------- */
+function realStrip() {
+  const verified = D.events.filter(e => e.status === "complete").length;
+  const quotes = D.rows.filter(r => r.interpretation && r.interpretation.status === "ok").length;
+  const demoOrders = (D.demo_evidence ? D.demo_evidence.accepted_orders : 0) + (D.demo_strategy_trades || []).reduce((a, t) => a + t.orders.length * 2, 0);
+  const items = [
+    [D.events.length, "real earnings releases", "/dashboard"],
+    [verified, "fully verified against SEC filings", "https://github.com/jenzylove/residual/tree/main/data/sources"],
+    [quotes, "AI reads with quotes checked", "#signal"],
+    [D.orders.length, "paper orders, both legs", "ledger.csv"],
+    [demoOrders, "real Bitget Demo orders", "#proof"],
+    ["CI", "replay reproduced on every push", "https://github.com/jenzylove/residual/actions"],
+  ];
+  $("#real").innerHTML = items.map(([n, t, href]) => `<a href="${href}" ${href.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}><b>${esc(n)}</b>${esc(t)}</a>`).join("");
+}
+
+/* ---------- variants and size study ---------- */
+function variantsTable() {
+  const S = D.summary, f = v => v == null ? "n/a" : v.toFixed(2);
+  const rows = [
+    ["residual", "Strategy (rule picked walk forward)", "chooses among the three rules below using earlier events only", true],
+    ["v_residual", "Residual rule", "trade the company's own move"],
+    ["v_headline", "Headline, hedged", "trade the guidance surprise, hedged and gated"],
+    ["v_agreement", "Agreement", "only when the company move and the surprise agree"],
+    ["naive_same_events", "Plain headline, same releases", "unhedged baseline"],
+  ];
+  $("#variants").innerHTML = `<div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe</th><th class="num">Hit</th></tr></thead><tbody>
+    ${rows.map(([k, n, sub, hl]) => S[k] ? `<tr class="${hl ? "hl" : ""}"><td>${n}<small>${sub}</small></td><td class="num">${S[k].trades}</td><td class="num ${cls(S[k].total_net_pnl)}">${usd(S[k].total_net_pnl, 0)}</td><td class="num">${f(S[k].sharpe_daily_ann)}</td><td class="num">${S[k].hit_rate == null ? "n/a" : Math.round(S[k].hit_rate * 100) + "%"}</td></tr>` : "").join("")}
+    </tbody></table></div>
+    <p class="note">The three rules were declared before scoring. Each is published whether it wins or loses. Complete funding data view.</p>`;
+}
+
+function sizeStudy() {
+  const ss = D.size_study || [];
+  if (!ss.length) { $("#sizes").innerHTML = `<p class="note">Size study not run.</p>`; return; }
+  const W = 560, H = 210, pad = 46, xs = ss.map(s => s.notional);
+  const vals = ss.flatMap(s => [s.primary.residual.total_net_pnl, s.primary.naive_same_events.total_net_pnl]);
+  const lo = Math.min(0, ...vals), hi = Math.max(0, ...vals);
+  const x = i => pad + i / Math.max(1, ss.length - 1) * (W - pad - 20), y = v => H - 30 - (v - lo) / ((hi - lo) || 1) * (H - 50);
+  const line = (k, col, dash) => `<polyline fill="none" stroke="${col}" stroke-width="2.2" ${dash ? 'stroke-dasharray="5 4"' : ""} points="${ss.map((s, i) => x(i) + "," + y(s.primary[k].total_net_pnl)).join(" ")}"/>` +
+    ss.map((s, i) => `<circle cx="${x(i)}" cy="${y(s.primary[k].total_net_pnl)}" r="3.5" fill="${col}"/>`).join("");
+  const cur = D.config.base_notional;
+  $("#sizes").innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${H}">
+    <line x1="${pad}" x2="${W - 20}" y1="${y(0)}" y2="${y(0)}" stroke="#141418" stroke-opacity=".15"/>
+    ${line("residual", "#6c4ee6")}${line("naive_same_events", "#d0453b", 1)}
+    ${ss.map((s, i) => `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" ${s.notional === cur ? 'style="fill:#6c4ee6;font-weight:600"' : ""}>$${(s.notional / 1000).toLocaleString()}k · ${s.trades} trades</text>`).join("")}
+    <text x="0" y="${y(hi) + 4}">${usd(hi)}</text><text x="0" y="${y(lo)}">${usd(lo)}</text></svg>
+    <div class="legend"><span><i style="background:#6c4ee6"></i>Strategy</span><span><i style="background:#d0453b"></i>Plain headline, same releases</span></div>
+    <p class="note">Same walk forward, re run at four position sizes. Above $2.5k, Bitget's after hours liquidity rejects most releases (${ss.map(s => `$${s.notional / 1000}k: ${s.liquidity_rejects}`).join(", ")} liquidity rejections). The default is $${(cur / 1000).toLocaleString()}k.</p>`;
+}
+
+function demoStrategy() {
+  const t = (D.demo_strategy_trades || []).slice(-1)[0], el = $("#demo-strat");
+  if (!t || !el) return;
+  el.hidden = false;
+  el.innerHTML = `<div><h4>A strategy decision, executed on Bitget Demo</h4>
+      <div class="big">${esc(t.event_id.split("-")[0])} ${t.decision.direction > 0 ? "long" : "short"}</div>
+      <p class="note">The replay's decision for ${esc(t.event_id)}, placed on Bitget Demo Trading at ${esc(t.executed_at.slice(0, 10))} prices and closed. ${t.hedge_substitute ? `Demo does not list ${esc(t.strategy_hedge)}, so the best fitting listed stock (${esc(t.hedge_used.replace("USDT", ""))}, R² ${t.hedge_substitute.r2.toFixed(2)}) stood in as the hedge.` : ""} Net ${usd(t.realized.net, 2)} after Bitget's fees.</p></div>
+    <div class="orders">${t.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> ${o.side} · ${o.open_px} → ${o.close_px}</span><span class="muted">filled</span><code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`;
+}
+
+/* ---------- guided tour ---------- */
+function tour() {
+  const steps = [
+    ["#real", "Everything on this page comes from real data: SEC filings, Bitget prices, verified AI quotes and real Bitget Demo orders. Each chip links to its evidence."],
+    ["#stage", "One real earnings release. The bars split the stock's early move into market, sector, liquidity and what belongs to the company."],
+    ["#stage .verdict", "The decision and the reason in plain words. Every gate on the right had to pass, or RESIDUAL stands aside."],
+    ["#how", "The workflow: SEC filing, verified numbers, market and sector removed, an AI second reading, strict gates, then a hedged pair."],
+    ["#exec", "What happened after the entry: both legs, fees, slippage, funding, and where the result came from."],
+    ["#proof", "Scored walk forward against the obvious trade, with Sharpe, Sortino and drawdown. Nothing tuned on the events it is judged on."],
+    ["#variants", "Every rule we declared, published whether it won or lost."],
+    ["#demo-proof", "Real orders on Bitget Demo Trading, with their order IDs."],
+    ["#faq", "Straight answers to the questions a judge should ask. The full audit holds every table, source and hash."],
+  ].filter(([sel]) => $(sel) && !$(sel).hidden);
+  let i = 0;
+  const box = $("#tour");
+  const go = k => {
+    document.querySelectorAll(".tour-focus").forEach(e => e.classList.remove("tour-focus"));
+    i = Math.max(0, Math.min(steps.length - 1, k));
+    const el = $(steps[i][0]);
+    stopAuto();
+    el.classList.add("in", "tour-focus");
+    el.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "center" });
+    $("#tour-step").textContent = `Step ${i + 1} of ${steps.length}`;
+    $("#tour-text").textContent = steps[i][1];
+    $("#tour-next").textContent = i === steps.length - 1 ? "Finish" : "Next";
+  };
+  const end = () => { box.hidden = true; document.querySelectorAll(".tour-focus").forEach(e => e.classList.remove("tour-focus")); };
+  $("#tour-start").onclick = () => { box.hidden = false; go(0); };
+  $("#tour-next").onclick = () => i === steps.length - 1 ? end() : go(i + 1);
+  $("#tour-prev").onclick = () => go(i - 1);
+  $("#tour-close").onclick = end;
+  document.addEventListener("keydown", e => { if (box.hidden) return; if (e.key === "Escape") end(); if (e.key === "ArrowRight") $("#tour-next").click(); if (e.key === "ArrowLeft") go(i - 1); });
 }
 
 /* ---------- motion ---------- */

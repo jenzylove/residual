@@ -168,6 +168,34 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .foot-cols a:hover{color:#a58cff}
 .foot-bottom{max-width:1280px;margin:56px auto 0;padding-top:24px;border-top:1px solid #2a2833;font-size:12px;color:#8d8a9c}
 
+/* what is real strip */
+.real{max-width:1280px;margin:0 auto;padding:40px clamp(20px,6vw,88px) 0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.real a{display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;border-radius:99px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);
+  box-shadow:0 8px 24px rgba(70,50,150,.06);font-size:13px;color:#3a3a44;transition:all .25s}
+.real a b{font-size:16px;font-weight:500;color:#141418}
+.real a:hover{border-color:var(--violet);transform:translateY(-2px)}
+
+/* tour */
+.tour-btn{border:1px solid var(--line);background:rgba(255,255,255,.75);border-radius:99px;padding:12px 20px;font:inherit;font-size:14px;cursor:pointer;transition:all .25s}
+.tour-btn:hover{border-color:var(--violet);color:var(--violet)}
+.tour{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:50;width:min(560px,calc(100vw - 32px));background:#17161d;color:#e7e6ee;
+  border-radius:20px;padding:20px 22px;box-shadow:0 20px 60px rgba(20,10,60,.35)}
+.tour-step{margin:0;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a58cff}
+.tour-text{margin:8px 0 14px;font-size:15px;line-height:1.55}
+.tour-nav{display:flex;gap:8px;justify-content:flex-end}
+.tour-nav button{border:1px solid #3a3844;background:transparent;color:#e7e6ee;border-radius:99px;padding:8px 16px;font:inherit;font-size:13px;cursor:pointer}
+.tour-nav .primary{background:#6c4ee6;border-color:#6c4ee6}
+.tour-focus{outline:2px solid #6c4ee6;outline-offset:8px;border-radius:24px;transition:outline-color .3s}
+
+/* variants + sizes */
+.vtable{width:100%;border-collapse:collapse}
+.vtable th,.vtable td{padding:9px 6px;border-bottom:1px solid rgba(20,20,24,.07);font-size:13px;text-align:left;white-space:nowrap}
+.vtable th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.vtable .num{text-align:right;font-variant-numeric:tabular-nums}
+.vtable tr.hl td{background:rgba(108,78,230,.07)}
+.vtable small{display:block;color:var(--muted);font-size:11.5px}
+.tscroll2{overflow-x:auto}
+
 /* scroll reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}

@@ -91,7 +91,7 @@ class LiveLifecycleTest(unittest.TestCase):
         self.assertEqual([l["symbol"] for l in pos["legs"]], ["NVDAUSDT", "QQQUSDT"])
         self.assertEqual([l["side"] for l in pos["legs"]], [1, -1])
         self.assertAlmostEqual(pos["legs"][0]["entry_price"], 200.01)   # long pays the ask
-        self.assertAlmostEqual(pos["legs"][1]["qty"] * pos["legs"][1]["entry_price"], 12_000, places=3)
+        self.assertAlmostEqual(pos["legs"][1]["qty"] * pos["legs"][1]["entry_price"], 1.2 * live.BASE_NOTIONAL, places=3)
         self.assertEqual(json.loads(live.PENDING.read_text()), [])
         self.assertEqual(len(events.load_events()), 2)  # the filing is not re-added
 
@@ -127,6 +127,30 @@ class LiveLifecycleTest(unittest.TestCase):
             self.assertGreater(closed["realized"]["gross"], 0)
             self.assertTrue(any(e["path"].endswith("place-order") and e["body"].get("reduceOnly") == "YES"
                                 for e in closed["exchange_log"]))
+
+    def test_demo_substitutes_unlisted_hedge(self):
+        from test_demo import FakeExchange
+        ex = FakeExchange()
+        ex.px["SAAPLSUSDT"] = 330.0
+        real_contracts = ex.__call__
+        def no_qqq(method, url, headers, body):
+            r = real_contracts(method, url, headers, body)
+            if url.split("?")[0].endswith("/market/contracts"):
+                r["data"] = [c for c in r["data"] if c["symbol"] != "SQQQSUSDT"] + [
+                    {"symbol": "SAAPLSUSDT", "symbolStatus": "normal", "volumePlace": "2", "sizeMultiplier": "0.01", "minTradeNum": "0.01"}]
+            return r
+        real_client = live.demo.BitgetDemo
+        sub = {"symbol": "AAPLUSDT", "beta": 0.8, "r2": 0.4, "n_hours": 300, "substitute_for": "QQQUSDT"}
+        with mock.patch.object(live.demo, "configured", lambda: True), \
+             mock.patch.object(live.demo, "BitgetDemo", lambda: real_client("k", "s", "p", transport=no_qqq)), \
+             mock.patch.object(live, "fallback_hedge", lambda ev, snap, a, listed: sub if listed("AAPLUSDT") else None):
+            t_obs = market.event_times(RELEASE)["t_obs"]
+            live.watch(now_ms=RELEASE + 10 * 60_000)
+            r = live.watch(now_ms=t_obs + 10 * 60_000)
+            pos = r["new_events"][0]["position"]
+            self.assertEqual(pos["hedge_substitute"]["substitute_for"], "QQQUSDT")
+            self.assertEqual([l["demo_symbol"] for l in pos["demo_legs"]], ["SNVDASUSDT", "SAAPLSUSDT"])
+            self.assertAlmostEqual(pos["demo_legs"][1]["notional"], 0.8 * live.BASE_NOTIONAL)
 
     def test_trade_after_entry_window_is_rejected(self):
         t_obs = market.event_times(RELEASE)["t_obs"]

@@ -43,6 +43,7 @@
         <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         See a move taken apart
       </a>
+      <button class="tour-btn" id="tour-start" type="button">Take the 60 second tour</button>
       <div class="status">
         <p class="eyebrow small"><i class="dot live"></i>Walk forward replay</p>
         <p class="status-val">75 real earnings events · SEC verified</p>
@@ -63,6 +64,7 @@
 </main>
 
 <div id="body">
+  <nav id="real" class="real rv" aria-label="What is real"></nav>
 
   <!-- overview -->
   <section id="overview" class="sec">
@@ -131,7 +133,12 @@
         <div id="curve"></div>
       </div>
     </div>
+    <div class="proof-grid" style="margin-top:20px">
+      <div class="card rv"><h4>Every pre-declared rule, published</h4><div id="variants"></div></div>
+      <div class="card rv"><h4>Size study: what Bitget liquidity allows</h4><div id="sizes"></div></div>
+    </div>
     <div id="demo-proof" class="card demo-card rv" hidden></div>
+    <div id="demo-strat" class="card demo-card rv" hidden></div>
     <div class="proof-links rv">
       <a class="dl" href="data.json" download>Full results</a>
       <a class="dl" href="ledger.csv" download>Paper order ledger</a>
@@ -174,6 +181,11 @@
                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
 </script>
 <script type="module" src="orb.js"></script>
+<div id="tour" class="tour" hidden role="dialog" aria-live="polite">
+  <p class="tour-step" id="tour-step"></p>
+  <p class="tour-text" id="tour-text"></p>
+  <div class="tour-nav"><button type="button" id="tour-prev">Back</button><button type="button" id="tour-next" class="primary">Next</button><button type="button" id="tour-close" aria-label="Close tour">×</button></div>
+</div>
 <script src="landing.js"></script>
 </body>
 </html>

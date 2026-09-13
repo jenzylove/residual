@@ -5,21 +5,25 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "acdba83f96138992475a70d7515b6643922869cc4797409f26710aacf7090e4e",
- "created_at": "2026-09-12T22:53:33Z",
- "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance, next-quarter guidance was raised, and commentary cites accelerating Data Center demand and AI momentum\u2014yet the residual move is a sharp -9.39% decline, directionally at odds with the strong fundamental/guidance signal.\", \"evidence_quotes\": [\"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business\", \"deliver substantial revenue and earnings growth in the years ahead\"]}",
+ "prompt_sha256": "c1dc90ade3d098bc550cf2bf2687f6e37d07ad086019be0a6273bf5529d14b30",
+ "created_at": "2026-09-13T19:08:17Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue beat guidance, next quarter guide raised, Data Center revenue more than doubled, management sees accelerating H2 growth. This strong, raised outlook contradicts the sharply negative -9.36% company-specific residual, suggesting the drop is not fundamentally justified.\", \"evidence_quotes\": [\"Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,\", \"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"We enter the second half with strong momentum as EPYC demand accelerates, Instinct deployments scale and Helios begins to ramp.\"]}",
  "attempts": [
   {
+   "detail": "unexpected keys ['confidence', 'confidence_note', 'evidence_quotes', 'label', 'rationale']",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat AMD's own guidance, next-quarter guidance was raised to $13B (~13% QoQ growth), Data Center revenue more than doubled and management explicitly expects acceleration in H2. This strong, forward-looking commentary conflicts with the sharply negative -9.36% company-specific residual, suggesting the reaction is not supported by disclosed fundamentals.\", \"confidence_note\": \"\", \"evidence_quotes\": [\"Revenue increased 50% year-over-year to a record $11.5 billion\", \"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"deliver substantial revenue and earnings growth in the years ahead\"]}"
+  },
+  {
    "detail": "ok",
-   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance, next-quarter guidance was raised, and commentary cites accelerating Data Center demand and AI momentum\u2014yet the residual move is a sharp -9.39% decline, directionally at odds with the strong fundamental/guidance signal.\", \"evidence_quotes\": [\"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business\", \"deliver substantial revenue and earnings growth in the years ahead\"]}"
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue beat guidance, next quarter guide raised, Data Center revenue more than doubled, management sees accelerating H2 growth. This strong, raised outlook contradicts the sharply negative -9.36% company-specific residual, suggesting the drop is not fundamentally justified.\", \"evidence_quotes\": [\"Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,\", \"We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.\", \"We enter the second half with strong momentum as EPYC demand accelerates, Instinct deployments scale and Helios begins to ramp.\"]}"
   }
  ],
  "label": "contradicted_by_guidance",
- "confidence": 0.72,
- "rationale": "Revenue beat prior guidance, next-quarter guidance was raised, and commentary cites accelerating Data Center demand and AI momentum\u2014yet the residual move is a sharp -9.39% decline, directionally at odds with the strong fundamental/guidance signal.",
+ "confidence": 0.78,
+ "rationale": "Revenue beat guidance, next quarter guide raised, Data Center revenue more than doubled, management sees accelerating H2 growth. This strong, raised outlook contradicts the sharply negative -9.36% company-specific residual, suggesting the drop is not fundamentally justified.",
  "evidence_quotes": [
+  "Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business, which represented 58% of company revenue in the quarter,",
   "We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.",
-  "Revenue increased 50% year-over-year to a record $11.5 billion, driven by continued strength in our Data Center business",
-  "deliver substantial revenue and earnings growth in the years ahead"
+  "We enter the second half with strong momentum as EPYC demand accelerates, Instinct deployments scale and Helios begins to ramp."
  ]
 }

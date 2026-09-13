@@ -189,6 +189,19 @@ class RiskRatioTests(unittest.TestCase):
         self.assertIsNone(risk_ratios(rows, [])["sharpe_daily_ann"])
 
 
+class FundingMergeTests(unittest.TestCase):
+    def test_refresh_never_shrinks_coverage(self):
+        from residual.market import merge_funding
+        old = {"X": {"earliest_available": 100, "settlements": [{"t": 100, "rate": 1e-4}, {"t": 200, "rate": 2e-4}]}}
+        new = {"X": {"earliest_available": 200, "settlements": [{"t": 200, "rate": 2e-4}, {"t": 300, "rate": 3e-4}]},
+               "Y": {"earliest_available": 250, "settlements": []}}
+        m = merge_funding(old, new)
+        self.assertEqual(m["X"]["earliest_available"], 100)
+        self.assertEqual([x["t"] for x in m["X"]["settlements"]], [100, 200, 300])
+        self.assertEqual(m["Y"]["earliest_available"], 250)
+        self.assertIs(merge_funding(None, new), new)
+
+
 class OutputJsonTests(unittest.TestCase):
     def test_non_finite_numbers_become_null(self):
         import json

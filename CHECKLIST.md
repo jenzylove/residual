@@ -31,7 +31,7 @@ Numbers refer to the committed `data/results.json`.
 - [x] ≥15 events; documented universe
 - [x] Baselines: residual, unhedged (same signals), **naive on the same events** (like-for-like), naive on all events, no-trade, plus a no-AI ablation
 - [x] Walk-forward evaluation (parameters fit only on events exited before each release)
-- [x] ≥1 paired trade (9) and ≥1 NO_TRADE (66); both legs logged in `data/ledger.csv` (36 orders)
+- [x] ≥1 paired trade (13) and ≥1 NO_TRADE (62); both legs logged in `data/ledger.csv` (52 orders)
 - [x] Slippage and fees included
 - [x] Results regenerate from code **without network**: `replay --offline` uses committed sources, snapshots and cached interpretations
 - [~] Live watcher: lifecycle proven by the deterministic fixture `tests/test_live.py` (new filing → record → PENDING → trade → close) and by one real run that recorded NO_TRADE. It has not yet added a real new event, because none has been released
@@ -44,7 +44,28 @@ Numbers refer to the committed `data/results.json`.
   - Tested against a fake exchange only; **the run with real demo keys is pending.**
 - [x] Independent of AFTERSHOCK
 
-## Result claims (not an edge)
+## Rubric work (Alpha Factory: executable, effective, verifiable)
+- [x] Executable:
+  - $2.5k default sized to Bitget liquidity; a size study re-runs the walk-forward at $1k/$2.5k/$5k/$10k;
+  - Demo hedge substitute on the live path, with a fixture test;
+  - `demo-strategy-trade` executes a replayed strategy decision on real Demo.
+- [x] Effective:
+  - three pre-declared rules with a walk-forward selector, all published;
+  - Sharpe, Sortino and max drawdown, full period and last 90 days.
+- [x] Verifiable: SEC hashes, offline replay reproduced in CI, quote-checked AI, public ledger, real Demo order IDs.
+- [x] Frontend:
+  - proof strip linking each claim to its evidence;
+  - a 60-second guided tour;
+  - a variants table and size-study chart;
+  - the decision rule shown per event;
+  - revenue figures linked to their SEC source.
+
+## Result claims (not an edge, at $2,500)
+- Primary: strategy +$335.40 (4 trades, Sharpe 1.19) vs naive headline on the same events +$442.59 (Sharpe 1.31)
+- Conservative, all 13 trades: strategy +$269.44 (Sharpe 0.87) vs naive on the same events +$511.29 (Sharpe 1.31)
+- Across every eligible event the headline trade loses (−$716.13); the gates carry the value
+
+## Earlier claims (superseded, $10,000 size)
 - Primary: residual +$115.93 (5 trades) vs naive headline on the same events +$1,254.55
 - Conservative funding, all 9 trades: residual −$77.73 vs naive on the same events +$401.51
 - The sample is too small to support any claim of alpha; like-for-like, the residual signal did not beat the headline direction

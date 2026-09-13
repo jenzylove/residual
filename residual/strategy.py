@@ -9,7 +9,8 @@ from .paper import simulate
 
 WINDOWS = (7, 14, 21)            # beta estimation lookbacks (days); primary = 14
 PRIMARY = 14
-BASE_NOTIONAL = 10_000.0         # company-leg notional (USDT) at full size
+BASE_NOTIONAL = 2_500.0          # company-leg notional (USDT) at full size; sized to Bitget after-hours
+                                 # liquidity (the size study in results.json shows $10k fails the gate far more)
 MAX_LOSS_FRAC = 0.025            # pair stop: 2.5% of company notional
 MIN_HEDGE_R2 = 0.10
 MAX_SPREAD = 0.003               # 30 bps estimated spread
@@ -148,7 +149,65 @@ def analyze(event: dict, snap: dict | None) -> dict:
             # train on the conservative-funding outcome so missing funding never flatters a rule
             a["counterfactual"][str(d)] = sim["net_conservative"] if sim else None
     a["residual"] = residual
+    s = event.get("surprise") or {}
+    a["surprise_sign"] = (1 if s["guidance_surprise_pct"] > 0 else -1 if s["guidance_surprise_pct"] < 0 else 0) if s else 0
     return a
+
+
+# Pre-declared direction variants. The walk-forward selector picks one per event using only earlier events.
+VARIANTS = ("residual", "headline", "agreement")
+
+
+def variant_direction(v: str, a: dict, params: dict) -> int:
+    rs = int(math.copysign(1, a["residual"]))
+    if v == "residual":
+        return int(params["mode"]) * rs
+    if v == "headline":          # guidance-surprise direction, still hedged and gated
+        return a.get("surprise_sign", 0)
+    if v == "agreement":         # only when the company move and the surprise point the same way
+        return rs if rs == a.get("surprise_sign") else 0
+    raise ValueError(v)
+
+
+def _eligible(h):
+    return h.get("counterfactual") and all(h["gates"].get(k, (False,))[0] for k in
+                                           ("event_data", "market_data", "hedge", "liquidity", "robust", "reaction_open"))
+
+
+def learn_variant(history: list[dict], params: dict) -> dict:
+    train = [h for h in history if _eligible(h) and abs(h["residual"]) >= params["k"] * h["costs"]["round_trip"]]
+    scores = {}
+    for v in VARIANTS:
+        scores[v] = round(sum((h["counterfactual"].get(str(d)) or 0.0) for h in train
+                              if (d := variant_direction(v, h, params)) != 0), 2)
+    if len(train) < MIN_TRAIN:
+        return {"variant": "residual", "source": f"prior (only {len(train)} eligible training events)", "scores": scores}
+    best = max(VARIANTS, key=lambda v: (scores[v], -VARIANTS.index(v)))
+    return {"variant": best, "source": "walk-forward", "n_train": len(train), "scores": scores}
+
+
+def fallback_hedge(event: dict, snap: dict, a: dict, listed) -> dict | None:
+    """Best-fitting Demo-listed stock perp to stand in for an unlisted strategy hedge (live Demo only).
+
+    `listed(symbol)` says whether the venue lists a symbol. Same OLS fit and R2 floor as the strategy hedge.
+    """
+    w = snap["window"]
+    idx = {s: index(r) for s, r in snap["candles"].items()}
+    C = event["company_symbol"]
+    if C not in idx:
+        return None
+    start = w["t_pre"] - PRIMARY * DAY
+    rc = hourly_returns(idx[C], start, w["t_pre"])
+    best = None
+    for h in universe.DEMO_FALLBACK_HEDGES:
+        if h == C or h not in idx or not listed(h):
+            continue
+        hf = hedge_fit(rc, hourly_returns(idx[h], start, w["t_pre"]))
+        if hf and hf["r2"] >= MIN_HEDGE_R2 and (best is None or hf["r2"] > best["r2"]):
+            best = {"symbol": h, **hf}
+    if best:
+        best["substitute_for"] = (a.get("hedge") or {}).get("symbol")
+    return best
 
 
 def _legs(event, a, direction, size, hedged=True):
@@ -199,8 +258,7 @@ def attribute(event, snap, a, sim, direction) -> dict:
 
 def learn_params(history: list[dict]) -> dict:
     """Pick direction mode and entry threshold from strictly earlier events."""
-    train = [h for h in history if h.get("counterfactual") and all(
-        h["gates"].get(k, (False,))[0] for k in ("event_data", "market_data", "hedge", "liquidity", "robust", "reaction_open"))]
+    train = [h for h in history if _eligible(h)]
     if len(train) < MIN_TRAIN:
         return {**DEFAULT_PARAMS, "source": f"prior (only {len(train)} eligible training events)",
                 "n_train": len(train)}

@@ -40,9 +40,10 @@ def cmd_snapshot(args):
 
 
 def cmd_replay(args):
-    from .pipeline import replay, write_outputs
+    from .pipeline import replay, size_study, write_outputs
     from .live import load_live_log
     res = replay(use_ai=not args.no_ai, allow_llm_calls=not args.offline)
+    res["size_study"] = size_study()
     if not args.no_ai:
         core = replay(use_ai=False, verbose=False)
         res["ablation_no_ai"] = {"summary": core["summary"],
@@ -52,11 +53,20 @@ def cmd_replay(args):
                 "demo_credentials_configured": demo.configured(), "demo_product_type": demo.PRODUCT_TYPE,
                 "doh_fallback_enabled": net.DOH_FALLBACK, "replay_mode": "offline" if args.offline else "online",
                 "ai_gate": not args.no_ai}
-    write_outputs(res, {"live_log": load_live_log(), "operator": operator, "demo_evidence": demo_evidence()})
+    write_outputs(res, {"live_log": load_live_log(), "operator": operator, "demo_evidence": demo_evidence(),
+                        "demo_strategy_trades": demo_strategy_trades()})
     s = res["summary"]
     for k in ("residual", "unhedged", "naive", "no_trade"):
         m = s[k]
         print(f"{k:<10} pnl={m['total_net_pnl']:>10.2f} trades={m['trades']:>2} hit={m['hit_rate']} mdd={m['max_drawdown']}")
+
+
+def demo_strategy_trades():
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / "data" / "demo_strategy_trades.jsonl"
+    if not p.exists():
+        return []
+    return [json.loads(x) for x in p.read_text(encoding="utf-8").splitlines() if x.strip()][-5:]
 
 
 def demo_evidence():
@@ -209,6 +219,52 @@ def cmd_demo_check(args):
     print(f"{len(c.contracts())} demo contracts listed")
 
 
+def cmd_demo_strategy_trade(args):
+    """Execute a real past strategy TRADE decision on Bitget Demo (company leg + fitted hedge, substitute if the
+    strategy hedge is not listed), then close it. Evidence -> data/demo_strategy_trades.jsonl."""
+    from pathlib import Path
+    from . import demo, market
+    from .strategy import analyze, fallback_hedge
+    res = json.loads((Path(__file__).resolve().parent.parent / "data" / "results.json").read_text(encoding="utf-8"))
+    evs = {e["event_id"]: e for e in res["events"]}
+    c = demo.BitgetDemo()
+    rows = [r for r in res["rows"] if r["decision"]["decision"] == "TRADE"
+            and (not args.event or r["event_id"] == args.event)
+            and c.demo_symbol(evs[r["event_id"]]["company_symbol"])]
+    if not rows:
+        raise demo.DemoError("no strategy TRADE decision whose company is listed on Bitget Demo")
+    r = rows[-1]
+    ev = evs[r["event_id"]]
+    snap = market.load_snapshot(ev["event_id"])
+    a = analyze(ev, snap)
+    hedge = a.get("hedge")
+    sub = None
+    if hedge and not c.demo_symbol(hedge["symbol"]):
+        sub = fallback_hedge(ev, snap, a, c.demo_symbol)
+        if not sub:
+            raise demo.DemoError(f"{hedge['symbol']} not on Demo and no listed substitute fits (R2 >= floor)")
+        hedge = sub
+    d, n = r["decision"]["direction"], args.notional
+    legs = [{"live_symbol": ev["company_symbol"], "side": d, "notional": n}]
+    if hedge:
+        legs.append({"live_symbol": hedge["symbol"], "side": -d, "notional": abs(hedge["beta"]) * n})
+    tag = "st" + time.strftime("%m%d%H%M%S")
+    opened = c.open_pair(legs, tag)
+    closed = c.close_pair(opened, tag)
+    rec = {"tag": tag, "executed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "event_id": ev["event_id"],
+           "decision": {k: r["decision"].get(k) for k in ("direction", "structure", "size")},
+           "strategy_hedge": (a.get("hedge") or {}).get("symbol"), "hedge_used": hedge["symbol"] if hedge else None,
+           "hedge_substitute": sub, "hedge_beta": hedge["beta"] if hedge else None,
+           "orders": [{"symbol": l["demo_symbol"], "side": "long" if l["side"] > 0 else "short",
+                       "open": l["open_order"]["orderId"], "open_px": l["open_order"]["priceAvg"],
+                       "close": l["close_order"]["orderId"], "close_px": l["close_order"]["priceAvg"]} for l in closed],
+           "realized": demo.realized(closed), "note": "replayed decision executed at today's prices on Bitget Demo"}
+    out = Path(__file__).resolve().parent.parent / "data" / "demo_strategy_trades.jsonl"
+    with out.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, default=str) + "\n")
+    print(json.dumps({k: rec[k] for k in ("event_id", "decision", "strategy_hedge", "hedge_used", "orders", "realized")}, indent=1, default=str))
+
+
 def cmd_demo_roundtrip(args):
     """Open and immediately close one small hedged pair on Bitget Demo; save exchange records."""
     from pathlib import Path
@@ -255,6 +311,8 @@ def main():
     rt = sub.add_parser("demo-roundtrip", help="open+close one small hedged pair on Bitget Demo")
     rt.add_argument("--company", default="NVDAUSDT"); rt.add_argument("--hedge", default="QQQUSDT")
     rt.add_argument("--notional", type=float, default=50.0)
+    st = sub.add_parser("demo-strategy-trade", help="execute a real past strategy TRADE decision on Bitget Demo")
+    st.add_argument("--event"); st.add_argument("--notional", type=float, default=100.0)
     kr = sub.add_parser("keyrun", help="full Bitget Demo test run -> data/keyrun_report.json")
     kr.add_argument("--notional", type=float, default=50.0)
     kr.add_argument("--skip-roundtrip", action="store_true")
@@ -268,7 +326,8 @@ def main():
     elif args.cmd.startswith("demo-"):
         from .demo import DemoError
         try:
-            {"demo-check": cmd_demo_check, "demo-roundtrip": cmd_demo_roundtrip}[args.cmd](args)
+            {"demo-check": cmd_demo_check, "demo-roundtrip": cmd_demo_roundtrip,
+             "demo-strategy-trade": cmd_demo_strategy_trade}[args.cmd](args)
         except DemoError as e:
             print(f"Bitget Demo: {e}")
             if "credentials missing" in str(e):

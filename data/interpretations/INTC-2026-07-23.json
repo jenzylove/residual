@@ -5,21 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "f94634388c0e4f93450ed90c743fa233f9b27728dde30fc9f65cc8cdc6015531",
- "created_at": "2026-09-12T22:53:02Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat guidance by ~12.6%, driven by broad-based growth (DCAI +59%, CCPG +13%, Foundry +31%) and margin expansion; next-quarter guidance midpoint ($16.3B) implies continued sequential growth, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).\", \"Data Center and AI (DCAI) | 6.3 billion | up | 59%\", \"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\"]}",
+ "prompt_sha256": "857ec0691b99d5ec4494527820b087750fa6cff2a4b0e0c51c55d03c07bdaa71",
+ "created_at": "2026-09-13T19:08:01Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.58, \"rationale\": \"Q2 revenue beat prior guidance by ~12.6% and DCAI surged 59%, but Q3 guidance midpoint ($16.3B) implies minimal sequential growth versus the just-reported $16.1B, and guidance direction is flagged as lowered versus prior growth trajectory, while GAAP EPS swung to a large loss, undercutting the bullish residual move.\", \"evidence_quotes\": [\"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\", \"Earnings (loss) per share attributable to Intel-diluted | $(2.16)\", \"exceeding our financial guidance on robust demand and improved execution\"]}",
  "attempts": [
   {
    "detail": "ok",
-   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat guidance by ~12.6%, driven by broad-based growth (DCAI +59%, CCPG +13%, Foundry +31%) and margin expansion; next-quarter guidance midpoint ($16.3B) implies continued sequential growth, supporting a lasting positive re-rating rather than a one-off pop.\", \"evidence_quotes\": [\"Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).\", \"Data Center and AI (DCAI) | 6.3 billion | up | 59%\", \"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\"]}"
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.58, \"rationale\": \"Q2 revenue beat prior guidance by ~12.6% and DCAI surged 59%, but Q3 guidance midpoint ($16.3B) implies minimal sequential growth versus the just-reported $16.1B, and guidance direction is flagged as lowered versus prior growth trajectory, while GAAP EPS swung to a large loss, undercutting the bullish residual move.\", \"evidence_quotes\": [\"Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion\", \"Earnings (loss) per share attributable to Intel-diluted | $(2.16)\", \"exceeding our financial guidance on robust demand and improved execution\"]}"
   }
  ],
- "label": "durable",
- "confidence": 0.62,
- "rationale": "Revenue beat guidance by ~12.6%, driven by broad-based growth (DCAI +59%, CCPG +13%, Foundry +31%) and margin expansion; next-quarter guidance midpoint ($16.3B) implies continued sequential growth, supporting a lasting positive re-rating rather than a one-off pop.",
+ "label": "contradicted_by_guidance",
+ "confidence": 0.58,
+ "rationale": "Q2 revenue beat prior guidance by ~12.6% and DCAI surged 59%, but Q3 guidance midpoint ($16.3B) implies minimal sequential growth versus the just-reported $16.1B, and guidance direction is flagged as lowered versus prior growth trajectory, while GAAP EPS swung to a large loss, undercutting the bullish residual move.",
  "evidence_quotes": [
-  "Second-quarter revenue was $16.1 billion, up 25% year-over-year (YoY).",
-  "Data Center and AI (DCAI) | 6.3 billion | up | 59%",
-  "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion"
+  "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion",
+  "Earnings (loss) per share attributable to Intel-diluted | $(2.16)",
+  "exceeding our financial guidance on robust demand and improved execution"
  ]
 }

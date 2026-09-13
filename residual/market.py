@@ -62,9 +62,28 @@ def build_snapshot(event: dict, contracts: dict, *, now_ms: int | None = None) -
     }
 
 
+def merge_funding(old: dict | None, new: dict) -> dict:
+    """Bitget only serves ~90 days of funding history, so a later refetch covers LESS of the past.
+    Keep the earliest coverage ever captured and the union of all settlements; never shrink."""
+    if not old:
+        return new
+    out = {}
+    for s in set(old) | set(new):
+        o, n = old.get(s) or {}, new.get(s) or {}
+        starts = [x for x in (o.get("earliest_available"), n.get("earliest_available")) if x is not None]
+        by_t = {x["t"]: x for x in o.get("settlements", [])}
+        by_t.update({x["t"]: x for x in n.get("settlements", [])})
+        out[s] = {"earliest_available": min(starts) if starts else None,
+                  "settlements": [by_t[t] for t in sorted(by_t)]}
+    return out
+
+
 def save_snapshot(snap: dict) -> Path:
     SNAP_DIR.mkdir(parents=True, exist_ok=True)
     p = SNAP_DIR / f"{snap['event_id']}.json"
+    if p.exists():  # refresh: funding coverage must never shrink
+        old = json.loads(p.read_text(encoding="utf-8"))
+        snap["funding"] = merge_funding(old.get("funding"), snap.get("funding", {}))
     p.write_text(json.dumps(snap, separators=(",", ":")), encoding="utf-8")
     return p
 

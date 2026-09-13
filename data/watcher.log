@@ -1,0 +1,10 @@
+^C{
+ "checked_at": "2026-09-13T18:38:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-13T19:08:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}

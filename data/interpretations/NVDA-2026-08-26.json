@@ -5,21 +5,21 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "9744ae12bcf9cd82ae2ceee043fac2c73545306116a6600a9f4433f5fb708d05",
- "created_at": "2026-09-12T22:53:36Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Strong beat (5.7% above guided midpoint) plus forward guidance of $108B implies continued accelerating growth, not a one-off. Demand commentary and Data Center strength support durability of the positive residual rather than a temporary or already-priced move.\", \"evidence_quotes\": [\"Revenue is expected to be $108.0 billion, plus or minus 2%.\", \"demand is accelerating\", \"Data Center revenue of $89.0 billion, up 117% from a year ago\"]}",
+ "prompt_sha256": "c965dcb9eae8d471311374c4d71ae31745770405fafee5b7f5fcb78a670eb2a2",
+ "created_at": "2026-09-13T19:08:21Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance by ~5.7%, and next-quarter guidance of $108B implies continued strong sequential growth, with Data Center revenue up 117% YoY and management citing accelerating demand, supporting a lasting positive residual.\", \"evidence_quotes\": [\"Revenue is expected to be $108.0 billion, plus or minus 2%.\", \"And demand is accelerating.\", \"Data Center revenue of $89.0 billion, up 117% from a year ago\"]}",
  "attempts": [
   {
    "detail": "ok",
-   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Strong beat (5.7% above guided midpoint) plus forward guidance of $108B implies continued accelerating growth, not a one-off. Demand commentary and Data Center strength support durability of the positive residual rather than a temporary or already-priced move.\", \"evidence_quotes\": [\"Revenue is expected to be $108.0 billion, plus or minus 2%.\", \"demand is accelerating\", \"Data Center revenue of $89.0 billion, up 117% from a year ago\"]}"
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance by ~5.7%, and next-quarter guidance of $108B implies continued strong sequential growth, with Data Center revenue up 117% YoY and management citing accelerating demand, supporting a lasting positive residual.\", \"evidence_quotes\": [\"Revenue is expected to be $108.0 billion, plus or minus 2%.\", \"And demand is accelerating.\", \"Data Center revenue of $89.0 billion, up 117% from a year ago\"]}"
   }
  ],
  "label": "durable",
  "confidence": 0.78,
- "rationale": "Strong beat (5.7% above guided midpoint) plus forward guidance of $108B implies continued accelerating growth, not a one-off. Demand commentary and Data Center strength support durability of the positive residual rather than a temporary or already-priced move.",
+ "rationale": "Revenue beat prior guidance by ~5.7%, and next-quarter guidance of $108B implies continued strong sequential growth, with Data Center revenue up 117% YoY and management citing accelerating demand, supporting a lasting positive residual.",
  "evidence_quotes": [
   "Revenue is expected to be $108.0 billion, plus or minus 2%.",
-  "demand is accelerating",
+  "And demand is accelerating.",
   "Data Center revenue of $89.0 billion, up 117% from a year ago"
  ]
 }

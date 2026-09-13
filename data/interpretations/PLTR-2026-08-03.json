@@ -5,18 +5,18 @@
  "provider": "anthropic",
  "model": "claude-sonnet-5",
  "prompt_version": "interp-v1",
- "prompt_sha256": "1477eac594a492bdee75d19ca3f8582d9ad14d6c88e363c5fd31cbd46d5664e9",
- "created_at": "2026-09-12T22:53:29Z",
- "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance by 7.6%, next-quarter guidance raised well above prior implied growth, full-year guidance raised across revenue, margins, and FCF, with accelerating US commercial growth (149% YoY) signaling broad-based, sustained demand rather than a one-off.\", \"evidence_quotes\": [\"Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\"]}",
+ "prompt_sha256": "894cd3e82c3599307c05f4638e20bfcd72c2f7a93ec3f1f41737973586e9dc5a",
+ "created_at": "2026-09-13T19:08:06Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.75, \"rationale\": \"Beat was broad-based with raised forward guidance exceeding prior implied growth, strong margins, FCF, and U.S. commercial acceleration, supporting a fundamentally justified residual rather than a one-off.\", \"evidence_quotes\": [\"Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\"]}",
  "attempts": [
   {
    "detail": "ok",
-   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance by 7.6%, next-quarter guidance raised well above prior implied growth, full-year guidance raised across revenue, margins, and FCF, with accelerating US commercial growth (149% YoY) signaling broad-based, sustained demand rather than a one-off.\", \"evidence_quotes\": [\"Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\"]}"
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.75, \"rationale\": \"Beat was broad-based with raised forward guidance exceeding prior implied growth, strong margins, FCF, and U.S. commercial acceleration, supporting a fundamentally justified residual rather than a one-off.\", \"evidence_quotes\": [\"Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion\", \"We are raising our revenue guidance to between $8.150 - $8.158 billion.\", \"U.S. commercial revenue grew 149% year-over-year and 28% quarter-over-quarter to $764 million\"]}"
   }
  ],
  "label": "durable",
- "confidence": 0.78,
- "rationale": "Revenue beat prior guidance by 7.6%, next-quarter guidance raised well above prior implied growth, full-year guidance raised across revenue, margins, and FCF, with accelerating US commercial growth (149% YoY) signaling broad-based, sustained demand rather than a one-off.",
+ "confidence": 0.75,
+ "rationale": "Beat was broad-based with raised forward guidance exceeding prior implied growth, strong margins, FCF, and U.S. commercial acceleration, supporting a fundamentally justified residual rather than a one-off.",
  "evidence_quotes": [
   "Revenue grew 93% year-over-year and 19% quarter-over-quarter to $1.935 billion",
   "We are raising our revenue guidance to between $8.150 - $8.158 billion.",

@@ -30,6 +30,15 @@ RESIDUAL isolates the company-specific part of an earnings reaction. It takes a 
 8. **Paper executor.** Records both legs at the next hourly open with slippage, Bitget taker fees and funding. The holding period is 24h, with a stop at 2.5% of company notional.
 9. **Post-event evaluator.** Splits realized P&L into company leg, hedge leg, residual, factor/hedge error, slippage, fees, funding and signal-to-fill timing.
 
+**Pre-declared rules and a walk-forward selector.** Three direction rules were declared before any scoring:
+- **Residual:** trade the company's own move.
+- **Headline, hedged:** trade the guidance-surprise direction, keeping the hedge and the gates.
+- **Agreement:** trade only when the company move and the surprise point the same way.
+
+For each event, the strategy follows whichever rule did best on strictly earlier events. Every rule's standalone result is published whether it wins or loses.
+
+**Position size.** The default is $2,500 of company notional. The size study (`size_study` in `data/results.json`, charted on the site) re-runs the whole walk-forward at $1k, $2.5k, $5k and $10k. Above $2.5k, Bitget's after-hours liquidity rejects most releases.
+
 The direction (continuation vs reversal) and the threshold k are learned **walk-forward**. Each event's parameters come only from events whose exit came before its release; with fewer than 6 such events the default prior is used. Training uses the conservative-funding outcome.
 
 ## Dataset
@@ -47,40 +56,42 @@ The direction (continuation vs reversal) and the threshold k are learned **walk-
 
 ## Results (walk-forward, 75 events)
 
-- **Outcomes:** 9 paired paper trades and 66 NO_TRADE decisions.
-- **NO_TRADE reasons** (some events have several): market data 38, liquidity 24, data incomplete 16, reaction complete 4, below cost 4, not robust 3, AI label 3, no hedge 3.
+All figures at the $2,500 default size. 
+- **Outcomes:** 13 paired paper trades and 62 NO_TRADE decisions.
+- **NO_TRADE reasons** (some events have several): market data 38, data incomplete 16, liquidity 14, below cost 5, reaction complete 4, rule disagreement 4, not robust 3, AI label 3, no hedge 3.
 
-**Universe expansion (Sep 2026) added no trades.** Nine companies were added: QCOM, KLAC, TXN, HPE, SMCI, CRM, PANW, CRWD and MDB. Each of their releases after listing ended in NO_TRADE:
-- All nine because the newly listed Bitget perpetuals are too thin after hours for a $10,000 position.
-- CRM, MDB and PANW also because none of QQQ, SPY or XLK tracks them closely enough to hedge.
+**Universe expansion (Sep 2026) added no trades.** Nine companies were added: QCOM, KLAC, TXN, HPE, SMCI, CRM, PANW, CRWD and MDB. None of their releases after listing produced a trade; each event's failed gates are listed in the Audit. The binding constraint on sample size is Bitget liquidity and listing history, not the number of companies covered.
 
-The binding constraint on sample size is Bitget liquidity, not the number of companies covered.
+**Primary result.** Only trades whose holding period has complete Bitget funding history are counted. Bitget serves funding only from about June 2026, so 9 of the 13 trades are excluded.
 
-**Primary result.** Only trades whose holding period has complete Bitget funding history are counted. Bitget serves funding only from about June 2026, so 4 of the 9 trades are excluded.
-
-| Strategy | Net P&L | Trades counted | Excluded |
-|---|---|---|---|
-| Residual pair (AI-gated) | +$115.93 | 5 | 4 |
-| Residual pair, no AI (ablation) | −$9.66 | 5 | 4 |
-| Unhedged company trade, same signals | +$361.25 | 5 | 4 |
-| **Naive headline, same events** (like-for-like) | **+$1,254.55** | 5 | 4 |
-| Naive headline, every eligible event | −$26.49 | 18 | 18 |
-| No trade | $0.00 | 0 | 0 |
+| Strategy | Net P&L | Trades counted | Excluded | Sharpe |
+|---|---|---|---|---|
+| **Strategy** (rule picked walk-forward) | **+$335.40** | 4 | 9 | 1.19 |
+| Strategy, no AI gate (ablation) | +$327.52 | 4 | 9 | 1.03 |
+| Residual rule alone | +$188.77 | 8 | 9 | 0.65 |
+| Headline rule, hedged | +$329.61 | 8 | 9 | 1.14 |
+| Agreement rule | +$335.40 | 4 | 5 | 1.19 |
+| Unhedged, same signals | +$442.59 | 4 | 9 | 1.31 |
+| **Naive headline, same events** (like-for-like) | **+$442.59** | 4 | 9 | 1.31 |
+| Naive headline, every eligible event | −$6.62 | 18 | 18 | −0.01 |
 
 **Sensitivity: all trades, conservative funding.** Every trade counts. Missing funding is charged against the position at the largest absolute rate observed for that symbol.
 
-| Strategy | Net P&L | Trades |
-|---|---|---|
-| Residual pair (AI-gated) | −$78.01 | 9 |
-| Unhedged company trade, same signals | −$42.62 | 9 |
-| Naive headline, same events | +$401.51 | 9 |
-| Naive headline, every eligible event | −$2,864.53 | 36 |
+| Strategy | Net P&L | Trades | Sharpe |
+|---|---|---|---|
+| **Strategy** (rule picked walk-forward) | +$269.44 | 13 | 0.87 |
+| Residual rule alone | +$122.80 | 17 | 0.38 |
+| Headline rule, hedged | +$262.65 | 17 | 0.84 |
+| Agreement rule | +$335.66 | 9 | 1.11 |
+| Unhedged, same signals | +$382.80 | 13 | 0.99 |
+| Naive headline, same events | +$511.29 | 13 | 1.31 |
+| Naive headline, every eligible event | −$716.13 | 36 | −1.16 |
 
 **Reading the results honestly:**
-- On the same events, the naive headline direction beat the residual strategy in this sample.
-- Hedging lowered the residual strategy's hit rate relative to unhedged in the primary run and did not improve P&L.
-- The gates avoided most of the naive strategy's losses across all events, but the like-for-like comparison shows the residual signal itself did not add value here.
-- With 5 to 9 trades, none of these differences is statistically meaningful.
+- The strategy is profitable in both views and at every tested size, but the plain headline trade on the same releases did better.
+- The value sits in the gates: across every eligible release the headline trade loses (−$716 conservative), while on the releases RESIDUAL's gates select it wins.
+- Of the three pre-declared rules, agreement scored best; the walk-forward selector moved to it only once enough history existed.
+- With 4 to 17 trades, none of these differences is statistically meaningful.
 
 ## Run it
 
@@ -164,7 +175,9 @@ What the real run established:
 - Demo uses `USDT-FUTURES` / `USDT` with the `paptrading: 1` header.
 - Demo accounts default to hedge mode; the client reads the position mode and formats orders to match.
 - Demo funds land in the demo spot wallet. Transfer them to USDT-M Futures in the app, because the Demo API has no transfer endpoint.
-- Demo lists NVDA, META and AMZN from the universe, but none of the strategy's hedge instruments (QQQ, SPY, SMH). Live strategy pairs on Demo therefore resolve to NO_TRADE. The roundtrip uses AAPL as the second leg purely to test execution.
+- Demo lists NVDA, META and AMZN from the universe, but none of the strategy's hedge instruments (QQQ, SPY, SMH).
+- **Hedge substitute (Demo only).** When the strategy hedge is not listed on Demo, the live path fits the best Demo-listed stock perpetual (AAPL, TSLA, META, AMZN or NVDA, excluding the company). It uses the same OLS fit and R² floor as the strategy hedge, and records the substitution with the position. If nothing fits, the result is NO_TRADE. Replay results are unaffected.
+- `python -m residual demo-strategy-trade` executes a real past strategy decision on Demo (company leg plus fitted hedge) and closes it. Records go to `data/demo_strategy_trades.jsonl`.
 
 ## Layout
 
