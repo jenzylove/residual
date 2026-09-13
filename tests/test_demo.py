@@ -10,8 +10,9 @@ from residual import demo
 
 
 class FakeExchange:
-    def __init__(self, fail_symbol=None, unfilled_symbol=None):
+    def __init__(self, fail_symbol=None, unfilled_symbol=None, pos_mode="one_way_mode"):
         self.orders, self.calls, self.fail, self.unfilled = {}, [], fail_symbol, unfilled_symbol
+        self.pos_mode = pos_mode
         self.px = {"SNVDASUSDT": 200.0, "SQQQSUSDT": 500.0}
 
     def __call__(self, method, url, headers, body):
@@ -27,10 +28,15 @@ class FakeExchange:
             return ok([{"lastPr": str(self.px[q["symbol"]])}])
         if u.path == "/api/v2/mix/account/set-leverage":
             return ok({})
+        if u.path == "/api/v2/mix/account/account":
+            return ok({"marginCoin": "USDT", "available": "1000", "posMode": self.pos_mode})
         if u.path == "/api/v2/mix/order/place-order":
             b = json.loads(body)
             if b["symbol"] == self.fail:
                 return {"code": "40762", "msg": "insufficient balance", "data": None}
+            # the real exchange rejects an order whose format does not match the account's position mode
+            if (self.pos_mode == "hedge_mode") != ("tradeSide" in b):
+                return {"code": "40774", "msg": "The order type for unilateral position must also be the unilateral position type.", "data": None}
             oid = str(len(self.orders) + 1)
             self.orders[oid] = b
             return ok({"orderId": oid, "clientOid": b["clientOid"]})
@@ -78,6 +84,25 @@ class DemoTests(unittest.TestCase):
         self.assertAlmostEqual(r["gross"], 10.0 * 0.5)  # 0.5 NVDA long gained $10 each; QQQ flat
         self.assertLess(r["fees"], 0)
         self.assertTrue(all(e["code"] == "00000" for e in c.log))
+
+    def test_hedge_mode_orders_use_position_side_and_trade_side(self):
+        ex = FakeExchange(pos_mode="hedge_mode")
+        c = client(ex)
+        legs = c.open_pair([{"live_symbol": "NVDAUSDT", "side": 1, "notional": 100},
+                            {"live_symbol": "QQQUSDT", "side": -1, "notional": 120}], "h1")
+        c.close_pair(legs, "h1")
+        placed = [json.loads(b) for m, p, h, b in ex.calls if p.endswith("place-order")]
+        self.assertEqual([(p["symbol"], p["side"], p["tradeSide"], p.get("reduceOnly")) for p in placed],
+                         [("SNVDASUSDT", "buy", "open", None), ("SQQQSUSDT", "sell", "open", None),
+                          ("SNVDASUSDT", "buy", "close", None), ("SQQQSUSDT", "sell", "close", None)])
+
+    def test_wrong_mode_format_is_rejected_like_the_real_exchange(self):
+        ex = FakeExchange(pos_mode="hedge_mode")
+        c = client(ex)
+        c._pos_mode = "one_way_mode"  # simulate the old bug: one-way format sent to a hedge-mode account
+        with self.assertRaises(demo.DemoError) as cm:
+            c.open_pair([{"live_symbol": "NVDAUSDT", "side": 1, "notional": 100}], "h2")
+        self.assertIn("40774", str(cm.exception))
 
     def test_failed_second_leg_rolls_back_first(self):
         ex = FakeExchange(fail_symbol="SQQQSUSDT")

@@ -122,11 +122,29 @@ class BitgetDemo:
         return self.request("POST", "/api/v2/mix/account/set-leverage", body={
             "symbol": symbol, "productType": PRODUCT_TYPE, "marginCoin": MARGIN_COIN, "leverage": str(leverage)})
 
-    def market_order(self, symbol: str, side: str, size: float, reduce_only: bool, client_oid: str) -> dict:
+    def position_mode(self, symbol: str) -> str:
+        """'hedge_mode' or 'one_way_mode', read from the account (Bitget Demo defaults to hedge_mode)."""
+        if not hasattr(self, "_pos_mode"):
+            d = self.request("GET", "/api/v2/mix/account/account",
+                             {"symbol": symbol, "productType": PRODUCT_TYPE, "marginCoin": MARGIN_COIN})
+            self._pos_mode = d.get("posMode") or "one_way_mode"
+        return self._pos_mode
+
+    def market_order(self, symbol: str, position: int, size: float, close: bool, client_oid: str) -> dict:
+        """Open or close a market position. `position` is the position's direction (+1 long, -1 short).
+
+        hedge_mode:   side is the position side for both open and close, plus tradeSide open/close.
+        one_way_mode: close uses the opposite side with reduceOnly=YES.
+        """
         body = {"symbol": symbol, "productType": PRODUCT_TYPE, "marginMode": "crossed", "marginCoin": MARGIN_COIN,
-                "size": f"{size}", "side": side, "orderType": "market", "clientOid": client_oid}
-        if reduce_only:
-            body["reduceOnly"] = "YES"
+                "size": f"{size}", "orderType": "market", "clientOid": client_oid}
+        if self.position_mode(symbol) == "hedge_mode":
+            body["side"] = "buy" if position > 0 else "sell"
+            body["tradeSide"] = "close" if close else "open"
+        else:
+            body["side"] = ("sell" if position > 0 else "buy") if close else ("buy" if position > 0 else "sell")
+            if close:
+                body["reduceOnly"] = "YES"
         placed = self.request("POST", "/api/v2/mix/order/place-order", body=body)
         return self.order_detail(symbol, placed["orderId"])
 
@@ -155,7 +173,7 @@ class BitgetDemo:
                 px = float(self.ticker(sym)["lastPr"])
                 size = self.round_size(sym, leg["notional"] / px)
                 self.set_leverage(sym)
-                o = self.market_order(sym, "buy" if leg["side"] > 0 else "sell", size, False, f"{tag}-o{i}")
+                o = self.market_order(sym, leg["side"], size, False, f"{tag}-o{i}")
                 if o["state"] != "filled":
                     raise DemoError(f"{sym} open order {o['orderId']} not filled (state {o['state']})")
                 filled.append({**leg, "demo_symbol": sym, "size": size, "open_order": o})
@@ -167,7 +185,7 @@ class BitgetDemo:
     def close_pair(self, legs: list[dict], tag: str) -> list[dict]:
         out = []
         for i, leg in enumerate(legs):
-            o = self.market_order(leg["demo_symbol"], "sell" if leg["side"] > 0 else "buy", leg["size"], True, f"{tag}-c{i}")
+            o = self.market_order(leg["demo_symbol"], leg["side"], leg["size"], True, f"{tag}-c{i}")
             out.append({**leg, "close_order": o})
         return out
 
