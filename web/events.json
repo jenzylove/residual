@@ -1,6 +1,7 @@
 [
  {
   "event_id": "HPE-2025-10-15",
+  "consensus": null,
   "ticker": "HPE",
   "company_symbol": "HPEUSDT",
   "sector_group": "hardware",
@@ -95,6 +96,19 @@
  },
  {
   "event_id": "TXN-2025-10-21",
+  "consensus": {
+   "eps_estimate": 1.49,
+   "eps_reported": 1.57,
+   "consensus_surprise_pct": 5.369,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-10-21",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+   "fetched_at": "2026-09-15T20:22:59Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "TXN",
   "company_symbol": "TXNUSDT",
   "sector_group": "semis",
@@ -230,6 +244,7 @@
  },
  {
   "event_id": "SMCI-2025-10-23",
+  "consensus": null,
   "ticker": "SMCI",
   "company_symbol": "SMCIUSDT",
   "sector_group": "hardware",
@@ -330,6 +345,19 @@
  },
  {
   "event_id": "INTC-2025-10-23",
+  "consensus": {
+   "eps_estimate": 0.01,
+   "eps_reported": 0.23,
+   "consensus_surprise_pct": 2200.0,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-10-23",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+   "fetched_at": "2026-09-15T20:22:45Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "INTC",
   "company_symbol": "INTCUSDT",
   "sector_group": "semis",
@@ -481,6 +509,19 @@
  },
  {
   "event_id": "META-2025-10-29",
+  "consensus": {
+   "eps_estimate": 6.71,
+   "eps_reported": 7.25,
+   "consensus_surprise_pct": 8.048,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-10-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+   "fetched_at": "2026-09-15T20:23:01Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "META",
   "company_symbol": "METAUSDT",
   "sector_group": "internet",
@@ -626,6 +667,19 @@
  },
  {
   "event_id": "KLAC-2025-10-29",
+  "consensus": {
+   "eps_estimate": 0.86,
+   "eps_reported": 0.88,
+   "consensus_surprise_pct": 2.326,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-10-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+   "fetched_at": "2026-09-15T20:22:50Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "KLAC",
   "company_symbol": "KLACUSDT",
   "sector_group": "semis",
@@ -756,6 +810,19 @@
  },
  {
   "event_id": "AMZN-2025-10-30",
+  "consensus": {
+   "eps_estimate": 1.56,
+   "eps_reported": 1.95,
+   "consensus_surprise_pct": 25.0,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-10-30",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+   "fetched_at": "2026-09-15T20:23:03Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMZN",
   "company_symbol": "AMZNUSDT",
   "sector_group": "internet",
@@ -897,6 +964,7 @@
  },
  {
   "event_id": "MDB-2025-11-03",
+  "consensus": null,
   "ticker": "MDB",
   "company_symbol": "MDBUSDT",
   "sector_group": "software",
@@ -997,6 +1065,19 @@
  },
  {
   "event_id": "PLTR-2025-11-03",
+  "consensus": {
+   "eps_estimate": 0.17,
+   "eps_reported": 0.21,
+   "consensus_surprise_pct": 23.529,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-11-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+   "fetched_at": "2026-09-15T20:23:04Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PLTR",
   "company_symbol": "PLTRUSDT",
   "sector_group": "software",
@@ -1148,6 +1229,19 @@
  },
  {
   "event_id": "SMCI-2025-11-04",
+  "consensus": {
+   "eps_estimate": 0.39,
+   "eps_reported": 0.35,
+   "consensus_surprise_pct": -10.256,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-11-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+   "fetched_at": "2026-09-15T20:24:23Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "SMCI",
   "company_symbol": "SMCIUSDT",
   "sector_group": "hardware",
@@ -1248,6 +1342,19 @@
  },
  {
   "event_id": "AMD-2025-11-04",
+  "consensus": {
+   "eps_estimate": 1.17,
+   "eps_reported": 1.2,
+   "consensus_surprise_pct": 2.564,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-11-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+   "fetched_at": "2026-09-15T20:22:37Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMD",
   "company_symbol": "AMDUSDT",
   "sector_group": "semis",
@@ -1409,6 +1516,19 @@
  },
  {
   "event_id": "QCOM-2025-11-05",
+  "consensus": {
+   "eps_estimate": 2.34,
+   "eps_reported": 2.56,
+   "consensus_surprise_pct": 9.402,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-11-05",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+   "fetched_at": "2026-09-15T20:22:49Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "QCOM",
   "company_symbol": "QCOMUSDT",
   "sector_group": "semis",
@@ -1550,6 +1670,19 @@
  },
  {
   "event_id": "PANW-2025-11-19",
+  "consensus": {
+   "eps_estimate": 0.89,
+   "eps_reported": 0.93,
+   "consensus_surprise_pct": 4.494,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-11-19",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+   "fetched_at": "2026-09-15T20:23:08Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PANW",
   "company_symbol": "PANWUSDT",
   "sector_group": "software",
@@ -1635,6 +1768,19 @@
  },
  {
   "event_id": "NVDA-2025-11-19",
+  "consensus": {
+   "eps_estimate": 1.26,
+   "eps_reported": 1.3,
+   "consensus_surprise_pct": 3.175,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-11-19",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+   "fetched_at": "2026-09-15T20:22:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "NVDA",
   "company_symbol": "NVDAUSDT",
   "sector_group": "semis",
@@ -1780,6 +1926,19 @@
  },
  {
   "event_id": "MDB-2025-12-01",
+  "consensus": {
+   "eps_estimate": 0.79,
+   "eps_reported": 1.32,
+   "consensus_surprise_pct": 67.089,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-12-01",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+   "fetched_at": "2026-09-15T20:24:02Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "MDB",
   "company_symbol": "MDBUSDT",
   "sector_group": "software",
@@ -1890,6 +2049,19 @@
  },
  {
   "event_id": "CRWD-2025-12-02",
+  "consensus": {
+   "eps_estimate": 0.24,
+   "eps_reported": 0.24,
+   "consensus_surprise_pct": 0.0,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-12-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+   "fetched_at": "2026-09-15T20:23:09Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "CRWD",
   "company_symbol": "CRWDUSDT",
   "sector_group": "software",
@@ -2031,6 +2203,19 @@
  },
  {
   "event_id": "MRVL-2025-12-02",
+  "consensus": {
+   "eps_estimate": 0.74,
+   "eps_reported": 0.76,
+   "consensus_surprise_pct": 2.703,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-12-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+   "fetched_at": "2026-09-15T20:22:47Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MRVL",
   "company_symbol": "MRVLUSDT",
   "sector_group": "semis",
@@ -2182,6 +2367,19 @@
  },
  {
   "event_id": "CRM-2025-12-03",
+  "consensus": {
+   "eps_estimate": 2.86,
+   "eps_reported": 3.25,
+   "consensus_surprise_pct": 13.636,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-12-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+   "fetched_at": "2026-09-15T20:23:36Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "CRM",
   "company_symbol": "CRMUSDT",
   "sector_group": "software",
@@ -2302,6 +2500,19 @@
  },
  {
   "event_id": "HPE-2025-12-04",
+  "consensus": {
+   "eps_estimate": 0.58,
+   "eps_reported": 0.62,
+   "consensus_surprise_pct": 6.897,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-12-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+   "fetched_at": "2026-09-15T20:23:12Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "HPE",
   "company_symbol": "HPEUSDT",
   "sector_group": "hardware",
@@ -2413,6 +2624,19 @@
  },
  {
   "event_id": "AVGO-2025-12-11",
+  "consensus": {
+   "eps_estimate": 1.87,
+   "eps_reported": 1.95,
+   "consensus_surprise_pct": 4.278,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-12-11",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+   "fetched_at": "2026-09-15T20:22:38Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AVGO",
   "company_symbol": "AVGOUSDT",
   "sector_group": "semis",
@@ -2564,6 +2788,19 @@
  },
  {
   "event_id": "MU-2025-12-17",
+  "consensus": {
+   "eps_estimate": 3.94,
+   "eps_reported": 4.78,
+   "consensus_surprise_pct": 21.32,
+   "fiscal_date_ending": "2025-11-30",
+   "reported_date": "2025-12-17",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MU",
+   "fetched_at": "2026-09-15T20:22:44Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MU",
   "company_symbol": "MUUSDT",
   "sector_group": "semis",
@@ -2705,6 +2942,19 @@
  },
  {
   "event_id": "INTC-2026-01-22",
+  "consensus": {
+   "eps_estimate": 0.08,
+   "eps_reported": 0.15,
+   "consensus_surprise_pct": 87.5,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-01-22",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+   "fetched_at": "2026-09-15T20:22:45Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "INTC",
   "company_symbol": "INTCUSDT",
   "sector_group": "semis",
@@ -2856,6 +3106,19 @@
  },
  {
   "event_id": "TXN-2026-01-27",
+  "consensus": {
+   "eps_estimate": 1.31,
+   "eps_reported": 1.27,
+   "consensus_surprise_pct": -3.053,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-01-27",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+   "fetched_at": "2026-09-15T20:22:59Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "TXN",
   "company_symbol": "TXNUSDT",
   "sector_group": "semis",
@@ -2991,6 +3254,19 @@
  },
  {
   "event_id": "META-2026-01-28",
+  "consensus": {
+   "eps_estimate": 8.22,
+   "eps_reported": 8.88,
+   "consensus_surprise_pct": 8.029,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-01-28",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+   "fetched_at": "2026-09-15T20:23:01Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "META",
   "company_symbol": "METAUSDT",
   "sector_group": "internet",
@@ -3126,6 +3402,19 @@
  },
  {
   "event_id": "KLAC-2026-01-29",
+  "consensus": {
+   "eps_estimate": 0.88,
+   "eps_reported": 0.89,
+   "consensus_surprise_pct": 1.136,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-01-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+   "fetched_at": "2026-09-15T20:22:50Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "KLAC",
   "company_symbol": "KLACUSDT",
   "sector_group": "semis",
@@ -3277,6 +3566,19 @@
  },
  {
   "event_id": "PLTR-2026-02-02",
+  "consensus": {
+   "eps_estimate": 0.23,
+   "eps_reported": 0.25,
+   "consensus_surprise_pct": 8.696,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-02-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+   "fetched_at": "2026-09-15T20:23:04Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PLTR",
   "company_symbol": "PLTRUSDT",
   "sector_group": "software",
@@ -3428,6 +3730,19 @@
  },
  {
   "event_id": "AMD-2026-02-03",
+  "consensus": {
+   "eps_estimate": 1.32,
+   "eps_reported": 1.53,
+   "consensus_surprise_pct": 15.909,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-02-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+   "fetched_at": "2026-09-15T20:22:37Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMD",
   "company_symbol": "AMDUSDT",
   "sector_group": "semis",
@@ -3589,6 +3904,19 @@
  },
  {
   "event_id": "SMCI-2026-02-03",
+  "consensus": {
+   "eps_estimate": 0.49,
+   "eps_reported": 0.69,
+   "consensus_surprise_pct": 40.816,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-02-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+   "fetched_at": "2026-09-15T20:24:23Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "SMCI",
   "company_symbol": "SMCIUSDT",
   "sector_group": "hardware",
@@ -3698,6 +4026,19 @@
  },
  {
   "event_id": "QCOM-2026-02-04",
+  "consensus": {
+   "eps_estimate": 3.4,
+   "eps_reported": 3.5,
+   "consensus_surprise_pct": 2.941,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-02-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+   "fetched_at": "2026-09-15T20:22:49Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "QCOM",
   "company_symbol": "QCOMUSDT",
   "sector_group": "semis",
@@ -3839,6 +4180,19 @@
  },
  {
   "event_id": "AMZN-2026-02-05",
+  "consensus": {
+   "eps_estimate": 1.95,
+   "eps_reported": 1.95,
+   "consensus_surprise_pct": 0.0,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-02-05",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+   "fetched_at": "2026-09-15T20:23:03Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMZN",
   "company_symbol": "AMZNUSDT",
   "sector_group": "internet",
@@ -3980,6 +4334,19 @@
  },
  {
   "event_id": "PANW-2026-02-17",
+  "consensus": {
+   "eps_estimate": 0.94,
+   "eps_reported": 1.03,
+   "consensus_surprise_pct": 9.574,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-02-17",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+   "fetched_at": "2026-09-15T20:23:08Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PANW",
   "company_symbol": "PANWUSDT",
   "sector_group": "software",
@@ -4091,6 +4458,19 @@
  },
  {
   "event_id": "CRM-2026-02-25",
+  "consensus": {
+   "eps_estimate": 3.05,
+   "eps_reported": 3.81,
+   "consensus_surprise_pct": 24.918,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-02-25",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+   "fetched_at": "2026-09-15T20:23:36Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "CRM",
   "company_symbol": "CRMUSDT",
   "sector_group": "software",
@@ -4200,6 +4580,19 @@
  },
  {
   "event_id": "NVDA-2026-02-25",
+  "consensus": {
+   "eps_estimate": 1.54,
+   "eps_reported": 1.62,
+   "consensus_surprise_pct": 5.195,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-02-25",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+   "fetched_at": "2026-09-15T20:22:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "NVDA",
   "company_symbol": "NVDAUSDT",
   "sector_group": "semis",
@@ -4361,6 +4754,19 @@
  },
  {
   "event_id": "MDB-2026-03-02",
+  "consensus": {
+   "eps_estimate": 1.47,
+   "eps_reported": 1.65,
+   "consensus_surprise_pct": 12.245,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-03-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+   "fetched_at": "2026-09-15T20:24:02Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MDB",
   "company_symbol": "MDBUSDT",
   "sector_group": "software",
@@ -4491,6 +4897,19 @@
  },
  {
   "event_id": "CRWD-2026-03-03",
+  "consensus": {
+   "eps_estimate": 0.28,
+   "eps_reported": 0.28,
+   "consensus_surprise_pct": 0.0,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-03-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+   "fetched_at": "2026-09-15T20:23:09Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "CRWD",
   "company_symbol": "CRWDUSDT",
   "sector_group": "software",
@@ -4626,6 +5045,19 @@
  },
  {
   "event_id": "AVGO-2026-03-04",
+  "consensus": {
+   "eps_estimate": 2.02,
+   "eps_reported": 2.05,
+   "consensus_surprise_pct": 1.485,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-03-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+   "fetched_at": "2026-09-15T20:22:38Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AVGO",
   "company_symbol": "AVGOUSDT",
   "sector_group": "semis",
@@ -4777,6 +5209,19 @@
  },
  {
   "event_id": "MRVL-2026-03-05",
+  "consensus": {
+   "eps_estimate": 0.79,
+   "eps_reported": 0.8,
+   "consensus_surprise_pct": 1.266,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-03-05",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+   "fetched_at": "2026-09-15T20:22:47Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MRVL",
   "company_symbol": "MRVLUSDT",
   "sector_group": "semis",
@@ -4938,6 +5383,19 @@
  },
  {
   "event_id": "HPE-2026-03-09",
+  "consensus": {
+   "eps_estimate": 0.59,
+   "eps_reported": 0.65,
+   "consensus_surprise_pct": 10.169,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-03-09",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+   "fetched_at": "2026-09-15T20:23:12Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "HPE",
   "company_symbol": "HPEUSDT",
   "sector_group": "hardware",
@@ -5079,6 +5537,19 @@
  },
  {
   "event_id": "MU-2026-03-18",
+  "consensus": {
+   "eps_estimate": 9.31,
+   "eps_reported": 12.2,
+   "consensus_surprise_pct": 31.042,
+   "fiscal_date_ending": "2026-02-28",
+   "reported_date": "2026-03-18",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MU",
+   "fetched_at": "2026-09-15T20:22:44Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "MU",
   "company_symbol": "MUUSDT",
   "sector_group": "semis",
@@ -5220,6 +5691,19 @@
  },
  {
   "event_id": "TXN-2026-04-22",
+  "consensus": {
+   "eps_estimate": 1.37,
+   "eps_reported": 1.68,
+   "consensus_surprise_pct": 22.628,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-04-22",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+   "fetched_at": "2026-09-15T20:22:59Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "TXN",
   "company_symbol": "TXNUSDT",
   "sector_group": "semis",
@@ -5355,6 +5839,19 @@
  },
  {
   "event_id": "INTC-2026-04-23",
+  "consensus": {
+   "eps_estimate": 0.01,
+   "eps_reported": 0.29,
+   "consensus_surprise_pct": 2800.0,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-04-23",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+   "fetched_at": "2026-09-15T20:22:45Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "INTC",
   "company_symbol": "INTCUSDT",
   "sector_group": "semis",
@@ -5506,6 +6003,19 @@
  },
  {
   "event_id": "QCOM-2026-04-29",
+  "consensus": {
+   "eps_estimate": 2.5584,
+   "eps_reported": 2.65,
+   "consensus_surprise_pct": 3.58,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-04-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+   "fetched_at": "2026-09-15T20:22:49Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "QCOM",
   "company_symbol": "QCOMUSDT",
   "sector_group": "semis",
@@ -5647,6 +6157,19 @@
  },
  {
   "event_id": "META-2026-04-29",
+  "consensus": {
+   "eps_estimate": 6.82,
+   "eps_reported": 7.31,
+   "consensus_surprise_pct": 7.185,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-04-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+   "fetched_at": "2026-09-15T20:23:01Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "META",
   "company_symbol": "METAUSDT",
   "sector_group": "internet",
@@ -5788,6 +6311,19 @@
  },
  {
   "event_id": "KLAC-2026-04-29",
+  "consensus": {
+   "eps_estimate": 0.92,
+   "eps_reported": 0.94,
+   "consensus_surprise_pct": 2.174,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-04-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+   "fetched_at": "2026-09-15T20:22:50Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "KLAC",
   "company_symbol": "KLACUSDT",
   "sector_group": "semis",
@@ -5939,6 +6475,19 @@
  },
  {
   "event_id": "AMZN-2026-04-29",
+  "consensus": {
+   "eps_estimate": 1.64,
+   "eps_reported": 2.78,
+   "consensus_surprise_pct": 69.512,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-04-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+   "fetched_at": "2026-09-15T20:23:03Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "AMZN",
   "company_symbol": "AMZNUSDT",
   "sector_group": "internet",
@@ -6080,6 +6629,19 @@
  },
  {
   "event_id": "PLTR-2026-05-04",
+  "consensus": {
+   "eps_estimate": 0.28,
+   "eps_reported": 0.33,
+   "consensus_surprise_pct": 17.857,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-05-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+   "fetched_at": "2026-09-15T20:23:04Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PLTR",
   "company_symbol": "PLTRUSDT",
   "sector_group": "software",
@@ -6231,6 +6793,19 @@
  },
  {
   "event_id": "SMCI-2026-05-05",
+  "consensus": {
+   "eps_estimate": 0.62,
+   "eps_reported": 0.84,
+   "consensus_surprise_pct": 35.484,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-05-05",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+   "fetched_at": "2026-09-15T20:24:23Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "SMCI",
   "company_symbol": "SMCIUSDT",
   "sector_group": "hardware",
@@ -6351,6 +6926,19 @@
  },
  {
   "event_id": "AMD-2026-05-05",
+  "consensus": {
+   "eps_estimate": 1.29,
+   "eps_reported": 1.37,
+   "consensus_surprise_pct": 6.202,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-05-05",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+   "fetched_at": "2026-09-15T20:22:37Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMD",
   "company_symbol": "AMDUSDT",
   "sector_group": "semis",
@@ -6512,6 +7100,19 @@
  },
  {
   "event_id": "NVDA-2026-05-20",
+  "consensus": {
+   "eps_estimate": 1.77,
+   "eps_reported": 1.87,
+   "consensus_surprise_pct": 5.65,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-05-20",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+   "fetched_at": "2026-09-15T20:22:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "NVDA",
   "company_symbol": "NVDAUSDT",
   "sector_group": "semis",
@@ -6673,6 +7274,19 @@
  },
  {
   "event_id": "MRVL-2026-05-27",
+  "consensus": {
+   "eps_estimate": 0.79,
+   "eps_reported": 0.8,
+   "consensus_surprise_pct": 1.266,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-05-27",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+   "fetched_at": "2026-09-15T20:22:47Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MRVL",
   "company_symbol": "MRVLUSDT",
   "sector_group": "semis",
@@ -6824,6 +7438,19 @@
  },
  {
   "event_id": "CRM-2026-05-27",
+  "consensus": {
+   "eps_estimate": 3.13,
+   "eps_reported": 3.88,
+   "consensus_surprise_pct": 23.962,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-05-27",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+   "fetched_at": "2026-09-15T20:23:36Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "CRM",
   "company_symbol": "CRMUSDT",
   "sector_group": "software",
@@ -6944,6 +7571,19 @@
  },
  {
   "event_id": "MDB-2026-05-28",
+  "consensus": {
+   "eps_estimate": -0.3,
+   "eps_reported": -0.45,
+   "consensus_surprise_pct": -50.0,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-05-28",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+   "fetched_at": "2026-09-15T20:24:02Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "MDB",
   "company_symbol": "MDBUSDT",
   "sector_group": "software",
@@ -7095,6 +7735,19 @@
  },
  {
   "event_id": "HPE-2026-06-01",
+  "consensus": {
+   "eps_estimate": 0.53,
+   "eps_reported": 0.79,
+   "consensus_surprise_pct": 49.057,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-06-01",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+   "fetched_at": "2026-09-15T20:23:12Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "HPE",
   "company_symbol": "HPEUSDT",
   "sector_group": "hardware",
@@ -7236,6 +7889,19 @@
  },
  {
   "event_id": "PANW-2026-06-02",
+  "consensus": {
+   "eps_estimate": 0.43,
+   "eps_reported": 0.32,
+   "consensus_surprise_pct": -25.581,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-06-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+   "fetched_at": "2026-09-15T20:23:08Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PANW",
   "company_symbol": "PANWUSDT",
   "sector_group": "software",
@@ -7377,6 +8043,19 @@
  },
  {
   "event_id": "CRWD-2026-06-03",
+  "consensus": {
+   "eps_estimate": 0.27,
+   "eps_reported": 0.28,
+   "consensus_surprise_pct": 3.704,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-06-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+   "fetched_at": "2026-09-15T20:23:09Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "CRWD",
   "company_symbol": "CRWDUSDT",
   "sector_group": "software",
@@ -7518,6 +8197,19 @@
  },
  {
   "event_id": "AVGO-2026-06-03",
+  "consensus": {
+   "eps_estimate": 2.4,
+   "eps_reported": 2.44,
+   "consensus_surprise_pct": 1.667,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-06-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+   "fetched_at": "2026-09-15T20:22:38Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AVGO",
   "company_symbol": "AVGOUSDT",
   "sector_group": "semis",
@@ -7669,6 +8361,19 @@
  },
  {
   "event_id": "MU-2026-06-24",
+  "consensus": {
+   "eps_estimate": 20.98,
+   "eps_reported": 24.89,
+   "consensus_surprise_pct": 18.637,
+   "fiscal_date_ending": "2026-05-31",
+   "reported_date": "2026-06-24",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MU",
+   "fetched_at": "2026-09-15T20:22:44Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MU",
   "company_symbol": "MUUSDT",
   "sector_group": "semis",
@@ -7810,6 +8515,7 @@
  },
  {
   "event_id": "SMCI-2026-07-21",
+  "consensus": null,
   "ticker": "SMCI",
   "company_symbol": "SMCIUSDT",
   "sector_group": "hardware",
@@ -7915,6 +8621,19 @@
  },
  {
   "event_id": "TXN-2026-07-22",
+  "consensus": {
+   "eps_estimate": 1.91,
+   "eps_reported": 2.14,
+   "consensus_surprise_pct": 12.042,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-07-22",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+   "fetched_at": "2026-09-15T20:22:59Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "TXN",
   "company_symbol": "TXNUSDT",
   "sector_group": "semis",
@@ -8050,6 +8769,19 @@
  },
  {
   "event_id": "INTC-2026-07-23",
+  "consensus": {
+   "eps_estimate": 0.1,
+   "eps_reported": 0.3,
+   "consensus_surprise_pct": 200.0,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-07-23",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+   "fetched_at": "2026-09-15T20:22:45Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "INTC",
   "company_symbol": "INTCUSDT",
   "sector_group": "semis",
@@ -8201,6 +8933,19 @@
  },
  {
   "event_id": "KLAC-2026-07-28",
+  "consensus": {
+   "eps_estimate": 1.0,
+   "eps_reported": 1.05,
+   "consensus_surprise_pct": 5.0,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-07-28",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+   "fetched_at": "2026-09-15T20:22:50Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "KLAC",
   "company_symbol": "KLACUSDT",
   "sector_group": "semis",
@@ -8352,6 +9097,19 @@
  },
  {
   "event_id": "QCOM-2026-07-29",
+  "consensus": {
+   "eps_estimate": 1.54,
+   "eps_reported": 1.53,
+   "consensus_surprise_pct": -0.649,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-07-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+   "fetched_at": "2026-09-15T20:22:49Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "QCOM",
   "company_symbol": "QCOMUSDT",
   "sector_group": "semis",
@@ -8493,6 +9251,19 @@
  },
  {
   "event_id": "META-2026-07-29",
+  "consensus": {
+   "eps_estimate": 7.1,
+   "eps_reported": 6.18,
+   "consensus_surprise_pct": -12.958,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-07-29",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+   "fetched_at": "2026-09-15T20:23:01Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "META",
   "company_symbol": "METAUSDT",
   "sector_group": "internet",
@@ -8634,6 +9405,19 @@
  },
  {
   "event_id": "AMZN-2026-07-30",
+  "consensus": {
+   "eps_estimate": 1.83,
+   "eps_reported": 1.88,
+   "consensus_surprise_pct": 2.732,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-07-30",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+   "fetched_at": "2026-09-15T20:23:03Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMZN",
   "company_symbol": "AMZNUSDT",
   "sector_group": "internet",
@@ -8775,6 +9559,19 @@
  },
  {
   "event_id": "PLTR-2026-08-03",
+  "consensus": {
+   "eps_estimate": 0.28,
+   "eps_reported": 0.41,
+   "consensus_surprise_pct": 46.429,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-08-03",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+   "fetched_at": "2026-09-15T20:23:04Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "PLTR",
   "company_symbol": "PLTRUSDT",
   "sector_group": "software",
@@ -8926,6 +9723,19 @@
  },
  {
   "event_id": "AMD-2026-08-04",
+  "consensus": {
+   "eps_estimate": 1.35,
+   "eps_reported": 1.66,
+   "consensus_surprise_pct": 22.963,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-08-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+   "fetched_at": "2026-09-15T20:22:37Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AMD",
   "company_symbol": "AMDUSDT",
   "sector_group": "semis",
@@ -9087,6 +9897,19 @@
  },
  {
   "event_id": "SMCI-2026-08-11",
+  "consensus": {
+   "eps_estimate": 0.56,
+   "eps_reported": 1.62,
+   "consensus_surprise_pct": 189.286,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-08-11",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+   "fetched_at": "2026-09-15T20:24:23Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "SMCI",
   "company_symbol": "SMCIUSDT",
   "sector_group": "hardware",
@@ -9228,6 +10051,19 @@
  },
  {
   "event_id": "CRM-2026-08-26",
+  "consensus": {
+   "eps_estimate": 2.35,
+   "eps_reported": 4.95,
+   "consensus_surprise_pct": 110.638,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-08-26",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+   "fetched_at": "2026-09-15T20:23:36Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "CRM",
   "company_symbol": "CRMUSDT",
   "sector_group": "software",
@@ -9369,6 +10205,19 @@
  },
  {
   "event_id": "CRWD-2026-08-26",
+  "consensus": {
+   "eps_estimate": 0.05,
+   "eps_reported": 0.01,
+   "consensus_surprise_pct": -80.0,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-08-26",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+   "fetched_at": "2026-09-15T20:23:09Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "CRWD",
   "company_symbol": "CRWDUSDT",
   "sector_group": "software",
@@ -9504,6 +10353,19 @@
  },
  {
   "event_id": "NVDA-2026-08-26",
+  "consensus": {
+   "eps_estimate": 2.09,
+   "eps_reported": 2.22,
+   "consensus_surprise_pct": 6.22,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-08-26",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+   "fetched_at": "2026-09-15T20:22:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "NVDA",
   "company_symbol": "NVDAUSDT",
   "sector_group": "semis",
@@ -9665,6 +10527,19 @@
  },
  {
   "event_id": "MRVL-2026-08-27",
+  "consensus": {
+   "eps_estimate": 0.65,
+   "eps_reported": 0.62,
+   "consensus_surprise_pct": -4.615,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-08-27",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+   "fetched_at": "2026-09-15T20:22:47Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "MRVL",
   "company_symbol": "MRVLUSDT",
   "sector_group": "semis",
@@ -9816,6 +10691,19 @@
  },
  {
   "event_id": "MDB-2026-09-01",
+  "consensus": {
+   "eps_estimate": 0.08,
+   "eps_reported": 0.54,
+   "consensus_surprise_pct": 575.0,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-09-01",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+   "fetched_at": "2026-09-15T20:24:02Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "basis_mismatch_suspected"
+  },
   "ticker": "MDB",
   "company_symbol": "MDBUSDT",
   "sector_group": "software",
@@ -9967,6 +10855,19 @@
  },
  {
   "event_id": "PANW-2026-09-01",
+  "consensus": {
+   "eps_estimate": 0.51,
+   "eps_reported": 0.53,
+   "consensus_surprise_pct": 3.922,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-09-01",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+   "fetched_at": "2026-09-15T20:23:08Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "PANW",
   "company_symbol": "PANWUSDT",
   "sector_group": "software",
@@ -10108,6 +11009,19 @@
  },
  {
   "event_id": "HPE-2026-09-02",
+  "consensus": {
+   "eps_estimate": 0.82,
+   "eps_reported": 1.02,
+   "consensus_surprise_pct": 24.39,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-09-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+   "fetched_at": "2026-09-15T20:23:12Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "HPE",
   "company_symbol": "HPEUSDT",
   "sector_group": "hardware",
@@ -10249,6 +11163,19 @@
  },
  {
   "event_id": "AVGO-2026-09-02",
+  "consensus": {
+   "eps_estimate": 2.83,
+   "eps_reported": 3.03,
+   "consensus_surprise_pct": 7.067,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-09-02",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+   "fetched_at": "2026-09-15T20:22:38Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
   "ticker": "AVGO",
   "company_symbol": "AVGOUSDT",
   "sector_group": "semis",

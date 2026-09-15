@@ -34,6 +34,7 @@ RESIDUAL isolates the company-specific part of an earnings reaction. It takes a 
 - **Residual:** trade the company's own move.
 - **Headline, hedged:** trade the guidance-surprise direction, keeping the hedge and the gates.
 - **Agreement:** trade only when the company move and the surprise point the same way.
+- **Analyst consensus:** trade the EPS surprise against analyst estimates (Alpha Vantage `EARNINGS`, cached per company in `data/consensus/` with provider, source URL and fetch time). 71 of 75 events carry consensus; 16 are flagged where the provider pairs a GAAP reported EPS with a non-GAAP estimate, and flagged values are published but never traded. This rule was declared on 15 Sep 2026, when the data became available, and it scores worst of the four (−$11.90 in the stress view).
 
 For each event, the strategy follows whichever rule did best on strictly earlier events. Every rule's standalone result is published whether it wins or loses.
 

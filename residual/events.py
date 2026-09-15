@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import edgar, universe
+from . import consensus as consensus_mod, edgar, universe
 from .extract import extract_all, verify_field
 from .net import cache_file_for, fetch
 
@@ -135,8 +135,14 @@ def build_event(filing: dict, prev: dict) -> dict:
             "guidance_direction": "raised" if diff > 1 else "lowered" if diff < -1 else "maintained",
         }
 
+    cons = consensus_mod.for_event(filing["ticker"], release.date().isoformat())
+    if cons:
+        # Alpha Vantage sometimes pairs a GAAP reported EPS with a non-GAAP estimate; a huge gap means
+        # the two are not on the same basis, so the value is published but never traded on.
+        cons["quality"] = "ok" if abs(cons["consensus_surprise_pct"]) <= 30 else "basis_mismatch_suspected"
     return {
         "event_id": f"{filing['ticker']}-{release.date().isoformat()}",
+        "consensus": cons,
         "ticker": filing["ticker"],
         "company_symbol": universe.sym(filing["ticker"]),
         "sector_group": universe.COMPANIES[filing["ticker"]],

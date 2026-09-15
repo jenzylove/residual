@@ -216,7 +216,7 @@ function show(id) {
     <div class="stage-col">
       <div class="card">
         <div class="ev-name">${esc(e.ticker)} <em>${d ? pct(d.residual) : ""}</em></div>
-        <div class="ev-sub">${day(e.release_utc)} · <a href="${esc(e.source.press_release_url)}" target="_blank" rel="noopener" title="SEC press release, sha256 ${esc((e.source.sha256 || "").slice(0, 16))}">revenue ${bn(s.revenue_actual)}</a> against guidance of <a href="${esc(e.prior_source.press_release_url)}" target="_blank" rel="noopener">${bn(s.revenue_guided_mid)}</a> (${pp(s.guidance_surprise_pct)})${e.earnings.gross_margin ? ` · GAAP gross margin ${e.earnings.gross_margin.value}%` : ""}${e.earnings.eps_diluted ? ` · diluted EPS $${e.earnings.eps_diluted.value}` : ""}</div>
+        <div class="ev-sub">${day(e.release_utc)} · <a href="${esc(e.source.press_release_url)}" target="_blank" rel="noopener" title="SEC press release, sha256 ${esc((e.source.sha256 || "").slice(0, 16))}">revenue ${bn(s.revenue_actual)}</a> against guidance of <a href="${esc(e.prior_source.press_release_url)}" target="_blank" rel="noopener">${bn(s.revenue_guided_mid)}</a> (${pp(s.guidance_surprise_pct)})${e.earnings.gross_margin ? ` · GAAP gross margin ${e.earnings.gross_margin.value}%` : ""}${e.earnings.eps_diluted ? ` · diluted EPS $${e.earnings.eps_diluted.value}` : ""}${e.consensus ? ` · analyst consensus EPS ${e.consensus.eps_estimate} vs ${e.consensus.eps_reported} reported (${pp(e.consensus.consensus_surprise_pct)}${e.consensus.quality === "ok" ? "" : ", basis mismatch: not traded"})` : ""}</div>
         ${d ? waterfall(d) + `<p class="plain">${plain}</p>` : `<p class="plain">No breakdown for this release: ${esc(PLAIN.market_data)}</p>`}
       </div>
     </div>
@@ -354,6 +354,7 @@ function variantsTable() {
     ["v_residual", "Residual rule", "trade the company's own move"],
     ["v_headline", "Headline, hedged", "trade the guidance surprise, hedged and gated"],
     ["v_agreement", "Agreement", "only when the company move and the surprise agree"],
+    ["v_consensus", "Analyst consensus", "trade the EPS surprise vs analyst estimates (Alpha Vantage)"],
     ["naive_same_events", "Plain headline, same releases", "unhedged baseline"],
   ];
   $("#variants").innerHTML = `<div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe</th><th class="num">Hit</th></tr></thead><tbody>

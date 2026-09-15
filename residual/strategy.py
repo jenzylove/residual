@@ -153,11 +153,15 @@ def analyze(event: dict, snap: dict | None, hedge_pool: list[str] | None = None)
     a["residual"] = residual
     s = event.get("surprise") or {}
     a["surprise_sign"] = (1 if s["guidance_surprise_pct"] > 0 else -1 if s["guidance_surprise_pct"] < 0 else 0) if s else 0
+    c = event.get("consensus") or {}
+    a["consensus_surprise_pct"] = c.get("consensus_surprise_pct") if c.get("quality") == "ok" else None
+    a["consensus_sign"] = 0 if a["consensus_surprise_pct"] is None else (
+        1 if a["consensus_surprise_pct"] > 0 else -1 if a["consensus_surprise_pct"] < 0 else 0)
     return a
 
 
 # Pre-declared direction variants. The walk-forward selector picks one per event using only earlier events.
-VARIANTS = ("residual", "headline", "agreement")
+VARIANTS = ("residual", "headline", "agreement", "consensus")
 
 
 def variant_direction(v: str, a: dict, params: dict) -> int:
@@ -168,6 +172,8 @@ def variant_direction(v: str, a: dict, params: dict) -> int:
         return a.get("surprise_sign", 0)
     if v == "agreement":         # only when the company move and the surprise point the same way
         return rs if rs == a.get("surprise_sign") else 0
+    if v == "consensus":         # analyst EPS consensus direction (declared 2026-09-15, when the data arrived)
+        return a.get("consensus_sign", 0)
     raise ValueError(v)
 
 

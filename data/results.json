@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-15T19:41:30+00:00",
+ "generated_at": "2026-09-15T20:29:17+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -16,7 +16,8 @@
   "variants": [
    "residual",
    "headline",
-   "agreement"
+   "agreement",
+   "consensus"
   ],
   "default_params": {
    "mode": 1,
@@ -690,6 +691,101 @@
     335.4,
     335.4,
     335.4
+   ]
+  },
+  "v_consensus": {
+   "sharpe_per_trade": 0.247,
+   "sortino_per_trade": 0.453,
+   "sharpe_daily_ann": 0.581,
+   "sortino_daily_ann": 0.99,
+   "days": 323,
+   "basis": "primary",
+   "total_net_pnl": 65.64,
+   "trades": 6,
+   "excluded_funding_unavailable": 6,
+   "no_trades": 63,
+   "hit_rate": 0.667,
+   "avg_pnl_per_trade": 10.94,
+   "pnl_std_per_trade": 58.12,
+   "max_drawdown": -78.88,
+   "avg_holding_hours": 20.5,
+   "return_on_start_balance_pct": 0.066,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    20.24,
+    -58.65,
+    2.31,
+    2.31,
+    37.79,
+    37.79,
+    37.79,
+    37.79,
+    104.68,
+    65.64,
+    65.64,
+    65.64,
+    65.64,
+    65.64
    ]
   },
   "no_trade": {
@@ -1454,6 +1550,101 @@
     335.66
    ]
   },
+  "v_consensus": {
+   "sharpe_per_trade": -0.022,
+   "sortino_per_trade": -0.032,
+   "sharpe_daily_ann": -0.071,
+   "sortino_daily_ann": -0.1,
+   "days": 323,
+   "basis": "conservative",
+   "total_net_pnl": -11.9,
+   "trades": 12,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 63,
+   "hit_rate": 0.583,
+   "avg_pnl_per_trade": -0.99,
+   "pnl_std_per_trade": 56.0,
+   "max_drawdown": -140.26,
+   "avg_holding_hours": 19.9,
+   "return_on_start_balance_pct": -0.012,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -87.39,
+    -69.46,
+    -69.46,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    4.07,
+    -35.36,
+    -35.36,
+    -35.36,
+    -35.36,
+    -35.36,
+    -33.08,
+    -33.08,
+    -33.08,
+    -33.08,
+    -33.08,
+    -33.08,
+    -33.08,
+    -33.08,
+    -77.55,
+    -77.55,
+    -77.55,
+    -77.55,
+    -77.55,
+    -77.55,
+    -57.31,
+    -136.19,
+    -75.24,
+    -75.24,
+    -39.75,
+    -39.75,
+    -39.75,
+    -39.75,
+    27.14,
+    -11.9,
+    -11.9,
+    -11.9,
+    -11.9,
+    -11.9
+   ]
+  },
   "no_trade": {
    "sharpe_per_trade": null,
    "sortino_per_trade": null,
@@ -2215,6 +2406,101 @@
     370.02,
     370.02
    ]
+  },
+  "v_consensus": {
+   "sharpe_per_trade": 0.021,
+   "sortino_per_trade": 0.031,
+   "sharpe_daily_ann": 0.116,
+   "sortino_daily_ann": 0.17,
+   "days": 323,
+   "basis": "observed_zero",
+   "total_net_pnl": 19.51,
+   "trades": 12,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 63,
+   "hit_rate": 0.583,
+   "avg_pnl_per_trade": 1.63,
+   "pnl_std_per_trade": 56.3,
+   "max_drawdown": -126.41,
+   "avg_holding_hours": 19.9,
+   "return_on_start_balance_pct": 0.02,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -61.06,
+    -61.06,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    -15.64,
+    -15.64,
+    -15.64,
+    -15.64,
+    -15.64,
+    -4.47,
+    -4.47,
+    -4.47,
+    -4.47,
+    -4.47,
+    -4.47,
+    -4.47,
+    -4.47,
+    -46.13,
+    -46.13,
+    -46.13,
+    -46.13,
+    -46.13,
+    -46.13,
+    -25.89,
+    -104.78,
+    -43.82,
+    -43.82,
+    -8.34,
+    -8.34,
+    -8.34,
+    -8.34,
+    58.55,
+    19.51,
+    19.51,
+    19.51,
+    19.51,
+    19.51
+   ]
   }
  },
  "summary_last_90d": {
@@ -2490,6 +2776,45 @@
     335.4,
     335.4
    ]
+  },
+  "v_consensus": {
+   "sharpe_per_trade": 0.247,
+   "sortino_per_trade": 0.453,
+   "sharpe_daily_ann": 1.234,
+   "sortino_daily_ann": 2.113,
+   "days": 71,
+   "basis": "primary",
+   "total_net_pnl": 65.64,
+   "trades": 6,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 13,
+   "hit_rate": 0.667,
+   "avg_pnl_per_trade": 10.94,
+   "pnl_std_per_trade": 58.12,
+   "max_drawdown": -78.88,
+   "avg_holding_hours": 20.5,
+   "return_on_start_balance_pct": 0.066,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    20.24,
+    -58.65,
+    2.31,
+    2.31,
+    37.79,
+    37.79,
+    37.79,
+    37.79,
+    104.68,
+    65.64,
+    65.64,
+    65.64,
+    65.64,
+    65.64
+   ]
   }
  },
  "summary_last_90d_window": {
@@ -2688,6 +3013,7 @@
  "events": [
   {
    "event_id": "HPE-2025-10-15",
+   "consensus": null,
    "ticker": "HPE",
    "company_symbol": "HPEUSDT",
    "sector_group": "hardware",
@@ -2782,6 +3108,19 @@
   },
   {
    "event_id": "TXN-2025-10-21",
+   "consensus": {
+    "eps_estimate": 1.49,
+    "eps_reported": 1.57,
+    "consensus_surprise_pct": 5.369,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-10-21",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+    "fetched_at": "2026-09-15T20:22:59Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "TXN",
    "company_symbol": "TXNUSDT",
    "sector_group": "semis",
@@ -2917,6 +3256,7 @@
   },
   {
    "event_id": "SMCI-2025-10-23",
+   "consensus": null,
    "ticker": "SMCI",
    "company_symbol": "SMCIUSDT",
    "sector_group": "hardware",
@@ -3017,6 +3357,19 @@
   },
   {
    "event_id": "INTC-2025-10-23",
+   "consensus": {
+    "eps_estimate": 0.01,
+    "eps_reported": 0.23,
+    "consensus_surprise_pct": 2200.0,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-10-23",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+    "fetched_at": "2026-09-15T20:22:45Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "INTC",
    "company_symbol": "INTCUSDT",
    "sector_group": "semis",
@@ -3168,6 +3521,19 @@
   },
   {
    "event_id": "META-2025-10-29",
+   "consensus": {
+    "eps_estimate": 6.71,
+    "eps_reported": 7.25,
+    "consensus_surprise_pct": 8.048,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-10-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+    "fetched_at": "2026-09-15T20:23:01Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "META",
    "company_symbol": "METAUSDT",
    "sector_group": "internet",
@@ -3313,6 +3679,19 @@
   },
   {
    "event_id": "KLAC-2025-10-29",
+   "consensus": {
+    "eps_estimate": 0.86,
+    "eps_reported": 0.88,
+    "consensus_surprise_pct": 2.326,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-10-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+    "fetched_at": "2026-09-15T20:22:50Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "KLAC",
    "company_symbol": "KLACUSDT",
    "sector_group": "semis",
@@ -3443,6 +3822,19 @@
   },
   {
    "event_id": "AMZN-2025-10-30",
+   "consensus": {
+    "eps_estimate": 1.56,
+    "eps_reported": 1.95,
+    "consensus_surprise_pct": 25.0,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-10-30",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+    "fetched_at": "2026-09-15T20:23:03Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMZN",
    "company_symbol": "AMZNUSDT",
    "sector_group": "internet",
@@ -3584,6 +3976,7 @@
   },
   {
    "event_id": "MDB-2025-11-03",
+   "consensus": null,
    "ticker": "MDB",
    "company_symbol": "MDBUSDT",
    "sector_group": "software",
@@ -3684,6 +4077,19 @@
   },
   {
    "event_id": "PLTR-2025-11-03",
+   "consensus": {
+    "eps_estimate": 0.17,
+    "eps_reported": 0.21,
+    "consensus_surprise_pct": 23.529,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-11-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+    "fetched_at": "2026-09-15T20:23:04Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PLTR",
    "company_symbol": "PLTRUSDT",
    "sector_group": "software",
@@ -3835,6 +4241,19 @@
   },
   {
    "event_id": "SMCI-2025-11-04",
+   "consensus": {
+    "eps_estimate": 0.39,
+    "eps_reported": 0.35,
+    "consensus_surprise_pct": -10.256,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-11-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+    "fetched_at": "2026-09-15T20:24:23Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "SMCI",
    "company_symbol": "SMCIUSDT",
    "sector_group": "hardware",
@@ -3935,6 +4354,19 @@
   },
   {
    "event_id": "AMD-2025-11-04",
+   "consensus": {
+    "eps_estimate": 1.17,
+    "eps_reported": 1.2,
+    "consensus_surprise_pct": 2.564,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-11-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+    "fetched_at": "2026-09-15T20:22:37Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMD",
    "company_symbol": "AMDUSDT",
    "sector_group": "semis",
@@ -4096,6 +4528,19 @@
   },
   {
    "event_id": "QCOM-2025-11-05",
+   "consensus": {
+    "eps_estimate": 2.34,
+    "eps_reported": 2.56,
+    "consensus_surprise_pct": 9.402,
+    "fiscal_date_ending": "2025-09-30",
+    "reported_date": "2025-11-05",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+    "fetched_at": "2026-09-15T20:22:49Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "QCOM",
    "company_symbol": "QCOMUSDT",
    "sector_group": "semis",
@@ -4237,6 +4682,19 @@
   },
   {
    "event_id": "PANW-2025-11-19",
+   "consensus": {
+    "eps_estimate": 0.89,
+    "eps_reported": 0.93,
+    "consensus_surprise_pct": 4.494,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-11-19",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+    "fetched_at": "2026-09-15T20:23:08Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PANW",
    "company_symbol": "PANWUSDT",
    "sector_group": "software",
@@ -4322,6 +4780,19 @@
   },
   {
    "event_id": "NVDA-2025-11-19",
+   "consensus": {
+    "eps_estimate": 1.26,
+    "eps_reported": 1.3,
+    "consensus_surprise_pct": 3.175,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-11-19",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+    "fetched_at": "2026-09-15T20:22:33Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "NVDA",
    "company_symbol": "NVDAUSDT",
    "sector_group": "semis",
@@ -4467,6 +4938,19 @@
   },
   {
    "event_id": "MDB-2025-12-01",
+   "consensus": {
+    "eps_estimate": 0.79,
+    "eps_reported": 1.32,
+    "consensus_surprise_pct": 67.089,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-12-01",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+    "fetched_at": "2026-09-15T20:24:02Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "MDB",
    "company_symbol": "MDBUSDT",
    "sector_group": "software",
@@ -4577,6 +5061,19 @@
   },
   {
    "event_id": "CRWD-2025-12-02",
+   "consensus": {
+    "eps_estimate": 0.24,
+    "eps_reported": 0.24,
+    "consensus_surprise_pct": 0.0,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-12-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+    "fetched_at": "2026-09-15T20:23:09Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "CRWD",
    "company_symbol": "CRWDUSDT",
    "sector_group": "software",
@@ -4718,6 +5215,19 @@
   },
   {
    "event_id": "MRVL-2025-12-02",
+   "consensus": {
+    "eps_estimate": 0.74,
+    "eps_reported": 0.76,
+    "consensus_surprise_pct": 2.703,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-12-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+    "fetched_at": "2026-09-15T20:22:47Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MRVL",
    "company_symbol": "MRVLUSDT",
    "sector_group": "semis",
@@ -4869,6 +5379,19 @@
   },
   {
    "event_id": "CRM-2025-12-03",
+   "consensus": {
+    "eps_estimate": 2.86,
+    "eps_reported": 3.25,
+    "consensus_surprise_pct": 13.636,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-12-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+    "fetched_at": "2026-09-15T20:23:36Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "CRM",
    "company_symbol": "CRMUSDT",
    "sector_group": "software",
@@ -4989,6 +5512,19 @@
   },
   {
    "event_id": "HPE-2025-12-04",
+   "consensus": {
+    "eps_estimate": 0.58,
+    "eps_reported": 0.62,
+    "consensus_surprise_pct": 6.897,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-12-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+    "fetched_at": "2026-09-15T20:23:12Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "HPE",
    "company_symbol": "HPEUSDT",
    "sector_group": "hardware",
@@ -5100,6 +5636,19 @@
   },
   {
    "event_id": "AVGO-2025-12-11",
+   "consensus": {
+    "eps_estimate": 1.87,
+    "eps_reported": 1.95,
+    "consensus_surprise_pct": 4.278,
+    "fiscal_date_ending": "2025-10-31",
+    "reported_date": "2025-12-11",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+    "fetched_at": "2026-09-15T20:22:38Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AVGO",
    "company_symbol": "AVGOUSDT",
    "sector_group": "semis",
@@ -5251,6 +5800,19 @@
   },
   {
    "event_id": "MU-2025-12-17",
+   "consensus": {
+    "eps_estimate": 3.94,
+    "eps_reported": 4.78,
+    "consensus_surprise_pct": 21.32,
+    "fiscal_date_ending": "2025-11-30",
+    "reported_date": "2025-12-17",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MU",
+    "fetched_at": "2026-09-15T20:22:44Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MU",
    "company_symbol": "MUUSDT",
    "sector_group": "semis",
@@ -5392,6 +5954,19 @@
   },
   {
    "event_id": "INTC-2026-01-22",
+   "consensus": {
+    "eps_estimate": 0.08,
+    "eps_reported": 0.15,
+    "consensus_surprise_pct": 87.5,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-01-22",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+    "fetched_at": "2026-09-15T20:22:45Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "INTC",
    "company_symbol": "INTCUSDT",
    "sector_group": "semis",
@@ -5543,6 +6118,19 @@
   },
   {
    "event_id": "TXN-2026-01-27",
+   "consensus": {
+    "eps_estimate": 1.31,
+    "eps_reported": 1.27,
+    "consensus_surprise_pct": -3.053,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-01-27",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+    "fetched_at": "2026-09-15T20:22:59Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "TXN",
    "company_symbol": "TXNUSDT",
    "sector_group": "semis",
@@ -5678,6 +6266,19 @@
   },
   {
    "event_id": "META-2026-01-28",
+   "consensus": {
+    "eps_estimate": 8.22,
+    "eps_reported": 8.88,
+    "consensus_surprise_pct": 8.029,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-01-28",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+    "fetched_at": "2026-09-15T20:23:01Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "META",
    "company_symbol": "METAUSDT",
    "sector_group": "internet",
@@ -5813,6 +6414,19 @@
   },
   {
    "event_id": "KLAC-2026-01-29",
+   "consensus": {
+    "eps_estimate": 0.88,
+    "eps_reported": 0.89,
+    "consensus_surprise_pct": 1.136,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-01-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+    "fetched_at": "2026-09-15T20:22:50Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "KLAC",
    "company_symbol": "KLACUSDT",
    "sector_group": "semis",
@@ -5964,6 +6578,19 @@
   },
   {
    "event_id": "PLTR-2026-02-02",
+   "consensus": {
+    "eps_estimate": 0.23,
+    "eps_reported": 0.25,
+    "consensus_surprise_pct": 8.696,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-02-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+    "fetched_at": "2026-09-15T20:23:04Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PLTR",
    "company_symbol": "PLTRUSDT",
    "sector_group": "software",
@@ -6115,6 +6742,19 @@
   },
   {
    "event_id": "AMD-2026-02-03",
+   "consensus": {
+    "eps_estimate": 1.32,
+    "eps_reported": 1.53,
+    "consensus_surprise_pct": 15.909,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-02-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+    "fetched_at": "2026-09-15T20:22:37Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMD",
    "company_symbol": "AMDUSDT",
    "sector_group": "semis",
@@ -6276,6 +6916,19 @@
   },
   {
    "event_id": "SMCI-2026-02-03",
+   "consensus": {
+    "eps_estimate": 0.49,
+    "eps_reported": 0.69,
+    "consensus_surprise_pct": 40.816,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-02-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+    "fetched_at": "2026-09-15T20:24:23Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "SMCI",
    "company_symbol": "SMCIUSDT",
    "sector_group": "hardware",
@@ -6385,6 +7038,19 @@
   },
   {
    "event_id": "QCOM-2026-02-04",
+   "consensus": {
+    "eps_estimate": 3.4,
+    "eps_reported": 3.5,
+    "consensus_surprise_pct": 2.941,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-02-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+    "fetched_at": "2026-09-15T20:22:49Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "QCOM",
    "company_symbol": "QCOMUSDT",
    "sector_group": "semis",
@@ -6526,6 +7192,19 @@
   },
   {
    "event_id": "AMZN-2026-02-05",
+   "consensus": {
+    "eps_estimate": 1.95,
+    "eps_reported": 1.95,
+    "consensus_surprise_pct": 0.0,
+    "fiscal_date_ending": "2025-12-31",
+    "reported_date": "2026-02-05",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+    "fetched_at": "2026-09-15T20:23:03Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMZN",
    "company_symbol": "AMZNUSDT",
    "sector_group": "internet",
@@ -6667,6 +7346,19 @@
   },
   {
    "event_id": "PANW-2026-02-17",
+   "consensus": {
+    "eps_estimate": 0.94,
+    "eps_reported": 1.03,
+    "consensus_surprise_pct": 9.574,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-02-17",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+    "fetched_at": "2026-09-15T20:23:08Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PANW",
    "company_symbol": "PANWUSDT",
    "sector_group": "software",
@@ -6778,6 +7470,19 @@
   },
   {
    "event_id": "CRM-2026-02-25",
+   "consensus": {
+    "eps_estimate": 3.05,
+    "eps_reported": 3.81,
+    "consensus_surprise_pct": 24.918,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-02-25",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+    "fetched_at": "2026-09-15T20:23:36Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "CRM",
    "company_symbol": "CRMUSDT",
    "sector_group": "software",
@@ -6887,6 +7592,19 @@
   },
   {
    "event_id": "NVDA-2026-02-25",
+   "consensus": {
+    "eps_estimate": 1.54,
+    "eps_reported": 1.62,
+    "consensus_surprise_pct": 5.195,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-02-25",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+    "fetched_at": "2026-09-15T20:22:33Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "NVDA",
    "company_symbol": "NVDAUSDT",
    "sector_group": "semis",
@@ -7048,6 +7766,19 @@
   },
   {
    "event_id": "MDB-2026-03-02",
+   "consensus": {
+    "eps_estimate": 1.47,
+    "eps_reported": 1.65,
+    "consensus_surprise_pct": 12.245,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-03-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+    "fetched_at": "2026-09-15T20:24:02Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MDB",
    "company_symbol": "MDBUSDT",
    "sector_group": "software",
@@ -7178,6 +7909,19 @@
   },
   {
    "event_id": "CRWD-2026-03-03",
+   "consensus": {
+    "eps_estimate": 0.28,
+    "eps_reported": 0.28,
+    "consensus_surprise_pct": 0.0,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-03-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+    "fetched_at": "2026-09-15T20:23:09Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "CRWD",
    "company_symbol": "CRWDUSDT",
    "sector_group": "software",
@@ -7313,6 +8057,19 @@
   },
   {
    "event_id": "AVGO-2026-03-04",
+   "consensus": {
+    "eps_estimate": 2.02,
+    "eps_reported": 2.05,
+    "consensus_surprise_pct": 1.485,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-03-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+    "fetched_at": "2026-09-15T20:22:38Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AVGO",
    "company_symbol": "AVGOUSDT",
    "sector_group": "semis",
@@ -7464,6 +8221,19 @@
   },
   {
    "event_id": "MRVL-2026-03-05",
+   "consensus": {
+    "eps_estimate": 0.79,
+    "eps_reported": 0.8,
+    "consensus_surprise_pct": 1.266,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-03-05",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+    "fetched_at": "2026-09-15T20:22:47Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MRVL",
    "company_symbol": "MRVLUSDT",
    "sector_group": "semis",
@@ -7625,6 +8395,19 @@
   },
   {
    "event_id": "HPE-2026-03-09",
+   "consensus": {
+    "eps_estimate": 0.59,
+    "eps_reported": 0.65,
+    "consensus_surprise_pct": 10.169,
+    "fiscal_date_ending": "2026-01-31",
+    "reported_date": "2026-03-09",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+    "fetched_at": "2026-09-15T20:23:12Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "HPE",
    "company_symbol": "HPEUSDT",
    "sector_group": "hardware",
@@ -7766,6 +8549,19 @@
   },
   {
    "event_id": "MU-2026-03-18",
+   "consensus": {
+    "eps_estimate": 9.31,
+    "eps_reported": 12.2,
+    "consensus_surprise_pct": 31.042,
+    "fiscal_date_ending": "2026-02-28",
+    "reported_date": "2026-03-18",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MU",
+    "fetched_at": "2026-09-15T20:22:44Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "MU",
    "company_symbol": "MUUSDT",
    "sector_group": "semis",
@@ -7907,6 +8703,19 @@
   },
   {
    "event_id": "TXN-2026-04-22",
+   "consensus": {
+    "eps_estimate": 1.37,
+    "eps_reported": 1.68,
+    "consensus_surprise_pct": 22.628,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-04-22",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+    "fetched_at": "2026-09-15T20:22:59Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "TXN",
    "company_symbol": "TXNUSDT",
    "sector_group": "semis",
@@ -8042,6 +8851,19 @@
   },
   {
    "event_id": "INTC-2026-04-23",
+   "consensus": {
+    "eps_estimate": 0.01,
+    "eps_reported": 0.29,
+    "consensus_surprise_pct": 2800.0,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-04-23",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+    "fetched_at": "2026-09-15T20:22:45Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "INTC",
    "company_symbol": "INTCUSDT",
    "sector_group": "semis",
@@ -8193,6 +9015,19 @@
   },
   {
    "event_id": "QCOM-2026-04-29",
+   "consensus": {
+    "eps_estimate": 2.5584,
+    "eps_reported": 2.65,
+    "consensus_surprise_pct": 3.58,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-04-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+    "fetched_at": "2026-09-15T20:22:49Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "QCOM",
    "company_symbol": "QCOMUSDT",
    "sector_group": "semis",
@@ -8334,6 +9169,19 @@
   },
   {
    "event_id": "META-2026-04-29",
+   "consensus": {
+    "eps_estimate": 6.82,
+    "eps_reported": 7.31,
+    "consensus_surprise_pct": 7.185,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-04-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+    "fetched_at": "2026-09-15T20:23:01Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "META",
    "company_symbol": "METAUSDT",
    "sector_group": "internet",
@@ -8475,6 +9323,19 @@
   },
   {
    "event_id": "KLAC-2026-04-29",
+   "consensus": {
+    "eps_estimate": 0.92,
+    "eps_reported": 0.94,
+    "consensus_surprise_pct": 2.174,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-04-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+    "fetched_at": "2026-09-15T20:22:50Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "KLAC",
    "company_symbol": "KLACUSDT",
    "sector_group": "semis",
@@ -8626,6 +9487,19 @@
   },
   {
    "event_id": "AMZN-2026-04-29",
+   "consensus": {
+    "eps_estimate": 1.64,
+    "eps_reported": 2.78,
+    "consensus_surprise_pct": 69.512,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-04-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+    "fetched_at": "2026-09-15T20:23:03Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "AMZN",
    "company_symbol": "AMZNUSDT",
    "sector_group": "internet",
@@ -8767,6 +9641,19 @@
   },
   {
    "event_id": "PLTR-2026-05-04",
+   "consensus": {
+    "eps_estimate": 0.28,
+    "eps_reported": 0.33,
+    "consensus_surprise_pct": 17.857,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-05-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+    "fetched_at": "2026-09-15T20:23:04Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PLTR",
    "company_symbol": "PLTRUSDT",
    "sector_group": "software",
@@ -8918,6 +9805,19 @@
   },
   {
    "event_id": "SMCI-2026-05-05",
+   "consensus": {
+    "eps_estimate": 0.62,
+    "eps_reported": 0.84,
+    "consensus_surprise_pct": 35.484,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-05-05",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+    "fetched_at": "2026-09-15T20:24:23Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "SMCI",
    "company_symbol": "SMCIUSDT",
    "sector_group": "hardware",
@@ -9038,6 +9938,19 @@
   },
   {
    "event_id": "AMD-2026-05-05",
+   "consensus": {
+    "eps_estimate": 1.29,
+    "eps_reported": 1.37,
+    "consensus_surprise_pct": 6.202,
+    "fiscal_date_ending": "2026-03-31",
+    "reported_date": "2026-05-05",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+    "fetched_at": "2026-09-15T20:22:37Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMD",
    "company_symbol": "AMDUSDT",
    "sector_group": "semis",
@@ -9199,6 +10112,19 @@
   },
   {
    "event_id": "NVDA-2026-05-20",
+   "consensus": {
+    "eps_estimate": 1.77,
+    "eps_reported": 1.87,
+    "consensus_surprise_pct": 5.65,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-05-20",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+    "fetched_at": "2026-09-15T20:22:33Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "NVDA",
    "company_symbol": "NVDAUSDT",
    "sector_group": "semis",
@@ -9360,6 +10286,19 @@
   },
   {
    "event_id": "MRVL-2026-05-27",
+   "consensus": {
+    "eps_estimate": 0.79,
+    "eps_reported": 0.8,
+    "consensus_surprise_pct": 1.266,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-05-27",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+    "fetched_at": "2026-09-15T20:22:47Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MRVL",
    "company_symbol": "MRVLUSDT",
    "sector_group": "semis",
@@ -9511,6 +10450,19 @@
   },
   {
    "event_id": "CRM-2026-05-27",
+   "consensus": {
+    "eps_estimate": 3.13,
+    "eps_reported": 3.88,
+    "consensus_surprise_pct": 23.962,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-05-27",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+    "fetched_at": "2026-09-15T20:23:36Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "CRM",
    "company_symbol": "CRMUSDT",
    "sector_group": "software",
@@ -9631,6 +10583,19 @@
   },
   {
    "event_id": "MDB-2026-05-28",
+   "consensus": {
+    "eps_estimate": -0.3,
+    "eps_reported": -0.45,
+    "consensus_surprise_pct": -50.0,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-05-28",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+    "fetched_at": "2026-09-15T20:24:02Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "MDB",
    "company_symbol": "MDBUSDT",
    "sector_group": "software",
@@ -9782,6 +10747,19 @@
   },
   {
    "event_id": "HPE-2026-06-01",
+   "consensus": {
+    "eps_estimate": 0.53,
+    "eps_reported": 0.79,
+    "consensus_surprise_pct": 49.057,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-06-01",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+    "fetched_at": "2026-09-15T20:23:12Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "HPE",
    "company_symbol": "HPEUSDT",
    "sector_group": "hardware",
@@ -9923,6 +10901,19 @@
   },
   {
    "event_id": "PANW-2026-06-02",
+   "consensus": {
+    "eps_estimate": 0.43,
+    "eps_reported": 0.32,
+    "consensus_surprise_pct": -25.581,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-06-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+    "fetched_at": "2026-09-15T20:23:08Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PANW",
    "company_symbol": "PANWUSDT",
    "sector_group": "software",
@@ -10064,6 +11055,19 @@
   },
   {
    "event_id": "CRWD-2026-06-03",
+   "consensus": {
+    "eps_estimate": 0.27,
+    "eps_reported": 0.28,
+    "consensus_surprise_pct": 3.704,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-06-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+    "fetched_at": "2026-09-15T20:23:09Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "CRWD",
    "company_symbol": "CRWDUSDT",
    "sector_group": "software",
@@ -10205,6 +11209,19 @@
   },
   {
    "event_id": "AVGO-2026-06-03",
+   "consensus": {
+    "eps_estimate": 2.4,
+    "eps_reported": 2.44,
+    "consensus_surprise_pct": 1.667,
+    "fiscal_date_ending": "2026-04-30",
+    "reported_date": "2026-06-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+    "fetched_at": "2026-09-15T20:22:38Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AVGO",
    "company_symbol": "AVGOUSDT",
    "sector_group": "semis",
@@ -10356,6 +11373,19 @@
   },
   {
    "event_id": "MU-2026-06-24",
+   "consensus": {
+    "eps_estimate": 20.98,
+    "eps_reported": 24.89,
+    "consensus_surprise_pct": 18.637,
+    "fiscal_date_ending": "2026-05-31",
+    "reported_date": "2026-06-24",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MU",
+    "fetched_at": "2026-09-15T20:22:44Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MU",
    "company_symbol": "MUUSDT",
    "sector_group": "semis",
@@ -10497,6 +11527,7 @@
   },
   {
    "event_id": "SMCI-2026-07-21",
+   "consensus": null,
    "ticker": "SMCI",
    "company_symbol": "SMCIUSDT",
    "sector_group": "hardware",
@@ -10602,6 +11633,19 @@
   },
   {
    "event_id": "TXN-2026-07-22",
+   "consensus": {
+    "eps_estimate": 1.91,
+    "eps_reported": 2.14,
+    "consensus_surprise_pct": 12.042,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-07-22",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TXN",
+    "fetched_at": "2026-09-15T20:22:59Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "TXN",
    "company_symbol": "TXNUSDT",
    "sector_group": "semis",
@@ -10737,6 +11781,19 @@
   },
   {
    "event_id": "INTC-2026-07-23",
+   "consensus": {
+    "eps_estimate": 0.1,
+    "eps_reported": 0.3,
+    "consensus_surprise_pct": 200.0,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-07-23",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=INTC",
+    "fetched_at": "2026-09-15T20:22:45Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "INTC",
    "company_symbol": "INTCUSDT",
    "sector_group": "semis",
@@ -10888,6 +11945,19 @@
   },
   {
    "event_id": "KLAC-2026-07-28",
+   "consensus": {
+    "eps_estimate": 1.0,
+    "eps_reported": 1.05,
+    "consensus_surprise_pct": 5.0,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-07-28",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=KLAC",
+    "fetched_at": "2026-09-15T20:22:50Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "KLAC",
    "company_symbol": "KLACUSDT",
    "sector_group": "semis",
@@ -11039,6 +12109,19 @@
   },
   {
    "event_id": "QCOM-2026-07-29",
+   "consensus": {
+    "eps_estimate": 1.54,
+    "eps_reported": 1.53,
+    "consensus_surprise_pct": -0.649,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-07-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=QCOM",
+    "fetched_at": "2026-09-15T20:22:49Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "QCOM",
    "company_symbol": "QCOMUSDT",
    "sector_group": "semis",
@@ -11180,6 +12263,19 @@
   },
   {
    "event_id": "META-2026-07-29",
+   "consensus": {
+    "eps_estimate": 7.1,
+    "eps_reported": 6.18,
+    "consensus_surprise_pct": -12.958,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-07-29",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=META",
+    "fetched_at": "2026-09-15T20:23:01Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "META",
    "company_symbol": "METAUSDT",
    "sector_group": "internet",
@@ -11321,6 +12417,19 @@
   },
   {
    "event_id": "AMZN-2026-07-30",
+   "consensus": {
+    "eps_estimate": 1.83,
+    "eps_reported": 1.88,
+    "consensus_surprise_pct": 2.732,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-07-30",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMZN",
+    "fetched_at": "2026-09-15T20:23:03Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMZN",
    "company_symbol": "AMZNUSDT",
    "sector_group": "internet",
@@ -11462,6 +12571,19 @@
   },
   {
    "event_id": "PLTR-2026-08-03",
+   "consensus": {
+    "eps_estimate": 0.28,
+    "eps_reported": 0.41,
+    "consensus_surprise_pct": 46.429,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-08-03",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PLTR",
+    "fetched_at": "2026-09-15T20:23:04Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "PLTR",
    "company_symbol": "PLTRUSDT",
    "sector_group": "software",
@@ -11613,6 +12735,19 @@
   },
   {
    "event_id": "AMD-2026-08-04",
+   "consensus": {
+    "eps_estimate": 1.35,
+    "eps_reported": 1.66,
+    "consensus_surprise_pct": 22.963,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-08-04",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AMD",
+    "fetched_at": "2026-09-15T20:22:37Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AMD",
    "company_symbol": "AMDUSDT",
    "sector_group": "semis",
@@ -11774,6 +12909,19 @@
   },
   {
    "event_id": "SMCI-2026-08-11",
+   "consensus": {
+    "eps_estimate": 0.56,
+    "eps_reported": 1.62,
+    "consensus_surprise_pct": 189.286,
+    "fiscal_date_ending": "2026-06-30",
+    "reported_date": "2026-08-11",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=SMCI",
+    "fetched_at": "2026-09-15T20:24:23Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "SMCI",
    "company_symbol": "SMCIUSDT",
    "sector_group": "hardware",
@@ -11915,6 +13063,19 @@
   },
   {
    "event_id": "CRM-2026-08-26",
+   "consensus": {
+    "eps_estimate": 2.35,
+    "eps_reported": 4.95,
+    "consensus_surprise_pct": 110.638,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-08-26",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRM",
+    "fetched_at": "2026-09-15T20:23:36Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "CRM",
    "company_symbol": "CRMUSDT",
    "sector_group": "software",
@@ -12056,6 +13217,19 @@
   },
   {
    "event_id": "CRWD-2026-08-26",
+   "consensus": {
+    "eps_estimate": 0.05,
+    "eps_reported": 0.01,
+    "consensus_surprise_pct": -80.0,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-08-26",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=CRWD",
+    "fetched_at": "2026-09-15T20:23:09Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "CRWD",
    "company_symbol": "CRWDUSDT",
    "sector_group": "software",
@@ -12191,6 +13365,19 @@
   },
   {
    "event_id": "NVDA-2026-08-26",
+   "consensus": {
+    "eps_estimate": 2.09,
+    "eps_reported": 2.22,
+    "consensus_surprise_pct": 6.22,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-08-26",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=NVDA",
+    "fetched_at": "2026-09-15T20:22:33Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "NVDA",
    "company_symbol": "NVDAUSDT",
    "sector_group": "semis",
@@ -12352,6 +13539,19 @@
   },
   {
    "event_id": "MRVL-2026-08-27",
+   "consensus": {
+    "eps_estimate": 0.65,
+    "eps_reported": 0.62,
+    "consensus_surprise_pct": -4.615,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-08-27",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MRVL",
+    "fetched_at": "2026-09-15T20:22:47Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "MRVL",
    "company_symbol": "MRVLUSDT",
    "sector_group": "semis",
@@ -12503,6 +13703,19 @@
   },
   {
    "event_id": "MDB-2026-09-01",
+   "consensus": {
+    "eps_estimate": 0.08,
+    "eps_reported": 0.54,
+    "consensus_surprise_pct": 575.0,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-09-01",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=MDB",
+    "fetched_at": "2026-09-15T20:24:02Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "basis_mismatch_suspected"
+   },
    "ticker": "MDB",
    "company_symbol": "MDBUSDT",
    "sector_group": "software",
@@ -12654,6 +13867,19 @@
   },
   {
    "event_id": "PANW-2026-09-01",
+   "consensus": {
+    "eps_estimate": 0.51,
+    "eps_reported": 0.53,
+    "consensus_surprise_pct": 3.922,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-09-01",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=PANW",
+    "fetched_at": "2026-09-15T20:23:08Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "PANW",
    "company_symbol": "PANWUSDT",
    "sector_group": "software",
@@ -12795,6 +14021,19 @@
   },
   {
    "event_id": "HPE-2026-09-02",
+   "consensus": {
+    "eps_estimate": 0.82,
+    "eps_reported": 1.02,
+    "consensus_surprise_pct": 24.39,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-09-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=HPE",
+    "fetched_at": "2026-09-15T20:23:12Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "HPE",
    "company_symbol": "HPEUSDT",
    "sector_group": "hardware",
@@ -12936,6 +14175,19 @@
   },
   {
    "event_id": "AVGO-2026-09-02",
+   "consensus": {
+    "eps_estimate": 2.83,
+    "eps_reported": 3.03,
+    "consensus_surprise_pct": 7.067,
+    "fiscal_date_ending": "2026-07-31",
+    "reported_date": "2026-09-02",
+    "report_time": "post-market",
+    "provider": "alphavantage:EARNINGS",
+    "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=AVGO",
+    "fetched_at": "2026-09-15T20:22:38Z",
+    "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+    "quality": "ok"
+   },
    "ticker": "AVGO",
    "company_symbol": "AVGOUSDT",
    "sector_group": "semis",
@@ -13124,7 +14376,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13188,7 +14441,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13259,7 +14513,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13323,7 +14578,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13392,7 +14648,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13462,7 +14719,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13532,7 +14790,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13602,7 +14861,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13670,7 +14930,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13738,7 +14999,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13802,7 +15064,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13872,7 +15135,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -13943,7 +15207,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": null,
@@ -14035,7 +15300,8 @@
     "scores": {
      "residual": 0,
      "headline": 0,
-     "agreement": 0
+     "agreement": 0,
+     "consensus": 0
     }
    },
    "interpretation": {
@@ -14376,6 +15642,62 @@
      }
     ]
    },
+   "v_consensus": {
+    "net": -82.18420373884288,
+    "net_conservative": -87.39367793163092,
+    "gross_mid": -67.4900996138297,
+    "fees": 7.510884581773514,
+    "slippage": 7.183219543239663,
+    "funding": 0.0,
+    "funding_conservative": -5.209474192788024,
+    "entry_ms": 1763593200000,
+    "exit_ms": 1763654400000,
+    "stopped": true,
+    "holding_hours": 17.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "NVDAUSDT",
+      "side": "long",
+      "qty": 12.85148820233383,
+      "notional": 2500.0,
+      "entry_mid": 194.53,
+      "entry_fill": 194.66421113674292,
+      "exit_mid": 192.48,
+      "exit_fill": 192.34720320978627,
+      "fee_rate": 0.0006,
+      "fees": 2.984203575385769,
+      "slippage": 3.431449223212836,
+      "funding": 0.0,
+      "funding_conservative": -1.0492702924998714,
+      "funding_settlements": 3,
+      "gross_mid": -26.345550814784495,
+      "net": -32.7612036133831,
+      "net_conservative": -33.81047390588297
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 6.196468192627304,
+      "notional": 3751.6516672262014,
+      "entry_mid": 605.45,
+      "entry_fill": 605.1489164249775,
+      "exit_mid": 612.09,
+      "exit_fill": 612.3943855734339,
+      "fee_rate": 0.0006,
+      "fees": 4.5266810063877445,
+      "slippage": 3.7517703200268273,
+      "funding": 0.0,
+      "funding_conservative": -4.160203900288153,
+      "funding_settlements": 3,
+      "gross_mid": -41.14454879904521,
+      "net": -49.42300012545979,
+      "net_conservative": -53.58320402574794
+     }
+    ]
+   },
    "balance_after": 99912.60632206837,
    "naive_direction": 1,
    "naive_same_events": {
@@ -14546,7 +15868,9 @@
      0.04044080636502311
     ],
     "residual": 0.026308699157276523,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 3.175,
+    "consensus_sign": 1
    }
   },
   {
@@ -14586,7 +15910,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -14654,7 +15979,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -14742,7 +16068,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": {
@@ -14941,7 +16268,9 @@
      0.11771130221781032
     ],
     "residual": 0.11673940884259437,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 2.703,
+    "consensus_sign": 1
    }
   },
   {
@@ -14981,7 +16310,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -15050,7 +16380,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -15114,7 +16445,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -15184,7 +16516,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -15274,7 +16607,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": {
@@ -15473,7 +16807,9 @@
      -0.1264882802627985
     ],
     "residual": -0.12407034154078476,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -15512,7 +16848,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -15606,7 +16943,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": {
@@ -15947,6 +17285,62 @@
      }
     ]
    },
+   "v_consensus": {
+    "net": 21.11925610808415,
+    "net_conservative": 17.92960655357053,
+    "gross_mid": 25.839797577242145,
+    "fees": 2.873718362122716,
+    "slippage": 1.846823107035278,
+    "funding": 0.0,
+    "funding_conservative": -3.1896495545136223,
+    "entry_ms": 1769641200000,
+    "exit_ms": 1769727600000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "METAUSDT",
+      "side": "long",
+      "qty": 1.7187564453366702,
+      "notional": 1250.0,
+      "entry_mid": 727.27,
+      "entry_fill": 727.5850847224918,
+      "exit_mid": 734.49,
+      "exit_fill": 734.1717872621956,
+      "fee_rate": 0.0006,
+      "fees": 1.5074424271433107,
+      "slippage": 1.0884840916995446,
+      "funding": 0.0,
+      "funding_conservative": -1.945806732712748,
+      "funding_settlements": 3,
+      "gross_mid": 12.409421535330805,
+      "net": 9.81349501648795,
+      "net_conservative": 7.867688283775202
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 1.7955048184373408,
+      "notional": 1145.2807034884422,
+      "entry_mid": 637.86,
+      "entry_fill": 637.647577386742,
+      "exit_mid": 630.38,
+      "exit_fill": 630.5899315946219,
+      "fee_rate": 0.0006,
+      "fees": 1.3662759349794056,
+      "slippage": 0.7583390153357333,
+      "funding": 0.0,
+      "funding_conservative": -1.2438428218008744,
+      "funding_settlements": 3,
+      "gross_mid": 13.430376041911341,
+      "net": 11.305761091596203,
+      "net_conservative": 10.061918269795328
+     }
+    ]
+   },
    "balance_after": 99930.53592862195,
    "naive_direction": 1,
    "naive_same_events": {
@@ -16117,7 +17511,9 @@
      0.07978378189327898
     ],
     "residual": 0.07821087355470067,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 8.029,
+    "consensus_sign": 1
    }
   },
   {
@@ -16156,7 +17552,8 @@
     "scores": {
      "residual": -87.39,
      "headline": -87.39,
-     "agreement": -87.39
+     "agreement": -87.39,
+     "consensus": -87.39
     }
    },
    "interpretation": null,
@@ -16250,7 +17647,8 @@
     "scores": {
      "residual": -51.53,
      "headline": -51.53,
-     "agreement": -51.53
+     "agreement": -51.53,
+     "consensus": -51.53
     }
    },
    "interpretation": {
@@ -16591,6 +17989,62 @@
      }
     ]
    },
+   "v_consensus": {
+    "net": 82.70129164022472,
+    "net_conservative": 73.53144124087993,
+    "gross_mid": 99.24268236503764,
+    "fees": 8.622229350864695,
+    "slippage": 7.919161373948222,
+    "funding": 0.0,
+    "funding_conservative": -9.169850399344792,
+    "entry_ms": 1770073200000,
+    "exit_ms": 1770159600000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "PLTRUSDT",
+      "side": "long",
+      "qty": 16.09683858090271,
+      "notional": 2500.0,
+      "entry_mid": 155.31,
+      "entry_fill": 155.44170083499662,
+      "exit_mid": 156.19,
+      "exit_fill": 156.05755293659055,
+      "fee_rate": 0.0006,
+      "fees": 3.0084919236197325,
+      "slippage": 4.251946082127124,
+      "funding": 0.0,
+      "funding_conservative": -3.9890073079647155,
+      "funding_settlements": 3,
+      "gross_mid": 14.165217951194311,
+      "net": 6.904779945447455,
+      "net_conservative": 2.9157726374827395
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 7.528979151667581,
+      "notional": 4720.669928095574,
+      "entry_mid": 627.0,
+      "entry_fill": 626.7542454570329,
+      "exit_mid": 615.7,
+      "exit_fill": 615.9413254738515,
+      "fee_rate": 0.0006,
+      "fees": 5.6137374272449625,
+      "slippage": 3.6672152918210976,
+      "funding": 0.0,
+      "funding_conservative": -5.180843091380076,
+      "funding_settlements": 3,
+      "gross_mid": 85.07746441384333,
+      "net": 75.79651169477727,
+      "net_conservative": 70.61566860339718
+     }
+    ]
+   },
    "balance_after": 100004.06736986282,
    "naive_direction": 1,
    "naive_same_events": {
@@ -16759,7 +18213,9 @@
      0.047873065034319345
     ],
     "residual": 0.04695820819801832,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 8.696,
+    "consensus_sign": 1
    }
   },
   {
@@ -16798,7 +18254,8 @@
     "scores": {
      "residual": -51.53,
      "headline": -51.53,
-     "agreement": -51.53
+     "agreement": -51.53,
+     "consensus": -51.53
     }
    },
    "interpretation": null,
@@ -16869,7 +18326,8 @@
     "scores": {
      "residual": -51.53,
      "headline": -51.53,
-     "agreement": -51.53
+     "agreement": -51.53,
+     "consensus": -51.53
     }
    },
    "interpretation": null,
@@ -16933,7 +18391,8 @@
     "scores": {
      "residual": 22.0,
      "headline": 22.0,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -17027,7 +18486,8 @@
     "scores": {
      "residual": 22.0,
      "headline": 22.0,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": {
@@ -17312,6 +18772,7 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": null,
    "balance_after": 99952.56861707446,
    "naive_direction": 1,
    "naive_same_events": {
@@ -17482,7 +18943,9 @@
      -0.10584301031373453
     ],
     "residual": -0.09428797190811242,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 0.0,
+    "consensus_sign": 0
    }
   },
   {
@@ -17522,7 +18985,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -17591,7 +19055,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -17679,7 +19144,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": {
@@ -17887,7 +19353,9 @@
      0.008687534000173584
     ],
     "residual": 0.009430630441308489,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 5.195,
+    "consensus_sign": 1
    }
   },
   {
@@ -17927,7 +19395,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -17995,7 +19464,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -18083,7 +19553,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": {
@@ -18290,7 +19761,9 @@
      0.04916679533568614
     ],
     "residual": 0.04502536804730032,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 1.485,
+    "consensus_sign": 1
    }
   },
   {
@@ -18349,7 +19822,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": {
@@ -18557,7 +20031,9 @@
      0.1391762437405494
     ],
     "residual": 0.14064984617236204,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 1.266,
+    "consensus_sign": 1
    }
   },
   {
@@ -18596,7 +20072,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -18684,7 +20161,8 @@
     "scores": {
      "residual": -29.5,
      "headline": 43.63,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": {
@@ -18974,6 +20452,7 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": null,
    "balance_after": 99905.37566697926,
    "naive_direction": 1,
    "naive_same_events": {
@@ -19154,7 +20633,9 @@
      -0.04360821833748366
     ],
     "residual": -0.04094300376974266,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -19193,7 +20674,8 @@
     "scores": {
      "residual": -123.89,
      "headline": 33.72,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": null,
@@ -19290,7 +20772,8 @@
     "scores": {
      "residual": -123.89,
      "headline": 33.72,
-     "agreement": 22.0
+     "agreement": 22.0,
+     "consensus": 22.0
     }
    },
    "interpretation": {
@@ -19631,6 +21114,7 @@
      }
     ]
    },
+   "v_consensus": null,
    "balance_after": 99899.283469562,
    "naive_direction": 1,
    "naive_same_events": {
@@ -19811,7 +21295,9 @@
      0.1823215567939548
     ],
     "residual": 0.17109565119377357,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -19859,7 +21345,8 @@
     "scores": {
      "residual": -42.59,
      "headline": 115.02,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 109.39
     }
    },
    "interpretation": null,
@@ -19967,7 +21454,8 @@
     "scores": {
      "residual": -42.59,
      "headline": 115.02,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 109.39
     }
    },
    "interpretation": {
@@ -20253,6 +21741,62 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": {
+    "net": -37.27789346789914,
+    "net_conservative": -39.42758002617863,
+    "gross_mid": -32.31755540062239,
+    "fees": 2.884544729168578,
+    "slippage": 2.0757933381081726,
+    "funding": 0.0,
+    "funding_conservative": -2.149686558279493,
+    "entry_ms": 1777500000000,
+    "exit_ms": 1777539600000,
+    "stopped": true,
+    "holding_hours": 11.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "METAUSDT",
+      "side": "long",
+      "qty": 1.979476784696269,
+      "notional": 1250.0,
+      "entry_mid": 631.48,
+      "entry_fill": 631.8157841227096,
+      "exit_mid": 617.0,
+      "exit_fill": 616.671915494217,
+      "fee_rate": 0.0006,
+      "fees": 1.4828114504223329,
+      "slippage": 1.3141125381891292,
+      "funding": 0.0,
+      "funding_conservative": -1.291153144200925,
+      "funding_settlements": 2,
+      "gross_mid": -28.662823842402013,
+      "net": -31.459747831013473,
+      "net_conservative": -32.7509009752144
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 1.7655708010727007,
+      "notional": 1166.283104064594,
+      "entry_mid": 660.57,
+      "entry_fill": 660.3546336031601,
+      "exit_mid": 662.64,
+      "exit_fill": 662.8560412813207,
+      "fee_rate": 0.0006,
+      "fees": 1.401733278746245,
+      "slippage": 0.7616807999190431,
+      "funding": 0.0,
+      "funding_conservative": -0.8585334140785678,
+      "funding_settlements": 2,
+      "gross_mid": -3.654731558220378,
+      "net": -5.818145636885666,
+      "net_conservative": -6.676679050964234
+     }
+    ]
+   },
    "balance_after": 99939.93215801632,
    "naive_direction": 1,
    "naive_same_events": {
@@ -20431,7 +21975,9 @@
      -0.059599426147285826
     ],
     "residual": -0.06134106352839904,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 7.185,
+    "consensus_sign": 1
    }
   },
   {
@@ -20479,7 +22025,8 @@
     "scores": {
      "residual": -42.59,
      "headline": 115.02,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 109.39
     }
    },
    "interpretation": null,
@@ -20584,7 +22131,8 @@
     "scores": {
      "residual": -42.59,
      "headline": 115.02,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 109.39
     }
    },
    "interpretation": {
@@ -20791,7 +22339,9 @@
      0.009781229438889356
     ],
     "residual": 0.012232225294946962,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -20861,7 +22411,8 @@
     "scores": {
      "residual": 38.71,
      "headline": 36.16,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 30.54
     }
    },
    "interpretation": {
@@ -21065,7 +22616,9 @@
      -0.014383786062368339
     ],
     "residual": -0.013336970959629258,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 17.857,
+    "consensus_sign": 1
    }
   },
   {
@@ -21116,7 +22669,8 @@
     "scores": {
      "residual": 38.71,
      "headline": 36.16,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 30.54
     }
    },
    "interpretation": null,
@@ -21215,7 +22769,8 @@
     "scores": {
      "residual": 38.71,
      "headline": 36.16,
-     "agreement": 103.3
+     "agreement": 103.3,
+     "consensus": 30.54
     }
    },
    "interpretation": {
@@ -21560,6 +23115,62 @@
      }
     ]
    },
+   "v_consensus": {
+    "net": 11.17556843988612,
+    "net_conservative": 2.2830453724806716,
+    "gross_mid": 31.653819472687417,
+    "fees": 10.039289875950079,
+    "slippage": 10.438961156851228,
+    "funding": 0.0,
+    "funding_conservative": -8.892523067405447,
+    "entry_ms": 1778018400000,
+    "exit_ms": 1778104800000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AMDUSDT",
+      "side": "long",
+      "qty": 6.331999392128059,
+      "notional": 2500.0,
+      "entry_mid": 394.82,
+      "entry_fill": 395.2910141600851,
+      "exit_mid": 412.89,
+      "exit_fill": 412.3974286090939,
+      "fee_rate": 0.0006,
+      "fees": 3.0685696371859796,
+      "slippage": 6.101423123139914,
+      "funding": 0.0,
+      "funding_conservative": -2.5184337166303634,
+      "funding_settlements": 3,
+      "gross_mid": 114.41922901575397,
+      "net": 105.24923625542809,
+      "net_conservative": 102.73080253879772
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 8.428249444304086,
+      "notional": 5767.5353772317285,
+      "entry_mid": 684.31,
+      "entry_fill": 684.0545117481477,
+      "exit_mid": 694.13,
+      "exit_fill": 694.3891545648293,
+      "fee_rate": 0.0006,
+      "fees": 6.9707202387641,
+      "slippage": 4.337538033711313,
+      "funding": 0.0,
+      "funding_conservative": -6.374089350775083,
+      "funding_settlements": 3,
+      "gross_mid": -82.76540954306655,
+      "net": -94.07366781554197,
+      "net_conservative": -100.44775716631705
+     }
+    ]
+   },
    "balance_after": 99942.2152033888,
    "naive_direction": 1,
    "naive_same_events": {
@@ -21742,7 +23353,9 @@
      0.1043422858831124
     ],
     "residual": 0.08323068118039376,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 6.202,
+    "consensus_sign": 1
    }
   },
   {
@@ -21816,7 +23429,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": {
@@ -22027,7 +23641,9 @@
      -0.012143166978331007
     ],
     "residual": -0.0064017688666165445,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 5.65,
+    "consensus_sign": 1
    }
   },
   {
@@ -22099,7 +23715,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": {
@@ -22310,7 +23927,9 @@
      0.012109883120646038
     ],
     "residual": 0.011347405590552265,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 1.266,
+    "consensus_sign": 1
    }
   },
   {
@@ -22363,7 +23982,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": null,
@@ -22444,7 +24064,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": null,
@@ -22525,7 +24146,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": null,
@@ -22606,7 +24228,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": null,
@@ -22687,7 +24310,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": null,
@@ -22792,7 +24416,8 @@
     "scores": {
      "residual": 142.17,
      "headline": -147.52,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -153.15
     }
    },
    "interpretation": {
@@ -23078,6 +24703,62 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": {
+    "net": -41.662270472845606,
+    "net_conservative": -44.468279712821115,
+    "gross_mid": -33.53269236248339,
+    "fees": 3.9975042822387534,
+    "slippage": 4.132073828123457,
+    "funding": 0.0,
+    "funding_conservative": -2.8060092399755145,
+    "entry_ms": 1780524000000,
+    "exit_ms": 1780581600000,
+    "stopped": true,
+    "holding_hours": 16.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AVGOUSDT",
+      "side": "long",
+      "qty": 2.968980095957437,
+      "notional": 1250.0,
+      "entry_mid": 421.02,
+      "entry_fill": 421.45703280236074,
+      "exit_mid": 405.19,
+      "exit_fill": 404.7693992656203,
+      "fee_rate": 0.0006,
+      "fees": 1.4718298989382588,
+      "slippage": 2.546296900208065,
+      "funding": 0.0,
+      "funding_conservative": -1.2598952543822146,
+      "funding_settlements": 2,
+      "gross_mid": -46.99895491900618,
+      "net": -51.017081718152504,
+      "net_conservative": -52.27697697253472
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 2.8530217280768455,
+      "notional": 2111.464320515112,
+      "entry_mid": 740.08,
+      "entry_fill": 739.8011991263271,
+      "exit_mid": 735.36,
+      "exit_fill": 735.6370227684359,
+      "fee_rate": 0.0006,
+      "fees": 2.525674383300495,
+      "slippage": 1.5857769279153924,
+      "funding": 0.0,
+      "funding_conservative": -1.5461139855933,
+      "funding_settlements": 2,
+      "gross_mid": 13.46626255652279,
+      "net": 9.354811245306902,
+      "net_conservative": 7.808697259713602
+     }
+    ]
+   },
    "balance_after": 99934.03197390593,
    "naive_direction": 1,
    "naive_same_events": {
@@ -23261,7 +24942,9 @@
      -0.13189711887358593
     ],
     "residual": -0.12007388588962974,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 1.667,
+    "consensus_sign": 1
    }
   },
   {
@@ -23334,7 +25017,8 @@
     "scores": {
      "residual": 125.81,
      "headline": -236.46,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -242.09
     }
    },
    "interpretation": {
@@ -23546,7 +25230,9 @@
      0.12769690587061533
     ],
     "residual": 0.06199115170471845,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 18.637,
+    "consensus_sign": 1
    }
   },
   {
@@ -23620,7 +25306,8 @@
     "scores": {
      "residual": 125.81,
      "headline": -236.46,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -242.09
     }
    },
    "interpretation": null,
@@ -23773,7 +25460,9 @@
      0.16321204247642682
     ],
     "residual": 0.1479533321107417,
-    "surprise_sign": 0
+    "surprise_sign": 0,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -23846,7 +25535,8 @@
     "scores": {
      "residual": 125.81,
      "headline": -236.46,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -242.09
     }
    },
    "interpretation": {
@@ -24068,7 +25758,9 @@
      -0.035045137563960854
     ],
     "residual": -0.036421183790624,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 12.042,
+    "consensus_sign": 1
    }
   },
   {
@@ -24145,7 +25837,8 @@
     "scores": {
      "residual": 125.81,
      "headline": -236.46,
-     "agreement": 18.19
+     "agreement": 18.19,
+     "consensus": -242.09
     }
    },
    "interpretation": {
@@ -24486,6 +26179,7 @@
      }
     ]
    },
+   "v_consensus": null,
    "balance_after": 99865.1957830585,
    "naive_direction": 1,
    "naive_same_events": {
@@ -24680,7 +26374,9 @@
      0.05442926350724374
     ],
     "residual": 0.042240178234879036,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -24754,7 +26450,8 @@
     "scores": {
      "residual": 24.63,
      "headline": -50.49,
-     "agreement": 105.58
+     "agreement": 105.58,
+     "consensus": -56.12
     }
    },
    "interpretation": {
@@ -24977,7 +26674,9 @@
      -0.09274776172628
     ],
     "residual": -0.09448731953938623,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 5.0,
+    "consensus_sign": 1
    }
   },
   {
@@ -25057,7 +26756,8 @@
     "scores": {
      "residual": 24.63,
      "headline": -50.49,
-     "agreement": 105.58
+     "agreement": 105.58,
+     "consensus": -56.12
     }
    },
    "interpretation": {
@@ -25236,6 +26936,62 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": {
+    "net": 20.235519837938597,
+    "net_conservative": 20.235519837938597,
+    "gross_mid": 38.70443622339454,
+    "fees": 8.02863163791358,
+    "slippage": 8.749296021210931,
+    "funding": -1.6909887263313845,
+    "funding_conservative": -1.6909887263313845,
+    "entry_ms": 1785362400000,
+    "exit_ms": 1785448800000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "QCOMUSDT",
+      "side": "short",
+      "qty": 17.247326664367023,
+      "notional": 2500.0,
+      "entry_mid": 144.95,
+      "entry_fill": 144.81179379653364,
+      "exit_mid": 152.44,
+      "exit_fill": 152.5853477313309,
+      "fee_rate": 0.0006,
+      "fees": 3.077583389388042,
+      "slippage": 4.890547340414871,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": -129.18247671610916,
+      "net": -137.15060744591207,
+      "net_conservative": -137.15060744591207
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "long",
+      "qty": 6.127259596332231,
+      "notional": 4041.969337912483,
+      "entry_mid": 659.67,
+      "entry_fill": 659.9784772835876,
+      "exit_mid": 687.07,
+      "exit_fill": 686.7487098288016,
+      "fee_rate": 0.0006,
+      "fees": 4.951048248525539,
+      "slippage": 3.8587486807960603,
+      "funding": -1.6909887263313845,
+      "funding_conservative": -1.6909887263313845,
+      "funding_settlements": 3,
+      "gross_mid": 167.8869129395037,
+      "net": 157.38612728385067,
+      "net_conservative": 157.38612728385067
+     }
+    ]
+   },
    "naive_direction": 1,
    "analysis": {
     "event_id": "QCOM-2026-07-29",
@@ -25393,7 +27149,9 @@
      -0.070063931593985
     ],
     "residual": -0.05990715567538345,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": -0.649,
+    "consensus_sign": -1
    }
   },
   {
@@ -25473,7 +27231,8 @@
     "scores": {
      "residual": 24.63,
      "headline": -50.49,
-     "agreement": 105.58
+     "agreement": 105.58,
+     "consensus": -56.12
     }
    },
    "interpretation": {
@@ -25652,6 +27411,62 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": {
+    "net": -78.8846483549437,
+    "net_conservative": -78.8846483549437,
+    "gross_mid": -69.09700985390204,
+    "fees": 4.8119315745097335,
+    "slippage": 4.6516634430191495,
+    "funding": -0.32404348351277185,
+    "funding_conservative": -0.32404348351277185,
+    "entry_ms": 1785362400000,
+    "exit_ms": 1785373200000,
+    "stopped": true,
+    "holding_hours": 3.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "METAUSDT",
+      "side": "short",
+      "qty": 4.7267020854209605,
+      "notional": 2500.0,
+      "entry_mid": 528.91,
+      "entry_fill": 528.5689477643256,
+      "exit_mid": 547.31,
+      "exit_fill": 547.6629169407025,
+      "fee_rate": 0.0006,
+      "fees": 3.0522164395786473,
+      "slippage": 3.280185553198945,
+      "funding": 0.01797082679472878,
+      "funding_conservative": 0.01797082679472878,
+      "funding_settlements": 1,
+      "gross_mid": -86.97131837174557,
+      "net": -93.28574953772844,
+      "net_conservative": -93.28574953772844
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "long",
+      "qty": 2.209432449671626,
+      "notional": 1457.4963040748817,
+      "entry_mid": 659.67,
+      "entry_fill": 659.9784772835876,
+      "exit_mid": 667.76,
+      "exit_fill": 667.4477396412017,
+      "fee_rate": 0.0006,
+      "fees": 1.759715134931086,
+      "slippage": 1.3714778898202047,
+      "funding": -0.3420143103075006,
+      "funding_conservative": -0.3420143103075006,
+      "funding_settlements": 1,
+      "gross_mid": 17.874308517843527,
+      "net": 14.401101182784734,
+      "net_conservative": 14.401101182784734
+     }
+    ]
+   },
    "naive_direction": 1,
    "analysis": {
     "event_id": "META-2026-07-29",
@@ -25793,7 +27608,9 @@
      -0.10539832855959305
     ],
     "residual": -0.09981277426684884,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": -12.958,
+    "consensus_sign": -1
    }
   },
   {
@@ -25871,7 +27688,8 @@
     "scores": {
      "residual": 24.63,
      "headline": -50.49,
-     "agreement": 105.58
+     "agreement": 105.58,
+     "consensus": -56.12
     }
    },
    "interpretation": {
@@ -26211,6 +28029,62 @@
      }
     ]
    },
+   "v_consensus": {
+    "net": 60.95591805231974,
+    "net_conservative": 60.95591805231974,
+    "gross_mid": 65.8733892321782,
+    "fees": 2.6723640874603474,
+    "slippage": 2.152197132052889,
+    "funding": -0.09290996034522976,
+    "funding_conservative": -0.09290996034522976,
+    "entry_ms": 1785448800000,
+    "exit_ms": 1785535200000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AMZNUSDT",
+      "side": "long",
+      "qty": 4.859653215146567,
+      "notional": 1250.0,
+      "entry_mid": 257.22,
+      "entry_fill": 257.34436824732546,
+      "exit_mid": 270.37,
+      "exit_fill": 270.23927360613726,
+      "fee_rate": 0.0006,
+      "fees": 1.538324124835149,
+      "slippage": 1.239671493216797,
+      "funding": -0.09290996034522976,
+      "funding_conservative": -0.09290996034522976,
+      "funding_settlements": 3,
+      "gross_mid": 63.904439779177245,
+      "net": 61.03353420078007,
+      "net_conservative": 61.03353420078007
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 1.3768877293712387,
+      "notional": 946.0182522190971,
+      "entry_mid": 687.07,
+      "entry_fill": 686.7382822320179,
+      "exit_mid": 685.64,
+      "exit_fill": 685.9710273632079,
+      "fee_rate": 0.0006,
+      "fees": 1.1340399626251987,
+      "slippage": 0.9125256388360922,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 1.968949453000959,
+      "net": -0.07761614846033194,
+      "net_conservative": -0.07761614846033194
+     }
+    ]
+   },
    "balance_after": 99926.15170111082,
    "naive_direction": 1,
    "naive_same_events": {
@@ -26389,7 +28263,9 @@
      0.08402582609801415
     ],
     "residual": 0.08988112052524344,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 2.732,
+    "consensus_sign": 1
    }
   },
   {
@@ -26470,7 +28346,8 @@
     "scores": {
      "residual": 87.89,
      "headline": 12.59,
-     "agreement": 227.49
+     "agreement": 227.49,
+     "consensus": 7.14
     }
    },
    "interpretation": {
@@ -26811,6 +28688,7 @@
      }
     ]
    },
+   "v_consensus": null,
    "balance_after": 100202.54776940666,
    "naive_direction": 1,
    "naive_same_events": {
@@ -27000,7 +28878,9 @@
      0.10933609723384988
     ],
     "residual": 0.10532415801311808,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -27083,7 +28963,8 @@
     "scores": {
      "residual": 87.89,
      "headline": 12.59,
-     "agreement": 227.49
+     "agreement": 227.49,
+     "consensus": 7.14
     }
    },
    "interpretation": {
@@ -27266,6 +29147,62 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": {
+    "net": 35.486057724415396,
+    "net_conservative": 35.486057724415396,
+    "gross_mid": 49.208754816504644,
+    "fees": 5.923281823729935,
+    "slippage": 7.36676683697018,
+    "funding": -0.43264843138912973,
+    "funding_conservative": -0.43264843138912973,
+    "entry_ms": 1785880800000,
+    "exit_ms": 1785967200000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AMDUSDT",
+      "side": "long",
+      "qty": 2.6425385282117415,
+      "notional": 1250.0,
+      "entry_mid": 473.03,
+      "entry_fill": 473.76246666738325,
+      "exit_mid": 481.95,
+      "exit_fill": 481.2037210951834,
+      "fee_rate": 0.0006,
+      "fees": 1.5141209665812423,
+      "slippage": 3.907642147960598,
+      "funding": -0.43264843138912973,
+      "funding_conservative": -0.43264843138912973,
+      "funding_settlements": 3,
+      "gross_mid": 23.571443671648776,
+      "net": 17.717032125717807,
+      "net_conservative": 17.717032125717807
+     },
+     {
+      "role": "hedge",
+      "symbol": "QQQUSDT",
+      "side": "short",
+      "qty": 5.107034092600789,
+      "notional": 3687.1254038349916,
+      "entry_mid": 721.97,
+      "entry_fill": 721.630155721497,
+      "exit_mid": 716.95,
+      "exit_fill": 717.287481274115,
+      "fee_rate": 0.0006,
+      "fees": 4.409160857148693,
+      "slippage": 3.4591246890095824,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 25.637311144855868,
+      "net": 17.76902559869759,
+      "net_conservative": 17.76902559869759
+     }
+    ]
+   },
    "naive_direction": 1,
    "analysis": {
     "event_id": "AMD-2026-08-04",
@@ -27423,7 +29360,9 @@
      -0.10669358018140108
     ],
     "residual": -0.09357821023516705,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 22.963,
+    "consensus_sign": 1
    }
   },
   {
@@ -27502,7 +29441,8 @@
     "scores": {
      "residual": 266.4,
      "headline": 359.96,
-     "agreement": 503.89
+     "agreement": 503.89,
+     "consensus": 78.12
     }
    },
    "interpretation": {
@@ -27715,7 +29655,9 @@
      0.05296528546933255
     ],
     "residual": 0.04923794411501204,
-    "surprise_sign": -1
+    "surprise_sign": -1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -27795,7 +29737,8 @@
     "scores": {
      "residual": 266.4,
      "headline": 359.96,
-     "agreement": 503.89
+     "agreement": 503.89,
+     "consensus": 78.12
     }
    },
    "interpretation": {
@@ -28013,7 +29956,9 @@
      0.1158500210104349
     ],
     "residual": 0.09062980484077957,
-    "surprise_sign": -1
+    "surprise_sign": -1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -28092,7 +30037,8 @@
     "scores": {
      "residual": 266.4,
      "headline": 359.96,
-     "agreement": 503.89
+     "agreement": 503.89,
+     "consensus": 78.12
     }
    },
    "interpretation": {
@@ -28310,7 +30256,9 @@
      0.10127874785380196
     ],
     "residual": 0.08530592788525738,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -28393,7 +30341,8 @@
     "scores": {
      "residual": 266.4,
      "headline": 359.96,
-     "agreement": 503.89
+     "agreement": 503.89,
+     "consensus": 78.12
     }
    },
    "interpretation": {
@@ -28734,6 +30683,62 @@
      }
     ]
    },
+   "v_consensus": {
+    "net": 66.88859079653908,
+    "net_conservative": 66.88859079653908,
+    "gross_mid": 76.14202285471984,
+    "fees": 4.628239010332278,
+    "slippage": 4.6251930478485,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "entry_ms": 1787781600000,
+    "exit_ms": 1787868000000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "NVDAUSDT",
+      "side": "long",
+      "qty": 11.417610522469857,
+      "notional": 2500.0,
+      "entry_mid": 218.96,
+      "entry_fill": 219.08105669201973,
+      "exit_mid": 226.1,
+      "exit_fill": 225.97499580715353,
+      "fee_rate": 0.0006,
+      "fees": 3.0488860008620744,
+      "slippage": 2.809427348216364,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 81.52173913043463,
+      "net": 75.6634257813562,
+      "net_conservative": 75.6634257813562
+     },
+     {
+      "role": "hedge",
+      "symbol": "SMHUSDT",
+      "side": "short",
+      "qty": 2.3088911054569454,
+      "notional": 1313.4357942502381,
+      "entry_mid": 568.86,
+      "entry_fill": 568.4675919977631,
+      "exit_mid": 571.19,
+      "exit_fill": 571.5840152705371,
+      "fee_rate": 0.0006,
+      "fees": 1.5793530094702035,
+      "slippage": 1.8157656996321352,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": -5.379716275714777,
+      "net": -8.774834984817115,
+      "net_conservative": -8.774834984817115
+     }
+    ]
+   },
    "balance_after": 100269.43636020321,
    "naive_direction": 1,
    "naive_same_events": {
@@ -28928,7 +30933,9 @@
      0.041019919355139364
     ],
     "residual": 0.0318971011526977,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 6.22,
+    "consensus_sign": 1
    }
   },
   {
@@ -29013,7 +31020,8 @@
     "scores": {
      "residual": 266.4,
      "headline": 359.96,
-     "agreement": 503.89
+     "agreement": 503.89,
+     "consensus": 78.12
     }
    },
    "interpretation": {
@@ -29192,6 +31200,62 @@
     ]
    },
    "v_agreement": null,
+   "v_consensus": {
+    "net": -39.03844888252272,
+    "net_conservative": -39.03844888252272,
+    "gross_mid": -29.199698246140862,
+    "fees": 4.503539187739484,
+    "slippage": 6.241053856821944,
+    "funding": 0.90584240817956,
+    "funding_conservative": 0.90584240817956,
+    "entry_ms": 1787868000000,
+    "exit_ms": 1787954400000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "MRVLUSDT",
+      "side": "short",
+      "qty": 5.544712562100781,
+      "notional": 1250.0,
+      "entry_mid": 225.44,
+      "entry_fill": 225.17681170363906,
+      "exit_mid": 217.19,
+      "exit_fill": 217.44355689357096,
+      "fee_rate": 0.0006,
+      "fees": 1.4725216308015767,
+      "slippage": 2.8652035460205387,
+      "funding": 0.90584240817956,
+      "funding_conservative": 0.90584240817956,
+      "funding_settlements": 3,
+      "gross_mid": 45.74387863733144,
+      "net": 42.31199586868889,
+      "net_conservative": 42.31199586868889
+     },
+     {
+      "role": "hedge",
+      "symbol": "SMHUSDT",
+      "side": "long",
+      "qty": 4.487639334339646,
+      "notional": 2563.294711381463,
+      "entry_mid": 571.19,
+      "entry_fill": 571.5717076647603,
+      "exit_mid": 554.49,
+      "exit_fill": 554.1194524010698,
+      "fee_rate": 0.0006,
+      "fees": 3.031017556937907,
+      "slippage": 3.375850310801405,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": -74.9435768834723,
+      "net": -81.35044475121161,
+      "net_conservative": -81.35044475121161
+     }
+    ]
+   },
    "naive_direction": 1,
    "analysis": {
     "event_id": "MRVL-2026-08-27",
@@ -29349,7 +31413,9 @@
      -0.06906384128933031
     ],
     "residual": -0.06183421208393112,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": -4.615,
+    "consensus_sign": -1
    }
   },
   {
@@ -29431,7 +31497,8 @@
     "scores": {
      "residual": 255.21,
      "headline": 461.95,
-     "agreement": 570.78
+     "agreement": 570.78,
+     "consensus": 66.93
     }
    },
    "interpretation": {
@@ -29649,7 +31716,9 @@
      -0.13582789196737435
     ],
     "residual": -0.1334583497563425,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": null,
+    "consensus_sign": 0
    }
   },
   {
@@ -29734,7 +31803,8 @@
     "scores": {
      "residual": 255.21,
      "headline": 461.95,
-     "agreement": 570.78
+     "agreement": 570.78,
+     "consensus": 66.93
     }
    },
    "interpretation": {
@@ -29951,7 +32021,9 @@
      -0.014342653440939034
     ],
     "residual": 0.002298138418990166,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 3.922,
+    "consensus_sign": 1
    }
   },
   {
@@ -30032,7 +32104,8 @@
     "scores": {
      "residual": 255.21,
      "headline": 461.95,
-     "agreement": 570.78
+     "agreement": 570.78,
+     "consensus": 66.93
     }
    },
    "interpretation": {
@@ -30250,7 +32323,9 @@
      -0.042551229061307226
     ],
     "residual": -0.036165372011974,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 24.39,
+    "consensus_sign": 1
    }
   },
   {
@@ -30334,7 +32409,8 @@
     "scores": {
      "residual": 255.21,
      "headline": 461.95,
-     "agreement": 570.78
+     "agreement": 570.78,
+     "consensus": 66.93
     }
    },
    "interpretation": {
@@ -30556,7 +32632,9 @@
      0.004796562181842088
     ],
     "residual": 0.004424858368694799,
-    "surprise_sign": 1
+    "surprise_sign": 1,
+    "consensus_surprise_pct": 7.067,
+    "consensus_sign": 1
    }
   }
  ],
@@ -31604,6 +33682,38 @@
      0.0
     ]
    },
+   "v_consensus": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "primary",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 5,
+    "no_trades": 7,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "no_trade": {
     "sharpe_per_trade": null,
     "sortino_per_trade": null,
@@ -31860,6 +33970,38 @@
      -69.82,
      -18.34,
      -18.34
+    ]
+   },
+   "v_consensus": {
+    "sharpe_per_trade": 0.234,
+    "sortino_per_trade": 0.474,
+    "sharpe_daily_ann": 0.542,
+    "sortino_daily_ann": 1.041,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": 90.29,
+    "trades": 5,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 7,
+    "hit_rate": 0.6,
+    "avg_pnl_per_trade": 18.06,
+    "pnl_std_per_trade": 89.12,
+    "max_drawdown": -107.26,
+    "avg_holding_hours": 20.0,
+    "return_on_start_balance_pct": 0.09,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -87.68,
+     -69.82,
+     -69.82,
+     -69.82,
+     -107.26,
+     -107.26,
+     -107.26,
+     38.82,
+     90.29,
+     90.29
     ]
    },
    "no_trade": {
@@ -32792,6 +34934,101 @@
      327.52,
      327.52,
      327.52
+    ]
+   },
+   "v_consensus": {
+    "sharpe_per_trade": 0.247,
+    "sortino_per_trade": 0.453,
+    "sharpe_daily_ann": 0.71,
+    "sortino_daily_ann": 1.339,
+    "days": 323,
+    "basis": "primary",
+    "total_net_pnl": 123.05,
+    "trades": 6,
+    "excluded_funding_unavailable": 6,
+    "no_trades": 63,
+    "hit_rate": 0.667,
+    "avg_pnl_per_trade": 20.51,
+    "pnl_std_per_trade": 83.16,
+    "max_drawdown": -78.88,
+    "avg_holding_hours": 20.5,
+    "return_on_start_balance_pct": 0.123,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     20.24,
+     -58.65,
+     63.26,
+     63.26,
+     134.23,
+     134.23,
+     134.23,
+     134.23,
+     201.12,
+     123.05,
+     123.05,
+     123.05,
+     123.05,
+     123.05
     ]
    },
    "no_trade": {
