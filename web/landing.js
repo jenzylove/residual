@@ -46,6 +46,7 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
   reveal();
   startAuto();
   tour();
+  liveStatus();
 }).catch(e => { $("#ov-grid").innerHTML = `<div class="card wide"><p>Could not load data.json: ${esc(e.message)}</p></div>`; });
 
 /* ---------- small visuals ---------- */
@@ -95,7 +96,7 @@ function overview() {
       <h4>Latest releases</h4>
       <ul class="mini">${latest.map(r => `<li><a href="#signal" data-open="${esc(r.event_id)}"><b>${esc(EV[r.event_id].ticker)}</b> <span class="muted">${day(EV[r.event_id].release_utc)}</span></a>${badge(r.decision.decision)}</li>`).join("")}</ul>
     </div>
-    <div class="card rv">
+    <div class="card rv" id="watcher-card">
       <h4>Watcher</h4>
       ${live ? `<div style="display:flex;gap:10px;align-items:center"><i class="dot live"></i><b>${live.decision === "NO_TRADE" ? "Watching, nothing to trade" : esc(live.decision)}</b></div>
         <p class="note">${next ? `Next expected release: ${esc(next[0])} around ${esc(next[1])}.` : ""} Last check ${esc(live.checked_at.slice(0, 10))}.</p>` : `<p class="note">No watcher run yet.</p>`}
@@ -106,6 +107,32 @@ function overview() {
       <div class="meter"><i style="background:#1f9d6c" data-w="${traded.length ? complete / traded.length * 100 : 0}%"></i><i style="background:#e3b54b" data-w="${traded.length ? (traded.length - complete) / traded.length * 100 : 0}%"></i></div>
     </div>`;
   document.querySelectorAll("[data-open]").forEach(a => a.onclick = e => { e.preventDefault(); stopAuto(); show(a.dataset.open); $("#signal").scrollIntoView({ behavior: "smooth" }); });
+}
+
+/* ---------- live watcher status (published by the scheduled watcher) ---------- */
+function ago(iso) {
+  const s = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (!isFinite(s)) return "";
+  if (s < 90) return "just now";
+  if (s < 5400) return Math.round(s / 60) + " min ago";
+  if (s < 172800) return Math.round(s / 3600) + " h ago";
+  return Math.round(s / 86400) + " days ago";
+}
+
+function liveStatus() {
+  fetch("live.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(L => {
+    const el = $("#watcher-card");
+    if (!L || !el) return;
+    const next = Object.entries(L.next_estimated_release || {})[0];
+    const fresh = (Date.now() - new Date(L.checked_at).getTime()) < 45 * 60_000;
+    const probe = (L.market_probe || []).find(p => p && !p.error);
+    el.innerHTML = `<h4>Watcher <span class="badge ${fresh ? "b-trade" : "b-no"}" style="margin-left:8px">${fresh ? "live" : "idle"}</span></h4>
+      <div style="display:flex;gap:10px;align-items:center"><i class="dot live"></i><b>${L.decision === "NO_TRADE" ? "Watching, nothing to trade" : esc(L.decision)}</b></div>
+      <p class="note">Checked ${esc(ago(L.checked_at))} (${esc((L.checked_at || "").replace("T", " ").slice(0, 16))} UTC). ${esc(L.reason || "")}.</p>
+      ${next ? `<p class="note">Next expected release: <b>${esc(next[0])}</b> around ${esc(next[1])}.</p>` : ""}
+      ${probe ? `<p class="note">Bitget live: ${esc(probe.symbol.replace("USDT", ""))} ${probe.bid} / ${probe.ask}, spread ${probe.spread_bps} bps.</p>` : ""}
+      <p class="note">${(L.recent || []).length} recent checks published by the agent itself.</p>`;
+  }).catch(() => {});
 }
 
 /* ---------- event strip ---------- */

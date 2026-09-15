@@ -7,3 +7,4 @@ data/snapshot_run.log
 .env*
 !.env.example
 .vercel
+data/.last_push
