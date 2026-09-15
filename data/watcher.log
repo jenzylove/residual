@@ -8,3 +8,344 @@
  "decision": "NO_TRADE",
  "reason": "no eligible earnings release since the last recorded event"
 }
+{
+ "checked_at": "2026-09-13T19:18:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C{
+ "checked_at": "2026-09-13T19:31:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-13T19:41:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-13T19:51:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+^C^C{
+ "checked_at": "2026-09-13T22:01:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C{
+ "checked_at": "2026-09-13T22:41:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-13T22:51:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C{
+ "checked_at": "2026-09-13T23:11:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C{
+ "checked_at": "2026-09-13T23:31:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-13T23:41:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-13T23:51:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T00:01:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T00:11:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T00:21:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T00:31:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T00:41:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T00:51:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T01:01:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T01:11:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T01:21:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T01:31:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T01:41:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T01:51:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T02:01:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T02:11:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T02:21:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T02:31:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T02:41:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T02:51:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T03:01:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T03:11:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T03:21:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T03:31:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T03:41:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T03:51:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T04:01:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T04:11:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T04:21:11Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T08:51:32Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-14T09:01:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T09:11:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T09:21:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T09:31:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T09:41:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T09:51:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C{
+ "checked_at": "2026-09-14T11:31:01+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T23:32:43+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T23:41:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-14T23:51:03+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T00:01:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T00:11:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T00:21:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T00:31:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T00:41:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T00:51:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T01:01:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T08:21:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C{
+ "checked_at": "2026-09-15T08:41:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T08:51:02+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T09:01:18+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T09:11:01+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T09:21:01+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+{
+ "checked_at": "2026-09-15T09:31:10Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-15T09:41:10Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-15T09:51:10Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-15T10:01:10Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-15T10:11:10Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+{
+ "checked_at": "2026-09-15T10:21:10Z",
+ "decision": "ERROR",
+ "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
+}
+^C
