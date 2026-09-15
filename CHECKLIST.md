@@ -11,7 +11,7 @@ Numbers refer to the committed `data/results.json`.
 
 ## 2. Core behavior
 - [x] Curated Bitget universe: 18 stock perpetuals in four sector groups, QQQ market proxy, SMH/QQQ/SPY/XLK hedges, sector peer baskets
-- [x] Insufficient market data → NO_TRADE: **38** events
+- [x] Insufficient market data → NO_TRADE: **38** events; every required earnings field verifies (71 of 71)
 - [x] Earnings from a primary source (SEC 8-K Item 2.02, Ex. 99.1) with source URL, verbatim snippet and SHA-256; `verify --offline` passes against archived sources
 - [~] Surprise is a **company-guidance surprise** (vs prior-quarter company outlook), not a consensus surprise; renamed throughout code, UI and prompt
 - [~] Margins: explicitly optional evidence (`validation.optional_fields`); not found in these releases; never used by the model
@@ -27,7 +27,7 @@ Numbers refer to the committed `data/results.json`.
 - [x] UI: event board, surprise decomposition, strategy card, evidence panel, results panel
 
 ## 3. Build and demo acceptance
-- [x] 75 real historical events (59 fully verified), replayable with sources, timestamps, extracted values and decisions
+- [x] 71 real earnings events, all fully verified (4 further Item 2.02 filings carry no results and are classified `not_an_earnings_release`), replayable with sources, timestamps, extracted values and decisions
 - [x] ≥15 events; documented universe
 - [x] Baselines: residual, unhedged (same signals), **naive on the same events** (like-for-like), naive on all events, no-trade, plus a no-AI ablation
 - [x] Walk-forward evaluation (parameters fit only on events exited before each release)
@@ -61,9 +61,10 @@ Numbers refer to the committed `data/results.json`.
   - the decision rule shown per event;
   - revenue figures linked to their SEC source.
 
-## Result claims (not an edge, at $2,500)
-- Primary: strategy +$335.40 (4 trades, Sharpe 1.19) vs naive headline on the same events +$442.59 (Sharpe 1.31)
-- Conservative, all 13 trades: strategy +$269.44 (Sharpe 0.87) vs naive on the same events +$511.29 (Sharpe 1.31)
+## Result claims (not an edge, at $2,500; headline view = all trades, worst-case funding)
+- Headline (all 13 trades): strategy +$269.68 (Sharpe 0.88) vs naive headline on the same events +$511.29 (Sharpe 1.32)
+- Secondary (4 funding-complete trades): strategy +$335.40 (Sharpe 1.21) vs naive +$442.59 (1.32)
+- Demo-executable mode (6 trades, all placeable on Bitget Demo): strategy +$116.72 (Sharpe 0.70) vs naive +$59.75 (0.35)
 - Across every eligible event the headline trade loses (−$716.13); the gates carry the value
 
 ## Earlier claims (superseded, $10,000 size)

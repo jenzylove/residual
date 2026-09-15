@@ -64,7 +64,8 @@ ACTUAL = {
     "KLAC": (r"total revenues were \$(\d+(?:\.\d+)?) billion", re.I, lambda g: _num(g[0]) * B),
     "TXN": (r"reported \w+ quarter revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
     # headline line only; segment lines ("Networking revenue was ...") must never match
-    "HPE": (r"Revenue : \$(\d+(?:\.\d+)?) billion, (?:up|down) \d+% from the prior-year period", 0, lambda g: _num(g[0]) * B),
+    "HPE": [(r"Revenue : \$(\d+(?:\.\d+)?) billion, (?:up|down) \d+% from the prior-year period", 0, lambda g: _num(g[0]) * B),
+            (r"Quarter Fiscal \d{4} Financial Results • Revenue : \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B)],
     "SMCI": (r"Net sales of \$(\d+(?:\.\d+)?) billion versus", 0, lambda g: _num(g[0]) * B),
     "CRM": (r"(?:• Revenue|quarter revenue) of \$(\d+(?:\.\d+)?) billion, up", 0, lambda g: _num(g[0]) * B),
     "PANW": (r"Total revenue for the fiscal \w+ quarter \d{4} grew \d+% year over year to \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
@@ -84,14 +85,20 @@ GUIDE = {
     "INTC": (r"Forecasting [a-z]+-quarter \d{4} revenue of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
     "MRVL": (r"Net revenue is expected to be \$(\d+(?:\.\d+)?) billion \+/- (\d+(?:\.\d+)?)%", 0, _pct_band),
     "QCOM": (r"Revenues \| \| \$(\d+(?:\.\d+)?)B - \$(\d+(?:\.\d+)?)B", 0, _range),
-    "KLAC": (r"Total revenues are expected to be in a range of \$(\d+(?:\.\d+)?) billion \+/- \$(\d+(?:\.\d+)?) million", 0, _abs_band_millions),
+    "KLAC": [(r"Total revenues are expected to be in a range of \$(\d+(?:\.\d+)?) billion \+/- \$(\d+(?:\.\d+)?) million", 0, _abs_band_millions),
+             (r"Total revenues is expected to be in a range of \$(\d+(?:\.\d+)?) billion \+/- \$(\d+(?:\.\d+)?) million", 0, _abs_band_millions)],
     "TXN": (r"outlook is for revenue in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
-    "HPE": (r"HPE estimates revenue to be in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
-    "SMCI": (r"The Company expects net sales in the range of \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range),
-    "CRM": (r"quarter FY\d+ revenue guidance of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "HPE": [(r"HPE estimates revenue to be in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+            (r"HPE estimates revenue to be in the range of \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range)],
+    "SMCI": [(r"The Company expects net sales in the range of \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range),
+             (r"The Company expects net sales of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+             (r"The Company expects net sales of at least \$(\d+(?:\.\d+)?) billion for the", 0, _point)],
+    "CRM": [(r"quarter FY\d+ revenue guidance of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+            (r"Revenue \| \$(\d+(?:\.\d+)?) - \$(\d+(?:\.\d+)?) billion", 0, _range)],
     "PANW": (r"Total revenue in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
     "CRWD": (r"Total revenue \| \$([\d,]+(?:\.\d+)?) - \$([\d,]+(?:\.\d+)?) million", 0, _range_millions),
-    "MDB": (r"Revenues are expected to be in the range of: \| \$(\d+(?:\.\d+)?) million to \$(\d+(?:\.\d+)?) million", 0, _range_millions),
+    "MDB": [(r"Revenues are expected to be in the range of: \| \$(\d+(?:\.\d+)?) million to \$(\d+(?:\.\d+)?) million", 0, _range_millions),
+            (r"Revenue \| \$(\d+(?:\.\d+)?) million to \$(\d+(?:\.\d+)?) million", 0, _range_millions)],
 }
 
 EPS = [
@@ -130,17 +137,29 @@ def kind_unit(kind: str) -> str:
     return {"eps_diluted": "USD_per_share", "gross_margin": "percent"}.get(kind, "USD_millions")
 
 
+def _specs(table, ticker):
+    """A company may word its release differently over time; alternates are tried in order."""
+    spec = table[ticker]
+    return spec if isinstance(spec, list) else [spec]
+
+
+def _match(table, ticker, norm):
+    for pattern, flags, parse in _specs(table, ticker):
+        m = re.search(pattern, norm, flags)
+        if m:
+            return pattern, flags, parse, m
+    return None, None, None, None
+
+
 def extract_actual(ticker, norm, src):
-    pattern, flags, parse = ACTUAL[ticker]
-    m = re.search(pattern, norm, flags)
+    pattern, flags, parse, m = _match(ACTUAL, ticker, norm)
     if not m:
         return None
     return _field("revenue_actual", ticker, pattern, flags, round(parse(m.groups()), 3), m.group(0), src)
 
 
 def extract_guidance(ticker, norm, src):
-    pattern, flags, parse = GUIDE[ticker]
-    m = re.search(pattern, norm, flags)
+    pattern, flags, parse, m = _match(GUIDE, ticker, norm)
     if not m:
         return None
     lo, hi = parse(m.groups())
@@ -191,9 +210,11 @@ def verify_field(field: dict, text: str, raw: bytes | None = None) -> tuple[bool
     kind = field["extractor"].split(":")[-1]
     ticker = field["extractor"].split(":")[1]
     if kind == "revenue_actual":
-        value = round(ACTUAL[ticker][2](m.groups()), 3)
+        parse = next(pr for pt, fl, pr in _specs(ACTUAL, ticker) if pt == field["pattern"])
+        value = round(parse(m.groups()), 3)
     elif kind == "revenue_guidance":
-        lo, hi = GUIDE[ticker][2](m.groups())
+        parse = next(pr for pt, fl, pr in _specs(GUIDE, ticker) if pt == field["pattern"])
+        lo, hi = parse(m.groups())
         value = round((lo + hi) / 2, 3)
     else:
         value = _num(m.group(1))

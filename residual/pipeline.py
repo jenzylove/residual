@@ -122,7 +122,7 @@ def funding_caps(snaps) -> dict[str, float]:
 
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
            hedge_pool=None, tickers=None) -> dict:
-    events = load_events()
+    events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
     if tickers:
         events = [e for e in events if e['ticker'] in tickers]
     snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}

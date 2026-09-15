@@ -37,7 +37,7 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
   strip();
   const trades = d.rows.filter(r => r.decision.decision === "TRADE");
   show((trades[trades.length - 1] || d.rows[d.rows.length - 1]).event_id);
-  proof("primary");
+  proof("conservative");
   realStrip();
   variantsTable();
   sizeStudy();
@@ -73,7 +73,7 @@ function dial(frac) {
 function overview() {
   const rows = D.rows, trades = rows.filter(r => r.decision.decision === "TRADE"), traded = trades.filter(r => r.residual);
   const complete = traded.filter(r => r.residual.funding_data === "complete").length;
-  const P = D.summary.residual, N = D.summary.naive_same_events;
+  const P = D.summary_conservative_funding.residual, N = D.summary_conservative_funding.naive_same_events;
   const latest = [...rows].sort((a, b) => EV[b.event_id].release_ms - EV[a.event_id].release_ms).slice(0, 4);
   const live = (D.live_log || []).slice(-1)[0];
   const next = live ? Object.entries(live.next_estimated_release || {})[0] : null;
@@ -82,7 +82,7 @@ function overview() {
     <div class="card wide rv">
       <h4>Paper result <span class="badge b-paper" style="margin-left:8px">Paper only</span></h4>
       <div style="display:flex;gap:48px;flex-wrap:wrap;align-items:flex-end">
-        <div><div class="big ${cls(P.total_net_pnl)}">${usd(P.total_net_pnl, 0)}</div><p class="note">Residual pair</p></div>
+        <div><div class="big ${cls(P.total_net_pnl)}">${usd(P.total_net_pnl, 0)}</div><p class="note">Strategy, all ${P.trades} trades, worst case funding</p></div>
         <div><div class="big ${cls(N.total_net_pnl)}">${usd(N.total_net_pnl, 0)}</div><p class="note">Plain headline trade, same releases</p></div>
       </div>
       ${spark([P.equity_curve, N.equity_curve])}
@@ -288,7 +288,7 @@ function curve(S) {
 }
 
 function proof(basis) {
-  const views = { primary: ["Complete funding data", D.summary], conservative: ["Worst case funding", D.summary_conservative_funding], observed_zero: ["Missing funding as zero", D.summary_observed_zero_funding] };
+  const views = { conservative: ["All trades, worst case funding", D.summary_conservative_funding], primary: ["Complete funding data only", D.summary], observed_zero: ["Missing funding as zero", D.summary_observed_zero_funding] };
   $("#basis").innerHTML = Object.entries(views).map(([k, [n]]) => `<button class="chip ${k === basis ? "on" : ""}" data-b="${k}">${n}</button>`).join("");
   $("#basis").querySelectorAll("button").forEach(b => b.onclick = () => proof(b.dataset.b));
   const S = views[basis][1];
@@ -348,7 +348,7 @@ function realStrip() {
 
 /* ---------- variants and size study ---------- */
 function variantsTable() {
-  const S = D.summary, f = v => v == null ? "n/a" : v.toFixed(2);
+  const S = D.summary_conservative_funding, f = v => v == null ? "n/a" : v.toFixed(2);
   const rows = [
     ["residual", "Strategy (rule picked walk forward)", "chooses among the three rules below using earlier events only", true],
     ["v_residual", "Residual rule", "trade the company's own move"],
@@ -360,7 +360,7 @@ function variantsTable() {
   $("#variants").innerHTML = `<div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe</th><th class="num">Hit</th></tr></thead><tbody>
     ${rows.map(([k, n, sub, hl]) => S[k] ? `<tr class="${hl ? "hl" : ""}"><td>${n}<small>${sub}</small></td><td class="num">${S[k].trades}</td><td class="num ${cls(S[k].total_net_pnl)}">${usd(S[k].total_net_pnl, 0)}</td><td class="num">${f(S[k].sharpe_daily_ann)}</td><td class="num">${S[k].hit_rate == null ? "n/a" : Math.round(S[k].hit_rate * 100) + "%"}</td></tr>` : "").join("")}
     </tbody></table></div>
-    <p class="note">The three rules were declared before scoring. Each is published whether it wins or loses. Complete funding data view.</p>`;
+    <p class="note">The rules were declared before scoring, and each is published whether it wins or loses. All trades counted, missing funding charged at the worst observed rate.</p>`;
 }
 
 function sizeStudy() {

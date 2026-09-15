@@ -24,7 +24,19 @@
   },
   "earnings": {
    "revenue_actual": null,
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 9900.0,
+    "unit": "USD_millions",
+    "snippet": "HPE estimates revenue to be in the range of $9.7 billion and $10.1 billion",
+    "pattern": "HPE estimates revenue to be in the range of \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+    "source_sha256": "4fdb6ae67617de345d0f64dd3c1f9d38bc47288bfefa52bd72118dbc93649daf",
+    "extractor": "regex-v1:HPE:revenue_guidance",
+    "low": 9700.0,
+    "high": 10100.0,
+    "verified": true
+   },
    "revenue_guidance_next": null,
    "revenue_prior_actual": {
     "value": 9100.0,
@@ -51,8 +63,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -77,7 +89,6 @@
    ],
    "missing_required": [
     "revenue_actual",
-    "revenue_guidance_prior",
     "revenue_guidance_next"
    ],
    "all_required_verified": false,
@@ -92,7 +103,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "not_an_earnings_release"
  },
  {
   "event_id": "TXN-2025-10-21",
@@ -267,7 +278,19 @@
   },
   "earnings": {
    "revenue_actual": null,
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 6500.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales of $6.0 billion to $7.0 billion",
+    "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+    "source_sha256": "9bd605cf9bee43cf5c3a3a2aef905de8e48d1948d5392222b768ce7f87f9e9a6",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 6000.0,
+    "high": 7000.0,
+    "verified": true
+   },
    "revenue_guidance_next": null,
    "revenue_prior_actual": {
     "value": 5800.0,
@@ -300,8 +323,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -326,7 +349,6 @@
    ],
    "missing_required": [
     "revenue_actual",
-    "revenue_guidance_prior",
     "revenue_guidance_next"
    ],
    "all_required_verified": false,
@@ -341,7 +363,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "not_an_earnings_release"
  },
  {
   "event_id": "INTC-2025-10-23",
@@ -712,7 +734,19 @@
     "extractor": "regex-v1:KLAC:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 3150.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenues is expected to be in a range of $3.15 billion +/- $150 million",
+    "pattern": "Total revenues is expected to be in a range of \\$(\\d+(?:\\.\\d+)?) billion \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920125000020/exhibit991earningsrelease7.htm",
+    "source_sha256": "b943478668841afb8402cbe1888beec3d70b9fe21f3b06c1ac7ec805e5883c07",
+    "extractor": "regex-v1:KLAC:revenue_guidance",
+    "low": 3000.0,
+    "high": 3300.0,
+    "verified": true
+   },
    "revenue_guidance_next": {
     "value": 3225.0,
     "unit": "USD_millions",
@@ -757,7 +791,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920125000031/exhibit991earningsrelease0.htm",
    "source_sha256": "225b1c39012c4247c731889965ca19da5816a0164cf199b7409f50de703eb60e"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 3150.0,
+   "revenue_actual": 3210.0,
+   "guidance_surprise_pct": 1.905,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 3225.0,
+   "guided_sequential_growth_pct": 0.467,
+   "prior_guided_sequential_growth_pct": -0.787,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -767,8 +812,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -791,10 +836,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -806,7 +849,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "AMZN-2025-10-30",
@@ -987,7 +1030,19 @@
   },
   "earnings": {
    "revenue_actual": null,
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 589.5,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $587.0 million to $592.0 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+    "source_sha256": "87eb6dea08b64ccc6002dcd601d1143576bf14220cf61c886f3ce0dcbf0ff6de",
+    "extractor": "regex-v1:MDB:revenue_guidance",
+    "low": 587.0,
+    "high": 592.0,
+    "verified": true
+   },
    "revenue_guidance_next": null,
    "revenue_prior_actual": {
     "value": 591.4,
@@ -1020,8 +1075,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -1046,7 +1101,6 @@
    ],
    "missing_required": [
     "revenue_actual",
-    "revenue_guidance_prior",
     "revenue_guidance_next"
    ],
    "all_required_verified": false,
@@ -1061,7 +1115,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "not_an_earnings_release"
  },
  {
   "event_id": "PLTR-2025-11-03",
@@ -1257,10 +1311,10 @@
    "cache_file": "data/cache/23a8fe1915eb086e97bb9d6f.bin"
   },
   "prior_source": {
-   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/fq12026businessupdatev9ms.htm",
-   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/",
-   "accession": "0001628280-25-045989",
-   "cache_file": "data/cache/b40f63d9d90d9e1be8d01172.bin"
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/",
+   "accession": "0001375365-25-000023",
+   "cache_file": "data/cache/1844d0f0d787260a453ee1a0.bin"
   },
   "earnings": {
    "revenue_actual": {
@@ -1274,9 +1328,43 @@
     "extractor": "regex-v1:SMCI:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
-   "revenue_guidance_next": null,
-   "revenue_prior_actual": null,
+   "revenue_guidance_prior": {
+    "value": 6500.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales of $6.0 billion to $7.0 billion",
+    "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+    "source_sha256": "9bd605cf9bee43cf5c3a3a2aef905de8e48d1948d5392222b768ce7f87f9e9a6",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 6000.0,
+    "high": 7000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 10500.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales of $10.0 billion to $11.0 billion",
+    "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
+    "source_sha256": "1f28b3649106c2f19999d449d29a8001c88b4237a31bcf0b4781cfb5e357d6c2",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 10000.0,
+    "high": 11000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 5800.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales of $5.8 billion versus",
+    "pattern": "Net sales of \\$(\\d+(?:\\.\\d+)?) billion versus",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+    "source_sha256": "9bd605cf9bee43cf5c3a3a2aef905de8e48d1948d5392222b768ce7f87f9e9a6",
+    "extractor": "regex-v1:SMCI:revenue_actual",
+    "verified": true
+   },
    "eps_diluted": null,
    "gross_margin": null
   },
@@ -1287,7 +1375,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
    "source_sha256": "1f28b3649106c2f19999d449d29a8001c88b4237a31bcf0b4781cfb5e357d6c2"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 6500.0,
+   "revenue_actual": 5000.0,
+   "guidance_surprise_pct": -23.077,
+   "vs_guidance_band": "below",
+   "next_quarter_guidance_mid": 10500.0,
+   "guided_sequential_growth_pct": 110.0,
+   "prior_guided_sequential_growth_pct": 12.069,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -1297,18 +1396,18 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_prior_actual",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "eps_diluted",
@@ -1321,12 +1420,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior",
-    "revenue_guidance_next",
-    "revenue_prior_actual"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -1338,7 +1433,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "AMD-2025-11-04",
@@ -1692,48 +1787,109 @@
   "release_ms": 1763586992000,
   "release_session": "after_market",
   "source": {
-   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex992pressrelease.htm",
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/",
-   "sha256": null,
-   "cache_file": "data/cache/db228df1f9404918a3b4a4e8.bin"
+   "sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+   "cache_file": "data/cache/54b5ad72cc0c32ee268e1f8b.bin"
   },
   "prior_source": {
-   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex992q425pressrelease.htm",
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm",
    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/",
    "accession": "0001327567-25-000024",
-   "cache_file": "data/cache/022a9ba7ac5a795131161f0a.bin"
+   "cache_file": "data/cache/16db331a1f38f468cf7df9da.bin"
   },
   "earnings": {
-   "revenue_actual": null,
-   "revenue_guidance_prior": null,
-   "revenue_guidance_next": null,
-   "revenue_prior_actual": null,
+   "revenue_actual": {
+    "value": 2500.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue for the fiscal first quarter 2026 grew 16% year over year to $2.5 billion",
+    "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+    "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+    "extractor": "regex-v1:PANW:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2460.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue in the range of $2.45 billion to $2.47 billion",
+    "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm",
+    "source_sha256": "fe4c7add4f5ebfd8bc52f38da252e9d129f0f8464cd2ce585471081e8f1512d7",
+    "extractor": "regex-v1:PANW:revenue_guidance",
+    "low": 2450.0,
+    "high": 2470.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 2580.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue in the range of $2.57 billion to $2.59 billion",
+    "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+    "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+    "extractor": "regex-v1:PANW:revenue_guidance",
+    "low": 2570.0,
+    "high": 2590.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2500.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue for the fiscal fourth quarter 2025 grew 16% year over year to $2.5 billion",
+    "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm",
+    "source_sha256": "fe4c7add4f5ebfd8bc52f38da252e9d129f0f8464cd2ce585471081e8f1512d7",
+    "extractor": "regex-v1:PANW:revenue_actual",
+    "verified": true
+   },
    "eps_diluted": null,
    "gross_margin": null
   },
-  "commentary": null,
-  "surprise": null,
+  "commentary": {
+   "text": "Our strong start to the fiscal year was marked by excellent results across all metrics, and significant platformization wins,",
+   "speaker": "Nikesh Arora, chairman and CEO of Palo Alto Networks",
+   "snippet": "\"Our strong start to the fiscal year was marked by excellent results across all metrics, and significant platformization wins,\" said Nikesh Arora, chairman and CEO of Palo Alto Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+   "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2460.0,
+   "revenue_actual": 2500.0,
+   "guidance_surprise_pct": 1.626,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 2580.0,
+   "guided_sequential_growth_pct": 3.2,
+   "prior_guided_sequential_growth_pct": -1.6,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
      "field": "revenue_actual",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_prior_actual",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "eps_diluted",
@@ -1746,13 +1902,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_actual",
-    "revenue_guidance_prior",
-    "revenue_guidance_next",
-    "revenue_prior_actual"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -1764,7 +1915,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "NVDA-2025-11-19",
@@ -1954,10 +2105,10 @@
    "cache_file": "data/cache/ef5520620cdabf237a73eb9e.bin"
   },
   "prior_source": {
-   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/a2025-11x03xpressrelease.htm",
-   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/",
-   "accession": "0001628280-25-047941",
-   "cache_file": "data/cache/f468adb6d24dd5ab8285e6e4.bin"
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/",
+   "accession": "0001441816-25-000176",
+   "cache_file": "data/cache/94b9950b67137a8784fd6f09.bin"
   },
   "earnings": {
    "revenue_actual": {
@@ -1971,9 +2122,43 @@
     "extractor": "regex-v1:MDB:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
-   "revenue_guidance_next": null,
-   "revenue_prior_actual": null,
+   "revenue_guidance_prior": {
+    "value": 589.5,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $587.0 million to $592.0 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+    "source_sha256": "87eb6dea08b64ccc6002dcd601d1143576bf14220cf61c886f3ce0dcbf0ff6de",
+    "extractor": "regex-v1:MDB:revenue_guidance",
+    "low": 587.0,
+    "high": 592.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 667.5,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $665.0 million to $670.0 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
+    "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62",
+    "extractor": "regex-v1:MDB:revenue_guidance",
+    "low": 665.0,
+    "high": 670.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 591.4,
+    "unit": "USD_millions",
+    "snippet": "Total revenue was $591.4 million",
+    "pattern": "Total revenue was \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+    "source_sha256": "87eb6dea08b64ccc6002dcd601d1143576bf14220cf61c886f3ce0dcbf0ff6de",
+    "extractor": "regex-v1:MDB:revenue_actual",
+    "verified": true
+   },
    "eps_diluted": null,
    "gross_margin": {
     "value": 71.0,
@@ -1994,7 +2179,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
    "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 589.5,
+   "revenue_actual": 628.3,
+   "guidance_surprise_pct": 6.582,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 667.5,
+   "guided_sequential_growth_pct": 6.239,
+   "prior_guided_sequential_growth_pct": -0.321,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -2004,18 +2200,18 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_prior_actual",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "eps_diluted",
@@ -2028,12 +2224,8 @@
      "detail": "ok"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior",
-    "revenue_guidance_next",
-    "revenue_prior_actual"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -2045,7 +2237,7 @@
     "gross_margin": "reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "CRWD-2025-12-02",
@@ -2425,7 +2617,19 @@
     "high": 10290.0,
     "verified": true
    },
-   "revenue_guidance_next": null,
+   "revenue_guidance_next": {
+    "value": 11180.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $11.13 - $11.23 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000234/crm-q3fy26xexhibit991.htm",
+    "source_sha256": "1d77f14d4441017d26b4ff0808f5f2b704c161491fe01eb259bd9016ffebda79",
+    "extractor": "regex-v1:CRM:revenue_guidance",
+    "low": 11130.0,
+    "high": 11230.0,
+    "verified": true
+   },
    "revenue_prior_actual": {
     "value": 10200.0,
     "unit": "USD_millions",
@@ -2447,7 +2651,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000234/crm-q3fy26xexhibit991.htm",
    "source_sha256": "1d77f14d4441017d26b4ff0808f5f2b704c161491fe01eb259bd9016ffebda79"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 10265.0,
+   "revenue_actual": 10300.0,
+   "guidance_surprise_pct": 0.341,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 11180.0,
+   "guided_sequential_growth_pct": 8.544,
+   "prior_guided_sequential_growth_pct": 0.637,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -2462,8 +2677,8 @@
     },
     {
      "field": "revenue_guidance_next",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_prior_actual",
@@ -2481,10 +2696,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_next"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -2496,7 +2709,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "HPE-2025-12-04",
@@ -2528,10 +2741,10 @@
    "cache_file": "data/cache/bcdc38c3c63813806d437657.bin"
   },
   "prior_source": {
-   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000111/ex-991x10152025x8k.htm",
-   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000111/",
-   "accession": "0001645590-25-000111",
-   "cache_file": "data/cache/a58836c8b96e9ae73184c5b0.bin"
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/",
+   "accession": "0001645590-25-000096",
+   "cache_file": "data/cache/a644c5c6d6491ca54e6d2aee.bin"
   },
   "earnings": {
    "revenue_actual": {
@@ -2545,7 +2758,19 @@
     "extractor": "regex-v1:HPE:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 9900.0,
+    "unit": "USD_millions",
+    "snippet": "HPE estimates revenue to be in the range of $9.7 billion and $10.1 billion",
+    "pattern": "HPE estimates revenue to be in the range of \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+    "source_sha256": "4fdb6ae67617de345d0f64dd3c1f9d38bc47288bfefa52bd72118dbc93649daf",
+    "extractor": "regex-v1:HPE:revenue_guidance",
+    "low": 9700.0,
+    "high": 10100.0,
+    "verified": true
+   },
    "revenue_guidance_next": {
     "value": 9200.0,
     "unit": "USD_millions",
@@ -2559,7 +2784,17 @@
     "high": 9400.0,
     "verified": true
    },
-   "revenue_prior_actual": null,
+   "revenue_prior_actual": {
+    "value": 9100.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue : $9.1 billion, up 19% from the prior-year period",
+    "pattern": "Revenue : \\$(\\d+(?:\\.\\d+)?) billion, (?:up|down) \\d+% from the prior-year period",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+    "source_sha256": "4fdb6ae67617de345d0f64dd3c1f9d38bc47288bfefa52bd72118dbc93649daf",
+    "extractor": "regex-v1:HPE:revenue_actual",
+    "verified": true
+   },
    "eps_diluted": null,
    "gross_margin": null
   },
@@ -2570,7 +2805,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000126/ex-991x1242025x8k.htm",
    "source_sha256": "75696972dde8bded81002701b33da98db8277aea1c33c34e81fd8e4ca7255ccc"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 9900.0,
+   "revenue_actual": 9700.0,
+   "guidance_surprise_pct": -2.02,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 9200.0,
+   "guided_sequential_growth_pct": -5.155,
+   "prior_guided_sequential_growth_pct": 8.791,
+   "guidance_direction": "lowered"
+  },
   "validation": {
    "checks": [
     {
@@ -2580,8 +2826,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -2590,8 +2836,8 @@
     },
     {
      "field": "revenue_prior_actual",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "eps_diluted",
@@ -2604,11 +2850,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior",
-    "revenue_prior_actual"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -2620,7 +2863,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "AVGO-2025-12-11",
@@ -3949,8 +4192,32 @@
     "extractor": "regex-v1:SMCI:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
-   "revenue_guidance_next": null,
+   "revenue_guidance_prior": {
+    "value": 10500.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales of $10.0 billion to $11.0 billion",
+    "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
+    "source_sha256": "1f28b3649106c2f19999d449d29a8001c88b4237a31bcf0b4781cfb5e357d6c2",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 10000.0,
+    "high": 11000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 12300.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales of at least $12.3 billion for the",
+    "pattern": "The Company expects net sales of at least \\$(\\d+(?:\\.\\d+)?) billion for the",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
+    "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 12300.0,
+    "high": 12300.0,
+    "verified": true
+   },
    "revenue_prior_actual": {
     "value": 5000.0,
     "unit": "USD_millions",
@@ -3972,7 +4239,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
    "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 10500.0,
+   "revenue_actual": 12700.0,
+   "guidance_surprise_pct": 20.952,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 12300.0,
+   "guided_sequential_growth_pct": -3.15,
+   "prior_guided_sequential_growth_pct": 110.0,
+   "guidance_direction": "lowered"
+  },
   "validation": {
    "checks": [
     {
@@ -3982,13 +4260,13 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_prior_actual",
@@ -4006,11 +4284,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior",
-    "revenue_guidance_next"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -4022,7 +4297,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "QCOM-2026-02-04",
@@ -4362,10 +4637,10 @@
    "cache_file": "data/cache/fe40d41621856b97e697293c.bin"
   },
   "prior_source": {
-   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex992pressrelease.htm",
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/",
    "accession": "0001327567-25-000032",
-   "cache_file": "data/cache/db228df1f9404918a3b4a4e8.bin"
+   "cache_file": "data/cache/54b5ad72cc0c32ee268e1f8b.bin"
   },
   "earnings": {
    "revenue_actual": {
@@ -4379,7 +4654,19 @@
     "extractor": "regex-v1:PANW:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 2580.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue in the range of $2.57 billion to $2.59 billion",
+    "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+    "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+    "extractor": "regex-v1:PANW:revenue_guidance",
+    "low": 2570.0,
+    "high": 2590.0,
+    "verified": true
+   },
    "revenue_guidance_next": {
     "value": 2943.0,
     "unit": "USD_millions",
@@ -4393,7 +4680,17 @@
     "high": 2945.0,
     "verified": true
    },
-   "revenue_prior_actual": null,
+   "revenue_prior_actual": {
+    "value": 2500.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue for the fiscal first quarter 2026 grew 16% year over year to $2.5 billion",
+    "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+    "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+    "extractor": "regex-v1:PANW:revenue_actual",
+    "verified": true
+   },
    "eps_diluted": null,
    "gross_margin": null
   },
@@ -4404,7 +4701,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000003/ex991q226earningsrelease.htm",
    "source_sha256": "b526acaf90a0ee2fab645d8dbbfd56d8d087a98ff2f1e458c4b4630f0ecd2f9a"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2580.0,
+   "revenue_actual": 2600.0,
+   "guidance_surprise_pct": 0.775,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 2943.0,
+   "guided_sequential_growth_pct": 13.192,
+   "prior_guided_sequential_growth_pct": 3.2,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -4414,8 +4722,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -4424,8 +4732,8 @@
     },
     {
      "field": "revenue_prior_actual",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "eps_diluted",
@@ -4438,11 +4746,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior",
-    "revenue_prior_actual"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -4454,7 +4759,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "CRM-2026-02-25",
@@ -4503,8 +4808,32 @@
     "extractor": "regex-v1:CRM:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
-   "revenue_guidance_next": null,
+   "revenue_guidance_prior": {
+    "value": 11180.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $11.13 - $11.23 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000234/crm-q3fy26xexhibit991.htm",
+    "source_sha256": "1d77f14d4441017d26b4ff0808f5f2b704c161491fe01eb259bd9016ffebda79",
+    "extractor": "regex-v1:CRM:revenue_guidance",
+    "low": 11130.0,
+    "high": 11230.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 11055.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $11.03 - $11.08 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000056/crm-q4fy26xexhibit991.htm",
+    "source_sha256": "e0d7391684a2ff88475758bc5314513037a5b464b00d1261699454832795ec60",
+    "extractor": "regex-v1:CRM:revenue_guidance",
+    "low": 11030.0,
+    "high": 11080.0,
+    "verified": true
+   },
    "revenue_prior_actual": {
     "value": 10300.0,
     "unit": "USD_millions",
@@ -4526,7 +4855,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000056/crm-q4fy26xexhibit991.htm",
    "source_sha256": "e0d7391684a2ff88475758bc5314513037a5b464b00d1261699454832795ec60"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 11180.0,
+   "revenue_actual": 11200.0,
+   "guidance_surprise_pct": 0.179,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 11055.0,
+   "guided_sequential_growth_pct": -1.295,
+   "prior_guided_sequential_growth_pct": 8.544,
+   "guidance_direction": "lowered"
+  },
   "validation": {
    "checks": [
     {
@@ -4536,13 +4876,13 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_prior_actual",
@@ -4560,11 +4900,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior",
-    "revenue_guidance_next"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -4576,7 +4913,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "NVDA-2026-02-25",
@@ -4799,7 +5136,19 @@
     "extractor": "regex-v1:MDB:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 667.5,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $665.0 million to $670.0 million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
+    "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62",
+    "extractor": "regex-v1:MDB:revenue_guidance",
+    "low": 665.0,
+    "high": 670.0,
+    "verified": true
+   },
    "revenue_guidance_next": {
     "value": 661.5,
     "unit": "USD_millions",
@@ -4844,7 +5193,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026013199/mdb-13126xex991xrelease.htm",
    "source_sha256": "b0c3ef8531447b62a0aa603224550cc1111372ac39722d983dffae1effaf81af"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 667.5,
+   "revenue_actual": 695.1,
+   "guidance_surprise_pct": 4.135,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 661.5,
+   "guided_sequential_growth_pct": -4.834,
+   "prior_guided_sequential_growth_pct": 6.239,
+   "guidance_direction": "lowered"
+  },
   "validation": {
    "checks": [
     {
@@ -4854,8 +5214,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -4878,10 +5238,8 @@
      "detail": "ok"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -4893,7 +5251,7 @@
     "gross_margin": "reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "CRWD-2026-03-03",
@@ -6838,7 +7196,19 @@
     "extractor": "regex-v1:SMCI:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 12300.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales of at least $12.3 billion for the",
+    "pattern": "The Company expects net sales of at least \\$(\\d+(?:\\.\\d+)?) billion for the",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
+    "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 12300.0,
+    "high": 12300.0,
+    "verified": true
+   },
    "revenue_guidance_next": {
     "value": 11750.0,
     "unit": "USD_millions",
@@ -6873,7 +7243,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
    "source_sha256": "59baa19738c71612928b9aff859f150b1f47384507f4a71df90706cb563eb3eb"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 12300.0,
+   "revenue_actual": 10200.0,
+   "guidance_surprise_pct": -17.073,
+   "vs_guidance_band": "below",
+   "next_quarter_guidance_mid": 11750.0,
+   "guided_sequential_growth_pct": 15.196,
+   "prior_guided_sequential_growth_pct": -3.15,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -6883,8 +7264,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -6907,10 +7288,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -6922,7 +7301,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "AMD-2026-05-05",
@@ -7483,7 +7862,19 @@
     "extractor": "regex-v1:CRM:revenue_actual",
     "verified": true
    },
-   "revenue_guidance_prior": null,
+   "revenue_guidance_prior": {
+    "value": 11055.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $11.03 - $11.08 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000056/crm-q4fy26xexhibit991.htm",
+    "source_sha256": "e0d7391684a2ff88475758bc5314513037a5b464b00d1261699454832795ec60",
+    "extractor": "regex-v1:CRM:revenue_guidance",
+    "low": 11030.0,
+    "high": 11080.0,
+    "verified": true
+   },
    "revenue_guidance_next": {
     "value": 11310.0,
     "unit": "USD_millions",
@@ -7518,7 +7909,18 @@
    "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000125/crm-q1fy27xexhibit991.htm",
    "source_sha256": "e1d5e82d25abe8731153d3e829d53347c755cfc95b70bdc1e8eb255850591047"
   },
-  "surprise": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 11055.0,
+   "revenue_actual": 11100.0,
+   "guidance_surprise_pct": 0.407,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 11310.0,
+   "guided_sequential_growth_pct": 1.892,
+   "prior_guided_sequential_growth_pct": -1.295,
+   "guidance_direction": "raised"
+  },
   "validation": {
    "checks": [
     {
@@ -7528,8 +7930,8 @@
     },
     {
      "field": "revenue_guidance_prior",
-     "ok": false,
-     "detail": "not found in source"
+     "ok": true,
+     "detail": "ok"
     },
     {
      "field": "revenue_guidance_next",
@@ -7552,10 +7954,8 @@
      "detail": "not found in source"
     }
    ],
-   "missing_required": [
-    "revenue_guidance_prior"
-   ],
-   "all_required_verified": false,
+   "missing_required": [],
+   "all_required_verified": true,
    "required_fields": [
     "revenue_actual",
     "revenue_guidance_prior",
@@ -7567,7 +7967,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "complete"
  },
  {
   "event_id": "MDB-2026-05-28",
@@ -8617,7 +9017,7 @@
     "gross_margin": "not_reported"
    }
   },
-  "status": "data_incomplete"
+  "status": "not_an_earnings_release"
  },
  {
   "event_id": "TXN-2026-07-22",

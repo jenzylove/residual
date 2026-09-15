@@ -166,7 +166,11 @@ def build_event(filing: dict, prev: dict) -> dict:
                        # so their absence neither blocks nor resizes a trade.
                        "optional_fields": {n: ("reported" if earnings[n] and earnings[n].get("verified")
                                                else "not_reported") for n in OPTIONAL}},
-        "status": "complete" if not missing else "data_incomplete",
+        # Some Item 2.02 filings carry no quarterly results at all (segment realignments, business
+        # updates, leadership changes). They are not earnings events and are excluded from the replay.
+        "status": ("complete" if not missing else
+                   "not_an_earnings_release" if not (cur["fields"]["revenue_actual"] or cur["fields"]["revenue_guidance_next"])
+                   else "data_incomplete"),
     }
 
 

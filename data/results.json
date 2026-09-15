@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-15T20:29:17+00:00",
+ "generated_at": "2026-09-15T22:52:15+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -31,14 +31,14 @@
   "residual": {
    "sharpe_per_trade": 0.478,
    "sortino_per_trade": 1.19,
-   "sharpe_daily_ann": 1.193,
-   "sortino_daily_ann": 5.18,
-   "days": 323,
+   "sharpe_daily_ann": 1.205,
+   "sortino_daily_ann": 5.228,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 335.4,
    "trades": 4,
    "excluded_funding_unavailable": 9,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 83.85,
    "pnl_std_per_trade": 142.83,
@@ -46,10 +46,6 @@
    "avg_holding_hours": 22.0,
    "return_on_start_balance_pct": 0.335,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -126,14 +122,14 @@
   "unhedged": {
    "sharpe_per_trade": 0.673,
    "sortino_per_trade": 3.095,
-   "sharpe_daily_ann": 1.312,
-   "sortino_daily_ann": 12.5,
-   "days": 323,
+   "sharpe_daily_ann": 1.324,
+   "sortino_daily_ann": 12.618,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 442.59,
    "trades": 4,
    "excluded_funding_unavailable": 9,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 110.65,
    "pnl_std_per_trade": 163.21,
@@ -141,10 +137,6 @@
    "avg_holding_hours": 21.8,
    "return_on_start_balance_pct": 0.443,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -221,14 +213,14 @@
   "naive_same_events": {
    "sharpe_per_trade": 0.673,
    "sortino_per_trade": 3.095,
-   "sharpe_daily_ann": 1.312,
-   "sortino_daily_ann": 12.5,
-   "days": 323,
+   "sharpe_daily_ann": 1.324,
+   "sortino_daily_ann": 12.618,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 442.59,
    "trades": 4,
    "excluded_funding_unavailable": 9,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 110.65,
    "pnl_std_per_trade": 163.21,
@@ -236,10 +228,6 @@
    "avg_holding_hours": 21.8,
    "return_on_start_balance_pct": 0.443,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -318,12 +306,12 @@
    "sortino_per_trade": -0.005,
    "sharpe_daily_ann": -0.013,
    "sortino_daily_ann": -0.021,
-   "days": 324,
+   "days": 318,
    "basis": "primary",
    "total_net_pnl": -6.62,
    "trades": 18,
    "excluded_funding_unavailable": 18,
-   "no_trades": 39,
+   "no_trades": 35,
    "hit_rate": 0.389,
    "avg_pnl_per_trade": -0.37,
    "pnl_std_per_trade": 135.34,
@@ -384,10 +372,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -120.02,
     -120.02,
     -122.22,
     -197.49,
@@ -411,14 +395,14 @@
   "v_residual": {
    "sharpe_per_trade": 0.083,
    "sortino_per_trade": 0.163,
-   "sharpe_daily_ann": 0.645,
-   "sortino_daily_ann": 1.824,
-   "days": 323,
+   "sharpe_daily_ann": 0.651,
+   "sortino_daily_ann": 1.842,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 188.77,
    "trades": 8,
    "excluded_funding_unavailable": 9,
-   "no_trades": 58,
+   "no_trades": 54,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 23.6,
    "pnl_std_per_trade": 116.75,
@@ -426,10 +410,6 @@
    "avg_holding_hours": 19.6,
    "return_on_start_balance_pct": 0.189,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -506,14 +486,14 @@
   "v_headline": {
    "sharpe_per_trade": 0.38,
    "sortino_per_trade": 0.896,
-   "sharpe_daily_ann": 1.141,
-   "sortino_daily_ann": 3.87,
-   "days": 323,
+   "sharpe_daily_ann": 1.152,
+   "sortino_daily_ann": 3.906,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 329.61,
    "trades": 8,
    "excluded_funding_unavailable": 9,
-   "no_trades": 58,
+   "no_trades": 54,
    "hit_rate": 0.625,
    "avg_pnl_per_trade": 41.2,
    "pnl_std_per_trade": 107.06,
@@ -521,10 +501,6 @@
    "avg_holding_hours": 23.0,
    "return_on_start_balance_pct": 0.33,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -601,14 +577,14 @@
   "v_agreement": {
    "sharpe_per_trade": 0.478,
    "sortino_per_trade": 1.19,
-   "sharpe_daily_ann": 1.193,
-   "sortino_daily_ann": 5.18,
-   "days": 323,
+   "sharpe_daily_ann": 1.205,
+   "sortino_daily_ann": 5.228,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 335.4,
    "trades": 4,
    "excluded_funding_unavailable": 5,
-   "no_trades": 66,
+   "no_trades": 62,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 83.85,
    "pnl_std_per_trade": 142.83,
@@ -616,10 +592,6 @@
    "avg_holding_hours": 22.0,
    "return_on_start_balance_pct": 0.335,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -696,14 +668,14 @@
   "v_consensus": {
    "sharpe_per_trade": 0.247,
    "sortino_per_trade": 0.453,
-   "sharpe_daily_ann": 0.581,
-   "sortino_daily_ann": 0.99,
-   "days": 323,
+   "sharpe_daily_ann": 0.586,
+   "sortino_daily_ann": 1.0,
+   "days": 317,
    "basis": "primary",
    "total_net_pnl": 65.64,
    "trades": 6,
    "excluded_funding_unavailable": 6,
-   "no_trades": 63,
+   "no_trades": 59,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 10.94,
    "pnl_std_per_trade": 58.12,
@@ -711,10 +683,6 @@
    "avg_holding_hours": 20.5,
    "return_on_start_balance_pct": 0.066,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -798,7 +766,7 @@
    "total_net_pnl": 0.0,
    "trades": 0,
    "excluded_funding_unavailable": 0,
-   "no_trades": 75,
+   "no_trades": 71,
    "hit_rate": null,
    "avg_pnl_per_trade": null,
    "pnl_std_per_trade": null,
@@ -806,10 +774,6 @@
    "avg_holding_hours": null,
    "return_on_start_balance_pct": 0.0,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -887,21 +851,21 @@
  "summary_conservative_funding": {
   "residual": {
    "sharpe_per_trade": 0.187,
-   "sortino_per_trade": 0.374,
-   "sharpe_daily_ann": 0.866,
-   "sortino_daily_ann": 2.174,
-   "days": 323,
+   "sortino_per_trade": 0.375,
+   "sharpe_daily_ann": 0.875,
+   "sortino_daily_ann": 2.197,
+   "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 269.44,
+   "total_net_pnl": 269.68,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.538,
-   "avg_pnl_per_trade": 20.73,
+   "avg_pnl_per_trade": 20.74,
    "pnl_std_per_trade": 92.98,
-   "max_drawdown": -138.87,
+   "max_drawdown": -138.72,
    "avg_holding_hours": 22.3,
-   "return_on_start_balance_pct": 0.269,
+   "return_on_start_balance_pct": 0.27,
    "equity_curve": [
     0.0,
     0.0,
@@ -913,84 +877,80 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -69.46,
-    -69.46,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -94.62,
-    -94.62,
-    -100.72,
-    -100.72,
-    -60.07,
-    -60.07,
-    -60.07,
-    -60.07,
-    -60.07,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -65.97,
-    -65.97,
-    -65.97,
-    -65.97,
-    -134.8,
-    -134.8,
-    -134.8,
-    -134.8,
-    -73.85,
-    202.55,
-    202.55,
-    202.55,
-    202.55,
-    202.55,
-    269.44,
-    269.44,
-    269.44,
-    269.44,
-    269.44,
-    269.44
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -69.42,
+    -69.42,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -94.5,
+    -94.5,
+    -100.56,
+    -100.56,
+    -59.9,
+    -59.9,
+    -59.9,
+    -59.9,
+    -59.9,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -65.73,
+    -65.73,
+    -65.73,
+    -134.57,
+    -134.57,
+    -134.57,
+    -134.57,
+    -73.61,
+    202.79,
+    202.79,
+    202.79,
+    202.79,
+    202.79,
+    269.68,
+    269.68,
+    269.68,
+    269.68,
+    269.68,
+    269.68
    ]
   },
   "unhedged": {
    "sharpe_per_trade": 0.245,
    "sortino_per_trade": 0.577,
-   "sharpe_daily_ann": 0.992,
-   "sortino_daily_ann": 2.537,
-   "days": 323,
+   "sharpe_daily_ann": 1.001,
+   "sortino_daily_ann": 2.561,
+   "days": 317,
    "basis": "conservative",
    "total_net_pnl": 382.8,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.615,
    "avg_pnl_per_trade": 29.45,
    "pnl_std_per_trade": 114.4,
@@ -1008,9 +968,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -123.4,
     -123.4,
     -123.4,
@@ -1053,7 +1010,6 @@
     -21.14,
     -21.14,
     -21.14,
-    -59.79,
     -59.79,
     -59.79,
     -59.79,
@@ -1078,14 +1034,14 @@
   "naive_same_events": {
    "sharpe_per_trade": 0.286,
    "sortino_per_trade": 0.671,
-   "sharpe_daily_ann": 1.31,
-   "sortino_daily_ann": 3.801,
-   "days": 323,
+   "sharpe_daily_ann": 1.322,
+   "sortino_daily_ann": 3.837,
+   "days": 317,
    "basis": "conservative",
    "total_net_pnl": 511.29,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.692,
    "avg_pnl_per_trade": 39.33,
    "pnl_std_per_trade": 112.69,
@@ -1103,9 +1059,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -123.4,
     -123.4,
     -123.4,
@@ -1148,7 +1101,6 @@
     110.45,
     110.45,
     110.45,
-    68.7,
     68.7,
     68.7,
     68.7,
@@ -1173,14 +1125,14 @@
   "naive": {
    "sharpe_per_trade": -0.182,
    "sortino_per_trade": -0.263,
-   "sharpe_daily_ann": -1.16,
-   "sortino_daily_ann": -1.625,
-   "days": 324,
+   "sharpe_daily_ann": -1.171,
+   "sortino_daily_ann": -1.641,
+   "days": 318,
    "basis": "conservative",
    "total_net_pnl": -716.13,
    "trades": 36,
    "excluded_funding_unavailable": 0,
-   "no_trades": 39,
+   "no_trades": 35,
    "hit_rate": 0.361,
    "avg_pnl_per_trade": -19.89,
    "pnl_std_per_trade": 109.06,
@@ -1188,9 +1140,6 @@
    "avg_holding_hours": 18.2,
    "return_on_start_balance_pct": -0.716,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -1245,7 +1194,6 @@
     -626.0,
     -709.51,
     -829.53,
-    -829.53,
     -831.72,
     -907.0,
     -981.89,
@@ -1268,18 +1216,18 @@
   "v_residual": {
    "sharpe_per_trade": 0.017,
    "sortino_per_trade": 0.03,
-   "sharpe_daily_ann": 0.382,
-   "sortino_daily_ann": 0.83,
-   "days": 323,
+   "sharpe_daily_ann": 0.386,
+   "sortino_daily_ann": 0.84,
+   "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 122.8,
+   "total_net_pnl": 123.04,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 54,
    "hit_rate": 0.471,
-   "avg_pnl_per_trade": 7.22,
+   "avg_pnl_per_trade": 7.24,
    "pnl_std_per_trade": 86.24,
-   "max_drawdown": -197.52,
+   "max_drawdown": -197.37,
    "avg_holding_hours": 21.1,
    "return_on_start_balance_pct": 0.123,
    "equity_curve": [
@@ -1293,88 +1241,84 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -69.46,
-    -69.46,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -47.43,
-    -94.62,
-    -94.62,
-    -100.72,
-    -100.72,
-    -60.07,
-    -60.07,
-    -60.07,
-    -60.07,
-    -60.07,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -57.78,
-    -65.97,
-    -65.97,
-    -65.97,
-    -65.97,
-    -134.8,
-    -134.8,
-    -114.57,
-    -193.45,
-    -132.5,
-    143.9,
-    94.95,
-    94.95,
-    94.95,
-    94.95,
-    161.84,
-    122.8,
-    122.8,
-    122.8,
-    122.8,
-    122.8
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -69.42,
+    -69.42,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -47.32,
+    -94.5,
+    -94.5,
+    -100.56,
+    -100.56,
+    -59.9,
+    -59.9,
+    -59.9,
+    -59.9,
+    -59.9,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -57.56,
+    -65.73,
+    -65.73,
+    -65.73,
+    -134.57,
+    -134.57,
+    -114.33,
+    -193.21,
+    -132.26,
+    144.14,
+    95.19,
+    95.19,
+    95.19,
+    95.19,
+    162.08,
+    123.04,
+    123.04,
+    123.04,
+    123.04,
+    123.04
    ]
   },
   "v_headline": {
    "sharpe_per_trade": 0.144,
    "sortino_per_trade": 0.275,
-   "sharpe_daily_ann": 0.835,
-   "sortino_daily_ann": 2.003,
-   "days": 323,
+   "sharpe_daily_ann": 0.843,
+   "sortino_daily_ann": 2.024,
+   "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 262.65,
+   "total_net_pnl": 262.89,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 54,
    "hit_rate": 0.529,
-   "avg_pnl_per_trade": 15.45,
-   "pnl_std_per_trade": 81.85,
-   "max_drawdown": -220.32,
+   "avg_pnl_per_trade": 15.46,
+   "pnl_std_per_trade": 81.84,
+   "max_drawdown": -220.2,
    "avg_holding_hours": 21.9,
    "return_on_start_balance_pct": 0.263,
    "equity_curve": [
@@ -1388,88 +1332,84 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -69.46,
-    -69.46,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    25.7,
-    25.7,
-    25.7,
-    25.7,
-    25.7,
-    25.7,
-    25.7,
-    25.7,
-    25.7,
-    20.74,
-    20.74,
-    14.65,
-    14.65,
-    -24.78,
-    -24.78,
-    -24.78,
-    -24.78,
-    -24.78,
-    -22.49,
-    -22.49,
-    -22.49,
-    -22.49,
-    -22.49,
-    -22.49,
-    -22.49,
-    -22.49,
-    -66.96,
-    -66.96,
-    -66.96,
-    -66.96,
-    -135.8,
-    -135.8,
-    -189.59,
-    -194.63,
-    -133.67,
-    142.72,
-    178.21,
-    178.21,
-    178.21,
-    178.21,
-    245.1,
-    262.65,
-    262.65,
-    262.65,
-    262.65,
-    262.65
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -69.42,
+    -69.42,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    25.81,
+    25.81,
+    25.81,
+    25.81,
+    25.81,
+    25.81,
+    25.81,
+    25.81,
+    25.81,
+    20.88,
+    20.88,
+    14.82,
+    14.82,
+    -24.61,
+    -24.61,
+    -24.61,
+    -24.61,
+    -24.61,
+    -22.27,
+    -22.27,
+    -22.27,
+    -22.27,
+    -22.27,
+    -22.27,
+    -22.27,
+    -22.27,
+    -66.73,
+    -66.73,
+    -66.73,
+    -135.56,
+    -135.56,
+    -189.35,
+    -194.39,
+    -133.43,
+    142.96,
+    178.45,
+    178.45,
+    178.45,
+    178.45,
+    245.34,
+    262.89,
+    262.89,
+    262.89,
+    262.89,
+    262.89
    ]
   },
   "v_agreement": {
    "sharpe_per_trade": 0.319,
-   "sortino_per_trade": 0.706,
-   "sharpe_daily_ann": 1.113,
-   "sortino_daily_ann": 3.203,
-   "days": 323,
+   "sortino_per_trade": 0.707,
+   "sharpe_daily_ann": 1.124,
+   "sortino_daily_ann": 3.235,
+   "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 335.66,
+   "total_net_pnl": 335.83,
    "trades": 9,
    "excluded_funding_unavailable": 0,
-   "no_trades": 66,
+   "no_trades": 62,
    "hit_rate": 0.667,
-   "avg_pnl_per_trade": 37.3,
-   "pnl_std_per_trade": 106.19,
-   "max_drawdown": -87.39,
+   "avg_pnl_per_trade": 37.31,
+   "pnl_std_per_trade": 106.18,
+   "max_drawdown": -87.36,
    "avg_holding_hours": 22.3,
    "return_on_start_balance_pct": 0.336,
    "equity_curve": [
@@ -1483,88 +1423,84 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -69.46,
-    -69.46,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    -2.02,
-    -2.02,
-    -2.02,
-    -2.02,
-    -2.02,
-    -2.02,
-    -2.02,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    0.26,
-    -68.58,
-    -68.58,
-    -68.58,
-    -68.58,
-    -7.62,
-    268.77,
-    268.77,
-    268.77,
-    268.77,
-    268.77,
-    335.66,
-    335.66,
-    335.66,
-    335.66,
-    335.66,
-    335.66
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -69.42,
+    -69.42,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    -1.91,
+    -1.91,
+    -1.91,
+    -1.91,
+    -1.91,
+    -1.91,
+    -1.91,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    0.43,
+    -68.41,
+    -68.41,
+    -68.41,
+    -68.41,
+    -7.45,
+    268.95,
+    268.95,
+    268.95,
+    268.95,
+    268.95,
+    335.83,
+    335.83,
+    335.83,
+    335.83,
+    335.83,
+    335.83
    ]
   },
   "v_consensus": {
    "sharpe_per_trade": -0.022,
    "sortino_per_trade": -0.032,
    "sharpe_daily_ann": -0.071,
-   "sortino_daily_ann": -0.1,
-   "days": 323,
+   "sortino_daily_ann": -0.099,
+   "days": 317,
    "basis": "conservative",
-   "total_net_pnl": -11.9,
+   "total_net_pnl": -11.74,
    "trades": 12,
    "excluded_funding_unavailable": 0,
-   "no_trades": 63,
+   "no_trades": 59,
    "hit_rate": 0.583,
-   "avg_pnl_per_trade": -0.99,
+   "avg_pnl_per_trade": -0.98,
    "pnl_std_per_trade": 56.0,
-   "max_drawdown": -140.26,
+   "max_drawdown": -140.19,
    "avg_holding_hours": 19.9,
    "return_on_start_balance_pct": -0.012,
    "equity_curve": [
@@ -1578,71 +1514,67 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -87.39,
-    -69.46,
-    -69.46,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    4.07,
-    -35.36,
-    -35.36,
-    -35.36,
-    -35.36,
-    -35.36,
-    -33.08,
-    -33.08,
-    -33.08,
-    -33.08,
-    -33.08,
-    -33.08,
-    -33.08,
-    -33.08,
-    -77.55,
-    -77.55,
-    -77.55,
-    -77.55,
-    -77.55,
-    -77.55,
-    -57.31,
-    -136.19,
-    -75.24,
-    -75.24,
-    -39.75,
-    -39.75,
-    -39.75,
-    -39.75,
-    27.14,
-    -11.9,
-    -11.9,
-    -11.9,
-    -11.9,
-    -11.9
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -87.36,
+    -69.42,
+    -69.42,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    4.15,
+    -35.27,
+    -35.27,
+    -35.27,
+    -35.27,
+    -35.27,
+    -32.93,
+    -32.93,
+    -32.93,
+    -32.93,
+    -32.93,
+    -32.93,
+    -32.93,
+    -32.93,
+    -77.39,
+    -77.39,
+    -77.39,
+    -77.39,
+    -77.39,
+    -57.15,
+    -136.04,
+    -75.08,
+    -75.08,
+    -39.59,
+    -39.59,
+    -39.59,
+    -39.59,
+    27.29,
+    -11.74,
+    -11.74,
+    -11.74,
+    -11.74,
+    -11.74
    ]
   },
   "no_trade": {
@@ -1655,7 +1587,7 @@
    "total_net_pnl": 0.0,
    "trades": 0,
    "excluded_funding_unavailable": 0,
-   "no_trades": 75,
+   "no_trades": 71,
    "hit_rate": null,
    "avg_pnl_per_trade": null,
    "pnl_std_per_trade": null,
@@ -1663,10 +1595,6 @@
    "avg_holding_hours": null,
    "return_on_start_balance_pct": 0.0,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -1745,14 +1673,14 @@
   "residual": {
    "sharpe_per_trade": 0.233,
    "sortino_per_trade": 0.479,
-   "sharpe_daily_ann": 1.02,
-   "sortino_daily_ann": 2.69,
-   "days": 323,
+   "sharpe_daily_ann": 1.029,
+   "sortino_daily_ann": 2.715,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 317.7,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.615,
    "avg_pnl_per_trade": 24.44,
    "pnl_std_per_trade": 92.16,
@@ -1770,9 +1698,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -82.18,
     -82.18,
     -82.18,
@@ -1815,7 +1740,6 @@
     -13.71,
     -13.71,
     -13.71,
-    -17.71,
     -17.71,
     -17.71,
     -17.71,
@@ -1840,14 +1764,14 @@
   "unhedged": {
    "sharpe_per_trade": 0.261,
    "sortino_per_trade": 0.619,
-   "sharpe_daily_ann": 1.037,
-   "sortino_daily_ann": 2.68,
-   "days": 323,
+   "sharpe_daily_ann": 1.046,
+   "sortino_daily_ann": 2.705,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 401.07,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.615,
    "avg_pnl_per_trade": 30.85,
    "pnl_std_per_trade": 114.28,
@@ -1865,9 +1789,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -122.35,
     -122.35,
     -122.35,
@@ -1910,7 +1831,6 @@
     -3.49,
     -3.49,
     -3.49,
-    -41.52,
     -41.52,
     -41.52,
     -41.52,
@@ -1935,14 +1855,14 @@
   "naive_same_events": {
    "sharpe_per_trade": 0.303,
    "sortino_per_trade": 0.718,
-   "sharpe_daily_ann": 1.354,
-   "sortino_daily_ann": 3.985,
-   "days": 323,
+   "sharpe_daily_ann": 1.367,
+   "sortino_daily_ann": 4.022,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 529.76,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 62,
+   "no_trades": 58,
    "hit_rate": 0.692,
    "avg_pnl_per_trade": 40.75,
    "pnl_std_per_trade": 112.41,
@@ -1960,9 +1880,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -122.35,
     -122.35,
     -122.35,
@@ -2005,7 +1922,6 @@
     127.66,
     127.66,
     127.66,
-    87.16,
     87.16,
     87.16,
     87.16,
@@ -2030,14 +1946,14 @@
   "naive": {
    "sharpe_per_trade": -0.172,
    "sortino_per_trade": -0.25,
-   "sharpe_daily_ann": -1.097,
-   "sortino_daily_ann": -1.547,
-   "days": 324,
+   "sharpe_daily_ann": -1.107,
+   "sortino_daily_ann": -1.561,
+   "days": 318,
    "basis": "observed_zero",
    "total_net_pnl": -675.33,
    "trades": 36,
    "excluded_funding_unavailable": 0,
-   "no_trades": 39,
+   "no_trades": 35,
    "hit_rate": 0.361,
    "avg_pnl_per_trade": -18.76,
    "pnl_std_per_trade": 108.99,
@@ -2045,9 +1961,6 @@
    "avg_holding_hours": 18.2,
    "return_on_start_balance_pct": -0.675,
    "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -2102,7 +2015,6 @@
     -587.71,
     -668.7,
     -788.73,
-    -788.73,
     -790.92,
     -866.2,
     -941.09,
@@ -2125,14 +2037,14 @@
   "v_residual": {
    "sharpe_per_trade": 0.053,
    "sortino_per_trade": 0.093,
-   "sharpe_daily_ann": 0.531,
-   "sortino_daily_ann": 1.196,
-   "days": 323,
+   "sharpe_daily_ann": 0.536,
+   "sortino_daily_ann": 1.207,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 171.07,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 54,
    "hit_rate": 0.529,
    "avg_pnl_per_trade": 10.06,
    "pnl_std_per_trade": 86.07,
@@ -2150,9 +2062,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -82.18,
     -82.18,
     -82.18,
@@ -2195,7 +2104,6 @@
     -13.71,
     -13.71,
     -13.71,
-    -17.71,
     -17.71,
     -17.71,
     -17.71,
@@ -2220,14 +2128,14 @@
   "v_headline": {
    "sharpe_per_trade": 0.182,
    "sortino_per_trade": 0.355,
-   "sharpe_daily_ann": 0.983,
-   "sortino_daily_ann": 2.451,
-   "days": 323,
+   "sharpe_daily_ann": 0.993,
+   "sortino_daily_ann": 2.474,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 310.03,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 54,
    "hit_rate": 0.588,
    "avg_pnl_per_trade": 18.24,
    "pnl_std_per_trade": 81.42,
@@ -2245,9 +2153,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -82.18,
     -82.18,
     -82.18,
@@ -2290,7 +2195,6 @@
     22.08,
     22.08,
     22.08,
-    -19.58,
     -19.58,
     -19.58,
     -19.58,
@@ -2315,14 +2219,14 @@
   "v_agreement": {
    "sharpe_per_trade": 0.357,
    "sortino_per_trade": 0.797,
-   "sharpe_daily_ann": 1.223,
-   "sortino_daily_ann": 3.669,
-   "days": 323,
+   "sharpe_daily_ann": 1.235,
+   "sortino_daily_ann": 3.704,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 370.02,
    "trades": 9,
    "excluded_funding_unavailable": 0,
-   "no_trades": 66,
+   "no_trades": 62,
    "hit_rate": 0.778,
    "avg_pnl_per_trade": 41.11,
    "pnl_std_per_trade": 105.05,
@@ -2340,9 +2244,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -82.18,
     -82.18,
     -82.18,
@@ -2377,7 +2278,6 @@
     23.44,
     23.44,
     23.44,
-    34.61,
     34.61,
     34.61,
     34.61,
@@ -2410,14 +2310,14 @@
   "v_consensus": {
    "sharpe_per_trade": 0.021,
    "sortino_per_trade": 0.031,
-   "sharpe_daily_ann": 0.116,
-   "sortino_daily_ann": 0.17,
-   "days": 323,
+   "sharpe_daily_ann": 0.117,
+   "sortino_daily_ann": 0.172,
+   "days": 317,
    "basis": "observed_zero",
    "total_net_pnl": 19.51,
    "trades": 12,
    "excluded_funding_unavailable": 0,
-   "no_trades": 63,
+   "no_trades": 59,
    "hit_rate": 0.583,
    "avg_pnl_per_trade": 1.63,
    "pnl_std_per_trade": 56.3,
@@ -2435,9 +2335,6 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
     -82.18,
     -82.18,
     -82.18,
@@ -2480,7 +2377,6 @@
     -4.47,
     -4.47,
     -4.47,
-    -46.13,
     -46.13,
     -46.13,
     -46.13,
@@ -2514,7 +2410,7 @@
    "total_net_pnl": 335.4,
    "trades": 4,
    "excluded_funding_unavailable": 0,
-   "no_trades": 15,
+   "no_trades": 14,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 83.85,
    "pnl_std_per_trade": 142.83,
@@ -2522,7 +2418,6 @@
    "avg_holding_hours": 22.0,
    "return_on_start_balance_pct": 0.335,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     -68.84,
@@ -2553,7 +2448,7 @@
    "total_net_pnl": 442.59,
    "trades": 4,
    "excluded_funding_unavailable": 0,
-   "no_trades": 15,
+   "no_trades": 14,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 110.65,
    "pnl_std_per_trade": 163.21,
@@ -2561,7 +2456,6 @@
    "avg_holding_hours": 21.8,
    "return_on_start_balance_pct": 0.443,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     -37.64,
@@ -2592,7 +2486,7 @@
    "total_net_pnl": 442.59,
    "trades": 4,
    "excluded_funding_unavailable": 0,
-   "no_trades": 15,
+   "no_trades": 14,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 110.65,
    "pnl_std_per_trade": 163.21,
@@ -2600,7 +2494,6 @@
    "avg_holding_hours": 21.8,
    "return_on_start_balance_pct": 0.443,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     -37.64,
@@ -2631,7 +2524,7 @@
    "total_net_pnl": -6.62,
    "trades": 18,
    "excluded_funding_unavailable": 0,
-   "no_trades": 1,
+   "no_trades": 0,
    "hit_rate": 0.389,
    "avg_pnl_per_trade": -0.37,
    "pnl_std_per_trade": 135.34,
@@ -2639,7 +2532,6 @@
    "avg_holding_hours": 18.8,
    "return_on_start_balance_pct": -0.007,
    "equity_curve": [
-    -120.02,
     -120.02,
     -122.22,
     -197.49,
@@ -2670,7 +2562,7 @@
    "total_net_pnl": 188.77,
    "trades": 8,
    "excluded_funding_unavailable": 0,
-   "no_trades": 11,
+   "no_trades": 10,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 23.6,
    "pnl_std_per_trade": 116.75,
@@ -2678,7 +2570,6 @@
    "avg_holding_hours": 19.6,
    "return_on_start_balance_pct": 0.189,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     -68.84,
@@ -2709,7 +2600,7 @@
    "total_net_pnl": 329.61,
    "trades": 8,
    "excluded_funding_unavailable": 0,
-   "no_trades": 11,
+   "no_trades": 10,
    "hit_rate": 0.625,
    "avg_pnl_per_trade": 41.2,
    "pnl_std_per_trade": 107.06,
@@ -2717,7 +2608,6 @@
    "avg_holding_hours": 23.0,
    "return_on_start_balance_pct": 0.33,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     -68.84,
@@ -2748,7 +2638,7 @@
    "total_net_pnl": 335.4,
    "trades": 4,
    "excluded_funding_unavailable": 0,
-   "no_trades": 15,
+   "no_trades": 14,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 83.85,
    "pnl_std_per_trade": 142.83,
@@ -2756,7 +2646,6 @@
    "avg_holding_hours": 22.0,
    "return_on_start_balance_pct": 0.335,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     -68.84,
@@ -2787,7 +2676,7 @@
    "total_net_pnl": 65.64,
    "trades": 6,
    "excluded_funding_unavailable": 0,
-   "no_trades": 13,
+   "no_trades": 12,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 10.94,
    "pnl_std_per_trade": 58.12,
@@ -2795,7 +2684,6 @@
    "avg_holding_hours": 20.5,
    "return_on_start_balance_pct": 0.066,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -2820,15 +2708,13 @@
  "summary_last_90d_window": {
   "from_ms": 1782331321000,
   "to_ms": 1788380764000,
-  "events": 19
+  "events": 18
  },
  "funding_caps": {
   "SMHUSDT": 0.000334,
   "SPYUSDT": 0.000327,
   "MUUSDT": 0.000507,
-  "QQQUSDT": 0.000366,
-  "SMCIUSDT": 5.4e-05,
-  "XLKUSDT": 0.0,
+  "QQQUSDT": 0.000363,
   "TXNUSDT": 0.0,
   "INTCUSDT": 0.0,
   "KLACUSDT": 0.0,
@@ -2836,7 +2722,9 @@
   "METAUSDT": 0.000523,
   "AMZNUSDT": 7.4e-05,
   "PLTRUSDT": 0.0,
+  "XLKUSDT": 0.0,
   "AMDUSDT": 0.00032,
+  "SMCIUSDT": 0.0,
   "CRMUSDT": 0.0,
   "CRWDUSDT": 0.0,
   "NVDAUSDT": 0.000139,
@@ -2857,7 +2745,7 @@
    "total_net_pnl": 335.4,
    "trades": 4,
    "excluded_funding_unavailable": 3,
-   "no_trades": 27,
+   "no_trades": 26,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 83.85,
    "pnl_std_per_trade": 142.83,
@@ -2865,7 +2753,6 @@
    "avg_holding_hours": 22.0,
    "return_on_start_balance_pct": 0.335,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -2911,7 +2798,7 @@
    "total_net_pnl": -6.62,
    "trades": 18,
    "excluded_funding_unavailable": 7,
-   "no_trades": 9,
+   "no_trades": 8,
    "hit_rate": 0.389,
    "avg_pnl_per_trade": -0.37,
    "pnl_std_per_trade": 135.34,
@@ -2934,7 +2821,6 @@
     0.0,
     0.0,
     0.0,
-    -120.02,
     -120.02,
     -122.22,
     -197.49,
@@ -2965,7 +2851,7 @@
    "total_net_pnl": 442.59,
    "trades": 4,
    "excluded_funding_unavailable": 3,
-   "no_trades": 27,
+   "no_trades": 26,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 110.65,
    "pnl_std_per_trade": 163.21,
@@ -2973,7 +2859,6 @@
    "avg_holding_hours": 21.8,
    "return_on_start_balance_pct": 0.443,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     0.0,
@@ -3011,101 +2896,6 @@
   }
  },
  "events": [
-  {
-   "event_id": "HPE-2025-10-15",
-   "consensus": null,
-   "ticker": "HPE",
-   "company_symbol": "HPEUSDT",
-   "sector_group": "hardware",
-   "cik": 1645590,
-   "accession": "0001645590-25-000111",
-   "release_utc": "2025-10-15T20:47:46Z",
-   "release_ms": 1760561266000,
-   "release_session": "after_market",
-   "source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000111/ex-991x10152025x8k.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000111/",
-    "sha256": null,
-    "cache_file": "data/cache/a58836c8b96e9ae73184c5b0.bin"
-   },
-   "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/",
-    "accession": "0001645590-25-000096",
-    "cache_file": "data/cache/a644c5c6d6491ca54e6d2aee.bin"
-   },
-   "earnings": {
-    "revenue_actual": null,
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": {
-     "value": 9100.0,
-     "unit": "USD_millions",
-     "snippet": "Revenue : $9.1 billion, up 19% from the prior-year period",
-     "pattern": "Revenue : \\$(\\d+(?:\\.\\d+)?) billion, (?:up|down) \\d+% from the prior-year period",
-     "flags": 0,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
-     "source_sha256": "4fdb6ae67617de345d0f64dd3c1f9d38bc47288bfefa52bd72118dbc93649daf",
-     "extractor": "regex-v1:HPE:revenue_actual",
-     "verified": true
-    },
-    "eps_diluted": null,
-    "gross_margin": null
-   },
-   "commentary": null,
-   "surprise": null,
-   "validation": {
-    "checks": [
-     {
-      "field": "revenue_actual",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_prior_actual",
-      "ok": true,
-      "detail": "ok"
-     },
-     {
-      "field": "eps_diluted",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
-     }
-    ],
-    "missing_required": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
-    "required_fields": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "optional_fields": {
-     "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
-    }
-   },
-   "status": "data_incomplete"
-  },
   {
    "event_id": "TXN-2025-10-21",
    "consensus": {
@@ -3253,107 +3043,6 @@
     }
    },
    "status": "complete"
-  },
-  {
-   "event_id": "SMCI-2025-10-23",
-   "consensus": null,
-   "ticker": "SMCI",
-   "company_symbol": "SMCIUSDT",
-   "sector_group": "hardware",
-   "cik": 1375365,
-   "accession": "0001628280-25-045989",
-   "release_utc": "2025-10-23T13:09:02Z",
-   "release_ms": 1761224942000,
-   "release_session": "pre_market",
-   "source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/fq12026businessupdatev9ms.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/",
-    "sha256": null,
-    "cache_file": "data/cache/b40f63d9d90d9e1be8d01172.bin"
-   },
-   "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/",
-    "accession": "0001375365-25-000023",
-    "cache_file": "data/cache/1844d0f0d787260a453ee1a0.bin"
-   },
-   "earnings": {
-    "revenue_actual": null,
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": {
-     "value": 5800.0,
-     "unit": "USD_millions",
-     "snippet": "Net sales of $5.8 billion versus",
-     "pattern": "Net sales of \\$(\\d+(?:\\.\\d+)?) billion versus",
-     "flags": 0,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
-     "source_sha256": "9bd605cf9bee43cf5c3a3a2aef905de8e48d1948d5392222b768ce7f87f9e9a6",
-     "extractor": "regex-v1:SMCI:revenue_actual",
-     "verified": true
-    },
-    "eps_diluted": null,
-    "gross_margin": null
-   },
-   "commentary": {
-    "text": "Supermicro is seeing outstanding levels of customer engagements for newly released AI liquid cooled solutions along with numerous key customers ramping large, multi-quarter, volume deployments.",
-    "speaker": "Charles Liang, President and CEO of Supermicro",
-    "snippet": "\"Supermicro is seeing outstanding levels of customer engagements for newly released AI liquid cooled solutions along with numerous key customers ramping large, multi-quarter, volume deployments.\" said Charles Liang, President and CEO of Supermicro",
-    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/fq12026businessupdatev9ms.htm",
-    "source_sha256": "a02ede2735ccdeccbcef369e24c86ba35ae93e64a7cb230ca62755478219de05"
-   },
-   "surprise": null,
-   "validation": {
-    "checks": [
-     {
-      "field": "revenue_actual",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_prior_actual",
-      "ok": true,
-      "detail": "ok"
-     },
-     {
-      "field": "eps_diluted",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
-     }
-    ],
-    "missing_required": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
-    "required_fields": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "optional_fields": {
-     "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
-    }
-   },
-   "status": "data_incomplete"
   },
   {
    "event_id": "INTC-2025-10-23",
@@ -3724,7 +3413,19 @@
      "extractor": "regex-v1:KLAC:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
+    "revenue_guidance_prior": {
+     "value": 3150.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenues is expected to be in a range of $3.15 billion +/- $150 million",
+     "pattern": "Total revenues is expected to be in a range of \\$(\\d+(?:\\.\\d+)?) billion \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920125000020/exhibit991earningsrelease7.htm",
+     "source_sha256": "b943478668841afb8402cbe1888beec3d70b9fe21f3b06c1ac7ec805e5883c07",
+     "extractor": "regex-v1:KLAC:revenue_guidance",
+     "low": 3000.0,
+     "high": 3300.0,
+     "verified": true
+    },
     "revenue_guidance_next": {
      "value": 3225.0,
      "unit": "USD_millions",
@@ -3769,7 +3470,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920125000031/exhibit991earningsrelease0.htm",
     "source_sha256": "225b1c39012c4247c731889965ca19da5816a0164cf199b7409f50de703eb60e"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 3150.0,
+    "revenue_actual": 3210.0,
+    "guidance_surprise_pct": 1.905,
+    "vs_guidance_band": "inside",
+    "next_quarter_guidance_mid": 3225.0,
+    "guided_sequential_growth_pct": 0.467,
+    "prior_guided_sequential_growth_pct": -0.787,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -3779,8 +3491,8 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
@@ -3803,10 +3515,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -3818,7 +3528,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "AMZN-2025-10-30",
@@ -3973,107 +3683,6 @@
     }
    },
    "status": "complete"
-  },
-  {
-   "event_id": "MDB-2025-11-03",
-   "consensus": null,
-   "ticker": "MDB",
-   "company_symbol": "MDBUSDT",
-   "sector_group": "software",
-   "cik": 1441816,
-   "accession": "0001628280-25-047941",
-   "release_utc": "2025-11-03T13:31:10Z",
-   "release_ms": 1762176670000,
-   "release_session": "pre_market",
-   "source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/a2025-11x03xpressrelease.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/",
-    "sha256": null,
-    "cache_file": "data/cache/f468adb6d24dd5ab8285e6e4.bin"
-   },
-   "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/",
-    "accession": "0001441816-25-000176",
-    "cache_file": "data/cache/94b9950b67137a8784fd6f09.bin"
-   },
-   "earnings": {
-    "revenue_actual": null,
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": {
-     "value": 591.4,
-     "unit": "USD_millions",
-     "snippet": "Total revenue was $591.4 million",
-     "pattern": "Total revenue was \\$(\\d+(?:\\.\\d+)?) million",
-     "flags": 0,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
-     "source_sha256": "87eb6dea08b64ccc6002dcd601d1143576bf14220cf61c886f3ce0dcbf0ff6de",
-     "extractor": "regex-v1:MDB:revenue_actual",
-     "verified": true
-    },
-    "eps_diluted": null,
-    "gross_margin": null
-   },
-   "commentary": {
-    "text": "CJ brings an exceptional blend of product and engineering leadership, strong go-to-market execution, and firsthand experience scaling some of the world's most transformative software companies,",
-    "speaker": "Tom Killalea, Chairman of the MongoDB Board of Directors",
-    "snippet": "\"CJ brings an exceptional blend of product and engineering leadership, strong go-to-market execution, and firsthand experience scaling some of the world's most transformative software companies,\" said Tom Killalea, Chairman of the MongoDB Board of Directors",
-    "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/a2025-11x03xpressrelease.htm",
-    "source_sha256": "ae34bf2bc4e308acdfb21bff8ab4097a71c93db876e602ad687399ef61e1932e"
-   },
-   "surprise": null,
-   "validation": {
-    "checks": [
-     {
-      "field": "revenue_actual",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_prior_actual",
-      "ok": true,
-      "detail": "ok"
-     },
-     {
-      "field": "eps_diluted",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
-     }
-    ],
-    "missing_required": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
-    "required_fields": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "optional_fields": {
-     "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
-    }
-   },
-   "status": "data_incomplete"
   },
   {
    "event_id": "PLTR-2025-11-03",
@@ -4269,10 +3878,10 @@
     "cache_file": "data/cache/23a8fe1915eb086e97bb9d6f.bin"
    },
    "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/fq12026businessupdatev9ms.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/",
-    "accession": "0001628280-25-045989",
-    "cache_file": "data/cache/b40f63d9d90d9e1be8d01172.bin"
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/",
+    "accession": "0001375365-25-000023",
+    "cache_file": "data/cache/1844d0f0d787260a453ee1a0.bin"
    },
    "earnings": {
     "revenue_actual": {
@@ -4286,9 +3895,43 @@
      "extractor": "regex-v1:SMCI:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": null,
+    "revenue_guidance_prior": {
+     "value": 6500.0,
+     "unit": "USD_millions",
+     "snippet": "The Company expects net sales of $6.0 billion to $7.0 billion",
+     "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+     "source_sha256": "9bd605cf9bee43cf5c3a3a2aef905de8e48d1948d5392222b768ce7f87f9e9a6",
+     "extractor": "regex-v1:SMCI:revenue_guidance",
+     "low": 6000.0,
+     "high": 7000.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 10500.0,
+     "unit": "USD_millions",
+     "snippet": "The Company expects net sales of $10.0 billion to $11.0 billion",
+     "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
+     "source_sha256": "1f28b3649106c2f19999d449d29a8001c88b4237a31bcf0b4781cfb5e357d6c2",
+     "extractor": "regex-v1:SMCI:revenue_guidance",
+     "low": 10000.0,
+     "high": 11000.0,
+     "verified": true
+    },
+    "revenue_prior_actual": {
+     "value": 5800.0,
+     "unit": "USD_millions",
+     "snippet": "Net sales of $5.8 billion versus",
+     "pattern": "Net sales of \\$(\\d+(?:\\.\\d+)?) billion versus",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+     "source_sha256": "9bd605cf9bee43cf5c3a3a2aef905de8e48d1948d5392222b768ce7f87f9e9a6",
+     "extractor": "regex-v1:SMCI:revenue_actual",
+     "verified": true
+    },
     "eps_diluted": null,
     "gross_margin": null
    },
@@ -4299,7 +3942,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
     "source_sha256": "1f28b3649106c2f19999d449d29a8001c88b4237a31bcf0b4781cfb5e357d6c2"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 6500.0,
+    "revenue_actual": 5000.0,
+    "guidance_surprise_pct": -23.077,
+    "vs_guidance_band": "below",
+    "next_quarter_guidance_mid": 10500.0,
+    "guided_sequential_growth_pct": 110.0,
+    "prior_guided_sequential_growth_pct": 12.069,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -4309,18 +3963,18 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_prior_actual",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "eps_diluted",
@@ -4333,12 +3987,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -4350,7 +4000,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "AMD-2025-11-04",
@@ -4704,48 +4354,109 @@
    "release_ms": 1763586992000,
    "release_session": "after_market",
    "source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex992pressrelease.htm",
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
     "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/",
-    "sha256": null,
-    "cache_file": "data/cache/db228df1f9404918a3b4a4e8.bin"
+    "sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+    "cache_file": "data/cache/54b5ad72cc0c32ee268e1f8b.bin"
    },
    "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex992q425pressrelease.htm",
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm",
     "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/",
     "accession": "0001327567-25-000024",
-    "cache_file": "data/cache/022a9ba7ac5a795131161f0a.bin"
+    "cache_file": "data/cache/16db331a1f38f468cf7df9da.bin"
    },
    "earnings": {
-    "revenue_actual": null,
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": null,
+    "revenue_actual": {
+     "value": 2500.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenue for the fiscal first quarter 2026 grew 16% year over year to $2.5 billion",
+     "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+     "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+     "extractor": "regex-v1:PANW:revenue_actual",
+     "verified": true
+    },
+    "revenue_guidance_prior": {
+     "value": 2460.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenue in the range of $2.45 billion to $2.47 billion",
+     "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm",
+     "source_sha256": "fe4c7add4f5ebfd8bc52f38da252e9d129f0f8464cd2ce585471081e8f1512d7",
+     "extractor": "regex-v1:PANW:revenue_guidance",
+     "low": 2450.0,
+     "high": 2470.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 2580.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenue in the range of $2.57 billion to $2.59 billion",
+     "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+     "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+     "extractor": "regex-v1:PANW:revenue_guidance",
+     "low": 2570.0,
+     "high": 2590.0,
+     "verified": true
+    },
+    "revenue_prior_actual": {
+     "value": 2500.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenue for the fiscal fourth quarter 2025 grew 16% year over year to $2.5 billion",
+     "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm",
+     "source_sha256": "fe4c7add4f5ebfd8bc52f38da252e9d129f0f8464cd2ce585471081e8f1512d7",
+     "extractor": "regex-v1:PANW:revenue_actual",
+     "verified": true
+    },
     "eps_diluted": null,
     "gross_margin": null
    },
-   "commentary": null,
-   "surprise": null,
+   "commentary": {
+    "text": "Our strong start to the fiscal year was marked by excellent results across all metrics, and significant platformization wins,",
+    "speaker": "Nikesh Arora, chairman and CEO of Palo Alto Networks",
+    "snippet": "\"Our strong start to the fiscal year was marked by excellent results across all metrics, and significant platformization wins,\" said Nikesh Arora, chairman and CEO of Palo Alto Networks",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+    "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029"
+   },
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 2460.0,
+    "revenue_actual": 2500.0,
+    "guidance_surprise_pct": 1.626,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 2580.0,
+    "guided_sequential_growth_pct": 3.2,
+    "prior_guided_sequential_growth_pct": -1.6,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
       "field": "revenue_actual",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_prior_actual",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "eps_diluted",
@@ -4758,13 +4469,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -4776,7 +4482,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "NVDA-2025-11-19",
@@ -4966,10 +4672,10 @@
     "cache_file": "data/cache/ef5520620cdabf237a73eb9e.bin"
    },
    "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/a2025-11x03xpressrelease.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025047941/",
-    "accession": "0001628280-25-047941",
-    "cache_file": "data/cache/f468adb6d24dd5ab8285e6e4.bin"
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/",
+    "accession": "0001441816-25-000176",
+    "cache_file": "data/cache/94b9950b67137a8784fd6f09.bin"
    },
    "earnings": {
     "revenue_actual": {
@@ -4983,9 +4689,43 @@
      "extractor": "regex-v1:MDB:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": null,
+    "revenue_guidance_prior": {
+     "value": 589.5,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $587.0 million to $592.0 million",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+     "source_sha256": "87eb6dea08b64ccc6002dcd601d1143576bf14220cf61c886f3ce0dcbf0ff6de",
+     "extractor": "regex-v1:MDB:revenue_guidance",
+     "low": 587.0,
+     "high": 592.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 667.5,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $665.0 million to $670.0 million",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
+     "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62",
+     "extractor": "regex-v1:MDB:revenue_guidance",
+     "low": 665.0,
+     "high": 670.0,
+     "verified": true
+    },
+    "revenue_prior_actual": {
+     "value": 591.4,
+     "unit": "USD_millions",
+     "snippet": "Total revenue was $591.4 million",
+     "pattern": "Total revenue was \\$(\\d+(?:\\.\\d+)?) million",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000144181625000176/mdb-73125xex991xrelease.htm",
+     "source_sha256": "87eb6dea08b64ccc6002dcd601d1143576bf14220cf61c886f3ce0dcbf0ff6de",
+     "extractor": "regex-v1:MDB:revenue_actual",
+     "verified": true
+    },
     "eps_diluted": null,
     "gross_margin": {
      "value": 71.0,
@@ -5006,7 +4746,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
     "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 589.5,
+    "revenue_actual": 628.3,
+    "guidance_surprise_pct": 6.582,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 667.5,
+    "guided_sequential_growth_pct": 6.239,
+    "prior_guided_sequential_growth_pct": -0.321,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -5016,18 +4767,18 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_prior_actual",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "eps_diluted",
@@ -5040,12 +4791,8 @@
       "detail": "ok"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -5057,7 +4804,7 @@
      "gross_margin": "reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "CRWD-2025-12-02",
@@ -5437,7 +5184,19 @@
      "high": 10290.0,
      "verified": true
     },
-    "revenue_guidance_next": null,
+    "revenue_guidance_next": {
+     "value": 11180.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $11.13 - $11.23 billion",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000234/crm-q3fy26xexhibit991.htm",
+     "source_sha256": "1d77f14d4441017d26b4ff0808f5f2b704c161491fe01eb259bd9016ffebda79",
+     "extractor": "regex-v1:CRM:revenue_guidance",
+     "low": 11130.0,
+     "high": 11230.0,
+     "verified": true
+    },
     "revenue_prior_actual": {
      "value": 10200.0,
      "unit": "USD_millions",
@@ -5459,7 +5218,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000234/crm-q3fy26xexhibit991.htm",
     "source_sha256": "1d77f14d4441017d26b4ff0808f5f2b704c161491fe01eb259bd9016ffebda79"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 10265.0,
+    "revenue_actual": 10300.0,
+    "guidance_surprise_pct": 0.341,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 11180.0,
+    "guided_sequential_growth_pct": 8.544,
+    "prior_guided_sequential_growth_pct": 0.637,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -5474,8 +5244,8 @@
      },
      {
       "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_prior_actual",
@@ -5493,10 +5263,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -5508,7 +5276,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "HPE-2025-12-04",
@@ -5540,10 +5308,10 @@
     "cache_file": "data/cache/bcdc38c3c63813806d437657.bin"
    },
    "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000111/ex-991x10152025x8k.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000111/",
-    "accession": "0001645590-25-000111",
-    "cache_file": "data/cache/a58836c8b96e9ae73184c5b0.bin"
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/",
+    "accession": "0001645590-25-000096",
+    "cache_file": "data/cache/a644c5c6d6491ca54e6d2aee.bin"
    },
    "earnings": {
     "revenue_actual": {
@@ -5557,7 +5325,19 @@
      "extractor": "regex-v1:HPE:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
+    "revenue_guidance_prior": {
+     "value": 9900.0,
+     "unit": "USD_millions",
+     "snippet": "HPE estimates revenue to be in the range of $9.7 billion and $10.1 billion",
+     "pattern": "HPE estimates revenue to be in the range of \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+     "source_sha256": "4fdb6ae67617de345d0f64dd3c1f9d38bc47288bfefa52bd72118dbc93649daf",
+     "extractor": "regex-v1:HPE:revenue_guidance",
+     "low": 9700.0,
+     "high": 10100.0,
+     "verified": true
+    },
     "revenue_guidance_next": {
      "value": 9200.0,
      "unit": "USD_millions",
@@ -5571,7 +5351,17 @@
      "high": 9400.0,
      "verified": true
     },
-    "revenue_prior_actual": null,
+    "revenue_prior_actual": {
+     "value": 9100.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue : $9.1 billion, up 19% from the prior-year period",
+     "pattern": "Revenue : \\$(\\d+(?:\\.\\d+)?) billion, (?:up|down) \\d+% from the prior-year period",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000096/ex-991x932025x8k.htm",
+     "source_sha256": "4fdb6ae67617de345d0f64dd3c1f9d38bc47288bfefa52bd72118dbc93649daf",
+     "extractor": "regex-v1:HPE:revenue_actual",
+     "verified": true
+    },
     "eps_diluted": null,
     "gross_margin": null
    },
@@ -5582,7 +5372,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000126/ex-991x1242025x8k.htm",
     "source_sha256": "75696972dde8bded81002701b33da98db8277aea1c33c34e81fd8e4ca7255ccc"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 9900.0,
+    "revenue_actual": 9700.0,
+    "guidance_surprise_pct": -2.02,
+    "vs_guidance_band": "inside",
+    "next_quarter_guidance_mid": 9200.0,
+    "guided_sequential_growth_pct": -5.155,
+    "prior_guided_sequential_growth_pct": 8.791,
+    "guidance_direction": "lowered"
+   },
    "validation": {
     "checks": [
      {
@@ -5592,8 +5393,8 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
@@ -5602,8 +5403,8 @@
      },
      {
       "field": "revenue_prior_actual",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "eps_diluted",
@@ -5616,11 +5417,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior",
-     "revenue_prior_actual"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -5632,7 +5430,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "AVGO-2025-12-11",
@@ -6961,8 +6759,32 @@
      "extractor": "regex-v1:SMCI:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
+    "revenue_guidance_prior": {
+     "value": 10500.0,
+     "unit": "USD_millions",
+     "snippet": "The Company expects net sales of $10.0 billion to $11.0 billion",
+     "pattern": "The Company expects net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
+     "source_sha256": "1f28b3649106c2f19999d449d29a8001c88b4237a31bcf0b4781cfb5e357d6c2",
+     "extractor": "regex-v1:SMCI:revenue_guidance",
+     "low": 10000.0,
+     "high": 11000.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 12300.0,
+     "unit": "USD_millions",
+     "snippet": "The Company expects net sales of at least $12.3 billion for the",
+     "pattern": "The Company expects net sales of at least \\$(\\d+(?:\\.\\d+)?) billion for the",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
+     "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083",
+     "extractor": "regex-v1:SMCI:revenue_guidance",
+     "low": 12300.0,
+     "high": 12300.0,
+     "verified": true
+    },
     "revenue_prior_actual": {
      "value": 5000.0,
      "unit": "USD_millions",
@@ -6984,7 +6806,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
     "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 10500.0,
+    "revenue_actual": 12700.0,
+    "guidance_surprise_pct": 20.952,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 12300.0,
+    "guided_sequential_growth_pct": -3.15,
+    "prior_guided_sequential_growth_pct": 110.0,
+    "guidance_direction": "lowered"
+   },
    "validation": {
     "checks": [
      {
@@ -6994,13 +6827,13 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_prior_actual",
@@ -7018,11 +6851,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior",
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -7034,7 +6864,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "QCOM-2026-02-04",
@@ -7374,10 +7204,10 @@
     "cache_file": "data/cache/fe40d41621856b97e697293c.bin"
    },
    "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex992pressrelease.htm",
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
     "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/",
     "accession": "0001327567-25-000032",
-    "cache_file": "data/cache/db228df1f9404918a3b4a4e8.bin"
+    "cache_file": "data/cache/54b5ad72cc0c32ee268e1f8b.bin"
    },
    "earnings": {
     "revenue_actual": {
@@ -7391,7 +7221,19 @@
      "extractor": "regex-v1:PANW:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
+    "revenue_guidance_prior": {
+     "value": 2580.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenue in the range of $2.57 billion to $2.59 billion",
+     "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+     "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+     "extractor": "regex-v1:PANW:revenue_guidance",
+     "low": 2570.0,
+     "high": 2590.0,
+     "verified": true
+    },
     "revenue_guidance_next": {
      "value": 2943.0,
      "unit": "USD_millions",
@@ -7405,7 +7247,17 @@
      "high": 2945.0,
      "verified": true
     },
-    "revenue_prior_actual": null,
+    "revenue_prior_actual": {
+     "value": 2500.0,
+     "unit": "USD_millions",
+     "snippet": "Total revenue for the fiscal first quarter 2026 grew 16% year over year to $2.5 billion",
+     "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm",
+     "source_sha256": "0e193ce4a9bb3d8642c6575aa3c922bf714cfa6aba25febccdb5f92a83f5d029",
+     "extractor": "regex-v1:PANW:revenue_actual",
+     "verified": true
+    },
     "eps_diluted": null,
     "gross_margin": null
    },
@@ -7416,7 +7268,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000003/ex991q226earningsrelease.htm",
     "source_sha256": "b526acaf90a0ee2fab645d8dbbfd56d8d087a98ff2f1e458c4b4630f0ecd2f9a"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 2580.0,
+    "revenue_actual": 2600.0,
+    "guidance_surprise_pct": 0.775,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 2943.0,
+    "guided_sequential_growth_pct": 13.192,
+    "prior_guided_sequential_growth_pct": 3.2,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -7426,8 +7289,8 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
@@ -7436,8 +7299,8 @@
      },
      {
       "field": "revenue_prior_actual",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "eps_diluted",
@@ -7450,11 +7313,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior",
-     "revenue_prior_actual"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -7466,7 +7326,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "CRM-2026-02-25",
@@ -7515,8 +7375,32 @@
      "extractor": "regex-v1:CRM:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
-    "revenue_guidance_next": null,
+    "revenue_guidance_prior": {
+     "value": 11180.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $11.13 - $11.23 billion",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000234/crm-q3fy26xexhibit991.htm",
+     "source_sha256": "1d77f14d4441017d26b4ff0808f5f2b704c161491fe01eb259bd9016ffebda79",
+     "extractor": "regex-v1:CRM:revenue_guidance",
+     "low": 11130.0,
+     "high": 11230.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 11055.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $11.03 - $11.08 billion",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000056/crm-q4fy26xexhibit991.htm",
+     "source_sha256": "e0d7391684a2ff88475758bc5314513037a5b464b00d1261699454832795ec60",
+     "extractor": "regex-v1:CRM:revenue_guidance",
+     "low": 11030.0,
+     "high": 11080.0,
+     "verified": true
+    },
     "revenue_prior_actual": {
      "value": 10300.0,
      "unit": "USD_millions",
@@ -7538,7 +7422,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000056/crm-q4fy26xexhibit991.htm",
     "source_sha256": "e0d7391684a2ff88475758bc5314513037a5b464b00d1261699454832795ec60"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 11180.0,
+    "revenue_actual": 11200.0,
+    "guidance_surprise_pct": 0.179,
+    "vs_guidance_band": "inside",
+    "next_quarter_guidance_mid": 11055.0,
+    "guided_sequential_growth_pct": -1.295,
+    "prior_guided_sequential_growth_pct": 8.544,
+    "guidance_direction": "lowered"
+   },
    "validation": {
     "checks": [
      {
@@ -7548,13 +7443,13 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_prior_actual",
@@ -7572,11 +7467,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior",
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -7588,7 +7480,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "NVDA-2026-02-25",
@@ -7811,7 +7703,19 @@
      "extractor": "regex-v1:MDB:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
+    "revenue_guidance_prior": {
+     "value": 667.5,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $665.0 million to $670.0 million",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) million to \\$(\\d+(?:\\.\\d+)?) million",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828025054425/mdb-103125xex991xrelease.htm",
+     "source_sha256": "5de7f8f9b2d4b1281040f5ac47845c1cf1113390f841940dba057c085da45e62",
+     "extractor": "regex-v1:MDB:revenue_guidance",
+     "low": 665.0,
+     "high": 670.0,
+     "verified": true
+    },
     "revenue_guidance_next": {
      "value": 661.5,
      "unit": "USD_millions",
@@ -7856,7 +7760,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1441816/000162828026013199/mdb-13126xex991xrelease.htm",
     "source_sha256": "b0c3ef8531447b62a0aa603224550cc1111372ac39722d983dffae1effaf81af"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 667.5,
+    "revenue_actual": 695.1,
+    "guidance_surprise_pct": 4.135,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 661.5,
+    "guided_sequential_growth_pct": -4.834,
+    "prior_guided_sequential_growth_pct": 6.239,
+    "guidance_direction": "lowered"
+   },
    "validation": {
     "checks": [
      {
@@ -7866,8 +7781,8 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
@@ -7890,10 +7805,8 @@
       "detail": "ok"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -7905,7 +7818,7 @@
      "gross_margin": "reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "CRWD-2026-03-03",
@@ -9850,7 +9763,19 @@
      "extractor": "regex-v1:SMCI:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
+    "revenue_guidance_prior": {
+     "value": 12300.0,
+     "unit": "USD_millions",
+     "snippet": "The Company expects net sales of at least $12.3 billion for the",
+     "pattern": "The Company expects net sales of at least \\$(\\d+(?:\\.\\d+)?) billion for the",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
+     "source_sha256": "05583330f46dee76dc56e16039b6590734fd7c81e2cc025bb8e28dd0489ad083",
+     "extractor": "regex-v1:SMCI:revenue_guidance",
+     "low": 12300.0,
+     "high": 12300.0,
+     "verified": true
+    },
     "revenue_guidance_next": {
      "value": 11750.0,
      "unit": "USD_millions",
@@ -9885,7 +9810,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
     "source_sha256": "59baa19738c71612928b9aff859f150b1f47384507f4a71df90706cb563eb3eb"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 12300.0,
+    "revenue_actual": 10200.0,
+    "guidance_surprise_pct": -17.073,
+    "vs_guidance_band": "below",
+    "next_quarter_guidance_mid": 11750.0,
+    "guided_sequential_growth_pct": 15.196,
+    "prior_guided_sequential_growth_pct": -3.15,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -9895,8 +9831,8 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
@@ -9919,10 +9855,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -9934,7 +9868,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "AMD-2026-05-05",
@@ -10495,7 +10429,19 @@
      "extractor": "regex-v1:CRM:revenue_actual",
      "verified": true
     },
-    "revenue_guidance_prior": null,
+    "revenue_guidance_prior": {
+     "value": 11055.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $11.03 - $11.08 billion",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) - \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000056/crm-q4fy26xexhibit991.htm",
+     "source_sha256": "e0d7391684a2ff88475758bc5314513037a5b464b00d1261699454832795ec60",
+     "extractor": "regex-v1:CRM:revenue_guidance",
+     "low": 11030.0,
+     "high": 11080.0,
+     "verified": true
+    },
     "revenue_guidance_next": {
      "value": 11310.0,
      "unit": "USD_millions",
@@ -10530,7 +10476,18 @@
     "source_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000125/crm-q1fy27xexhibit991.htm",
     "source_sha256": "e1d5e82d25abe8731153d3e829d53347c755cfc95b70bdc1e8eb255850591047"
    },
-   "surprise": null,
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 11055.0,
+    "revenue_actual": 11100.0,
+    "guidance_surprise_pct": 0.407,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 11310.0,
+    "guided_sequential_growth_pct": 1.892,
+    "prior_guided_sequential_growth_pct": -1.295,
+    "guidance_direction": "raised"
+   },
    "validation": {
     "checks": [
      {
@@ -10540,8 +10497,8 @@
      },
      {
       "field": "revenue_guidance_prior",
-      "ok": false,
-      "detail": "not found in source"
+      "ok": true,
+      "detail": "ok"
      },
      {
       "field": "revenue_guidance_next",
@@ -10564,10 +10521,8 @@
       "detail": "not found in source"
      }
     ],
-    "missing_required": [
-     "revenue_guidance_prior"
-    ],
-    "all_required_verified": false,
+    "missing_required": [],
+    "all_required_verified": true,
     "required_fields": [
      "revenue_actual",
      "revenue_guidance_prior",
@@ -10579,7 +10534,7 @@
      "gross_margin": "not_reported"
     }
    },
-   "status": "data_incomplete"
+   "status": "complete"
   },
   {
    "event_id": "MDB-2026-05-28",
@@ -11524,112 +11479,6 @@
     }
    },
    "status": "complete"
-  },
-  {
-   "event_id": "SMCI-2026-07-21",
-   "consensus": null,
-   "ticker": "SMCI",
-   "company_symbol": "SMCIUSDT",
-   "sector_group": "hardware",
-   "cik": 1375365,
-   "accession": "0001375365-26-000019",
-   "release_utc": "2026-07-21T20:10:55Z",
-   "release_ms": 1784664655000,
-   "release_session": "after_market",
-   "source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/fq42026businessupdate.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/",
-    "sha256": null,
-    "cache_file": "data/cache/74385335af6fd2856526327a.bin"
-   },
-   "prior_source": {
-    "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
-    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/",
-    "accession": "0001375365-26-000013",
-    "cache_file": "data/cache/f90e4981e367bb084dda5603.bin"
-   },
-   "earnings": {
-    "revenue_actual": null,
-    "revenue_guidance_prior": {
-     "value": 11750.0,
-     "unit": "USD_millions",
-     "snippet": "The Company expects net sales in the range of $11.0 billion and $12.5 billion",
-     "pattern": "The Company expects net sales in the range of \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
-     "flags": 0,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
-     "source_sha256": "59baa19738c71612928b9aff859f150b1f47384507f4a71df90706cb563eb3eb",
-     "extractor": "regex-v1:SMCI:revenue_guidance",
-     "low": 11000.0,
-     "high": 12500.0,
-     "verified": true
-    },
-    "revenue_guidance_next": null,
-    "revenue_prior_actual": {
-     "value": 10200.0,
-     "unit": "USD_millions",
-     "snippet": "Net sales of $10.2 billion versus",
-     "pattern": "Net sales of \\$(\\d+(?:\\.\\d+)?) billion versus",
-     "flags": 0,
-     "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000013/exhibit991_20260331.htm",
-     "source_sha256": "59baa19738c71612928b9aff859f150b1f47384507f4a71df90706cb563eb3eb",
-     "extractor": "regex-v1:SMCI:revenue_actual",
-     "verified": true
-    },
-    "eps_diluted": null,
-    "gross_margin": null
-   },
-   "commentary": null,
-   "surprise": null,
-   "validation": {
-    "checks": [
-     {
-      "field": "revenue_actual",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_guidance_prior",
-      "ok": true,
-      "detail": "ok"
-     },
-     {
-      "field": "revenue_guidance_next",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "revenue_prior_actual",
-      "ok": true,
-      "detail": "ok"
-     },
-     {
-      "field": "eps_diluted",
-      "ok": false,
-      "detail": "not found in source"
-     },
-     {
-      "field": "gross_margin",
-      "ok": false,
-      "detail": "not found in source"
-     }
-    ],
-    "missing_required": [
-     "revenue_actual",
-     "revenue_guidance_next"
-    ],
-    "all_required_verified": false,
-    "required_fields": [
-     "revenue_actual",
-     "revenue_guidance_prior",
-     "revenue_guidance_next",
-     "revenue_prior_actual"
-    ],
-    "optional_fields": {
-     "eps_diluted": "not_reported",
-     "gross_margin": "not_reported"
-    }
-   },
-   "status": "data_incomplete"
   },
   {
    "event_id": "TXN-2026-07-22",
@@ -14340,72 +14189,6 @@
  ],
  "rows": [
   {
-   "event_id": "HPE-2025-10-15",
-   "_release_ms": 1760561266000,
-   "params": {
-    "mode": 1,
-    "k": 2.0,
-    "source": "prior (only 0 eligible training events)",
-    "n_train": 0
-   },
-   "decision": {
-    "decision": "NO_TRADE",
-    "reasons": [
-     "event_data",
-     "market_data"
-    ],
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": false,
-      "detail": "HPEUSDT not listed on Bitget for this window; QQQUSDT not listed on Bitget for this window; sector basket has 0 usable peers (need 2)"
-     },
-     "ai_interpretation": {
-      "pass": true,
-      "detail": "AI gate disabled for this run"
-     }
-    },
-    "size": 0.0
-   },
-   "variant": {
-    "variant": "residual",
-    "source": "prior (only 0 eligible training events)",
-    "scores": {
-     "residual": 0,
-     "headline": 0,
-     "agreement": 0,
-     "consensus": 0
-    }
-   },
-   "interpretation": null,
-   "residual": null,
-   "naive": null,
-   "unhedged": null,
-   "analysis": {
-    "event_id": "HPE-2025-10-15",
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": false,
-      "detail": "HPEUSDT not listed on Bitget for this window; QQQUSDT not listed on Bitget for this window; sector basket has 0 usable peers (need 2)"
-     }
-    },
-    "times": {
-     "t_pre": 1760558400000,
-     "t_obs": 1760565600000,
-     "t_exit": 1760652000000,
-     "t_start": 1758744000000
-    },
-    "peers": []
-   }
-  },
-  {
    "event_id": "TXN-2025-10-21",
    "_release_ms": 1761077100000,
    "params": {
@@ -14474,72 +14257,6 @@
      "MRVLUSDT",
      "NVDAUSDT"
     ]
-   }
-  },
-  {
-   "event_id": "SMCI-2025-10-23",
-   "_release_ms": 1761224942000,
-   "params": {
-    "mode": 1,
-    "k": 2.0,
-    "source": "prior (only 0 eligible training events)",
-    "n_train": 0
-   },
-   "decision": {
-    "decision": "NO_TRADE",
-    "reasons": [
-     "event_data",
-     "market_data"
-    ],
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": false,
-      "detail": "SMCIUSDT not listed on Bitget for this window; QQQUSDT not listed on Bitget for this window; sector basket has 0 usable peers (need 2)"
-     },
-     "ai_interpretation": {
-      "pass": true,
-      "detail": "AI gate disabled for this run"
-     }
-    },
-    "size": 0.0
-   },
-   "variant": {
-    "variant": "residual",
-    "source": "prior (only 0 eligible training events)",
-    "scores": {
-     "residual": 0,
-     "headline": 0,
-     "agreement": 0,
-     "consensus": 0
-    }
-   },
-   "interpretation": null,
-   "residual": null,
-   "naive": null,
-   "unhedged": null,
-   "analysis": {
-    "event_id": "SMCI-2025-10-23",
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": false,
-      "detail": "SMCIUSDT not listed on Bitget for this window; QQQUSDT not listed on Bitget for this window; sector basket has 0 usable peers (need 2)"
-     }
-    },
-    "times": {
-     "t_pre": 1761224400000,
-     "t_obs": 1761231600000,
-     "t_exit": 1761318000000,
-     "t_start": 1759410000000
-    },
-    "peers": []
    }
   },
   {
@@ -14694,13 +14411,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -14731,8 +14447,8 @@
     "event_id": "KLAC-2025-10-29",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -14825,76 +14541,6 @@
    }
   },
   {
-   "event_id": "MDB-2025-11-03",
-   "_release_ms": 1762176670000,
-   "params": {
-    "mode": 1,
-    "k": 2.0,
-    "source": "prior (only 0 eligible training events)",
-    "n_train": 0
-   },
-   "decision": {
-    "decision": "NO_TRADE",
-    "reasons": [
-     "event_data",
-     "market_data"
-    ],
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": false,
-      "detail": "MDBUSDT not listed on Bitget for this window; QQQUSDT history covers 29% of 21d lookback"
-     },
-     "ai_interpretation": {
-      "pass": true,
-      "detail": "AI gate disabled for this run"
-     }
-    },
-    "size": 0.0
-   },
-   "variant": {
-    "variant": "residual",
-    "source": "prior (only 0 eligible training events)",
-    "scores": {
-     "residual": 0,
-     "headline": 0,
-     "agreement": 0,
-     "consensus": 0
-    }
-   },
-   "interpretation": null,
-   "residual": null,
-   "naive": null,
-   "unhedged": null,
-   "analysis": {
-    "event_id": "MDB-2025-11-03",
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": false,
-      "detail": "MDBUSDT not listed on Bitget for this window; QQQUSDT history covers 29% of 21d lookback"
-     }
-    },
-    "times": {
-     "t_pre": 1762174800000,
-     "t_obs": 1762182000000,
-     "t_exit": 1762268400000,
-     "t_start": 1760360400000
-    },
-    "peers": [
-     "MSFTUSDT",
-     "ORCLUSDT",
-     "PLTRUSDT"
-    ]
-   }
-  },
-  {
    "event_id": "PLTR-2025-11-03",
    "_release_ms": 1762203980000,
    "params": {
@@ -14974,13 +14620,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -15011,8 +14656,8 @@
     "event_id": "SMCI-2025-11-04",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -15182,13 +14827,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -15219,8 +14863,8 @@
     "event_id": "PANW-2025-11-19",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_prior, revenue_guidance_next, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -15331,12 +14975,12 @@
    },
    "residual": {
     "net": -82.18420373884288,
-    "net_conservative": -87.39367793163092,
+    "net_conservative": -87.35957789966133,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.209474192788024,
+    "funding_conservative": -5.175374160818448,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -15377,11 +15021,11 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.160203900288153,
+      "funding_conservative": -4.126103868318577,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.58320402574794
+      "net_conservative": -53.54910399377836
      }
     ],
     "attribution": {
@@ -15476,12 +15120,12 @@
    },
    "v_residual": {
     "net": -82.18420373884288,
-    "net_conservative": -87.39367793163092,
+    "net_conservative": -87.35957789966133,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.209474192788024,
+    "funding_conservative": -5.175374160818448,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -15522,22 +15166,22 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.160203900288153,
+      "funding_conservative": -4.126103868318577,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.58320402574794
+      "net_conservative": -53.54910399377836
      }
     ]
    },
    "v_headline": {
     "net": -82.18420373884288,
-    "net_conservative": -87.39367793163092,
+    "net_conservative": -87.35957789966133,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.209474192788024,
+    "funding_conservative": -5.175374160818448,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -15578,22 +15222,22 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.160203900288153,
+      "funding_conservative": -4.126103868318577,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.58320402574794
+      "net_conservative": -53.54910399377836
      }
     ]
    },
    "v_agreement": {
     "net": -82.18420373884288,
-    "net_conservative": -87.39367793163092,
+    "net_conservative": -87.35957789966133,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.209474192788024,
+    "funding_conservative": -5.175374160818448,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -15634,22 +15278,22 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.160203900288153,
+      "funding_conservative": -4.126103868318577,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.58320402574794
+      "net_conservative": -53.54910399377836
      }
     ]
    },
    "v_consensus": {
     "net": -82.18420373884288,
-    "net_conservative": -87.39367793163092,
+    "net_conservative": -87.35957789966133,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.209474192788024,
+    "funding_conservative": -5.175374160818448,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -15690,15 +15334,15 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.160203900288153,
+      "funding_conservative": -4.126103868318577,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.58320402574794
+      "net_conservative": -53.54910399377836
      }
     ]
    },
-   "balance_after": 99912.60632206837,
+   "balance_after": 99912.64042210033,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -122.34891774431252,
@@ -15885,13 +15529,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -15908,10 +15551,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -15922,8 +15565,8 @@
     "event_id": "MDB-2025-12-01",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -15977,10 +15620,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -16066,10 +15709,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": {
@@ -16285,13 +15928,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_next"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -16308,10 +15950,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -16322,8 +15964,8 @@
     "event_id": "CRM-2025-12-03",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_next"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -16355,13 +15997,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -16378,10 +16019,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -16392,8 +16033,8 @@
     "event_id": "HPE-2025-12-04",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -16443,10 +16084,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -16514,10 +16155,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -16605,10 +16246,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": {
@@ -16846,10 +16487,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -16941,10 +16582,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": {
@@ -16974,12 +16615,12 @@
    },
    "residual": {
     "net": 21.11925610808415,
-    "net_conservative": 17.92960655357053,
+    "net_conservative": 17.93980198653611,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.1896495545136223,
+    "funding_conservative": -3.179454121548041,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -17020,11 +16661,11 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2438428218008744,
+      "funding_conservative": -1.2336473888352932,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.061918269795328
+      "net_conservative": 10.072113702760909
      }
     ],
     "attribution": {
@@ -17119,12 +16760,12 @@
    },
    "v_residual": {
     "net": 21.11925610808415,
-    "net_conservative": 17.92960655357053,
+    "net_conservative": 17.93980198653611,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.1896495545136223,
+    "funding_conservative": -3.179454121548041,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -17165,22 +16806,22 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2438428218008744,
+      "funding_conservative": -1.2336473888352932,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.061918269795328
+      "net_conservative": 10.072113702760909
      }
     ]
    },
    "v_headline": {
     "net": 21.11925610808415,
-    "net_conservative": 17.92960655357053,
+    "net_conservative": 17.93980198653611,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.1896495545136223,
+    "funding_conservative": -3.179454121548041,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -17221,22 +16862,22 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2438428218008744,
+      "funding_conservative": -1.2336473888352932,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.061918269795328
+      "net_conservative": 10.072113702760909
      }
     ]
    },
    "v_agreement": {
     "net": 21.11925610808415,
-    "net_conservative": 17.92960655357053,
+    "net_conservative": 17.93980198653611,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.1896495545136223,
+    "funding_conservative": -3.179454121548041,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -17277,22 +16918,22 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2438428218008744,
+      "funding_conservative": -1.2336473888352932,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.061918269795328
+      "net_conservative": 10.072113702760909
      }
     ]
    },
    "v_consensus": {
     "net": 21.11925610808415,
-    "net_conservative": 17.92960655357053,
+    "net_conservative": 17.93980198653611,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.1896495545136223,
+    "funding_conservative": -3.179454121548041,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -17333,15 +16974,15 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2438428218008744,
+      "funding_conservative": -1.2336473888352932,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.061918269795328
+      "net_conservative": 10.072113702760909
      }
     ]
    },
-   "balance_after": 99930.53592862195,
+   "balance_after": 99930.58022408687,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 9.81349501648795,
@@ -17550,10 +17191,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.39,
-     "headline": -87.39,
-     "agreement": -87.39,
-     "consensus": -87.39
+     "residual": -87.36,
+     "headline": -87.36,
+     "agreement": -87.36,
+     "consensus": -87.36
     }
    },
    "interpretation": null,
@@ -17645,10 +17286,10 @@
     "variant": "residual",
     "source": "prior (only 2 eligible training events)",
     "scores": {
-     "residual": -51.53,
-     "headline": -51.53,
-     "agreement": -51.53,
-     "consensus": -51.53
+     "residual": -51.48,
+     "headline": -51.48,
+     "agreement": -51.48,
+     "consensus": -51.48
     }
    },
    "interpretation": {
@@ -17678,12 +17319,12 @@
    },
    "residual": {
     "net": 82.70129164022472,
-    "net_conservative": 73.53144124087993,
+    "net_conservative": 73.57390716785847,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.169850399344792,
+    "funding_conservative": -9.127384472366264,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -17724,11 +17365,11 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.180843091380076,
+      "funding_conservative": -5.1383771644015495,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.61566860339718
+      "net_conservative": 70.65813453037572
      }
     ],
     "attribution": {
@@ -17823,12 +17464,12 @@
    },
    "v_residual": {
     "net": 82.70129164022472,
-    "net_conservative": 73.53144124087993,
+    "net_conservative": 73.57390716785847,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.169850399344792,
+    "funding_conservative": -9.127384472366264,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -17869,22 +17510,22 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.180843091380076,
+      "funding_conservative": -5.1383771644015495,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.61566860339718
+      "net_conservative": 70.65813453037572
      }
     ]
    },
    "v_headline": {
     "net": 82.70129164022472,
-    "net_conservative": 73.53144124087993,
+    "net_conservative": 73.57390716785847,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.169850399344792,
+    "funding_conservative": -9.127384472366264,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -17925,22 +17566,22 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.180843091380076,
+      "funding_conservative": -5.1383771644015495,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.61566860339718
+      "net_conservative": 70.65813453037572
      }
     ]
    },
    "v_agreement": {
     "net": 82.70129164022472,
-    "net_conservative": 73.53144124087993,
+    "net_conservative": 73.57390716785847,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.169850399344792,
+    "funding_conservative": -9.127384472366264,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -17981,22 +17622,22 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.180843091380076,
+      "funding_conservative": -5.1383771644015495,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.61566860339718
+      "net_conservative": 70.65813453037572
      }
     ]
    },
    "v_consensus": {
     "net": 82.70129164022472,
-    "net_conservative": 73.53144124087993,
+    "net_conservative": 73.57390716785847,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.169850399344792,
+    "funding_conservative": -9.127384472366264,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -18037,15 +17678,15 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.180843091380076,
+      "funding_conservative": -5.1383771644015495,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.61566860339718
+      "net_conservative": 70.65813453037572
      }
     ]
    },
-   "balance_after": 100004.06736986282,
+   "balance_after": 100004.15413125472,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 6.904779945447455,
@@ -18252,10 +17893,10 @@
     "variant": "residual",
     "source": "prior (only 2 eligible training events)",
     "scores": {
-     "residual": -51.53,
-     "headline": -51.53,
-     "agreement": -51.53,
-     "consensus": -51.53
+     "residual": -51.48,
+     "headline": -51.48,
+     "agreement": -51.48,
+     "consensus": -51.48
     }
    },
    "interpretation": null,
@@ -18301,13 +17942,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -18324,10 +17964,10 @@
     "variant": "residual",
     "source": "prior (only 2 eligible training events)",
     "scores": {
-     "residual": -51.53,
-     "headline": -51.53,
-     "agreement": -51.53,
-     "consensus": -51.53
+     "residual": -51.48,
+     "headline": -51.48,
+     "agreement": -51.48,
+     "consensus": -51.48
     }
    },
    "interpretation": null,
@@ -18338,8 +17978,8 @@
     "event_id": "SMCI-2026-02-03",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -18389,10 +18029,10 @@
     "variant": "residual",
     "source": "prior (only 3 eligible training events)",
     "scores": {
-     "residual": 22.0,
-     "headline": 22.0,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": 22.09,
+     "headline": 22.09,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -18484,10 +18124,10 @@
     "variant": "residual",
     "source": "prior (only 3 eligible training events)",
     "scores": {
-     "residual": 22.0,
-     "headline": 22.0,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": 22.09,
+     "headline": 22.09,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": {
@@ -18516,12 +18156,12 @@
    },
    "residual": {
     "net": -48.13122636737221,
-    "net_conservative": -51.49875278836701,
+    "net_conservative": -51.475701782837994,
     "gross_mid": -36.56363647048583,
     "fees": 6.159922279166279,
     "slippage": 5.4076676177200795,
     "funding": 0.0,
-    "funding_conservative": -3.3675264209947953,
+    "funding_conservative": -3.3444754154657805,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -18562,11 +18202,11 @@
       "fees": 3.094955473684747,
       "slippage": 2.402145498569863,
       "funding": 0.0,
-      "funding_conservative": -2.812222674539748,
+      "funding_conservative": -2.789171669010733,
       "funding_settlements": 3,
       "gross_mid": 71.65070255135589,
       "net": 66.15360157910128,
-      "net_conservative": 63.34137890456153
+      "net_conservative": 63.36442991009054
      }
     ],
     "attribution": {
@@ -18661,12 +18301,12 @@
    },
    "v_residual": {
     "net": -48.13122636737221,
-    "net_conservative": -51.49875278836701,
+    "net_conservative": -51.475701782837994,
     "gross_mid": -36.56363647048583,
     "fees": 6.159922279166279,
     "slippage": 5.4076676177200795,
     "funding": 0.0,
-    "funding_conservative": -3.3675264209947953,
+    "funding_conservative": -3.3444754154657805,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -18707,22 +18347,22 @@
       "fees": 3.094955473684747,
       "slippage": 2.402145498569863,
       "funding": 0.0,
-      "funding_conservative": -2.812222674539748,
+      "funding_conservative": -2.789171669010733,
       "funding_settlements": 3,
       "gross_mid": 71.65070255135589,
       "net": 66.15360157910128,
-      "net_conservative": 63.34137890456153
+      "net_conservative": 63.36442991009054
      }
     ]
    },
    "v_headline": {
     "net": 24.99608293764642,
-    "net_conservative": 21.628556516651614,
+    "net_conservative": 21.65160752218064,
     "gross_mid": 36.56363647048583,
     "fees": 6.159885915119345,
     "slippage": 5.4076676177200795,
     "funding": 0.0,
-    "funding_conservative": -3.3675264209947953,
+    "funding_conservative": -3.3444754154657805,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -18763,17 +18403,17 @@
       "fees": 3.0949955137746685,
       "slippage": 2.402145498569863,
       "funding": 0.0,
-      "funding_conservative": -2.812222674539748,
+      "funding_conservative": -2.789171669010733,
       "funding_settlements": 3,
       "gross_mid": -71.65070255135589,
       "net": -77.14784356370042,
-      "net_conservative": -79.96006623824017
+      "net_conservative": -79.93701523271115
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": null,
-   "balance_after": 99952.56861707446,
+   "balance_after": 99952.67842947188,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 102.14392650134684,
@@ -18960,13 +18600,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -18983,10 +18622,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -18997,8 +18636,8 @@
     "event_id": "PANW-2026-02-17",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_prior_actual"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -19030,13 +18669,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -19053,10 +18691,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -19067,8 +18705,8 @@
     "event_id": "CRM-2026-02-25",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior, revenue_guidance_next"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -19142,10 +18780,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": {
@@ -19370,13 +19008,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -19393,10 +19030,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -19407,8 +19044,8 @@
     "event_id": "MDB-2026-03-02",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -19462,10 +19099,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -19551,10 +19188,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": {
@@ -19820,10 +19457,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": {
@@ -20070,10 +19707,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -20159,10 +19796,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -29.5,
-     "headline": 43.63,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -29.38,
+     "headline": 43.75,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": {
@@ -20196,12 +19833,12 @@
    },
    "residual": {
     "net": -44.05107325024792,
-    "net_conservative": -47.192950095193325,
+    "net_conservative": -47.177564746212184,
     "gross_mid": -35.112950575891006,
     "fees": 4.589672325009689,
     "slippage": 4.3484503493472255,
     "funding": 0.0,
-    "funding_conservative": -3.141876844945407,
+    "funding_conservative": -3.1264914959642676,
     "entry_ms": 1773871200000,
     "exit_ms": 1773932400000,
     "stopped": true,
@@ -20242,11 +19879,11 @@
       "fees": 3.076217034206345,
       "slippage": 2.0625904885820856,
       "funding": 0.0,
-      "funding_conservative": -1.8770125756989895,
+      "funding_conservative": -1.8616272267178502,
       "funding_settlements": 2,
       "gross_mid": -12.707769978268818,
       "net": -17.846577501057247,
-      "net_conservative": -19.72359007675624
+      "net_conservative": -19.708204727775097
      }
     ],
     "attribution": {
@@ -20341,12 +19978,12 @@
    },
    "v_residual": {
     "net": -44.05107325024792,
-    "net_conservative": -47.192950095193325,
+    "net_conservative": -47.177564746212184,
     "gross_mid": -35.112950575891006,
     "fees": 4.589672325009689,
     "slippage": 4.3484503493472255,
     "funding": 0.0,
-    "funding_conservative": -3.141876844945407,
+    "funding_conservative": -3.1264914959642676,
     "entry_ms": 1773871200000,
     "exit_ms": 1773932400000,
     "stopped": true,
@@ -20387,22 +20024,22 @@
       "fees": 3.076217034206345,
       "slippage": 2.0625904885820856,
       "funding": 0.0,
-      "funding_conservative": -1.8770125756989895,
+      "funding_conservative": -1.8616272267178502,
       "funding_settlements": 2,
       "gross_mid": -12.707769978268818,
       "net": -17.846577501057247,
-      "net_conservative": -19.72359007675624
+      "net_conservative": -19.708204727775097
      }
     ]
    },
    "v_headline": {
     "net": -0.2508690110249612,
-    "net_conservative": -4.9536376805450555,
+    "net_conservative": -4.930589286924775,
     "gross_mid": 8.681902302865584,
     "fees": 4.590287578669695,
     "slippage": 4.34248373522085,
     "funding": 0.0,
-    "funding_conservative": -4.702768669520093,
+    "funding_conservative": -4.679720275899814,
     "entry_ms": 1773871200000,
     "exit_ms": 1773957600000,
     "stopped": false,
@@ -20443,17 +20080,17 @@
       "fees": 3.0844613005935946,
       "slippage": 2.0681201285580033,
       "funding": 0.0,
-      "funding_conservative": -2.8119040216741555,
+      "funding_conservative": -2.7888556280538754,
       "funding_settlements": 3,
       "gross_mid": -1.037368977817923,
       "net": -6.189950406969521,
-      "net_conservative": -9.001854428643677
+      "net_conservative": -8.978806035023396
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": null,
-   "balance_after": 99905.37566697926,
+   "balance_after": 99905.50086472568,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 5.93908139594456,
@@ -20672,10 +20309,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -123.89,
-     "headline": 33.72,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -123.74,
+     "headline": 33.88,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": null,
@@ -20770,10 +20407,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -123.89,
-     "headline": 33.72,
-     "agreement": 22.0,
-     "consensus": 22.0
+     "residual": -123.74,
+     "headline": 33.88,
+     "agreement": 22.09,
+     "consensus": 22.09
     }
    },
    "interpretation": {
@@ -20803,12 +20440,12 @@
    },
    "residual": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.092197417267258,
+    "net_conservative": -6.060031091236596,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -7.892917741833241,
+    "funding_conservative": -7.860751415802585,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -20849,11 +20486,11 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.924291775739996,
+      "funding_conservative": -3.8921254497093405,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.1947085850749
+      "net_conservative": -66.16254225904424
      }
     ],
     "attribution": {
@@ -20948,12 +20585,12 @@
    },
    "v_residual": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.092197417267258,
+    "net_conservative": -6.060031091236596,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -7.892917741833241,
+    "funding_conservative": -7.860751415802585,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -20994,22 +20631,22 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.924291775739996,
+      "funding_conservative": -3.8921254497093405,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.1947085850749
+      "net_conservative": -66.16254225904424
      }
     ]
    },
    "v_headline": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.092197417267258,
+    "net_conservative": -6.060031091236596,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -7.892917741833241,
+    "funding_conservative": -7.860751415802585,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -21050,22 +20687,22 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.924291775739996,
+      "funding_conservative": -3.8921254497093405,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.1947085850749
+      "net_conservative": -66.16254225904424
      }
     ]
    },
    "v_agreement": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.092197417267258,
+    "net_conservative": -6.060031091236596,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -7.892917741833241,
+    "funding_conservative": -7.860751415802585,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -21106,16 +20743,16 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.924291775739996,
+      "funding_conservative": -3.8921254497093405,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.1947085850749
+      "net_conservative": -66.16254225904424
      }
     ]
    },
    "v_consensus": null,
-   "balance_after": 99899.283469562,
+   "balance_after": 99899.44083363443,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 64.07113713390089,
@@ -21308,7 +20945,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 6,
-    "train_pnl": -42.58619604799993,
+    "train_pnl": -42.43735122556827,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -21343,10 +20980,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -42.59,
-     "headline": 115.02,
-     "agreement": 103.3,
-     "consensus": 109.39
+     "residual": -42.44,
+     "headline": 115.18,
+     "agreement": 103.39,
+     "consensus": 109.45
     }
    },
    "interpretation": null,
@@ -21393,7 +21030,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 6,
-    "train_pnl": -42.58619604799993,
+    "train_pnl": -42.43735122556827,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -21452,10 +21089,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -42.59,
-     "headline": 115.02,
-     "agreement": 103.3,
-     "consensus": 109.39
+     "residual": -42.44,
+     "headline": 115.18,
+     "agreement": 103.39,
+     "consensus": 109.45
     }
    },
    "interpretation": {
@@ -21485,12 +21122,12 @@
    },
    "residual": {
     "net": 43.857478670116,
-    "net_conservative": 40.64868845432819,
+    "net_conservative": 40.659238181257294,
     "gross_mid": 48.82105955395552,
     "fees": 2.887415815383753,
     "slippage": 2.076165068455772,
     "funding": 0.0,
-    "funding_conservative": -3.208790215787813,
+    "funding_conservative": -3.1982404888587035,
     "entry_ms": 1777500000000,
     "exit_ms": 1777586400000,
     "stopped": false,
@@ -21531,11 +21168,11 @@
       "fees": 1.4081281913747026,
       "slippage": 0.765157611635643,
       "funding": 0.0,
-      "funding_conservative": -1.287066685351378,
+      "funding_conservative": -1.2765169584222682,
       "funding_settlements": 3,
       "gross_mid": 14.318779196699426,
       "net": 12.145493393689081,
-      "net_conservative": 10.858426708337703
+      "net_conservative": 10.868976435266813
      }
     ],
     "attribution": {
@@ -21630,12 +21267,12 @@
    },
    "v_residual": {
     "net": 43.857478670116,
-    "net_conservative": 40.64868845432819,
+    "net_conservative": 40.659238181257294,
     "gross_mid": 48.82105955395552,
     "fees": 2.887415815383753,
     "slippage": 2.076165068455772,
     "funding": 0.0,
-    "funding_conservative": -3.208790215787813,
+    "funding_conservative": -3.1982404888587035,
     "entry_ms": 1777500000000,
     "exit_ms": 1777586400000,
     "stopped": false,
@@ -21676,22 +21313,22 @@
       "fees": 1.4081281913747026,
       "slippage": 0.765157611635643,
       "funding": 0.0,
-      "funding_conservative": -1.287066685351378,
+      "funding_conservative": -1.2765169584222682,
       "funding_settlements": 3,
       "gross_mid": 14.318779196699426,
       "net": 12.145493393689081,
-      "net_conservative": 10.858426708337703
+      "net_conservative": 10.868976435266813
      }
     ]
    },
    "v_headline": {
     "net": -37.27789346789914,
-    "net_conservative": -39.42758002617863,
+    "net_conservative": -39.42054286704684,
     "gross_mid": -32.31755540062239,
     "fees": 2.884544729168578,
     "slippage": 2.0757933381081726,
     "funding": 0.0,
-    "funding_conservative": -2.149686558279493,
+    "funding_conservative": -2.142649399147701,
     "entry_ms": 1777500000000,
     "exit_ms": 1777539600000,
     "stopped": true,
@@ -21732,23 +21369,23 @@
       "fees": 1.401733278746245,
       "slippage": 0.7616807999190431,
       "funding": 0.0,
-      "funding_conservative": -0.8585334140785678,
+      "funding_conservative": -0.8514962549467762,
       "funding_settlements": 2,
       "gross_mid": -3.654731558220378,
       "net": -5.818145636885666,
-      "net_conservative": -6.676679050964234
+      "net_conservative": -6.669641891832443
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": {
     "net": -37.27789346789914,
-    "net_conservative": -39.42758002617863,
+    "net_conservative": -39.42054286704684,
     "gross_mid": -32.31755540062239,
     "fees": 2.884544729168578,
     "slippage": 2.0757933381081726,
     "funding": 0.0,
-    "funding_conservative": -2.149686558279493,
+    "funding_conservative": -2.142649399147701,
     "entry_ms": 1777500000000,
     "exit_ms": 1777539600000,
     "stopped": true,
@@ -21789,15 +21426,15 @@
       "fees": 1.401733278746245,
       "slippage": 0.7616807999190431,
       "funding": 0.0,
-      "funding_conservative": -0.8585334140785678,
+      "funding_conservative": -0.8514962549467762,
       "funding_settlements": 2,
       "gross_mid": -3.654731558220378,
       "net": -5.818145636885666,
-      "net_conservative": -6.676679050964234
+      "net_conservative": -6.669641891832443
      }
     ]
    },
-   "balance_after": 99939.93215801632,
+   "balance_after": 99940.10007181569,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -44.11406565636912,
@@ -21988,7 +21625,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 6,
-    "train_pnl": -42.58619604799993,
+    "train_pnl": -42.43735122556827,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22023,10 +21660,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -42.59,
-     "headline": 115.02,
-     "agreement": 103.3,
-     "consensus": 109.39
+     "residual": -42.44,
+     "headline": 115.18,
+     "agreement": 103.39,
+     "consensus": 109.45
     }
    },
    "interpretation": null,
@@ -22073,7 +21710,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 6,
-    "train_pnl": -42.58619604799993,
+    "train_pnl": -42.43735122556827,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22129,10 +21766,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -42.59,
-     "headline": 115.02,
-     "agreement": 103.3,
-     "consensus": 109.39
+     "residual": -42.44,
+     "headline": 115.18,
+     "agreement": 103.39,
+     "consensus": 109.45
     }
    },
    "interpretation": {
@@ -22352,7 +21989,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": 38.71118086065645,
+    "train_pnl": 38.881125136946316,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22409,10 +22046,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": 38.71,
-     "headline": 36.16,
-     "agreement": 103.3,
-     "consensus": 30.54
+     "residual": 38.88,
+     "headline": 36.34,
+     "agreement": 103.39,
+     "consensus": 30.61
     }
    },
    "interpretation": {
@@ -22629,7 +22266,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": 38.71118086065645,
+    "train_pnl": 38.881125136946316,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22643,13 +22280,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -22667,10 +22303,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": 38.71,
-     "headline": 36.16,
-     "agreement": 103.3,
-     "consensus": 30.54
+     "residual": 38.88,
+     "headline": 36.34,
+     "agreement": 103.39,
+     "consensus": 30.61
     }
    },
    "interpretation": null,
@@ -22681,8 +22317,8 @@
     "event_id": "SMCI-2026-05-05",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -22706,7 +22342,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": 38.71118086065645,
+    "train_pnl": 38.881125136946316,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22767,10 +22403,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": 38.71,
-     "headline": 36.16,
-     "agreement": 103.3,
-     "consensus": 30.54
+     "residual": 38.88,
+     "headline": 36.34,
+     "agreement": 103.39,
+     "consensus": 30.61
     }
    },
    "interpretation": {
@@ -22804,12 +22440,12 @@
    },
    "residual": {
     "net": 11.17556843988612,
-    "net_conservative": 2.2830453724806716,
+    "net_conservative": 2.3352920065034084,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.892523067405447,
+    "funding_conservative": -8.8402764333827,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -22850,11 +22486,11 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.374089350775083,
+      "funding_conservative": -6.321842716752337,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.44775716631705
+      "net_conservative": -100.39551053229431
      }
     ],
     "attribution": {
@@ -22949,12 +22585,12 @@
    },
    "v_residual": {
     "net": 11.17556843988612,
-    "net_conservative": 2.2830453724806716,
+    "net_conservative": 2.3352920065034084,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.892523067405447,
+    "funding_conservative": -8.8402764333827,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -22995,22 +22631,22 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.374089350775083,
+      "funding_conservative": -6.321842716752337,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.44775716631705
+      "net_conservative": -100.39551053229431
      }
     ]
    },
    "v_headline": {
     "net": 11.17556843988612,
-    "net_conservative": 2.2830453724806716,
+    "net_conservative": 2.3352920065034084,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.892523067405447,
+    "funding_conservative": -8.8402764333827,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -23051,22 +22687,22 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.374089350775083,
+      "funding_conservative": -6.321842716752337,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.44775716631705
+      "net_conservative": -100.39551053229431
      }
     ]
    },
    "v_agreement": {
     "net": 11.17556843988612,
-    "net_conservative": 2.2830453724806716,
+    "net_conservative": 2.3352920065034084,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.892523067405447,
+    "funding_conservative": -8.8402764333827,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -23107,22 +22743,22 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.374089350775083,
+      "funding_conservative": -6.321842716752337,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.44775716631705
+      "net_conservative": -100.39551053229431
      }
     ]
    },
    "v_consensus": {
     "net": 11.17556843988612,
-    "net_conservative": 2.2830453724806716,
+    "net_conservative": 2.3352920065034084,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.892523067405447,
+    "funding_conservative": -8.8402764333827,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -23163,15 +22799,15 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.374089350775083,
+      "funding_conservative": -6.321842716752337,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.44775716631705
+      "net_conservative": -100.39551053229431
      }
     ]
    },
-   "balance_after": 99942.2152033888,
+   "balance_after": 99942.4353638222,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 105.24923625542809,
@@ -23366,7 +23002,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -23427,10 +23063,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": {
@@ -23654,7 +23290,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -23713,10 +23349,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": {
@@ -23940,7 +23576,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -23956,13 +23592,12 @@
    "decision": {
     "decision": "NO_TRADE",
     "reasons": [
-     "event_data",
      "market_data"
     ],
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -23980,10 +23615,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": null,
@@ -23994,8 +23629,8 @@
     "event_id": "CRM-2026-05-27",
     "gates": {
      "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_guidance_prior"
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -24023,7 +23658,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24062,10 +23697,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": null,
@@ -24105,7 +23740,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24144,10 +23779,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": null,
@@ -24187,7 +23822,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24226,10 +23861,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": null,
@@ -24269,7 +23904,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24308,10 +23943,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": null,
@@ -24351,7 +23986,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 9,
-    "train_pnl": 142.173448349992,
+    "train_pnl": 142.42973929227418,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24414,10 +24049,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": 142.17,
-     "headline": -147.52,
-     "agreement": 18.19,
-     "consensus": -153.15
+     "residual": 142.43,
+     "headline": -147.26,
+     "agreement": 18.37,
+     "consensus": -152.99
     }
    },
    "interpretation": {
@@ -24447,12 +24082,12 @@
    },
    "residual": {
     "net": -3.9935550504830957,
-    "net_conservative": -8.183229482857321,
+    "net_conservative": -8.164230669095929,
     "gross_mid": 4.208271731286459,
     "fees": 4.026195206142282,
     "slippage": 4.175631575627272,
     "funding": 0.0,
-    "funding_conservative": -4.189674432374225,
+    "funding_conservative": -4.170675618612833,
     "entry_ms": 1780524000000,
     "exit_ms": 1780610400000,
     "stopped": false,
@@ -24493,11 +24128,11 @@
       "fees": 2.531241767412037,
       "slippage": 1.5892699706797713,
       "funding": 0.0,
-      "funding_conservative": -2.31785527888983,
+      "funding_conservative": -2.2988564651284378,
       "funding_settlements": 3,
       "gross_mid": -4.1939419402730405,
       "net": -8.314453678364849,
-      "net_conservative": -10.63230895725468
+      "net_conservative": -10.613310143493287
      }
     ],
     "attribution": {
@@ -24592,12 +24227,12 @@
    },
    "v_residual": {
     "net": -3.9935550504830957,
-    "net_conservative": -8.183229482857321,
+    "net_conservative": -8.164230669095929,
     "gross_mid": 4.208271731286459,
     "fees": 4.026195206142282,
     "slippage": 4.175631575627272,
     "funding": 0.0,
-    "funding_conservative": -4.189674432374225,
+    "funding_conservative": -4.170675618612833,
     "entry_ms": 1780524000000,
     "exit_ms": 1780610400000,
     "stopped": false,
@@ -24638,22 +24273,22 @@
       "fees": 2.531241767412037,
       "slippage": 1.5892699706797713,
       "funding": 0.0,
-      "funding_conservative": -2.31785527888983,
+      "funding_conservative": -2.2988564651284378,
       "funding_settlements": 3,
       "gross_mid": -4.1939419402730405,
       "net": -8.314453678364849,
-      "net_conservative": -10.63230895725468
+      "net_conservative": -10.613310143493287
      }
     ]
    },
    "v_headline": {
     "net": -41.662270472845606,
-    "net_conservative": -44.468279712821115,
+    "net_conservative": -44.455606647365435,
     "gross_mid": -33.53269236248339,
     "fees": 3.9975042822387534,
     "slippage": 4.132073828123457,
     "funding": 0.0,
-    "funding_conservative": -2.8060092399755145,
+    "funding_conservative": -2.7933361745198315,
     "entry_ms": 1780524000000,
     "exit_ms": 1780581600000,
     "stopped": true,
@@ -24694,23 +24329,23 @@
       "fees": 2.525674383300495,
       "slippage": 1.5857769279153924,
       "funding": 0.0,
-      "funding_conservative": -1.5461139855933,
+      "funding_conservative": -1.533440920137617,
       "funding_settlements": 2,
       "gross_mid": 13.46626255652279,
       "net": 9.354811245306902,
-      "net_conservative": 7.808697259713602
+      "net_conservative": 7.821370325169285
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": {
     "net": -41.662270472845606,
-    "net_conservative": -44.468279712821115,
+    "net_conservative": -44.455606647365435,
     "gross_mid": -33.53269236248339,
     "fees": 3.9975042822387534,
     "slippage": 4.132073828123457,
     "funding": 0.0,
-    "funding_conservative": -2.8060092399755145,
+    "funding_conservative": -2.7933361745198315,
     "entry_ms": 1780524000000,
     "exit_ms": 1780581600000,
     "stopped": true,
@@ -24751,15 +24386,15 @@
       "fees": 2.525674383300495,
       "slippage": 1.5857769279153924,
       "funding": 0.0,
-      "funding_conservative": -1.5461139855933,
+      "funding_conservative": -1.533440920137617,
       "funding_settlements": 2,
       "gross_mid": 13.46626255652279,
       "net": 9.354811245306902,
-      "net_conservative": 7.808697259713602
+      "net_conservative": 7.821370325169285
      }
     ]
    },
-   "balance_after": 99934.03197390593,
+   "balance_after": 99934.2711331531,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -40.49446048695434,
@@ -24955,7 +24590,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 125.80698938427736,
+    "train_pnl": 126.10127795408232,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -25015,10 +24650,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 125.81,
-     "headline": -236.46,
-     "agreement": 18.19,
-     "consensus": -242.09
+     "residual": 126.1,
+     "headline": -236.17,
+     "agreement": 18.37,
+     "consensus": -241.9
     }
    },
    "interpretation": {
@@ -25236,236 +24871,6 @@
    }
   },
   {
-   "event_id": "SMCI-2026-07-21",
-   "_release_ms": 1784664655000,
-   "params": {
-    "mode": 1,
-    "k": 1.0,
-    "source": "walk-forward",
-    "n_train": 10,
-    "train_pnl": 125.80698938427736,
-    "train_events": [
-     "NVDA-2025-11-19",
-     "META-2026-01-28",
-     "PLTR-2026-02-02",
-     "AMZN-2026-02-05",
-     "MU-2026-03-18",
-     "INTC-2026-04-23",
-     "META-2026-04-29",
-     "PLTR-2026-05-04",
-     "AMD-2026-05-05",
-     "AVGO-2026-06-03"
-    ]
-   },
-   "decision": {
-    "decision": "NO_TRADE",
-    "reasons": [
-     "event_data",
-     "liquidity"
-    ],
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": true,
-      "detail": "company, market and 4 sector peers cover the lookback"
-     },
-     "hedge": {
-      "pass": true,
-      "detail": "QQQUSDT beta 2.19, R2 0.42"
-     },
-     "liquidity": {
-      "pass": false,
-      "detail": "spread est 14.9 bps, participation 77.1% of median hourly volume"
-     },
-     "robust": {
-      "pass": true,
-      "detail": "residual sign and size stable across 7/14/21-day betas"
-     },
-     "reaction_open": {
-      "pass": true,
-      "detail": "move retraced 0% from its early peak"
-     },
-     "residual_vs_cost": {
-      "pass": true,
-      "detail": "|residual| 14.80% vs threshold 0.74% (1.0x round-trip cost)"
-     },
-     "ai_interpretation": {
-      "pass": true,
-      "detail": "AI gate disabled for this run"
-     }
-    },
-    "size": 0.0
-   },
-   "variant": {
-    "variant": "residual",
-    "source": "walk-forward",
-    "n_train": 10,
-    "scores": {
-     "residual": 125.81,
-     "headline": -236.46,
-     "agreement": 18.19,
-     "consensus": -242.09
-    }
-   },
-   "interpretation": null,
-   "residual": null,
-   "naive": null,
-   "unhedged": null,
-   "analysis": {
-    "event_id": "SMCI-2026-07-21",
-    "gates": {
-     "event_data": {
-      "pass": false,
-      "detail": "missing/unverified: revenue_actual, revenue_guidance_next"
-     },
-     "market_data": {
-      "pass": true,
-      "detail": "company, market and 4 sector peers cover the lookback"
-     },
-     "hedge": {
-      "pass": true,
-      "detail": "QQQUSDT beta 2.19, R2 0.42"
-     },
-     "liquidity": {
-      "pass": false,
-      "detail": "spread est 14.9 bps, participation 77.1% of median hourly volume"
-     },
-     "robust": {
-      "pass": true,
-      "detail": "residual sign and size stable across 7/14/21-day betas"
-     },
-     "reaction_open": {
-      "pass": true,
-      "detail": "move retraced 0% from its early peak"
-     }
-    },
-    "times": {
-     "t_pre": 1784664000000,
-     "t_obs": 1784671200000,
-     "t_exit": 1784757600000,
-     "t_start": 1782849600000
-    },
-    "peers": [
-     "CSCOUSDT",
-     "DELLUSDT",
-     "HPEUSDT",
-     "WDCUSDT"
-    ],
-    "model": {
-     "n_hours": 336,
-     "alpha": -0.00010909183877065898,
-     "beta_market": 2.193518000192985,
-     "beta_sector": 0.47854986533237537,
-     "b_sector_market": 2.2931656571765164,
-     "resid_sigma_h": 0.00489334249431633,
-     "r2": 0.5185907280875919
-    },
-    "robustness_models": {
-     "7": {
-      "n_hours": 168,
-      "alpha": -0.0002394925009138274,
-      "beta_market": 2.1117302042861583,
-      "beta_sector": 0.34677009567467104,
-      "b_sector_market": 2.318100262812868,
-      "resid_sigma_h": 0.00474288318334773,
-      "r2": 0.459564703610729
-     },
-     "14": {
-      "n_hours": 336,
-      "alpha": -0.00010909183877065898,
-      "beta_market": 2.193518000192985,
-      "beta_sector": 0.47854986533237537,
-      "b_sector_market": 2.2931656571765164,
-      "resid_sigma_h": 0.00489334249431633,
-      "r2": 0.5185907280875919
-     },
-     "21": {
-      "n_hours": 504,
-      "alpha": -0.00012976371572214013,
-      "beta_market": 2.253636985704597,
-      "beta_sector": 0.3308092268095778,
-      "b_sector_market": 2.1898572513194483,
-      "resid_sigma_h": 0.004988705904981268,
-      "r2": 0.49802306477025315
-     }
-    },
-    "decomposition": {
-     "observed": 0.16321204247642682,
-     "market": 0.0017605594779182018,
-     "sector": 0.012750698673420264,
-     "liquidity": 0.0007474522143466484,
-     "residual": 0.1479533321107417
-    },
-    "robustness_residuals": {
-     "7": 0.15153711614631926,
-     "14": 0.1479533321107417,
-     "21": 0.15181411793192845
-    },
-    "prices": {
-     "company_pre": 25.456,
-     "company_obs": 29.969,
-     "market_pre": 709.89,
-     "market_obs": 710.46
-    },
-    "window_returns": {
-     "company": 0.16321204247642682,
-     "market": 0.0008026191158510249,
-     "sector_basket": 0.028484990084406414,
-     "sector_members": 4
-    },
-    "hedge_candidates": [
-     {
-      "symbol": "QQQUSDT",
-      "kind": "index_etf",
-      "n_hours": 336,
-      "beta": 2.193518000192985,
-      "r2": 0.4240731942219965
-     },
-     {
-      "symbol": "SPYUSDT",
-      "kind": "index_etf",
-      "n_hours": 336,
-      "beta": 3.1842457670005877,
-      "r2": 0.2511639819045824
-     },
-     {
-      "symbol": "XLKUSDT",
-      "kind": "index_etf",
-      "n_hours": 336,
-      "beta": 1.3526512413625036,
-      "r2": 0.3946613129291357
-     }
-    ],
-    "hedge": {
-     "symbol": "QQQUSDT",
-     "kind": "index_etf",
-     "n_hours": 336,
-     "beta": 2.193518000192985,
-     "r2": 0.4240731942219965
-    },
-    "costs": {
-     "taker_fee": 0.0006,
-     "spread_est_company": 0.0014949044286932968,
-     "slip_company": 0.0008474522143466485,
-     "slip_hedge": 0.00043680901145099995,
-     "round_trip": 0.007443422887453423,
-     "median_hourly_quote_volume": 3240.540685,
-     "participation": 0.7714761958003314
-    },
-    "reaction_path": [
-     0.15480145123872469,
-     0.16321204247642682
-    ],
-    "residual": 0.1479533321107417,
-    "surprise_sign": 0,
-    "consensus_surprise_pct": null,
-    "consensus_sign": 0
-   }
-  },
-  {
    "event_id": "TXN-2026-07-22",
    "_release_ms": 1784750646000,
    "params": {
@@ -25473,7 +24878,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 125.80698938427736,
+    "train_pnl": 126.10127795408232,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -25533,10 +24938,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 125.81,
-     "headline": -236.46,
-     "agreement": 18.19,
-     "consensus": -242.09
+     "residual": 126.1,
+     "headline": -236.17,
+     "agreement": 18.37,
+     "consensus": -241.9
     }
    },
    "interpretation": {
@@ -25771,7 +25176,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 125.80698938427736,
+    "train_pnl": 126.10127795408232,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -25835,10 +25240,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 125.81,
-     "headline": -236.46,
-     "agreement": 18.19,
-     "consensus": -242.09
+     "residual": 126.1,
+     "headline": -236.17,
+     "agreement": 18.37,
+     "consensus": -241.9
     }
    },
    "interpretation": {
@@ -26180,7 +25585,7 @@
     ]
    },
    "v_consensus": null,
-   "balance_after": 99865.1957830585,
+   "balance_after": 99865.43494230567,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -37.638176863093186,
@@ -26387,7 +25792,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 24.627767267422477,
+    "train_pnl": 24.887955805257867,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26448,10 +25853,10 @@
     "source": "walk-forward",
     "n_train": 8,
     "scores": {
-     "residual": 24.63,
-     "headline": -50.49,
-     "agreement": 105.58,
-     "consensus": -56.12
+     "residual": 24.89,
+     "headline": -50.23,
+     "agreement": 105.73,
+     "consensus": -55.96
     }
    },
    "interpretation": {
@@ -26687,7 +26092,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 24.627767267422477,
+    "train_pnl": 24.887955805257867,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26754,10 +26159,10 @@
     "source": "walk-forward",
     "n_train": 8,
     "scores": {
-     "residual": 24.63,
-     "headline": -50.49,
-     "agreement": 105.58,
-     "consensus": -56.12
+     "residual": 24.89,
+     "headline": -50.23,
+     "agreement": 105.73,
+     "consensus": -55.96
     }
    },
    "interpretation": {
@@ -27162,7 +26567,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 24.627767267422477,
+    "train_pnl": 24.887955805257867,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -27229,10 +26634,10 @@
     "source": "walk-forward",
     "n_train": 8,
     "scores": {
-     "residual": 24.63,
-     "headline": -50.49,
-     "agreement": 105.58,
-     "consensus": -56.12
+     "residual": 24.89,
+     "headline": -50.23,
+     "agreement": 105.73,
+     "consensus": -55.96
     }
    },
    "interpretation": {
@@ -27621,7 +27026,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 24.627767267422477,
+    "train_pnl": 24.887955805257867,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -27686,10 +27091,10 @@
     "source": "walk-forward",
     "n_train": 8,
     "scores": {
-     "residual": 24.63,
-     "headline": -50.49,
-     "agreement": 105.58,
-     "consensus": -56.12
+     "residual": 24.89,
+     "headline": -50.23,
+     "agreement": 105.73,
+     "consensus": -55.96
     }
    },
    "interpretation": {
@@ -28085,7 +27490,7 @@
      }
     ]
    },
-   "balance_after": 99926.15170111082,
+   "balance_after": 99926.39086035799,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 61.03353420078007,
@@ -28276,7 +27681,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 14,
-    "train_pnl": 87.89047485505685,
+    "train_pnl": 88.15066339289223,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -28344,10 +27749,10 @@
     "source": "walk-forward",
     "n_train": 11,
     "scores": {
-     "residual": 87.89,
-     "headline": 12.59,
-     "agreement": 227.49,
-     "consensus": 7.14
+     "residual": 88.15,
+     "headline": 12.85,
+     "agreement": 227.64,
+     "consensus": 7.3
     }
    },
    "interpretation": {
@@ -28689,7 +28094,7 @@
     ]
    },
    "v_consensus": null,
-   "balance_after": 100202.54776940666,
+   "balance_after": 100202.78692865383,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 343.5330995410552,
@@ -28891,7 +28296,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 14,
-    "train_pnl": 87.89047485505685,
+    "train_pnl": 88.15066339289223,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -28961,10 +28366,10 @@
     "source": "walk-forward",
     "n_train": 11,
     "scores": {
-     "residual": 87.89,
-     "headline": 12.59,
-     "agreement": 227.49,
-     "consensus": 7.14
+     "residual": 88.15,
+     "headline": 12.85,
+     "agreement": 227.64,
+     "consensus": 7.3
     }
    },
    "interpretation": {
@@ -29373,7 +28778,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": 266.3952585140805,
+    "train_pnl": 266.6554470519159,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -29439,10 +28844,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": 266.4,
-     "headline": 359.96,
-     "agreement": 503.89,
-     "consensus": 78.12
+     "residual": 266.66,
+     "headline": 360.22,
+     "agreement": 504.04,
+     "consensus": 78.27
     }
    },
    "interpretation": {
@@ -29668,7 +29073,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": 266.3952585140805,
+    "train_pnl": 266.6554470519159,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -29735,10 +29140,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": 266.4,
-     "headline": 359.96,
-     "agreement": 503.89,
-     "consensus": 78.12
+     "residual": 266.66,
+     "headline": 360.22,
+     "agreement": 504.04,
+     "consensus": 78.27
     }
    },
    "interpretation": {
@@ -29969,7 +29374,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": 266.3952585140805,
+    "train_pnl": 266.6554470519159,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -30035,10 +29440,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": 266.4,
-     "headline": 359.96,
-     "agreement": 503.89,
-     "consensus": 78.12
+     "residual": 266.66,
+     "headline": 360.22,
+     "agreement": 504.04,
+     "consensus": 78.27
     }
    },
    "interpretation": {
@@ -30269,7 +29674,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": 266.3952585140805,
+    "train_pnl": 266.6554470519159,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -30339,10 +29744,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": 266.4,
-     "headline": 359.96,
-     "agreement": 503.89,
-     "consensus": 78.12
+     "residual": 266.66,
+     "headline": 360.22,
+     "agreement": 504.04,
+     "consensus": 78.27
     }
    },
    "interpretation": {
@@ -30739,7 +30144,7 @@
      }
     ]
    },
-   "balance_after": 100269.43636020321,
+   "balance_after": 100269.67551945038,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 75.6634257813562,
@@ -30946,7 +30351,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": 266.3952585140805,
+    "train_pnl": 266.6554470519159,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -31018,10 +30423,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": 266.4,
-     "headline": 359.96,
-     "agreement": 503.89,
-     "consensus": 78.12
+     "residual": 266.66,
+     "headline": 360.22,
+     "agreement": 504.04,
+     "consensus": 78.27
     }
    },
    "interpretation": {
@@ -31426,7 +30831,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 18,
-    "train_pnl": 255.20695154557419,
+    "train_pnl": 255.46714008340956,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -31495,10 +30900,10 @@
     "source": "walk-forward",
     "n_train": 15,
     "scores": {
-     "residual": 255.21,
-     "headline": 461.95,
-     "agreement": 570.78,
-     "consensus": 66.93
+     "residual": 255.47,
+     "headline": 462.21,
+     "agreement": 570.93,
+     "consensus": 67.08
     }
    },
    "interpretation": {
@@ -31729,7 +31134,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 18,
-    "train_pnl": 255.20695154557419,
+    "train_pnl": 255.46714008340956,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -31801,10 +31206,10 @@
     "source": "walk-forward",
     "n_train": 15,
     "scores": {
-     "residual": 255.21,
-     "headline": 461.95,
-     "agreement": 570.78,
-     "consensus": 66.93
+     "residual": 255.47,
+     "headline": 462.21,
+     "agreement": 570.93,
+     "consensus": 67.08
     }
    },
    "interpretation": {
@@ -32034,7 +31439,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 18,
-    "train_pnl": 255.20695154557419,
+    "train_pnl": 255.46714008340956,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -32102,10 +31507,10 @@
     "source": "walk-forward",
     "n_train": 15,
     "scores": {
-     "residual": 255.21,
-     "headline": 461.95,
-     "agreement": 570.78,
-     "consensus": 66.93
+     "residual": 255.47,
+     "headline": 462.21,
+     "agreement": 570.93,
+     "consensus": 67.08
     }
    },
    "interpretation": {
@@ -32336,7 +31741,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 18,
-    "train_pnl": 255.20695154557419,
+    "train_pnl": 255.46714008340956,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -32407,10 +31812,10 @@
     "source": "walk-forward",
     "n_train": 15,
     "scores": {
-     "residual": 255.21,
-     "headline": 461.95,
-     "agreement": 570.78,
-     "consensus": 66.93
+     "residual": 255.47,
+     "headline": 462.21,
+     "agreement": 570.93,
+     "consensus": 67.08
     }
    },
    "interpretation": {
@@ -33316,129 +32721,129 @@
    "time_utc": "2026-08-27T22:00Z"
   }
  ],
- "final_balance": 100269.43636020321,
+ "final_balance": 100269.67551945038,
  "size_study": [
   {
    "notional": 1000,
    "trades": 13,
-   "liquidity_rejects": 14,
+   "liquidity_rejects": 13,
    "primary": {
     "residual": {
      "total_net_pnl": 134.16,
      "trades": 4,
-     "sharpe_daily_ann": 1.193,
+     "sharpe_daily_ann": 1.205,
      "max_drawdown": -27.53
     },
     "naive_same_events": {
      "total_net_pnl": 177.04,
      "trades": 4,
-     "sharpe_daily_ann": 1.312,
+     "sharpe_daily_ann": 1.324,
      "max_drawdown": -15.06
     }
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 107.77,
+     "total_net_pnl": 107.87,
      "trades": 13,
-     "sharpe_daily_ann": 0.866
+     "sharpe_daily_ann": 0.875
     },
     "naive_same_events": {
      "total_net_pnl": 204.52,
      "trades": 13,
-     "sharpe_daily_ann": 1.31
+     "sharpe_daily_ann": 1.322
     }
    }
   },
   {
    "notional": 2500,
    "trades": 13,
-   "liquidity_rejects": 14,
+   "liquidity_rejects": 13,
    "primary": {
     "residual": {
      "total_net_pnl": 335.4,
      "trades": 4,
-     "sharpe_daily_ann": 1.193,
+     "sharpe_daily_ann": 1.205,
      "max_drawdown": -68.84
     },
     "naive_same_events": {
      "total_net_pnl": 442.59,
      "trades": 4,
-     "sharpe_daily_ann": 1.312,
+     "sharpe_daily_ann": 1.324,
      "max_drawdown": -37.64
     }
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 269.44,
+     "total_net_pnl": 269.68,
      "trades": 13,
-     "sharpe_daily_ann": 0.866
+     "sharpe_daily_ann": 0.875
     },
     "naive_same_events": {
      "total_net_pnl": 511.29,
      "trades": 13,
-     "sharpe_daily_ann": 1.31
+     "sharpe_daily_ann": 1.322
     }
    }
   },
   {
    "notional": 5000,
    "trades": 10,
-   "liquidity_rejects": 21,
+   "liquidity_rejects": 20,
    "primary": {
     "residual": {
      "total_net_pnl": 377.88,
      "trades": 5,
-     "sharpe_daily_ann": 0.671,
+     "sharpe_daily_ann": 0.678,
      "max_drawdown": -210.8
     },
     "naive_same_events": {
      "total_net_pnl": 920.62,
      "trades": 5,
-     "sharpe_daily_ann": 1.363,
+     "sharpe_daily_ann": 1.376,
      "max_drawdown": -75.28
     }
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 268.73,
+     "total_net_pnl": 268.93,
      "trades": 10,
-     "sharpe_daily_ann": 0.434
+     "sharpe_daily_ann": 0.438
     },
     "naive_same_events": {
      "total_net_pnl": 614.3,
      "trades": 10,
-     "sharpe_daily_ann": 0.836
+     "sharpe_daily_ann": 0.843
     }
    }
   },
   {
    "notional": 10000,
    "trades": 9,
-   "liquidity_rejects": 24,
+   "liquidity_rejects": 23,
    "primary": {
     "residual": {
      "total_net_pnl": 391.27,
      "trades": 5,
-     "sharpe_daily_ann": 0.346,
+     "sharpe_daily_ann": 0.349,
      "max_drawdown": -509.17
     },
     "naive_same_events": {
      "total_net_pnl": 1405.11,
      "trades": 5,
-     "sharpe_daily_ann": 1.045,
+     "sharpe_daily_ann": 1.054,
      "max_drawdown": -191.99
     }
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 197.34,
+     "total_net_pnl": 197.61,
      "trades": 9,
-     "sharpe_daily_ann": 0.159
+     "sharpe_daily_ann": 0.16
     },
     "naive_same_events": {
      "total_net_pnl": 552.07,
      "trades": 9,
-     "sharpe_daily_ann": 0.382
+     "sharpe_daily_ann": 0.385
     }
    }
   }
@@ -34274,14 +33679,14 @@
    "residual": {
     "sharpe_per_trade": 0.478,
     "sortino_per_trade": 1.19,
-    "sharpe_daily_ann": 1.028,
-    "sortino_daily_ann": 2.529,
-    "days": 323,
+    "sharpe_daily_ann": 1.038,
+    "sortino_daily_ann": 2.553,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 327.52,
     "trades": 4,
     "excluded_funding_unavailable": 9,
-    "no_trades": 62,
+    "no_trades": 58,
     "hit_rate": 0.75,
     "avg_pnl_per_trade": 81.88,
     "pnl_std_per_trade": 171.14,
@@ -34289,10 +33694,6 @@
     "avg_holding_hours": 22.0,
     "return_on_start_balance_pct": 0.328,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -34369,14 +33770,14 @@
    "unhedged": {
     "sharpe_per_trade": 0.673,
     "sortino_per_trade": 3.095,
-    "sharpe_daily_ann": 1.305,
-    "sortino_daily_ann": 6.581,
-    "days": 323,
+    "sharpe_daily_ann": 1.317,
+    "sortino_daily_ann": 6.643,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 465.99,
     "trades": 4,
     "excluded_funding_unavailable": 9,
-    "no_trades": 62,
+    "no_trades": 58,
     "hit_rate": 0.75,
     "avg_pnl_per_trade": 116.5,
     "pnl_std_per_trade": 173.23,
@@ -34384,10 +33785,6 @@
     "avg_holding_hours": 21.8,
     "return_on_start_balance_pct": 0.466,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -34464,14 +33861,14 @@
    "naive_same_events": {
     "sharpe_per_trade": 0.673,
     "sortino_per_trade": 3.095,
-    "sharpe_daily_ann": 1.305,
-    "sortino_daily_ann": 6.581,
-    "days": 323,
+    "sharpe_daily_ann": 1.317,
+    "sortino_daily_ann": 6.643,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 465.99,
     "trades": 4,
     "excluded_funding_unavailable": 9,
-    "no_trades": 62,
+    "no_trades": 58,
     "hit_rate": 0.75,
     "avg_pnl_per_trade": 116.5,
     "pnl_std_per_trade": 173.23,
@@ -34479,10 +33876,6 @@
     "avg_holding_hours": 21.8,
     "return_on_start_balance_pct": 0.466,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -34561,12 +33954,12 @@
     "sortino_per_trade": -0.005,
     "sharpe_daily_ann": -0.013,
     "sortino_daily_ann": -0.021,
-    "days": 324,
+    "days": 318,
     "basis": "primary",
     "total_net_pnl": -6.62,
     "trades": 18,
     "excluded_funding_unavailable": 18,
-    "no_trades": 39,
+    "no_trades": 35,
     "hit_rate": 0.389,
     "avg_pnl_per_trade": -0.37,
     "pnl_std_per_trade": 135.34,
@@ -34627,10 +34020,6 @@
      0.0,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     -120.02,
      -120.02,
      -122.22,
      -197.49,
@@ -34654,14 +34043,14 @@
    "v_residual": {
     "sharpe_per_trade": 0.083,
     "sortino_per_trade": 0.163,
-    "sharpe_daily_ann": 0.27,
-    "sortino_daily_ann": 0.506,
-    "days": 323,
+    "sharpe_daily_ann": 0.272,
+    "sortino_daily_ann": 0.511,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 92.91,
     "trades": 8,
     "excluded_funding_unavailable": 9,
-    "no_trades": 58,
+    "no_trades": 54,
     "hit_rate": 0.5,
     "avg_pnl_per_trade": 11.61,
     "pnl_std_per_trade": 139.34,
@@ -34669,10 +34058,6 @@
     "avg_holding_hours": 19.6,
     "return_on_start_balance_pct": 0.093,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -34749,14 +34134,14 @@
    "v_headline": {
     "sharpe_per_trade": 0.38,
     "sortino_per_trade": 0.896,
-    "sharpe_daily_ann": 1.13,
-    "sortino_daily_ann": 2.661,
-    "days": 323,
+    "sharpe_daily_ann": 1.14,
+    "sortino_daily_ann": 2.686,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 374.77,
     "trades": 8,
     "excluded_funding_unavailable": 9,
-    "no_trades": 58,
+    "no_trades": 54,
     "hit_rate": 0.625,
     "avg_pnl_per_trade": 46.85,
     "pnl_std_per_trade": 123.24,
@@ -34764,10 +34149,6 @@
     "avg_holding_hours": 23.0,
     "return_on_start_balance_pct": 0.375,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -34844,14 +34225,14 @@
    "v_agreement": {
     "sharpe_per_trade": 0.478,
     "sortino_per_trade": 1.19,
-    "sharpe_daily_ann": 1.028,
-    "sortino_daily_ann": 2.529,
-    "days": 323,
+    "sharpe_daily_ann": 1.038,
+    "sortino_daily_ann": 2.553,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 327.52,
     "trades": 4,
     "excluded_funding_unavailable": 5,
-    "no_trades": 66,
+    "no_trades": 62,
     "hit_rate": 0.75,
     "avg_pnl_per_trade": 81.88,
     "pnl_std_per_trade": 171.14,
@@ -34859,10 +34240,6 @@
     "avg_holding_hours": 22.0,
     "return_on_start_balance_pct": 0.328,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -34939,14 +34316,14 @@
    "v_consensus": {
     "sharpe_per_trade": 0.247,
     "sortino_per_trade": 0.453,
-    "sharpe_daily_ann": 0.71,
-    "sortino_daily_ann": 1.339,
-    "days": 323,
+    "sharpe_daily_ann": 0.716,
+    "sortino_daily_ann": 1.352,
+    "days": 317,
     "basis": "primary",
     "total_net_pnl": 123.05,
     "trades": 6,
     "excluded_funding_unavailable": 6,
-    "no_trades": 63,
+    "no_trades": 59,
     "hit_rate": 0.667,
     "avg_pnl_per_trade": 20.51,
     "pnl_std_per_trade": 83.16,
@@ -34954,10 +34331,6 @@
     "avg_holding_hours": 20.5,
     "return_on_start_balance_pct": 0.123,
     "equity_curve": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -35041,7 +34414,7 @@
     "total_net_pnl": 0.0,
     "trades": 0,
     "excluded_funding_unavailable": 0,
-    "no_trades": 75,
+    "no_trades": 71,
     "hit_rate": null,
     "avg_pnl_per_trade": null,
     "pnl_std_per_trade": null,
@@ -35119,23 +34492,16 @@
      0.0,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.0
     ]
    }
   },
   "decisions": {
-   "HPE-2025-10-15": "NO_TRADE",
    "TXN-2025-10-21": "NO_TRADE",
-   "SMCI-2025-10-23": "NO_TRADE",
    "INTC-2025-10-23": "NO_TRADE",
    "META-2025-10-29": "NO_TRADE",
    "KLAC-2025-10-29": "NO_TRADE",
    "AMZN-2025-10-30": "NO_TRADE",
-   "MDB-2025-11-03": "NO_TRADE",
    "PLTR-2025-11-03": "NO_TRADE",
    "SMCI-2025-11-04": "NO_TRADE",
    "AMD-2025-11-04": "NO_TRADE",
@@ -35185,7 +34551,6 @@
    "CRWD-2026-06-03": "NO_TRADE",
    "AVGO-2026-06-03": "TRADE",
    "MU-2026-06-24": "NO_TRADE",
-   "SMCI-2026-07-21": "NO_TRADE",
    "TXN-2026-07-22": "NO_TRADE",
    "INTC-2026-07-23": "TRADE",
    "KLAC-2026-07-28": "NO_TRADE",

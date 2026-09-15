@@ -36,6 +36,10 @@ def earnings_filings(ticker: str, *, cache: bool = True) -> list[dict]:
 
 
 _PR_HINTS = re.compile(r"(pr|press|ex99|ex-99|99-?1|exhibit99|earnings)", re.I)
+# Exhibit 99.1 is the earnings release; 99.2+ are other announcements filed under the same 8-K
+# (PANW filed an acquisition release as 99.2 on 2025-11-19), so rank 99.1 first and 99.2+ last.
+_EX991 = re.compile(r"(ex.?99.?1|99-?1)", re.I)
+_EX99N = re.compile(r"(ex.?99.?[2-9]|99-?[2-9])", re.I)
 
 
 def press_release_url(filing: dict) -> str:
@@ -46,7 +50,8 @@ def press_release_url(filing: dict) -> str:
              and not n.startswith("R") and "commentary" not in n.lower()]
     primary = [n for n in names if re.match(r"^[a-z]+-\d{8}\.htm$", n)]
     exhibits = [n for n in names if n not in primary]
-    ranked = sorted(exhibits, key=lambda n: (not _PR_HINTS.search(n), len(n)))
+    ranked = sorted(exhibits, key=lambda n: (not _EX991.search(n), bool(_EX99N.search(n)),
+                                             not _PR_HINTS.search(n), len(n)))
     if ranked:
         return filing["index_url"] + ranked[0]
     return filing["index_url"] + primary[0]

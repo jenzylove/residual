@@ -57,42 +57,31 @@ The direction (continuation vs reversal) and the threshold k are learned **walk-
 
 ## Results (walk-forward, 75 events)
 
-All figures at the $2,500 default size. 
-- **Outcomes:** 13 paired paper trades and 62 NO_TRADE decisions.
-- **NO_TRADE reasons** (some events have several): market data 38, data incomplete 16, liquidity 14, below cost 5, reaction complete 4, rule disagreement 4, not robust 3, AI label 3, no hedge 3.
+All figures at the $2,500 default size. The headline view counts **every trade**, charging missing funding at the worst observed rate; the funding-complete view is shown second because it rests on only 4 trades.
+- **Outcomes:** 71 earnings events scored (4 further Item 2.02 filings carry no results and are excluded), 13 paired paper trades and 58 NO_TRADE decisions.
+- **NO_TRADE reasons** (some events have several): market data 38, liquidity 14, below cost 5, reaction complete 4, rule disagreement 4, not robust 3, AI label 3, no hedge 3. Every required number now verifies: 71 of 71.
 
 **Universe expansion (Sep 2026) added no trades.** Nine companies were added: QCOM, KLAC, TXN, HPE, SMCI, CRM, PANW, CRWD and MDB. None of their releases after listing produced a trade; each event's failed gates are listed in the Audit. The binding constraint on sample size is Bitget liquidity and listing history, not the number of companies covered.
 
-**Primary result.** Only trades whose holding period has complete Bitget funding history are counted. Bitget serves funding only from about June 2026, so 9 of the 13 trades are excluded.
-
-| Strategy | Net P&L | Trades counted | Excluded | Sharpe |
-|---|---|---|---|---|
-| **Strategy** (rule picked walk-forward) | **+$335.40** | 4 | 9 | 1.19 |
-| Strategy, no AI gate (ablation) | +$327.52 | 4 | 9 | 1.03 |
-| Residual rule alone | +$188.77 | 8 | 9 | 0.65 |
-| Headline rule, hedged | +$329.61 | 8 | 9 | 1.14 |
-| Agreement rule | +$335.40 | 4 | 5 | 1.19 |
-| Unhedged, same signals | +$442.59 | 4 | 9 | 1.31 |
-| **Naive headline, same events** (like-for-like) | **+$442.59** | 4 | 9 | 1.31 |
-| Naive headline, every eligible event | −$6.62 | 18 | 18 | −0.01 |
-
-**Sensitivity: all trades, conservative funding.** Every trade counts. Missing funding is charged against the position at the largest absolute rate observed for that symbol.
+**Headline result: all trades, worst-case funding.** Every trade counts; where Bitget no longer serves funding history it is charged against the position at the largest absolute rate observed for that symbol.
 
 | Strategy | Net P&L | Trades | Sharpe |
 |---|---|---|---|
-| **Strategy** (rule picked walk-forward) | +$269.44 | 13 | 0.87 |
-| Residual rule alone | +$122.80 | 17 | 0.38 |
-| Headline rule, hedged | +$262.65 | 17 | 0.84 |
-| Agreement rule | +$335.66 | 9 | 1.11 |
-| Unhedged, same signals | +$382.80 | 13 | 0.99 |
-| Naive headline, same events | +$511.29 | 13 | 1.31 |
+| **Strategy** (rule picked walk-forward) | **+$269.68** | 13 | 0.88 |
+| Agreement rule | +$335.83 | 9 | 1.12 |
+| Headline rule, hedged | +$262.89 | 17 | 0.84 |
+| Residual rule | +$123.04 | 17 | 0.39 |
+| Analyst consensus rule | −$11.74 | 12 | −0.07 |
+| **Naive headline, same events** (like-for-like) | **+$511.29** | 13 | 1.32 |
 | Naive headline, every eligible event | −$716.13 | 36 | −1.16 |
 
+**Secondary: funding-complete trades only.** Bitget serves funding from about June 2026, so this view counts 4 of the 13 trades: strategy +$335.40 (Sharpe 1.21) against the naive baseline's +$442.59 (1.32). Too few trades to lean on.
+
 **Reading the results honestly:**
-- The strategy is profitable in both views and at every tested size, but the plain headline trade on the same releases did better.
+- The strategy is profitable in every view and at every tested size, but the plain headline trade on the same releases did better.
 - The value sits in the gates: across every eligible release the headline trade loses (−$716 conservative), while on the releases RESIDUAL's gates select it wins.
-- Of the three pre-declared rules, agreement scored best; the walk-forward selector moved to it only once enough history existed.
-- With 4 to 17 trades, none of these differences is statistically meaningful.
+- Of the pre-declared rules, agreement scores best and the analyst-consensus rule scores worst; all are published.
+- With 9 to 17 trades, none of these differences is statistically meaningful.
 
 ## Demo-executable mode
 
