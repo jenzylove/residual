@@ -357,3 +357,9 @@
 {"checked_at": "2026-09-15T20:52:10+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
 {"checked_at": "2026-09-15T20:56:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
 {"checked_at": "2026-09-15T21:06:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-15T21:16:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "pushed"}
+{"checked_at": "2026-09-15T21:26:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-15T21:40:43+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-15T21:46:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-15T21:56:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-15T22:06:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
