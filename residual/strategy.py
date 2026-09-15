@@ -186,30 +186,6 @@ def learn_variant(history: list[dict], params: dict) -> dict:
     return {"variant": best, "source": "walk-forward", "n_train": len(train), "scores": scores}
 
 
-def fallback_hedge(event: dict, snap: dict, a: dict, listed) -> dict | None:
-    """Best-fitting Demo-listed stock perp to stand in for an unlisted strategy hedge (live Demo only).
-
-    `listed(symbol)` says whether the venue lists a symbol. Same OLS fit and R2 floor as the strategy hedge.
-    """
-    w = snap["window"]
-    idx = {s: index(r) for s, r in snap["candles"].items()}
-    C = event["company_symbol"]
-    if C not in idx:
-        return None
-    start = w["t_pre"] - PRIMARY * DAY
-    rc = hourly_returns(idx[C], start, w["t_pre"])
-    best = None
-    for h in universe.DEMO_FALLBACK_HEDGES:
-        if h == C or h not in idx or not listed(h):
-            continue
-        hf = hedge_fit(rc, hourly_returns(idx[h], start, w["t_pre"]))
-        if hf and hf["r2"] >= MIN_HEDGE_R2 and (best is None or hf["r2"] > best["r2"]):
-            best = {"symbol": h, **hf}
-    if best:
-        best["substitute_for"] = (a.get("hedge") or {}).get("symbol")
-    return best
-
-
 def _legs(event, a, direction, size, hedged=True):
     n = BASE_NOTIONAL * size
     legs = [{"symbol": event["company_symbol"], "side": direction, "notional": n,

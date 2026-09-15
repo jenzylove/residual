@@ -47,8 +47,8 @@ Numbers refer to the committed `data/results.json`.
 ## Rubric work (Alpha Factory: executable, effective, verifiable)
 - [x] Executable:
   - $2.5k default sized to Bitget liquidity; a size study re-runs the walk-forward at $1k/$2.5k/$5k/$10k;
-  - Demo hedge substitute on the live path, with a fixture test;
-  - `demo-strategy-trade` executes a replayed strategy decision on real Demo.
+  - Strict Demo execution refuses an unlisted hedge before placing either leg, with a fixture test;
+  - `demo-strategy-trade` executes a replayed strategy decision on real Demo only when the original hedge is listed.
 - [x] Effective:
   - three pre-declared rules with a walk-forward selector, all published;
   - Sharpe, Sortino and max drawdown, full period and last 90 days.
@@ -80,7 +80,7 @@ Numbers refer to the committed `data/results.json`.
 - [x] `keyrun` passed against real Bitget Demo on 2026-09-13. Four orders were accepted and filled: NVDA/AAPL execution-test pair, $50 per leg, net −$0.14 after fees.
   - Order IDs are in the README and `data/keyrun_report.json`.
   - Findings: `USDT-FUTURES`/`USDT`, hedge mode by default (handled), funds must be moved from demo spot to futures in the app.
-- [~] Demo lists no strategy hedge instrument (QQQ, SPY, SMH), so live strategy pairs on Demo resolve to NO_TRADE. This is by design (strict option (a)); the Demo run proves execution, not the strategy.
+- [~] Demo lists no strategy hedge instrument (QQQ, SPY, SMH), so live strategy pairs on Demo resolve to NO_TRADE before any order is sent. The Demo run proves the adapter, not a substitute strategy.
 
 ## Infrastructure
 - [x] DNS-over-HTTPS fallback is opt-in (`RESIDUAL_DOH_FALLBACK=1`), off by default, documented as not for bypassing regional restrictions

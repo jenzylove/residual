@@ -128,7 +128,7 @@ class LiveLifecycleTest(unittest.TestCase):
             self.assertTrue(any(e["path"].endswith("place-order") and e["body"].get("reduceOnly") == "YES"
                                 for e in closed["exchange_log"]))
 
-    def test_demo_substitutes_unlisted_hedge(self):
+    def test_demo_refuses_unlisted_hedge_before_any_order(self):
         from test_demo import FakeExchange
         ex = FakeExchange()
         ex.px["SAAPLSUSDT"] = 330.0
@@ -140,17 +140,16 @@ class LiveLifecycleTest(unittest.TestCase):
                     {"symbol": "SAAPLSUSDT", "symbolStatus": "normal", "volumePlace": "2", "sizeMultiplier": "0.01", "minTradeNum": "0.01"}]
             return r
         real_client = live.demo.BitgetDemo
-        sub = {"symbol": "AAPLUSDT", "beta": 0.8, "r2": 0.4, "n_hours": 300, "substitute_for": "QQQUSDT"}
         with mock.patch.object(live.demo, "configured", lambda: True), \
              mock.patch.object(live.demo, "BitgetDemo", lambda: real_client("k", "s", "p", transport=no_qqq)), \
-             mock.patch.object(live, "fallback_hedge", lambda ev, snap, a, listed: sub if listed("AAPLUSDT") else None):
+             mock.patch.object(live, "analyze", lambda ev, snap: ANALYSIS):
             t_obs = market.event_times(RELEASE)["t_obs"]
             live.watch(now_ms=RELEASE + 10 * 60_000)
             r = live.watch(now_ms=t_obs + 10 * 60_000)
-            pos = r["new_events"][0]["position"]
-            self.assertEqual(pos["hedge_substitute"]["substitute_for"], "QQQUSDT")
-            self.assertEqual([l["demo_symbol"] for l in pos["demo_legs"]], ["SNVDASUSDT", "SAAPLSUSDT"])
-            self.assertAlmostEqual(pos["demo_legs"][1]["notional"], 0.8 * live.BASE_NOTIONAL)
+            rec = r["new_events"][0]
+            self.assertEqual(rec["decision"], "NO_TRADE")
+            self.assertIn("strict Demo mode refuses substitution", rec["reason"])
+            self.assertFalse(any(p.endswith("/place-order") for m, p, h, b in ex.calls))
 
     def test_trade_after_entry_window_is_rejected(self):
         t_obs = market.event_times(RELEASE)["t_obs"]

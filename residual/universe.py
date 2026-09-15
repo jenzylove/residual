@@ -35,11 +35,6 @@ HEDGES = {
 }
 
 
-# Live Bitget Demo lists none of HEDGES (checked 2026-09-13). When a strategy hedge is missing on Demo,
-# the live path may substitute the best-fitting Demo-listed stock perp, labelled as a substitute.
-DEMO_FALLBACK_HEDGES = ["AAPLUSDT", "TSLAUSDT", "METAUSDT", "AMZNUSDT", "NVDAUSDT"]
-
-
 def sym(ticker: str) -> str:
     return ticker + "USDT"
 
@@ -53,5 +48,5 @@ def hedge_symbols(ticker: str) -> list[str]:
 
 
 def snapshot_symbols(ticker: str) -> list[str]:
-    out = [sym(ticker), MARKET] + hedge_symbols(ticker) + peer_symbols(ticker) + DEMO_FALLBACK_HEDGES
+    out = [sym(ticker), MARKET] + hedge_symbols(ticker) + peer_symbols(ticker)
     return list(dict.fromkeys(out))

@@ -176,8 +176,8 @@ What the real run established:
 - Demo accounts default to hedge mode; the client reads the position mode and formats orders to match.
 - Demo funds land in the demo spot wallet. Transfer them to USDT-M Futures in the app, because the Demo API has no transfer endpoint.
 - Demo lists NVDA, META and AMZN from the universe, but none of the strategy's hedge instruments (QQQ, SPY, SMH).
-- **Hedge substitute (Demo only).** When the strategy hedge is not listed on Demo, the live path fits the best Demo-listed stock perpetual (AAPL, TSLA, META, AMZN or NVDA, excluding the company). It uses the same OLS fit and R² floor as the strategy hedge, and records the substitution with the position. If nothing fits, the result is NO_TRADE. Replay results are unaffected.
-- `python -m residual demo-strategy-trade` executes a real past strategy decision on Demo (company leg plus fitted hedge) and closes it. Records go to `data/demo_strategy_trades.jsonl`.
+- **Strict Demo execution.** If the strategy hedge is not listed on Demo, the live path records `NO_TRADE` before placing either leg. It never substitutes another stock, because that would change the strategy exposure and invalidate the hedge record.
+- `python -m residual demo-strategy-trade` executes a real past strategy decision on Demo only when its original fitted hedge is listed; otherwise it stops before sending an order. Records go to `data/demo_strategy_trades.jsonl`.
 
 ## Layout
 

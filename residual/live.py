@@ -18,7 +18,7 @@ from pathlib import Path
 
 from . import bitget, demo, edgar, events, market, universe
 from .interpret import interpret
-from .strategy import BASE_NOTIONAL, analyze, decide, fallback_hedge, learn_params
+from .strategy import BASE_NOTIONAL, analyze, decide, learn_params
 
 ROOT = Path(__file__).resolve().parent.parent
 LIVE_LOG = ROOT / "data" / "live_log.jsonl"
@@ -109,16 +109,14 @@ def _open_position(event, a, dec, now_ms, snap=None) -> tuple[dict | None, str |
     (all-or-nothing); otherwise they are local paper fills at the live bid/ask."""
     n = BASE_NOTIONAL * dec["size"]
     hedge = a.get("hedge")
-    substitute = None
     if demo.configured():
         try:
             client = demo.BitgetDemo()
             if hedge and not client.demo_symbol(hedge["symbol"]):
-                # the strategy hedge is not listed on Demo: use the best-fitting listed stock, labelled
-                substitute = fallback_hedge(event, snap, a, client.demo_symbol) if snap else None
-                if not substitute:
-                    return None, f"hedge {hedge['symbol']} not listed on Bitget Demo and no listed substitute fits"
-                hedge = substitute
+                # Never turn a strategy pair into a different pair on the execution path.
+                # A substitute stock changes the instrument exposure and invalidates the
+                # strategy's recorded hedge.  Refuse before placing either leg.
+                return None, f"hedge {hedge['symbol']} not listed on Bitget Demo; strict Demo mode refuses substitution"
             spec = [(event["company_symbol"], dec["direction"], n)]
             if hedge:
                 spec.append((hedge["symbol"], -dec["direction"], abs(hedge["beta"]) * n))
@@ -128,7 +126,7 @@ def _open_position(event, a, dec, now_ms, snap=None) -> tuple[dict | None, str |
             return None, f"bitget demo execution failed: {e}"
         pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms),
                "execution": "bitget_demo", "exit_due_ms": now_ms + market.HOLD_HOURS * HOUR_MS,
-               "hedge_substitute": substitute, "demo_legs": legs, "exchange_log": client.log}
+               "hedge_substitute": None, "demo_legs": legs, "exchange_log": client.log}
         _write(POSITIONS, _read(POSITIONS, []) + [pos])
         return pos, None
     spec = [(event["company_symbol"], dec["direction"], n)]

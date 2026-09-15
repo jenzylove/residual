@@ -220,11 +220,11 @@ def cmd_demo_check(args):
 
 
 def cmd_demo_strategy_trade(args):
-    """Execute a real past strategy TRADE decision on Bitget Demo (company leg + fitted hedge, substitute if the
-    strategy hedge is not listed), then close it. Evidence -> data/demo_strategy_trades.jsonl."""
+    """Execute a real past strategy TRADE decision on Bitget Demo with its original fitted hedge, then close it.
+    Refuses before any order when that hedge is not listed. Evidence -> data/demo_strategy_trades.jsonl."""
     from pathlib import Path
     from . import demo, market
-    from .strategy import analyze, fallback_hedge
+    from .strategy import analyze
     res = json.loads((Path(__file__).resolve().parent.parent / "data" / "results.json").read_text(encoding="utf-8"))
     evs = {e["event_id"]: e for e in res["events"]}
     c = demo.BitgetDemo()
@@ -238,23 +238,22 @@ def cmd_demo_strategy_trade(args):
     snap = market.load_snapshot(ev["event_id"])
     a = analyze(ev, snap)
     hedge = a.get("hedge")
-    sub = None
-    if hedge and not c.demo_symbol(hedge["symbol"]):
-        sub = fallback_hedge(ev, snap, a, c.demo_symbol)
-        if not sub:
-            raise demo.DemoError(f"{hedge['symbol']} not on Demo and no listed substitute fits (R2 >= floor)")
-        hedge = sub
+    if not hedge:
+        raise demo.DemoError("strategy decision has no hedge; strict Demo mode refuses an unpaired trade")
+    if not c.demo_symbol(hedge["symbol"]):
+        raise demo.DemoError(
+            f"{hedge['symbol']} not on Bitget Demo; strict Demo mode refuses a substitute hedge"
+        )
     d, n = r["decision"]["direction"], args.notional
     legs = [{"live_symbol": ev["company_symbol"], "side": d, "notional": n}]
-    if hedge:
-        legs.append({"live_symbol": hedge["symbol"], "side": -d, "notional": abs(hedge["beta"]) * n})
+    legs.append({"live_symbol": hedge["symbol"], "side": -d, "notional": abs(hedge["beta"]) * n})
     tag = "st" + time.strftime("%m%d%H%M%S")
     opened = c.open_pair(legs, tag)
     closed = c.close_pair(opened, tag)
     rec = {"tag": tag, "executed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "event_id": ev["event_id"],
            "decision": {k: r["decision"].get(k) for k in ("direction", "structure", "size")},
-           "strategy_hedge": (a.get("hedge") or {}).get("symbol"), "hedge_used": hedge["symbol"] if hedge else None,
-           "hedge_substitute": sub, "hedge_beta": hedge["beta"] if hedge else None,
+           "strategy_hedge": hedge["symbol"], "hedge_used": hedge["symbol"],
+           "hedge_substitute": None, "hedge_beta": hedge["beta"],
            "orders": [{"symbol": l["demo_symbol"], "side": "long" if l["side"] > 0 else "short",
                        "open": l["open_order"]["orderId"], "open_px": l["open_order"]["priceAvg"],
                        "close": l["close_order"]["orderId"], "close_px": l["close_order"]["priceAvg"]} for l in closed],
