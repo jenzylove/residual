@@ -348,4 +348,9 @@
  "decision": "ERROR",
  "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>"
 }
-^C
+^C^C{
+ "checked_at": "2026-09-15T18:31:01+00:00",
+ "decision": "NO_TRADE",
+ "reason": "no eligible earnings release since the last recorded event"
+}
+^C^C

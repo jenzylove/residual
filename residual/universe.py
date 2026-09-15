@@ -35,6 +35,19 @@ HEDGES = {
 }
 
 
+# Bitget Demo Trading lists only these stock perpetuals (checked 2026-09-15) and no index/sector ETFs.
+# The demo-executable mode is the same method restricted to instruments that venue can actually trade.
+DEMO_LISTED_STOCKS = ["NVDAUSDT", "METAUSDT", "AMZNUSDT", "AAPLUSDT", "TSLAUSDT"]
+
+
+def demo_companies() -> list[str]:
+    return [t for t in COMPANIES if sym(t) in DEMO_LISTED_STOCKS]
+
+
+def demo_hedge_pool(ticker: str) -> list[str]:
+    return [s for s in DEMO_LISTED_STOCKS if s != sym(ticker)]
+
+
 def sym(ticker: str) -> str:
     return ticker + "USDT"
 

@@ -29,7 +29,7 @@ def _coverage(idx, start, end):
     return sum(1 for t in idx if start <= t < end) / max(1, (end - start) // HOUR)
 
 
-def analyze(event: dict, snap: dict | None) -> dict:
+def analyze(event: dict, snap: dict | None, hedge_pool: list[str] | None = None) -> dict:
     """Everything that is known at decision time, plus counterfactual outcomes."""
     a = {"event_id": event["event_id"], "gates": {}}
     g = a["gates"]
@@ -95,11 +95,13 @@ def analyze(event: dict, snap: dict | None) -> dict:
     start = t_pre - PRIMARY * DAY
     rc = hourly_returns(idx[C], start, t_pre)
     cands = []
-    for h in universe.hedge_symbols(event["ticker"]):
+    pool = hedge_pool if hedge_pool is not None else universe.hedge_symbols(event["ticker"])
+    etfs = set(universe.hedge_symbols(event["ticker"]))
+    for h in pool:
         if h in idx and _coverage(idx[h], start, t_pre) >= MIN_COVERAGE and price_at(idx[h], t_obs):
             hf = hedge_fit(rc, hourly_returns(idx[h], start, t_pre))
             if hf:
-                cands.append({"symbol": h, **hf})
+                cands.append({"symbol": h, "kind": "index_etf" if h in etfs else "demo_stock", **hf})
     a["hedge_candidates"] = cands
     best = max(cands, key=lambda c: c["r2"]) if cands else None
     if not best or best["r2"] < MIN_HEDGE_R2:

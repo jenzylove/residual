@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-13T19:09:43+00:00",
+ "generated_at": "2026-09-15T19:41:30+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -14519,6 +14519,7 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.5006606668904805,
       "r2": 0.5233179534264625
@@ -14526,6 +14527,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.5006606668904805,
      "r2": 0.5233179534264625
@@ -14912,6 +14914,7 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.552749691253144,
       "r2": 0.46326999215270814
@@ -14919,6 +14922,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.552749691253144,
      "r2": 0.46326999215270814
@@ -15442,6 +15446,7 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.3479765467828349,
       "r2": 0.12503848706531992
@@ -15449,6 +15454,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.3479765467828349,
      "r2": 0.12503848706531992
@@ -16084,6 +16090,7 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.9162245627907538,
       "r2": 0.35548021324170354
@@ -16091,6 +16098,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.9162245627907538,
      "r2": 0.35548021324170354
@@ -16724,6 +16732,7 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.8882679712382295,
       "r2": 0.4868526457412596
@@ -16731,6 +16740,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.8882679712382295,
      "r2": 0.4868526457412596
@@ -17445,6 +17455,7 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.0173283573996317,
       "r2": 0.3908419073976455
@@ -17452,6 +17463,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.0173283573996317,
      "r2": 0.3908419073976455
@@ -17841,12 +17853,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.162105918006061,
       "r2": 0.4404510720893272
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.039797238368258,
       "r2": 0.26718417505510006
@@ -17854,6 +17868,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.162105918006061,
      "r2": 0.4404510720893272
@@ -18241,12 +18256,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.4285314567421235,
       "r2": 0.3378056045760339
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.4130474562011168,
       "r2": 0.25609124306152403
@@ -18254,6 +18271,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.4285314567421235,
      "r2": 0.3378056045760339
@@ -18505,12 +18523,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.4814384120273731,
       "r2": 0.37307122807490756
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.695599780457246,
       "r2": 0.3529494087823929
@@ -18518,6 +18538,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.4814384120273731,
      "r2": 0.37307122807490756
@@ -19099,12 +19120,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.0558924192054087,
       "r2": 0.4536412029936375
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.203588925402428,
       "r2": 0.36874628786178537
@@ -19112,6 +19135,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.0558924192054087,
      "r2": 0.4536412029936375
@@ -19753,12 +19777,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.4195262656037897,
       "r2": 0.15842382130205346
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1735013706297925,
       "r2": 0.06887309904328984
@@ -19766,6 +19792,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.4195262656037897,
      "r2": 0.15842382130205346
@@ -20370,12 +20397,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.9330264832516751,
       "r2": 0.3116758940932386
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1627990034522664,
       "r2": 0.27519456371553985
@@ -20383,6 +20412,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.9330264832516751,
      "r2": 0.3116758940932386
@@ -20727,12 +20757,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1549543951539205,
       "r2": 0.28346029978915704
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.3744054370016194,
       "r2": 0.2281957628105291
@@ -20740,6 +20772,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.1549543951539205,
      "r2": 0.28346029978915704
@@ -20998,12 +21031,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.2806286778104818,
       "r2": 0.23714782008604168
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.91054342197033,
       "r2": 0.24095757189999
@@ -21011,6 +21046,7 @@
     ],
     "hedge": {
      "symbol": "SPYUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.91054342197033,
      "r2": 0.24095757189999
@@ -21672,12 +21708,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.3070141508926914,
       "r2": 0.31802057790741384
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.795778119220368,
       "r2": 0.2006475330559237
@@ -21685,6 +21723,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.3070141508926914,
      "r2": 0.31802057790741384
@@ -21954,12 +21993,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.8250843030387438,
       "r2": 0.542464396795314
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.516603368046213,
       "r2": 0.43216620250412596
@@ -21967,6 +22008,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.8250843030387438,
      "r2": 0.542464396795314
@@ -22234,12 +22276,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.613486966826683,
       "r2": 0.29615703020838363
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.845175841878523,
       "r2": 0.16210385762660956
@@ -22247,6 +22291,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.613486966826683,
      "r2": 0.29615703020838363
@@ -23182,12 +23227,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.6891714564120894,
       "r2": 0.27055416283161937
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.1135487899316487,
       "r2": 0.18823786752947658
@@ -23195,6 +23242,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.6891714564120894,
      "r2": 0.27055416283161937
@@ -23464,12 +23512,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.6678563372737614,
       "r2": 0.4646880880370851
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.8921849745219865,
       "r2": 0.24659581245991474
@@ -23477,6 +23527,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.6678563372737614,
      "r2": 0.4646880880370851
@@ -23681,18 +23732,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.193518000192985,
       "r2": 0.4240731942219965
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 3.1842457670005877,
       "r2": 0.2511639819045824
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.3526512413625036,
       "r2": 0.3946613129291357
@@ -23700,6 +23754,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.193518000192985,
      "r2": 0.4240731942219965
@@ -23972,18 +24027,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.7633836711652661,
       "r2": 0.47200884231745033
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.6005624190047925,
       "r2": 0.3417827573536273
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.2585971455984666,
       "r2": 0.1976547738794639
@@ -23991,6 +24049,7 @@
     ],
     "hedge": {
      "symbol": "SMHUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.7633836711652661,
      "r2": 0.47200884231745033
@@ -24580,18 +24639,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.3036383201064152,
       "r2": 0.5614449935408236
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 3.0665138214031047,
       "r2": 0.5351514577763349
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 4.039628002301722,
       "r2": 0.2927425096482373
@@ -24599,6 +24661,7 @@
     ],
     "hedge": {
      "symbol": "SMHUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.3036383201064152,
      "r2": 0.5614449935408236
@@ -24873,18 +24936,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1804101573340948,
       "r2": 0.607082132184809
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.54809025585643,
       "r2": 0.5041712779454084
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 3.831557414977158,
       "r2": 0.3441836642577214
@@ -24892,6 +24958,7 @@
     ],
     "hedge": {
      "symbol": "SMHUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.1804101573340948,
      "r2": 0.607082132184809
@@ -25285,18 +25352,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.6721571869633463,
       "r2": 0.5062295880039527
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.616787735164993,
       "r2": 0.615533777156645
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.7114331056332865,
       "r2": 0.5622247510393682
@@ -25304,6 +25374,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.616787735164993,
      "r2": 0.615533777156645
@@ -25688,12 +25759,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.5829985216299527,
       "r2": 0.15545019329860568
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.0082015609687944,
       "r2": 0.15097929217525466
@@ -25701,6 +25774,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.5829985216299527,
      "r2": 0.15545019329860568
@@ -26281,12 +26355,14 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.7568146017752777,
       "r2": 0.3636349839610845
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.330555675978951,
       "r2": 0.3532513722405584
@@ -26294,6 +26370,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.7568146017752777,
      "r2": 0.3636349839610845
@@ -26882,18 +26959,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.8491984976320108,
       "r2": 0.13348908145277338
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.4046018014067854,
       "r2": 0.11318838113519185
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.3797881251124098,
       "r2": 0.07950077061230207
@@ -26901,6 +26981,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.8491984976320108,
      "r2": 0.13348908145277338
@@ -27301,18 +27382,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.3286354783355316,
       "r2": 0.6905042852666543
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.9497003230679932,
       "r2": 0.7284148599911457
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 4.395231517393848,
       "r2": 0.5006702028472542
@@ -27320,6 +27404,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.9497003230679932,
      "r2": 0.7284148599911457
@@ -27589,18 +27674,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.102610650408736,
       "r2": 0.5174574993681667
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 3.324356648384278,
       "r2": 0.407159407733251
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.8475286248356019,
       "r2": 0.28315666833809083
@@ -27608,6 +27696,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.102610650408736,
      "r2": 0.5174574993681667
@@ -27883,18 +27972,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": -0.2130233018232348,
       "r2": 0.0044900117658891485
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.8560854769000947,
       "r2": 0.01939619530662853
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": -0.1906226647326525,
       "r2": 0.011301627232605574
@@ -27902,6 +27994,7 @@
     ],
     "hedge": {
      "symbol": "SPYUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.8560854769000947,
      "r2": 0.01939619530662853
@@ -28176,18 +28269,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1639490062026843,
       "r2": 0.12599471748584637
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.568900813484093,
       "r2": 0.06123002545479284
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.6209699920314983,
       "r2": 0.11272605473133879
@@ -28195,6 +28291,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.1639490062026843,
      "r2": 0.12599471748584637
@@ -28790,18 +28887,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.5253743177000952,
       "r2": 0.46179034243626516
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1401790249698684,
       "r2": 0.43800231317661287
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.5748481861677353,
       "r2": 0.22350988381361206
@@ -28809,6 +28909,7 @@
     ],
     "hedge": {
      "symbol": "SMHUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.5253743177000952,
      "r2": 0.46179034243626516
@@ -29207,18 +29308,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 2.0506357691051704,
       "r2": 0.4488381672763499
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 4.363392648818731,
       "r2": 0.3690780531290741
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 5.935313250218862,
       "r2": 0.18630609662979636
@@ -29226,6 +29330,7 @@
     ],
     "hedge": {
      "symbol": "SMHUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 2.0506357691051704,
      "r2": 0.4488381672763499
@@ -29503,18 +29608,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.89995958387948,
       "r2": 0.08629099694283339
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.9534673739603627,
       "r2": 0.029005092781082608
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.5699060998490164,
       "r2": 0.09675874817566009
@@ -29522,6 +29630,7 @@
     ],
     "hedge": {
      "symbol": "XLKUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 0.5699060998490164,
      "r2": 0.09675874817566009
@@ -29801,18 +29910,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.2499742448947553,
       "r2": 0.09320927393524045
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.809365210247422,
       "r2": 0.05848608864888162
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.7249404243123643,
       "r2": 0.08766490917145543
@@ -29820,6 +29932,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.2499742448947553,
      "r2": 0.09320927393524045
@@ -30096,18 +30209,21 @@
     "hedge_candidates": [
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.3285086465251454,
       "r2": 0.11999909554913996
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.590461596558907,
       "r2": 0.0561595372175741
      },
      {
       "symbol": "XLKUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.7376661748761993,
       "r2": 0.1071416343404723
@@ -30115,6 +30231,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.3285086465251454,
      "r2": 0.11999909554913996
@@ -30398,18 +30515,21 @@
     "hedge_candidates": [
      {
       "symbol": "SMHUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 0.5093370757858328,
       "r2": 0.2989601682149443
      },
      {
       "symbol": "QQQUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.1744727741237493,
       "r2": 0.38281575451157307
      },
      {
       "symbol": "SPYUSDT",
+      "kind": "index_etf",
       "n_hours": 336,
       "beta": 1.7512748475807085,
       "r2": 0.2779332205340247
@@ -30417,6 +30537,7 @@
     ],
     "hedge": {
      "symbol": "QQQUSDT",
+     "kind": "index_etf",
      "n_hours": 336,
      "beta": 1.1744727741237493,
      "r2": 0.38281575451157307
@@ -31244,6 +31365,768 @@
    }
   }
  ],
+ "demo_mode": {
+  "companies": [
+   "NVDA",
+   "META",
+   "AMZN"
+  ],
+  "hedge_pool": [
+   "NVDAUSDT",
+   "METAUSDT",
+   "AMZNUSDT",
+   "AAPLUSDT",
+   "TSLAUSDT"
+  ],
+  "note": "Bitget Demo lists no index or sector ETF, so this mode hedges with the best fitting Demo listed stock. Same gates, same walk-forward, same size; its own scoring.",
+  "summary": {
+   "residual": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "primary",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 6,
+    "no_trades": 6,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "unhedged": {
+    "sharpe_per_trade": 0.185,
+    "sortino_per_trade": 0.5,
+    "sharpe_daily_ann": -0.122,
+    "sortino_daily_ann": -0.161,
+    "days": 302,
+    "basis": "primary",
+    "total_net_pnl": -10.45,
+    "trades": 2,
+    "excluded_funding_unavailable": 4,
+    "no_trades": 6,
+    "hit_rate": 0.5,
+    "avg_pnl_per_trade": -5.23,
+    "pnl_std_per_trade": 93.71,
+    "max_drawdown": -71.49,
+    "avg_holding_hours": 12.5,
+    "return_on_start_balance_pct": -0.01,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -71.49,
+     -10.45,
+     -10.45
+    ]
+   },
+   "naive_same_events": {
+    "sharpe_per_trade": 1.99,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": 1.557,
+    "sortino_daily_ann": null,
+    "days": 302,
+    "basis": "primary",
+    "total_net_pnl": 119.1,
+    "trades": 2,
+    "excluded_funding_unavailable": 4,
+    "no_trades": 6,
+    "hit_rate": 1.0,
+    "avg_pnl_per_trade": 59.55,
+    "pnl_std_per_trade": 2.1,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": 24.0,
+    "return_on_start_balance_pct": 0.119,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     58.07,
+     119.1,
+     119.1
+    ]
+   },
+   "naive": {
+    "sharpe_per_trade": 2.579,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": 1.818,
+    "sortino_daily_ann": null,
+    "days": 303,
+    "basis": "primary",
+    "total_net_pnl": 255.8,
+    "trades": 3,
+    "excluded_funding_unavailable": 7,
+    "no_trades": 2,
+    "hit_rate": 1.0,
+    "avg_pnl_per_trade": 85.27,
+    "pnl_std_per_trade": 33.06,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": 24.0,
+    "return_on_start_balance_pct": 0.256,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     58.07,
+     180.13,
+     255.8
+    ]
+   },
+   "v_residual": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "primary",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 6,
+    "no_trades": 6,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "v_headline": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "primary",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 6,
+    "no_trades": 6,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "v_agreement": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "primary",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 3,
+    "no_trades": 9,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "no_trade": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "primary",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 12,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "summary_conservative_funding": {
+   "residual": {
+    "sharpe_per_trade": 0.408,
+    "sortino_per_trade": 0.909,
+    "sharpe_daily_ann": 0.695,
+    "sortino_daily_ann": 1.349,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": 116.72,
+    "trades": 6,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 6,
+    "hit_rate": 0.667,
+    "avg_pnl_per_trade": 19.45,
+    "pnl_std_per_trade": 79.69,
+    "max_drawdown": -106.66,
+    "avg_holding_hours": 22.8,
+    "return_on_start_balance_pct": 0.117,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -87.68,
+     -69.82,
+     -106.66,
+     -106.66,
+     -80.84,
+     -80.84,
+     -80.84,
+     65.25,
+     116.72,
+     116.72
+    ]
+   },
+   "unhedged": {
+    "sharpe_per_trade": -0.146,
+    "sortino_per_trade": -0.204,
+    "sharpe_daily_ann": -1.112,
+    "sortino_daily_ann": -1.202,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": -181.95,
+    "trades": 6,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 6,
+    "hit_rate": 0.5,
+    "avg_pnl_per_trade": -30.33,
+    "pnl_std_per_trade": 73.28,
+    "max_drawdown": -242.99,
+    "avg_holding_hours": 17.2,
+    "return_on_start_balance_pct": -0.182,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -123.4,
+     -115.53,
+     -201.29,
+     -201.29,
+     -171.5,
+     -171.5,
+     -171.5,
+     -242.99,
+     -181.95,
+     -181.95
+    ]
+   },
+   "naive_same_events": {
+    "sharpe_per_trade": 0.137,
+    "sortino_per_trade": 0.222,
+    "sharpe_daily_ann": 0.352,
+    "sortino_daily_ann": 0.5,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": 59.75,
+    "trades": 6,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 6,
+    "hit_rate": 0.667,
+    "avg_pnl_per_trade": 9.96,
+    "pnl_std_per_trade": 82.67,
+    "max_drawdown": -123.4,
+    "avg_holding_hours": 21.0,
+    "return_on_start_balance_pct": 0.06,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -123.4,
+     -115.53,
+     -13.94,
+     -13.94,
+     -59.35,
+     -59.35,
+     -59.35,
+     -1.28,
+     59.75,
+     59.75
+    ]
+   },
+   "naive": {
+    "sharpe_per_trade": -0.05,
+    "sortino_per_trade": -0.071,
+    "sharpe_daily_ann": -0.167,
+    "sortino_daily_ann": -0.213,
+    "days": 303,
+    "basis": "conservative",
+    "total_net_pnl": -45.56,
+    "trades": 10,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 2,
+    "hit_rate": 0.5,
+    "avg_pnl_per_trade": -4.56,
+    "pnl_std_per_trade": 91.6,
+    "max_drawdown": -301.35,
+    "avg_holding_hours": 20.8,
+    "return_on_start_balance_pct": -0.046,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -123.4,
+     -107.66,
+     -6.07,
+     -113.0,
+     -203.81,
+     -279.9,
+     -301.35,
+     -243.29,
+     -121.22,
+     -45.56
+    ]
+   },
+   "v_residual": {
+    "sharpe_per_trade": 0.408,
+    "sortino_per_trade": 0.909,
+    "sharpe_daily_ann": 0.695,
+    "sortino_daily_ann": 1.349,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": 116.72,
+    "trades": 6,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 6,
+    "hit_rate": 0.667,
+    "avg_pnl_per_trade": 19.45,
+    "pnl_std_per_trade": 79.69,
+    "max_drawdown": -106.66,
+    "avg_holding_hours": 22.8,
+    "return_on_start_balance_pct": 0.117,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -87.68,
+     -69.82,
+     -106.66,
+     -106.66,
+     -80.84,
+     -80.84,
+     -80.84,
+     65.25,
+     116.72,
+     116.72
+    ]
+   },
+   "v_headline": {
+    "sharpe_per_trade": -0.177,
+    "sortino_per_trade": -0.244,
+    "sharpe_daily_ann": -0.932,
+    "sortino_daily_ann": -1.03,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": -114.72,
+    "trades": 6,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 6,
+    "hit_rate": 0.5,
+    "avg_pnl_per_trade": -19.12,
+    "pnl_std_per_trade": 56.76,
+    "max_drawdown": -166.19,
+    "avg_holding_hours": 19.2,
+    "return_on_start_balance_pct": -0.115,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -87.68,
+     -69.82,
+     -51.82,
+     -51.82,
+     -89.27,
+     -89.27,
+     -89.27,
+     -166.19,
+     -114.72,
+     -114.72
+    ]
+   },
+   "v_agreement": {
+    "sharpe_per_trade": 0.176,
+    "sortino_per_trade": 0.336,
+    "sharpe_daily_ann": -0.195,
+    "sortino_daily_ann": -0.23,
+    "days": 302,
+    "basis": "conservative",
+    "total_net_pnl": -18.34,
+    "trades": 3,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 9,
+    "hit_rate": 0.667,
+    "avg_pnl_per_trade": -6.11,
+    "pnl_std_per_trade": 72.61,
+    "max_drawdown": -87.68,
+    "avg_holding_hours": 21.7,
+    "return_on_start_balance_pct": -0.018,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -87.68,
+     -69.82,
+     -69.82,
+     -69.82,
+     -69.82,
+     -69.82,
+     -69.82,
+     -69.82,
+     -18.34,
+     -18.34
+    ]
+   },
+   "no_trade": {
+    "sharpe_per_trade": null,
+    "sortino_per_trade": null,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "days": 0,
+    "basis": "conservative",
+    "total_net_pnl": 0.0,
+    "trades": 0,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 12,
+    "hit_rate": null,
+    "avg_pnl_per_trade": null,
+    "pnl_std_per_trade": null,
+    "max_drawdown": 0.0,
+    "avg_holding_hours": null,
+    "return_on_start_balance_pct": 0.0,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "rows": [
+   {
+    "event_id": "META-2025-10-29",
+    "decision": {
+     "decision": "NO_TRADE",
+     "direction": null,
+     "size": 0.0,
+     "structure": null,
+     "reasons": [
+      "market_data"
+     ]
+    },
+    "hedge": {},
+    "residual": null,
+    "net": null
+   },
+   {
+    "event_id": "AMZN-2025-10-30",
+    "decision": {
+     "decision": "NO_TRADE",
+     "direction": null,
+     "size": 0.0,
+     "structure": null,
+     "reasons": [
+      "market_data"
+     ]
+    },
+    "hedge": {},
+    "residual": null,
+    "net": null
+   },
+   {
+    "event_id": "NVDA-2025-11-19",
+    "decision": {
+     "decision": "TRADE",
+     "direction": 1,
+     "size": 1.0,
+     "structure": "long company / short hedge",
+     "reasons": []
+    },
+    "hedge": {
+     "symbol": "TSLAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.5077169461349715,
+     "r2": 0.4939260154429526
+    },
+    "residual": 0.026308699157276523,
+    "net": -86.63119699896497
+   },
+   {
+    "event_id": "META-2026-01-28",
+    "decision": {
+     "decision": "TRADE",
+     "direction": 1,
+     "size": 0.5,
+     "structure": "long company / short hedge",
+     "reasons": []
+    },
+    "hedge": {
+     "symbol": "TSLAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.5083686014146827,
+     "r2": 0.36868035653852665
+    },
+    "residual": 0.07821087355470067,
+    "net": 19.810400143461607
+   },
+   {
+    "event_id": "AMZN-2026-02-05",
+    "decision": {
+     "decision": "TRADE",
+     "direction": -1,
+     "size": 1.0,
+     "structure": "short company / long hedge",
+     "reasons": []
+    },
+    "hedge": {
+     "symbol": "NVDAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.39834987599732746,
+     "r2": 0.17805024412931092
+    },
+    "residual": -0.09428797190811242,
+    "net": -36.29334286210886
+   },
+   {
+    "event_id": "NVDA-2026-02-25",
+    "decision": {
+     "decision": "NO_TRADE",
+     "direction": null,
+     "size": 0.0,
+     "structure": null,
+     "reasons": [
+      "reaction_open"
+     ]
+    },
+    "hedge": {
+     "symbol": "METAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.7563976642160619,
+     "r2": 0.40782059982831587
+    },
+    "residual": 0.009430630441308489,
+    "net": null
+   },
+   {
+    "event_id": "META-2026-04-29",
+    "decision": {
+     "decision": "TRADE",
+     "direction": -1,
+     "size": 0.5,
+     "structure": "short company / long hedge",
+     "reasons": []
+    },
+    "hedge": {
+     "symbol": "AMZNUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.3860615436691299,
+     "r2": 0.25111102879711267
+    },
+    "residual": -0.06134106352839904,
+    "net": 27.747381011632385
+   },
+   {
+    "event_id": "AMZN-2026-04-29",
+    "decision": {
+     "decision": "NO_TRADE",
+     "direction": null,
+     "size": 0.0,
+     "structure": null,
+     "reasons": [
+      "reaction_open"
+     ]
+    },
+    "hedge": {
+     "symbol": "METAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.6504430003842206,
+     "r2": 0.25111102879711267
+    },
+    "residual": 0.012232225294946962,
+    "net": null
+   },
+   {
+    "event_id": "NVDA-2026-05-20",
+    "decision": {
+     "decision": "NO_TRADE",
+     "direction": null,
+     "size": 0.0,
+     "structure": null,
+     "reasons": [
+      "residual_vs_cost",
+      "ai_interpretation"
+     ]
+    },
+    "hedge": {
+     "symbol": "TSLAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.5334548741966718,
+     "r2": 0.2838434458604015
+    },
+    "residual": -0.0064017688666165445,
+    "net": null
+   },
+   {
+    "event_id": "META-2026-07-29",
+    "decision": {
+     "decision": "TRADE",
+     "direction": -1,
+     "size": 1.0,
+     "structure": "short company / long hedge",
+     "reasons": []
+    },
+    "hedge": {
+     "symbol": "AMZNUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.6168135017550676,
+     "r2": 0.2373499131017725
+    },
+    "residual": -0.09981277426684884,
+    "net": 146.0845427606773
+   },
+   {
+    "event_id": "AMZN-2026-07-30",
+    "decision": {
+     "decision": "TRADE",
+     "direction": 1,
+     "size": 0.5,
+     "structure": "long company / short hedge",
+     "reasons": []
+    },
+    "hedge": {
+     "symbol": "NVDAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.3728571985512638,
+     "r2": 0.20774026040404805
+    },
+    "residual": 0.08988112052524344,
+    "net": 51.47130677530894
+   },
+   {
+    "event_id": "NVDA-2026-08-26",
+    "decision": {
+     "decision": "NO_TRADE",
+     "direction": null,
+     "size": 0.0,
+     "structure": null,
+     "reasons": [
+      "hedge"
+     ]
+    },
+    "hedge": {
+     "symbol": "TSLAUSDT",
+     "kind": "demo_stock",
+     "n_hours": 336,
+     "beta": 0.16744583895636975,
+     "r2": 0.08039465411631934
+    },
+    "residual": 0.0318971011526977,
+    "net": null
+   }
+  ]
+ },
  "ablation_no_ai": {
   "summary": {
    "residual": {

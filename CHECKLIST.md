@@ -46,6 +46,7 @@ Numbers refer to the committed `data/results.json`.
 
 ## Rubric work (Alpha Factory: executable, effective, verifiable)
 - [x] Executable:
+  - Demo-executable mode: same method on Demo-listed instruments; 6 trades, all placeable on Demo; one placed for real (AMZN/NVDA, 4 filled orders);
   - $2.5k default sized to Bitget liquidity; a size study re-runs the walk-forward at $1k/$2.5k/$5k/$10k;
   - Strict Demo execution refuses an unlisted hedge before placing either leg, with a fixture test;
   - `demo-strategy-trade` executes a replayed strategy decision on real Demo only when the original hedge is listed.

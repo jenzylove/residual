@@ -41,6 +41,7 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
   realStrip();
   variantsTable();
   sizeStudy();
+  demoMode();
   demoStrategy();
   reveal();
   startAuto();
@@ -351,6 +352,20 @@ function sizeStudy() {
     <text x="0" y="${y(hi) + 4}">${usd(hi)}</text><text x="0" y="${y(lo)}">${usd(lo)}</text></svg>
     <div class="legend"><span><i style="background:#6c4ee6"></i>Strategy</span><span><i style="background:#d0453b"></i>Plain headline, same releases</span></div>
     <p class="note">Same walk forward, re run at four position sizes. Above $2.5k, Bitget's after hours liquidity rejects most releases (${ss.map(s => `$${s.notional / 1000}k: ${s.liquidity_rejects}`).join(", ")} liquidity rejections). The default is $${(cur / 1000).toLocaleString()}k.</p>`;
+}
+
+function demoMode() {
+  const dm = D.demo_mode, el = $("#demo-mode");
+  if (!dm || !el) return;
+  el.hidden = false;
+  const S = dm.summary_conservative_funding, tr = dm.rows.filter(r => r.decision.decision === "TRADE");
+  el.innerHTML = `<h4>Demo executable mode · the same method on instruments Bitget Demo lists</h4>
+    <p class="note" style="margin:0 0 16px">${esc(dm.note)} Companies: ${dm.companies.join(", ")}.</p>
+    <div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe</th><th class="num">Hit</th></tr></thead><tbody>
+      <tr class="hl"><td>Strategy<small>demo executable pairs</small></td><td class="num">${S.residual.trades}</td><td class="num ${cls(S.residual.total_net_pnl)}">${usd(S.residual.total_net_pnl, 0)}</td><td class="num">${S.residual.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.residual.hit_rate == null ? "n/a" : Math.round(S.residual.hit_rate * 100) + "%"}</td></tr>
+      <tr><td>Plain headline, same releases<small>unhedged baseline</small></td><td class="num">${S.naive_same_events.trades}</td><td class="num ${cls(S.naive_same_events.total_net_pnl)}">${usd(S.naive_same_events.total_net_pnl, 0)}</td><td class="num">${S.naive_same_events.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.naive_same_events.hit_rate == null ? "n/a" : Math.round(S.naive_same_events.hit_rate * 100) + "%"}</td></tr>
+    </tbody></table></div>
+    <p class="note">Stress view (every trade, worst case funding). The ${tr.length} pairs: ${tr.map(r => esc(r.event_id.split("-")[0]) + " vs " + esc((r.hedge.symbol || "").replace("USDT", ""))).join(" · ")}. Each one could be placed on Bitget Demo, and one of them was.</p>`;
 }
 
 function demoStrategy() {

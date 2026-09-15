@@ -93,6 +93,23 @@ All figures at the $2,500 default size.
 - Of the three pre-declared rules, agreement scored best; the walk-forward selector moved to it only once enough history existed.
 - With 4 to 17 trades, none of these differences is statistically meaningful.
 
+## Demo-executable mode
+
+Bitget Demo lists five stock perpetuals (NVDA, META, AMZN, AAPL, TSLA) and no index or sector ETF, so the main strategy's hedges (QQQ, SPY, SMH, XLK) cannot be traded there. The demo-executable mode is the same method restricted to what that venue lists: the three universe companies Demo carries, hedged with the best fitting Demo-listed stock. Same gates, same walk-forward, same $2,500 size, scored separately (`demo_mode` in `data/results.json`).
+
+Stress view (every trade, worst-case funding), 6 trades:
+
+| | Net P&L | Sharpe |
+|---|---|---|
+| Demo-executable strategy | +$116.72 | 0.70 |
+| Plain headline, same releases | +$59.75 | 0.35 |
+
+All six pairs are executable on Demo, and one was actually placed: AMZN long against NVDA short, 4 filled orders, net −$0.20 after fees (`data/demo_strategy_trades.jsonl`).
+
+```bash
+python -m residual demo-strategy-trade --mode demo --notional 100
+```
+
 ## Run it
 
 Requires Python 3.11+, with no third-party packages.

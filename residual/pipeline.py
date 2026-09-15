@@ -120,8 +120,11 @@ def funding_caps(snaps) -> dict[str, float]:
     return caps
 
 
-def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True) -> dict:
+def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
+           hedge_pool=None, tickers=None) -> dict:
     events = load_events()
+    if tickers:
+        events = [e for e in events if e['ticker'] in tickers]
     snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}
     caps = funding_caps(snaps.values())
     worst = max(caps.values(), default=0.0)
@@ -132,7 +135,8 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
     analyzed = []
     for ev in events:
         snap = snaps[ev["event_id"]]
-        analyzed.append((ev, snap, analyze(ev, snap)))
+        pool = hedge_pool(ev['ticker']) if callable(hedge_pool) else hedge_pool
+        analyzed.append((ev, snap, analyze(ev, snap, pool)))
 
     rows, orders, balance = [], [], START_BALANCE
     for i, (ev, snap, a) in enumerate(analyzed):

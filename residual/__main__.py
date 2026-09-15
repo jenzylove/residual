@@ -44,6 +44,20 @@ def cmd_replay(args):
     from .live import load_live_log
     res = replay(use_ai=not args.no_ai, allow_llm_calls=not args.offline)
     res["size_study"] = size_study()
+    # Demo-executable mode: same method, restricted to instruments Bitget Demo actually lists
+    from . import universe
+    dm = replay(use_ai=not args.no_ai, allow_llm_calls=False, verbose=False,
+                hedge_pool=universe.demo_hedge_pool, tickers=set(universe.demo_companies()))
+    res["demo_mode"] = {
+        "companies": universe.demo_companies(), "hedge_pool": universe.DEMO_LISTED_STOCKS,
+        "note": "Bitget Demo lists no index or sector ETF, so this mode hedges with the best fitting "
+                "Demo listed stock. Same gates, same walk-forward, same size; its own scoring.",
+        "summary": dm["summary"], "summary_conservative_funding": dm["summary_conservative_funding"],
+        "rows": [{"event_id": r["event_id"],
+                  "decision": {k: r["decision"].get(k) for k in ("decision", "direction", "size", "structure", "reasons")},
+                  "hedge": r["analysis"].get("hedge") or {}, "residual": r["analysis"].get("residual"),
+                  "net": (r.get("residual") or {}).get("net")} for r in dm["rows"]],
+    }
     if not args.no_ai:
         core = replay(use_ai=False, verbose=False)
         res["ablation_no_ai"] = {"summary": core["summary"],
@@ -228,7 +242,8 @@ def cmd_demo_strategy_trade(args):
     res = json.loads((Path(__file__).resolve().parent.parent / "data" / "results.json").read_text(encoding="utf-8"))
     evs = {e["event_id"]: e for e in res["events"]}
     c = demo.BitgetDemo()
-    rows = [r for r in res["rows"] if r["decision"]["decision"] == "TRADE"
+    source_rows = res["demo_mode"]["rows"] if args.mode == "demo" else res["rows"]
+    rows = [r for r in source_rows if r["decision"]["decision"] == "TRADE"
             and (not args.event or r["event_id"] == args.event)
             and c.demo_symbol(evs[r["event_id"]]["company_symbol"])]
     if not rows:
@@ -236,7 +251,8 @@ def cmd_demo_strategy_trade(args):
     r = rows[-1]
     ev = evs[r["event_id"]]
     snap = market.load_snapshot(ev["event_id"])
-    a = analyze(ev, snap)
+    from . import universe
+    a = analyze(ev, snap, universe.demo_hedge_pool(ev["ticker"]) if args.mode == "demo" else None)
     hedge = a.get("hedge")
     if not hedge:
         raise demo.DemoError("strategy decision has no hedge; strict Demo mode refuses an unpaired trade")
@@ -312,6 +328,8 @@ def main():
     rt.add_argument("--notional", type=float, default=50.0)
     st = sub.add_parser("demo-strategy-trade", help="execute a real past strategy TRADE decision on Bitget Demo")
     st.add_argument("--event"); st.add_argument("--notional", type=float, default=100.0)
+    st.add_argument("--mode", choices=("strategy", "demo"), default="demo",
+                    help="demo: the Demo-executable mode (default); strategy: the main mode")
     kr = sub.add_parser("keyrun", help="full Bitget Demo test run -> data/keyrun_report.json")
     kr.add_argument("--notional", type=float, default=50.0)
     kr.add_argument("--skip-roundtrip", action="store_true")
