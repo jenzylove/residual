@@ -356,13 +356,13 @@ function variantsTable() {
     ["v_residual", "Residual rule", "trade the company's own move"],
     ["v_headline", "Headline, hedged", "trade the guidance surprise, hedged and gated"],
     ["v_agreement", "Agreement", "only when the company move and the surprise agree"],
-    ["v_consensus", "Analyst consensus", "trade the EPS surprise vs analyst estimates (Alpha Vantage)"],
+    ["v_consensus", "Analyst consensus — diagnostic", "post-hoc EPS baseline; published but never eligible for selection"],
     ["naive_same_events", "Plain headline, same releases", "unhedged baseline"],
   ];
   $("#variants").innerHTML = `<div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe<small>n trades</small></th><th class="num">Hit</th></tr></thead><tbody>
     ${rows.map(([k, n, sub, hl]) => S[k] ? `<tr class="${hl ? "hl" : ""}"><td>${n}<small>${sub}</small></td><td class="num">${S[k].trades}</td><td class="num ${cls(S[k].total_net_pnl)}">${usd(S[k].total_net_pnl, 0)}</td><td class="num">${f(S[k].sharpe_daily_ann)}<small>n=${S[k].trades}</small></td><td class="num">${S[k].hit_rate == null ? "n/a" : Math.round(S[k].hit_rate * 100) + "%"}</td></tr>` : "").join("")}
     </tbody></table></div>
-    <p class="note">The rules were declared before scoring, and each is published whether it wins or loses. All trades counted, missing funding charged at the worst observed rate.</p>`;
+    <p class="note">The three selector rules were declared before scoring. Analyst consensus arrived later, so it is diagnostic only and can never drive the strategy. All trades counted; missing funding is charged at the worst observed rate.</p>`;
 }
 
 function sizeStudy() {

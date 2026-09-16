@@ -61,5 +61,10 @@ def hedge_symbols(ticker: str) -> list[str]:
 
 
 def snapshot_symbols(ticker: str) -> list[str]:
-    out = [sym(ticker), MARKET] + hedge_symbols(ticker) + peer_symbols(ticker)
+    # A snapshot is the immutable input for both the main replay and the
+    # Demo-executable replay.  Include Demo candidates up front so a newly
+    # collected event can be evaluated in either mode without borrowing a
+    # hedge series from an older/ad-hoc snapshot.
+    out = ([sym(ticker), MARKET] + hedge_symbols(ticker) +
+           demo_hedge_pool(ticker) + peer_symbols(ticker))
     return list(dict.fromkeys(out))

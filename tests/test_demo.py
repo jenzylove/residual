@@ -13,7 +13,7 @@ class FakeExchange:
     def __init__(self, fail_symbol=None, unfilled_symbol=None, pos_mode="one_way_mode"):
         self.orders, self.calls, self.fail, self.unfilled = {}, [], fail_symbol, unfilled_symbol
         self.pos_mode = pos_mode
-        self.px = {"SNVDASUSDT": 200.0, "SQQQSUSDT": 500.0}
+        self.px = {"SNVDASUSDT": 200.0, "SQQQSUSDT": 500.0, "SAAPLSUSDT": 330.0}
 
     def __call__(self, method, url, headers, body):
         u = urllib.parse.urlparse(url)
@@ -23,7 +23,7 @@ class FakeExchange:
         ok = lambda data: {"code": "00000", "msg": "success", "data": data}
         if u.path == "/api/v2/mix/market/contracts":
             return ok([{"symbol": s, "symbolStatus": "normal", "volumePlace": "2", "sizeMultiplier": "0.01",
-                        "minTradeNum": "0.01"} for s in ("SNVDASUSDT", "SQQQSUSDT", "SBTCSUSDT")])
+                        "minTradeNum": "0.01"} for s in ("SNVDASUSDT", "SQQQSUSDT", "SAAPLSUSDT", "SBTCSUSDT")])
         if u.path == "/api/v2/mix/market/ticker":
             return ok([{"lastPr": str(self.px[q["symbol"]])}])
         if u.path == "/api/v2/mix/account/set-leverage":

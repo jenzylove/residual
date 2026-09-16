@@ -160,8 +160,14 @@ def analyze(event: dict, snap: dict | None, hedge_pool: list[str] | None = None)
     return a
 
 
-# Pre-declared direction variants. The walk-forward selector picks one per event using only earlier events.
-VARIANTS = ("residual", "headline", "agreement", "consensus")
+# Only these rules were present before the historical sample was scored, so
+# only these rules may influence the walk-forward strategy.  Consensus arrived
+# later and remains visible as a post-hoc diagnostic baseline, never a selector
+# candidate.  This separation prevents a future replay from silently turning
+# exploratory data into an apparently pre-declared strategy rule.
+SELECTOR_VARIANTS = ("residual", "headline", "agreement")
+DIAGNOSTIC_VARIANTS = ("consensus",)
+VARIANTS = SELECTOR_VARIANTS + DIAGNOSTIC_VARIANTS
 
 
 def variant_direction(v: str, a: dict, params: dict) -> int:
@@ -172,7 +178,7 @@ def variant_direction(v: str, a: dict, params: dict) -> int:
         return a.get("surprise_sign", 0)
     if v == "agreement":         # only when the company move and the surprise point the same way
         return rs if rs == a.get("surprise_sign") else 0
-    if v == "consensus":         # analyst EPS consensus direction (declared 2026-09-15, when the data arrived)
+    if v == "consensus":         # post-hoc analyst-EPS diagnostic; not eligible for strategy selection
         return a.get("consensus_sign", 0)
     raise ValueError(v)
 
@@ -189,9 +195,11 @@ def learn_variant(history: list[dict], params: dict) -> dict:
         scores[v] = round(sum((h["counterfactual"].get(str(d)) or 0.0) for h in train
                               if (d := variant_direction(v, h, params)) != 0), 2)
     if len(train) < MIN_TRAIN:
-        return {"variant": "residual", "source": f"prior (only {len(train)} eligible training events)", "scores": scores}
-    best = max(VARIANTS, key=lambda v: (scores[v], -VARIANTS.index(v)))
-    return {"variant": best, "source": "walk-forward", "n_train": len(train), "scores": scores}
+        return {"variant": "residual", "source": f"prior (only {len(train)} eligible training events)",
+                "scores": scores, "eligible_variants": list(SELECTOR_VARIANTS)}
+    best = max(SELECTOR_VARIANTS, key=lambda v: (scores[v], -SELECTOR_VARIANTS.index(v)))
+    return {"variant": best, "source": "walk-forward", "n_train": len(train), "scores": scores,
+            "eligible_variants": list(SELECTOR_VARIANTS)}
 
 
 def _legs(event, a, direction, size, hedged=True):

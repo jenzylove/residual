@@ -9,6 +9,8 @@ import math
 import unittest
 from pathlib import Path
 
+from residual.strategy import SELECTOR_VARIANTS
+
 ROOT = Path(__file__).resolve().parent.parent
 EVENTS = json.loads((ROOT / "data" / "events.json").read_text(encoding="utf-8"))
 RESULTS = json.loads((ROOT / "data" / "results.json").read_text(encoding="utf-8"))
@@ -72,6 +74,11 @@ class WalkForwardInvariants(unittest.TestCase):
             for e in (r["params"].get("train_events") or []):
                 if e in exits:
                     self.assertLessEqual(exits[e], release[r["event_id"]], r["event_id"] + " <- " + e)
+
+    def test_post_hoc_consensus_rule_cannot_drive_strategy(self):
+        self.assertNotIn("consensus", SELECTOR_VARIANTS)
+        for r in ROWS:
+            self.assertIn(r["variant"]["variant"], SELECTOR_VARIANTS, r["event_id"])
 
 
 class DecisionInvariants(unittest.TestCase):
@@ -167,6 +174,11 @@ class PublishedNumberInvariants(unittest.TestCase):
                 continue
             self.assertIn(r["hedge"]["symbol"], listed, r["event_id"])
             self.assertIn(BY_ID[r["event_id"]]["company_symbol"], listed, r["event_id"])
+
+    def test_fresh_snapshots_request_every_demo_hedge_candidate(self):
+        from residual import universe
+        for ticker in universe.demo_companies():
+            self.assertTrue(set(universe.demo_hedge_pool(ticker)).issubset(universe.snapshot_symbols(ticker)))
 
 
 if __name__ == "__main__":

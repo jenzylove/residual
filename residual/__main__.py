@@ -187,21 +187,22 @@ def cmd_keyrun(args):
                                  "USDT-M Futures. The Demo API does not support transfers.")
         return [(a.get("marginCoin"), a.get("available")) for a in accts]
     step("demo account", account)
-    strategy_hedges = ["QQQUSDT", "SPYUSDT", "SMHUSDT"]
+    strategy_hedges = ["QQQUSDT", "SPYUSDT", "SMHUSDT", "XLKUSDT"]
     coverage = step("demo symbol coverage", lambda: {s: client.demo_symbol(s) for s in
-                    [universe.sym(t) for t in universe.COMPANIES] + strategy_hedges + ["AAPLUSDT", "TSLAUSDT"]})
+                    [universe.sym(t) for t in universe.COMPANIES] + strategy_hedges + universe.DEMO_LISTED_STOCKS})
     if coverage is not None:
         report["strategy_tradeable_on_demo"] = {
             "companies": [s for s in (universe.sym(t) for t in universe.COMPANIES) if coverage.get(s)],
             "hedges": [s for s in strategy_hedges if coverage.get(s)],
         }
+        report["demo_executable_universe"] = [s for s in universe.DEMO_LISTED_STOCKS if coverage.get(s)]
         if not report["strategy_tradeable_on_demo"]["hedges"]:
             report["note"] = ("None of the strategy's hedge instruments (QQQ, SPY, SMH) are listed on Bitget Demo, "
-                              "so live strategy pairs will be NO_TRADE on Demo. The roundtrip below uses a Demo "
-                              "listed stock as the second leg purely to test execution.")
+                              "so main-mode pairs cannot execute there. Live execution explicitly switches to the "
+                              "separately scored Demo-executable universe; no hedge is substituted after a decision.")
     if coverage and not args.skip_roundtrip:
         company = next((s for s in ("NVDAUSDT", "AMDUSDT", "METAUSDT") if coverage.get(s)), None)
-        hedge = next((s for s in strategy_hedges + ["AAPLUSDT", "TSLAUSDT"] if coverage.get(s) and s != company), None)
+        hedge = next((s for s in strategy_hedges + universe.DEMO_LISTED_STOCKS if coverage.get(s) and s != company), None)
         if company and hedge:
             def rt():
                 legs = client.open_pair([{"live_symbol": company, "side": 1, "notional": args.notional},

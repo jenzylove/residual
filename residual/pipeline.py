@@ -13,7 +13,7 @@ from .interpret import interpret
 from .market import HOLD_HOURS, LOOKBACK_DAYS, OBS_HOURS, load_snapshot
 from .net import fetch
 from . import strategy
-from .strategy import (DEFAULT_PARAMS, MAX_LOSS_FRAC, VARIANTS, WINDOWS, analyze, attribute, decide,
+from .strategy import (DEFAULT_PARAMS, MAX_LOSS_FRAC, SELECTOR_VARIANTS, VARIANTS, WINDOWS, analyze, attribute, decide,
                        learn_params, learn_variant, run_trade, variant_direction)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -120,18 +120,29 @@ def funding_caps(snaps) -> dict[str, float]:
     return caps
 
 
+def apply_funding_caps(snaps) -> dict[str, float]:
+    """Attach the replay's disclosed worst-observed funding sensitivity in place.
+
+    Live learning calls the same helper over the historical snapshots available
+    before a new release, keeping parameter and selector scores aligned with the
+    offline replay.
+    """
+    snaps = list(snaps)
+    caps = funding_caps(snaps)
+    worst = max(caps.values(), default=0.0)
+    for snap in snaps:
+        for s, info in (snap or {}).get("funding", {}).items():
+            info["max_abs_rate_observed"] = caps.get(s) or worst
+    return caps
+
+
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
            hedge_pool=None, tickers=None) -> dict:
     events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
     if tickers:
         events = [e for e in events if e['ticker'] in tickers]
     snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}
-    caps = funding_caps(snaps.values())
-    worst = max(caps.values(), default=0.0)
-    for snap in snaps.values():
-        for s, info in (snap or {}).get("funding", {}).items():
-            # a symbol with no nonzero observed settlement gets the worst rate seen on any symbol
-            info["max_abs_rate_observed"] = caps.get(s) or worst
+    caps = apply_funding_caps(snaps.values())
     analyzed = []
     for ev in events:
         snap = snaps[ev["event_id"]]
@@ -152,7 +163,8 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         row = {"event_id": ev["event_id"], "_release_ms": ev["release_ms"], "params": params, "decision": dec,
                "variant": sel, "interpretation": interp, "residual": None, "naive": None, "unhedged": None}
         if dec["decision"] == "TRADE":
-            # every pre-declared variant, scored on its own (published whether it wins or loses)
+            # Score every baseline. Only SELECTOR_VARIANTS can drive the strategy;
+            # later-added diagnostics remain published but cannot be selected.
             for v in VARIANTS:
                 d = variant_direction(v, a, params)
                 row[f"v_{v}"] = _slim_sim(run_trade(ev, snap, a, d, dec["size"], tag=f"v_{v}")) if d else None
@@ -210,7 +222,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "model_version": MODEL_VERSION, "extractor_version": EXTRACTOR_VERSION,
         "config": {"lookback_days": LOOKBACK_DAYS, "beta_windows_days": WINDOWS, "obs_hours": OBS_HOURS,
                    "hold_hours": HOLD_HOURS, "base_notional": strategy.BASE_NOTIONAL, "max_loss_frac": MAX_LOSS_FRAC,
-                   "variants": VARIANTS,
+                   "selector_variants": SELECTOR_VARIANTS, "evaluation_variants": VARIANTS,
                    "default_params": DEFAULT_PARAMS, "ai_gate": use_ai, "start_balance": START_BALANCE},
         "evaluation": "expanding-window walk-forward: parameters for each event are fit only on events "
                       "whose exit precedes that event's release; no event is scored with parameters "
