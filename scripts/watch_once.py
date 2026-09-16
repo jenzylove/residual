@@ -42,9 +42,12 @@ def publish(rec, changed):
     c = git("commit", "-m", f"watcher: {rec.get('checked_at')} {rec.get('decision')}")
     if c.returncode != 0 and "nothing to commit" in (c.stdout + c.stderr):
         return "nothing to commit"
+    git("pull", "--rebase", "--autostash")  # the repo moves under the watcher while work continues
     p = git("push")
     open(STAMP, "w").write(str(time.time()))
-    return "pushed" if p.returncode == 0 else f"push failed: {p.stderr.strip()[:120]}"
+    if p.returncode == 0:
+        return "pushed"
+    return "push failed: " + ((p.stderr or p.stdout).strip()[:160] or f"exit {p.returncode}")
 
 
 try:

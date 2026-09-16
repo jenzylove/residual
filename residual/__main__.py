@@ -67,7 +67,7 @@ def cmd_replay(args):
                 "demo_credentials_configured": demo.configured(), "demo_product_type": demo.PRODUCT_TYPE,
                 "doh_fallback_enabled": net.DOH_FALLBACK, "replay_mode": "offline" if args.offline else "online",
                 "ai_gate": not args.no_ai}
-    write_outputs(res, {"live_log": load_live_log(), "operator": operator, "demo_evidence": demo_evidence(),
+    write_outputs(res, {"live_log": load_live_log(25), "operator": operator, "demo_evidence": demo_evidence(),
                         "demo_strategy_trades": demo_strategy_trades()})
     s = res["summary"]
     for k in ("residual", "unhedged", "naive", "no_trade"):

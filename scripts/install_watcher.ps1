@@ -1,15 +1,20 @@
-# Registers a Windows Scheduled Task that runs the RESIDUAL live watcher every 10 minutes.
-# Run once from the repo root:   powershell -ExecutionPolicy Bypass -File scripts\install_watcher.ps1
-# Remove it later with:          schtasks /Delete /TN ResidualWatcher /F
+# Registers the RESIDUAL live watcher as a Windows Scheduled Task, running every 10 minutes.
+# It runs pythonw.exe (no console window), so nothing pops up while it works.
+# Install:  powershell -ExecutionPolicy Bypass -File scripts\install_watcher.ps1
+# Remove:   schtasks /Delete /TN ResidualWatcher /F
 $ErrorActionPreference = "Stop"
 $repo = Split-Path -Parent $PSScriptRoot
+# The Windows Store alias under WindowsApps exits silently when run from a task, so skip it.
 $py = (Get-Command python).Source
-if ($py -like "*WindowsApps*") {
-    $real = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue | Select-Object -First 1
-    if ($real) { $py = $real.FullName }
+$pyw = Join-Path (Split-Path -Parent $py) "pythonw.exe"
+if ($pyw -like "*WindowsApps*" -or -not (Test-Path $pyw)) {
+    $found = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter pythonw.exe -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($found) { $pyw = $found.FullName } else { throw "pythonw.exe not found; install Python or edit this script" }
 }
-$cmd = "cmd /c cd /d `"$repo`" && `"$py`" -m residual live >> data\watcher.log 2>&1"
-schtasks /Create /F /SC MINUTE /MO 10 /TN "ResidualWatcher" /TR $cmd | Out-Null
+$script = Join-Path $repo "scripts\watch_once.py"
+schtasks /Create /F /SC MINUTE /MO 10 /TN "ResidualWatcher" /TR "`"$pyw`" `"$script`"" | Out-Null
 schtasks /Run /TN "ResidualWatcher" | Out-Null
-Write-Host "ResidualWatcher installed: every 10 minutes, log at $repo\data\watcher.log"
-Write-Host "Python: $py"
+Write-Host "ResidualWatcher installed (every 10 min, windowless)."
+Write-Host "  python : $pyw"
+Write-Host "  script : $script"
+Write-Host "  log    : $repo\data\watcher.log  ·  site status: $repo\web\live.json"

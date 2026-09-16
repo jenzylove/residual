@@ -212,6 +212,46 @@ class OutputJsonTests(unittest.TestCase):
         self.assertEqual(json.loads(s), {"participation": None, "x": [1.0, None, {"y": None}], "ok": 2.5})
 
 
+class OfflineDeterminismTests(unittest.TestCase):
+    """Offline replay must be reproducible: cached AI answers only, never a live call."""
+
+    def test_offline_never_calls_the_model(self):
+        import tempfile
+        from pathlib import Path
+        from unittest import mock
+        from residual import interpret as I
+        ev = {"event_id": "X-1", "release_utc": "2026-01-01T21:00:00Z", "ticker": "X",
+              "surprise": {"revenue_actual": 1.0, "revenue_guided_mid": 1.0, "basis": "b",
+                           "guidance_surprise_pct": 0.0, "next_quarter_guidance_mid": 1.0,
+                           "guidance_direction": "maintained"}}
+        an = {"decomposition": {"observed": .01, "market": .002, "sector": .001, "liquidity": 0.0, "residual": .007}}
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(I, "CACHE_DIR", Path(d)),              mock.patch.object(I, "_call_anthropic", side_effect=AssertionError("no network in offline mode")):
+            out = I.interpret(ev, an, "some press release text", allow_call=False)
+        self.assertEqual(out["status"], "unavailable")
+
+    def test_cached_answer_is_reused_without_calling(self):
+        import json, tempfile
+        from pathlib import Path
+        from unittest import mock
+        from residual import interpret as I
+        ev = {"event_id": "X-2", "release_utc": "2026-01-01T21:00:00Z", "ticker": "X",
+              "surprise": {"revenue_actual": 1.0, "revenue_guided_mid": 1.0, "basis": "b",
+                           "guidance_surprise_pct": 0.0, "next_quarter_guidance_mid": 1.0,
+                           "guidance_direction": "maintained"}}
+        an = {"decomposition": {"observed": .01, "market": .002, "sector": .001, "liquidity": 0.0, "residual": .007}}
+        text = "some press release text"
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(I, "CACHE_DIR", Path(d)):
+            import hashlib
+            prompt = I.build_prompt(ev, an, text)
+            h = hashlib.sha256((I.PROMPT_VERSION + I.SYSTEM + prompt).encode()).hexdigest()
+            (Path(d) / "X-2.json").write_text(json.dumps(
+                {"status": "ok", "prompt_sha256": h, "label": "durable", "confidence": 0.7,
+                 "rationale": "r", "evidence_quotes": ["some press release"], "model": "cached"}), encoding="utf-8")
+            with mock.patch.object(I, "_call_anthropic", side_effect=AssertionError("must not call")):
+                out = I.interpret(ev, an, text, allow_call=True)
+        self.assertEqual((out["status"], out["label"], out["model"]), ("ok", "durable", "cached"))
+
+
 class InterpretValidationTests(unittest.TestCase):
     SRC = "Revenue grew strongly. We expect demand to remain robust through next year."
 

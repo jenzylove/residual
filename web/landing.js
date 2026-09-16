@@ -357,8 +357,8 @@ function variantsTable() {
     ["v_consensus", "Analyst consensus", "trade the EPS surprise vs analyst estimates (Alpha Vantage)"],
     ["naive_same_events", "Plain headline, same releases", "unhedged baseline"],
   ];
-  $("#variants").innerHTML = `<div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe</th><th class="num">Hit</th></tr></thead><tbody>
-    ${rows.map(([k, n, sub, hl]) => S[k] ? `<tr class="${hl ? "hl" : ""}"><td>${n}<small>${sub}</small></td><td class="num">${S[k].trades}</td><td class="num ${cls(S[k].total_net_pnl)}">${usd(S[k].total_net_pnl, 0)}</td><td class="num">${f(S[k].sharpe_daily_ann)}</td><td class="num">${S[k].hit_rate == null ? "n/a" : Math.round(S[k].hit_rate * 100) + "%"}</td></tr>` : "").join("")}
+  $("#variants").innerHTML = `<div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe<small>n trades</small></th><th class="num">Hit</th></tr></thead><tbody>
+    ${rows.map(([k, n, sub, hl]) => S[k] ? `<tr class="${hl ? "hl" : ""}"><td>${n}<small>${sub}</small></td><td class="num">${S[k].trades}</td><td class="num ${cls(S[k].total_net_pnl)}">${usd(S[k].total_net_pnl, 0)}</td><td class="num">${f(S[k].sharpe_daily_ann)}<small>n=${S[k].trades}</small></td><td class="num">${S[k].hit_rate == null ? "n/a" : Math.round(S[k].hit_rate * 100) + "%"}</td></tr>` : "").join("")}
     </tbody></table></div>
     <p class="note">The rules were declared before scoring, and each is published whether it wins or loses. All trades counted, missing funding charged at the worst observed rate.</p>`;
 }
@@ -389,7 +389,7 @@ function demoMode() {
   const S = dm.summary_conservative_funding, tr = dm.rows.filter(r => r.decision.decision === "TRADE");
   el.innerHTML = `<h4>Demo executable mode · the same method on instruments Bitget Demo lists</h4>
     <p class="note" style="margin:0 0 16px">${esc(dm.note)} Companies: ${dm.companies.join(", ")}.</p>
-    <div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe</th><th class="num">Hit</th></tr></thead><tbody>
+    <div class="tscroll2"><table class="vtable"><thead><tr><th>Rule</th><th class="num">Trades</th><th class="num">P&amp;L</th><th class="num">Sharpe<small>n trades</small></th><th class="num">Hit</th></tr></thead><tbody>
       <tr class="hl"><td>Strategy<small>demo executable pairs</small></td><td class="num">${S.residual.trades}</td><td class="num ${cls(S.residual.total_net_pnl)}">${usd(S.residual.total_net_pnl, 0)}</td><td class="num">${S.residual.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.residual.hit_rate == null ? "n/a" : Math.round(S.residual.hit_rate * 100) + "%"}</td></tr>
       <tr><td>Plain headline, same releases<small>unhedged baseline</small></td><td class="num">${S.naive_same_events.trades}</td><td class="num ${cls(S.naive_same_events.total_net_pnl)}">${usd(S.naive_same_events.total_net_pnl, 0)}</td><td class="num">${S.naive_same_events.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.naive_same_events.hit_rate == null ? "n/a" : Math.round(S.naive_same_events.hit_rate * 100) + "%"}</td></tr>
     </tbody></table></div>
