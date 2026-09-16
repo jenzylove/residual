@@ -1,199 +1,174 @@
-# RESIDUAL: Event-Neutral Earnings Agent
+<p align="center">
+  <img src="web/brand/mark.svg" alt="RESIDUAL" width="320">
+</p>
 
-> The market moved. How much of that move actually belonged to the company?
+<p align="center">
+  <b>How much of that earnings move actually belonged to the company?</b><br>
+  RESIDUAL strips the market, the sector and the liquidity effect out of an earnings reaction on Bitget
+  stock perpetuals, and trades only what is left, hedged.
+</p>
 
-RESIDUAL isolates the company-specific part of an earnings reaction. It takes a stock's early post-earnings move on Bitget stock perpetuals, removes the broad-market, sector and liquidity contributions, and expresses what is left as a hedged pair (long company / short hedge, or the reverse). It is built for the Bitget S2 Alpha Factory track: earnings-driven trading, cross-market correlation and factor mining.
+<p align="center">
+  <a href="https://residual-teal.vercel.app"><b>Live app</b></a> ·
+  <a href="https://residual-teal.vercel.app/dashboard"><b>Audit</b></a> ·
+  <a href="https://github.com/jenzylove/residual/actions/workflows/ci.yml"><img src="https://github.com/jenzylove/residual/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
 
-**Scope, stated plainly:**
-- Market data comes from Bitget's public REST API. Historical replay execution is **local paper accounting**, with no exchange-side records.
-- Live-mode trades can execute on **Bitget Demo Trading** when demo API credentials are configured (see below). RESIDUAL never places real-money orders.
-- The surprise is a **company-guidance surprise**: reported revenue vs the company's own prior-quarter outlook. It is **not** an analyst-consensus surprise.
+<p align="center">
+  <img src="web/screenshots/hero.png" alt="RESIDUAL landing page" width="100%">
+</p>
 
-## What happens for each event
+Built for the **Bitget AI Hackathon S2, Alpha Factory** track: earnings-driven trading, after-hours quotations, cross-market correlation and factor mining on US tokenized stocks.
 
-1. **Event collector.** Finds each SEC EDGAR 8-K with Item 2.02. The event timestamp is the SEC acceptance time, and the session (pre-market or after-market) is derived from it.
-2. **Earnings extractor.** Pulls reported revenue and the next-quarter revenue outlook from the Exhibit 99.1 press release using fixed per-company patterns. Each value keeps the exact quoted snippet, the source URL and the document's SHA-256, and is re-derived from the snippet before use. Source documents are archived in `data/sources/`.
-   - Required: revenue actual, the prior outlook (the guidance baseline), the new outlook, and the prior-quarter actual.
-   - Optional evidence only: EPS and gross margin. The model never reads them, so their absence neither blocks nor resizes a trade. Gross margin is not found in any of these releases.
-3. **Factor estimator.** Uses hourly Bitget perpetual returns from the 21 days before the release. The company is regressed on QQQ (market) and on an equal-weight basket of sector peers with the market component removed. Betas are estimated at 7, 14 and 21 days.
-4. **Residual calculator.** Measures the move from the release hour to +2h, then subtracts the market contribution, the sector contribution and a liquidity effect (half the estimated spread). What remains is the residual.
-5. **Trade constructor.** Pairs the company with one hedge instrument (SMH, QQQ or SPY, whichever fit best historically). The hedge ratio is an OLS beta. An LLM never sets it.
-6. **AI interpretation.** Claude labels the residual *durable*, *temporary*, *already priced*, *contradicted by guidance* or *too uncertain*, and must cite 1 to 3 quotes that are checked against the press release. The label only scales position size (1.0 / 0.5 / 0). An invalid response means NO_TRADE. Labels can differ between runs because this model does not accept a temperature setting, so cached interpretations in `data/interpretations/` are what make a run reproducible.
-7. **Risk gate.** Returns NO_TRADE when:
-   - required data is incomplete;
-   - market data is missing;
-   - no hedge instrument has R² ≥ 0.10;
-   - liquidity is too thin (spread above 30 bps, or position above 25% of median hourly volume);
-   - the residual is below k × round-trip cost;
-   - the residual's sign is not stable across the beta windows;
-   - the early move has already reversed by half.
-8. **Paper executor.** Records both legs at the next hourly open with slippage, Bitget taker fees and funding. The holding period is 24h, with a stop at 2.5% of company notional.
-9. **Post-event evaluator.** Splits realized P&L into company leg, hedge leg, residual, factor/hedge error, slippage, fees, funding and signal-to-fill timing.
+## The problem
 
-**Pre-declared rules and a walk-forward selector.** Three direction rules were declared before any scoring:
-- **Residual:** trade the company's own move.
-- **Headline, hedged:** trade the guidance-surprise direction, keeping the hedge and the gates.
-- **Agreement:** trade only when the company move and the surprise point the same way.
-- **Analyst consensus:** trade the EPS surprise against analyst estimates (Alpha Vantage `EARNINGS`, cached per company in `data/consensus/` with provider, source URL and fetch time). 71 of 75 events carry consensus; 16 are flagged where the provider pairs a GAAP reported EPS with a non-GAAP estimate, and flagged values are published but never traded. This rule was declared on 15 Sep 2026, when the data became available, and it scores worst of the four (−$11.90 in the stress view).
+A stock jumps 6% after earnings. Most earnings bots buy that whole move. But a good part of it is usually the broad market rising in that hour, or the whole sector moving together, or simply thin after-hours pricing. Only the remainder belongs to the company.
 
-For each event, the strategy follows whichever rule did best on strictly earlier events. Every rule's standalone result is published whether it wins or loses.
+RESIDUAL separates those four pieces on every release, trades only the company's part as a hedged pair, and shows the filing, the maths and the exchange order behind every decision. When the remainder is too small to beat costs, the hedge does not fit, or the book is too thin, it does nothing and says exactly why.
 
-**Position size.** The default is $2,500 of company notional. The size study (`size_study` in `data/results.json`, charted on the site) re-runs the whole walk-forward at $1k, $2.5k, $5k and $10k. Above $2.5k, Bitget's after-hours liquidity rejects most releases.
+## Take one move apart
 
-The direction (continuation vs reversal) and the threshold k are learned **walk-forward**. Each event's parameters come only from events whose exit came before its release; with fewer than 6 such events the default prior is used. Training uses the conservative-funding outcome.
+<p align="center">
+  <img src="web/screenshots/signal-room.png" alt="Signal room: an earnings move split into market, sector, liquidity and company" width="100%">
+</p>
 
-## Dataset
+NVDA moved **+4.10%** in the two hours after its release on 26 Aug 2026. The market explains **+0.88%**, the sector **−0.01%**, liquidity **+0.05%**. What belongs to the company is **+3.19%**, and that is what gets traded, long NVDA against short SMH, only because all eight gates passed.
 
-- **Universe (18):**
-  - Semiconductors: NVDA, AMD, AVGO, MU, INTC, MRVL, QCOM, KLAC, TXN
-  - Internet: META, AMZN
-  - Software: PLTR, CRM, PANW, CRWD, MDB
-  - Hardware: HPE, SMCI
+## Architecture
 
-  These are the Bitget stock perpetuals whose companies print a numeric next-quarter revenue outlook in the press release.
-- **Events:** 75 real earnings releases, Oct 2025 to Sep 2026, in `data/events.json`. 59 have every required field verified against archived sources. The other 16 are mostly older releases from newly added companies, written in a format the extractors do not cover; they predate those stocks' Bitget listing and would be NO_TRADE for market data regardless.
-- **Market inputs:** one reproducible file per event in `data/snapshots/<event_id>.json`, containing Bitget hourly candles, fees and funding.
-- **AI outputs:** `data/interpretations/<event_id>.json`, containing the prompt hash, model, raw responses and validation result.
+```mermaid
+flowchart TD
+    A[SEC EDGAR<br/>Item 2.02 filings] -->|every 10 min| B[Watcher]
+    B --> C[Extractor<br/>revenue + guidance<br/>snippet, URL, SHA-256]
+    C --> D{Verified?}
+    D -->|no| X[NO_TRADE<br/>data incomplete]
+    D -->|yes| E[Factor model<br/>21d hourly Bitget returns<br/>market and sector betas]
+    E --> F[Residual<br/>observed minus market, sector, liquidity]
+    F --> G[AI reading<br/>Claude, quotes checked<br/>label scales size only]
+    G --> H{8 risk gates}
+    H -->|any fail| X
+    H -->|all pass| I[Walk-forward rule<br/>residual, headline, agreement, consensus]
+    I --> J[Hedged pair<br/>company vs beta-weighted hedge]
+    J --> K[Paper executor<br/>fees, slippage, funding]
+    J --> L[Bitget Demo<br/>real orders in live mode]
+    K --> M[Attribution<br/>company, hedge error, costs]
+    L --> M
+    M --> N[Site and Audit<br/>evidence, ledger, hashes]
 
-## Results (walk-forward, 75 events)
+    style F fill:#6c4ee6,color:#fff
+    style X fill:#e8e6f0
+    style L fill:#1b1a22,color:#fff
+```
 
-All figures at the $2,500 default size. The headline view counts **every trade**, charging missing funding at the worst observed rate; the funding-complete view is shown second because it rests on only 4 trades.
-- **Outcomes:** 71 earnings events scored (4 further Item 2.02 filings carry no results and are excluded), 13 paired paper trades and 58 NO_TRADE decisions.
-- **NO_TRADE reasons** (some events have several): market data 38, liquidity 14, below cost 5, reaction complete 4, rule disagreement 4, not robust 3, AI label 3, no hedge 3. Every required number now verifies: 71 of 71.
+**Data in:** SEC EDGAR (filings), Bitget public REST (hourly candles, fees, funding, order book), Alpha Vantage (analyst EPS consensus), Anthropic Claude (the reading).
+**Nothing leaves** except Bitget Demo orders in live mode. No real-money order is ever placed.
 
-**Universe expansion (Sep 2026) added no trades.** Nine companies were added: QCOM, KLAC, TXN, HPE, SMCI, CRM, PANW, CRWD and MDB. None of their releases after listing produced a trade; each event's failed gates are listed in the Audit. The binding constraint on sample size is Bitget liquidity and listing history, not the number of companies covered.
+## Product flow
 
-**Headline result: all trades, worst-case funding.** Every trade counts; where Bitget no longer serves funding history it is charged against the position at the largest absolute rate observed for that symbol.
+| Step | What happens | Where to see it |
+|---|---|---|
+| 1. Catch | Watcher polls EDGAR for Item 2.02 earnings filings across 18 companies | Watcher card, `data/live_log.jsonl` |
+| 2. Read | Revenue and the company's own guidance extracted, each with its snippet and document hash | Signal room evidence line, Audit |
+| 3. Split | Hourly betas against QQQ and a sector peer basket remove market and sector | Signal room bars |
+| 4. Second reading | Claude labels the move, quoting the filing; the label can only shrink a position | Signal room, AI card |
+| 5. Gate | Eight checks; one failure means no trade, with the reason in plain words | Gates panel |
+| 6. Trade | Company leg against a beta-weighted hedge, both legs, costs included | Paper execution |
+| 7. Explain | Result split into company move, hedge error, fees, slippage, funding | Attribution panel |
 
-| Strategy | Net P&L | Trades | Sharpe |
+<p align="center">
+  <img src="web/screenshots/paper-execution.png" alt="Paper execution and attribution" width="100%">
+</p>
+
+## Evidence contract
+
+Every number on the site traces back to a document or an exchange response.
+
+- **Earnings numbers** keep the exact sentence they came from, the SEC URL and the SHA-256 of the document. All 71 events verify, offline, against the archive in `data/sources/`.
+- **Market inputs** are frozen per event in `data/snapshots/`, so the replay runs with no network at all.
+- **AI answers** are cached in `data/interpretations/` with the prompt hash and raw response. Every quote is checked against the press release; an invented quote is rejected and the trade does not happen.
+- **Paper orders** for both legs are in `data/ledger.csv`.
+- **Demo orders** are real Bitget Demo order IDs in `data/keyrun_report.json` and `data/demo_strategy_trades.jsonl`.
+- **CI** re-runs the replay on every push and fails if it does not reproduce the committed decisions.
+
+## Results
+
+<p align="center">
+  <img src="web/screenshots/proof.png" alt="Proof section: rules, size study and demo-executable mode" width="100%">
+</p>
+
+Walk-forward over 71 real earnings events at the $2,500 default size. Each decision used only information available before that release. The headline view counts **every trade**, charging missing funding at the worst rate observed.
+
+| Rule | Net P&L | Trades | Sharpe |
 |---|---|---|---|
 | **Strategy** (rule picked walk-forward) | **+$269.68** | 13 | 0.88 |
 | Agreement rule | +$335.83 | 9 | 1.12 |
 | Headline rule, hedged | +$262.89 | 17 | 0.84 |
 | Residual rule | +$123.04 | 17 | 0.39 |
 | Analyst consensus rule | −$11.74 | 12 | −0.07 |
-| **Naive headline, same events** (like-for-like) | **+$511.29** | 13 | 1.32 |
+| **Naive headline, same events** | **+$511.29** | 13 | 1.32 |
 | Naive headline, every eligible event | −$716.13 | 36 | −1.16 |
 
-**Secondary: funding-complete trades only.** Bitget serves funding from about June 2026, so this view counts 4 of the 13 trades: strategy +$335.40 (Sharpe 1.21) against the naive baseline's +$442.59 (1.32). Too few trades to lean on.
+**Demo-executable mode**, the same method restricted to instruments Bitget Demo lists: **+$116.72 over 6 trades (Sharpe 0.70)** against the naive baseline's +$59.75 (0.35). One of those pairs was placed for real on Demo.
 
-**Reading the results honestly:**
-- The strategy is profitable in every view and at every tested size, but the plain headline trade on the same releases did better.
-- The value sits in the gates: across every eligible release the headline trade loses (−$716 conservative), while on the releases RESIDUAL's gates select it wins.
-- Of the pre-declared rules, agreement scores best and the analyst-consensus rule scores worst; all are published.
-- With 9 to 17 trades, none of these differences is statistically meaningful.
+The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5k, $5k and $10k. Above $2,500, Bitget's after-hours liquidity rejects most releases.
 
-## Demo-executable mode
+## Honest limitations
 
-Bitget Demo lists five stock perpetuals (NVDA, META, AMZN, AAPL, TSLA) and no index or sector ETF, so the main strategy's hedges (QQQ, SPY, SMH, XLK) cannot be traded there. The demo-executable mode is the same method restricted to what that venue lists: the three universe companies Demo carries, hedged with the best fitting Demo-listed stock. Same gates, same walk-forward, same $2,500 size, scored separately (`demo_mode` in `data/results.json`).
+- **No proven edge.** On the same releases the plain headline trade did better. We publish that rather than hide it. With 9 to 17 trades nothing here is statistically meaningful.
+- **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. Analyst consensus is included as a separate, clearly flagged rule; it is the worst of the four.
+- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst-case funding charge.
+- **Bitget Demo lists no index or sector ETF**, so main-mode strategy pairs cannot execute there. Demo mode exists for that reason, and the adapter refuses substitutes.
+- **Liquidity binds the sample.** After-hours volume on these perpetuals is thin; 14 releases were rejected for it at $2,500.
+- **AI labels are not deterministic** run to run; the cached answers are what make a replay reproducible.
 
-Stress view (every trade, worst-case funding), 6 trades:
+## Quick start
 
-| | Net P&L | Sharpe |
-|---|---|---|
-| Demo-executable strategy | +$116.72 | 0.70 |
-| Plain headline, same releases | +$59.75 | 0.35 |
-
-All six pairs are executable on Demo, and one was actually placed: AMZN long against NVDA short, 4 filled orders, net −$0.20 after fees (`data/demo_strategy_trades.jsonl`).
+Python 3.11+, no third-party packages.
 
 ```bash
+python -m residual verify --offline   # re-derive every number from the archived filings
+python -m residual replay --offline   # regenerate every result, no network
+python -m unittest discover -s tests  # 51 tests
+python -m residual serve              # the site at http://localhost:8000
+```
+
+Refreshing data, and live mode, need network and keys in `.env.local` (see `.env.example`):
+
+```bash
+python -m residual build              # SEC EDGAR -> data/events.json + data/sources/
+python -m residual snapshot           # Bitget candles and funding -> data/snapshots/
+python -m residual replay             # re-run, calling Claude for anything uncached
+python -m residual live               # one watcher cycle (add --loop 600 to keep going)
+python -m residual keyrun             # full Bitget Demo check: auth, coverage, roundtrip
 python -m residual demo-strategy-trade --mode demo --notional 100
 ```
 
-## Run it
+Windows, to keep the watcher running silently and publishing to the site:
 
-Requires Python 3.11+, with no third-party packages.
-
-```bash
-python -m residual verify --offline   # every numeric field re-derived from archived sources, no network
-python -m residual replay --offline   # regenerate all results from committed data, no network
-python -m unittest discover -s tests  # 17 tests incl. an end-to-end live-watcher fixture
-python -m residual serve              # dashboard at http://localhost:8000
-
-# refreshing data (network):
-cp .env.example .env.local            # ANTHROPIC_API_KEY for the AI layer
-python -m residual build              # SEC EDGAR -> data/events.json + data/sources/
-python -m residual snapshot           # Bitget candles/funding -> data/snapshots/
-python -m residual replay             # re-run, calling the LLM for any uncached interpretation
-python -m residual live               # watch EDGAR for the next eligible event (add --loop 600)
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\install_watcher.ps1
 ```
 
-CI (`.github/workflows/ci.yml`) runs on every push:
-- the tests;
-- `verify --offline`;
-- an offline replay that must reproduce the committed decisions and summaries exactly;
-- a strict JSON check on the site data.
+## Audit
 
-`replay` writes `data/results.json`, the paper ledger `data/ledger.csv` (every order of both legs for executed trades), and `web/data.json` for the dashboard.
+<p align="center">
+  <img src="web/screenshots/audit.png" alt="Audit page" width="100%">
+</p>
 
-Network notes:
-- RESIDUAL uses system DNS. If `api.bitget.com` does not resolve, it stops with an explanation. A DNS-over-HTTPS fallback exists only for local resolver faults and is **off** unless `RESIDUAL_DOH_FALLBACK=1`; do not use it to get around Bitget's regional access restrictions.
-- SEC requests send a descriptive User-Agent; set `SEC_USER_AGENT` to your own contact.
-
-## Live mode
-
-`python -m residual live` polls EDGAR for new Item 2.02 filings. An event moves through these stages:
-- **New filing:** an event record is added to `data/events.json`.
-- **PENDING:** re-checked on every run until the 2-hour reaction window closes.
-- **Gated decision:** made with live Bitget data.
-- **Paper pair opened:** at the live bid/ask, only within one hour of the decision time.
-- **Closed:** at the live bid/ask after 24h.
-
-With nothing new, a run records NO_TRADE plus a live Bitget liquidity probe. `tests/test_live.py` covers this whole path with fixtures. No real new release has occurred since the dataset was built, so no live event has been recorded yet.
-
-The deployed site is a static export: landing page at https://residual-teal.vercel.app and dashboard at https://residual-teal.vercel.app/dashboard. Its live-watcher panel shows the log as of the last local run and does not update itself.
-
-## Bitget Demo Trading (live-mode execution)
-
-When `BITGET_DEMO_API_KEY`, `BITGET_DEMO_API_SECRET` and `BITGET_DEMO_API_PASSPHRASE` are set in `.env.local`, live-mode trades are placed as **Bitget Demo Trading orders** instead of local paper fills. How it works:
-- Requests are signed per API v2 and carry the `paptrading: 1` header, so they reach the demo environment only.
-- Both legs are market orders, all-or-nothing. If the second leg fails, the first is flattened with a reduce-only order.
-- At the 24h horizon both legs are closed with reduce-only orders.
-- Exchange order IDs, fill prices, fees and every request/response are stored with the position.
-
-Demo contracts are discovered at runtime (`demo-check`). A universe symbol that Bitget Demo does not list is rejected before any order is sent.
-
-The whole Demo test run is one command. It stops at the first failure and writes every step, plus the exchange request log, to `data/keyrun_report.json`:
-
-```bash
-python -m residual keyrun                             # credentials, public API, auth, account, symbol coverage, $50 roundtrip, live watcher pass
-```
-
-Individual steps:
-
-```bash
-python -m residual demo-check                         # auth, balance, which universe symbols exist on demo
-python -m residual demo-roundtrip --notional 50       # open+close one small NVDA/QQQ pair; records -> data/demo_roundtrips.jsonl
-python -m residual live                               # live watcher now executes on Bitget Demo
-```
-
-Historical replay results remain local paper accounting; only live-mode trades can have exchange-side Demo records.
-
-**Verified against real Bitget Demo on 13 Sep 2026** (`data/keyrun_report.json`). The execution-test pair was NVDA long against AAPL short, $50 per leg. Four orders were accepted and filled:
-
-| Leg | Open order | Open price | Close order | Close price |
-|---|---|---|---|---|
-| NVDA long | 1483033182613204993 | 217.85 | 1483033203639250945 | 217.77 |
-| AAPL short | 1483033196173389825 | 332.70 | 1483033210475966465 | 332.75 |
-
-Net result: −$0.14 after Bitget's reported fees.
-
-What the real run established:
-- Demo uses `USDT-FUTURES` / `USDT` with the `paptrading: 1` header.
-- Demo accounts default to hedge mode; the client reads the position mode and formats orders to match.
-- Demo funds land in the demo spot wallet. Transfer them to USDT-M Futures in the app, because the Demo API has no transfer endpoint.
-- Demo lists NVDA, META and AMZN from the universe, but none of the strategy's hedge instruments (QQQ, SPY, SMH).
-- **Strict Demo execution.** If the strategy hedge is not listed on Demo, the live path records `NO_TRADE` before placing either leg. It never substitutes another stock, because that would change the strategy exposure and invalidate the hedge record.
-- `python -m residual demo-strategy-trade` executes a real past strategy decision on Demo only when its original fitted hedge is listed; otherwise it stops before sending an order. Records go to `data/demo_strategy_trades.jsonl`.
+Every table, source link, document hash, paper order and operator detail: [residual-teal.vercel.app/dashboard](https://residual-teal.vercel.app/dashboard).
 
 ## Layout
 
 ```
-residual/   edgar.py extract.py events.py     earnings collection, provenance, source archive
-            bitget.py market.py net.py        Bitget data + reproducible snapshots
-            factors.py strategy.py paper.py   decomposition, gates, hedge, paper fills
-            interpret.py                      validated LLM interpretation
-            pipeline.py live.py __main__.py   replay/evaluation, live watcher, CLI
-web/        index.html app.js style.css       event board, decomposition, evidence, results
-data/       events.json sources/ snapshots/ interpretations/ results.json ledger.csv live_log.jsonl
+residual/   edgar.py extract.py events.py consensus.py   filings, extraction, provenance, consensus
+            bitget.py market.py net.py                   Bitget data and frozen snapshots
+            factors.py strategy.py paper.py              decomposition, gates, rules, paper fills
+            interpret.py                                 validated AI reading
+            demo.py live.py pipeline.py __main__.py      Demo execution, watcher, replay, CLI
+web/        index.html landing.js body.css orb.js        landing page and 3D hero
+            dashboard.html app.js style.css              audit
+data/       events.json sources/ snapshots/ consensus/   the evidence
+            results.json ledger.csv live_log.jsonl       the output
 ```
+
+Paper trading research. Not investment advice.

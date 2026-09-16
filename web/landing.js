@@ -38,6 +38,8 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
   const trades = d.rows.filter(r => r.decision.decision === "TRADE");
   show((trades[trades.length - 1] || d.rows[d.rows.length - 1]).event_id);
   proof("conservative");
+  const sv = document.querySelector(".status-val");
+  if (sv) sv.textContent = D.rows.length + " real earnings events · SEC verified";
   realStrip();
   variantsTable();
   sizeStudy();
@@ -459,6 +461,15 @@ function reveal() {
   IO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { activate(e.target); IO.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll(".rv").forEach(el => IO.observe(el));
   if (QS.has("nohero")) $(".hero").style.display = "none";
+  // ?only=<section id> isolates one section for documentation screenshots
+  const only = QS.get("only");
+  if (only) {
+    $(".hero").style.display = "none";
+    document.querySelectorAll("#body > section, #body > nav, #body > footer").forEach(s => {
+      if (s.id !== only) s.style.display = "none";
+    });
+    document.querySelector(".nav").style.position = "absolute";
+  }
   if (QS.has("static")) document.querySelectorAll(".rv").forEach(activate);
   const grid = $(".bento");
   if (grid && !REDUCE) grid.addEventListener("pointermove", ev => {
