@@ -44,7 +44,10 @@ def build_snapshot(event: dict, contracts: dict, *, now_ms: int | None = None) -
         if rows:
             symbols[s] = [[r["t"], r["o"], r["h"], r["l"], r["c"], r["qv"]] for r in rows]
     funding = {}
-    for s in [universe.sym(event["ticker"])] + universe.hedge_symbols(event["ticker"]):
+    funding_symbols = ([universe.sym(event["ticker"])] +
+                       universe.hedge_symbols(event["ticker"]) +
+                       universe.demo_hedge_pool(event["ticker"]))
+    for s in dict.fromkeys(funding_symbols):
         hist = _funding(s)
         funding[s] = {
             "earliest_available": hist[0]["t"] if hist else None,

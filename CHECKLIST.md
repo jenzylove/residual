@@ -5,7 +5,7 @@ Numbers refer to the committed `data/results.json`.
 
 ## 1. Product contract
 - [x] Every event produces an event record, structured surprise, factor decomposition (when market data exists) and a trade/no-trade decision record
-- [~] Paper order record and post-event attribution exist **only for traded events** (9); the 26 no-trade events have a decision record with gate reasons instead
+- [~] Paper order record and post-event attribution exist **only for traded events** (13); the 58 no-trade events have a decision record with gate reasons instead
 - [~] Hedge ratio is computed for every event with a usable hedge candidate, not for events rejected on market data
 - [x] Not a chat assistant, sentiment bot, beat-equals-long strategy, rebalancer or pure backtest; naive direction exists only as a baseline
 
@@ -20,7 +20,7 @@ Numbers refer to the committed `data/results.json`.
 - [~] Funding: complete only from about June 2026. Primary results **exclude** the 4 trades without funding data; a separate sensitivity charges them at the worst observed rate
 - [x] Event calendar: release time, session, expiry window, estimated next releases
 - [x] 1 Collector · 2 Extractor · 3 Factor estimator · 4 Residual calculator · 5 Trade constructor (OLS hedge ratio)
-- [x] 6 AI interpretation: 27/27 validated responses; labels only scale size. Labels are not deterministic run-to-run; cached outputs make runs reproducible
+- [x] 6 AI interpretation: 36/36 attempted responses validated; labels only scale size. Labels are not deterministic run-to-run; cached outputs make runs reproducible
 - [x] 7 Risk gate (cost, hedge, liquidity, data completeness, reaction complete, robustness)
 - [x] 8 Paper executor: both legs, prices, quantities, fees, slippage, funding (or exclusion flag), balance
 - [x] 9 Post-event evaluator attribution for traded events
@@ -31,17 +31,17 @@ Numbers refer to the committed `data/results.json`.
 - [x] ≥15 events; documented universe
 - [x] Baselines: residual, unhedged (same signals), **naive on the same events** (like-for-like), naive on all events, no-trade, plus a no-AI ablation
 - [x] Walk-forward evaluation (parameters fit only on events exited before each release)
-- [x] ≥1 paired trade (13) and ≥1 NO_TRADE (62); both legs logged in `data/ledger.csv` (52 orders)
+- [x] ≥1 paired trade (13) and ≥1 NO_TRADE (58); both legs logged in `data/ledger.csv` (52 orders)
 - [x] Slippage and fees included
 - [x] Results regenerate from code **without network**: `replay --offline` uses committed sources, snapshots and cached interpretations
-- [~] Live watcher: lifecycle proven by the deterministic fixture `tests/test_live.py` (new filing → record → PENDING → trade → close) and by one real run that recorded NO_TRADE. It has not yet added a real new event, because none has been released
+- [~] Live watcher: lifecycle proven by deterministic fixtures (new filing → record → PENDING → selected rule → pair → close), including the Demo-executable universe. It has not yet added a real new event, because none has been released
 - [x] LLM never supplies numbers to execution (extra keys rejected; size from a fixed label table)
 - [~] Deployed dashboard: https://residual-teal.vercel.app is a static export; the live-watcher panel is a snapshot of the last local run
 - [~] Trading usage: historical replay is **Bitget public market data + local paper accounting**. Live mode executes on **Bitget Demo Trading** when credentials are set:
   - signed v2 requests with `paptrading: 1`;
   - all-or-nothing pairs with rollback, reduce-only closes;
   - exchange order records stored; `demo-check` and `demo-roundtrip` provided.
-  - Tested against a fake exchange only; **the run with real demo keys is pending.**
+  - Passed against real Demo credentials; both an execution-test pair and one declared Demo-mode strategy pair have filled order evidence.
 - [x] Independent of AFTERSHOCK
 
 ## Rubric work (Alpha Factory: executable, effective, verifiable)
@@ -52,6 +52,7 @@ Numbers refer to the committed `data/results.json`.
   - `demo-strategy-trade` executes a replayed strategy decision on real Demo only when the original hedge is listed.
 - [x] Effective:
   - three pre-declared rules with a walk-forward selector, all published;
+  - later-added analyst consensus is an explicitly post-hoc diagnostic and cannot be selected;
   - Sharpe, Sortino and max drawdown, full period and last 90 days.
 - [x] Verifiable: SEC hashes, offline replay reproduced in CI, quote-checked AI, public ledger, real Demo order IDs.
 - [x] Frontend:
@@ -82,7 +83,7 @@ Numbers refer to the committed `data/results.json`.
 - [x] `keyrun` passed against real Bitget Demo on 2026-09-13. Four orders were accepted and filled: NVDA/AAPL execution-test pair, $50 per leg, net −$0.14 after fees.
   - Order IDs are in the README and `data/keyrun_report.json`.
   - Findings: `USDT-FUTURES`/`USDT`, hedge mode by default (handled), funds must be moved from demo spot to futures in the app.
-- [~] Demo lists no strategy hedge instrument (QQQ, SPY, SMH), so live strategy pairs on Demo resolve to NO_TRADE before any order is sent. The Demo run proves the adapter, not a substitute strategy.
+- [~] Demo lists no main-mode ETF hedge (QQQ, SPY, SMH, XLK), so main-mode pairs cannot execute there. With Demo credentials the watcher uses the separately scored Demo-executable universe for eligible companies; the adapter still refuses any substitution after a decision.
 
 ## Infrastructure
 - [x] DNS-over-HTTPS fallback is opt-in (`RESIDUAL_DOH_FALLBACK=1`), off by default, documented as not for bypassing regional restrictions

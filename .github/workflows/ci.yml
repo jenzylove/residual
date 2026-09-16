@@ -29,6 +29,11 @@ jobs:
           da = {r["event_id"]: r["decision"]["decision"] for r in a["rows"]}
           db = {r["event_id"]: r["decision"]["decision"] for r in b["rows"]}
           assert da == db, "decisions changed on replay"
+          for k in ("summary", "summary_conservative_funding"):
+              assert a["demo_mode"][k] == b["demo_mode"][k], f"demo_mode.{k} changed on replay"
+          dda = {r["event_id"]: r["decision"]["decision"] for r in a["demo_mode"]["rows"]}
+          ddb = {r["event_id"]: r["decision"]["decision"] for r in b["demo_mode"]["rows"]}
+          assert dda == ddb, "Demo-executable decisions changed on replay"
           print("replay reproduces committed results:", len(db), "events")
           EOF
       - name: Site data is strict JSON

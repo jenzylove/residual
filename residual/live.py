@@ -7,9 +7,10 @@ Each run appends one record to data/live_log.jsonl. Lifecycle of an event:
   t_obs..t_obs+1h -> decision with live data: NO_TRADE (gates) or TRADE
                      (paper pair opened at the live bid/ask from the order book)
   after t_obs+1h  -> NO_TRADE (entry window passed); replay still scores it
-  after horizon   -> open paper position closed at the live bid/ask
+  after horizon   -> open position closed at the live bid/ask/exchange fill
 With no new filing and nothing pending the run records NO_TRADE plus a live
-Bitget liquidity probe. Paper only: no orders are sent to Bitget.
+Bitget liquidity probe. Without Demo credentials fills are local paper fills;
+with Demo credentials, eligible pairs are sent only to Bitget Demo Trading.
 """
 import json
 import time
@@ -18,7 +19,8 @@ from pathlib import Path
 
 from . import bitget, demo, edgar, events, market, universe
 from .interpret import interpret
-from .strategy import BASE_NOTIONAL, analyze, decide, learn_params
+from .strategy import (BASE_NOTIONAL, analyze, decide, learn_params, learn_variant,
+                       variant_direction)
 
 ROOT = Path(__file__).resolve().parent.parent
 LIVE_LOG = ROOT / "data" / "live_log.jsonl"
@@ -126,6 +128,7 @@ def _open_position(event, a, dec, now_ms, snap=None) -> tuple[dict | None, str |
             return None, f"bitget demo execution failed: {e}"
         pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms),
                "execution": "bitget_demo", "exit_due_ms": now_ms + market.HOLD_HOURS * HOUR_MS,
+               "strategy_mode": a.get("strategy_mode", "demo_executable"),
                "hedge_substitute": None, "demo_legs": legs, "exchange_log": client.log}
         _write(POSITIONS, _read(POSITIONS, []) + [pos])
         return pos, None
@@ -142,42 +145,103 @@ def _open_position(event, a, dec, now_ms, snap=None) -> tuple[dict | None, str |
         legs.append({"symbol": sym, "side": side, "qty": qty, "entry_price": px, "fee_rate": 0.0006,
                      "entry_fee": 0.0006 * qty * px, "entry_quote": q})
     pos = {"event_id": event["event_id"], "status": "open", "opened_at": _iso(now_ms), "execution": "local_paper",
+           "strategy_mode": a.get("strategy_mode", "main"),
            "exit_due_ms": now_ms + market.HOLD_HOURS * HOUR_MS, "legs": legs}
     _write(POSITIONS, _read(POSITIONS, []) + [pos])
     return pos, None
 
 
-def _history_params(dataset, before_ms):
+def _history_analyses(dataset, before_ms, hedge_pool=None, tickers=None):
+    eligible = [ev for ev in dataset if ev["release_ms"] < before_ms
+                and (tickers is None or ev["ticker"] in tickers)]
+    snaps = {ev["event_id"]: market.load_snapshot(ev["event_id"]) for ev in eligible}
+    # Match replay's funding sensitivity using only snapshots that are historical
+    # by this release. This cannot change a live decision with future data.
+    from .pipeline import apply_funding_caps
+    apply_funding_caps(snaps.values())
     hist = []
-    for ev in dataset:
-        if ev["release_ms"] >= before_ms:
-            continue
-        a = analyze(ev, market.load_snapshot(ev["event_id"]))
+    for ev in eligible:
+        pool = hedge_pool(ev["ticker"]) if callable(hedge_pool) else hedge_pool
+        snap = snaps[ev["event_id"]]
+        a = analyze(ev, snap, pool) if pool is not None else analyze(ev, snap)
         if "times" in a and a["times"]["t_exit"] <= before_ms:
             hist.append(a)
+    return hist
+
+
+def _history_params(dataset, before_ms, hedge_pool=None, tickers=None):
+    hist = _history_analyses(dataset, before_ms, hedge_pool, tickers)
     return learn_params(hist)
+
+
+def _snapshot_complete(ev: dict, snap: dict | None) -> bool:
+    rows = (snap or {}).get("candles", {}).get(ev["company_symbol"], [])
+    return max((r[0] for r in rows), default=0) >= market.event_times(ev["release_ms"])["t_exit"]
+
+
+def _refresh_mature_snapshots(dataset: list[dict], now_ms: int, contracts: dict) -> list[str]:
+    """Complete any snapshot first captured at entry once its horizon has passed.
+
+    Without this step, a live event has no exit candles and can never become a
+    training observation for the next release.
+    """
+    refreshed = []
+    for ev in dataset:
+        if market.event_times(ev["release_ms"])["t_exit"] > now_ms:
+            continue
+        if _snapshot_complete(ev, market.load_snapshot(ev["event_id"])):
+            continue
+        market.save_snapshot(market.build_snapshot(ev, contracts, now_ms=now_ms))
+        refreshed.append(ev["event_id"])
+    return refreshed
 
 
 def evaluate(ev: dict, dataset: list[dict], now_ms: int, contracts: dict) -> dict:
     tm = market.event_times(ev["release_ms"])
-    out = {"event_id": ev["event_id"], "event_status": ev["status"], "release_utc": ev["release_utc"]}
+    demo_mode = demo.configured()
+    mode = "demo_executable" if demo_mode else "main"
+    out = {"event_id": ev["event_id"], "event_status": ev["status"], "release_utc": ev["release_utc"],
+           "strategy_mode": mode}
     if now_ms < tm["t_obs"]:
         out.update({"decision": "PENDING", "reason": f"reaction window closes {_iso(tm['t_obs'])}"})
         return out
+    if demo_mode and ev["ticker"] not in universe.demo_companies():
+        out.update({"decision": "NO_TRADE",
+                    "reason": f"{ev['company_symbol']} is not listed on Bitget Demo; no order sent"})
+        return out
     snap = market.build_snapshot(ev, contracts, now_ms=now_ms)
     market.save_snapshot(snap)
-    a = analyze(ev, snap)
-    params = _history_params(dataset, ev["release_ms"])
+    hedge_pool = universe.demo_hedge_pool if demo_mode else None
+    tickers = set(universe.demo_companies()) if demo_mode else None
+    pool = hedge_pool(ev["ticker"]) if hedge_pool else None
+    a = analyze(ev, snap, pool) if pool is not None else analyze(ev, snap)
+    a["strategy_mode"] = mode
+    history = _history_analyses(dataset, ev["release_ms"], hedge_pool, tickers)
+    params = learn_params(history)
     interp = None
     if "residual" in a and ev["surprise"]:
         raw = events.source_raw(ev["source"]["press_release_url"], ev["source"]["sha256"])
         interp = interpret(ev, a, edgar.html_to_text(raw))
     dec = decide(ev, a, params, interp)
+    selector = learn_variant(history, params)
+    if dec["decision"] == "TRADE":
+        direction = variant_direction(selector["variant"], a, params)
+        dec["gates"]["variant"] = {
+            "pass": direction != 0,
+            "detail": f"{selector['variant']} rule ({selector['source']})"
+                      + ("" if direction else ": company move and surprise disagree"),
+        }
+        if direction == 0:
+            dec.update({"decision": "NO_TRADE", "reasons": ["variant"], "size": 0.0})
+        else:
+            dec.update({"direction": direction,
+                        "structure": "long company / short hedge" if direction > 0 else "short company / long hedge"})
     if dec["decision"] == "TRADE" and not (tm["t_obs"] <= now_ms < tm["t_obs"] + HOUR_MS):
         dec = {**dec, "decision": "NO_TRADE", "reasons": ["entry_window_passed"]}
     out.update({"decision": dec["decision"], "reason": ", ".join(dec["reasons"]) or dec.get("structure"),
-                "residual": a.get("residual"), "params": params, "gates": dec["gates"],
-                "interpretation": {k: interp.get(k) for k in ("status", "label", "confidence", "detail")} if interp else None})
+                 "residual": a.get("residual"), "params": params, "gates": dec["gates"],
+                 "variant": selector,
+                 "interpretation": {k: interp.get(k) for k in ("status", "label", "confidence", "detail")} if interp else None})
     if dec["decision"] == "TRADE":
         pos, err = _open_position(ev, a, dec, now_ms, snap)
         if pos is None:
@@ -226,6 +290,7 @@ def watch(now_ms: int | None = None) -> dict:
         return rec
 
     contracts = bitget.contracts(cache=False)
+    rec["refreshed_snapshots"] = _refresh_mature_snapshots(dataset, now_ms, contracts)
     by_id = {e["event_id"]: e for e in dataset}
     outcomes, still = [], []
     for eid in pending:

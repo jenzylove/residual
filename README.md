@@ -47,7 +47,8 @@ flowchart TD
     F --> G[AI reading<br/>Claude, quotes checked<br/>label scales size only]
     G --> H{8 risk gates}
     H -->|any fail| X
-    H -->|all pass| I[Walk-forward rule<br/>residual, headline, agreement, consensus]
+    H -->|all pass| I[Walk-forward selector<br/>residual, headline, agreement]
+    C --> O[Post-hoc diagnostic<br/>analyst EPS consensus<br/>never selector-eligible]
     I --> J[Hedged pair<br/>company vs beta-weighted hedge]
     J --> K[Paper executor<br/>fees, slippage, funding]
     J --> L[Bitget Demo<br/>real orders in live mode]
@@ -104,7 +105,7 @@ Walk-forward over 71 real earnings events at the $2,500 default size. Each decis
 | Agreement rule | +$335.83 | 9 | 1.12 |
 | Headline rule, hedged | +$262.89 | 17 | 0.84 |
 | Residual rule | +$123.04 | 17 | 0.39 |
-| Analyst consensus rule | −$11.74 | 12 | −0.07 |
+| Analyst consensus diagnostic (post-hoc, never selected) | −$11.74 | 12 | −0.07 |
 | **Naive headline, same events** | **+$511.29** | 13 | 1.32 |
 | Naive headline, every eligible event | −$716.13 | 36 | −1.16 |
 
@@ -115,7 +116,7 @@ The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5
 ## Honest limitations
 
 - **No proven edge.** On the same releases the plain headline trade did better. We publish that rather than hide it. With 9 to 17 trades nothing here is statistically meaningful.
-- **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. Analyst consensus is included as a separate, clearly flagged rule; it is the worst of the four.
+- **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. A later-added analyst-EPS consensus series is published as a post-hoc diagnostic; it is never eligible for walk-forward selection and is the worst baseline.
 - **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst-case funding charge.
 - **Bitget Demo lists no index or sector ETF**, so main-mode strategy pairs cannot execute there. Demo mode exists for that reason, and the adapter refuses substitutes.
 - **Liquidity binds the sample.** After-hours volume on these perpetuals is thin; 14 releases were rejected for it at $2,500.
@@ -128,7 +129,7 @@ Python 3.11+, no third-party packages.
 ```bash
 python -m residual verify --offline   # re-derive every number from the archived filings
 python -m residual replay --offline   # regenerate every result, no network
-python -m unittest discover -s tests  # 51 tests
+python -m unittest discover -s tests  # 56 tests
 python -m residual serve              # the site at http://localhost:8000
 ```
 
