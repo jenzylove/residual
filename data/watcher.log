@@ -422,3 +422,11 @@
 {"checked_at": "2026-09-18T00:20:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
 {"checked_at": "2026-09-18T00:30:02+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
 {"checked_at": "2026-09-18T00:40:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T09:05:14+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "pushed"}
+{"checked_at": "2026-09-18T09:10:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T09:20:03+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T09:30:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T09:40:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T09:50:02+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T10:00:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped"}
+{"checked_at": "2026-09-18T16:00:12Z", "decision": "ERROR", "reason": "RuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>", "trace": "                      ~~~~~^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\residual\\residual\\net.py\", line 91, in fetch\n    raise RuntimeError(f\"fetch failed: {url}: {last}\")\nRuntimeError: fetch failed: https://data.sec.gov/submissions/CIK0001045810.json: <urlopen error [Errno 11001] getaddrinfo failed>\n"}
