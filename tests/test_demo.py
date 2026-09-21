@@ -41,10 +41,15 @@ class FakeExchange:
             self.orders[oid] = b
             return ok({"orderId": oid, "clientOid": b["clientOid"]})
         if u.path == "/api/v2/mix/order/detail":
+            if "clientOid" in q:
+                hit = [k for k, v in self.orders.items() if v["clientOid"] == q["clientOid"]]
+                if not hit:
+                    return {"code": "40109", "msg": "order not found", "data": None}
+                q["orderId"] = hit[0]
             b = self.orders[q["orderId"]]
             state = "live" if b["symbol"] == self.unfilled else "filled"
             px = self.px[b["symbol"]]
-            return ok({"state": state, "priceAvg": str(px), "baseVolume": b["size"], "side": b["side"],
+            return ok({"orderId": q["orderId"], "state": state, "priceAvg": str(px), "baseVolume": b["size"], "side": b["side"],
                        "fee": str(-0.0006 * px * float(b["size"])), "clientOid": b["clientOid"], "cTime": "1"})
         return {"code": "404", "msg": "unknown " + u.path}
 
@@ -55,6 +60,35 @@ def client(ex):
 
 
 class DemoTests(unittest.TestCase):
+    def _pair(self, ex):
+        c = client(ex)
+        return c, c.open_pair([{"live_symbol": "NVDAUSDT", "side": 1, "notional": 100},
+                               {"live_symbol": "QQQUSDT", "side": -1, "notional": 120}], "t9")
+
+    def test_pair_return_matches_the_backtest_stop_unit(self):
+        ex = FakeExchange(); c, legs = self._pair(ex)
+        ex.px["SNVDASUSDT"] = 190.0  # company leg down 5%, hedge flat
+        self.assertAlmostEqual(c.pair_return(legs), -0.05, places=2)
+
+    def test_failed_leg_is_retried_without_closing_the_other_twice(self):
+        ex = FakeExchange(); c, legs = self._pair(ex)
+        ex.fail = "SQQQSUSDT"
+        first = c.close_pair_safe(legs, "t9")
+        self.assertIn("close_order", first[0]); self.assertIn("close_error", first[1])
+        ex.fail = None
+        second = c.close_pair_safe(first, "t9")
+        self.assertTrue(all("close_order" in l for l in second))
+        closes = [o["clientOid"] for o in ex.orders.values() if o["clientOid"].startswith("t9-c")]
+        self.assertEqual(sorted(closes), ["t9-c0", "t9-c1"])
+
+    def test_a_close_that_landed_but_was_not_recorded_is_found_not_repeated(self):
+        ex = FakeExchange(); c, legs = self._pair(ex)
+        c.close_pair_safe(legs, "t9")          # closes both, then the result is lost
+        n = len(ex.orders)
+        again = c.close_pair_safe(legs, "t9")
+        self.assertEqual(len(ex.orders), n)     # no new orders sent
+        self.assertTrue(all(l["close_order"]["state"] == "filled" for l in again))
+
     def test_signature_matches_bitget_v2_prehash(self):
         exp = base64.b64encode(hmac.new(b"sec", b"1700000000000GET/api/v2/x?a=1&b=2", hashlib.sha256).digest()).decode()
         self.assertEqual(demo.sign("sec", "1700000000000", "get", "/api/v2/x", "a=1&b=2"), exp)

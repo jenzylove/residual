@@ -202,6 +202,47 @@ class BitgetDemo:
             raise DemoError(f"pair not opened: {e}; rolled back {len(rollback)} leg(s)") from e
         return filled
 
+    def find_order(self, symbol: str, client_oid: str) -> dict | None:
+        """The order this client id placed, if the exchange has one. Close orders use a fixed client id
+        per leg, so a retry can ask whether its earlier attempt already went through."""
+        try:
+            d = self.request("GET", "/api/v2/mix/order/detail",
+                             {"symbol": symbol, "productType": PRODUCT_TYPE, "clientOid": client_oid})
+        except DemoError:
+            return None
+        return self.order_detail(symbol, d["orderId"]) if d and d.get("orderId") else None
+
+    def pair_return(self, legs: list[dict]) -> float:
+        """Combined mark to market of a held pair, as a fraction of the company leg's notional:
+        the same quantity the backtest's pair stop is measured in."""
+        pnl = 0.0
+        for l in legs:
+            px = float(self.ticker(l["demo_symbol"])["lastPr"])
+            pnl += l["side"] * (px - l["open_order"]["priceAvg"]) * l["open_order"]["baseVolume"]
+        company = legs[0]["open_order"]
+        return pnl / (company["priceAvg"] * company["baseVolume"])
+
+    def close_pair_safe(self, legs: list[dict], tag: str) -> list[dict]:
+        """Close each leg that is not already closed, safely across restarts. A leg recorded as closed is
+        skipped; otherwise the exchange is asked whether this leg's close order already exists before a
+        new one is sent. A failed leg comes back with its error instead of raising, so the caller can
+        persist exactly which legs are flat and retry only the rest."""
+        out = []
+        for i, leg in enumerate(legs):
+            if (leg.get("close_order") or {}).get("state") == "filled":
+                out.append(leg); continue
+            oid = f"{tag}-c{i}"
+            try:
+                o = self.find_order(leg["demo_symbol"], oid)
+                if not o or o["state"] != "filled":
+                    o = self.market_order(leg["demo_symbol"], leg["side"], leg["size"], True, oid)
+                if o["state"] != "filled":
+                    raise DemoError(f"close order {o['orderId']} state {o['state']}")
+                out.append({**{k: v for k, v in leg.items() if k != "close_error"}, "close_order": o})
+            except DemoError as e:
+                out.append({**leg, "close_error": str(e)})
+        return out
+
     def close_pair(self, legs: list[dict], tag: str) -> list[dict]:
         out = []
         for i, leg in enumerate(legs):

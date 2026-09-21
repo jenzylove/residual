@@ -306,38 +306,49 @@ def cmd_demo_strategy_trade(args):
 
 
 def cmd_demo_close_due(args):
-    """Close every held Demo pair whose holding period has elapsed, and record the result."""
+    """Manage held Demo pairs with the backtest's own exit rules: close at the pair stop (combined loss of
+    MAX_LOSS_FRAC of company notional) or when the holding period ends. Closing is restart safe: legs
+    already flat are never closed twice, and a pair with a failed leg stays pending with its leg states."""
     from pathlib import Path
     from . import demo
+    from .strategy import MAX_LOSS_FRAC
     base = Path(__file__).resolve().parent.parent / "data"
     pending_path, out = base / "demo_open_pairs.jsonl", base / "demo_strategy_trades.jsonl"
     if not pending_path.exists():
         print(json.dumps({"closed": 0, "still_open": 0})); return
     pend = [json.loads(x) for x in pending_path.read_text(encoding="utf-8").splitlines() if x.strip()]
     now = time.time()
-    keep, done = [], []
-    c = None
+    keep, done, marks = [], [], []
+    c = demo.BitgetDemo() if pend else None
     for p in pend:
-        due = time.strptime(p["due_at"], "%Y-%m-%dT%H:%M:%SZ")
-        if time.mktime(due) - time.timezone > now and not args.force:
+        due = time.mktime(time.strptime(p["due_at"], "%Y-%m-%dT%H:%M:%SZ")) - time.timezone <= now
+        partial = any("close_order" in l or "close_error" in l for l in p["legs"])
+        ret = None if partial else c.pair_return(p["legs"])
+        reason = ("forced" if args.force else "holding period ended" if due
+                  else "resuming a partial close" if partial
+                  else f"pair stop at {ret:.2%}" if ret <= -MAX_LOSS_FRAC else None)
+        marks.append({"event_id": p["event_id"], "return": ret, "action": reason or "hold"})
+        if not reason:
             keep.append(p); continue
-        c = c or demo.BitgetDemo()
-        closed = c.close_pair(p["legs"], p["tag"])
+        legs = c.close_pair_safe(p["legs"], p["tag"])
+        exit_reason = p.get("exit_reason") or reason
+        if any("close_order" not in l for l in legs):
+            keep.append({**p, "legs": legs, "exit_reason": exit_reason}); continue
         held = round((now - time.mktime(time.strptime(p["opened_at"], "%Y-%m-%dT%H:%M:%SZ")) + time.timezone) / 3600, 2)
         rec = {"tag": p["tag"], "executed_at": p["opened_at"], "closed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                "event_id": p["event_id"], "decision": p["decision"], "strategy_hedge": p["strategy_hedge"],
                "hedge_used": p["hedge_used"], "hedge_substitute": None, "hedge_beta": p["hedge_beta"],
                "orders": [{"symbol": l["demo_symbol"], "side": "long" if l["side"] > 0 else "short",
                            "open": l["open_order"]["orderId"], "open_px": l["open_order"]["priceAvg"],
-                           "close": l["close_order"]["orderId"], "close_px": l["close_order"]["priceAvg"]} for l in closed],
-               "realized": demo.realized(closed), "held_hours": held,
-               "note": f"held {held:.1f}h on Bitget Demo, the strategy's own holding period"}
+                           "close": l["close_order"]["orderId"], "close_px": l["close_order"]["priceAvg"]} for l in legs],
+               "realized": demo.realized(legs), "held_hours": held, "exit_reason": exit_reason,
+               "note": f"held {held:.1f}h on Bitget Demo; exit: {exit_reason}"}
         with out.open("a", encoding="utf-8") as f:
             f.write(json.dumps(rec, default=str) + "\n")
         done.append(rec)
     pending_path.write_text("".join(json.dumps(k, default=str) + "\n" for k in keep), encoding="utf-8")
-    print(json.dumps({"closed": len(done), "still_open": len(keep),
-                      "results": [{"event_id": d["event_id"], "held_hours": d["held_hours"], "net": d["realized"]["net"]} for d in done]},
+    print(json.dumps({"closed": len(done), "still_open": len(keep), "marks": marks,
+                      "results": [{"event_id": d["event_id"], "exit": d["exit_reason"], "net": d["realized"]["net"]} for d in done]},
                      indent=1, default=str))
 
 
