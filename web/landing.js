@@ -407,7 +407,7 @@ function demoStrategy() {
   el.innerHTML = `<div><h4>Strategy decisions executed on Bitget Demo</h4>
       <div class="big">${all.length} decisions · ${legs} orders</div>
       <p class="note">Each one is a real TRADE decision from the replay, re-placed on Bitget Demo Trading as a hedged pair and closed straight away, so the net is the venue's round-trip cost rather than the strategy's P&amp;L: ${usd(net, 2)} across all ${all.length}. The point is that the decision, the pair and the sizing survive contact with the exchange. Every order ID below can be looked up.</p></div>
-    ${all.slice().reverse().map(t => `<div class="orders"><div class="order"><span><b>${esc(t.event_id)}</b> ${t.decision.direction > 0 ? "long" : "short"} · ${esc(t.executed_at.slice(0, 10))}</span><span class="muted">net ${usd(t.realized ? t.realized.net : 0, 2)}</span></div>
+    ${all.slice().reverse().map(t => `<div class="orders"><div class="order"><span><b>${esc(t.event_id)}</b> ${t.decision.direction > 0 ? "long" : "short"} · ${esc(t.executed_at.slice(0, 10))}</span><span class="muted">${t.held_hours ? `held ${t.held_hours}h · ` : "execution check · "}net ${usd(t.realized ? t.realized.net : 0, 2)}</span></div>
       ${t.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> ${o.side} · ${o.open_px} → ${o.close_px}</span><span class="muted">filled</span><code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`).join("")}`;
 }
 

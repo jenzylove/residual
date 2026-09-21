@@ -52,6 +52,7 @@ class BitgetDemo:
             raise DemoError("Bitget Demo credentials missing (BITGET_DEMO_API_KEY/SECRET/PASSPHRASE)")
         self._transport = transport or self._http
         self._contracts = None
+        self._offset_ms = None
         self.log: list[dict] = []  # every request/response, for the evidence trail
 
     # -- transport -------------------------------------------------------
@@ -68,10 +69,25 @@ class BitgetDemo:
             snippet = raw[:200].decode("utf-8", errors="replace").strip() or "<empty body>"
             return {"code": f"HTTP{status}", "msg": f"non-JSON response: {snippet}"}
 
+    def server_offset_ms(self) -> int:
+        """Bitget rejects a signature whose timestamp is more than about 30 seconds out. A desktop
+        clock drifts, so the offset against the venue's own clock is measured once per process and
+        applied to every signature rather than trusting the machine."""
+        if self._offset_ms is None:
+            try:
+                before = time.time() * 1000
+                body = self._transport("GET", BASE + "/api/v2/public/time",
+                                       {"Content-Type": "application/json", "locale": "en-US"}, "")
+                after = time.time() * 1000
+                self._offset_ms = int(int(body["data"]["serverTime"]) - (before + after) / 2)
+            except Exception:
+                self._offset_ms = 0
+        return self._offset_ms
+
     def request(self, method: str, path: str, params: dict | None = None, body: dict | None = None):
         query = urllib.parse.urlencode(params or {})
         body_s = json.dumps(body, separators=(",", ":")) if body else ""
-        ts = str(int(time.time() * 1000))
+        ts = str(int(time.time() * 1000) + self.server_offset_ms())
         headers = {
             "ACCESS-KEY": self.key, "ACCESS-SIGN": sign(self.secret, ts, method, path, query, body_s),
             "ACCESS-TIMESTAMP": ts, "ACCESS-PASSPHRASE": self.passphrase,

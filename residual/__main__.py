@@ -266,6 +266,29 @@ def cmd_demo_strategy_trade(args):
     legs.append({"live_symbol": hedge["symbol"], "side": -d, "notional": abs(hedge["beta"]) * n})
     tag = "st" + time.strftime("%m%d%H%M%S")
     opened = c.open_pair(legs, tag)
+
+    # A pair that opens and closes in the same second is an execution check, not a trade: it books
+    # the venue's round trip cost and nothing else, and repeated it would be indistinguishable from
+    # volume farming. The default is to hold for the strategy's own holding period and let
+    # `demo-close-due` flatten it when that time is up.
+    if args.hold_hours > 0:
+        due = time.time() + args.hold_hours * 3600
+        pend = {"tag": tag, "opened_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "due_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(due)), "hold_hours": args.hold_hours,
+                "event_id": ev["event_id"],
+                "decision": {k: r["decision"].get(k) for k in ("direction", "structure", "size")},
+                "strategy_hedge": hedge["symbol"], "hedge_used": hedge["symbol"], "hedge_beta": hedge["beta"],
+                "legs": [{"demo_symbol": l["demo_symbol"], "side": l["side"], "size": l["size"],
+                          "open_order": l["open_order"]} for l in opened]}
+        pending_path = Path(__file__).resolve().parent.parent / "data" / "demo_open_pairs.jsonl"
+        with pending_path.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(pend, default=str) + "\n")
+        print(json.dumps({"opened": pend["event_id"], "hold_hours": args.hold_hours, "due_at": pend["due_at"],
+                          "legs": [{"symbol": l["demo_symbol"], "side": "long" if l["side"] > 0 else "short",
+                                    "open": l["open_order"]["orderId"], "open_px": l["open_order"]["priceAvg"]}
+                                   for l in opened]}, indent=1, default=str))
+        return
+
     closed = c.close_pair(opened, tag)
     rec = {"tag": tag, "executed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "event_id": ev["event_id"],
            "decision": {k: r["decision"].get(k) for k in ("direction", "structure", "size")},
@@ -274,11 +297,48 @@ def cmd_demo_strategy_trade(args):
            "orders": [{"symbol": l["demo_symbol"], "side": "long" if l["side"] > 0 else "short",
                        "open": l["open_order"]["orderId"], "open_px": l["open_order"]["priceAvg"],
                        "close": l["close_order"]["orderId"], "close_px": l["close_order"]["priceAvg"]} for l in closed],
-           "realized": demo.realized(closed), "note": "replayed decision executed at today's prices on Bitget Demo"}
+           "realized": demo.realized(closed), "held_hours": 0,
+           "note": "execution check: opened and closed in one pass, so the net is the venue round trip cost"}
     out = Path(__file__).resolve().parent.parent / "data" / "demo_strategy_trades.jsonl"
     with out.open("a", encoding="utf-8") as f:
         f.write(json.dumps(rec, default=str) + "\n")
     print(json.dumps({k: rec[k] for k in ("event_id", "decision", "strategy_hedge", "hedge_used", "orders", "realized")}, indent=1, default=str))
+
+
+def cmd_demo_close_due(args):
+    """Close every held Demo pair whose holding period has elapsed, and record the result."""
+    from pathlib import Path
+    from . import demo
+    base = Path(__file__).resolve().parent.parent / "data"
+    pending_path, out = base / "demo_open_pairs.jsonl", base / "demo_strategy_trades.jsonl"
+    if not pending_path.exists():
+        print(json.dumps({"closed": 0, "still_open": 0})); return
+    pend = [json.loads(x) for x in pending_path.read_text(encoding="utf-8").splitlines() if x.strip()]
+    now = time.time()
+    keep, done = [], []
+    c = None
+    for p in pend:
+        due = time.strptime(p["due_at"], "%Y-%m-%dT%H:%M:%SZ")
+        if time.mktime(due) - time.timezone > now and not args.force:
+            keep.append(p); continue
+        c = c or demo.BitgetDemo()
+        closed = c.close_pair(p["legs"], p["tag"])
+        held = round((now - time.mktime(time.strptime(p["opened_at"], "%Y-%m-%dT%H:%M:%SZ")) + time.timezone) / 3600, 2)
+        rec = {"tag": p["tag"], "executed_at": p["opened_at"], "closed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+               "event_id": p["event_id"], "decision": p["decision"], "strategy_hedge": p["strategy_hedge"],
+               "hedge_used": p["hedge_used"], "hedge_substitute": None, "hedge_beta": p["hedge_beta"],
+               "orders": [{"symbol": l["demo_symbol"], "side": "long" if l["side"] > 0 else "short",
+                           "open": l["open_order"]["orderId"], "open_px": l["open_order"]["priceAvg"],
+                           "close": l["close_order"]["orderId"], "close_px": l["close_order"]["priceAvg"]} for l in closed],
+               "realized": demo.realized(closed), "held_hours": held,
+               "note": f"held {held:.1f}h on Bitget Demo, the strategy's own holding period"}
+        with out.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, default=str) + "\n")
+        done.append(rec)
+    pending_path.write_text("".join(json.dumps(k, default=str) + "\n" for k in keep), encoding="utf-8")
+    print(json.dumps({"closed": len(done), "still_open": len(keep),
+                      "results": [{"event_id": d["event_id"], "held_hours": d["held_hours"], "net": d["realized"]["net"]} for d in done]},
+                     indent=1, default=str))
 
 
 def cmd_demo_roundtrip(args):
@@ -329,8 +389,12 @@ def main():
     rt.add_argument("--notional", type=float, default=50.0)
     st = sub.add_parser("demo-strategy-trade", help="execute a real past strategy TRADE decision on Bitget Demo")
     st.add_argument("--event"); st.add_argument("--notional", type=float, default=100.0)
+    st.add_argument("--hold-hours", type=float, default=24.0, dest="hold_hours",
+                    help="hold the pair this long (0 opens and closes at once: an execution check, not a trade)")
     st.add_argument("--mode", choices=("strategy", "demo"), default="demo",
                     help="demo: the Demo-executable mode (default); strategy: the main mode")
+    cd = sub.add_parser("demo-close-due", help="close held Demo pairs whose holding period has elapsed")
+    cd.add_argument("--force", action="store_true", help="close now, whatever the due time")
     kr = sub.add_parser("keyrun", help="full Bitget Demo test run -> data/keyrun_report.json")
     kr.add_argument("--notional", type=float, default=50.0)
     kr.add_argument("--skip-roundtrip", action="store_true")
@@ -345,7 +409,8 @@ def main():
         from .demo import DemoError
         try:
             {"demo-check": cmd_demo_check, "demo-roundtrip": cmd_demo_roundtrip,
-             "demo-strategy-trade": cmd_demo_strategy_trade}[args.cmd](args)
+             "demo-strategy-trade": cmd_demo_strategy_trade,
+             "demo-close-due": cmd_demo_close_due}[args.cmd](args)
         except DemoError as e:
             print(f"Bitget Demo: {e}")
             if "credentials missing" in str(e):

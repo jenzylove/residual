@@ -50,12 +50,25 @@ def publish(rec, changed):
     return "push failed: " + ((p.stderr or p.stdout).strip()[:160] or f"exit {p.returncode}")
 
 
+def close_due_demo_pairs():
+    """Flatten any held Demo pair whose holding period has elapsed. Held pairs exist so a Demo
+    execution is a real trade with a holding period rather than an instant round trip."""
+    try:
+        p = subprocess.run([sys.executable, "-m", "residual", "demo-close-due"],
+                           cwd=ROOT, capture_output=True, text=True, timeout=300)
+        out = (p.stdout or "").strip()
+        return json.loads(out) if out.startswith("{") else {"error": (p.stderr or out)[:160]}
+    except Exception as e:
+        return {"error": f"{type(e).__name__}: {e}"}
+
+
 try:
     from residual.live import watch
     rec = watch()
-    changed = bool(rec.get("new_events") or rec.get("closed_positions"))
+    rec["demo_close"] = close_due_demo_pairs()
+    changed = bool(rec.get("new_events") or rec.get("closed_positions") or (rec.get("demo_close") or {}).get("closed"))
     status = publish(rec, changed)
-    log({k: rec.get(k) for k in ("checked_at", "decision", "reason")} | {"publish": status})
+    log({k: rec.get(k) for k in ("checked_at", "decision", "reason")} | {"publish": status, "demo_close": rec.get("demo_close")})
 except Exception as e:
     log({"checked_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "decision": "ERROR",
          "reason": f"{type(e).__name__}: {e}", "trace": traceback.format_exc()[-300:]})
