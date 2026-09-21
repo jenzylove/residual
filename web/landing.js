@@ -395,20 +395,27 @@ function demoMode() {
       <tr class="hl"><td>Strategy<small>demo executable pairs</small></td><td class="num">${S.residual.trades}</td><td class="num ${cls(S.residual.total_net_pnl)}">${usd(S.residual.total_net_pnl, 0)}</td><td class="num">${S.residual.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.residual.hit_rate == null ? "n/a" : Math.round(S.residual.hit_rate * 100) + "%"}</td></tr>
       <tr><td>Plain headline, same releases<small>unhedged baseline</small></td><td class="num">${S.naive_same_events.trades}</td><td class="num ${cls(S.naive_same_events.total_net_pnl)}">${usd(S.naive_same_events.total_net_pnl, 0)}</td><td class="num">${S.naive_same_events.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.naive_same_events.hit_rate == null ? "n/a" : Math.round(S.naive_same_events.hit_rate * 100) + "%"}</td></tr>
     </tbody></table></div>
-    <p class="note">Stress view (every trade, worst case funding). The ${tr.length} pairs: ${tr.map(r => esc(r.event_id.split("-")[0]) + " vs " + esc((r.hedge.symbol || "").replace("USDT", ""))).join(" · ")}. Each one could be placed on Bitget Demo, and ${(D.demo_strategy_trades || []).length} of them were.</p>`;
+    <p class="note">Stress view (every trade, worst case funding). The ${tr.length} pairs: ${tr.map(r => esc(r.event_id.split("-")[0]) + " vs " + esc((r.hedge.symbol || "").replace("USDT", ""))).join(" · ")}. Backtest dollars only; Bitget Demo orders are shown separately below.</p>`;
 }
 
 function demoStrategy() {
   const all = D.demo_strategy_trades || [], el = $("#demo-strat");
   if (!all.length || !el) return;
   el.hidden = false;
-  const net = all.reduce((a, t) => a + (t.realized ? t.realized.net : 0), 0);
+  const checks = all.filter(t => !t.held_hours), held = all.filter(t => t.held_hours);
+  const sum = xs => xs.reduce((a, t) => a + (t.realized ? t.realized.net : 0), 0);
   const legs = all.reduce((a, t) => a + t.orders.length * 2, 0);
-  el.innerHTML = `<div><h4>Strategy decisions executed on Bitget Demo</h4>
-      <div class="big">${all.length} decisions · ${legs} orders</div>
-      <p class="note">Each one is a real TRADE decision from the replay, re-placed on Bitget Demo Trading as a hedged pair and closed straight away, so the net is the venue's round-trip cost rather than the strategy's P&amp;L: ${usd(net, 2)} across all ${all.length}. The point is that the decision, the pair and the sizing survive contact with the exchange. Every order ID below can be looked up.</p></div>
-    ${all.slice().reverse().map(t => `<div class="orders"><div class="order"><span><b>${esc(t.event_id)}</b> ${t.decision.direction > 0 ? "long" : "short"} · ${esc(t.executed_at.slice(0, 10))}</span><span class="muted">${t.held_hours ? `held ${t.held_hours}h · ` : "execution check · "}net ${usd(t.realized ? t.realized.net : 0, 2)}</span></div>
-      ${t.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> ${o.side} · ${o.open_px} → ${o.close_px}</span><span class="muted">filled</span><code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`).join("")}`;
+  const row = t => `<div class="orders"><div class="order"><span><b>${esc(t.event_id)}</b> ${t.decision.direction > 0 ? "long" : "short"} · ${esc(t.executed_at.slice(0, 10))}</span><span class="muted">${t.held_hours ? `held ${t.held_hours}h · exit: ${esc(t.exit_reason || "holding period")} · ` : "execution check · "}net per Bitget ${usd(t.realized ? t.realized.net : 0, 2)}</span></div>
+      ${t.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> ${o.side} · ${o.open_px} → ${o.close_px}</span><span class="muted">filled</span><code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`;
+  el.innerHTML = `<div><h4>On Bitget Demo: real orders, kept apart from the backtest</h4>
+      <div class="big">${all.length} pairs · ${legs} orders</div>
+      <p class="note">None of these dollars are backtest results, and none of the backtest dollars above are these. Every order ID can be looked up.</p></div>
+    <div><h4>Held pairs · ${held.length} · net ${usd(sum(held), 2)}</h4>
+      <p class="note">Historical decisions placed at today's prices and held under the strategy's own exits: the 2.5% pair stop or the holding period, whichever comes first. Net is Bitget's own fill and fee record.</p></div>
+    ${held.slice().reverse().map(row).join("")}
+    <div><h4>Execution checks · ${checks.length} · net ${usd(sum(checks), 2)}</h4>
+      <p class="note">Opened and closed in one pass to prove the decision, pair and sizing survive the exchange. The net is the venue's round trip cost, not strategy performance.</p></div>
+    ${checks.slice().reverse().map(row).join("")}`;
 }
 
 /* ---------- guided tour ---------- */

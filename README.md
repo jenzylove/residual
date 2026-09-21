@@ -84,7 +84,7 @@ flowchart TD
 
 Every number on the site traces back to a document or an exchange response.
 
-- **Earnings numbers** keep the exact sentence they came from, the SEC URL and the SHA-256 of the document. All 71 events verify, offline, against the archive in `data/sources/`.
+- **Earnings numbers** keep the exact sentence they came from, the SEC URL and the SHA-256 of the document. All 83 filings (79 earnings releases) verify, offline, against the archive in `data/sources/`.
 - **Market inputs** are frozen per event in `data/snapshots/`, so the replay runs with no network at all.
 - **AI answers** are cached in `data/interpretations/` with the prompt hash and raw response. Every quote is checked against the press release; an invented quote is rejected and the trade does not happen.
 - **Paper orders** for both legs are in `data/ledger.csv`.
@@ -97,21 +97,47 @@ Every number on the site traces back to a document or an exchange response.
   <img src="web/screenshots/proof.png" alt="Proof section: rules, size study and demo-executable mode" width="100%">
 </p>
 
-Walk-forward over 71 real earnings events at the $2,500 default size. Each decision used only information available before that release. The headline view counts **every trade**, charging missing funding at the worst rate observed.
+### Five populations, never mixed
 
-| Rule | Net P&L | Trades | Sharpe |
-|---|---|---|---|
-| **Strategy** (rule picked walk-forward) | **+$269.68** | 13 | 0.88 |
-| Agreement rule | +$335.83 | 9 | 1.12 |
-| Headline rule, hedged | +$262.89 | 17 | 0.84 |
-| Residual rule | +$123.04 | 17 | 0.39 |
-| Analyst consensus diagnostic (post-hoc, never selected) | −$11.74 | 12 | −0.07 |
-| **Naive headline, same events** | **+$511.29** | 13 | 1.32 |
-| Naive headline, every eligible event | −$716.13 | 36 | −1.16 |
+| Population | What it is | Size |
+|---|---|---|
+| Earnings releases | Every release examined, with SEC source, hashes and verified numbers | 79 releases |
+| Main-mode backtest | Walk-forward strategy, hedged with index or sector ETFs | 15 trades (every trade counted) |
+| Demo-mode backtest | Same method, restricted to instruments Bitget Demo lists | 6 trades |
+| Demo execution checks | Historical decisions opened and closed in one pass on Bitget Demo | 6 pairs, net −$1.30 (venue cost) |
+| Demo held pairs | Historical decisions held on Bitget Demo under the strategy's own exits | 1 closed, 2 open |
 
-**Demo-executable mode**, the same method restricted to instruments Bitget Demo lists: **+$116.72 over 6 trades (Sharpe 0.70)** against the naive baseline's +$59.75 (0.35). One of those pairs was placed for real on Demo.
+The first three are research and backtest. The last two are real Bitget Demo orders, and their dollars come from Bitget's fills and fees. The two are never added together.
 
-The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5k, $5k and $10k. Above $2,500, Bitget's after-hours liquidity rejects most releases.
+### Backtest, walk-forward, every trade counted
+
+Walk-forward over 79 releases at the $2,500 default size. Each decision used only information available before that release, including funding: each event's worst case funding charge uses only settlements before its release. Missing funding is charged at that worst rate.
+
+| Rule | Net P&L | Trades | Sharpe (daily, annualised) | Max drawdown |
+|---|---|---|---|---|
+| **Strategy** (rule picked walk-forward) | **+$189.66** | 15 | 0.619 | −$218.68 |
+| Agreement rule | +$323.11 | 11 | 1.084 | −$85.22 |
+| Headline rule, hedged | +$237.89 | 21 | 0.763 | −$220.39 |
+| Residual rule | +$168.53 | 21 | 0.518 | −$222.30 |
+| Analyst consensus diagnostic (post hoc, never selected) | −$7.00 | 14 | -0.042 | −$152.92 |
+| **Headline direction, same events, unhedged** | **+$547.47** | 15 | 1.376 | −$122.35 |
+| Headline direction, every eligible event | −$738.51 | 37 | -1.205 | −$941.09 |
+
+**What this shows.** The value is in which releases RESIDUAL agrees to trade. Taking the headline direction on every release loses $738.51; taking it only on the releases that clear RESIDUAL's gates makes +$547.47. Inside those releases the hedge cost more than it saved, so the unhedged baseline beats the strategy. We report the strategy the walk-forward selected, not the baseline, because picking the winner after seeing the results would be hindsight.
+
+**Demo-executable mode:** +$122.19 over 6 trades (Sharpe 0.728) against the same-events baseline's +$64.60 (0.382). This is the one population where the strategy beats its baseline.
+
+### Real orders on Bitget Demo
+
+Held pairs are managed by the watcher with the backtest's own exits: a combined pair stop at 2.5% of company notional, or the holding period. Closing is restart safe; each leg's close has a fixed order ID, so a retry checks the exchange before sending anything.
+
+- META-2026-07-29: held 6.93h, exit pair stop at -8.61%, net per Bitget −$8.38. It passed the -2.5% stop before the live stop existed; it closed on the first watcher cycle after the stop shipped, which is why the loss is past the stop.
+- NVDA-2025-11-19: open, due 2026-09-22T12:23:03Z
+- AMZN-2026-02-05: open, due 2026-09-22T12:23:14Z
+
+Execution checks: 6 pairs, net −$1.30 in total, which is the venue's round trip cost and says nothing about the strategy.
+
+The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5k, $5k and $10k. Above $2,500, Bitget's after hours liquidity rejects most releases.
 
 ## Honest limitations
 
@@ -119,7 +145,7 @@ The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5
 - **Five trades cannot establish an edge, and cannot refute one either.** Any Sharpe quoted on five trades is noise. What is visible at this sample size is the effect of the gates: taking every signal loses money (19 trades, -$69.80, Sharpe -0.03), while the subset that clears every gate makes money (5 trades, +$317.86, Sharpe 0.30). The abstention is doing the work.
 - **The hedge did not pay on these five.** Unhedged on the same releases returned $487.03 with a $37.64 drawdown, against $317.86 and $68.84 hedged. On this sample the hedge cost both return and drawdown. That is published here rather than buried, and it is the first thing a larger sample should settle.
 - **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. A later-added analyst-EPS consensus series is published as a post-hoc diagnostic; it is never eligible for walk-forward selection and is the worst baseline.
-- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst-case funding charge. The conservative-funding view, which includes every release whose funding could not be observed and charges it the worst rate seen, is 15 trades for $138.70.
+- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst case funding charge, computed point in time. The tables above count those trades; the view that drops them has 5 trades for +$317.86.
 - **Bitget Demo lists no index or sector ETF**, so main-mode strategy pairs cannot execute there. Demo mode exists for that reason, and the adapter refuses substitutes.
 - **Thin books cap size rather than rejecting the release.** The position is the largest notional that stays inside 25% of the observed pre-event hourly volume, up to the $2,500 base, and the release is dropped only if that falls below a fifth of base. Volume is measured before the release, so this changes size and never the decision.
 - **AI labels are not deterministic** run to run; the cached answers are what make a replay reproducible.
