@@ -80,7 +80,7 @@ def demo_strategy_trades():
     p = Path(__file__).resolve().parent.parent / "data" / "demo_strategy_trades.jsonl"
     if not p.exists():
         return []
-    return [json.loads(x) for x in p.read_text(encoding="utf-8").splitlines() if x.strip()][-5:]
+    return [json.loads(x) for x in p.read_text(encoding="utf-8").splitlines() if x.strip()][-12:]
 
 
 def demo_evidence():
