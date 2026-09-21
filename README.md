@@ -115,12 +115,18 @@ The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5
 
 ## Honest limitations
 
-- **No proven edge.** On the same releases the plain headline trade did better. We publish that rather than hide it. With 9 to 17 trades nothing here is statistically meaningful.
+- **The sample is bounded by the venue, not by the method.** 79 releases were examined across 316 days, but a release is only tradeable if the company's Bitget perpetual already existed with enough history at that moment. That leaves 37 analysable releases, of which 5 cleared every gate. Arista is the clearest case: its perpetual listed on 12 August 2026, eight days after its 4 August earnings, so that release can never be traded however good the signal was.
+- **Five trades cannot establish an edge, and cannot refute one either.** Any Sharpe quoted on five trades is noise. What is visible at this sample size is the effect of the gates: taking every signal loses money (19 trades, -$69.80, Sharpe -0.03), while the subset that clears every gate makes money (5 trades, +$317.86, Sharpe 0.30). The abstention is doing the work.
+- **The hedge did not pay on these five.** Unhedged on the same releases returned $487.03 with a $37.64 drawdown, against $317.86 and $68.84 hedged. On this sample the hedge cost both return and drawdown. That is published here rather than buried, and it is the first thing a larger sample should settle.
 - **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. A later-added analyst-EPS consensus series is published as a post-hoc diagnostic; it is never eligible for walk-forward selection and is the worst baseline.
-- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst-case funding charge.
+- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst-case funding charge. The conservative-funding view, which includes every release whose funding could not be observed and charges it the worst rate seen, is 15 trades for $138.70.
 - **Bitget Demo lists no index or sector ETF**, so main-mode strategy pairs cannot execute there. Demo mode exists for that reason, and the adapter refuses substitutes.
-- **Liquidity binds the sample.** After-hours volume on these perpetuals is thin; 14 releases were rejected for it at $2,500.
+- **Thin books cap size rather than rejecting the release.** The position is the largest notional that stays inside 25% of the observed pre-event hourly volume, up to the $2,500 base, and the release is dropped only if that falls below a fifth of base. Volume is measured before the release, so this changes size and never the decision.
 - **AI labels are not deterministic** run to run; the cached answers are what make a replay reproducible.
+
+## Sample window and out-of-sample split
+
+First release 2025-10-21, last release 2026-09-02: 316 days, comfortably past the 60-day minimum. There is no in-sample period to quote, because there is no in-sample fit. Every event is scored with parameters fitted only on events whose exit precedes that event's release, so all 316 days and every scored trade are out of sample by construction. The rule itself (residual, headline or agreement) is chosen the same way, walk-forward, and the selection for each event is recorded in `web/data.json`.
 
 ## Quick start
 

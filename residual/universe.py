@@ -11,9 +11,10 @@ MARKET = "QQQUSDT"  # broad-market proxy; the only index perp listed across the 
 COMPANIES = {
     "NVDA": "semis", "AMD": "semis", "AVGO": "semis", "MU": "semis",
     "INTC": "semis", "MRVL": "semis", "QCOM": "semis", "KLAC": "semis", "TXN": "semis",
+    "ADI": "semis",
     "META": "internet", "AMZN": "internet",
     "PLTR": "software", "CRM": "software", "PANW": "software", "CRWD": "software", "MDB": "software",
-    "HPE": "hardware", "SMCI": "hardware",
+    "HPE": "hardware", "SMCI": "hardware", "ANET": "hardware",
 }
 
 # Equal-weight sector baskets (the company itself is always excluded; peers without

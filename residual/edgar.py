@@ -11,6 +11,10 @@ CIKS = {
     "NFLX": 1065280, "MRVL": 1835632,
     "QCOM": 804328, "KLAC": 319201, "TXN": 97476, "HPE": 1645590, "SMCI": 1375365,
     "CRM": 1108524, "PANW": 1327567, "CRWD": 1535527, "MDB": 1441816,
+    # Added 21 September 2026: US filers that publish a numeric next-quarter revenue outlook in
+    # the earnings release itself and have a Bitget perpetual with usable history in 2026.
+    "ARM": 1973239, "SNOW": 1640147, "NOW": 1373715, "DELL": 1571996, "ANET": 1596532,
+    "ADBE": 796343, "CSCO": 858877, "AMAT": 6951, "LRCX": 707549, "ADI": 6281, "ORCL": 1341439,
 }
 
 

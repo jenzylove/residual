@@ -1282,6 +1282,139 @@
   "status": "complete"
  },
  {
+  "event_id": "ANET-2025-11-04",
+  "consensus": {
+   "eps_estimate": 0.71,
+   "eps_reported": 0.75,
+   "consensus_surprise_pct": 5.634,
+   "fiscal_date_ending": "2025-09-30",
+   "reported_date": "2025-11-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ANET",
+   "fetched_at": "2026-09-21T11:01:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ANET",
+  "company_symbol": "ANETUSDT",
+  "sector_group": "hardware",
+  "cik": 1596532,
+  "accession": "0001596532-25-000284",
+  "release_utc": "2025-11-04T21:08:44Z",
+  "release_ms": 1762290524000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/ex991q325-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/",
+   "sha256": "bada213427aacda29ba02ba421cf2fbfa4a125f388d8d01ab3feaf5d4834071a",
+   "cache_file": "data/cache/c9e2150eede5763927f4bbbc.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000214/ex991q225-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000214/",
+   "accession": "0001596532-25-000214",
+   "cache_file": "data/cache/0fcaa74b76903c9d61e33e9f.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2308.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.308 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/ex991q325-earningsrelease.htm",
+    "source_sha256": "bada213427aacda29ba02ba421cf2fbfa4a125f388d8d01ab3feaf5d4834071a",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2250.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $2.25 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000214/ex991q225-earningsrelease.htm",
+    "source_sha256": "6ffb5512e0e5cd375266ca51d3e11c62eb63a302f622bca70c8a61e610ec9dfd",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 2250.0,
+    "high": 2250.0,
+    "verified": true
+   },
+   "revenue_guidance_next": null,
+   "revenue_prior_actual": {
+    "value": 2205.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.205 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000214/ex991q225-earningsrelease.htm",
+    "source_sha256": "6ffb5512e0e5cd375266ca51d3e11c62eb63a302f622bca70c8a61e610ec9dfd",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Our centers of data strategy is resonating well across customers and analysts because it delivers a superior client to campus to cloud/data and AI centers experience,",
+   "speaker": "Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "snippet": "\"Our centers of data strategy is resonating well across customers and analysts because it delivers a superior client to campus to cloud/data and AI centers experience,\" said Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/ex991q325-earningsrelease.htm",
+   "source_sha256": "bada213427aacda29ba02ba421cf2fbfa4a125f388d8d01ab3feaf5d4834071a"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_guidance_next"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
+ },
+ {
   "event_id": "SMCI-2025-11-04",
   "consensus": {
    "eps_estimate": 0.39,
@@ -2074,6 +2207,141 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "ADI-2025-11-25",
+  "consensus": {
+   "eps_estimate": 2.23,
+   "eps_reported": 2.26,
+   "consensus_surprise_pct": 1.345,
+   "fiscal_date_ending": "2025-10-31",
+   "reported_date": "2025-11-25",
+   "report_time": "pre-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ADI",
+   "fetched_at": "2026-09-21T11:01:22Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ADI",
+  "company_symbol": "ADIUSDT",
+  "sector_group": "semis",
+  "cik": 6281,
+  "accession": "0000006281-25-000151",
+  "release_utc": "2025-11-25T12:03:07Z",
+  "release_ms": 1764072187000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/adiq425exhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/",
+   "sha256": null,
+   "cache_file": "data/cache/08f2ec01f6ba6930885352fd.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000142/adi3q25exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000142/",
+   "accession": "0000006281-25-000142",
+   "cache_file": "data/cache/34305606e611839978d09a91.bin"
+  },
+  "earnings": {
+   "revenue_actual": null,
+   "revenue_guidance_prior": {
+    "value": 3000.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.0 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000142/adi3q25exhibit991earnings.htm",
+    "source_sha256": "287c6fc1c75d954d080215bea20f7351c6cd9f8c3cd8074e3991cbf059985aee",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 2900.0,
+    "high": 3100.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 3100.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.1 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/adiq425exhibit991.htm",
+    "source_sha256": "65ff9cae39d6fa5a1df64f71033ae4a4771b9245ec0bf91df2564cef9e188adb",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 3000.0,
+    "high": 3200.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2880.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.88 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000142/adi3q25exhibit991earnings.htm",
+    "source_sha256": "287c6fc1c75d954d080215bea20f7351c6cd9f8c3cd8074e3991cbf059985aee",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "ADI's strong fourth quarter capped a robust year of both cyclical and idiosyncratic growth,",
+   "speaker": "Vincent Roche, CEO and Chair",
+   "snippet": "\"ADI's strong fourth quarter capped a robust year of both cyclical and idiosyncratic growth,\" said Vincent Roche, CEO and Chair",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/adiq425exhibit991.htm",
+   "source_sha256": "65ff9cae39d6fa5a1df64f71033ae4a4771b9245ec0bf91df2564cef9e188adb"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_actual"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
  },
  {
   "event_id": "MDB-2025-12-01",
@@ -4608,6 +4876,139 @@
   "status": "complete"
  },
  {
+  "event_id": "ANET-2026-02-12",
+  "consensus": {
+   "eps_estimate": 0.76,
+   "eps_reported": 0.82,
+   "consensus_surprise_pct": 7.895,
+   "fiscal_date_ending": "2025-12-31",
+   "reported_date": "2026-02-12",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ANET",
+   "fetched_at": "2026-09-21T11:01:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ANET",
+  "company_symbol": "ANETUSDT",
+  "sector_group": "hardware",
+  "cik": 1596532,
+  "accession": "0001596532-26-000010",
+  "release_utc": "2026-02-12T21:07:57Z",
+  "release_ms": 1770930477000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/",
+   "sha256": "e5d2bfa213093b9985776d51465c4db7994e8e6f430909de20e19f7c4ba77c87",
+   "cache_file": "data/cache/4ddceaa6780dae74aaa60e3d.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/ex991q325-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/",
+   "accession": "0001596532-25-000284",
+   "cache_file": "data/cache/c9e2150eede5763927f4bbbc.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2488.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.488 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+    "source_sha256": "e5d2bfa213093b9985776d51465c4db7994e8e6f430909de20e19f7c4ba77c87",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": null,
+   "revenue_guidance_next": {
+    "value": 2600.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $2.6 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+    "source_sha256": "e5d2bfa213093b9985776d51465c4db7994e8e6f430909de20e19f7c4ba77c87",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 2600.0,
+    "high": 2600.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2308.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.308 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000284/ex991q325-earningsrelease.htm",
+    "source_sha256": "bada213427aacda29ba02ba421cf2fbfa4a125f388d8d01ab3feaf5d4834071a",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "2025 was the year of validation of our Arista 2.0 momentum, as we hit the milestone of shipping a cumulative of 150 million ports,",
+   "speaker": "Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "snippet": "\"2025 was the year of validation of our Arista 2.0 momentum, as we hit the milestone of shipping a cumulative of 150 million ports,\" stated Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+   "source_sha256": "e5d2bfa213093b9985776d51465c4db7994e8e6f430909de20e19f7c4ba77c87"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_guidance_prior"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
+ },
+ {
   "event_id": "PANW-2026-02-17",
   "consensus": {
    "eps_estimate": 0.94,
@@ -4760,6 +5161,141 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "ADI-2026-02-18",
+  "consensus": {
+   "eps_estimate": 2.3,
+   "eps_reported": 2.46,
+   "consensus_surprise_pct": 6.957,
+   "fiscal_date_ending": "2026-01-31",
+   "reported_date": "2026-02-18",
+   "report_time": "pre-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ADI",
+   "fetched_at": "2026-09-21T11:01:22Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ADI",
+  "company_symbol": "ADIUSDT",
+  "sector_group": "semis",
+  "cik": 6281,
+  "accession": "0000006281-26-000015",
+  "release_utc": "2026-02-18T12:02:27Z",
+  "release_ms": 1771416147000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/",
+   "sha256": "ed93cffeb3d084bc899c768ad5b9257fdc65bcc68550690eacd291f6dede5d05",
+   "cache_file": "data/cache/c0d970cbf2f156d2dec2120a.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/adiq425exhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/",
+   "accession": "0000006281-25-000151",
+   "cache_file": "data/cache/08f2ec01f6ba6930885352fd.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 3160.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.16 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+    "source_sha256": "ed93cffeb3d084bc899c768ad5b9257fdc65bcc68550690eacd291f6dede5d05",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 3100.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.1 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000151/adiq425exhibit991.htm",
+    "source_sha256": "65ff9cae39d6fa5a1df64f71033ae4a4771b9245ec0bf91df2564cef9e188adb",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 3000.0,
+    "high": 3200.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 3500.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.5 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+    "source_sha256": "ed93cffeb3d084bc899c768ad5b9257fdc65bcc68550690eacd291f6dede5d05",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 3400.0,
+    "high": 3600.0,
+    "verified": true
+   },
+   "revenue_prior_actual": null,
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "ADI's robust first quarter built upon the strong position and momentum with which we entered the year,",
+   "speaker": "Vincent Roche, CEO and Chair",
+   "snippet": "\"ADI's robust first quarter built upon the strong position and momentum with which we entered the year,\" said Vincent Roche, CEO and Chair",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+   "source_sha256": "ed93cffeb3d084bc899c768ad5b9257fdc65bcc68550690eacd291f6dede5d05"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_prior_actual"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
  },
  {
   "event_id": "CRM-2026-02-25",
@@ -7150,6 +7686,170 @@
   "status": "complete"
  },
  {
+  "event_id": "ANET-2026-05-05",
+  "consensus": {
+   "eps_estimate": 0.81,
+   "eps_reported": 0.87,
+   "consensus_surprise_pct": 7.407,
+   "fiscal_date_ending": "2026-03-31",
+   "reported_date": "2026-05-05",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ANET",
+   "fetched_at": "2026-09-21T11:01:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ANET",
+  "company_symbol": "ANETUSDT",
+  "sector_group": "hardware",
+  "cik": 1596532,
+  "accession": "0001596532-26-000074",
+  "release_utc": "2026-05-05T20:06:48Z",
+  "release_ms": 1778011608000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/",
+   "sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809",
+   "cache_file": "data/cache/859240b4a8e8c3fba323f891.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/",
+   "accession": "0001596532-26-000010",
+   "cache_file": "data/cache/4ddceaa6780dae74aaa60e3d.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 2709.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.709 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+    "source_sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2600.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $2.6 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+    "source_sha256": "e5d2bfa213093b9985776d51465c4db7994e8e6f430909de20e19f7c4ba77c87",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 2600.0,
+    "high": 2600.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 2800.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $2.8 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+    "source_sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 2800.0,
+    "high": 2800.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2488.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.488 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000010/ex991q425-earningsrelease.htm",
+    "source_sha256": "e5d2bfa213093b9985776d51465c4db7994e8e6f430909de20e19f7c4ba77c87",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.8,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share of $0.80",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+    "source_sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809",
+    "extractor": "regex-v1:ANET:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Arista is off to a strong start in Q1 2026, with both our results and our industry-leading net promoter score,",
+   "speaker": "Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "snippet": "\"Arista is off to a strong start in Q1 2026, with both our results and our industry-leading net promoter score,\" said Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+   "source_sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2600.0,
+   "revenue_actual": 2709.0,
+   "guidance_surprise_pct": 4.192,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 2800.0,
+   "guided_sequential_growth_pct": 3.359,
+   "prior_guided_sequential_growth_pct": 4.502,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
   "event_id": "SMCI-2026-05-05",
   "consensus": {
    "eps_estimate": 0.62,
@@ -7473,6 +8173,160 @@
    "optional_fields": {
     "eps_diluted": "reported",
     "gross_margin": "reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "ADI-2026-05-20",
+  "consensus": {
+   "eps_estimate": 2.91,
+   "eps_reported": 3.09,
+   "consensus_surprise_pct": 6.186,
+   "fiscal_date_ending": "2026-04-30",
+   "reported_date": "2026-05-20",
+   "report_time": "pre-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ADI",
+   "fetched_at": "2026-09-21T11:01:22Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ADI",
+  "company_symbol": "ADIUSDT",
+  "sector_group": "semis",
+  "cik": 6281,
+  "accession": "0000006281-26-000050",
+  "release_utc": "2026-05-20T11:01:45Z",
+  "release_ms": 1779274905000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/",
+   "sha256": "dcf7b00054763ffee285b0f9b424538c56cbd423ce5fdea896defb6a01afb0f9",
+   "cache_file": "data/cache/a65f3c2ad2ce871dabf4b405.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/",
+   "accession": "0000006281-26-000015",
+   "cache_file": "data/cache/c0d970cbf2f156d2dec2120a.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 3620.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.62 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+    "source_sha256": "dcf7b00054763ffee285b0f9b424538c56cbd423ce5fdea896defb6a01afb0f9",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 3500.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.5 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+    "source_sha256": "ed93cffeb3d084bc899c768ad5b9257fdc65bcc68550690eacd291f6dede5d05",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 3400.0,
+    "high": 3600.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 3900.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.9 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+    "source_sha256": "dcf7b00054763ffee285b0f9b424538c56cbd423ce5fdea896defb6a01afb0f9",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 3800.0,
+    "high": 4000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 3160.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.16 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm",
+    "source_sha256": "ed93cffeb3d084bc899c768ad5b9257fdc65bcc68550690eacd291f6dede5d05",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "ADI's second quarter revenue and earnings were above the high end of our outlook, reflecting the combination of record demand and sharp operational discipline,",
+   "speaker": "Vincent Roche, CEO and Chair",
+   "snippet": "\"ADI's second quarter revenue and earnings were above the high end of our outlook, reflecting the combination of record demand and sharp operational discipline,\" said Vincent Roche, CEO and Chair",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+   "source_sha256": "dcf7b00054763ffee285b0f9b424538c56cbd423ce5fdea896defb6a01afb0f9"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 3500.0,
+   "revenue_actual": 3620.0,
+   "guidance_surprise_pct": 3.429,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 3900.0,
+   "guided_sequential_growth_pct": 7.735,
+   "prior_guided_sequential_growth_pct": 10.759,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
    }
   },
   "status": "complete"
@@ -10122,6 +10976,170 @@
   "status": "complete"
  },
  {
+  "event_id": "ANET-2026-08-04",
+  "consensus": {
+   "eps_estimate": 0.8,
+   "eps_reported": 0.95,
+   "consensus_surprise_pct": 18.75,
+   "fiscal_date_ending": "2026-06-30",
+   "reported_date": "2026-08-04",
+   "report_time": "post-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ANET",
+   "fetched_at": "2026-09-21T11:01:33Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ANET",
+  "company_symbol": "ANETUSDT",
+  "sector_group": "hardware",
+  "cik": 1596532,
+  "accession": "0001596532-26-000174",
+  "release_utc": "2026-08-04T20:06:44Z",
+  "release_ms": 1785874004000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/",
+   "sha256": "e075f14ce3489a2240e97b36744c6a92c0c9500bda63d6f49077a9378b01e653",
+   "cache_file": "data/cache/5de685d52502407edb759877.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/",
+   "accession": "0001596532-26-000074",
+   "cache_file": "data/cache/859240b4a8e8c3fba323f891.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 3036.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.036 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+    "source_sha256": "e075f14ce3489a2240e97b36744c6a92c0c9500bda63d6f49077a9378b01e653",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2800.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $2.8 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+    "source_sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 2800.0,
+    "high": 2800.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 3300.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $3.3 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+    "source_sha256": "e075f14ce3489a2240e97b36744c6a92c0c9500bda63d6f49077a9378b01e653",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 3300.0,
+    "high": 3300.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 2709.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $2.709 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/ex991q126-earningsrelease.htm",
+    "source_sha256": "a395c191c2b70d59c21bec2190f035e7731aa9643e7c87831bcee22c6280a809",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.95,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share of $0.95",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+    "source_sha256": "e075f14ce3489a2240e97b36744c6a92c0c9500bda63d6f49077a9378b01e653",
+    "extractor": "regex-v1:ANET:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "As we deliver our first $3 billion quarter in Q2 2026, it is clear that our Arista 2.0 platform strategy is compelling,",
+   "speaker": "Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "snippet": "\"As we deliver our first $3 billion quarter in Q2 2026, it is clear that our Arista 2.0 platform strategy is compelling,\" stated Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+   "source_sha256": "e075f14ce3489a2240e97b36744c6a92c0c9500bda63d6f49077a9378b01e653"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2800.0,
+   "revenue_actual": 3036.0,
+   "guidance_surprise_pct": 8.429,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 3300.0,
+   "guided_sequential_growth_pct": 8.696,
+   "prior_guided_sequential_growth_pct": 3.359,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
   "event_id": "AMD-2026-08-04",
   "consensus": {
    "eps_estimate": 1.35,
@@ -10400,6 +11418,160 @@
    "guided_sequential_growth_pct": 35.135,
    "prior_guided_sequential_growth_pct": 15.196,
    "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "ADI-2026-08-19",
+  "consensus": {
+   "eps_estimate": 3.33,
+   "eps_reported": 3.45,
+   "consensus_surprise_pct": 3.604,
+   "fiscal_date_ending": "2026-07-31",
+   "reported_date": "2026-08-19",
+   "report_time": "pre-market",
+   "provider": "alphavantage:EARNINGS",
+   "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ADI",
+   "fetched_at": "2026-09-21T11:01:22Z",
+   "basis": "analyst EPS consensus at the time of the report (Alpha Vantage)",
+   "quality": "ok"
+  },
+  "ticker": "ADI",
+  "company_symbol": "ADIUSDT",
+  "sector_group": "semis",
+  "cik": 6281,
+  "accession": "0000006281-26-000072",
+  "release_utc": "2026-08-19T11:03:13Z",
+  "release_ms": 1787137393000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/",
+   "sha256": "f22bc450b036a1371d20135412cad42688f1f64548934728215bca4da45e88b5",
+   "cache_file": "data/cache/310c5240a631ebce535f6546.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/",
+   "accession": "0000006281-26-000050",
+   "cache_file": "data/cache/a65f3c2ad2ce871dabf4b405.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 4020.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $4.02 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+    "source_sha256": "f22bc450b036a1371d20135412cad42688f1f64548934728215bca4da45e88b5",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 3900.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $3.9 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+    "source_sha256": "dcf7b00054763ffee285b0f9b424538c56cbd423ce5fdea896defb6a01afb0f9",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 3800.0,
+    "high": 4000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 4300.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $4.3 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+    "source_sha256": "f22bc450b036a1371d20135412cad42688f1f64548934728215bca4da45e88b5",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 4200.0,
+    "high": 4400.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 3620.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.62 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000050/adi2q26exhibit991earnings.htm",
+    "source_sha256": "dcf7b00054763ffee285b0f9b424538c56cbd423ce5fdea896defb6a01afb0f9",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "ADI delivered a strong third quarter, exceeding the midpoint of our revenue, margin, and earnings outlook as we capitalized on broad-based demand,",
+   "speaker": "Vincent Roche, CEO and Chair",
+   "snippet": "\"ADI delivered a strong third quarter, exceeding the midpoint of our revenue, margin, and earnings outlook as we capitalized on broad-based demand,\" said Vincent Roche, CEO and Chair",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+   "source_sha256": "f22bc450b036a1371d20135412cad42688f1f64548934728215bca4da45e88b5"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 3900.0,
+   "revenue_actual": 4020.0,
+   "guidance_surprise_pct": 3.077,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 4300.0,
+   "guided_sequential_growth_pct": 6.965,
+   "prior_guided_sequential_growth_pct": 7.735,
+   "guidance_direction": "maintained"
   },
   "validation": {
    "checks": [

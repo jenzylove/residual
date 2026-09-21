@@ -100,9 +100,20 @@ class DecisionInvariants(unittest.TestCase):
             if r["event_id"] not in traded:
                 self.assertIsNone(r.get("residual"), r["event_id"])
 
-    def test_ai_label_only_scales_size(self):
+    def test_ai_label_and_book_only_scale_size(self):
+        """Size is the AI label's fraction times what the book can carry. Neither can create a
+        trade, and neither can push size above the base notional."""
+        from residual.strategy import MIN_SIZE_FRACTION
         for r in ROWS:
-            self.assertIn(r["decision"]["size"], (0.0, 0.5, 1.0), r["event_id"])
+            size = r["decision"]["size"]
+            self.assertGreaterEqual(size, 0.0, r["event_id"])
+            self.assertLessEqual(size, 1.0, r["event_id"])
+            if r["decision"]["decision"] != "TRADE":
+                self.assertEqual(size, 0.0, r["event_id"])
+                continue
+            liq = r["analysis"]["costs"]["liquidity_size"]
+            self.assertGreaterEqual(liq, MIN_SIZE_FRACTION, r["event_id"])
+            self.assertIn(round(size / liq, 4), (0.5, 1.0), r["event_id"])
             it = r.get("interpretation")
             if it and it.get("status") == "ok":
                 self.assertIn(it["label"], ("durable", "temporary", "already_priced",

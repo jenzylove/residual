@@ -74,6 +74,16 @@ ACTUAL = {
 }
 
 # Next-quarter revenue outlook -> (low, high) in USD millions
+ACTUAL.update({
+    # Added 21 September 2026. Both anchor inside the results section so the outlook line, which
+    # repeats the word revenue, can never be captured as the reported figure.
+    # "of $X billion" only; the outlook line always reads "of approximately $X billion", and the
+    # results section precedes the outlook in every release checked, so the first match is the
+    # reported figure. verify_field re-derives it from the stored snippet.
+    "ANET": (r"Revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "ADI": (r"Revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+})
+
 GUIDE = {
     "NVDA": (r"Revenue is expected to be \$(\d+(?:\.\d+)?) billion, plus or minus (\d+(?:\.\d+)?)%", 0, _pct_band),
     "META": (r"total revenue to be in the range of \$(\d+(?:\.\d+)?)-(\d+(?:\.\d+)?) billion", 0, _range),
@@ -99,6 +109,9 @@ GUIDE = {
     "CRWD": (r"Total revenue \| \$([\d,]+(?:\.\d+)?) - \$([\d,]+(?:\.\d+)?) million", 0, _range_millions),
     "MDB": [(r"Revenues are expected to be in the range of: \| \$(\d+(?:\.\d+)?) million to \$(\d+(?:\.\d+)?) million", 0, _range_millions),
             (r"Revenue \| \$(\d+(?:\.\d+)?) million to \$(\d+(?:\.\d+)?) million", 0, _range_millions)],
+    "ANET": (r"we expect: .{0,20}Revenue of approximately \$(\d+(?:\.\d+)?) billion", 0, _point),
+    "ADI": [(r"we are forecasting revenue of \$(\d+(?:\.\d+)?) billion, \+/- \$(\d+(?:\.\d+)?) million", 0, _abs_band_millions),
+            (r"we are forecasting revenue of \$(\d+(?:\.\d+)?) billion", 0, _point)],
 }
 
 EPS = [

@@ -15,6 +15,7 @@ MAX_LOSS_FRAC = 0.025            # pair stop: 2.5% of company notional
 MIN_HEDGE_R2 = 0.10
 MAX_SPREAD = 0.003               # 30 bps estimated spread
 MAX_PARTICIPATION = 0.25         # notional vs median hourly quote volume
+MIN_SIZE_FRACTION = 0.2          # below a fifth of base notional the costs stop being worth it
 RETRACE_MAX = 0.5                # reaction already half-reversed -> complete
 MIN_COVERAGE = 0.6               # fraction of lookback hours that must exist
 DEFAULT_PARAMS = {"mode": 1, "k": 2.0}
@@ -123,11 +124,20 @@ def analyze(event: dict, snap: dict | None, hedge_pool: list[str] | None = None)
         slip_h, round_trip = None, 2 * (fee + slip_c)
     mqv = median_quote_volume(idx[C], t_pre - 7 * DAY, t_pre)
     participation = BASE_NOTIONAL / mqv if mqv > 0 else math.inf
+    # Thin after-hours books do not disqualify a release; they cap the size it can carry. The cap
+    # is the largest notional that stays inside MAX_PARTICIPATION of observed pre-event volume,
+    # measured before the release, so this changes size and never the decision to look.
+    liquidity_size = min(1.0, (MAX_PARTICIPATION * mqv) / BASE_NOTIONAL) if mqv > 0 else 0.0
+    liquidity_size = round(liquidity_size, 4)
     a["costs"] = {"taker_fee": fee, "spread_est_company": spread_c, "slip_company": slip_c,
                   "slip_hedge": slip_h, "round_trip": round_trip,
-                  "median_hourly_quote_volume": mqv, "participation": participation}
-    liq_ok = spread_c <= MAX_SPREAD and participation <= MAX_PARTICIPATION
-    g["liquidity"] = (liq_ok, f"spread est {spread_c * 1e4:.1f} bps, participation {participation:.1%} of median hourly volume")
+                  "median_hourly_quote_volume": mqv, "participation": participation,
+                  "liquidity_size": liquidity_size,
+                  "liquidity_capped_notional": round(BASE_NOTIONAL * liquidity_size, 2)}
+    liq_ok = spread_c <= MAX_SPREAD and liquidity_size >= MIN_SIZE_FRACTION
+    g["liquidity"] = (liq_ok, f"spread est {spread_c * 1e4:.1f} bps, book carries "
+                              f"${BASE_NOTIONAL * liquidity_size:,.0f} of the ${BASE_NOTIONAL:,.0f} base "
+                              f"(participation cap {MAX_PARTICIPATION:.0%} of median hourly volume)")
 
     # robustness across model assumptions
     signs = {math.copysign(1, r) for r in a["robustness_residuals"].values()}
@@ -286,6 +296,9 @@ def decide(event, a, params, interp) -> dict:
         return {"decision": "NO_TRADE", "reasons": failed or ["analysis incomplete"],
                 "gates": {k: {"pass": v[0], "detail": v[1]} for k, v in g.items()}, "size": 0.0}
     direction = int(params["mode"] * math.copysign(1, a["residual"]))
+    # The book, not the conviction, sets the ceiling: size down to what the venue can absorb.
+    liquidity_size = float(a["costs"].get("liquidity_size", 1.0))
+    size = round(size * liquidity_size, 4)
     return {
         "decision": "TRADE", "direction": direction, "size": size,
         "structure": ("long company / short hedge" if direction > 0 else "short company / long hedge"),
