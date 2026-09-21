@@ -136,13 +136,36 @@ def apply_funding_caps(snaps) -> dict[str, float]:
     return caps
 
 
+def apply_point_in_time_funding_caps(events, snaps: dict) -> dict[str, float]:
+    """Attach, to each event's snapshot, the worst funding rate observed per symbol using only
+    settlements that happened before that event's release. Computing the cap over the whole
+    collection would let later funding leak into earlier scores and into the counterfactuals
+    that train later choices. Returns the full-period caps for disclosure only."""
+    settlements = []
+    for snap in snaps.values():
+        for sym, info in (snap or {}).get("funding", {}).items():
+            settlements += [(x["t"], sym, abs(x["rate"])) for x in info.get("settlements", [])]
+    settlements.sort()
+    for ev in events:
+        cutoff = ev["release_ms"]
+        caps: dict[str, float] = {}
+        for t, sym, r in settlements:
+            if t >= cutoff:
+                break
+            caps[sym] = max(caps.get(sym, 0.0), r)
+        worst = max(caps.values(), default=0.0)
+        for sym, info in (snaps[ev["event_id"]] or {}).get("funding", {}).items():
+            info["max_abs_rate_observed"] = caps.get(sym) or worst
+    return funding_caps(snaps.values())
+
+
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
            hedge_pool=None, tickers=None) -> dict:
     events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
     if tickers:
         events = [e for e in events if e['ticker'] in tickers]
     snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}
-    caps = apply_funding_caps(snaps.values())
+    caps = apply_point_in_time_funding_caps(events, snaps)
     analyzed = []
     for ev in events:
         snap = snaps[ev["event_id"]]
@@ -230,7 +253,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "summary": summary, "summary_conservative_funding": summary_conservative,
         "summary_observed_zero_funding": summary_observed_zero,
         "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
-        "funding_caps": caps, "summary_post_warmup": summary_post_warmup,
+        "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; the caps shown are the full period values, for disclosure", "summary_post_warmup": summary_post_warmup,
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }

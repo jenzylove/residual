@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T12:27:05+00:00",
+ "generated_at": "2026-09-21T18:19:07+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -927,22 +927,22 @@
  },
  "summary_conservative_funding": {
   "residual": {
-   "sharpe_per_trade": -0.046,
-   "sortino_per_trade": -0.078,
-   "sharpe_daily_ann": 0.452,
-   "sortino_daily_ann": 1.054,
+   "sharpe_per_trade": -0.004,
+   "sortino_per_trade": -0.007,
+   "sharpe_daily_ann": 0.619,
+   "sortino_daily_ann": 1.516,
    "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 138.7,
+   "total_net_pnl": 189.66,
    "trades": 15,
    "excluded_funding_unavailable": 0,
    "no_trades": 64,
-   "hit_rate": 0.4,
-   "avg_pnl_per_trade": 9.25,
-   "pnl_std_per_trade": 88.32,
-   "max_drawdown": -251.24,
+   "hit_rate": 0.467,
+   "avg_pnl_per_trade": 12.64,
+   "pnl_std_per_trade": 87.8,
+   "max_drawdown": -218.68,
    "avg_holding_hours": 20.0,
-   "return_on_start_balance_pct": 0.139,
+   "return_on_start_balance_pct": 0.19,
    "equity_curve": [
     0.0,
     0.0,
@@ -955,93 +955,93 @@
     0.0,
     0.0,
     0.0,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -69.72,
-    -69.72,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -79.87,
-    -79.87,
-    -127.04,
-    -127.04,
-    -133.72,
-    -133.72,
-    -173.34,
-    -173.34,
-    -173.34,
-    -173.34,
-    -173.34,
-    -173.34,
-    -171.0,
-    -171.0,
-    -171.0,
-    -171.0,
-    -171.0,
-    -171.0,
-    -171.0,
-    -171.0,
-    -171.0,
-    -179.17,
-    -179.17,
-    -179.17,
-    -248.0,
-    -248.0,
-    -248.0,
-    -248.0,
-    -187.05,
-    89.35,
-    89.35,
-    89.35,
-    89.35,
-    89.35,
-    89.35,
-    71.81,
-    138.7,
-    138.7,
-    138.7,
-    138.7,
-    138.7,
-    138.7
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -61.06,
+    -61.06,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -55.86,
+    -55.86,
+    -99.91,
+    -99.91,
+    -98.11,
+    -98.11,
+    -135.39,
+    -135.39,
+    -135.39,
+    -135.39,
+    -135.39,
+    -135.39,
+    -124.21,
+    -124.21,
+    -124.21,
+    -124.21,
+    -124.21,
+    -124.21,
+    -124.21,
+    -124.21,
+    -124.21,
+    -128.2,
+    -128.2,
+    -128.2,
+    -197.04,
+    -197.04,
+    -197.04,
+    -197.04,
+    -136.08,
+    140.31,
+    140.31,
+    140.31,
+    140.31,
+    140.31,
+    140.31,
+    122.77,
+    189.66,
+    189.66,
+    189.66,
+    189.66,
+    189.66,
+    189.66
    ]
   },
   "unhedged": {
-   "sharpe_per_trade": 0.183,
-   "sortino_per_trade": 0.408,
-   "sharpe_daily_ann": 0.817,
-   "sortino_daily_ann": 2.044,
+   "sharpe_per_trade": 0.198,
+   "sortino_per_trade": 0.449,
+   "sharpe_daily_ann": 0.868,
+   "sortino_daily_ann": 2.201,
    "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 322.41,
+   "total_net_pnl": 342.96,
    "trades": 15,
    "excluded_funding_unavailable": 0,
    "no_trades": 64,
    "hit_rate": 0.533,
-   "avg_pnl_per_trade": 21.49,
-   "pnl_std_per_trade": 108.66,
-   "max_drawdown": -242.59,
+   "avg_pnl_per_trade": 22.86,
+   "pnl_std_per_trade": 108.53,
+   "max_drawdown": -231.25,
    "avg_holding_hours": 19.5,
-   "return_on_start_balance_pct": 0.322,
+   "return_on_start_balance_pct": 0.343,
    "equity_curve": [
     0.0,
     0.0,
@@ -1054,93 +1054,93 @@
     0.0,
     0.0,
     0.0,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -115.83,
-    -115.83,
-    -113.53,
-    -113.53,
-    -113.53,
-    -113.53,
-    -199.7,
-    -199.7,
-    -199.7,
-    -199.7,
-    -199.7,
-    -199.7,
-    -199.7,
-    -199.7,
-    -199.7,
-    -227.2,
-    -227.2,
-    -242.59,
-    -242.59,
-    -183.1,
-    -183.1,
-    -228.7,
-    -228.7,
-    -228.7,
-    -228.7,
-    -228.7,
-    -228.7,
-    -125.97,
-    -125.97,
-    -125.97,
-    -125.97,
-    -125.97,
-    -125.97,
-    -125.97,
-    -125.97,
-    -125.97,
-    -164.62,
-    -164.62,
-    -164.62,
-    -202.26,
-    -202.26,
-    -202.26,
-    -202.26,
-    -141.22,
-    202.31,
-    202.31,
-    202.31,
-    202.31,
-    202.31,
-    202.31,
-    246.75,
-    322.41,
-    322.41,
-    322.41,
-    322.41,
-    322.41,
-    322.41
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -112.54,
+    -112.54,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -217.75,
+    -217.75,
+    -231.25,
+    -231.25,
+    -167.18,
+    -167.18,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -144.07,
+    -144.07,
+    -144.07,
+    -181.71,
+    -181.71,
+    -181.71,
+    -181.71,
+    -120.67,
+    222.86,
+    222.86,
+    222.86,
+    222.86,
+    222.86,
+    222.86,
+    267.3,
+    342.96,
+    342.96,
+    342.96,
+    342.96,
+    342.96,
+    342.96
    ]
   },
   "naive_same_events": {
-   "sharpe_per_trade": 0.302,
-   "sortino_per_trade": 0.714,
-   "sharpe_daily_ann": 1.325,
-   "sortino_daily_ann": 3.874,
+   "sharpe_per_trade": 0.32,
+   "sortino_per_trade": 0.766,
+   "sharpe_daily_ann": 1.376,
+   "sortino_daily_ann": 4.085,
    "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 525.88,
+   "total_net_pnl": 547.47,
    "trades": 15,
    "excluded_funding_unavailable": 0,
    "no_trades": 64,
    "hit_rate": 0.667,
-   "avg_pnl_per_trade": 35.06,
-   "pnl_std_per_trade": 105.76,
-   "max_drawdown": -123.4,
+   "avg_pnl_per_trade": 36.5,
+   "pnl_std_per_trade": 105.54,
+   "max_drawdown": -122.35,
    "avg_holding_hours": 20.7,
-   "return_on_start_balance_pct": 0.526,
+   "return_on_start_balance_pct": 0.547,
    "equity_curve": [
     0.0,
     0.0,
@@ -1153,93 +1153,93 @@
     0.0,
     0.0,
     0.0,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -115.83,
-    -115.83,
-    -113.53,
-    -113.53,
-    -113.53,
-    -113.53,
-    -12.56,
-    -12.56,
-    -12.56,
-    -12.56,
-    -12.56,
-    -12.56,
-    -12.56,
-    -12.56,
-    -12.56,
-    -40.05,
-    -40.05,
-    -36.01,
-    -36.01,
-    23.48,
-    23.48,
-    -22.12,
-    -22.12,
-    -22.12,
-    -22.12,
-    -22.12,
-    -22.12,
-    80.61,
-    80.61,
-    80.61,
-    80.61,
-    80.61,
-    80.61,
-    80.61,
-    80.61,
-    80.61,
-    38.85,
-    38.85,
-    38.85,
-    1.21,
-    1.21,
-    1.21,
-    1.21,
-    62.25,
-    405.78,
-    405.78,
-    405.78,
-    405.78,
-    405.78,
-    405.78,
-    450.22,
-    525.88,
-    525.88,
-    525.88,
-    525.88,
-    525.88,
-    525.88
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -112.54,
+    -112.54,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -3.49,
+    -3.49,
+    -3.49,
+    -3.49,
+    -3.49,
+    -3.49,
+    -3.49,
+    -3.49,
+    -3.49,
+    -30.21,
+    -30.21,
+    -24.27,
+    -24.27,
+    39.8,
+    39.8,
+    -4.31,
+    -4.31,
+    -4.31,
+    -4.31,
+    -4.31,
+    -4.31,
+    100.93,
+    100.93,
+    100.93,
+    100.93,
+    100.93,
+    100.93,
+    100.93,
+    100.93,
+    100.93,
+    60.44,
+    60.44,
+    60.44,
+    22.8,
+    22.8,
+    22.8,
+    22.8,
+    83.84,
+    427.37,
+    427.37,
+    427.37,
+    427.37,
+    427.37,
+    427.37,
+    471.81,
+    547.47,
+    547.47,
+    547.47,
+    547.47,
+    547.47,
+    547.47
    ]
   },
   "naive": {
-   "sharpe_per_trade": -0.197,
-   "sortino_per_trade": -0.281,
-   "sharpe_daily_ann": -1.275,
-   "sortino_daily_ann": -1.777,
+   "sharpe_per_trade": -0.185,
+   "sortino_per_trade": -0.267,
+   "sharpe_daily_ann": -1.205,
+   "sortino_daily_ann": -1.692,
    "days": 318,
    "basis": "conservative",
-   "total_net_pnl": -783.58,
+   "total_net_pnl": -738.51,
    "trades": 37,
    "excluded_funding_unavailable": 0,
    "no_trades": 42,
    "hit_rate": 0.351,
-   "avg_pnl_per_trade": -21.18,
-   "pnl_std_per_trade": 107.76,
-   "max_drawdown": -986.16,
+   "avg_pnl_per_trade": -19.96,
+   "pnl_std_per_trade": 107.72,
+   "max_drawdown": -941.09,
    "avg_holding_hours": 18.3,
-   "return_on_start_balance_pct": -0.784,
+   "return_on_start_balance_pct": -0.739,
    "equity_curve": [
     0.0,
     0.0,
@@ -1252,192 +1252,93 @@
     0.0,
     0.0,
     0.0,
-    -123.4,
-    -123.4,
-    -123.4,
-    -123.4,
-    -216.35,
-    -216.35,
-    -216.35,
-    -216.35,
-    -216.35,
-    -328.06,
-    -328.06,
-    -312.92,
-    -312.92,
-    -310.63,
-    -310.63,
-    -310.63,
-    -310.63,
-    -209.65,
-    -209.65,
-    -209.65,
-    -209.65,
-    -209.65,
-    -316.58,
-    -316.58,
-    -316.58,
-    -340.69,
-    -425.29,
-    -425.29,
-    -417.19,
-    -417.19,
-    -357.7,
-    -357.7,
-    -448.91,
-    -448.91,
-    -525.61,
-    -630.33,
-    -630.33,
-    -630.33,
-    -527.6,
-    -527.6,
-    -549.05,
-    -630.27,
-    -630.27,
-    -630.27,
-    -630.27,
-    -630.27,
-    -630.27,
-    -713.78,
-    -833.8,
-    -835.99,
-    -911.27,
-    -986.16,
-    -864.95,
-    -806.88,
-    -684.81,
-    -341.28,
-    -341.28,
-    -305.85,
-    -406.95,
-    -470.13,
-    -607.97,
-    -404.03,
-    -328.36,
-    -424.36,
-    -437.87,
-    -624.61,
-    -705.66,
-    -783.58
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -214.15,
+    -214.15,
+    -214.15,
+    -214.15,
+    -214.15,
+    -322.85,
+    -322.85,
+    -303.22,
+    -303.22,
+    -296.31,
+    -296.31,
+    -296.31,
+    -296.31,
+    -194.17,
+    -194.17,
+    -194.17,
+    -194.17,
+    -194.17,
+    -300.41,
+    -300.41,
+    -300.41,
+    -320.72,
+    -402.95,
+    -402.95,
+    -391.07,
+    -391.07,
+    -327.0,
+    -327.0,
+    -415.23,
+    -415.23,
+    -490.76,
+    -592.49,
+    -592.49,
+    -592.49,
+    -487.24,
+    -487.24,
+    -507.65,
+    -587.71,
+    -587.71,
+    -587.71,
+    -587.71,
+    -587.71,
+    -587.71,
+    -668.7,
+    -788.73,
+    -790.92,
+    -866.2,
+    -941.09,
+    -819.87,
+    -761.81,
+    -639.74,
+    -296.21,
+    -296.21,
+    -260.77,
+    -361.87,
+    -425.05,
+    -562.9,
+    -358.95,
+    -283.29,
+    -379.29,
+    -392.79,
+    -579.53,
+    -660.59,
+    -738.51
    ]
   },
   "v_residual": {
-   "sharpe_per_trade": -0.03,
-   "sortino_per_trade": -0.05,
-   "sharpe_daily_ann": 0.358,
-   "sortino_daily_ann": 0.768,
+   "sharpe_per_trade": -0.002,
+   "sortino_per_trade": -0.003,
+   "sharpe_daily_ann": 0.518,
+   "sortino_daily_ann": 1.151,
    "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 116.41,
-   "trades": 21,
-   "excluded_funding_unavailable": 0,
-   "no_trades": 58,
-   "hit_rate": 0.429,
-   "avg_pnl_per_trade": 5.54,
-   "pnl_std_per_trade": 79.4,
-   "max_drawdown": -256.02,
-   "avg_holding_hours": 20.1,
-   "return_on_start_balance_pct": 0.116,
-   "equity_curve": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -69.72,
-    -69.72,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -48.86,
-    -79.87,
-    -79.87,
-    -127.04,
-    -127.04,
-    -133.72,
-    -133.72,
-    -93.36,
-    -93.36,
-    -93.36,
-    -93.36,
-    -93.36,
-    -93.36,
-    -91.02,
-    -91.02,
-    -91.02,
-    -91.02,
-    -91.02,
-    -91.02,
-    -91.02,
-    -91.02,
-    -91.02,
-    -99.19,
-    -99.19,
-    -99.19,
-    -168.02,
-    -194.13,
-    -173.9,
-    -252.78,
-    -191.83,
-    84.57,
-    84.57,
-    35.62,
-    106.1,
-    106.1,
-    106.1,
-    88.56,
-    155.45,
-    116.41,
-    116.41,
-    116.41,
-    116.41,
-    116.41
-   ]
-  },
-  "v_headline": {
-   "sharpe_per_trade": -0.01,
-   "sortino_per_trade": -0.016,
-   "sharpe_daily_ann": 0.6,
-   "sortino_daily_ann": 1.376,
-   "days": 317,
-   "basis": "conservative",
-   "total_net_pnl": 186.75,
+   "total_net_pnl": 168.53,
    "trades": 21,
    "excluded_funding_unavailable": 0,
    "no_trades": 58,
    "hit_rate": 0.476,
-   "avg_pnl_per_trade": 8.89,
-   "pnl_std_per_trade": 74.68,
-   "max_drawdown": -249.17,
-   "avg_holding_hours": 20.4,
-   "return_on_start_balance_pct": 0.187,
+   "avg_pnl_per_trade": 8.03,
+   "pnl_std_per_trade": 79.28,
+   "max_drawdown": -222.3,
+   "avg_holding_hours": 20.1,
+   "return_on_start_balance_pct": 0.169,
    "equity_curve": [
     0.0,
     0.0,
@@ -1450,93 +1351,192 @@
     0.0,
     0.0,
     0.0,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -69.72,
-    -69.72,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    24.27,
-    24.27,
-    24.27,
-    24.27,
-    24.27,
-    24.27,
-    24.27,
-    24.27,
-    24.27,
-    -6.74,
-    -6.74,
-    -11.67,
-    -11.67,
-    -18.34,
-    -18.34,
-    -57.96,
-    -57.96,
-    -57.96,
-    -57.96,
-    -57.96,
-    -57.96,
-    -55.63,
-    -55.63,
-    -55.63,
-    -55.63,
-    -55.63,
-    -55.63,
-    -55.63,
-    -55.63,
-    -55.63,
-    -100.08,
-    -100.08,
-    -100.08,
-    -168.92,
-    -166.07,
-    -219.86,
-    -224.9,
-    -163.94,
-    112.46,
-    112.46,
-    147.94,
-    119.85,
-    119.85,
-    119.85,
-    102.31,
-    169.2,
-    186.75,
-    186.75,
-    186.75,
-    186.75,
-    186.75
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -61.06,
+    -61.06,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -26.49,
+    -55.86,
+    -55.86,
+    -99.91,
+    -99.91,
+    -98.11,
+    -98.11,
+    -54.25,
+    -54.25,
+    -54.25,
+    -54.25,
+    -54.25,
+    -54.25,
+    -43.08,
+    -43.08,
+    -43.08,
+    -43.08,
+    -43.08,
+    -43.08,
+    -43.08,
+    -43.08,
+    -43.08,
+    -47.07,
+    -47.07,
+    -47.07,
+    -115.9,
+    -142.02,
+    -121.78,
+    -200.67,
+    -139.71,
+    136.69,
+    136.69,
+    87.74,
+    158.22,
+    158.22,
+    158.22,
+    140.68,
+    207.57,
+    168.53,
+    168.53,
+    168.53,
+    168.53,
+    168.53
+   ]
+  },
+  "v_headline": {
+   "sharpe_per_trade": 0.025,
+   "sortino_per_trade": 0.042,
+   "sharpe_daily_ann": 0.763,
+   "sortino_daily_ann": 1.817,
+   "days": 317,
+   "basis": "conservative",
+   "total_net_pnl": 237.89,
+   "trades": 21,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 58,
+   "hit_rate": 0.524,
+   "avg_pnl_per_trade": 11.33,
+   "pnl_std_per_trade": 74.5,
+   "max_drawdown": -220.39,
+   "avg_holding_hours": 20.4,
+   "return_on_start_balance_pct": 0.238,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -61.06,
+    -61.06,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    46.63,
+    46.63,
+    46.63,
+    46.63,
+    46.63,
+    46.63,
+    46.63,
+    46.63,
+    46.63,
+    17.27,
+    17.27,
+    17.02,
+    17.02,
+    18.82,
+    18.82,
+    -18.46,
+    -18.46,
+    -18.46,
+    -18.46,
+    -18.46,
+    -18.46,
+    -7.28,
+    -7.28,
+    -7.28,
+    -7.28,
+    -7.28,
+    -7.28,
+    -7.28,
+    -7.28,
+    -7.28,
+    -48.95,
+    -48.95,
+    -48.95,
+    -117.78,
+    -114.93,
+    -168.72,
+    -173.76,
+    -112.8,
+    163.59,
+    163.59,
+    199.08,
+    170.99,
+    170.99,
+    170.99,
+    153.45,
+    220.34,
+    237.89,
+    237.89,
+    237.89,
+    237.89,
+    237.89
    ]
   },
   "v_agreement": {
-   "sharpe_per_trade": 0.128,
-   "sortino_per_trade": 0.247,
-   "sharpe_daily_ann": 0.962,
-   "sortino_daily_ann": 2.651,
+   "sharpe_per_trade": 0.163,
+   "sortino_per_trade": 0.319,
+   "sharpe_daily_ann": 1.084,
+   "sortino_daily_ann": 3.119,
    "days": 317,
    "basis": "conservative",
-   "total_net_pnl": 285.75,
+   "total_net_pnl": 323.11,
    "trades": 11,
    "excluded_funding_unavailable": 0,
    "no_trades": 68,
-   "hit_rate": 0.545,
-   "avg_pnl_per_trade": 25.98,
-   "pnl_std_per_trade": 98.23,
-   "max_drawdown": -104.18,
+   "hit_rate": 0.636,
+   "avg_pnl_per_trade": 29.37,
+   "pnl_std_per_trade": 97.55,
+   "max_drawdown": -85.22,
    "avg_holding_hours": 20.4,
-   "return_on_start_balance_pct": 0.286,
+   "return_on_start_balance_pct": 0.323,
    "equity_curve": [
     0.0,
     0.0,
@@ -1549,93 +1549,93 @@
     0.0,
     0.0,
     0.0,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -69.72,
-    -69.72,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    -27.77,
-    -27.77,
-    -27.77,
-    -27.77,
-    -34.45,
-    -34.45,
-    -34.45,
-    -34.45,
-    -34.45,
-    -34.45,
-    -34.45,
-    -34.45,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -32.11,
-    -100.95,
-    -100.95,
-    -100.95,
-    -100.95,
-    -39.99,
-    236.4,
-    236.4,
-    236.4,
-    236.4,
-    236.4,
-    236.4,
-    218.86,
-    285.75,
-    285.75,
-    285.75,
-    285.75,
-    285.75,
-    285.75
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -61.06,
+    -61.06,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    -7.73,
+    -7.73,
+    -7.73,
+    -7.73,
+    -5.93,
+    -5.93,
+    -5.93,
+    -5.93,
+    -5.93,
+    -5.93,
+    -5.93,
+    -5.93,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    5.25,
+    -63.59,
+    -63.59,
+    -63.59,
+    -63.59,
+    -2.63,
+    273.77,
+    273.77,
+    273.77,
+    273.77,
+    273.77,
+    273.77,
+    256.23,
+    323.11,
+    323.11,
+    323.11,
+    323.11,
+    323.11,
+    323.11
    ]
   },
   "v_consensus": {
-   "sharpe_per_trade": -0.094,
-   "sortino_per_trade": -0.128,
-   "sharpe_daily_ann": -0.245,
-   "sortino_daily_ann": -0.337,
+   "sharpe_per_trade": -0.051,
+   "sortino_per_trade": -0.071,
+   "sharpe_daily_ann": -0.042,
+   "sortino_daily_ann": -0.06,
    "days": 317,
    "basis": "conservative",
-   "total_net_pnl": -41.02,
+   "total_net_pnl": -7.0,
    "trades": 14,
    "excluded_funding_unavailable": 0,
    "no_trades": 65,
    "hit_rate": 0.571,
-   "avg_pnl_per_trade": -2.93,
-   "pnl_std_per_trade": 52.09,
-   "max_drawdown": -168.55,
+   "avg_pnl_per_trade": -0.5,
+   "pnl_std_per_trade": 52.45,
+   "max_drawdown": -152.92,
    "avg_holding_hours": 19.6,
-   "return_on_start_balance_pct": -0.041,
+   "return_on_start_balance_pct": -0.007,
    "equity_curve": [
     0.0,
     0.0,
@@ -1648,74 +1648,74 @@
     0.0,
     0.0,
     0.0,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -87.36,
-    -69.72,
-    -69.72,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    3.23,
-    -27.77,
-    -27.77,
-    -27.77,
-    -27.77,
-    -27.77,
-    -27.77,
-    -67.39,
-    -67.39,
-    -67.39,
-    -67.39,
-    -67.39,
-    -67.39,
-    -65.06,
-    -65.06,
-    -65.06,
-    -65.06,
-    -65.06,
-    -65.06,
-    -65.06,
-    -65.06,
-    -65.06,
-    -109.52,
-    -109.52,
-    -109.52,
-    -109.52,
-    -106.66,
-    -86.43,
-    -165.31,
-    -104.36,
-    -104.36,
-    -104.36,
-    -68.87,
-    -68.87,
-    -68.87,
-    -68.87,
-    -68.87,
-    -1.98,
-    -41.02,
-    -41.02,
-    -41.02,
-    -41.02,
-    -41.02
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -82.18,
+    -61.06,
+    -61.06,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    21.64,
+    -7.73,
+    -7.73,
+    -7.73,
+    -7.73,
+    -7.73,
+    -7.73,
+    -45.0,
+    -45.0,
+    -45.0,
+    -45.0,
+    -45.0,
+    -45.0,
+    -33.83,
+    -33.83,
+    -33.83,
+    -33.83,
+    -33.83,
+    -33.83,
+    -33.83,
+    -33.83,
+    -33.83,
+    -75.49,
+    -75.49,
+    -75.49,
+    -75.49,
+    -72.64,
+    -52.4,
+    -131.29,
+    -70.33,
+    -70.33,
+    -70.33,
+    -34.85,
+    -34.85,
+    -34.85,
+    -34.85,
+    -34.85,
+    32.04,
+    -7.0,
+    -7.0,
+    -7.0,
+    -7.0,
+    -7.0
    ]
   },
   "no_trade": {
@@ -2966,6 +2966,7 @@
   "HPEUSDT": 0.0,
   "AVGOUSDT": 0.000504
  },
+ "funding_caps_method": "point in time: each event uses only settlements before its release; the caps shown are the full period values, for disclosure",
  "summary_post_warmup": {
   "residual": {
    "sharpe_per_trade": 0.299,
@@ -16523,12 +16524,12 @@
    },
    "residual": {
     "net": -82.18420373884288,
-    "net_conservative": -87.35957789966133,
+    "net_conservative": -82.18420373884288,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.175374160818448,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -16549,11 +16550,11 @@
       "fees": 2.984203575385769,
       "slippage": 3.431449223212836,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -26.345550814784495,
       "net": -32.7612036133831,
-      "net_conservative": -33.81047390588297
+      "net_conservative": -32.7612036133831
      },
      {
       "role": "hedge",
@@ -16569,11 +16570,11 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.126103868318577,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.54910399377836
+      "net_conservative": -49.42300012545979
      }
     ],
     "attribution": {
@@ -16596,12 +16597,12 @@
    },
    "naive": {
     "net": -122.34891774431252,
-    "net_conservative": -123.39818803681239,
+    "net_conservative": -122.34891774431252,
     "gross_mid": -116.04893846707449,
     "fees": 2.9304186759675606,
     "slippage": 3.369560601270464,
     "funding": 0.0,
-    "funding_conservative": -1.0492702924998714,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763658000000,
     "stopped": true,
@@ -16622,22 +16623,22 @@
       "fees": 2.9304186759675606,
       "slippage": 3.369560601270464,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -116.04893846707449,
       "net": -122.34891774431252,
-      "net_conservative": -123.39818803681239
+      "net_conservative": -122.34891774431252
      }
     ]
    },
    "unhedged": {
     "net": -122.34891774431252,
-    "net_conservative": -123.39818803681239,
+    "net_conservative": -122.34891774431252,
     "gross_mid": -116.04893846707449,
     "fees": 2.9304186759675606,
     "slippage": 3.369560601270464,
     "funding": 0.0,
-    "funding_conservative": -1.0492702924998714,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763658000000,
     "stopped": true,
@@ -16658,22 +16659,22 @@
       "fees": 2.9304186759675606,
       "slippage": 3.369560601270464,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -116.04893846707449,
       "net": -122.34891774431252,
-      "net_conservative": -123.39818803681239
+      "net_conservative": -122.34891774431252
      }
     ]
    },
    "v_residual": {
     "net": -82.18420373884288,
-    "net_conservative": -87.35957789966133,
+    "net_conservative": -82.18420373884288,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.175374160818448,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -16694,11 +16695,11 @@
       "fees": 2.984203575385769,
       "slippage": 3.431449223212836,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -26.345550814784495,
       "net": -32.7612036133831,
-      "net_conservative": -33.81047390588297
+      "net_conservative": -32.7612036133831
      },
      {
       "role": "hedge",
@@ -16714,22 +16715,22 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.126103868318577,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.54910399377836
+      "net_conservative": -49.42300012545979
      }
     ]
    },
    "v_headline": {
     "net": -82.18420373884288,
-    "net_conservative": -87.35957789966133,
+    "net_conservative": -82.18420373884288,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.175374160818448,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -16750,11 +16751,11 @@
       "fees": 2.984203575385769,
       "slippage": 3.431449223212836,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -26.345550814784495,
       "net": -32.7612036133831,
-      "net_conservative": -33.81047390588297
+      "net_conservative": -32.7612036133831
      },
      {
       "role": "hedge",
@@ -16770,22 +16771,22 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.126103868318577,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.54910399377836
+      "net_conservative": -49.42300012545979
      }
     ]
    },
    "v_agreement": {
     "net": -82.18420373884288,
-    "net_conservative": -87.35957789966133,
+    "net_conservative": -82.18420373884288,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.175374160818448,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -16806,11 +16807,11 @@
       "fees": 2.984203575385769,
       "slippage": 3.431449223212836,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -26.345550814784495,
       "net": -32.7612036133831,
-      "net_conservative": -33.81047390588297
+      "net_conservative": -32.7612036133831
      },
      {
       "role": "hedge",
@@ -16826,22 +16827,22 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.126103868318577,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.54910399377836
+      "net_conservative": -49.42300012545979
      }
     ]
    },
    "v_consensus": {
     "net": -82.18420373884288,
-    "net_conservative": -87.35957789966133,
+    "net_conservative": -82.18420373884288,
     "gross_mid": -67.4900996138297,
     "fees": 7.510884581773514,
     "slippage": 7.183219543239663,
     "funding": 0.0,
-    "funding_conservative": -5.175374160818448,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763654400000,
     "stopped": true,
@@ -16862,11 +16863,11 @@
       "fees": 2.984203575385769,
       "slippage": 3.431449223212836,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -26.345550814784495,
       "net": -32.7612036133831,
-      "net_conservative": -33.81047390588297
+      "net_conservative": -32.7612036133831
      },
      {
       "role": "hedge",
@@ -16882,24 +16883,24 @@
       "fees": 4.5266810063877445,
       "slippage": 3.7517703200268273,
       "funding": 0.0,
-      "funding_conservative": -4.126103868318577,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -41.14454879904521,
       "net": -49.42300012545979,
-      "net_conservative": -53.54910399377836
+      "net_conservative": -49.42300012545979
      }
     ]
    },
-   "balance_after": 99912.64042210033,
+   "balance_after": 99917.81579626116,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -122.34891774431252,
-    "net_conservative": -123.39818803681239,
+    "net_conservative": -122.34891774431252,
     "gross_mid": -116.04893846707449,
     "fees": 2.9304186759675606,
     "slippage": 3.369560601270464,
     "funding": 0.0,
-    "funding_conservative": -1.0492702924998714,
+    "funding_conservative": 0.0,
     "entry_ms": 1763593200000,
     "exit_ms": 1763658000000,
     "stopped": true,
@@ -16920,11 +16921,11 @@
       "fees": 2.9304186759675606,
       "slippage": 3.369560601270464,
       "funding": 0.0,
-      "funding_conservative": -1.0492702924998714,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -116.04893846707449,
       "net": -122.34891774431252,
-      "net_conservative": -123.39818803681239
+      "net_conservative": -122.34891774431252
      }
     ]
    },
@@ -17102,10 +17103,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17178,10 +17179,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17252,10 +17253,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17346,10 +17347,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17385,12 +17386,12 @@
    "residual": null,
    "naive": {
     "net": -91.80451094443184,
-    "net_conservative": -92.9531938712611,
+    "net_conservative": -91.80451094443184,
     "gross_mid": -86.80057388809172,
     "fees": 2.9479414494006915,
     "slippage": 2.0559956069394327,
     "funding": 0.0,
-    "funding_conservative": -1.1486829268292684,
+    "funding_conservative": 0.0,
     "entry_ms": 1764716400000,
     "exit_ms": 1764720000000,
     "stopped": true,
@@ -17411,11 +17412,11 @@
       "fees": 2.9479414494006915,
       "slippage": 2.0559956069394327,
       "funding": 0.0,
-      "funding_conservative": -1.1486829268292684,
+      "funding_conservative": 0.0,
       "funding_settlements": 1,
       "gross_mid": -86.80057388809172,
       "net": -91.80451094443184,
-      "net_conservative": -92.9531938712611
+      "net_conservative": -91.80451094443184
      }
     ]
    },
@@ -17594,10 +17595,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17668,10 +17669,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17738,10 +17739,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17814,10 +17815,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17910,10 +17911,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -17949,12 +17950,12 @@
    "residual": null,
    "naive": {
     "net": -108.69287581349394,
-    "net_conservative": -111.70499645636599,
+    "net_conservative": -108.69287581349394,
     "gross_mid": -102.7969108745564,
     "fees": 2.938359103236564,
     "slippage": 2.957605835700971,
     "funding": 0.0,
-    "funding_conservative": -3.012120642872052,
+    "funding_conservative": 0.0,
     "entry_ms": 1769122800000,
     "exit_ms": 1769180400000,
     "stopped": true,
@@ -17975,11 +17976,11 @@
       "fees": 2.938359103236564,
       "slippage": 2.957605835700971,
       "funding": 0.0,
-      "funding_conservative": -3.012120642872052,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -102.7969108745564,
       "net": -108.69287581349394,
-      "net_conservative": -111.70499645636599
+      "net_conservative": -108.69287581349394
      }
     ]
    },
@@ -18158,10 +18159,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -18258,10 +18259,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -18296,12 +18297,12 @@
    },
    "residual": {
     "net": 21.11925610808415,
-    "net_conservative": 17.638443773630314,
+    "net_conservative": 21.11925610808415,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.48081233445384,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18322,11 +18323,11 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      },
      {
       "role": "hedge",
@@ -18342,11 +18343,11 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2336473888352932,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.072113702760909
+      "net_conservative": 11.305761091596203
      }
     ],
     "attribution": {
@@ -18369,12 +18370,12 @@
    },
    "naive": {
     "net": 19.6269900329759,
-    "net_conservative": 15.132660141738807,
+    "net_conservative": 19.6269900329759,
     "gross_mid": 24.81884307066161,
     "fees": 3.0148848542866213,
     "slippage": 2.1769681833990893,
     "funding": 0.0,
-    "funding_conservative": -4.4943298912370935,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18395,22 +18396,22 @@
       "fees": 3.0148848542866213,
       "slippage": 2.1769681833990893,
       "funding": 0.0,
-      "funding_conservative": -4.4943298912370935,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 24.81884307066161,
       "net": 19.6269900329759,
-      "net_conservative": 15.132660141738807
+      "net_conservative": 19.6269900329759
      }
     ]
    },
    "unhedged": {
     "net": 9.81349501648795,
-    "net_conservative": 7.5663300708694035,
+    "net_conservative": 9.81349501648795,
     "gross_mid": 12.409421535330805,
     "fees": 1.5074424271433107,
     "slippage": 1.0884840916995446,
     "funding": 0.0,
-    "funding_conservative": -2.2471649456185467,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18431,22 +18432,22 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      }
     ]
    },
    "v_residual": {
     "net": 21.11925610808415,
-    "net_conservative": 17.638443773630314,
+    "net_conservative": 21.11925610808415,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.48081233445384,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18467,11 +18468,11 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      },
      {
       "role": "hedge",
@@ -18487,22 +18488,22 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2336473888352932,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.072113702760909
+      "net_conservative": 11.305761091596203
      }
     ]
    },
    "v_headline": {
     "net": 21.11925610808415,
-    "net_conservative": 17.638443773630314,
+    "net_conservative": 21.11925610808415,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.48081233445384,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18523,11 +18524,11 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      },
      {
       "role": "hedge",
@@ -18543,22 +18544,22 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2336473888352932,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.072113702760909
+      "net_conservative": 11.305761091596203
      }
     ]
    },
    "v_agreement": {
     "net": 21.11925610808415,
-    "net_conservative": 17.638443773630314,
+    "net_conservative": 21.11925610808415,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.48081233445384,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18579,11 +18580,11 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      },
      {
       "role": "hedge",
@@ -18599,22 +18600,22 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2336473888352932,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.072113702760909
+      "net_conservative": 11.305761091596203
      }
     ]
    },
    "v_consensus": {
     "net": 21.11925610808415,
-    "net_conservative": 17.638443773630314,
+    "net_conservative": 21.11925610808415,
     "gross_mid": 25.839797577242145,
     "fees": 2.873718362122716,
     "slippage": 1.846823107035278,
     "funding": 0.0,
-    "funding_conservative": -3.48081233445384,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18635,11 +18636,11 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      },
      {
       "role": "hedge",
@@ -18655,24 +18656,24 @@
       "fees": 1.3662759349794056,
       "slippage": 0.7583390153357333,
       "funding": 0.0,
-      "funding_conservative": -1.2336473888352932,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 13.430376041911341,
       "net": 11.305761091596203,
-      "net_conservative": 10.072113702760909
+      "net_conservative": 11.305761091596203
      }
     ]
    },
-   "balance_after": 99930.27886587396,
+   "balance_after": 99938.93505236924,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 9.81349501648795,
-    "net_conservative": 7.5663300708694035,
+    "net_conservative": 9.81349501648795,
     "gross_mid": 12.409421535330805,
     "fees": 1.5074424271433107,
     "slippage": 1.0884840916995446,
     "funding": 0.0,
-    "funding_conservative": -2.2471649456185467,
+    "funding_conservative": 0.0,
     "entry_ms": 1769641200000,
     "exit_ms": 1769727600000,
     "stopped": false,
@@ -18693,11 +18694,11 @@
       "fees": 1.5074424271433107,
       "slippage": 1.0884840916995446,
       "funding": 0.0,
-      "funding_conservative": -2.2471649456185467,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 12.409421535330805,
       "net": 9.81349501648795,
-      "net_conservative": 7.5663300708694035
+      "net_conservative": 9.81349501648795
      }
     ]
    },
@@ -18874,10 +18875,10 @@
     "variant": "residual",
     "source": "prior (only 1 eligible training events)",
     "scores": {
-     "residual": -87.36,
-     "headline": -87.36,
-     "agreement": -87.36,
-     "consensus": -87.36
+     "residual": -82.18,
+     "headline": -82.18,
+     "agreement": -82.18,
+     "consensus": -82.18
     },
     "eligible_variants": [
      "residual",
@@ -18974,10 +18975,10 @@
     "variant": "residual",
     "source": "prior (only 2 eligible training events)",
     "scores": {
-     "residual": -52.08,
-     "headline": -52.08,
-     "agreement": -52.08,
-     "consensus": -52.08
+     "residual": -39.95,
+     "headline": -39.95,
+     "agreement": -39.95,
+     "consensus": -39.95
     },
     "eligible_variants": [
      "residual",
@@ -19012,12 +19013,12 @@
    },
    "residual": {
     "net": 82.70129164022472,
-    "net_conservative": 72.95610680085053,
+    "net_conservative": 82.70129164022472,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.745184839374186,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19038,11 +19039,11 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      },
      {
       "role": "hedge",
@@ -19058,11 +19059,11 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.1383771644015495,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.65813453037572
+      "net_conservative": 75.79651169477727
      }
     ],
     "attribution": {
@@ -19085,12 +19086,12 @@
    },
    "naive": {
     "net": 6.904779945447455,
-    "net_conservative": 2.297972270474819,
+    "net_conservative": 6.904779945447455,
     "gross_mid": 14.165217951194311,
     "fees": 3.0084919236197325,
     "slippage": 4.251946082127124,
     "funding": 0.0,
-    "funding_conservative": -4.606807674972636,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19111,22 +19112,22 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      }
     ]
    },
    "unhedged": {
     "net": 6.904779945447455,
-    "net_conservative": 2.297972270474819,
+    "net_conservative": 6.904779945447455,
     "gross_mid": 14.165217951194311,
     "fees": 3.0084919236197325,
     "slippage": 4.251946082127124,
     "funding": 0.0,
-    "funding_conservative": -4.606807674972636,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19147,22 +19148,22 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      }
     ]
    },
    "v_residual": {
     "net": 82.70129164022472,
-    "net_conservative": 72.95610680085053,
+    "net_conservative": 82.70129164022472,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.745184839374186,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19183,11 +19184,11 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      },
      {
       "role": "hedge",
@@ -19203,22 +19204,22 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.1383771644015495,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.65813453037572
+      "net_conservative": 75.79651169477727
      }
     ]
    },
    "v_headline": {
     "net": 82.70129164022472,
-    "net_conservative": 72.95610680085053,
+    "net_conservative": 82.70129164022472,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.745184839374186,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19239,11 +19240,11 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      },
      {
       "role": "hedge",
@@ -19259,22 +19260,22 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.1383771644015495,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.65813453037572
+      "net_conservative": 75.79651169477727
      }
     ]
    },
    "v_agreement": {
     "net": 82.70129164022472,
-    "net_conservative": 72.95610680085053,
+    "net_conservative": 82.70129164022472,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.745184839374186,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19295,11 +19296,11 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      },
      {
       "role": "hedge",
@@ -19315,22 +19316,22 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.1383771644015495,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.65813453037572
+      "net_conservative": 75.79651169477727
      }
     ]
    },
    "v_consensus": {
     "net": 82.70129164022472,
-    "net_conservative": 72.95610680085053,
+    "net_conservative": 82.70129164022472,
     "gross_mid": 99.24268236503764,
     "fees": 8.622229350864695,
     "slippage": 7.919161373948222,
     "funding": 0.0,
-    "funding_conservative": -9.745184839374186,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19351,11 +19352,11 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      },
      {
       "role": "hedge",
@@ -19371,24 +19372,24 @@
       "fees": 5.6137374272449625,
       "slippage": 3.6672152918210976,
       "funding": 0.0,
-      "funding_conservative": -5.1383771644015495,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 85.07746441384333,
       "net": 75.79651169477727,
-      "net_conservative": 70.65813453037572
+      "net_conservative": 75.79651169477727
      }
     ]
    },
-   "balance_after": 100003.2349726748,
+   "balance_after": 100021.63634400947,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 6.904779945447455,
-    "net_conservative": 2.297972270474819,
+    "net_conservative": 6.904779945447455,
     "gross_mid": 14.165217951194311,
     "fees": 3.0084919236197325,
     "slippage": 4.251946082127124,
     "funding": 0.0,
-    "funding_conservative": -4.606807674972636,
+    "funding_conservative": 0.0,
     "entry_ms": 1770073200000,
     "exit_ms": 1770159600000,
     "stopped": false,
@@ -19409,11 +19410,11 @@
       "fees": 3.0084919236197325,
       "slippage": 4.251946082127124,
       "funding": 0.0,
-      "funding_conservative": -4.606807674972636,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.165217951194311,
       "net": 6.904779945447455,
-      "net_conservative": 2.297972270474819
+      "net_conservative": 6.904779945447455
      }
     ]
    },
@@ -19588,10 +19589,10 @@
     "variant": "residual",
     "source": "prior (only 2 eligible training events)",
     "scores": {
-     "residual": -52.08,
-     "headline": -52.08,
-     "agreement": -52.08,
-     "consensus": -52.08
+     "residual": -39.95,
+     "headline": -39.95,
+     "agreement": -39.95,
+     "consensus": -39.95
     },
     "eligible_variants": [
      "residual",
@@ -19664,10 +19665,10 @@
     "variant": "residual",
     "source": "prior (only 2 eligible training events)",
     "scores": {
-     "residual": -52.08,
-     "headline": -52.08,
-     "agreement": -52.08,
-     "consensus": -52.08
+     "residual": -39.95,
+     "headline": -39.95,
+     "agreement": -39.95,
+     "consensus": -39.95
     },
     "eligible_variants": [
      "residual",
@@ -19734,10 +19735,10 @@
     "variant": "residual",
     "source": "prior (only 3 eligible training events)",
     "scores": {
-     "residual": 20.87,
-     "headline": 20.87,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": 42.76,
+     "headline": 42.76,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -19834,10 +19835,10 @@
     "variant": "residual",
     "source": "prior (only 3 eligible training events)",
     "scores": {
-     "residual": 20.87,
-     "headline": 20.87,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": 42.76,
+     "headline": 42.76,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -19871,12 +19872,12 @@
    },
    "residual": {
     "net": -48.13122636737221,
-    "net_conservative": -52.09103836674763,
+    "net_conservative": -48.13122636737221,
     "gross_mid": -36.56363647048583,
     "fees": 6.159922279166279,
     "slippage": 5.4076676177200795,
     "funding": 0.0,
-    "funding_conservative": -3.959811999375428,
+    "funding_conservative": 0.0,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -19897,11 +19898,11 @@
       "fees": 3.0649668054815327,
       "slippage": 3.0055221191502164,
       "funding": 0.0,
-      "funding_conservative": -1.1706403303646946,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -108.21433902184172,
       "net": -114.28482794647348,
-      "net_conservative": -115.45546827683818
+      "net_conservative": -114.28482794647348
      },
      {
       "role": "hedge",
@@ -19917,11 +19918,11 @@
       "fees": 3.094955473684747,
       "slippage": 2.402145498569863,
       "funding": 0.0,
-      "funding_conservative": -2.789171669010733,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.65070255135589,
       "net": 66.15360157910128,
-      "net_conservative": 63.36442991009054
+      "net_conservative": 66.15360157910128
      }
     ],
     "attribution": {
@@ -19944,12 +19945,12 @@
    },
    "naive": {
     "net": 102.14392650134684,
-    "net_conservative": 100.97328617098215,
+    "net_conservative": 102.14392650134684,
     "gross_mid": 108.21433902184172,
     "fees": 3.0648904013446767,
     "slippage": 3.0055221191502164,
     "funding": 0.0,
-    "funding_conservative": -1.1706403303646946,
+    "funding_conservative": 0.0,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -19970,22 +19971,22 @@
       "fees": 3.0648904013446767,
       "slippage": 3.0055221191502164,
       "funding": 0.0,
-      "funding_conservative": -1.1706403303646946,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 108.21433902184172,
       "net": 102.14392650134684,
-      "net_conservative": 100.97328617098215
+      "net_conservative": 102.14392650134684
      }
     ]
    },
    "unhedged": {
     "net": -85.39336769544164,
-    "net_conservative": -86.16729425895227,
+    "net_conservative": -85.39336769544164,
     "gross_mid": -79.35718194935065,
     "fees": 3.0476423240197907,
     "slippage": 2.988543422071199,
     "funding": 0.0,
-    "funding_conservative": -0.7739265635106223,
+    "funding_conservative": 0.0,
     "entry_ms": 1770332400000,
     "exit_ms": 1770375600000,
     "stopped": true,
@@ -20006,22 +20007,22 @@
       "fees": 3.0476423240197907,
       "slippage": 2.988543422071199,
       "funding": 0.0,
-      "funding_conservative": -0.7739265635106223,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -79.35718194935065,
       "net": -85.39336769544164,
-      "net_conservative": -86.16729425895227
+      "net_conservative": -85.39336769544164
      }
     ]
    },
    "v_residual": {
     "net": -48.13122636737221,
-    "net_conservative": -52.09103836674763,
+    "net_conservative": -48.13122636737221,
     "gross_mid": -36.56363647048583,
     "fees": 6.159922279166279,
     "slippage": 5.4076676177200795,
     "funding": 0.0,
-    "funding_conservative": -3.959811999375428,
+    "funding_conservative": 0.0,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -20042,11 +20043,11 @@
       "fees": 3.0649668054815327,
       "slippage": 3.0055221191502164,
       "funding": 0.0,
-      "funding_conservative": -1.1706403303646946,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -108.21433902184172,
       "net": -114.28482794647348,
-      "net_conservative": -115.45546827683818
+      "net_conservative": -114.28482794647348
      },
      {
       "role": "hedge",
@@ -20062,22 +20063,22 @@
       "fees": 3.094955473684747,
       "slippage": 2.402145498569863,
       "funding": 0.0,
-      "funding_conservative": -2.789171669010733,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.65070255135589,
       "net": 66.15360157910128,
-      "net_conservative": 63.36442991009054
+      "net_conservative": 66.15360157910128
      }
     ]
    },
    "v_headline": {
     "net": 24.99608293764642,
-    "net_conservative": 21.036270938271002,
+    "net_conservative": 24.99608293764642,
     "gross_mid": 36.56363647048583,
     "fees": 6.159885915119345,
     "slippage": 5.4076676177200795,
     "funding": 0.0,
-    "funding_conservative": -3.959811999375428,
+    "funding_conservative": 0.0,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -20098,11 +20099,11 @@
       "fees": 3.0648904013446767,
       "slippage": 3.0055221191502164,
       "funding": 0.0,
-      "funding_conservative": -1.1706403303646946,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 108.21433902184172,
       "net": 102.14392650134684,
-      "net_conservative": 100.97328617098215
+      "net_conservative": 102.14392650134684
      },
      {
       "role": "hedge",
@@ -20118,26 +20119,26 @@
       "fees": 3.0949955137746685,
       "slippage": 2.402145498569863,
       "funding": 0.0,
-      "funding_conservative": -2.789171669010733,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -71.65070255135589,
       "net": -77.14784356370042,
-      "net_conservative": -79.93701523271115
+      "net_conservative": -77.14784356370042
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": null,
-   "balance_after": 99951.14393430806,
+   "balance_after": 99973.5051176421,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 102.14392650134684,
-    "net_conservative": 100.97328617098215,
+    "net_conservative": 102.14392650134684,
     "gross_mid": 108.21433902184172,
     "fees": 3.0648904013446767,
     "slippage": 3.0055221191502164,
     "funding": 0.0,
-    "funding_conservative": -1.1706403303646946,
+    "funding_conservative": 0.0,
     "entry_ms": 1770332400000,
     "exit_ms": 1770418800000,
     "stopped": false,
@@ -20158,11 +20159,11 @@
       "fees": 3.0648904013446767,
       "slippage": 3.0055221191502164,
       "funding": 0.0,
-      "funding_conservative": -1.1706403303646946,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 108.21433902184172,
       "net": 102.14392650134684,
-      "net_conservative": 100.97328617098215
+      "net_conservative": 102.14392650134684
      }
     ]
    },
@@ -20340,10 +20341,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -20410,10 +20411,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -20485,10 +20486,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -20561,10 +20562,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -20655,10 +20656,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -20694,12 +20695,12 @@
    "residual": null,
    "naive": {
     "net": -106.23460142555189,
-    "net_conservative": -106.92859947805833,
+    "net_conservative": -106.23460142555189,
     "gross_mid": -100.6626536496536,
     "fees": 2.9396348581909186,
     "slippage": 2.632312917707363,
     "funding": 0.0,
-    "funding_conservative": -0.6939980525064495,
+    "funding_conservative": 0.0,
     "entry_ms": 1772060400000,
     "exit_ms": 1772118000000,
     "stopped": true,
@@ -20720,11 +20721,11 @@
       "fees": 2.9396348581909186,
       "slippage": 2.632312917707363,
       "funding": 0.0,
-      "funding_conservative": -0.6939980525064495,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -100.6626536496536,
       "net": -106.23460142555189,
-      "net_conservative": -106.92859947805833
+      "net_conservative": -106.23460142555189
      }
     ]
    },
@@ -20912,10 +20913,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -20986,10 +20987,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -21080,10 +21081,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -21118,12 +21119,12 @@
    "residual": null,
    "naive": {
     "net": -20.31674549635616,
-    "net_conservative": -24.106045784402248,
+    "net_conservative": -20.31674549635616,
     "gross_mid": -12.977076332212865,
     "fees": 2.9922205418782286,
     "slippage": 4.347448622265064,
     "funding": 0.0,
-    "funding_conservative": -3.7893002880460873,
+    "funding_conservative": 0.0,
     "entry_ms": 1772665200000,
     "exit_ms": 1772751600000,
     "stopped": false,
@@ -21144,11 +21145,11 @@
       "fees": 2.9922205418782286,
       "slippage": 4.347448622265064,
       "funding": 0.0,
-      "funding_conservative": -3.7893002880460873,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -12.977076332212865,
       "net": -20.31674549635616,
-      "net_conservative": -24.106045784402248
+      "net_conservative": -20.31674549635616
      }
     ]
    },
@@ -21360,10 +21361,10 @@
     "variant": "residual",
     "source": "prior (only 4 eligible training events)",
     "scores": {
-     "residual": -31.22,
-     "headline": 41.91,
-     "agreement": 20.87,
-     "consensus": 20.87
+     "residual": -5.38,
+     "headline": 67.75,
+     "agreement": 42.76,
+     "consensus": 42.76
     },
     "eligible_variants": [
      "residual",
@@ -21398,12 +21399,12 @@
    },
    "residual": {
     "net": -29.362915263300856,
-    "net_conservative": -31.009383472444718,
+    "net_conservative": -29.362915263300856,
     "gross_mid": -23.790855960036218,
     "fees": 2.400990617247357,
     "slippage": 3.1710686860172785,
     "funding": 0.0,
-    "funding_conservative": -1.6464682091438636,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772794800000,
     "stopped": true,
@@ -21424,11 +21425,11 @@
       "fees": 0.958667371324094,
       "slippage": 1.9582330435470254,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -27.254451464675494,
       "net": -30.171351879546613,
-      "net_conservative": -30.941564171332942
+      "net_conservative": -30.171351879546613
      },
      {
       "role": "hedge",
@@ -21444,11 +21445,11 @@
       "fees": 1.442323245923263,
       "slippage": 1.212835642470253,
       "funding": 0.0,
-      "funding_conservative": -0.8762559173575339,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 3.4635955046392746,
       "net": 0.8084366162457584,
-      "net_conservative": -0.06781930111177559
+      "net_conservative": 0.8084366162457584
      }
     ],
     "attribution": {
@@ -21471,12 +21472,12 @@
    },
    "naive": {
     "net": -82.22824328494248,
-    "net_conservative": -84.59812725966965,
+    "net_conservative": -82.22824328494248,
     "gross_mid": -73.23377369327964,
     "fees": 2.9561135899646365,
     "slippage": 6.038356001698198,
     "funding": 0.0,
-    "funding_conservative": -2.3698839747271685,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772791200000,
     "stopped": true,
@@ -21497,22 +21498,22 @@
       "fees": 2.9561135899646365,
       "slippage": 6.038356001698198,
       "funding": 0.0,
-      "funding_conservative": -2.3698839747271685,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -73.23377369327964,
       "net": -82.22824328494248,
-      "net_conservative": -84.59812725966965
+      "net_conservative": -82.22824328494248
      }
     ]
    },
    "unhedged": {
     "net": -26.72417906760631,
-    "net_conservative": -27.49439135939264,
+    "net_conservative": -26.72417906760631,
     "gross_mid": -23.800976450315886,
     "fees": 0.9607369167385069,
     "slippage": 1.9624657005519146,
     "funding": 0.0,
-    "funding_conservative": -0.7702122917863297,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772791200000,
     "stopped": true,
@@ -21533,22 +21534,22 @@
       "fees": 0.9607369167385069,
       "slippage": 1.9624657005519146,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -23.800976450315886,
       "net": -26.72417906760631,
-      "net_conservative": -27.49439135939264
+      "net_conservative": -26.72417906760631
      }
     ]
    },
    "v_residual": {
     "net": -29.362915263300856,
-    "net_conservative": -31.009383472444718,
+    "net_conservative": -29.362915263300856,
     "gross_mid": -23.790855960036218,
     "fees": 2.400990617247357,
     "slippage": 3.1710686860172785,
     "funding": 0.0,
-    "funding_conservative": -1.6464682091438636,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772794800000,
     "stopped": true,
@@ -21569,11 +21570,11 @@
       "fees": 0.958667371324094,
       "slippage": 1.9582330435470254,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -27.254451464675494,
       "net": -30.171351879546613,
-      "net_conservative": -30.941564171332942
+      "net_conservative": -30.171351879546613
      },
      {
       "role": "hedge",
@@ -21589,22 +21590,22 @@
       "fees": 1.442323245923263,
       "slippage": 1.212835642470253,
       "funding": 0.0,
-      "funding_conservative": -0.8762559173575339,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 3.4635955046392746,
       "net": 0.8084366162457584,
-      "net_conservative": -0.06781930111177559
+      "net_conservative": 0.8084366162457584
      }
     ]
    },
    "v_headline": {
     "net": -29.362915263300856,
-    "net_conservative": -31.009383472444718,
+    "net_conservative": -29.362915263300856,
     "gross_mid": -23.790855960036218,
     "fees": 2.400990617247357,
     "slippage": 3.1710686860172785,
     "funding": 0.0,
-    "funding_conservative": -1.6464682091438636,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772794800000,
     "stopped": true,
@@ -21625,11 +21626,11 @@
       "fees": 0.958667371324094,
       "slippage": 1.9582330435470254,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -27.254451464675494,
       "net": -30.171351879546613,
-      "net_conservative": -30.941564171332942
+      "net_conservative": -30.171351879546613
      },
      {
       "role": "hedge",
@@ -21645,22 +21646,22 @@
       "fees": 1.442323245923263,
       "slippage": 1.212835642470253,
       "funding": 0.0,
-      "funding_conservative": -0.8762559173575339,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 3.4635955046392746,
       "net": 0.8084366162457584,
-      "net_conservative": -0.06781930111177559
+      "net_conservative": 0.8084366162457584
      }
     ]
    },
    "v_agreement": {
     "net": -29.362915263300856,
-    "net_conservative": -31.009383472444718,
+    "net_conservative": -29.362915263300856,
     "gross_mid": -23.790855960036218,
     "fees": 2.400990617247357,
     "slippage": 3.1710686860172785,
     "funding": 0.0,
-    "funding_conservative": -1.6464682091438636,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772794800000,
     "stopped": true,
@@ -21681,11 +21682,11 @@
       "fees": 0.958667371324094,
       "slippage": 1.9582330435470254,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -27.254451464675494,
       "net": -30.171351879546613,
-      "net_conservative": -30.941564171332942
+      "net_conservative": -30.171351879546613
      },
      {
       "role": "hedge",
@@ -21701,22 +21702,22 @@
       "fees": 1.442323245923263,
       "slippage": 1.212835642470253,
       "funding": 0.0,
-      "funding_conservative": -0.8762559173575339,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 3.4635955046392746,
       "net": 0.8084366162457584,
-      "net_conservative": -0.06781930111177559
+      "net_conservative": 0.8084366162457584
      }
     ]
    },
    "v_consensus": {
     "net": -29.362915263300856,
-    "net_conservative": -31.009383472444718,
+    "net_conservative": -29.362915263300856,
     "gross_mid": -23.790855960036218,
     "fees": 2.400990617247357,
     "slippage": 3.1710686860172785,
     "funding": 0.0,
-    "funding_conservative": -1.6464682091438636,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772794800000,
     "stopped": true,
@@ -21737,11 +21738,11 @@
       "fees": 0.958667371324094,
       "slippage": 1.9582330435470254,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -27.254451464675494,
       "net": -30.171351879546613,
-      "net_conservative": -30.941564171332942
+      "net_conservative": -30.171351879546613
      },
      {
       "role": "hedge",
@@ -21757,24 +21758,24 @@
       "fees": 1.442323245923263,
       "slippage": 1.212835642470253,
       "funding": 0.0,
-      "funding_conservative": -0.8762559173575339,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 3.4635955046392746,
       "net": 0.8084366162457584,
-      "net_conservative": -0.06781930111177559
+      "net_conservative": 0.8084366162457584
      }
     ]
    },
-   "balance_after": 99920.13455083562,
+   "balance_after": 99944.14220237879,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -26.72417906760631,
-    "net_conservative": -27.49439135939264,
+    "net_conservative": -26.72417906760631,
     "gross_mid": -23.800976450315886,
     "fees": 0.9607369167385069,
     "slippage": 1.9624657005519146,
     "funding": 0.0,
-    "funding_conservative": -0.7702122917863297,
+    "funding_conservative": 0.0,
     "entry_ms": 1772751600000,
     "exit_ms": 1772791200000,
     "stopped": true,
@@ -21795,11 +21796,11 @@
       "fees": 0.9607369167385069,
       "slippage": 1.9624657005519146,
       "funding": 0.0,
-      "funding_conservative": -0.7702122917863297,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -23.800976450315886,
       "net": -26.72417906760631,
-      "net_conservative": -27.49439135939264
+      "net_conservative": -26.72417906760631
      }
     ]
    },
@@ -21985,10 +21986,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -126.63,
-     "headline": -53.5,
-     "agreement": -74.54,
-     "consensus": -74.54
+     "residual": -95.72,
+     "headline": -22.6,
+     "agreement": -47.59,
+     "consensus": -47.59
     },
     "eligible_variants": [
      "residual",
@@ -22079,10 +22080,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -126.63,
-     "headline": -53.5,
-     "agreement": -74.54,
-     "consensus": -74.54
+     "residual": -95.72,
+     "headline": -22.6,
+     "agreement": -47.59,
+     "consensus": -47.59
     },
     "eligible_variants": [
      "residual",
@@ -22121,12 +22122,12 @@
    },
    "residual": {
     "net": -44.05107325024792,
-    "net_conservative": -47.177564746212184,
+    "net_conservative": -44.05107325024792,
     "gross_mid": -35.112950575891006,
     "fees": 4.589672325009689,
     "slippage": 4.3484503493472255,
     "funding": 0.0,
-    "funding_conservative": -3.1264914959642676,
+    "funding_conservative": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773932400000,
     "stopped": true,
@@ -22147,11 +22148,11 @@
       "fees": 1.5134552908033432,
       "slippage": 2.28585986076514,
       "funding": 0.0,
-      "funding_conservative": -1.2648642692464174,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -22.405180597622188,
       "net": -26.20449574919067,
-      "net_conservative": -27.469360018437087
+      "net_conservative": -26.20449574919067
      },
      {
       "role": "hedge",
@@ -22167,11 +22168,11 @@
       "fees": 3.076217034206345,
       "slippage": 2.0625904885820856,
       "funding": 0.0,
-      "funding_conservative": -1.8616272267178502,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -12.707769978268818,
       "net": -17.846577501057247,
-      "net_conservative": -19.708204727775097
+      "net_conservative": -17.846577501057247
      }
     ],
     "attribution": {
@@ -22194,12 +22195,12 @@
    },
    "naive": {
     "net": 11.87816279188912,
-    "net_conservative": 8.096433496197243,
+    "net_conservative": 11.87816279188912,
     "gross_mid": 19.438542561367015,
     "fees": 3.011652556152202,
     "slippage": 4.5487272133256935,
     "funding": 0.0,
-    "funding_conservative": -3.781729295691876,
+    "funding_conservative": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773957600000,
     "stopped": false,
@@ -22220,22 +22221,22 @@
       "fees": 3.011652556152202,
       "slippage": 4.5487272133256935,
       "funding": 0.0,
-      "funding_conservative": -3.781729295691876,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 19.438542561367015,
       "net": 11.87816279188912,
-      "net_conservative": 8.096433496197243
+      "net_conservative": 11.87816279188912
      }
     ]
    },
    "unhedged": {
     "net": -13.499471734807072,
-    "net_conservative": -15.39033638265301,
+    "net_conservative": -13.499471734807072,
     "gross_mid": -9.719271280683508,
     "fees": 1.5058368474607187,
     "slippage": 2.2743636066628468,
     "funding": 0.0,
-    "funding_conservative": -1.890864647845938,
+    "funding_conservative": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773957600000,
     "stopped": false,
@@ -22256,22 +22257,22 @@
       "fees": 1.5058368474607187,
       "slippage": 2.2743636066628468,
       "funding": 0.0,
-      "funding_conservative": -1.890864647845938,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -9.719271280683508,
       "net": -13.499471734807072,
-      "net_conservative": -15.39033638265301
+      "net_conservative": -13.499471734807072
      }
     ]
    },
    "v_residual": {
     "net": -44.05107325024792,
-    "net_conservative": -47.177564746212184,
+    "net_conservative": -44.05107325024792,
     "gross_mid": -35.112950575891006,
     "fees": 4.589672325009689,
     "slippage": 4.3484503493472255,
     "funding": 0.0,
-    "funding_conservative": -3.1264914959642676,
+    "funding_conservative": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773932400000,
     "stopped": true,
@@ -22292,11 +22293,11 @@
       "fees": 1.5134552908033432,
       "slippage": 2.28585986076514,
       "funding": 0.0,
-      "funding_conservative": -1.2648642692464174,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -22.405180597622188,
       "net": -26.20449574919067,
-      "net_conservative": -27.469360018437087
+      "net_conservative": -26.20449574919067
      },
      {
       "role": "hedge",
@@ -22312,22 +22313,22 @@
       "fees": 3.076217034206345,
       "slippage": 2.0625904885820856,
       "funding": 0.0,
-      "funding_conservative": -1.8616272267178502,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -12.707769978268818,
       "net": -17.846577501057247,
-      "net_conservative": -19.708204727775097
+      "net_conservative": -17.846577501057247
      }
     ]
    },
    "v_headline": {
     "net": -0.2508690110249612,
-    "net_conservative": -4.930589286924775,
+    "net_conservative": -0.2508690110249612,
     "gross_mid": 8.681902302865584,
     "fees": 4.590287578669695,
     "slippage": 4.34248373522085,
     "funding": 0.0,
-    "funding_conservative": -4.679720275899814,
+    "funding_conservative": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773957600000,
     "stopped": false,
@@ -22348,11 +22349,11 @@
       "fees": 1.505826278076101,
       "slippage": 2.2743636066628468,
       "funding": 0.0,
-      "funding_conservative": -1.890864647845938,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 9.719271280683508,
       "net": 5.93908139594456,
-      "net_conservative": 4.048216748098621
+      "net_conservative": 5.93908139594456
      },
      {
       "role": "hedge",
@@ -22368,26 +22369,26 @@
       "fees": 3.0844613005935946,
       "slippage": 2.0681201285580033,
       "funding": 0.0,
-      "funding_conservative": -2.7888556280538754,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -1.037368977817923,
       "net": -6.189950406969521,
-      "net_conservative": -8.978806035023396
+      "net_conservative": -6.189950406969521
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": null,
-   "balance_after": 99872.95698608941,
+   "balance_after": 99900.09112912854,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 5.93908139594456,
-    "net_conservative": 4.048216748098621,
+    "net_conservative": 5.93908139594456,
     "gross_mid": 9.719271280683508,
     "fees": 1.505826278076101,
     "slippage": 2.2743636066628468,
     "funding": 0.0,
-    "funding_conservative": -1.890864647845938,
+    "funding_conservative": 0.0,
     "entry_ms": 1773871200000,
     "exit_ms": 1773957600000,
     "stopped": false,
@@ -22408,11 +22409,11 @@
       "fees": 1.505826278076101,
       "slippage": 2.2743636066628468,
       "funding": 0.0,
-      "funding_conservative": -1.890864647845938,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 9.719271280683508,
       "net": 5.93908139594456,
-      "net_conservative": 4.048216748098621
+      "net_conservative": 5.93908139594456
      }
     ]
    },
@@ -22573,7 +22574,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 6,
-    "train_pnl": -133.62666111858303,
+    "train_pnl": -101.64100059086225,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22608,10 +22609,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -133.63,
-     "headline": 23.99,
-     "agreement": 12.82,
-     "consensus": 12.82
+     "residual": -101.64,
+     "headline": 59.09,
+     "agreement": 34.59,
+     "consensus": 34.59
     },
     "eligible_variants": [
      "residual",
@@ -22661,7 +22662,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 6,
-    "train_pnl": -133.62666111858303,
+    "train_pnl": -101.64100059086225,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -22720,10 +22721,10 @@
     "variant": "residual",
     "source": "prior (only 5 eligible training events)",
     "scores": {
-     "residual": -133.63,
-     "headline": 23.99,
-     "agreement": 12.82,
-     "consensus": 12.82
+     "residual": -101.64,
+     "headline": 59.09,
+     "agreement": 34.59,
+     "consensus": 34.59
     },
     "eligible_variants": [
      "residual",
@@ -22758,12 +22759,12 @@
    },
    "residual": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.674674883308398,
+    "net_conservative": 1.8007203245659866,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -8.475395207874387,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -22784,11 +22785,11 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      },
      {
       "role": "hedge",
@@ -22804,11 +22805,11 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.8921254497093405,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.16254225904424
+      "net_conservative": -62.270416809334904
      }
     ],
     "attribution": {
@@ -22831,12 +22832,12 @@
    },
    "naive": {
     "net": 64.07113713390089,
-    "net_conservative": 59.487867375735846,
+    "net_conservative": 64.07113713390089,
     "gross_mid": 71.9895287958116,
     "fees": 3.043152199109158,
     "slippage": 4.875239462801542,
     "funding": 0.0,
-    "funding_conservative": -4.583269758165047,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -22857,22 +22858,22 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      }
     ]
    },
    "unhedged": {
     "net": 64.07113713390089,
-    "net_conservative": 59.487867375735846,
+    "net_conservative": 64.07113713390089,
     "gross_mid": 71.9895287958116,
     "fees": 3.043152199109158,
     "slippage": 4.875239462801542,
     "funding": 0.0,
-    "funding_conservative": -4.583269758165047,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -22893,22 +22894,22 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      }
     ]
    },
    "v_residual": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.674674883308398,
+    "net_conservative": 1.8007203245659866,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -8.475395207874387,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -22929,11 +22930,11 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      },
      {
       "role": "hedge",
@@ -22949,22 +22950,22 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.8921254497093405,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.16254225904424
+      "net_conservative": -62.270416809334904
      }
     ]
    },
    "v_headline": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.674674883308398,
+    "net_conservative": 1.8007203245659866,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -8.475395207874387,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -22985,11 +22986,11 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      },
      {
       "role": "hedge",
@@ -23005,22 +23006,22 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.8921254497093405,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.16254225904424
+      "net_conservative": -62.270416809334904
      }
     ]
    },
    "v_agreement": {
     "net": 1.8007203245659866,
-    "net_conservative": -6.674674883308398,
+    "net_conservative": 1.8007203245659866,
     "gross_mid": 16.7651955957256,
     "fees": 7.3348783550148955,
     "slippage": 7.629596916144715,
     "funding": 0.0,
-    "funding_conservative": -8.475395207874387,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -23041,11 +23042,11 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      },
      {
       "role": "hedge",
@@ -23061,25 +23062,25 @@
       "fees": 4.291726155905738,
       "slippage": 2.754357453343173,
       "funding": 0.0,
-      "funding_conservative": -3.8921254497093405,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -55.224333200085994,
       "net": -62.270416809334904,
-      "net_conservative": -66.16254225904424
+      "net_conservative": -62.270416809334904
      }
     ]
    },
    "v_consensus": null,
-   "balance_after": 99866.2823112061,
+   "balance_after": 99901.89184945311,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 64.07113713390089,
-    "net_conservative": 59.487867375735846,
+    "net_conservative": 64.07113713390089,
     "gross_mid": 71.9895287958116,
     "fees": 3.043152199109158,
     "slippage": 4.875239462801542,
     "funding": 0.0,
-    "funding_conservative": -4.583269758165047,
+    "funding_conservative": 0.0,
     "entry_ms": 1776981600000,
     "exit_ms": 1777068000000,
     "stopped": false,
@@ -23100,11 +23101,11 @@
       "fees": 3.043152199109158,
       "slippage": 4.875239462801542,
       "funding": 0.0,
-      "funding_conservative": -4.583269758165047,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 71.9895287958116,
       "net": 64.07113713390089,
-      "net_conservative": 59.487867375735846
+      "net_conservative": 64.07113713390089
      }
     ]
    },
@@ -23265,7 +23266,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": -140.30133600189143,
+    "train_pnl": -99.84028026629626,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -23302,10 +23303,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": -140.3,
-     "headline": 17.32,
-     "agreement": 6.14,
-     "consensus": 12.82
+     "residual": -99.84,
+     "headline": 60.89,
+     "agreement": 36.39,
+     "consensus": 34.59
     },
     "eligible_variants": [
      "residual",
@@ -23357,7 +23358,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": -140.30133600189143,
+    "train_pnl": -99.84028026629626,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -23418,10 +23419,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": -140.3,
-     "headline": 17.32,
-     "agreement": 6.14,
-     "consensus": 12.82
+     "residual": -99.84,
+     "headline": 60.89,
+     "agreement": 36.39,
+     "consensus": 34.59
     },
     "eligible_variants": [
      "residual",
@@ -23456,12 +23457,12 @@
    },
    "residual": {
     "net": -37.27789346789914,
-    "net_conservative": -39.62051113603398,
+    "net_conservative": -37.27789346789914,
     "gross_mid": -32.31755540062239,
     "fees": 2.884544729168578,
     "slippage": 2.0757933381081726,
     "funding": 0.0,
-    "funding_conservative": -2.3426176681348423,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777539600000,
     "stopped": true,
@@ -23482,11 +23483,11 @@
       "fees": 1.4828114504223329,
       "slippage": 1.3141125381891292,
       "funding": 0.0,
-      "funding_conservative": -1.4911214131880661,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -28.662823842402013,
       "net": -31.459747831013473,
-      "net_conservative": -32.95086924420154
+      "net_conservative": -31.459747831013473
      },
      {
       "role": "hedge",
@@ -23502,11 +23503,11 @@
       "fees": 1.401733278746245,
       "slippage": 0.7616807999190431,
       "funding": 0.0,
-      "funding_conservative": -0.8514962549467762,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -3.654731558220378,
       "net": -5.818145636885666,
-      "net_conservative": -6.669641891832443
+      "net_conservative": -5.818145636885666
      }
     ],
     "attribution": {
@@ -23529,12 +23530,12 @@
    },
    "naive": {
     "net": -88.22813131273824,
-    "net_conservative": -91.21037413911438,
+    "net_conservative": -88.22813131273824,
     "gross_mid": -82.66295052891618,
     "fees": 2.9504286028754576,
     "slippage": 2.614752180946597,
     "funding": 0.0,
-    "funding_conservative": -2.9822428263761322,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777543200000,
     "stopped": true,
@@ -23555,22 +23556,22 @@
       "fees": 2.9504286028754576,
       "slippage": 2.614752180946597,
       "funding": 0.0,
-      "funding_conservative": -2.9822428263761322,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -82.66295052891618,
       "net": -88.22813131273824,
-      "net_conservative": -91.21037413911438
+      "net_conservative": -88.22813131273824
      }
     ]
    },
    "unhedged": {
     "net": -44.11406565636912,
-    "net_conservative": -45.60518706955719,
+    "net_conservative": -44.11406565636912,
     "gross_mid": -41.33147526445809,
     "fees": 1.4752143014377288,
     "slippage": 1.3073760904732985,
     "funding": 0.0,
-    "funding_conservative": -1.4911214131880661,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777543200000,
     "stopped": true,
@@ -23591,22 +23592,22 @@
       "fees": 1.4752143014377288,
       "slippage": 1.3073760904732985,
       "funding": 0.0,
-      "funding_conservative": -1.4911214131880661,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -41.33147526445809,
       "net": -44.11406565636912,
-      "net_conservative": -45.60518706955719
+      "net_conservative": -44.11406565636912
      }
     ]
    },
    "v_residual": {
     "net": 43.857478670116,
-    "net_conservative": 40.361609871572114,
+    "net_conservative": 43.857478670116,
     "gross_mid": 48.82105955395552,
     "fees": 2.887415815383753,
     "slippage": 2.076165068455772,
     "funding": 0.0,
-    "funding_conservative": -3.495868798543887,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777586400000,
     "stopped": false,
@@ -23627,11 +23628,11 @@
       "fees": 1.4792876240090502,
       "slippage": 1.3110074568201293,
       "funding": 0.0,
-      "funding_conservative": -2.219351840121619,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 34.5022803572561,
       "net": 31.71198527642692,
-      "net_conservative": 29.4926334363053
+      "net_conservative": 31.71198527642692
      },
      {
       "role": "hedge",
@@ -23647,22 +23648,22 @@
       "fees": 1.4081281913747026,
       "slippage": 0.765157611635643,
       "funding": 0.0,
-      "funding_conservative": -1.2765169584222682,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 14.318779196699426,
       "net": 12.145493393689081,
-      "net_conservative": 10.868976435266813
+      "net_conservative": 12.145493393689081
      }
     ]
    },
    "v_headline": {
     "net": -37.27789346789914,
-    "net_conservative": -39.62051113603398,
+    "net_conservative": -37.27789346789914,
     "gross_mid": -32.31755540062239,
     "fees": 2.884544729168578,
     "slippage": 2.0757933381081726,
     "funding": 0.0,
-    "funding_conservative": -2.3426176681348423,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777539600000,
     "stopped": true,
@@ -23683,11 +23684,11 @@
       "fees": 1.4828114504223329,
       "slippage": 1.3141125381891292,
       "funding": 0.0,
-      "funding_conservative": -1.4911214131880661,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -28.662823842402013,
       "net": -31.459747831013473,
-      "net_conservative": -32.95086924420154
+      "net_conservative": -31.459747831013473
      },
      {
       "role": "hedge",
@@ -23703,23 +23704,23 @@
       "fees": 1.401733278746245,
       "slippage": 0.7616807999190431,
       "funding": 0.0,
-      "funding_conservative": -0.8514962549467762,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -3.654731558220378,
       "net": -5.818145636885666,
-      "net_conservative": -6.669641891832443
+      "net_conservative": -5.818145636885666
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": {
     "net": -37.27789346789914,
-    "net_conservative": -39.62051113603398,
+    "net_conservative": -37.27789346789914,
     "gross_mid": -32.31755540062239,
     "fees": 2.884544729168578,
     "slippage": 2.0757933381081726,
     "funding": 0.0,
-    "funding_conservative": -2.3426176681348423,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777539600000,
     "stopped": true,
@@ -23740,11 +23741,11 @@
       "fees": 1.4828114504223329,
       "slippage": 1.3141125381891292,
       "funding": 0.0,
-      "funding_conservative": -1.4911214131880661,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -28.662823842402013,
       "net": -31.459747831013473,
-      "net_conservative": -32.95086924420154
+      "net_conservative": -31.459747831013473
      },
      {
       "role": "hedge",
@@ -23760,24 +23761,24 @@
       "fees": 1.401733278746245,
       "slippage": 0.7616807999190431,
       "funding": 0.0,
-      "funding_conservative": -0.8514962549467762,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -3.654731558220378,
       "net": -5.818145636885666,
-      "net_conservative": -6.669641891832443
+      "net_conservative": -5.818145636885666
      }
     ]
    },
-   "balance_after": 99826.66180007007,
+   "balance_after": 99864.61395598522,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -44.11406565636912,
-    "net_conservative": -45.60518706955719,
+    "net_conservative": -44.11406565636912,
     "gross_mid": -41.33147526445809,
     "fees": 1.4752143014377288,
     "slippage": 1.3073760904732985,
     "funding": 0.0,
-    "funding_conservative": -1.4911214131880661,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777543200000,
     "stopped": true,
@@ -23798,11 +23799,11 @@
       "fees": 1.4752143014377288,
       "slippage": 1.3073760904732985,
       "funding": 0.0,
-      "funding_conservative": -1.4911214131880661,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -41.33147526445809,
       "net": -44.11406565636912,
-      "net_conservative": -45.60518706955719
+      "net_conservative": -44.11406565636912
      }
     ]
    },
@@ -23961,7 +23962,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": -140.30133600189143,
+    "train_pnl": -99.84028026629626,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -23998,10 +23999,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": -140.3,
-     "headline": 17.32,
-     "agreement": 6.14,
-     "consensus": 12.82
+     "residual": -99.84,
+     "headline": 60.89,
+     "agreement": 36.39,
+     "consensus": 34.59
     },
     "eligible_variants": [
      "residual",
@@ -24053,7 +24054,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 7,
-    "train_pnl": -140.30133600189143,
+    "train_pnl": -99.84028026629626,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24111,10 +24112,10 @@
     "source": "walk-forward",
     "n_train": 6,
     "scores": {
-     "residual": -140.3,
-     "headline": 17.32,
-     "agreement": 6.14,
-     "consensus": 12.82
+     "residual": -99.84,
+     "headline": 60.89,
+     "agreement": 36.39,
+     "consensus": 34.59
     },
     "eligible_variants": [
      "residual",
@@ -24150,12 +24151,12 @@
    "residual": null,
    "naive": {
     "net": -75.5344794385178,
-    "net_conservative": -76.70343881316548,
+    "net_conservative": -75.5344794385178,
     "gross_mid": -70.08906760870364,
     "fees": 2.9579677779886273,
     "slippage": 2.4874440518255407,
     "funding": 0.0,
-    "funding_conservative": -1.1689593746476759,
+    "funding_conservative": 0.0,
     "entry_ms": 1777500000000,
     "exit_ms": 1777564800000,
     "stopped": true,
@@ -24176,11 +24177,11 @@
       "fees": 2.9579677779886273,
       "slippage": 2.4874440518255407,
       "funding": 0.0,
-      "funding_conservative": -1.1689593746476759,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -70.08906760870364,
       "net": -75.5344794385178,
-      "net_conservative": -76.70343881316548
+      "net_conservative": -75.5344794385178
      }
     ]
    },
@@ -24341,7 +24342,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 8,
-    "train_pnl": -59.57811625874721,
+    "train_pnl": -12.125322926064257,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24399,10 +24400,10 @@
     "source": "walk-forward",
     "n_train": 7,
     "scores": {
-     "residual": -59.58,
-     "headline": -61.92,
-     "agreement": 6.14,
-     "consensus": -66.42
+     "residual": -12.13,
+     "headline": -13.67,
+     "agreement": 36.39,
+     "consensus": -39.96
     },
     "eligible_variants": [
      "residual",
@@ -24438,12 +24439,12 @@
    "residual": null,
    "naive": {
     "net": -101.72589903688541,
-    "net_conservative": -104.7118805979557,
+    "net_conservative": -101.72589903688541,
     "gross_mid": -94.79412172466378,
     "fees": 2.9431697753663175,
     "slippage": 3.9886075368553087,
     "funding": 0.0,
-    "funding_conservative": -2.9859815610702896,
+    "funding_conservative": 0.0,
     "entry_ms": 1777932000000,
     "exit_ms": 1777989600000,
     "stopped": true,
@@ -24464,11 +24465,11 @@
       "fees": 2.9431697753663175,
       "slippage": 3.9886075368553087,
       "funding": 0.0,
-      "funding_conservative": -2.9859815610702896,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -94.79412172466378,
       "net": -101.72589903688541,
-      "net_conservative": -104.7118805979557
+      "net_conservative": -101.72589903688541
      }
     ]
    },
@@ -24626,7 +24627,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 8,
-    "train_pnl": -59.57811625874721,
+    "train_pnl": -12.125322926064257,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24664,10 +24665,10 @@
     "source": "walk-forward",
     "n_train": 7,
     "scores": {
-     "residual": -59.58,
-     "headline": -61.92,
-     "agreement": 6.14,
-     "consensus": -66.42
+     "residual": -12.13,
+     "headline": -13.67,
+     "agreement": 36.39,
+     "consensus": -39.96
     },
     "eligible_variants": [
      "residual",
@@ -24708,7 +24709,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 8,
-    "train_pnl": -59.57811625874721,
+    "train_pnl": -12.125322926064257,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24746,10 +24747,10 @@
     "source": "walk-forward",
     "n_train": 7,
     "scores": {
-     "residual": -59.58,
-     "headline": -61.92,
-     "agreement": 6.14,
-     "consensus": -66.42
+     "residual": -12.13,
+     "headline": -13.67,
+     "agreement": 36.39,
+     "consensus": -39.96
     },
     "eligible_variants": [
      "residual",
@@ -24790,7 +24791,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 8,
-    "train_pnl": -59.57811625874721,
+    "train_pnl": -12.125322926064257,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -24852,10 +24853,10 @@
     "source": "walk-forward",
     "n_train": 7,
     "scores": {
-     "residual": -59.58,
-     "headline": -61.92,
-     "agreement": 6.14,
-     "consensus": -66.42
+     "residual": -12.13,
+     "headline": -13.67,
+     "agreement": 36.39,
+     "consensus": -39.96
     },
     "eligible_variants": [
      "residual",
@@ -24894,12 +24895,12 @@
    },
    "residual": {
     "net": 11.17556843988612,
-    "net_conservative": 2.3352920065034084,
+    "net_conservative": 11.17556843988612,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.8402764333827,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -24920,11 +24921,11 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      },
      {
       "role": "hedge",
@@ -24940,11 +24941,11 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.321842716752337,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.39551053229431
+      "net_conservative": -94.07366781554197
      }
     ],
     "attribution": {
@@ -24967,12 +24968,12 @@
    },
    "naive": {
     "net": 105.24923625542809,
-    "net_conservative": 102.73080253879772,
+    "net_conservative": 105.24923625542809,
     "gross_mid": 114.41922901575397,
     "fees": 3.0685696371859796,
     "slippage": 6.101423123139914,
     "funding": 0.0,
-    "funding_conservative": -2.5184337166303634,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -24993,22 +24994,22 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      }
     ]
    },
    "unhedged": {
     "net": 105.24923625542809,
-    "net_conservative": 102.73080253879772,
+    "net_conservative": 105.24923625542809,
     "gross_mid": 114.41922901575397,
     "fees": 3.0685696371859796,
     "slippage": 6.101423123139914,
     "funding": 0.0,
-    "funding_conservative": -2.5184337166303634,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -25029,22 +25030,22 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      }
     ]
    },
    "v_residual": {
     "net": 11.17556843988612,
-    "net_conservative": 2.3352920065034084,
+    "net_conservative": 11.17556843988612,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.8402764333827,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -25065,11 +25066,11 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      },
      {
       "role": "hedge",
@@ -25085,22 +25086,22 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.321842716752337,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.39551053229431
+      "net_conservative": -94.07366781554197
      }
     ]
    },
    "v_headline": {
     "net": 11.17556843988612,
-    "net_conservative": 2.3352920065034084,
+    "net_conservative": 11.17556843988612,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.8402764333827,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -25121,11 +25122,11 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      },
      {
       "role": "hedge",
@@ -25141,22 +25142,22 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.321842716752337,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.39551053229431
+      "net_conservative": -94.07366781554197
      }
     ]
    },
    "v_agreement": {
     "net": 11.17556843988612,
-    "net_conservative": 2.3352920065034084,
+    "net_conservative": 11.17556843988612,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.8402764333827,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -25177,11 +25178,11 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      },
      {
       "role": "hedge",
@@ -25197,22 +25198,22 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.321842716752337,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.39551053229431
+      "net_conservative": -94.07366781554197
      }
     ]
    },
    "v_consensus": {
     "net": 11.17556843988612,
-    "net_conservative": 2.3352920065034084,
+    "net_conservative": 11.17556843988612,
     "gross_mid": 31.653819472687417,
     "fees": 10.039289875950079,
     "slippage": 10.438961156851228,
     "funding": 0.0,
-    "funding_conservative": -8.8402764333827,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -25233,11 +25234,11 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      },
      {
       "role": "hedge",
@@ -25253,24 +25254,24 @@
       "fees": 6.9707202387641,
       "slippage": 4.337538033711313,
       "funding": 0.0,
-      "funding_conservative": -6.321842716752337,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -82.76540954306655,
       "net": -94.07366781554197,
-      "net_conservative": -100.39551053229431
+      "net_conservative": -94.07366781554197
      }
     ]
    },
-   "balance_after": 99828.99709207658,
+   "balance_after": 99875.7895244251,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 105.24923625542809,
-    "net_conservative": 102.73080253879772,
+    "net_conservative": 105.24923625542809,
     "gross_mid": 114.41922901575397,
     "fees": 3.0685696371859796,
     "slippage": 6.101423123139914,
     "funding": 0.0,
-    "funding_conservative": -2.5184337166303634,
+    "funding_conservative": 0.0,
     "entry_ms": 1778018400000,
     "exit_ms": 1778104800000,
     "stopped": false,
@@ -25291,11 +25292,11 @@
       "fees": 3.0685696371859796,
       "slippage": 6.101423123139914,
       "funding": 0.0,
-      "funding_conservative": -2.5184337166303634,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 114.41922901575397,
       "net": 105.24923625542809,
-      "net_conservative": 102.73080253879772
+      "net_conservative": 105.24923625542809
      }
     ]
    },
@@ -25458,7 +25459,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -25498,10 +25499,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -25553,7 +25554,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -25615,10 +25616,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -25654,12 +25655,12 @@
    "residual": null,
    "naive": {
     "net": -20.409760050103344,
-    "net_conservative": -21.45273176956036,
+    "net_conservative": -20.409760050103344,
     "gross_mid": -13.461538461538437,
     "fees": 2.9919294851092837,
     "slippage": 3.956292103455624,
     "funding": 0.0,
-    "funding_conservative": -1.0429717194570136,
+    "funding_conservative": 0.0,
     "entry_ms": 1779314400000,
     "exit_ms": 1779400800000,
     "stopped": false,
@@ -25680,11 +25681,11 @@
       "fees": 2.9919294851092837,
       "slippage": 3.956292103455624,
       "funding": 0.0,
-      "funding_conservative": -1.0429717194570136,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -13.461538461538437,
       "net": -20.409760050103344,
-      "net_conservative": -21.45273176956036
+      "net_conservative": -20.409760050103344
      }
     ]
    },
@@ -25849,7 +25850,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -25909,10 +25910,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -25948,12 +25949,12 @@
    "residual": null,
    "naive": {
     "net": -80.06506095989404,
-    "net_conservative": -81.22116706252928,
+    "net_conservative": -80.06506095989404,
     "gross_mid": -71.20566673271252,
     "fees": 2.957327759803875,
     "slippage": 5.902066467377662,
     "funding": 0.0,
-    "funding_conservative": -1.156106102635229,
+    "funding_conservative": 0.0,
     "entry_ms": 1779919200000,
     "exit_ms": 1779926400000,
     "stopped": true,
@@ -25974,11 +25975,11 @@
       "fees": 2.957327759803875,
       "slippage": 5.902066467377662,
       "funding": 0.0,
-      "funding_conservative": -1.156106102635229,
+      "funding_conservative": 0.0,
       "funding_settlements": 1,
       "gross_mid": -71.20566673271252,
       "net": -80.06506095989404,
-      "net_conservative": -81.22116706252928
+      "net_conservative": -80.06506095989404
      }
     ]
    },
@@ -26143,7 +26144,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26183,10 +26184,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -26231,7 +26232,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26271,10 +26272,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -26319,7 +26320,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26359,10 +26360,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -26407,7 +26408,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26447,10 +26448,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -26495,7 +26496,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26535,10 +26536,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -26583,7 +26584,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 10,
-    "train_pnl": 43.37843876723084,
+    "train_pnl": 113.96439062795147,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -26647,10 +26648,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": 43.38,
-     "headline": -245.92,
-     "agreement": -78.88,
-     "consensus": -250.42
+     "residual": 113.96,
+     "headline": -177.54,
+     "agreement": -34.62,
+     "consensus": -203.83
     },
     "eligible_variants": [
      "residual",
@@ -26685,12 +26686,12 @@
    },
    "residual": {
     "net": -3.9935550504830957,
-    "net_conservative": -8.164230669095929,
+    "net_conservative": -3.9935550504830957,
     "gross_mid": 4.208271731286459,
     "fees": 4.026195206142282,
     "slippage": 4.175631575627272,
     "funding": 0.0,
-    "funding_conservative": -4.170675618612833,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780610400000,
     "stopped": false,
@@ -26711,11 +26712,11 @@
       "fees": 1.4949534387302452,
       "slippage": 2.5863616049475007,
       "funding": 0.0,
-      "funding_conservative": -1.8718191534843949,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 8.4022136715595,
       "net": 4.320898627881753,
-      "net_conservative": 2.4490794743973585
+      "net_conservative": 4.320898627881753
      },
      {
       "role": "hedge",
@@ -26731,11 +26732,11 @@
       "fees": 2.531241767412037,
       "slippage": 1.5892699706797713,
       "funding": 0.0,
-      "funding_conservative": -2.2988564651284378,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -4.1939419402730405,
       "net": -8.314453678364849,
-      "net_conservative": -10.613310143493287
+      "net_conservative": -8.314453678364849
      }
     ],
     "attribution": {
@@ -26758,12 +26759,12 @@
    },
    "naive": {
     "net": -80.98892097390868,
-    "net_conservative": -83.5087114826731,
+    "net_conservative": -80.98892097390868,
     "gross_mid": -72.91815115671449,
     "fees": 2.9562945241897434,
     "slippage": 5.114475293004453,
     "funding": 0.0,
-    "funding_conservative": -2.5197905087644292,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780574400000,
     "stopped": true,
@@ -26784,22 +26785,22 @@
       "fees": 2.9562945241897434,
       "slippage": 5.114475293004453,
       "funding": 0.0,
-      "funding_conservative": -2.5197905087644292,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -72.91815115671449,
       "net": -80.98892097390868,
-      "net_conservative": -83.5087114826731
+      "net_conservative": -80.98892097390868
      }
     ]
    },
    "unhedged": {
     "net": -38.02665749744002,
-    "net_conservative": -38.64745484673459,
+    "net_conservative": -38.02665749744002,
     "gross_mid": -33.87606289487443,
     "fees": 1.5203467364268204,
     "slippage": 2.6302478661387667,
     "funding": 0.0,
-    "funding_conservative": -0.6207973492945703,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780556400000,
     "stopped": true,
@@ -26820,22 +26821,22 @@
       "fees": 1.5203467364268204,
       "slippage": 2.6302478661387667,
       "funding": 0.0,
-      "funding_conservative": -0.6207973492945703,
+      "funding_conservative": 0.0,
       "funding_settlements": 1,
       "gross_mid": -33.87606289487443,
       "net": -38.02665749744002,
-      "net_conservative": -38.64745484673459
+      "net_conservative": -38.02665749744002
      }
     ]
    },
    "v_residual": {
     "net": -3.9935550504830957,
-    "net_conservative": -8.164230669095929,
+    "net_conservative": -3.9935550504830957,
     "gross_mid": 4.208271731286459,
     "fees": 4.026195206142282,
     "slippage": 4.175631575627272,
     "funding": 0.0,
-    "funding_conservative": -4.170675618612833,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780610400000,
     "stopped": false,
@@ -26856,11 +26857,11 @@
       "fees": 1.4949534387302452,
       "slippage": 2.5863616049475007,
       "funding": 0.0,
-      "funding_conservative": -1.8718191534843949,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": 8.4022136715595,
       "net": 4.320898627881753,
-      "net_conservative": 2.4490794743973585
+      "net_conservative": 4.320898627881753
      },
      {
       "role": "hedge",
@@ -26876,22 +26877,22 @@
       "fees": 2.531241767412037,
       "slippage": 1.5892699706797713,
       "funding": 0.0,
-      "funding_conservative": -2.2988564651284378,
+      "funding_conservative": 0.0,
       "funding_settlements": 3,
       "gross_mid": -4.1939419402730405,
       "net": -8.314453678364849,
-      "net_conservative": -10.613310143493287
+      "net_conservative": -8.314453678364849
      }
     ]
    },
    "v_headline": {
     "net": -41.662270472845606,
-    "net_conservative": -44.455606647365435,
+    "net_conservative": -41.662270472845606,
     "gross_mid": -33.53269236248339,
     "fees": 3.9975042822387534,
     "slippage": 4.132073828123457,
     "funding": 0.0,
-    "funding_conservative": -2.7933361745198315,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780581600000,
     "stopped": true,
@@ -26912,11 +26913,11 @@
       "fees": 1.4718298989382588,
       "slippage": 2.546296900208065,
       "funding": 0.0,
-      "funding_conservative": -1.2598952543822146,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -46.99895491900618,
       "net": -51.017081718152504,
-      "net_conservative": -52.27697697253472
+      "net_conservative": -51.017081718152504
      },
      {
       "role": "hedge",
@@ -26932,23 +26933,23 @@
       "fees": 2.525674383300495,
       "slippage": 1.5857769279153924,
       "funding": 0.0,
-      "funding_conservative": -1.533440920137617,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 13.46626255652279,
       "net": 9.354811245306902,
-      "net_conservative": 7.821370325169285
+      "net_conservative": 9.354811245306902
      }
     ]
    },
    "v_agreement": null,
    "v_consensus": {
     "net": -41.662270472845606,
-    "net_conservative": -44.455606647365435,
+    "net_conservative": -41.662270472845606,
     "gross_mid": -33.53269236248339,
     "fees": 3.9975042822387534,
     "slippage": 4.132073828123457,
     "funding": 0.0,
-    "funding_conservative": -2.7933361745198315,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780581600000,
     "stopped": true,
@@ -26969,11 +26970,11 @@
       "fees": 1.4718298989382588,
       "slippage": 2.546296900208065,
       "funding": 0.0,
-      "funding_conservative": -1.2598952543822146,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -46.99895491900618,
       "net": -51.017081718152504,
-      "net_conservative": -52.27697697253472
+      "net_conservative": -51.017081718152504
      },
      {
       "role": "hedge",
@@ -26989,24 +26990,24 @@
       "fees": 2.525674383300495,
       "slippage": 1.5857769279153924,
       "funding": 0.0,
-      "funding_conservative": -1.533440920137617,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": 13.46626255652279,
       "net": 9.354811245306902,
-      "net_conservative": 7.821370325169285
+      "net_conservative": 9.354811245306902
      }
     ]
    },
-   "balance_after": 99820.83286140749,
+   "balance_after": 99871.79596937461,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -40.49446048695434,
-    "net_conservative": -41.75435574133655,
+    "net_conservative": -40.49446048695434,
     "gross_mid": -36.45907557835724,
     "fees": 1.4781472620948717,
     "slippage": 2.5572376465022266,
     "funding": 0.0,
-    "funding_conservative": -1.2598952543822146,
+    "funding_conservative": 0.0,
     "entry_ms": 1780524000000,
     "exit_ms": 1780574400000,
     "stopped": true,
@@ -27027,11 +27028,11 @@
       "fees": 1.4781472620948717,
       "slippage": 2.5572376465022266,
       "funding": 0.0,
-      "funding_conservative": -1.2598952543822146,
+      "funding_conservative": 0.0,
       "funding_settlements": 2,
       "gross_mid": -36.45907557835724,
       "net": -40.49446048695434,
-      "net_conservative": -41.75435574133655
+      "net_conservative": -40.49446048695434
      }
     ]
    },
@@ -27195,7 +27196,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 27.049977429038982,
+    "train_pnl": 105.97728052698528,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -27256,10 +27257,10 @@
     "source": "walk-forward",
     "n_train": 11,
     "scores": {
-     "residual": 27.05,
-     "headline": -334.83,
-     "agreement": -78.88,
-     "consensus": -339.33
+     "residual": 105.98,
+     "headline": -260.86,
+     "agreement": -34.62,
+     "consensus": -287.16
     },
     "eligible_variants": [
      "residual",
@@ -27491,7 +27492,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 27.049977429038982,
+    "train_pnl": 105.97728052698528,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -27552,10 +27553,10 @@
     "source": "walk-forward",
     "n_train": 11,
     "scores": {
-     "residual": 27.05,
-     "headline": -334.83,
-     "agreement": -78.88,
-     "consensus": -339.33
+     "residual": 105.98,
+     "headline": -260.86,
+     "agreement": -34.62,
+     "consensus": -287.16
     },
     "eligible_variants": [
      "residual",
@@ -27797,7 +27798,7 @@
     "k": 1.0,
     "source": "walk-forward",
     "n_train": 11,
-    "train_pnl": 27.049977429038982,
+    "train_pnl": 105.97728052698528,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -27862,10 +27863,10 @@
     "source": "walk-forward",
     "n_train": 11,
     "scores": {
-     "residual": 27.05,
-     "headline": -334.83,
-     "agreement": -78.88,
-     "consensus": -339.33
+     "residual": 105.98,
+     "headline": -260.86,
+     "agreement": -34.62,
+     "consensus": -287.16
     },
     "eligible_variants": [
      "residual",
@@ -28212,7 +28213,7 @@
     ]
    },
    "v_consensus": null,
-   "balance_after": 99751.99667056005,
+   "balance_after": 99802.95977852718,
    "naive_direction": 1,
    "naive_same_events": {
     "net": -37.638176863093186,
@@ -28421,7 +28422,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 12,
-    "train_pnl": -73.57128559043565,
+    "train_pnl": -8.936864587144328,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -28489,10 +28490,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": -73.57,
-     "headline": -148.5,
-     "agreement": 8.48,
-     "consensus": -153.0
+     "residual": -8.94,
+     "headline": -85.82,
+     "agreement": 47.57,
+     "consensus": -112.11
     },
     "eligible_variants": [
      "residual",
@@ -28904,7 +28905,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 12,
-    "train_pnl": -73.57128559043565,
+    "train_pnl": -8.936864587144328,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -28972,10 +28973,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": -73.57,
-     "headline": -148.5,
-     "agreement": 8.48,
-     "consensus": -153.0
+     "residual": -8.94,
+     "headline": -85.82,
+     "agreement": 47.57,
+     "consensus": -112.11
     },
     "eligible_variants": [
      "residual",
@@ -29387,7 +29388,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 12,
-    "train_pnl": -73.57128559043565,
+    "train_pnl": -8.936864587144328,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -29455,10 +29456,10 @@
     "source": "walk-forward",
     "n_train": 9,
     "scores": {
-     "residual": -73.57,
-     "headline": -148.5,
-     "agreement": 8.48,
-     "consensus": -153.0
+     "residual": -8.94,
+     "headline": -85.82,
+     "agreement": 47.57,
+     "consensus": -112.11
     },
     "eligible_variants": [
      "residual",
@@ -29854,7 +29855,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 13,
-    "train_pnl": -239.25918846086577,
+    "train_pnl": -174.62476745757445,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -29921,10 +29922,10 @@
     "source": "walk-forward",
     "n_train": 10,
     "scores": {
-     "residual": -239.26,
-     "headline": -130.4,
-     "agreement": 8.48,
-     "consensus": -134.9
+     "residual": -174.62,
+     "headline": -67.72,
+     "agreement": 47.57,
+     "consensus": -94.01
     },
     "eligible_variants": [
      "residual",
@@ -30325,7 +30326,7 @@
      }
     ]
    },
-   "balance_after": 99812.95258861237,
+   "balance_after": 99863.9156965795,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 61.03353420078007,
@@ -30518,7 +30519,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": -175.9964808732314,
+    "train_pnl": -111.36205986994008,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -30588,10 +30589,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": -176.0,
-     "headline": -67.31,
-     "agreement": 130.39,
-     "consensus": -71.63
+     "residual": -111.36,
+     "headline": -4.63,
+     "agreement": 169.48,
+     "consensus": -30.75
     },
     "eligible_variants": [
      "residual",
@@ -30938,7 +30939,7 @@
     ]
    },
    "v_consensus": null,
-   "balance_after": 100089.34865690822,
+   "balance_after": 100140.31176487534,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 343.5330995410552,
@@ -31142,7 +31143,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": -175.9964808732314,
+    "train_pnl": -111.36205986994008,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -31188,10 +31189,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": -176.0,
-     "headline": -67.31,
-     "agreement": 130.39,
-     "consensus": -71.63
+     "residual": -111.36,
+     "headline": -4.63,
+     "agreement": 169.48,
+     "consensus": -30.75
     },
     "eligible_variants": [
      "residual",
@@ -31238,7 +31239,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 16,
-    "train_pnl": -175.9964808732314,
+    "train_pnl": -111.36205986994008,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -31310,10 +31311,10 @@
     "source": "walk-forward",
     "n_train": 13,
     "scores": {
-     "residual": -176.0,
-     "headline": -67.31,
-     "agreement": 130.39,
-     "consensus": -71.63
+     "residual": -111.36,
+     "headline": -4.63,
+     "agreement": 169.48,
+     "consensus": -30.75
     },
     "eligible_variants": [
      "residual",
@@ -31729,7 +31730,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 18,
-    "train_pnl": 2.5083027857922886,
+    "train_pnl": 67.14272378908362,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -31803,10 +31804,10 @@
     "source": "walk-forward",
     "n_train": 15,
     "scores": {
-     "residual": 2.51,
-     "headline": 280.05,
-     "agreement": 406.79,
-     "consensus": -0.66
+     "residual": 67.14,
+     "headline": 342.73,
+     "agreement": 445.88,
+     "consensus": 40.22
     },
     "eligible_variants": [
      "residual",
@@ -32153,7 +32154,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 19,
-    "train_pnl": 242.31662621048335,
+    "train_pnl": 306.9510472137747,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -32225,10 +32226,10 @@
     "source": "walk-forward",
     "n_train": 16,
     "scores": {
-     "residual": 242.32,
-     "headline": 184.49,
-     "agreement": 406.79,
-     "consensus": -0.66
+     "residual": 306.95,
+     "headline": 247.17,
+     "agreement": 445.88,
+     "consensus": 40.22
     },
     "eligible_variants": [
      "residual",
@@ -32470,7 +32471,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 19,
-    "train_pnl": 242.31662621048335,
+    "train_pnl": 306.9510472137747,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -32540,10 +32541,10 @@
     "source": "walk-forward",
     "n_train": 16,
     "scores": {
-     "residual": 242.32,
-     "headline": 184.49,
-     "agreement": 406.79,
-     "consensus": -0.66
+     "residual": 306.95,
+     "headline": 247.17,
+     "agreement": 445.88,
+     "consensus": 40.22
     },
     "eligible_variants": [
      "residual",
@@ -32781,7 +32782,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 19,
-    "train_pnl": 242.31662621048335,
+    "train_pnl": 306.9510472137747,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -32854,10 +32855,10 @@
     "source": "walk-forward",
     "n_train": 16,
     "scores": {
-     "residual": 242.32,
-     "headline": 184.49,
-     "agreement": 406.79,
-     "consensus": -0.66
+     "residual": 306.95,
+     "headline": 247.17,
+     "agreement": 445.88,
+     "consensus": 40.22
     },
     "eligible_variants": [
      "residual",
@@ -33204,7 +33205,7 @@
     ]
    },
    "v_consensus": null,
-   "balance_after": 100071.80834858553,
+   "balance_after": 100122.77145655265,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 44.439340180778245,
@@ -33408,7 +33409,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 19,
-    "train_pnl": 242.31662621048335,
+    "train_pnl": 306.9510472137747,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -33481,10 +33482,10 @@
     "source": "walk-forward",
     "n_train": 16,
     "scores": {
-     "residual": 242.32,
-     "headline": 184.49,
-     "agreement": 406.79,
-     "consensus": -0.66
+     "residual": 306.95,
+     "headline": 247.17,
+     "agreement": 445.88,
+     "consensus": 40.22
     },
     "eligible_variants": [
      "residual",
@@ -33886,7 +33887,7 @@
      }
     ]
    },
-   "balance_after": 100138.69693938208,
+   "balance_after": 100189.6600473492,
    "naive_direction": 1,
    "naive_same_events": {
     "net": 75.6634257813562,
@@ -34095,7 +34096,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 19,
-    "train_pnl": 242.31662621048335,
+    "train_pnl": 306.9510472137747,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -34170,10 +34171,10 @@
     "source": "walk-forward",
     "n_train": 16,
     "scores": {
-     "residual": 242.32,
-     "headline": 184.49,
-     "agreement": 406.79,
-     "consensus": -0.66
+     "residual": 306.95,
+     "headline": 247.17,
+     "agreement": 445.88,
+     "consensus": 40.22
     },
     "eligible_variants": [
      "residual",
@@ -34585,7 +34586,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 22,
-    "train_pnl": 150.63126406674078,
+    "train_pnl": 215.2656850700321,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -34658,10 +34659,10 @@
     "source": "walk-forward",
     "n_train": 19,
     "scores": {
-     "residual": 150.63,
-     "headline": 205.98,
-     "agreement": 393.18,
-     "consensus": -11.85
+     "residual": 215.27,
+     "headline": 268.66,
+     "agreement": 432.27,
+     "consensus": 29.03
     },
     "eligible_variants": [
      "residual",
@@ -34899,7 +34900,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 22,
-    "train_pnl": 150.63126406674078,
+    "train_pnl": 215.2656850700321,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -34975,10 +34976,10 @@
     "source": "walk-forward",
     "n_train": 19,
     "scores": {
-     "residual": 150.63,
-     "headline": 205.98,
-     "agreement": 393.18,
-     "consensus": -11.85
+     "residual": 215.27,
+     "headline": 268.66,
+     "agreement": 432.27,
+     "consensus": 29.03
     },
     "eligible_variants": [
      "residual",
@@ -35215,7 +35216,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 22,
-    "train_pnl": 150.63126406674078,
+    "train_pnl": 215.2656850700321,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -35287,10 +35288,10 @@
     "source": "walk-forward",
     "n_train": 19,
     "scores": {
-     "residual": 150.63,
-     "headline": 205.98,
-     "agreement": 393.18,
-     "consensus": -11.85
+     "residual": 215.27,
+     "headline": 268.66,
+     "agreement": 432.27,
+     "consensus": 29.03
     },
     "eligible_variants": [
      "residual",
@@ -35528,7 +35529,7 @@
     "k": 5.0,
     "source": "walk-forward",
     "n_train": 22,
-    "train_pnl": 150.63126406674078,
+    "train_pnl": 215.2656850700321,
     "train_events": [
      "NVDA-2025-11-19",
      "META-2026-01-28",
@@ -35603,10 +35604,10 @@
     "source": "walk-forward",
     "n_train": 19,
     "scores": {
-     "residual": 150.63,
-     "headline": 205.98,
-     "agreement": 393.18,
-     "consensus": -11.85
+     "residual": 215.27,
+     "headline": 268.66,
+     "agreement": 432.27,
+     "consensus": 29.03
     },
     "eligible_variants": [
      "residual",
@@ -36623,7 +36624,7 @@
    "time_utc": "2026-08-27T22:00Z"
   }
  ],
- "final_balance": 100138.69693938208,
+ "final_balance": 100189.6600473492,
  "size_study": [
   {
    "notional": 1000,
@@ -36645,14 +36646,14 @@
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 4.11,
+     "total_net_pnl": 27.83,
      "trades": 21,
-     "sharpe_daily_ann": 0.032
+     "sharpe_daily_ann": 0.214
     },
     "naive_same_events": {
-     "total_net_pnl": 248.23,
+     "total_net_pnl": 258.18,
      "trades": 21,
-     "sharpe_daily_ann": 1.355
+     "sharpe_daily_ann": 1.407
     }
    }
   },
@@ -36676,14 +36677,14 @@
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 138.7,
+     "total_net_pnl": 189.66,
      "trades": 15,
-     "sharpe_daily_ann": 0.452
+     "sharpe_daily_ann": 0.619
     },
     "naive_same_events": {
-     "total_net_pnl": 525.88,
+     "total_net_pnl": 547.47,
      "trades": 15,
-     "sharpe_daily_ann": 1.325
+     "sharpe_daily_ann": 1.376
     }
    }
   },
@@ -36707,14 +36708,14 @@
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 523.26,
+     "total_net_pnl": 614.21,
      "trades": 13,
-     "sharpe_daily_ann": 0.863
+     "sharpe_daily_ann": 1.014
     },
     "naive_same_events": {
-     "total_net_pnl": 939.13,
+     "total_net_pnl": 976.34,
      "trades": 13,
-     "sharpe_daily_ann": 1.24
+     "sharpe_daily_ann": 1.286
     }
    }
   },
@@ -36738,14 +36739,14 @@
    },
    "conservative": {
     "residual": {
-     "total_net_pnl": 865.18,
+     "total_net_pnl": 991.88,
      "trades": 13,
-     "sharpe_daily_ann": 0.734
+     "sharpe_daily_ann": 0.845
     },
     "naive_same_events": {
-     "total_net_pnl": 1543.0,
+     "total_net_pnl": 1594.46,
      "trades": 13,
-     "sharpe_daily_ann": 1.064
+     "sharpe_daily_ann": 1.099
     }
    }
   }
@@ -37056,259 +37057,259 @@
   },
   "summary_conservative_funding": {
    "residual": {
-    "sharpe_per_trade": 0.408,
-    "sortino_per_trade": 0.909,
-    "sharpe_daily_ann": 0.695,
-    "sortino_daily_ann": 1.349,
+    "sharpe_per_trade": 0.427,
+    "sortino_per_trade": 0.962,
+    "sharpe_daily_ann": 0.728,
+    "sortino_daily_ann": 1.43,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": 116.72,
+    "total_net_pnl": 122.19,
     "trades": 6,
     "excluded_funding_unavailable": 0,
     "no_trades": 6,
     "hit_rate": 0.667,
-    "avg_pnl_per_trade": 19.45,
-    "pnl_std_per_trade": 79.69,
-    "max_drawdown": -106.66,
+    "avg_pnl_per_trade": 20.36,
+    "pnl_std_per_trade": 79.36,
+    "max_drawdown": -103.11,
     "avg_holding_hours": 22.8,
-    "return_on_start_balance_pct": 0.117,
+    "return_on_start_balance_pct": 0.122,
     "equity_curve": [
      0.0,
      0.0,
-     -87.68,
-     -69.82,
-     -106.66,
-     -106.66,
-     -80.84,
-     -80.84,
-     -80.84,
-     65.25,
-     116.72,
-     116.72
+     -86.63,
+     -66.82,
+     -103.11,
+     -103.11,
+     -75.37,
+     -75.37,
+     -75.37,
+     70.72,
+     122.19,
+     122.19
     ]
    },
    "unhedged": {
-    "sharpe_per_trade": -0.146,
-    "sortino_per_trade": -0.204,
-    "sharpe_daily_ann": -1.112,
-    "sortino_daily_ann": -1.202,
+    "sharpe_per_trade": -0.129,
+    "sortino_per_trade": -0.183,
+    "sharpe_daily_ann": -1.082,
+    "sortino_daily_ann": -1.174,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": -181.95,
+    "total_net_pnl": -176.67,
     "trades": 6,
     "excluded_funding_unavailable": 0,
     "no_trades": 6,
     "hit_rate": 0.5,
-    "avg_pnl_per_trade": -30.33,
-    "pnl_std_per_trade": 73.28,
-    "max_drawdown": -242.99,
+    "avg_pnl_per_trade": -29.44,
+    "pnl_std_per_trade": 73.48,
+    "max_drawdown": -237.7,
     "avg_holding_hours": 17.2,
-    "return_on_start_balance_pct": -0.182,
+    "return_on_start_balance_pct": -0.177,
     "equity_curve": [
      0.0,
      0.0,
-     -123.4,
-     -115.53,
-     -201.29,
-     -201.29,
-     -171.5,
-     -171.5,
-     -171.5,
-     -242.99,
-     -181.95,
-     -181.95
+     -122.35,
+     -112.54,
+     -197.93,
+     -197.93,
+     -166.22,
+     -166.22,
+     -166.22,
+     -237.7,
+     -176.67,
+     -176.67
     ]
    },
    "naive_same_events": {
-    "sharpe_per_trade": 0.137,
-    "sortino_per_trade": 0.222,
-    "sharpe_daily_ann": 0.352,
-    "sortino_daily_ann": 0.5,
+    "sharpe_per_trade": 0.152,
+    "sortino_per_trade": 0.247,
+    "sharpe_daily_ann": 0.382,
+    "sortino_daily_ann": 0.546,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": 59.75,
+    "total_net_pnl": 64.6,
     "trades": 6,
     "excluded_funding_unavailable": 0,
     "no_trades": 6,
     "hit_rate": 0.667,
-    "avg_pnl_per_trade": 9.96,
-    "pnl_std_per_trade": 82.67,
-    "max_drawdown": -123.4,
+    "avg_pnl_per_trade": 10.77,
+    "pnl_std_per_trade": 82.28,
+    "max_drawdown": -122.35,
     "avg_holding_hours": 21.0,
-    "return_on_start_balance_pct": 0.06,
+    "return_on_start_balance_pct": 0.065,
     "equity_curve": [
      0.0,
      0.0,
-     -123.4,
-     -115.53,
-     -13.94,
-     -13.94,
-     -59.35,
-     -59.35,
-     -59.35,
-     -1.28,
-     59.75,
-     59.75
+     -122.35,
+     -112.54,
+     -10.39,
+     -10.39,
+     -54.51,
+     -54.51,
+     -54.51,
+     3.56,
+     64.6,
+     64.6
     ]
    },
    "naive": {
-    "sharpe_per_trade": -0.05,
-    "sortino_per_trade": -0.071,
-    "sharpe_daily_ann": -0.167,
-    "sortino_daily_ann": -0.213,
+    "sharpe_per_trade": -0.039,
+    "sortino_per_trade": -0.056,
+    "sharpe_daily_ann": -0.13,
+    "sortino_daily_ann": -0.167,
     "days": 303,
     "basis": "conservative",
-    "total_net_pnl": -45.56,
+    "total_net_pnl": -35.19,
     "trades": 10,
     "excluded_funding_unavailable": 0,
     "no_trades": 2,
     "hit_rate": 0.5,
-    "avg_pnl_per_trade": -4.56,
-    "pnl_std_per_trade": 91.6,
-    "max_drawdown": -301.35,
+    "avg_pnl_per_trade": -3.52,
+    "pnl_std_per_trade": 91.2,
+    "max_drawdown": -290.98,
     "avg_holding_hours": 20.8,
-    "return_on_start_balance_pct": -0.046,
+    "return_on_start_balance_pct": -0.035,
     "equity_curve": [
      0.0,
      0.0,
-     -123.4,
-     -107.66,
-     -6.07,
-     -113.0,
-     -203.81,
-     -279.9,
-     -301.35,
-     -243.29,
-     -121.22,
-     -45.56
+     -122.35,
+     -102.72,
+     -0.58,
+     -106.81,
+     -195.04,
+     -270.58,
+     -290.98,
+     -232.92,
+     -110.85,
+     -35.19
     ]
    },
    "v_residual": {
-    "sharpe_per_trade": 0.408,
-    "sortino_per_trade": 0.909,
-    "sharpe_daily_ann": 0.695,
-    "sortino_daily_ann": 1.349,
+    "sharpe_per_trade": 0.427,
+    "sortino_per_trade": 0.962,
+    "sharpe_daily_ann": 0.728,
+    "sortino_daily_ann": 1.43,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": 116.72,
+    "total_net_pnl": 122.19,
     "trades": 6,
     "excluded_funding_unavailable": 0,
     "no_trades": 6,
     "hit_rate": 0.667,
-    "avg_pnl_per_trade": 19.45,
-    "pnl_std_per_trade": 79.69,
-    "max_drawdown": -106.66,
+    "avg_pnl_per_trade": 20.36,
+    "pnl_std_per_trade": 79.36,
+    "max_drawdown": -103.11,
     "avg_holding_hours": 22.8,
-    "return_on_start_balance_pct": 0.117,
+    "return_on_start_balance_pct": 0.122,
     "equity_curve": [
      0.0,
      0.0,
-     -87.68,
-     -69.82,
-     -106.66,
-     -106.66,
-     -80.84,
-     -80.84,
-     -80.84,
-     65.25,
-     116.72,
-     116.72
+     -86.63,
+     -66.82,
+     -103.11,
+     -103.11,
+     -75.37,
+     -75.37,
+     -75.37,
+     70.72,
+     122.19,
+     122.19
     ]
    },
    "v_headline": {
-    "sharpe_per_trade": -0.177,
-    "sortino_per_trade": -0.244,
-    "sharpe_daily_ann": -0.932,
-    "sortino_daily_ann": -1.03,
+    "sharpe_per_trade": -0.16,
+    "sortino_per_trade": -0.223,
+    "sharpe_daily_ann": -0.897,
+    "sortino_daily_ann": -0.995,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": -114.72,
+    "total_net_pnl": -109.88,
     "trades": 6,
     "excluded_funding_unavailable": 0,
     "no_trades": 6,
     "hit_rate": 0.5,
-    "avg_pnl_per_trade": -19.12,
-    "pnl_std_per_trade": 56.76,
-    "max_drawdown": -166.19,
+    "avg_pnl_per_trade": -18.31,
+    "pnl_std_per_trade": 56.75,
+    "max_drawdown": -161.35,
     "avg_holding_hours": 19.2,
-    "return_on_start_balance_pct": -0.115,
+    "return_on_start_balance_pct": -0.11,
     "equity_curve": [
      0.0,
      0.0,
-     -87.68,
-     -69.82,
-     -51.82,
-     -51.82,
-     -89.27,
-     -89.27,
-     -89.27,
-     -166.19,
-     -114.72,
-     -114.72
+     -86.63,
+     -66.82,
+     -48.27,
+     -48.27,
+     -84.43,
+     -84.43,
+     -84.43,
+     -161.35,
+     -109.88,
+     -109.88
     ]
    },
    "v_agreement": {
-    "sharpe_per_trade": 0.176,
-    "sortino_per_trade": 0.336,
-    "sharpe_daily_ann": -0.195,
-    "sortino_daily_ann": -0.23,
+    "sharpe_per_trade": 0.193,
+    "sortino_per_trade": 0.373,
+    "sharpe_daily_ann": -0.164,
+    "sortino_daily_ann": -0.195,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": -18.34,
+    "total_net_pnl": -15.35,
     "trades": 3,
     "excluded_funding_unavailable": 0,
     "no_trades": 9,
     "hit_rate": 0.667,
-    "avg_pnl_per_trade": -6.11,
-    "pnl_std_per_trade": 72.61,
-    "max_drawdown": -87.68,
+    "avg_pnl_per_trade": -5.12,
+    "pnl_std_per_trade": 72.35,
+    "max_drawdown": -86.63,
     "avg_holding_hours": 21.7,
-    "return_on_start_balance_pct": -0.018,
+    "return_on_start_balance_pct": -0.015,
     "equity_curve": [
      0.0,
      0.0,
-     -87.68,
-     -69.82,
-     -69.82,
-     -69.82,
-     -69.82,
-     -69.82,
-     -69.82,
-     -69.82,
-     -18.34,
-     -18.34
+     -86.63,
+     -66.82,
+     -66.82,
+     -66.82,
+     -66.82,
+     -66.82,
+     -66.82,
+     -66.82,
+     -15.35,
+     -15.35
     ]
    },
    "v_consensus": {
-    "sharpe_per_trade": 0.234,
-    "sortino_per_trade": 0.474,
-    "sharpe_daily_ann": 0.542,
-    "sortino_daily_ann": 1.041,
+    "sharpe_per_trade": 0.251,
+    "sortino_per_trade": 0.514,
+    "sharpe_daily_ann": 0.57,
+    "sortino_daily_ann": 1.108,
     "days": 302,
     "basis": "conservative",
-    "total_net_pnl": 90.29,
+    "total_net_pnl": 94.58,
     "trades": 5,
     "excluded_funding_unavailable": 0,
     "no_trades": 7,
     "hit_rate": 0.6,
-    "avg_pnl_per_trade": 18.06,
-    "pnl_std_per_trade": 89.12,
-    "max_drawdown": -107.26,
+    "avg_pnl_per_trade": 18.92,
+    "pnl_std_per_trade": 88.61,
+    "max_drawdown": -102.98,
     "avg_holding_hours": 20.0,
-    "return_on_start_balance_pct": 0.09,
+    "return_on_start_balance_pct": 0.095,
     "equity_curve": [
      0.0,
      0.0,
-     -87.68,
-     -69.82,
-     -69.82,
-     -69.82,
-     -107.26,
-     -107.26,
-     -107.26,
-     38.82,
-     90.29,
-     90.29
+     -86.63,
+     -66.82,
+     -66.82,
+     -66.82,
+     -102.98,
+     -102.98,
+     -102.98,
+     43.11,
+     94.58,
+     94.58
     ]
    },
    "no_trade": {
