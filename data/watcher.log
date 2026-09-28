@@ -810,3 +810,4 @@
 {"checked_at": "2026-09-28T13:40:03+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}}
 {"checked_at": "2026-09-28T13:50:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}}
 {"checked_at": "2026-09-28T14:00:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "skipped", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}}
+{"checked_at": "2026-09-28T14:10:01+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "publish": "pushed", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}}
