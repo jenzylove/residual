@@ -125,7 +125,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .track .zero{position:absolute;top:-4px;bottom:-4px;width:1px;background:rgba(20,20,24,.3);left:50%}
 .track i{position:absolute;top:0;bottom:0;border-radius:99px;transition:all 1s cubic-bezier(.2,.7,.2,1)}
 .barrow .val{text-align:right;font-variant-numeric:tabular-nums}
-.ratios{margin-top:26px}
+.ratios{margin-top:26px;overflow-x:auto}
 .ratios table{border-collapse:collapse;width:100%}
 .ratios th,.ratios td{padding:8px 6px;border-bottom:1px solid rgba(20,20,24,.07);font-size:13px;text-align:left;white-space:nowrap}
 .ratios th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
@@ -141,6 +141,10 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .orders{display:grid;gap:8px}
 .order{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.75);border:1px solid var(--line);font-size:13px}
 .order code{font-size:12px;overflow-wrap:anywhere}
+.order .wrap{white-space:normal;text-align:right}
+#demo-strat .group{display:grid;gap:8px;align-content:start}
+#demo-strat .group.span{grid-column:1/-1}
+#demo-strat .checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:8px}
 .proof-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:36px}
 .dl{padding:12px 20px;border-radius:99px;border:1px solid var(--line);background:#fff;font-size:13px;transition:all .25s}
 .dl:hover{border-color:var(--violet);color:var(--violet)}
@@ -200,3 +204,6 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.tw::after{display:none}.wf rect.bar,.gates li{animation:none}.in .spark path.line{animation:none;stroke-dashoffset:0}}
+.ratios th{white-space:normal;vertical-align:bottom}
+#demo-strat{align-items:start}
+@media (max-width:860px){.vtable{display:block;overflow-x:auto}.vtable td:first-child,.ratios td:first-child{white-space:normal;min-width:130px}.vtable small{white-space:normal}}
