@@ -18,6 +18,14 @@ def _filing(acc, day):
             "accepted_et": f"{day}T20:20:00", "index_url": "https://example/idx/"}
 
 
+def _fake_exchange():
+    try:
+        from test_demo import FakeExchange  # discover -s tests
+    except ImportError:
+        from tests.test_demo import FakeExchange  # python -m unittest tests.test_live
+    return FakeExchange
+
+
 PREV = _filing("0001-26-000001", "2026-08-26")
 NEW = _filing("0001-26-000099", "2026-09-22")
 
@@ -117,7 +125,7 @@ class LiveLifecycleTest(unittest.TestCase):
         self.assertEqual(len(live.load_live_log()), 3)
 
     def test_lifecycle_through_bitget_demo(self):
-        from test_demo import FakeExchange
+        FakeExchange = _fake_exchange()
         ex = FakeExchange()
         real_client = live.demo.BitgetDemo  # capture before patching, or the factory calls itself
         make = lambda: real_client("k", "s", "p", transport=ex)
@@ -140,7 +148,7 @@ class LiveLifecycleTest(unittest.TestCase):
                                 for e in closed["exchange_log"]))
 
     def test_demo_refuses_unlisted_hedge_before_any_order(self):
-        from test_demo import FakeExchange
+        FakeExchange = _fake_exchange()
         ex = FakeExchange()
         ex.px["SAAPLSUSDT"] = 330.0
         real_contracts = ex.__call__
@@ -206,6 +214,88 @@ class LiveLifecycleTest(unittest.TestCase):
         r = live.watch(now_ms=t_obs + 2 * HOUR)
         self.assertEqual(r["new_events"][0]["decision"], "NO_TRADE")
         self.assertIn("entry_window_passed", r["new_events"][0]["reason"])
+
+
+class PartialCloseTest(unittest.TestCase):
+    """Bitget Demo close is restart safe: partial closes persist, retries touch only open legs."""
+    def setUp(self):
+        FakeExchange = _fake_exchange()
+        self.ex = FakeExchange()
+        self.tmp = Path(tempfile.mkdtemp())
+        real = live.demo.BitgetDemo
+        self.make = lambda: real("k", "s", "p", transport=self.ex)
+        for p in (mock.patch.object(live, "POSITIONS", self.tmp / "positions.json"),
+                  mock.patch.object(live.demo, "BitgetDemo", self.make)):
+            p.start()
+            self.addCleanup(p.stop)
+        legs = self.make().open_pair([{"live_symbol": "NVDAUSDT", "side": 1, "notional": 100.0},
+                                      {"live_symbol": "AAPLUSDT", "side": -1, "notional": 80.0}], "NVDA2026")
+        self.pos = {"event_id": "NVDA-2026-09-22", "status": "open", "execution": "bitget_demo",
+                    "exit_due_ms": 1000, "demo_legs": legs, "exchange_log": []}
+        live._write(live.POSITIONS, [self.pos])
+
+    def closes(self, symbol=None):
+        return [o for o in self.ex.orders.values() if o.get("reduceOnly") == "YES"
+                and (symbol is None or o["symbol"] == symbol)]
+
+    def test_partial_close_then_retry_sends_only_remaining_leg(self):
+        self.ex.fail = "SAAPLSUSDT"  # second leg's close is rejected
+        self.assertEqual(live._close_due_positions(2000), [])
+        pos = live._read(live.POSITIONS, [])[0]
+        self.assertEqual((pos["status"], pos["close_state"]), ("open", "partial"))
+        self.assertIn("SAAPLSUSDT", pos["close_error"])
+        self.assertEqual(pos["demo_legs"][0]["close_order"]["state"], "filled")
+        self.assertNotIn("close_order", pos["demo_legs"][1])
+        self.ex.fail = None
+        closed = live._close_due_positions(3000)
+        self.assertEqual(closed[0]["status"], "closed")
+        self.assertNotIn("close_state", closed[0])
+        self.assertEqual(len(self.closes("SNVDASUSDT")), 1)  # leg 0 closed exactly once
+        self.assertEqual(len(self.closes("SAAPLSUSDT")), 1)
+        self.assertIn("net", closed[0]["realized"])
+
+    def test_crash_after_send_does_not_resend_leg(self):
+        # leg 0's close reached the exchange but the local file never recorded it
+        self.make().market_order("SNVDASUSDT", 1, self.pos["demo_legs"][0]["size"], True, "NVDA-2026-09-22-close-c0")
+        closed = live._close_due_positions(2000)
+        self.assertEqual(closed[0]["status"], "closed")
+        self.assertEqual(len(self.closes("SNVDASUSDT")), 1)
+        self.assertEqual(len(self.closes("SAAPLSUSDT")), 1)
+
+    def test_duplicate_invocation_sends_nothing_more(self):
+        self.assertEqual(len(live._close_due_positions(2000)), 1)
+        n = len(self.ex.orders)
+        self.assertEqual(live._close_due_positions(2001), [])
+        self.assertEqual(len(self.ex.orders), n)
+
+    def test_new_exposure_blocked_while_partial_close_unresolved(self):
+        self.ex.fail = "SAAPLSUSDT"
+        live._close_due_positions(2000)
+        n = len(self.ex.orders)
+        ev = _event(NEW, RELEASE)
+        pos, err = live._open_position(ev, ANALYSIS, {"size": 1.0, "direction": 1}, 5000)
+        self.assertIsNone(pos)
+        self.assertIn("unresolved partial close on NVDA-2026-09-22; no new exposure", err)
+        self.assertEqual(len(self.ex.orders), n)
+
+
+class VersionStampTest(unittest.TestCase):
+    def test_write_version_hashes_files(self):
+        import hashlib
+        from residual.version import write_version
+        root = Path(tempfile.mkdtemp())
+        (root / "data").mkdir(); (root / "web").mkdir()
+        CSV = b"a,b\n1,2\n"
+        res = b'{"model_version": "m1", "extractor_version": "e2"}'
+        (root / "data/results.json").write_bytes(res)
+        (root / "data/ledger.csv").write_bytes(CSV)
+        out = write_version(root)
+        self.assertEqual(out["project"], "residual")
+        self.assertEqual(out["sha256"], {"data/results.json": hashlib.sha256(res).hexdigest(),
+                                         "data/ledger.csv": hashlib.sha256(CSV).hexdigest()})
+        self.assertEqual((out["model_version"], out["extractor_version"]), ("m1", "e2"))
+        self.assertIsNone(out["commit"])  # temp dir is not a git repo
+        self.assertEqual(json.loads((root / "web/version.json").read_text()), out)
 
 
 if __name__ == "__main__":

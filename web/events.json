@@ -12896,5 +12896,147 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "MU-2026-09-30",
+  "consensus": null,
+  "ticker": "MU",
+  "company_symbol": "MUUSDT",
+  "sector_group": "semis",
+  "cik": 723125,
+  "accession": "0000723125-26-000018",
+  "release_utc": "2026-09-30T16:02:22Z",
+  "release_ms": 1790784142000,
+  "release_session": "intraday",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/",
+   "sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922",
+   "cache_file": "data/cache/20af87012182fbd468bd61aa.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/",
+   "accession": "0000723125-26-000013",
+   "cache_file": "data/cache/bee82c2bf90ac4283d27fd81.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 54230.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $54.23 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+    "source_sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 50000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $50.0 billion \u00b1 $1.0 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+    "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 49000.0,
+    "high": 51000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 61500.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $61.5 billion \u00b1 $1.5 billion",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+    "source_sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922",
+    "extractor": "regex-v1:MU:revenue_guidance",
+    "low": 60000.0,
+    "high": 63000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 41460.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $41.46 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+    "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+    "extractor": "regex-v1:MU:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Micron delivered record fiscal 2026 results, and we expect an even stronger fiscal 2027,",
+   "speaker": "Sanjay Mehrotra, Chairman and CEO of Micron Technology",
+   "snippet": "\"Micron delivered record fiscal 2026 results, and we expect an even stronger fiscal 2027,\" said Sanjay Mehrotra, Chairman and CEO of Micron Technology",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+   "source_sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 50000.0,
+   "revenue_actual": 54230.0,
+   "guidance_surprise_pct": 8.46,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 61500.0,
+   "guided_sequential_growth_pct": 13.406,
+   "prior_guided_sequential_growth_pct": 20.598,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]

@@ -7,6 +7,7 @@
   python -m residual live        # watch EDGAR for the next eligible event, record decision or NO_TRADE
   python -m residual serve       # dashboard at http://localhost:8000
   python -m residual all         # build + snapshot + replay
+  python -m residual version     # write web/version.json (commit + data hashes)
 """
 import argparse
 import json
@@ -372,6 +373,12 @@ def cmd_demo_roundtrip(args):
     print("realized", rec["realized"], "->", out)
 
 
+def cmd_version(args):
+    from pathlib import Path
+    from .version import write_version
+    print(json.dumps(write_version(Path(__file__).resolve().parent.parent), indent=1))
+
+
 def cmd_serve(args):
     import functools
     import http.server
@@ -409,6 +416,7 @@ def main():
     kr = sub.add_parser("keyrun", help="full Bitget Demo test run -> data/keyrun_report.json")
     kr.add_argument("--notional", type=float, default=50.0)
     kr.add_argument("--skip-roundtrip", action="store_true")
+    sub.add_parser("version", help="write web/version.json (commit + data file hashes)")
     a = sub.add_parser("all"); a.add_argument("--no-ai", action="store_true"); a.add_argument("--offline", action="store_true")
     args = p.parse_args()
     if args.cmd == "all":
@@ -431,7 +439,7 @@ def main():
     else:
         {"build": cmd_build, "snapshot": cmd_snapshot, "replay": cmd_replay, "verify": cmd_verify,
          "live": cmd_live, "serve": cmd_serve, "demo-check": cmd_demo_check,
-         "demo-roundtrip": cmd_demo_roundtrip}[args.cmd](args)
+         "demo-roundtrip": cmd_demo_roundtrip, "version": cmd_version}[args.cmd](args)
 
 
 if __name__ == "__main__":

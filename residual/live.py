@@ -73,20 +73,29 @@ def probe(symbol: str) -> dict:
 
 
 def _close_due_positions(now_ms: int) -> list[dict]:
-    positions, closed = _read(POSITIONS, []), []
+    positions, closed, dirty = _read(POSITIONS, []), [], False
     for pos in positions:
         if pos["status"] != "open" or now_ms < pos["exit_due_ms"]:
             continue
         if pos.get("execution") == "bitget_demo":
             try:
                 client = demo.BitgetDemo()
-                legs = client.close_pair(pos["demo_legs"], f"{pos['event_id']}-close")
-                pos.update({"status": "closed", "closed_at": _iso(now_ms), "demo_legs": legs,
-                            "realized": demo.realized(legs), "net_pnl": demo.realized(legs)["net"],
-                            "exchange_log": pos.get("exchange_log", []) + client.log})
-                closed.append(pos)
+                # restart safe: filled legs are skipped, sent ones found by client order id
+                legs = client.close_pair_safe(pos["demo_legs"], f"{pos['event_id']}-close")
+                pos["demo_legs"] = legs  # persist partial results too
+                pos["exchange_log"] = pos.get("exchange_log", []) + client.log
+                if all((l.get("close_order") or {}).get("state") == "filled" for l in legs):
+                    pos.pop("close_state", None); pos.pop("close_error", None)
+                    pos.update({"status": "closed", "closed_at": _iso(now_ms),
+                                "realized": demo.realized(legs), "net_pnl": demo.realized(legs)["net"]})
+                    closed.append(pos)
+                else:
+                    pos["close_state"] = "partial"
+                    pos["close_error"] = "; ".join(f"{l['demo_symbol']}: {l['close_error']}"
+                                                   for l in legs if l.get("close_error")) or "close not filled"
             except Exception as e:
                 pos["close_error"] = str(e)  # retried on the next run
+            dirty = True
             continue
         net = 0.0
         for leg in pos["legs"]:
@@ -101,7 +110,8 @@ def _close_due_positions(now_ms: int) -> list[dict]:
             pos.update({"status": "closed", "closed_at": _iso(now_ms), "net_pnl": net,
                         "funding": "not charged: live funding settlements are not tracked for paper positions"})
             closed.append(pos)
-    if closed:
+            dirty = True
+    if dirty or closed:
         _write(POSITIONS, positions)
     return closed
 
@@ -109,6 +119,10 @@ def _close_due_positions(now_ms: int) -> list[dict]:
 def _open_position(event, a, dec, now_ms, snap=None) -> tuple[dict | None, str | None]:
     """Open the pair. With Bitget Demo credentials, both legs are real Demo Trading orders
     (all-or-nothing); otherwise they are local paper fills at the live bid/ask."""
+    stuck = next((p for p in _read(POSITIONS, []) if p.get("close_state") == "partial"
+                  and p["status"] == "open"), None)
+    if stuck:
+        return None, f"unresolved partial close on {stuck['event_id']}; no new exposure"
     n = BASE_NOTIONAL * dec["size"]
     hedge = a.get("hedge")
     if demo.configured():

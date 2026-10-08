@@ -21,10 +21,48 @@ RESULTS = ROOT / "data" / "results.json"
 LEDGER = ROOT / "data" / "ledger.csv"
 WEB_DATA = ROOT / "web" / "data.json"
 START_BALANCE = 100_000.0
+ROLLING_DAYS = 30
 
 
 def iso(ms):
     return datetime.fromtimestamp(ms / 1000, timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z")
+
+
+def rolling_stability(daily: list[float], trade_days: list[int], window: int = ROLLING_DAYS) -> dict:
+    """Sharpe over every 30 day window (sliding one day). A window with fewer than two trades has no
+    meaningful Sharpe: it is counted as undefined, never filled with zero."""
+    sh, undefined = [], 0
+    for s in range(0, max(len(daily) - window + 1, 0)):
+        n = sum(s <= d < s + window for d in trade_days)
+        w = daily[s:s + window]
+        if n < 2 or statistics.stdev(w) == 0:
+            undefined += 1
+            continue
+        sh.append(statistics.fmean(w) / statistics.stdev(w) * math.sqrt(365))
+    out = {"window_days": window, "windows": len(sh) + undefined, "defined": len(sh), "undefined_under_2_trades": undefined,
+           "median_sharpe": None, "min_sharpe": None, "max_sharpe": None, "pct_positive": None}
+    if sh:
+        out.update({"median_sharpe": round(statistics.median(sh), 3), "min_sharpe": round(min(sh), 3),
+                    "max_sharpe": round(max(sh), 3), "pct_positive": round(sum(x > 0 for x in sh) / len(sh), 3)})
+    return out
+
+
+def turnover(traded: list[dict], days: int) -> dict:
+    """Gross traded notional, both legs, entry and exit. Annualised against the start balance."""
+    by_role = {"company": 0.0, "hedge": 0.0}
+    for t in traded:
+        for l in t["legs"]:
+            by_role[l["role"]] = by_role.get(l["role"], 0.0) + 2 * l["notional"]
+    gross = sum(by_role.values())
+    costs = sum(t["fees"] + t["slippage"] for t in traded)
+    gross_pnl = sum(t["gross_mid"] for t in traded)
+    return {"gross_notional": round(gross, 2), "company_leg": round(by_role["company"], 2),
+            "hedge_leg": round(by_role.get("hedge", 0.0), 2),
+            "per_trade": round(gross / len(traded), 2) if traded else None,
+            "annualised_x_start_balance": round(gross / START_BALANCE * 365 / days, 3) if traded and days else None,
+            "fees_plus_slippage": round(costs, 2),
+            "costs_bps_of_turnover": round(costs / gross * 1e4, 2) if gross else None,
+            "costs_pct_of_gross_pnl": round(costs / abs(gross_pnl) * 100, 1) if gross_pnl else None}
 
 
 def risk_ratios(rows: list[dict], traded: list[dict]) -> dict:
@@ -47,6 +85,7 @@ def risk_ratios(rows: list[dict], traded: list[dict]) -> dict:
     for t in traded:
         daily[t["exit_ms"] // 86_400_000 - t0] += t["net"] / START_BALANCE
     out["days"] = len(daily)
+    out["rolling_30d"] = rolling_stability(daily, [t["exit_ms"] // 86_400_000 - t0 for t in traded])
     if len(daily) > 1 and statistics.stdev(daily) > 0:
         out["sharpe_daily_ann"] = round(statistics.fmean(daily) / statistics.stdev(daily) * math.sqrt(365), 3)
     neg = [d for d in daily if d < 0]
@@ -83,6 +122,7 @@ def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
     ratios = risk_ratios(rows, traded)
     return {
         **ratios,
+        "turnover": turnover(traded, ratios["days"]),
         "basis": basis, "total_net_pnl": round(sum(pnl), 2), "trades": len(traded),
         "excluded_funding_unavailable": excluded,
         "no_trades": len(rows) - len(traded) - excluded,
@@ -159,29 +199,19 @@ def apply_point_in_time_funding_caps(events, snaps: dict) -> dict[str, float]:
     return funding_caps(snaps.values())
 
 
-def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
-           hedge_pool=None, tickers=None) -> dict:
-    events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
-    if tickers:
-        events = [e for e in events if e['ticker'] in tickers]
-    snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}
-    caps = apply_point_in_time_funding_caps(events, snaps)
-    analyzed = []
-    for ev in events:
-        snap = snaps[ev["event_id"]]
-        pool = hedge_pool(ev['ticker']) if callable(hedge_pool) else hedge_pool
-        analyzed.append((ev, snap, analyze(ev, snap, pool)))
-
+def _score(analyzed, *, use_ai: bool, allow_llm_calls: bool, verbose: bool, frozen: dict | None = None):
+    """Score events in order. Walk-forward by default; with `frozen`, every event uses the same
+    fixed params and rule (the in-sample / out-of-sample check)."""
     rows, orders, balance = [], [], START_BALANCE
     for i, (ev, snap, a) in enumerate(analyzed):
         history = [h for (_, _, h) in analyzed[:i]
                    if "times" in h and h["times"]["t_exit"] <= ev["release_ms"]]
-        params = learn_params(history)
+        params = frozen["params"] if frozen else learn_params(history)
         interp = None
         if use_ai and "residual" in a and ev["surprise"]:
             interp = interpret(ev, a, _source_text(ev, allow_network=allow_llm_calls), allow_call=allow_llm_calls)
         dec = decide(ev, a, params, interp if use_ai else None)
-        sel = learn_variant(history, params)
+        sel = frozen["variant"] if frozen else learn_variant(history, params)
 
         row = {"event_id": ev["event_id"], "_release_ms": ev["release_ms"], "params": params, "decision": dec,
                "variant": sel, "interpretation": interp, "residual": None, "naive": None, "unhedged": None}
@@ -227,6 +257,52 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                   f"params={params['mode']:+d}/{params['k']} "
                   f"pnl={r['net'] if r else 0:+9.2f}  {','.join(dec['reasons'])}", flush=True)
 
+    return rows, orders, balance
+
+
+def frozen_holdout(analyzed, split_ms: int, *, use_ai: bool, allow_llm_calls: bool) -> dict:
+    """Conventional in-sample / out-of-sample check, alongside the walk-forward. Params and rule are fit
+    once on every release before the split, then frozen: in sample is scored with the params fit on itself,
+    out of sample with the same params untouched. The split is the last 90 days boundary already
+    published as summary_last_90d; it was not chosen for this check, but this check was added after the
+    full sample was known, so it is a robustness view, not a preregistered test."""
+    hist = [a for (ev, _, a) in analyzed if "times" in a and a["times"]["t_exit"] <= split_ms]
+    params = learn_params(hist)
+    sel = learn_variant(hist, params)
+    rows, _, _ = _score(analyzed, use_ai=use_ai, allow_llm_calls=allow_llm_calls, verbose=False,
+                        frozen={"params": params, "variant": sel})
+    ins = [r for r in rows if r["_release_ms"] < split_ms]
+    oos = [r for r in rows if r["_release_ms"] >= split_ms]
+    out = {"split_utc": iso(split_ms), "params": params, "variant": sel["variant"],
+           "in_sample_events": len(ins), "out_of_sample_events": len(oos),
+           "out_of_sample_days": round((max(r["_release_ms"] for r in oos) - split_ms) / 86_400_000) if oos else 0}
+    for basis in ("conservative", "primary"):
+        i_m, o_m = metrics(ins, "residual", basis), metrics(oos, "residual", basis)
+        i_s, o_s = i_m["sharpe_daily_ann"], o_m["sharpe_daily_ann"]
+        decay = round((i_s - o_s) / abs(i_s), 3) if i_s is not None and o_s is not None and abs(i_s) >= 0.05 else None
+        out[basis] = {"in_sample": {k: i_m[k] for k in HOLDOUT_FIELDS}, "out_of_sample": {k: o_m[k] for k in HOLDOUT_FIELDS},
+                      "sharpe_decay": decay,
+                      "oos_below_half_is": (o_s < 0.5 * i_s) if decay is not None else None}
+    return out
+
+
+HOLDOUT_FIELDS = ("trades", "total_net_pnl", "sharpe_daily_ann", "sortino_daily_ann", "sharpe_per_trade", "max_drawdown")
+
+
+def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
+           hedge_pool=None, tickers=None) -> dict:
+    events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
+    if tickers:
+        events = [e for e in events if e['ticker'] in tickers]
+    snaps = {ev["event_id"]: load_snapshot(ev["event_id"]) for ev in events}
+    caps = apply_point_in_time_funding_caps(events, snaps)
+    analyzed = []
+    for ev in events:
+        snap = snaps[ev["event_id"]]
+        pool = hedge_pool(ev['ticker']) if callable(hedge_pool) else hedge_pool
+        analyzed.append((ev, snap, analyze(ev, snap, pool)))
+
+    rows, orders, balance = _score(analyzed, use_ai=use_ai, allow_llm_calls=allow_llm_calls, verbose=verbose)
     keys = ("residual", "unhedged", "naive_same_events", "naive") + tuple(f"v_{v}" for v in VARIANTS)
     summary = {k: metrics(rows, k) for k in keys}
     summary["no_trade"] = metrics(rows, "__none__")
@@ -238,6 +314,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
     recent = [r for r in rows if r["_release_ms"] >= last - 90 * 86_400_000]
     summary_90d = {k: metrics(recent, k) for k in keys} if recent else {}
     summary_90d_window = {"from_ms": min(r["_release_ms"] for r in recent), "to_ms": last, "events": len(recent)} if recent else None
+    holdout = frozen_holdout(analyzed, last - 90 * 86_400_000, use_ai=use_ai, allow_llm_calls=allow_llm_calls)
     warm = [r for r in rows if r["params"]["source"] == "walk-forward"]
     summary_post_warmup = {k: metrics(warm, k) for k in ("residual", "naive", "unhedged")}
     return {
@@ -254,6 +331,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "summary_observed_zero_funding": summary_observed_zero,
         "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
         "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; the caps shown are the full period values, for disclosure", "summary_post_warmup": summary_post_warmup,
+        "holdout": holdout,
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }

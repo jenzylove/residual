@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T18:19:07+00:00",
+ "generated_at": "2026-10-08T20:36:47+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -36,14 +36,34 @@
   "residual": {
    "sharpe_per_trade": 0.299,
    "sortino_per_trade": 0.693,
-   "sharpe_daily_ann": 1.155,
-   "sortino_daily_ann": 4.955,
-   "days": 317,
+   "sharpe_daily_ann": 1.107,
+   "sortino_daily_ann": 4.75,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 57,
+    "undefined_under_2_trades": 259,
+    "median_sharpe": 3.488,
+    "min_sharpe": -0.294,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.93
+   },
+   "turnover": {
+    "gross_notional": 29381.62,
+    "company_leg": 16089.5,
+    "hedge_leg": 13292.12,
+    "per_trade": 5876.32,
+    "annualised_x_start_balance": 0.311,
+    "fees_plus_slippage": 40.19,
+    "costs_bps_of_turnover": 13.68,
+    "costs_pct_of_gross_pnl": 11.2
+   },
    "basis": "primary",
    "total_net_pnl": 317.86,
    "trades": 5,
    "excluded_funding_unavailable": 10,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.6,
    "avg_pnl_per_trade": 63.57,
    "pnl_std_per_trade": 131.74,
@@ -129,20 +149,41 @@
     317.86,
     317.86,
     317.86,
+    317.86,
     317.86
    ]
   },
   "unhedged": {
    "sharpe_per_trade": 0.864,
    "sortino_per_trade": 3.98,
-   "sharpe_daily_ann": 1.411,
-   "sortino_daily_ann": 13.885,
-   "days": 317,
+   "sharpe_daily_ann": 1.352,
+   "sortino_daily_ann": 13.31,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 57,
+    "undefined_under_2_trades": 259,
+    "median_sharpe": 3.653,
+    "min_sharpe": 1.121,
+    "max_sharpe": 5.049,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 16089.5,
+    "company_leg": 16089.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3217.9,
+    "annualised_x_start_balance": 0.17,
+    "fees_plus_slippage": 23.59,
+    "costs_bps_of_turnover": 14.66,
+    "costs_pct_of_gross_pnl": 4.6
+   },
    "basis": "primary",
    "total_net_pnl": 487.03,
    "trades": 5,
    "excluded_funding_unavailable": 10,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.8,
    "avg_pnl_per_trade": 97.41,
    "pnl_std_per_trade": 144.41,
@@ -223,6 +264,7 @@
     366.93,
     366.93,
     411.37,
+    487.03,
     487.03,
     487.03,
     487.03,
@@ -234,14 +276,34 @@
   "naive_same_events": {
    "sharpe_per_trade": 0.864,
    "sortino_per_trade": 3.98,
-   "sharpe_daily_ann": 1.411,
-   "sortino_daily_ann": 13.885,
-   "days": 317,
+   "sharpe_daily_ann": 1.352,
+   "sortino_daily_ann": 13.31,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 57,
+    "undefined_under_2_trades": 259,
+    "median_sharpe": 3.653,
+    "min_sharpe": 1.121,
+    "max_sharpe": 5.049,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 16089.5,
+    "company_leg": 16089.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3217.9,
+    "annualised_x_start_balance": 0.17,
+    "fees_plus_slippage": 23.59,
+    "costs_bps_of_turnover": 14.66,
+    "costs_pct_of_gross_pnl": 4.6
+   },
    "basis": "primary",
    "total_net_pnl": 487.03,
    "trades": 5,
    "excluded_funding_unavailable": 10,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.8,
    "avg_pnl_per_trade": 97.41,
    "pnl_std_per_trade": 144.41,
@@ -327,20 +389,41 @@
     487.03,
     487.03,
     487.03,
+    487.03,
     487.03
    ]
   },
   "naive": {
    "sharpe_per_trade": -0.028,
    "sortino_per_trade": -0.047,
-   "sharpe_daily_ann": -0.136,
-   "sortino_daily_ann": -0.221,
-   "days": 318,
+   "sharpe_daily_ann": -0.131,
+   "sortino_daily_ann": -0.212,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 70,
+    "undefined_under_2_trades": 246,
+    "median_sharpe": -1.555,
+    "min_sharpe": -6.001,
+    "max_sharpe": 4.528,
+    "pct_positive": 0.5
+   },
+   "turnover": {
+    "gross_notional": 95000.0,
+    "company_leg": 95000.0,
+    "hedge_leg": 0.0,
+    "per_trade": 5000.0,
+    "annualised_x_start_balance": 1.005,
+    "fees_plus_slippage": 154.06,
+    "costs_bps_of_turnover": 16.22,
+    "costs_pct_of_gross_pnl": 171.2
+   },
    "basis": "primary",
    "total_net_pnl": -69.8,
    "trades": 19,
    "excluded_funding_unavailable": 18,
-   "no_trades": 42,
+   "no_trades": 43,
    "hit_rate": 0.368,
    "avg_pnl_per_trade": -3.67,
    "pnl_std_per_trade": 132.31,
@@ -426,20 +509,41 @@
     275.91,
     89.17,
     8.12,
+    -69.8,
     -69.8
    ]
   },
   "v_residual": {
    "sharpe_per_trade": 0.052,
    "sortino_per_trade": 0.095,
-   "sharpe_daily_ann": 0.73,
-   "sortino_daily_ann": 2.046,
-   "days": 317,
+   "sharpe_daily_ann": 0.7,
+   "sortino_daily_ann": 1.962,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 59,
+    "undefined_under_2_trades": 257,
+    "median_sharpe": 2.126,
+    "min_sharpe": -5.862,
+    "max_sharpe": 4.295,
+    "pct_positive": 0.898
+   },
+   "turnover": {
+    "gross_notional": 74158.84,
+    "company_leg": 33347.0,
+    "hedge_leg": 40811.84,
+    "per_trade": 6741.71,
+    "annualised_x_start_balance": 0.785,
+    "fees_plus_slippage": 98.54,
+    "costs_bps_of_turnover": 13.29,
+    "costs_pct_of_gross_pnl": 31.3
+   },
    "basis": "primary",
    "total_net_pnl": 215.6,
    "trades": 11,
    "excluded_funding_unavailable": 10,
-   "no_trades": 58,
+   "no_trades": 59,
    "hit_rate": 0.455,
    "avg_pnl_per_trade": 19.6,
    "pnl_std_per_trade": 100.8,
@@ -525,20 +629,41 @@
     215.6,
     215.6,
     215.6,
+    215.6,
     215.6
    ]
   },
   "v_headline": {
    "sharpe_per_trade": 0.169,
    "sortino_per_trade": 0.338,
-   "sharpe_daily_ann": 1.008,
-   "sortino_daily_ann": 3.247,
-   "days": 317,
+   "sharpe_daily_ann": 0.967,
+   "sortino_daily_ann": 3.112,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 59,
+    "undefined_under_2_trades": 257,
+    "median_sharpe": 2.875,
+    "min_sharpe": -4.882,
+    "max_sharpe": 5.015,
+    "pct_positive": 0.898
+   },
+   "turnover": {
+    "gross_notional": 74158.84,
+    "company_leg": 33347.0,
+    "hedge_leg": 40811.84,
+    "per_trade": 6741.71,
+    "annualised_x_start_balance": 0.785,
+    "fees_plus_slippage": 98.35,
+    "costs_bps_of_turnover": 13.26,
+    "costs_pct_of_gross_pnl": 25.5
+   },
    "basis": "primary",
    "total_net_pnl": 286.84,
    "trades": 11,
    "excluded_funding_unavailable": 10,
-   "no_trades": 58,
+   "no_trades": 59,
    "hit_rate": 0.545,
    "avg_pnl_per_trade": 26.08,
    "pnl_std_per_trade": 93.51,
@@ -624,20 +749,41 @@
     286.84,
     286.84,
     286.84,
+    286.84,
     286.84
    ]
   },
   "v_agreement": {
    "sharpe_per_trade": 0.299,
    "sortino_per_trade": 0.693,
-   "sharpe_daily_ann": 1.155,
-   "sortino_daily_ann": 4.955,
-   "days": 317,
+   "sharpe_daily_ann": 1.107,
+   "sortino_daily_ann": 4.75,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 57,
+    "undefined_under_2_trades": 259,
+    "median_sharpe": 3.488,
+    "min_sharpe": -0.294,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.93
+   },
+   "turnover": {
+    "gross_notional": 29381.62,
+    "company_leg": 16089.5,
+    "hedge_leg": 13292.12,
+    "per_trade": 5876.32,
+    "annualised_x_start_balance": 0.311,
+    "fees_plus_slippage": 40.19,
+    "costs_bps_of_turnover": 13.68,
+    "costs_pct_of_gross_pnl": 11.2
+   },
    "basis": "primary",
    "total_net_pnl": 317.86,
    "trades": 5,
    "excluded_funding_unavailable": 6,
-   "no_trades": 68,
+   "no_trades": 69,
    "hit_rate": 0.6,
    "avg_pnl_per_trade": 63.57,
    "pnl_std_per_trade": 131.74,
@@ -723,20 +869,41 @@
     317.86,
     317.86,
     317.86,
+    317.86,
     317.86
    ]
   },
   "v_consensus": {
    "sharpe_per_trade": 0.266,
    "sortino_per_trade": 0.481,
-   "sharpe_daily_ann": 0.611,
-   "sortino_daily_ann": 1.043,
-   "days": 317,
+   "sharpe_daily_ann": 0.586,
+   "sortino_daily_ann": 1.0,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 58,
+    "undefined_under_2_trades": 258,
+    "median_sharpe": 1.524,
+    "min_sharpe": -3.309,
+    "max_sharpe": 4.168,
+    "pct_positive": 0.983
+   },
+   "turnover": {
+    "gross_notional": 52236.84,
+    "company_leg": 23288.0,
+    "hedge_leg": 28948.84,
+    "per_trade": 7462.41,
+    "annualised_x_start_balance": 0.553,
+    "fees_plus_slippage": 66.82,
+    "costs_bps_of_turnover": 12.79,
+    "costs_pct_of_gross_pnl": 48.8
+   },
    "basis": "primary",
    "total_net_pnl": 68.5,
    "trades": 7,
    "excluded_funding_unavailable": 7,
-   "no_trades": 65,
+   "no_trades": 66,
    "hit_rate": 0.714,
    "avg_pnl_per_trade": 9.79,
    "pnl_std_per_trade": 53.14,
@@ -822,6 +989,7 @@
     68.5,
     68.5,
     68.5,
+    68.5,
     68.5
    ]
   },
@@ -831,11 +999,21 @@
    "sharpe_daily_ann": null,
    "sortino_daily_ann": null,
    "days": 0,
+   "turnover": {
+    "gross_notional": 0.0,
+    "company_leg": 0.0,
+    "hedge_leg": 0.0,
+    "per_trade": null,
+    "annualised_x_start_balance": null,
+    "fees_plus_slippage": 0,
+    "costs_bps_of_turnover": null,
+    "costs_pct_of_gross_pnl": null
+   },
    "basis": "primary",
    "total_net_pnl": 0.0,
    "trades": 0,
    "excluded_funding_unavailable": 0,
-   "no_trades": 79,
+   "no_trades": 80,
    "hit_rate": null,
    "avg_pnl_per_trade": null,
    "pnl_std_per_trade": null,
@@ -843,6 +1021,7 @@
    "avg_holding_hours": null,
    "return_on_start_balance_pct": 0.0,
    "equity_curve": [
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -929,14 +1108,34 @@
   "residual": {
    "sharpe_per_trade": -0.004,
    "sortino_per_trade": -0.007,
-   "sharpe_daily_ann": 0.619,
-   "sortino_daily_ann": 1.516,
-   "days": 317,
+   "sharpe_daily_ann": 0.593,
+   "sortino_daily_ann": 1.453,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 137,
+    "undefined_under_2_trades": 179,
+    "median_sharpe": 1.96,
+    "min_sharpe": -4.916,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.613
+   },
+   "turnover": {
+    "gross_notional": 123063.73,
+    "company_leg": 52714.5,
+    "hedge_leg": 70349.23,
+    "per_trade": 8204.25,
+    "annualised_x_start_balance": 1.302,
+    "fees_plus_slippage": 150.83,
+    "costs_bps_of_turnover": 12.26,
+    "costs_pct_of_gross_pnl": 44.3
+   },
    "basis": "conservative",
    "total_net_pnl": 189.66,
    "trades": 15,
    "excluded_funding_unavailable": 0,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.467,
    "avg_pnl_per_trade": 12.64,
    "pnl_std_per_trade": 87.8,
@@ -1022,20 +1221,41 @@
     189.66,
     189.66,
     189.66,
+    189.66,
     189.66
    ]
   },
   "unhedged": {
    "sharpe_per_trade": 0.198,
    "sortino_per_trade": 0.449,
-   "sharpe_daily_ann": 0.868,
-   "sortino_daily_ann": 2.201,
-   "days": 317,
+   "sharpe_daily_ann": 0.832,
+   "sortino_daily_ann": 2.109,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 137,
+    "undefined_under_2_trades": 179,
+    "median_sharpe": 3.332,
+    "min_sharpe": -4.753,
+    "max_sharpe": 5.049,
+    "pct_positive": 0.664
+   },
+   "turnover": {
+    "gross_notional": 52714.5,
+    "company_leg": 52714.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3514.3,
+    "annualised_x_start_balance": 0.558,
+    "fees_plus_slippage": 76.51,
+    "costs_bps_of_turnover": 14.51,
+    "costs_pct_of_gross_pnl": 18.2
+   },
    "basis": "conservative",
    "total_net_pnl": 342.96,
    "trades": 15,
    "excluded_funding_unavailable": 0,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.533,
    "avg_pnl_per_trade": 22.86,
    "pnl_std_per_trade": 108.53,
@@ -1121,20 +1341,41 @@
     342.96,
     342.96,
     342.96,
+    342.96,
     342.96
    ]
   },
   "naive_same_events": {
    "sharpe_per_trade": 0.32,
    "sortino_per_trade": 0.766,
-   "sharpe_daily_ann": 1.376,
-   "sortino_daily_ann": 4.085,
-   "days": 317,
+   "sharpe_daily_ann": 1.319,
+   "sortino_daily_ann": 3.915,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 137,
+    "undefined_under_2_trades": 179,
+    "median_sharpe": 3.488,
+    "min_sharpe": -2.629,
+    "max_sharpe": 5.049,
+    "pct_positive": 0.876
+   },
+   "turnover": {
+    "gross_notional": 52714.5,
+    "company_leg": 52714.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3514.3,
+    "annualised_x_start_balance": 0.558,
+    "fees_plus_slippage": 76.43,
+    "costs_bps_of_turnover": 14.5,
+    "costs_pct_of_gross_pnl": 12.2
+   },
    "basis": "conservative",
    "total_net_pnl": 547.47,
    "trades": 15,
    "excluded_funding_unavailable": 0,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 36.5,
    "pnl_std_per_trade": 105.54,
@@ -1220,20 +1461,41 @@
     547.47,
     547.47,
     547.47,
+    547.47,
     547.47
    ]
   },
   "naive": {
    "sharpe_per_trade": -0.185,
    "sortino_per_trade": -0.267,
-   "sharpe_daily_ann": -1.205,
-   "sortino_daily_ann": -1.692,
-   "days": 318,
+   "sharpe_daily_ann": -1.157,
+   "sortino_daily_ann": -1.624,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 218,
+    "undefined_under_2_trades": 98,
+    "median_sharpe": -3.554,
+    "min_sharpe": -6.128,
+    "max_sharpe": 4.528,
+    "pct_positive": 0.284
+   },
+   "turnover": {
+    "gross_notional": 185000.0,
+    "company_leg": 185000.0,
+    "hedge_leg": 0.0,
+    "per_trade": 5000.0,
+    "annualised_x_start_balance": 1.957,
+    "fees_plus_slippage": 278.16,
+    "costs_bps_of_turnover": 15.04,
+    "costs_pct_of_gross_pnl": 61.2
+   },
    "basis": "conservative",
    "total_net_pnl": -738.51,
    "trades": 37,
    "excluded_funding_unavailable": 0,
-   "no_trades": 42,
+   "no_trades": 43,
    "hit_rate": 0.351,
    "avg_pnl_per_trade": -19.96,
    "pnl_std_per_trade": 107.72,
@@ -1319,20 +1581,41 @@
     -392.79,
     -579.53,
     -660.59,
+    -738.51,
     -738.51
    ]
   },
   "v_residual": {
    "sharpe_per_trade": -0.002,
    "sortino_per_trade": -0.003,
-   "sharpe_daily_ann": 0.518,
-   "sortino_daily_ann": 1.151,
-   "days": 317,
+   "sharpe_daily_ann": 0.497,
+   "sortino_daily_ann": 1.104,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 139,
+    "undefined_under_2_trades": 177,
+    "median_sharpe": 1.96,
+    "min_sharpe": -5.862,
+    "max_sharpe": 4.421,
+    "pct_positive": 0.82
+   },
+   "turnover": {
+    "gross_notional": 167840.95,
+    "company_leg": 69972.0,
+    "hedge_leg": 97868.95,
+    "per_trade": 7992.43,
+    "annualised_x_start_balance": 1.776,
+    "fees_plus_slippage": 209.19,
+    "costs_bps_of_turnover": 12.46,
+    "costs_pct_of_gross_pnl": 55.3
+   },
    "basis": "conservative",
    "total_net_pnl": 168.53,
    "trades": 21,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 59,
    "hit_rate": 0.476,
    "avg_pnl_per_trade": 8.03,
    "pnl_std_per_trade": 79.28,
@@ -1418,20 +1701,41 @@
     168.53,
     168.53,
     168.53,
+    168.53,
     168.53
    ]
   },
   "v_headline": {
    "sharpe_per_trade": 0.025,
    "sortino_per_trade": 0.042,
-   "sharpe_daily_ann": 0.763,
-   "sortino_daily_ann": 1.817,
-   "days": 317,
+   "sharpe_daily_ann": 0.731,
+   "sortino_daily_ann": 1.742,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 139,
+    "undefined_under_2_trades": 177,
+    "median_sharpe": 2.532,
+    "min_sharpe": -4.882,
+    "max_sharpe": 5.15,
+    "pct_positive": 0.597
+   },
+   "turnover": {
+    "gross_notional": 167840.95,
+    "company_leg": 69972.0,
+    "hedge_leg": 97868.95,
+    "per_trade": 7992.43,
+    "annualised_x_start_balance": 1.776,
+    "fees_plus_slippage": 208.91,
+    "costs_bps_of_turnover": 12.45,
+    "costs_pct_of_gross_pnl": 46.7
+   },
    "basis": "conservative",
    "total_net_pnl": 237.89,
    "trades": 21,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 59,
    "hit_rate": 0.524,
    "avg_pnl_per_trade": 11.33,
    "pnl_std_per_trade": 74.5,
@@ -1517,20 +1821,41 @@
     237.89,
     237.89,
     237.89,
+    237.89,
     237.89
    ]
   },
   "v_agreement": {
    "sharpe_per_trade": 0.163,
    "sortino_per_trade": 0.319,
-   "sharpe_daily_ann": 1.084,
-   "sortino_daily_ann": 3.119,
-   "days": 317,
+   "sharpe_daily_ann": 1.039,
+   "sortino_daily_ann": 2.99,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 100,
+    "undefined_under_2_trades": 216,
+    "median_sharpe": 4.02,
+    "min_sharpe": -0.294,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.96
+   },
+   "turnover": {
+    "gross_notional": 93781.86,
+    "company_leg": 40214.5,
+    "hedge_leg": 53567.36,
+    "per_trade": 8525.62,
+    "annualised_x_start_balance": 0.992,
+    "fees_plus_slippage": 117.17,
+    "costs_bps_of_turnover": 12.49,
+    "costs_pct_of_gross_pnl": 26.6
+   },
    "basis": "conservative",
    "total_net_pnl": 323.11,
    "trades": 11,
    "excluded_funding_unavailable": 0,
-   "no_trades": 68,
+   "no_trades": 69,
    "hit_rate": 0.636,
    "avg_pnl_per_trade": 29.37,
    "pnl_std_per_trade": 97.55,
@@ -1616,20 +1941,41 @@
     323.11,
     323.11,
     323.11,
+    323.11,
     323.11
    ]
   },
   "v_consensus": {
    "sharpe_per_trade": -0.051,
    "sortino_per_trade": -0.071,
-   "sharpe_daily_ann": -0.042,
-   "sortino_daily_ann": -0.06,
-   "days": 317,
+   "sharpe_daily_ann": -0.04,
+   "sortino_daily_ann": -0.057,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 108,
+    "undefined_under_2_trades": 208,
+    "median_sharpe": 1.524,
+    "min_sharpe": -3.309,
+    "max_sharpe": 4.278,
+    "pct_positive": 0.759
+   },
+   "turnover": {
+    "gross_notional": 116094.95,
+    "company_leg": 47413.0,
+    "hedge_leg": 68681.95,
+    "per_trade": 8292.5,
+    "annualised_x_start_balance": 1.228,
+    "fees_plus_slippage": 141.91,
+    "costs_bps_of_turnover": 12.22,
+    "costs_pct_of_gross_pnl": 103.9
+   },
    "basis": "conservative",
    "total_net_pnl": -7.0,
    "trades": 14,
    "excluded_funding_unavailable": 0,
-   "no_trades": 65,
+   "no_trades": 66,
    "hit_rate": 0.571,
    "avg_pnl_per_trade": -0.5,
    "pnl_std_per_trade": 52.45,
@@ -1715,6 +2061,7 @@
     -7.0,
     -7.0,
     -7.0,
+    -7.0,
     -7.0
    ]
   },
@@ -1724,11 +2071,21 @@
    "sharpe_daily_ann": null,
    "sortino_daily_ann": null,
    "days": 0,
+   "turnover": {
+    "gross_notional": 0.0,
+    "company_leg": 0.0,
+    "hedge_leg": 0.0,
+    "per_trade": null,
+    "annualised_x_start_balance": null,
+    "fees_plus_slippage": 0,
+    "costs_bps_of_turnover": null,
+    "costs_pct_of_gross_pnl": null
+   },
    "basis": "conservative",
    "total_net_pnl": 0.0,
    "trades": 0,
    "excluded_funding_unavailable": 0,
-   "no_trades": 79,
+   "no_trades": 80,
    "hit_rate": null,
    "avg_pnl_per_trade": null,
    "pnl_std_per_trade": null,
@@ -1736,6 +2093,7 @@
    "avg_holding_hours": null,
    "return_on_start_balance_pct": 0.0,
    "equity_curve": [
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -1822,14 +2180,34 @@
   "residual": {
    "sharpe_per_trade": -0.004,
    "sortino_per_trade": -0.007,
-   "sharpe_daily_ann": 0.619,
-   "sortino_daily_ann": 1.516,
-   "days": 317,
+   "sharpe_daily_ann": 0.593,
+   "sortino_daily_ann": 1.453,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 137,
+    "undefined_under_2_trades": 179,
+    "median_sharpe": 1.96,
+    "min_sharpe": -4.916,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.613
+   },
+   "turnover": {
+    "gross_notional": 123063.73,
+    "company_leg": 52714.5,
+    "hedge_leg": 70349.23,
+    "per_trade": 8204.25,
+    "annualised_x_start_balance": 1.302,
+    "fees_plus_slippage": 150.83,
+    "costs_bps_of_turnover": 12.26,
+    "costs_pct_of_gross_pnl": 44.3
+   },
    "basis": "observed_zero",
    "total_net_pnl": 189.66,
    "trades": 15,
    "excluded_funding_unavailable": 0,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.467,
    "avg_pnl_per_trade": 12.64,
    "pnl_std_per_trade": 87.8,
@@ -1915,20 +2293,41 @@
     189.66,
     189.66,
     189.66,
+    189.66,
     189.66
    ]
   },
   "unhedged": {
    "sharpe_per_trade": 0.198,
    "sortino_per_trade": 0.449,
-   "sharpe_daily_ann": 0.868,
-   "sortino_daily_ann": 2.201,
-   "days": 317,
+   "sharpe_daily_ann": 0.832,
+   "sortino_daily_ann": 2.109,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 137,
+    "undefined_under_2_trades": 179,
+    "median_sharpe": 3.332,
+    "min_sharpe": -4.753,
+    "max_sharpe": 5.049,
+    "pct_positive": 0.664
+   },
+   "turnover": {
+    "gross_notional": 52714.5,
+    "company_leg": 52714.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3514.3,
+    "annualised_x_start_balance": 0.558,
+    "fees_plus_slippage": 76.51,
+    "costs_bps_of_turnover": 14.51,
+    "costs_pct_of_gross_pnl": 18.2
+   },
    "basis": "observed_zero",
    "total_net_pnl": 342.96,
    "trades": 15,
    "excluded_funding_unavailable": 0,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.533,
    "avg_pnl_per_trade": 22.86,
    "pnl_std_per_trade": 108.53,
@@ -2014,20 +2413,41 @@
     342.96,
     342.96,
     342.96,
+    342.96,
     342.96
    ]
   },
   "naive_same_events": {
    "sharpe_per_trade": 0.32,
    "sortino_per_trade": 0.766,
-   "sharpe_daily_ann": 1.376,
-   "sortino_daily_ann": 4.085,
-   "days": 317,
+   "sharpe_daily_ann": 1.319,
+   "sortino_daily_ann": 3.915,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 137,
+    "undefined_under_2_trades": 179,
+    "median_sharpe": 3.488,
+    "min_sharpe": -2.629,
+    "max_sharpe": 5.049,
+    "pct_positive": 0.876
+   },
+   "turnover": {
+    "gross_notional": 52714.5,
+    "company_leg": 52714.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3514.3,
+    "annualised_x_start_balance": 0.558,
+    "fees_plus_slippage": 76.43,
+    "costs_bps_of_turnover": 14.5,
+    "costs_pct_of_gross_pnl": 12.2
+   },
    "basis": "observed_zero",
    "total_net_pnl": 547.47,
    "trades": 15,
    "excluded_funding_unavailable": 0,
-   "no_trades": 64,
+   "no_trades": 65,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 36.5,
    "pnl_std_per_trade": 105.54,
@@ -2113,20 +2533,41 @@
     547.47,
     547.47,
     547.47,
+    547.47,
     547.47
    ]
   },
   "naive": {
    "sharpe_per_trade": -0.185,
    "sortino_per_trade": -0.267,
-   "sharpe_daily_ann": -1.205,
-   "sortino_daily_ann": -1.692,
-   "days": 318,
+   "sharpe_daily_ann": -1.157,
+   "sortino_daily_ann": -1.624,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 218,
+    "undefined_under_2_trades": 98,
+    "median_sharpe": -3.554,
+    "min_sharpe": -6.128,
+    "max_sharpe": 4.528,
+    "pct_positive": 0.284
+   },
+   "turnover": {
+    "gross_notional": 185000.0,
+    "company_leg": 185000.0,
+    "hedge_leg": 0.0,
+    "per_trade": 5000.0,
+    "annualised_x_start_balance": 1.957,
+    "fees_plus_slippage": 278.16,
+    "costs_bps_of_turnover": 15.04,
+    "costs_pct_of_gross_pnl": 61.2
+   },
    "basis": "observed_zero",
    "total_net_pnl": -738.51,
    "trades": 37,
    "excluded_funding_unavailable": 0,
-   "no_trades": 42,
+   "no_trades": 43,
    "hit_rate": 0.351,
    "avg_pnl_per_trade": -19.96,
    "pnl_std_per_trade": 107.72,
@@ -2212,20 +2653,41 @@
     -392.79,
     -579.53,
     -660.59,
+    -738.51,
     -738.51
    ]
   },
   "v_residual": {
    "sharpe_per_trade": -0.002,
    "sortino_per_trade": -0.003,
-   "sharpe_daily_ann": 0.518,
-   "sortino_daily_ann": 1.151,
-   "days": 317,
+   "sharpe_daily_ann": 0.497,
+   "sortino_daily_ann": 1.104,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 139,
+    "undefined_under_2_trades": 177,
+    "median_sharpe": 1.96,
+    "min_sharpe": -5.862,
+    "max_sharpe": 4.421,
+    "pct_positive": 0.82
+   },
+   "turnover": {
+    "gross_notional": 167840.95,
+    "company_leg": 69972.0,
+    "hedge_leg": 97868.95,
+    "per_trade": 7992.43,
+    "annualised_x_start_balance": 1.776,
+    "fees_plus_slippage": 209.19,
+    "costs_bps_of_turnover": 12.46,
+    "costs_pct_of_gross_pnl": 55.3
+   },
    "basis": "observed_zero",
    "total_net_pnl": 168.53,
    "trades": 21,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 59,
    "hit_rate": 0.476,
    "avg_pnl_per_trade": 8.03,
    "pnl_std_per_trade": 79.28,
@@ -2311,20 +2773,41 @@
     168.53,
     168.53,
     168.53,
+    168.53,
     168.53
    ]
   },
   "v_headline": {
    "sharpe_per_trade": 0.025,
    "sortino_per_trade": 0.042,
-   "sharpe_daily_ann": 0.763,
-   "sortino_daily_ann": 1.817,
-   "days": 317,
+   "sharpe_daily_ann": 0.731,
+   "sortino_daily_ann": 1.742,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 139,
+    "undefined_under_2_trades": 177,
+    "median_sharpe": 2.532,
+    "min_sharpe": -4.882,
+    "max_sharpe": 5.15,
+    "pct_positive": 0.597
+   },
+   "turnover": {
+    "gross_notional": 167840.95,
+    "company_leg": 69972.0,
+    "hedge_leg": 97868.95,
+    "per_trade": 7992.43,
+    "annualised_x_start_balance": 1.776,
+    "fees_plus_slippage": 208.91,
+    "costs_bps_of_turnover": 12.45,
+    "costs_pct_of_gross_pnl": 46.7
+   },
    "basis": "observed_zero",
    "total_net_pnl": 237.89,
    "trades": 21,
    "excluded_funding_unavailable": 0,
-   "no_trades": 58,
+   "no_trades": 59,
    "hit_rate": 0.524,
    "avg_pnl_per_trade": 11.33,
    "pnl_std_per_trade": 74.5,
@@ -2410,20 +2893,41 @@
     237.89,
     237.89,
     237.89,
+    237.89,
     237.89
    ]
   },
   "v_agreement": {
    "sharpe_per_trade": 0.163,
    "sortino_per_trade": 0.319,
-   "sharpe_daily_ann": 1.084,
-   "sortino_daily_ann": 3.119,
-   "days": 317,
+   "sharpe_daily_ann": 1.039,
+   "sortino_daily_ann": 2.99,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 100,
+    "undefined_under_2_trades": 216,
+    "median_sharpe": 4.02,
+    "min_sharpe": -0.294,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.96
+   },
+   "turnover": {
+    "gross_notional": 93781.86,
+    "company_leg": 40214.5,
+    "hedge_leg": 53567.36,
+    "per_trade": 8525.62,
+    "annualised_x_start_balance": 0.992,
+    "fees_plus_slippage": 117.17,
+    "costs_bps_of_turnover": 12.49,
+    "costs_pct_of_gross_pnl": 26.6
+   },
    "basis": "observed_zero",
    "total_net_pnl": 323.11,
    "trades": 11,
    "excluded_funding_unavailable": 0,
-   "no_trades": 68,
+   "no_trades": 69,
    "hit_rate": 0.636,
    "avg_pnl_per_trade": 29.37,
    "pnl_std_per_trade": 97.55,
@@ -2509,20 +3013,41 @@
     323.11,
     323.11,
     323.11,
+    323.11,
     323.11
    ]
   },
   "v_consensus": {
    "sharpe_per_trade": -0.051,
    "sortino_per_trade": -0.071,
-   "sharpe_daily_ann": -0.042,
-   "sortino_daily_ann": -0.06,
-   "days": 317,
+   "sharpe_daily_ann": -0.04,
+   "sortino_daily_ann": -0.057,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 108,
+    "undefined_under_2_trades": 208,
+    "median_sharpe": 1.524,
+    "min_sharpe": -3.309,
+    "max_sharpe": 4.278,
+    "pct_positive": 0.759
+   },
+   "turnover": {
+    "gross_notional": 116094.95,
+    "company_leg": 47413.0,
+    "hedge_leg": 68681.95,
+    "per_trade": 8292.5,
+    "annualised_x_start_balance": 1.228,
+    "fees_plus_slippage": 141.91,
+    "costs_bps_of_turnover": 12.22,
+    "costs_pct_of_gross_pnl": 103.9
+   },
    "basis": "observed_zero",
    "total_net_pnl": -7.0,
    "trades": 14,
    "excluded_funding_unavailable": 0,
-   "no_trades": 65,
+   "no_trades": 66,
    "hit_rate": 0.571,
    "avg_pnl_per_trade": -0.5,
    "pnl_std_per_trade": 52.45,
@@ -2608,6 +3133,7 @@
     -7.0,
     -7.0,
     -7.0,
+    -7.0,
     -7.0
    ]
   }
@@ -2619,6 +3145,26 @@
    "sharpe_daily_ann": 2.442,
    "sortino_daily_ann": 10.47,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 3.488,
+    "min_sharpe": 3.207,
+    "max_sharpe": 4.762,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 29381.62,
+    "company_leg": 16089.5,
+    "hedge_leg": 13292.12,
+    "per_trade": 5876.32,
+    "annualised_x_start_balance": 1.51,
+    "fees_plus_slippage": 40.19,
+    "costs_bps_of_turnover": 13.68,
+    "costs_pct_of_gross_pnl": 11.2
+   },
    "basis": "primary",
    "total_net_pnl": 317.86,
    "trades": 5,
@@ -2631,7 +3177,6 @@
    "avg_holding_hours": 19.8,
    "return_on_start_balance_pct": 0.318,
    "equity_curve": [
-    0.0,
     0.0,
     -68.84,
     -68.84,
@@ -2650,6 +3195,7 @@
     317.86,
     317.86,
     317.86,
+    317.86,
     317.86
    ]
   },
@@ -2659,6 +3205,26 @@
    "sharpe_daily_ann": 2.993,
    "sortino_daily_ann": 29.339,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 3.488,
+    "min_sharpe": 3.488,
+    "max_sharpe": 5.049,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 16089.5,
+    "company_leg": 16089.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3217.9,
+    "annualised_x_start_balance": 0.827,
+    "fees_plus_slippage": 23.59,
+    "costs_bps_of_turnover": 14.66,
+    "costs_pct_of_gross_pnl": 4.6
+   },
    "basis": "primary",
    "total_net_pnl": 487.03,
    "trades": 5,
@@ -2672,7 +3238,6 @@
    "return_on_start_balance_pct": 0.487,
    "equity_curve": [
     0.0,
-    0.0,
     -37.64,
     -37.64,
     -37.64,
@@ -2685,6 +3250,7 @@
     366.93,
     366.93,
     411.37,
+    487.03,
     487.03,
     487.03,
     487.03,
@@ -2699,6 +3265,26 @@
    "sharpe_daily_ann": 2.993,
    "sortino_daily_ann": 29.339,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 3.488,
+    "min_sharpe": 3.488,
+    "max_sharpe": 5.049,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 16089.5,
+    "company_leg": 16089.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3217.9,
+    "annualised_x_start_balance": 0.827,
+    "fees_plus_slippage": 23.59,
+    "costs_bps_of_turnover": 14.66,
+    "costs_pct_of_gross_pnl": 4.6
+   },
    "basis": "primary",
    "total_net_pnl": 487.03,
    "trades": 5,
@@ -2711,7 +3297,6 @@
    "avg_holding_hours": 22.2,
    "return_on_start_balance_pct": 0.487,
    "equity_curve": [
-    0.0,
     0.0,
     -37.64,
     -37.64,
@@ -2730,47 +3315,68 @@
     487.03,
     487.03,
     487.03,
+    487.03,
     487.03
    ]
   },
   "naive": {
-   "sharpe_per_trade": -0.028,
-   "sortino_per_trade": -0.047,
-   "sharpe_daily_ann": -0.285,
-   "sortino_daily_ann": -0.464,
-   "days": 72,
+   "sharpe_per_trade": 0.021,
+   "sortino_per_trade": 0.037,
+   "sharpe_daily_ann": 0.211,
+   "sortino_daily_ann": 0.36,
+   "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 42,
+    "undefined_under_2_trades": 0,
+    "median_sharpe": -3.885,
+    "min_sharpe": -6.001,
+    "max_sharpe": 4.528,
+    "pct_positive": 0.333
+   },
+   "turnover": {
+    "gross_notional": 90000.0,
+    "company_leg": 90000.0,
+    "hedge_leg": 0.0,
+    "per_trade": 5000.0,
+    "annualised_x_start_balance": 4.627,
+    "fees_plus_slippage": 141.58,
+    "costs_bps_of_turnover": 15.73,
+    "costs_pct_of_gross_pnl": 72.0
+   },
    "basis": "primary",
-   "total_net_pnl": -69.8,
-   "trades": 19,
+   "total_net_pnl": 50.22,
+   "trades": 18,
    "excluded_funding_unavailable": 0,
-   "no_trades": 1,
-   "hit_rate": 0.368,
-   "avg_pnl_per_trade": -3.67,
-   "pnl_std_per_trade": 132.31,
+   "no_trades": 2,
+   "hit_rate": 0.389,
+   "avg_pnl_per_trade": 2.79,
+   "pnl_std_per_trade": 133.02,
    "max_drawdown": -477.73,
-   "avg_holding_hours": 19.1,
-   "return_on_start_balance_pct": -0.07,
+   "avg_holding_hours": 19.2,
+   "return_on_start_balance_pct": 0.05,
    "equity_curve": [
-    -120.02,
-    -122.22,
-    -197.49,
-    -272.38,
-    -151.17,
-    -93.1,
-    28.96,
-    372.5,
-    372.5,
-    407.93,
-    306.83,
-    243.65,
-    105.81,
-    309.75,
-    385.41,
-    289.42,
-    275.91,
-    89.17,
-    8.12,
-    -69.8
+    -2.19,
+    -77.47,
+    -152.36,
+    -31.15,
+    26.92,
+    148.99,
+    492.52,
+    492.52,
+    527.95,
+    426.85,
+    363.67,
+    225.83,
+    429.77,
+    505.44,
+    409.44,
+    395.93,
+    209.2,
+    128.14,
+    50.22,
+    50.22
    ]
   },
   "v_residual": {
@@ -2779,6 +3385,26 @@
    "sharpe_daily_ann": 1.538,
    "sortino_daily_ann": 4.324,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 2.285,
+    "min_sharpe": 0.562,
+    "max_sharpe": 4.295,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 74158.84,
+    "company_leg": 33347.0,
+    "hedge_leg": 40811.84,
+    "per_trade": 6741.71,
+    "annualised_x_start_balance": 3.812,
+    "fees_plus_slippage": 98.54,
+    "costs_bps_of_turnover": 13.29,
+    "costs_pct_of_gross_pnl": 31.3
+   },
    "basis": "primary",
    "total_net_pnl": 215.6,
    "trades": 11,
@@ -2791,7 +3417,6 @@
    "avg_holding_hours": 18.9,
    "return_on_start_balance_pct": 0.216,
    "equity_curve": [
-    0.0,
     0.0,
     -68.84,
     -94.95,
@@ -2810,6 +3435,7 @@
     215.6,
     215.6,
     215.6,
+    215.6,
     215.6
    ]
   },
@@ -2819,6 +3445,26 @@
    "sharpe_daily_ann": 2.13,
    "sortino_daily_ann": 6.86,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 4.332,
+    "min_sharpe": 2.256,
+    "max_sharpe": 5.015,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 74158.84,
+    "company_leg": 33347.0,
+    "hedge_leg": 40811.84,
+    "per_trade": 6741.71,
+    "annualised_x_start_balance": 3.812,
+    "fees_plus_slippage": 98.35,
+    "costs_bps_of_turnover": 13.26,
+    "costs_pct_of_gross_pnl": 25.5
+   },
    "basis": "primary",
    "total_net_pnl": 286.84,
    "trades": 11,
@@ -2831,7 +3477,6 @@
    "avg_holding_hours": 20.7,
    "return_on_start_balance_pct": 0.287,
    "equity_curve": [
-    0.0,
     0.0,
     -68.84,
     -65.98,
@@ -2850,6 +3495,7 @@
     286.84,
     286.84,
     286.84,
+    286.84,
     286.84
    ]
   },
@@ -2859,6 +3505,26 @@
    "sharpe_daily_ann": 2.442,
    "sortino_daily_ann": 10.47,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 3.488,
+    "min_sharpe": 3.207,
+    "max_sharpe": 4.762,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 29381.62,
+    "company_leg": 16089.5,
+    "hedge_leg": 13292.12,
+    "per_trade": 5876.32,
+    "annualised_x_start_balance": 1.51,
+    "fees_plus_slippage": 40.19,
+    "costs_bps_of_turnover": 13.68,
+    "costs_pct_of_gross_pnl": 11.2
+   },
    "basis": "primary",
    "total_net_pnl": 317.86,
    "trades": 5,
@@ -2871,7 +3537,6 @@
    "avg_holding_hours": 19.8,
    "return_on_start_balance_pct": 0.318,
    "equity_curve": [
-    0.0,
     0.0,
     -68.84,
     -68.84,
@@ -2890,6 +3555,7 @@
     317.86,
     317.86,
     317.86,
+    317.86,
     317.86
    ]
   },
@@ -2899,6 +3565,26 @@
    "sharpe_daily_ann": 1.287,
    "sortino_daily_ann": 2.204,
    "days": 71,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 42,
+    "defined": 37,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 1.236,
+    "min_sharpe": 1.236,
+    "max_sharpe": 4.168,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 52236.84,
+    "company_leg": 23288.0,
+    "hedge_leg": 28948.84,
+    "per_trade": 7462.41,
+    "annualised_x_start_balance": 2.685,
+    "fees_plus_slippage": 66.82,
+    "costs_bps_of_turnover": 12.79,
+    "costs_pct_of_gross_pnl": 48.8
+   },
    "basis": "primary",
    "total_net_pnl": 68.5,
    "trades": 7,
@@ -2911,7 +3597,6 @@
    "avg_holding_hours": 21.0,
    "return_on_start_balance_pct": 0.068,
    "equity_curve": [
-    0.0,
     0.0,
     0.0,
     2.85,
@@ -2930,13 +3615,14 @@
     68.5,
     68.5,
     68.5,
+    68.5,
     68.5
    ]
   }
  },
  "summary_last_90d_window": {
-  "from_ms": 1782331321000,
-  "to_ms": 1788380764000,
+  "from_ms": 1784750646000,
+  "to_ms": 1790784142000,
   "events": 20
  },
  "funding_caps": {
@@ -2971,14 +3657,34 @@
   "residual": {
    "sharpe_per_trade": 0.299,
    "sortino_per_trade": 0.693,
-   "sharpe_daily_ann": 1.777,
-   "sortino_daily_ann": 7.621,
-   "days": 134,
+   "sharpe_daily_ann": 1.616,
+   "sortino_daily_ann": 6.931,
+   "days": 162,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 133,
+    "defined": 57,
+    "undefined_under_2_trades": 76,
+    "median_sharpe": 3.488,
+    "min_sharpe": -0.294,
+    "max_sharpe": 4.762,
+    "pct_positive": 0.93
+   },
+   "turnover": {
+    "gross_notional": 29381.62,
+    "company_leg": 16089.5,
+    "hedge_leg": 13292.12,
+    "per_trade": 5876.32,
+    "annualised_x_start_balance": 0.662,
+    "fees_plus_slippage": 40.19,
+    "costs_bps_of_turnover": 13.68,
+    "costs_pct_of_gross_pnl": 11.2
+   },
    "basis": "primary",
    "total_net_pnl": 317.86,
    "trades": 5,
    "excluded_funding_unavailable": 4,
-   "no_trades": 30,
+   "no_trades": 31,
    "hit_rate": 0.6,
    "avg_pnl_per_trade": 63.57,
    "pnl_std_per_trade": 131.74,
@@ -3024,20 +3730,41 @@
     317.86,
     317.86,
     317.86,
+    317.86,
     317.86
    ]
   },
   "naive": {
    "sharpe_per_trade": -0.028,
    "sortino_per_trade": -0.047,
-   "sharpe_daily_ann": -0.208,
-   "sortino_daily_ann": -0.339,
-   "days": 135,
+   "sharpe_daily_ann": -0.19,
+   "sortino_daily_ann": -0.31,
+   "days": 162,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 133,
+    "defined": 70,
+    "undefined_under_2_trades": 63,
+    "median_sharpe": -1.555,
+    "min_sharpe": -6.001,
+    "max_sharpe": 4.528,
+    "pct_positive": 0.5
+   },
+   "turnover": {
+    "gross_notional": 95000.0,
+    "company_leg": 95000.0,
+    "hedge_leg": 0.0,
+    "per_trade": 5000.0,
+    "annualised_x_start_balance": 2.14,
+    "fees_plus_slippage": 154.06,
+    "costs_bps_of_turnover": 16.22,
+    "costs_pct_of_gross_pnl": 171.2
+   },
    "basis": "primary",
    "total_net_pnl": -69.8,
    "trades": 19,
    "excluded_funding_unavailable": 8,
-   "no_trades": 12,
+   "no_trades": 13,
    "hit_rate": 0.368,
    "avg_pnl_per_trade": -3.67,
    "pnl_std_per_trade": 132.31,
@@ -3083,20 +3810,41 @@
     275.91,
     89.17,
     8.12,
+    -69.8,
     -69.8
    ]
   },
   "unhedged": {
    "sharpe_per_trade": 0.864,
    "sortino_per_trade": 3.98,
-   "sharpe_daily_ann": 2.173,
-   "sortino_daily_ann": 21.356,
-   "days": 134,
+   "sharpe_daily_ann": 1.975,
+   "sortino_daily_ann": 19.423,
+   "days": 162,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 133,
+    "defined": 57,
+    "undefined_under_2_trades": 76,
+    "median_sharpe": 3.653,
+    "min_sharpe": 1.121,
+    "max_sharpe": 5.049,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 16089.5,
+    "company_leg": 16089.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3217.9,
+    "annualised_x_start_balance": 0.363,
+    "fees_plus_slippage": 23.59,
+    "costs_bps_of_turnover": 14.66,
+    "costs_pct_of_gross_pnl": 4.6
+   },
    "basis": "primary",
    "total_net_pnl": 487.03,
    "trades": 5,
    "excluded_funding_unavailable": 4,
-   "no_trades": 30,
+   "no_trades": 31,
    "hit_rate": 0.8,
    "avg_pnl_per_trade": 97.41,
    "pnl_std_per_trade": 144.41,
@@ -3142,8 +3890,76 @@
     487.03,
     487.03,
     487.03,
+    487.03,
     487.03
    ]
+  }
+ },
+ "holdout": {
+  "split_utc": "2026-07-02T16:02Z",
+  "params": {
+   "mode": 1,
+   "k": 1.0,
+   "source": "walk-forward",
+   "n_train": 11,
+   "train_pnl": 105.97728052698528,
+   "train_events": [
+    "NVDA-2025-11-19",
+    "META-2026-01-28",
+    "PLTR-2026-02-02",
+    "AMZN-2026-02-05",
+    "MRVL-2026-03-05",
+    "MU-2026-03-18",
+    "INTC-2026-04-23",
+    "META-2026-04-29",
+    "PLTR-2026-05-04",
+    "AMD-2026-05-05",
+    "AVGO-2026-06-03"
+   ]
+  },
+  "variant": "residual",
+  "in_sample_events": 60,
+  "out_of_sample_events": 20,
+  "out_of_sample_days": 90,
+  "conservative": {
+   "in_sample": {
+    "trades": 11,
+    "total_net_pnl": 51.48,
+    "sharpe_daily_ann": 0.355,
+    "sortino_daily_ann": 0.574,
+    "sharpe_per_trade": 0.108,
+    "max_drawdown": -121.55
+   },
+   "out_of_sample": {
+    "trades": 11,
+    "total_net_pnl": 215.6,
+    "sharpe_daily_ann": 1.538,
+    "sortino_daily_ann": 4.324,
+    "sharpe_per_trade": 0.052,
+    "max_drawdown": -153.6
+   },
+   "sharpe_decay": -3.332,
+   "oos_below_half_is": false
+  },
+  "primary": {
+   "in_sample": {
+    "trades": 0,
+    "total_net_pnl": 0.0,
+    "sharpe_daily_ann": null,
+    "sortino_daily_ann": null,
+    "sharpe_per_trade": null,
+    "max_drawdown": 0.0
+   },
+   "out_of_sample": {
+    "trades": 11,
+    "total_net_pnl": 215.6,
+    "sharpe_daily_ann": 1.538,
+    "sortino_daily_ann": 4.324,
+    "sharpe_per_trade": 0.052,
+    "max_drawdown": -153.6
+   },
+   "sharpe_decay": null,
+   "oos_below_half_is": null
   }
  },
  "events": [
@@ -15604,6 +16420,148 @@
     ],
     "optional_fields": {
      "eps_diluted": "reported",
+     "gross_margin": "not_reported"
+    }
+   },
+   "status": "complete"
+  },
+  {
+   "event_id": "MU-2026-09-30",
+   "consensus": null,
+   "ticker": "MU",
+   "company_symbol": "MUUSDT",
+   "sector_group": "semis",
+   "cik": 723125,
+   "accession": "0000723125-26-000018",
+   "release_utc": "2026-09-30T16:02:22Z",
+   "release_ms": 1790784142000,
+   "release_session": "intraday",
+   "source": {
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/",
+    "sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922",
+    "cache_file": "data/cache/20af87012182fbd468bd61aa.bin"
+   },
+   "prior_source": {
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/",
+    "accession": "0000723125-26-000013",
+    "cache_file": "data/cache/bee82c2bf90ac4283d27fd81.bin"
+   },
+   "earnings": {
+    "revenue_actual": {
+     "value": 54230.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue of $54.23 billion",
+     "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+     "source_sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922",
+     "extractor": "regex-v1:MU:revenue_actual",
+     "verified": true
+    },
+    "revenue_guidance_prior": {
+     "value": 50000.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $50.0 billion \u00b1 $1.0 billion",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+     "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+     "extractor": "regex-v1:MU:revenue_guidance",
+     "low": 49000.0,
+     "high": 51000.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 61500.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue | $61.5 billion \u00b1 $1.5 billion",
+     "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) billion \u00b1 \\$(\\d+(?:\\.\\d+)?) (billion|million)",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+     "source_sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922",
+     "extractor": "regex-v1:MU:revenue_guidance",
+     "low": 60000.0,
+     "high": 63000.0,
+     "verified": true
+    },
+    "revenue_prior_actual": {
+     "value": 41460.0,
+     "unit": "USD_millions",
+     "snippet": "Revenue of $41.46 billion",
+     "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+     "source_sha256": "9f7e667a8224193b438287d0186c7273262c79e98af71feb3613e0837347c392",
+     "extractor": "regex-v1:MU:revenue_actual",
+     "verified": true
+    },
+    "eps_diluted": null,
+    "gross_margin": null
+   },
+   "commentary": {
+    "text": "Micron delivered record fiscal 2026 results, and we expect an even stronger fiscal 2027,",
+    "speaker": "Sanjay Mehrotra, Chairman and CEO of Micron Technology",
+    "snippet": "\"Micron delivered record fiscal 2026 results, and we expect an even stronger fiscal 2027,\" said Sanjay Mehrotra, Chairman and CEO of Micron Technology",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+    "source_sha256": "41010a7b0b7461ad3329e761cc9dd4e808f38869fd7030bfd3151eabb6612922"
+   },
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 50000.0,
+    "revenue_actual": 54230.0,
+    "guidance_surprise_pct": 8.46,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 61500.0,
+    "guided_sequential_growth_pct": 13.406,
+    "prior_guided_sequential_growth_pct": 20.598,
+    "guidance_direction": "lowered"
+   },
+   "validation": {
+    "checks": [
+     {
+      "field": "revenue_actual",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "revenue_guidance_prior",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "revenue_guidance_next",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "revenue_prior_actual",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "eps_diluted",
+      "ok": false,
+      "detail": "not found in source"
+     },
+     {
+      "field": "gross_margin",
+      "ok": false,
+      "detail": "not found in source"
+     }
+    ],
+    "missing_required": [],
+    "all_required_verified": true,
+    "required_fields": [
+     "revenue_actual",
+     "revenue_guidance_prior",
+     "revenue_guidance_next",
+     "revenue_prior_actual"
+    ],
+    "optional_fields": {
+     "eps_diluted": "not_reported",
      "gross_margin": "not_reported"
     }
    },
@@ -35840,6 +36798,95 @@
     "consensus_surprise_pct": 7.067,
     "consensus_sign": 1
    }
+  },
+  {
+   "event_id": "MU-2026-09-30",
+   "_release_ms": 1790784142000,
+   "params": {
+    "mode": 1,
+    "k": 5.0,
+    "source": "walk-forward",
+    "n_train": 22,
+    "train_pnl": 215.2656850700321,
+    "train_events": [
+     "NVDA-2025-11-19",
+     "META-2026-01-28",
+     "PLTR-2026-02-02",
+     "AMZN-2026-02-05",
+     "MRVL-2026-03-05",
+     "MU-2026-03-18",
+     "INTC-2026-04-23",
+     "META-2026-04-29",
+     "PLTR-2026-05-04",
+     "AMD-2026-05-05",
+     "AVGO-2026-06-03",
+     "INTC-2026-07-23",
+     "KLAC-2026-07-28",
+     "QCOM-2026-07-29",
+     "META-2026-07-29",
+     "AMZN-2026-07-30",
+     "PLTR-2026-08-03",
+     "AMD-2026-08-04",
+     "SMCI-2026-08-11",
+     "CRWD-2026-08-26",
+     "NVDA-2026-08-26",
+     "MRVL-2026-08-27"
+    ]
+   },
+   "decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "market_data"
+    ],
+    "gates": {
+     "event_data": {
+      "pass": true,
+      "detail": "all required earnings fields verified"
+     },
+     "market_data": {
+      "pass": false,
+      "detail": "no market snapshot"
+     },
+     "ai_interpretation": {
+      "pass": true,
+      "detail": "AI gate disabled for this run"
+     }
+    },
+    "size": 0.0
+   },
+   "variant": {
+    "variant": "agreement",
+    "source": "walk-forward",
+    "n_train": 19,
+    "scores": {
+     "residual": 215.27,
+     "headline": 268.66,
+     "agreement": 432.27,
+     "consensus": 29.03
+    },
+    "eligible_variants": [
+     "residual",
+     "headline",
+     "agreement"
+    ]
+   },
+   "interpretation": null,
+   "residual": null,
+   "naive": null,
+   "unhedged": null,
+   "analysis": {
+    "event_id": "MU-2026-09-30",
+    "gates": {
+     "event_data": {
+      "pass": true,
+      "detail": "all required earnings fields verified"
+     },
+     "market_data": {
+      "pass": false,
+      "detail": "no market snapshot"
+     }
+    }
+   }
   }
  ],
  "orders": [
@@ -36634,13 +37681,13 @@
     "residual": {
      "total_net_pnl": 51.44,
      "trades": 9,
-     "sharpe_daily_ann": 0.448,
+     "sharpe_daily_ann": 0.43,
      "max_drawdown": -77.11
     },
     "naive_same_events": {
      "total_net_pnl": 262.18,
      "trades": 9,
-     "sharpe_daily_ann": 1.603,
+     "sharpe_daily_ann": 1.536,
      "max_drawdown": -26.86
     }
    },
@@ -36648,12 +37695,12 @@
     "residual": {
      "total_net_pnl": 27.83,
      "trades": 21,
-     "sharpe_daily_ann": 0.214
+     "sharpe_daily_ann": 0.205
     },
     "naive_same_events": {
      "total_net_pnl": 258.18,
      "trades": 21,
-     "sharpe_daily_ann": 1.407
+     "sharpe_daily_ann": 1.349
     }
    }
   },
@@ -36665,13 +37712,13 @@
     "residual": {
      "total_net_pnl": 317.86,
      "trades": 5,
-     "sharpe_daily_ann": 1.155,
+     "sharpe_daily_ann": 1.107,
      "max_drawdown": -68.84
     },
     "naive_same_events": {
      "total_net_pnl": 487.03,
      "trades": 5,
-     "sharpe_daily_ann": 1.411,
+     "sharpe_daily_ann": 1.352,
      "max_drawdown": -37.64
     }
    },
@@ -36679,12 +37726,12 @@
     "residual": {
      "total_net_pnl": 189.66,
      "trades": 15,
-     "sharpe_daily_ann": 0.619
+     "sharpe_daily_ann": 0.593
     },
     "naive_same_events": {
      "total_net_pnl": 547.47,
      "trades": 15,
-     "sharpe_daily_ann": 1.376
+     "sharpe_daily_ann": 1.319
     }
    }
   },
@@ -36696,13 +37743,13 @@
     "residual": {
      "total_net_pnl": 670.81,
      "trades": 4,
-     "sharpe_daily_ann": 1.205,
+     "sharpe_daily_ann": 1.155,
      "max_drawdown": -137.67
     },
     "naive_same_events": {
      "total_net_pnl": 885.18,
      "trades": 4,
-     "sharpe_daily_ann": 1.324,
+     "sharpe_daily_ann": 1.269,
      "max_drawdown": -75.28
     }
    },
@@ -36710,12 +37757,12 @@
     "residual": {
      "total_net_pnl": 614.21,
      "trades": 13,
-     "sharpe_daily_ann": 1.014
+     "sharpe_daily_ann": 0.972
     },
     "naive_same_events": {
      "total_net_pnl": 976.34,
      "trades": 13,
-     "sharpe_daily_ann": 1.286
+     "sharpe_daily_ann": 1.233
     }
    }
   },
@@ -36727,13 +37774,13 @@
     "residual": {
      "total_net_pnl": 1306.65,
      "trades": 4,
-     "sharpe_daily_ann": 1.18,
+     "sharpe_daily_ann": 1.131,
      "max_drawdown": -275.34
     },
     "naive_same_events": {
      "total_net_pnl": 1735.36,
      "trades": 4,
-     "sharpe_daily_ann": 1.303,
+     "sharpe_daily_ann": 1.249,
      "max_drawdown": -150.55
     }
    },
@@ -36741,12 +37788,12 @@
     "residual": {
      "total_net_pnl": 991.88,
      "trades": 13,
-     "sharpe_daily_ann": 0.845
+     "sharpe_daily_ann": 0.81
     },
     "naive_same_events": {
      "total_net_pnl": 1594.46,
      "trades": 13,
-     "sharpe_daily_ann": 1.099
+     "sharpe_daily_ann": 1.054
     }
    }
   }
@@ -36772,6 +37819,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -36804,6 +37861,26 @@
     "sharpe_daily_ann": -0.122,
     "sortino_daily_ann": -0.161,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 27,
+     "undefined_under_2_trades": 246,
+     "median_sharpe": -0.381,
+     "min_sharpe": -0.381,
+     "max_sharpe": -0.381,
+     "pct_positive": 0.0
+    },
+    "turnover": {
+     "gross_notional": 7500.0,
+     "company_leg": 7500.0,
+     "hedge_leg": 0.0,
+     "per_trade": 3750.0,
+     "annualised_x_start_balance": 0.091,
+     "fees_plus_slippage": 9.08,
+     "costs_bps_of_turnover": 12.11,
+     "costs_pct_of_gross_pnl": 711.4
+    },
     "basis": "primary",
     "total_net_pnl": -10.45,
     "trades": 2,
@@ -36836,6 +37913,26 @@
     "sharpe_daily_ann": 1.557,
     "sortino_daily_ann": null,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 27,
+     "undefined_under_2_trades": 246,
+     "median_sharpe": 5.019,
+     "min_sharpe": 5.019,
+     "max_sharpe": 5.019,
+     "pct_positive": 1.0
+    },
+    "turnover": {
+     "gross_notional": 7500.0,
+     "company_leg": 7500.0,
+     "hedge_leg": 0.0,
+     "per_trade": 3750.0,
+     "annualised_x_start_balance": 0.091,
+     "fees_plus_slippage": 9.08,
+     "costs_bps_of_turnover": 12.11,
+     "costs_pct_of_gross_pnl": 7.0
+    },
     "basis": "primary",
     "total_net_pnl": 119.1,
     "trades": 2,
@@ -36868,6 +37965,26 @@
     "sharpe_daily_ann": 1.818,
     "sortino_daily_ann": null,
     "days": 303,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 274,
+     "defined": 28,
+     "undefined_under_2_trades": 246,
+     "median_sharpe": 4.712,
+     "min_sharpe": 4.712,
+     "max_sharpe": 5.939,
+     "pct_positive": 1.0
+    },
+    "turnover": {
+     "gross_notional": 15000.0,
+     "company_leg": 15000.0,
+     "hedge_leg": 0.0,
+     "per_trade": 5000.0,
+     "annualised_x_start_balance": 0.181,
+     "fees_plus_slippage": 17.72,
+     "costs_bps_of_turnover": 11.81,
+     "costs_pct_of_gross_pnl": 6.4
+    },
     "basis": "primary",
     "total_net_pnl": 255.8,
     "trades": 3,
@@ -36900,6 +38017,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -36932,6 +38059,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -36964,6 +38101,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -36996,6 +38143,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -37028,6 +38185,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -37062,6 +38229,26 @@
     "sharpe_daily_ann": 0.728,
     "sortino_daily_ann": 1.43,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 49,
+     "undefined_under_2_trades": 224,
+     "median_sharpe": 4.498,
+     "min_sharpe": -1.371,
+     "max_sharpe": 4.498,
+     "pct_positive": 0.551
+    },
+    "turnover": {
+     "gross_notional": 33282.62,
+     "company_leg": 22500.0,
+     "hedge_leg": 10782.62,
+     "per_trade": 5547.1,
+     "annualised_x_start_balance": 0.402,
+     "fees_plus_slippage": 40.51,
+     "costs_bps_of_turnover": 12.17,
+     "costs_pct_of_gross_pnl": 25.1
+    },
     "basis": "conservative",
     "total_net_pnl": 122.19,
     "trades": 6,
@@ -37094,6 +38281,26 @@
     "sharpe_daily_ann": -1.082,
     "sortino_daily_ann": -1.174,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 49,
+     "undefined_under_2_trades": 224,
+     "median_sharpe": -0.381,
+     "min_sharpe": -3.055,
+     "max_sharpe": -0.381,
+     "pct_positive": 0.0
+    },
+    "turnover": {
+     "gross_notional": 22500.0,
+     "company_leg": 22500.0,
+     "hedge_leg": 0.0,
+     "per_trade": 3750.0,
+     "annualised_x_start_balance": 0.272,
+     "fees_plus_slippage": 26.81,
+     "costs_bps_of_turnover": 11.91,
+     "costs_pct_of_gross_pnl": 17.9
+    },
     "basis": "conservative",
     "total_net_pnl": -176.67,
     "trades": 6,
@@ -37126,6 +38333,26 @@
     "sharpe_daily_ann": 0.382,
     "sortino_daily_ann": 0.546,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 49,
+     "undefined_under_2_trades": 224,
+     "median_sharpe": 5.019,
+     "min_sharpe": 3.818,
+     "max_sharpe": 5.019,
+     "pct_positive": 1.0
+    },
+    "turnover": {
+     "gross_notional": 22500.0,
+     "company_leg": 22500.0,
+     "hedge_leg": 0.0,
+     "per_trade": 3750.0,
+     "annualised_x_start_balance": 0.272,
+     "fees_plus_slippage": 26.83,
+     "costs_bps_of_turnover": 11.93,
+     "costs_pct_of_gross_pnl": 28.9
+    },
     "basis": "conservative",
     "total_net_pnl": 64.6,
     "trades": 6,
@@ -37158,6 +38385,26 @@
     "sharpe_daily_ann": -0.13,
     "sortino_daily_ann": -0.167,
     "days": 303,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 274,
+     "defined": 88,
+     "undefined_under_2_trades": 186,
+     "median_sharpe": 4.11,
+     "min_sharpe": -3.909,
+     "max_sharpe": 5.939,
+     "pct_positive": 0.568
+    },
+    "turnover": {
+     "gross_notional": 50000.0,
+     "company_leg": 50000.0,
+     "hedge_leg": 0.0,
+     "per_trade": 5000.0,
+     "annualised_x_start_balance": 0.602,
+     "fees_plus_slippage": 58.81,
+     "costs_bps_of_turnover": 11.76,
+     "costs_pct_of_gross_pnl": 235.3
+    },
     "basis": "conservative",
     "total_net_pnl": -35.19,
     "trades": 10,
@@ -37190,6 +38437,26 @@
     "sharpe_daily_ann": 0.728,
     "sortino_daily_ann": 1.43,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 49,
+     "undefined_under_2_trades": 224,
+     "median_sharpe": 4.498,
+     "min_sharpe": -1.371,
+     "max_sharpe": 4.498,
+     "pct_positive": 0.551
+    },
+    "turnover": {
+     "gross_notional": 33282.62,
+     "company_leg": 22500.0,
+     "hedge_leg": 10782.62,
+     "per_trade": 5547.1,
+     "annualised_x_start_balance": 0.402,
+     "fees_plus_slippage": 40.51,
+     "costs_bps_of_turnover": 12.17,
+     "costs_pct_of_gross_pnl": 25.1
+    },
     "basis": "conservative",
     "total_net_pnl": 122.19,
     "trades": 6,
@@ -37222,6 +38489,26 @@
     "sharpe_daily_ann": -0.897,
     "sortino_daily_ann": -0.995,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 49,
+     "undefined_under_2_trades": 224,
+     "median_sharpe": -0.944,
+     "min_sharpe": -0.944,
+     "max_sharpe": 5.017,
+     "pct_positive": 0.449
+    },
+    "turnover": {
+     "gross_notional": 33282.62,
+     "company_leg": 22500.0,
+     "hedge_leg": 10782.62,
+     "per_trade": 5547.1,
+     "annualised_x_start_balance": 0.402,
+     "fees_plus_slippage": 40.29,
+     "costs_bps_of_turnover": 12.11,
+     "costs_pct_of_gross_pnl": 58.0
+    },
     "basis": "conservative",
     "total_net_pnl": -109.88,
     "trades": 6,
@@ -37254,6 +38541,26 @@
     "sharpe_daily_ann": -0.164,
     "sortino_daily_ann": -0.195,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 0,
+     "undefined_under_2_trades": 273,
+     "median_sharpe": null,
+     "min_sharpe": null,
+     "max_sharpe": null,
+     "pct_positive": null
+    },
+    "turnover": {
+     "gross_notional": 14741.65,
+     "company_leg": 10000.0,
+     "hedge_leg": 4741.65,
+     "per_trade": 4913.88,
+     "annualised_x_start_balance": 0.178,
+     "fees_plus_slippage": 18.29,
+     "costs_bps_of_turnover": 12.4,
+     "costs_pct_of_gross_pnl": 603.5
+    },
     "basis": "conservative",
     "total_net_pnl": -15.35,
     "trades": 3,
@@ -37286,6 +38593,26 @@
     "sharpe_daily_ann": 0.57,
     "sortino_daily_ann": 1.108,
     "days": 302,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 273,
+     "defined": 27,
+     "undefined_under_2_trades": 246,
+     "median_sharpe": 4.498,
+     "min_sharpe": 4.498,
+     "max_sharpe": 4.498,
+     "pct_positive": 1.0
+    },
+    "turnover": {
+     "gross_notional": 26290.87,
+     "company_leg": 17500.0,
+     "hedge_leg": 8790.87,
+     "per_trade": 5258.17,
+     "annualised_x_start_balance": 0.318,
+     "fees_plus_slippage": 31.65,
+     "costs_bps_of_turnover": 12.04,
+     "costs_pct_of_gross_pnl": 25.3
+    },
     "basis": "conservative",
     "total_net_pnl": 94.58,
     "trades": 5,
@@ -37318,6 +38645,16 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "conservative",
     "total_net_pnl": 0.0,
     "trades": 0,
@@ -37582,14 +38919,34 @@
    "residual": {
     "sharpe_per_trade": 0.299,
     "sortino_per_trade": 0.693,
-    "sharpe_daily_ann": 0.991,
-    "sortino_daily_ann": 2.416,
-    "days": 317,
+    "sharpe_daily_ann": 0.95,
+    "sortino_daily_ann": 2.316,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 57,
+     "undefined_under_2_trades": 259,
+     "median_sharpe": 3.488,
+     "min_sharpe": -0.294,
+     "max_sharpe": 5.204,
+     "pct_positive": 0.93
+    },
+    "turnover": {
+     "gross_notional": 39532.75,
+     "company_leg": 21089.5,
+     "hedge_leg": 18443.25,
+     "per_trade": 7906.55,
+     "annualised_x_start_balance": 0.418,
+     "fees_plus_slippage": 55.35,
+     "costs_bps_of_turnover": 14.0,
+     "costs_pct_of_gross_pnl": 15.1
+    },
     "basis": "primary",
     "total_net_pnl": 309.98,
     "trades": 5,
     "excluded_funding_unavailable": 10,
-    "no_trades": 64,
+    "no_trades": 65,
     "hit_rate": 0.6,
     "avg_pnl_per_trade": 62.0,
     "pnl_std_per_trade": 154.74,
@@ -37675,20 +39032,41 @@
      309.98,
      309.98,
      309.98,
+     309.98,
      309.98
     ]
    },
    "unhedged": {
     "sharpe_per_trade": 0.864,
     "sortino_per_trade": 3.98,
-    "sharpe_daily_ann": 1.402,
-    "sortino_daily_ann": 7.276,
-    "days": 317,
+    "sharpe_daily_ann": 1.344,
+    "sortino_daily_ann": 6.974,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 57,
+     "undefined_under_2_trades": 259,
+     "median_sharpe": 3.664,
+     "min_sharpe": 1.121,
+     "max_sharpe": 5.449,
+     "pct_positive": 1.0
+    },
+    "turnover": {
+     "gross_notional": 21089.5,
+     "company_leg": 21089.5,
+     "hedge_leg": 0.0,
+     "per_trade": 4217.9,
+     "annualised_x_start_balance": 0.223,
+     "fees_plus_slippage": 31.43,
+     "costs_bps_of_turnover": 14.9,
+     "costs_pct_of_gross_pnl": 5.8
+    },
     "basis": "primary",
     "total_net_pnl": 510.43,
     "trades": 5,
     "excluded_funding_unavailable": 10,
-    "no_trades": 64,
+    "no_trades": 65,
     "hit_rate": 0.8,
     "avg_pnl_per_trade": 102.09,
     "pnl_std_per_trade": 153.44,
@@ -37769,6 +39147,7 @@
      390.32,
      390.32,
      434.76,
+     510.43,
      510.43,
      510.43,
      510.43,
@@ -37780,14 +39159,34 @@
    "naive_same_events": {
     "sharpe_per_trade": 0.864,
     "sortino_per_trade": 3.98,
-    "sharpe_daily_ann": 1.402,
-    "sortino_daily_ann": 7.276,
-    "days": 317,
+    "sharpe_daily_ann": 1.344,
+    "sortino_daily_ann": 6.974,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 57,
+     "undefined_under_2_trades": 259,
+     "median_sharpe": 3.664,
+     "min_sharpe": 1.121,
+     "max_sharpe": 5.449,
+     "pct_positive": 1.0
+    },
+    "turnover": {
+     "gross_notional": 21089.5,
+     "company_leg": 21089.5,
+     "hedge_leg": 0.0,
+     "per_trade": 4217.9,
+     "annualised_x_start_balance": 0.223,
+     "fees_plus_slippage": 31.43,
+     "costs_bps_of_turnover": 14.9,
+     "costs_pct_of_gross_pnl": 5.8
+    },
     "basis": "primary",
     "total_net_pnl": 510.43,
     "trades": 5,
     "excluded_funding_unavailable": 10,
-    "no_trades": 64,
+    "no_trades": 65,
     "hit_rate": 0.8,
     "avg_pnl_per_trade": 102.09,
     "pnl_std_per_trade": 153.44,
@@ -37873,20 +39272,41 @@
      510.43,
      510.43,
      510.43,
+     510.43,
      510.43
     ]
    },
    "naive": {
     "sharpe_per_trade": -0.028,
     "sortino_per_trade": -0.047,
-    "sharpe_daily_ann": -0.136,
-    "sortino_daily_ann": -0.221,
-    "days": 318,
+    "sharpe_daily_ann": -0.131,
+    "sortino_daily_ann": -0.212,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 70,
+     "undefined_under_2_trades": 246,
+     "median_sharpe": -1.555,
+     "min_sharpe": -6.001,
+     "max_sharpe": 4.528,
+     "pct_positive": 0.5
+    },
+    "turnover": {
+     "gross_notional": 95000.0,
+     "company_leg": 95000.0,
+     "hedge_leg": 0.0,
+     "per_trade": 5000.0,
+     "annualised_x_start_balance": 1.005,
+     "fees_plus_slippage": 154.06,
+     "costs_bps_of_turnover": 16.22,
+     "costs_pct_of_gross_pnl": 171.2
+    },
     "basis": "primary",
     "total_net_pnl": -69.8,
     "trades": 19,
     "excluded_funding_unavailable": 18,
-    "no_trades": 42,
+    "no_trades": 43,
     "hit_rate": 0.368,
     "avg_pnl_per_trade": -3.67,
     "pnl_std_per_trade": 132.31,
@@ -37972,20 +39392,41 @@
      275.91,
      89.17,
      8.12,
+     -69.8,
      -69.8
     ]
    },
    "v_residual": {
     "sharpe_per_trade": 0.052,
     "sortino_per_trade": 0.095,
-    "sharpe_daily_ann": 0.269,
-    "sortino_daily_ann": 0.497,
-    "days": 317,
+    "sharpe_daily_ann": 0.258,
+    "sortino_daily_ann": 0.477,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 59,
+     "undefined_under_2_trades": 257,
+     "median_sharpe": 1.162,
+     "min_sharpe": -5.613,
+     "max_sharpe": 3.531,
+     "pct_positive": 0.627
+    },
+    "turnover": {
+     "gross_notional": 103528.98,
+     "company_leg": 44135.0,
+     "hedge_leg": 59393.98,
+     "per_trade": 9411.73,
+     "annualised_x_start_balance": 1.095,
+     "fees_plus_slippage": 140.31,
+     "costs_bps_of_turnover": 13.55,
+     "costs_pct_of_gross_pnl": 60.1
+    },
     "basis": "primary",
     "total_net_pnl": 93.62,
     "trades": 11,
     "excluded_funding_unavailable": 10,
-    "no_trades": 58,
+    "no_trades": 59,
     "hit_rate": 0.455,
     "avg_pnl_per_trade": 8.51,
     "pnl_std_per_trade": 120.08,
@@ -38071,20 +39512,41 @@
      93.62,
      93.62,
      93.62,
+     93.62,
      93.62
     ]
    },
    "v_headline": {
     "sharpe_per_trade": 0.169,
     "sortino_per_trade": 0.338,
-    "sharpe_daily_ann": 1.024,
-    "sortino_daily_ann": 2.359,
-    "days": 317,
+    "sharpe_daily_ann": 0.981,
+    "sortino_daily_ann": 2.261,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 59,
+     "undefined_under_2_trades": 257,
+     "median_sharpe": 2.931,
+     "min_sharpe": -4.49,
+     "max_sharpe": 5.958,
+     "pct_positive": 0.898
+    },
+    "turnover": {
+     "gross_notional": 103528.98,
+     "company_leg": 44135.0,
+     "hedge_leg": 59393.98,
+     "per_trade": 9411.73,
+     "annualised_x_start_balance": 1.095,
+     "fees_plus_slippage": 140.0,
+     "costs_bps_of_turnover": 13.52,
+     "costs_pct_of_gross_pnl": 29.4
+    },
     "basis": "primary",
     "total_net_pnl": 334.84,
     "trades": 11,
     "excluded_funding_unavailable": 10,
-    "no_trades": 58,
+    "no_trades": 59,
     "hit_rate": 0.545,
     "avg_pnl_per_trade": 30.44,
     "pnl_std_per_trade": 107.15,
@@ -38170,20 +39632,41 @@
      334.84,
      334.84,
      334.84,
+     334.84,
      334.84
     ]
    },
    "v_agreement": {
     "sharpe_per_trade": 0.299,
     "sortino_per_trade": 0.693,
-    "sharpe_daily_ann": 0.991,
-    "sortino_daily_ann": 2.416,
-    "days": 317,
+    "sharpe_daily_ann": 0.95,
+    "sortino_daily_ann": 2.316,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 57,
+     "undefined_under_2_trades": 259,
+     "median_sharpe": 3.488,
+     "min_sharpe": -0.294,
+     "max_sharpe": 5.204,
+     "pct_positive": 0.93
+    },
+    "turnover": {
+     "gross_notional": 39532.75,
+     "company_leg": 21089.5,
+     "hedge_leg": 18443.25,
+     "per_trade": 7906.55,
+     "annualised_x_start_balance": 0.418,
+     "fees_plus_slippage": 55.35,
+     "costs_bps_of_turnover": 14.0,
+     "costs_pct_of_gross_pnl": 15.1
+    },
     "basis": "primary",
     "total_net_pnl": 309.98,
     "trades": 5,
     "excluded_funding_unavailable": 6,
-    "no_trades": 68,
+    "no_trades": 69,
     "hit_rate": 0.6,
     "avg_pnl_per_trade": 62.0,
     "pnl_std_per_trade": 154.74,
@@ -38269,20 +39752,41 @@
      309.98,
      309.98,
      309.98,
+     309.98,
      309.98
     ]
    },
    "v_consensus": {
     "sharpe_per_trade": 0.266,
     "sortino_per_trade": 0.481,
-    "sharpe_daily_ann": 0.749,
-    "sortino_daily_ann": 1.415,
-    "days": 317,
+    "sharpe_daily_ann": 0.718,
+    "sortino_daily_ann": 1.356,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 58,
+     "undefined_under_2_trades": 258,
+     "median_sharpe": 1.754,
+     "min_sharpe": -3.124,
+     "max_sharpe": 4.364,
+     "pct_positive": 0.603
+    },
+    "turnover": {
+     "gross_notional": 75847.88,
+     "company_leg": 31576.0,
+     "hedge_leg": 44271.88,
+     "per_trade": 10835.41,
+     "annualised_x_start_balance": 0.802,
+     "fees_plus_slippage": 98.14,
+     "costs_bps_of_turnover": 12.94,
+     "costs_pct_of_gross_pnl": 43.0
+    },
     "basis": "primary",
     "total_net_pnl": 128.75,
     "trades": 7,
     "excluded_funding_unavailable": 7,
-    "no_trades": 65,
+    "no_trades": 66,
     "hit_rate": 0.714,
     "avg_pnl_per_trade": 18.39,
     "pnl_std_per_trade": 76.12,
@@ -38368,6 +39872,7 @@
      128.75,
      128.75,
      128.75,
+     128.75,
      128.75
     ]
    },
@@ -38377,11 +39882,21 @@
     "sharpe_daily_ann": null,
     "sortino_daily_ann": null,
     "days": 0,
+    "turnover": {
+     "gross_notional": 0.0,
+     "company_leg": 0.0,
+     "hedge_leg": 0.0,
+     "per_trade": null,
+     "annualised_x_start_balance": null,
+     "fees_plus_slippage": 0,
+     "costs_bps_of_turnover": null,
+     "costs_pct_of_gross_pnl": null
+    },
     "basis": "primary",
     "total_net_pnl": 0.0,
     "trades": 0,
     "excluded_funding_unavailable": 0,
-    "no_trades": 79,
+    "no_trades": 80,
     "hit_rate": null,
     "avg_pnl_per_trade": null,
     "pnl_std_per_trade": null,
@@ -38389,6 +39904,7 @@
     "avg_holding_hours": null,
     "return_on_start_balance_pct": 0.0,
     "equity_curve": [
+     0.0,
      0.0,
      0.0,
      0.0,
@@ -38550,7 +40066,8 @@
    "MDB-2026-09-01": "NO_TRADE",
    "PANW-2026-09-01": "NO_TRADE",
    "HPE-2026-09-02": "NO_TRADE",
-   "AVGO-2026-09-02": "NO_TRADE"
+   "AVGO-2026-09-02": "NO_TRADE",
+   "MU-2026-09-30": "NO_TRADE"
   }
  }
 }

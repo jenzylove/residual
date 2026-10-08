@@ -194,3 +194,32 @@ class PublishedNumberInvariants(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReadmeMatchesResults(unittest.TestCase):
+    """Judge facing numbers in the README must come from data/results.json, never drift from it."""
+
+    def setUp(self):
+        self.readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.r = json.loads((ROOT / "data" / "results.json").read_text(encoding="utf-8"))
+
+    def has(self, text):
+        self.assertIn(text, self.readme)
+
+    def test_scorecard(self):
+        c = self.r["summary_conservative_funding"]["residual"]
+        self.has(f"+${c['total_net_pnl']:.2f}")
+        self.has(f"| Sharpe, daily, annualised | {c['sharpe_daily_ann']:.3f}")
+        self.has(f"| Sortino, daily, annualised | {c['sortino_daily_ann']:.3f}")
+        self.has(f"| Turnover per year | {c['turnover']['annualised_x_start_balance']:.2f}x")
+        self.has(f"{c['rolling_30d']['defined']} of {c['rolling_30d']['windows']} windows")
+        h = self.r["holdout"]["conservative"]
+        self.has(f"in sample {h['in_sample']['sharpe_daily_ann']:.3f}, out of sample {h['out_of_sample']['sharpe_daily_ann']:.3f}")
+
+    def test_funding_complete_view(self):
+        p = self.r["summary"]["residual"]
+        self.has(f"leaves {p['trades']} trades: +${p['total_net_pnl']:.2f}, Sharpe {p['sharpe_daily_ann']:.3f} daily")
+
+    def test_counts(self):
+        self.has(f"Walk-forward over {len(self.r['rows'])} releases")
+        self.has(f"| {len(self.r['rows'])} releases |")
