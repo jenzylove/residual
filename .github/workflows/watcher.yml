@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: "*/10 * * * *"
   workflow_dispatch:
+    inputs:
+      demo_check:
+        description: "Also sign in to Bitget Demo and list contracts (read only, no orders)"
+        type: boolean
+        default: false
 
 concurrency:
   group: watcher
@@ -35,5 +40,6 @@ jobs:
         run: |
           git config user.name "jenzylove"
           git config user.email "jennifereze12@gmail.com"
+          if [ "${{ inputs.demo_check }}" = "true" ]; then python -m residual demo-check | head -5; fi
           python scripts/watch_once.py
           tail -n 1 data/watcher.log
