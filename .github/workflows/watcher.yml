@@ -5,7 +5,7 @@ name: watcher
 # commits its whole state back, because a runner keeps nothing between runs.
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "7,17,27,37,47,57 * * * *"  # off the round minutes, where GitHub drops scheduled runs under load
   workflow_dispatch:
     inputs:
       demo_check:
