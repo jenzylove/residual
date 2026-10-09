@@ -222,11 +222,13 @@ python -m residual keyrun             # full Bitget Demo check: auth, coverage, 
 python -m residual demo-strategy-trade --mode demo --notional 100
 ```
 
-Windows, to keep the watcher running silently and publishing to the site:
+### The live watcher
 
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\install_watcher.ps1
-```
+The watcher runs on GitHub Actions ([`.github/workflows/watcher.yml`](.github/workflows/watcher.yml)), every 10 minutes: it checks EDGAR for new earnings releases across all 46 companies, decides TRADE or NO_TRADE with the frozen method, manages Bitget Demo pairs, and commits its whole state back to the repository, because a runner keeps nothing between runs. When it catches a new release it replays the study before publishing, so CI and the site always match the committed data. Every check is in [`data/live_log.jsonl`](data/live_log.jsonl).
+
+It needs four repository secrets: `ANTHROPIC_API_KEY` and the three `BITGET_DEMO_API_*` values (`gh secret set -f .env.local`). A manual run can also sign in to Bitget Demo read only, to confirm the keys work from GitHub (`gh workflow run watcher.yml -f demo_check=true`).
+
+Run only one watcher at a time. A local Windows task exists for running it off a laptop instead (`scripts\install_watcher.ps1`), but two watchers would race on the same logs and Demo positions.
 
 ## Audit
 

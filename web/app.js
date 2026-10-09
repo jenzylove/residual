@@ -27,10 +27,11 @@ document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
 });
 
 function render() {
-  const s = D.summary.residual, n = D.summary.naive_same_events;
+  // headline view: every trade counted, missing funding charged at the worst rate (same as the README)
+  const s = D.summary_conservative_funding.residual, n = D.summary_conservative_funding.naive_same_events;
   const rej = D.rows.filter(r => r.decision.decision !== "TRADE").length;
   $("#kpis").innerHTML = [
-    ["Events", D.rows.length], ["Paired trades", s.trades], ["NO_TRADE", rej],
+    ["Events", D.rows.length], ["Paired trades, all counted", s.trades], ["NO_TRADE", rej],
     ["Net P&L", `<span class="${cls(s.total_net_pnl)}">${usd(s.total_net_pnl, 0)}</span>`],
     ["Hit rate", s.hit_rate == null ? "n/a" : (s.hit_rate * 100).toFixed(0) + "%"],
     ["Naive, same events", `<span class="${cls(n.total_net_pnl)}">${usd(n.total_net_pnl, 0)}</span>`],

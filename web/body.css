@@ -208,3 +208,5 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 #demo-strat{align-items:start}
 @media (max-width:860px){.vtable{display:block;overflow-x:auto}.vtable td:first-child,.ratios td:first-child{white-space:normal;min-width:130px}.vtable small{white-space:normal}}
 .ratios table.prereg{margin-top:18px}
+.proof-grid>.card:has(#curve){align-self:start;position:sticky;top:96px}
+@media (max-width:980px){.proof-grid>.card:has(#curve){position:static}}
