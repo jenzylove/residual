@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T20:36:47+00:00",
+ "generated_at": "2026-10-08T21:11:31+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -3960,6 +3960,24 @@
    },
    "sharpe_decay": null,
    "oos_below_half_is": null
+  }
+ },
+ "significance": {
+  "method": "permutation, conservative funding view",
+  "seed": 7,
+  "selection": {
+   "eligible": 37,
+   "picked": 15,
+   "picked_headline_pnl": 606.01,
+   "random_mean_pnl": -299.39,
+   "draws": 200000,
+   "p_value": 0.00174
+  },
+  "direction": {
+   "trades": 15,
+   "gross_pnl": 340.48,
+   "exact": true,
+   "p_value": 0.19757
   }
  },
  "events": [

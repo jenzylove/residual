@@ -289,6 +289,39 @@ def frozen_holdout(analyzed, split_ms: int, *, use_ai: bool, allow_llm_calls: bo
 HOLDOUT_FIELDS = ("trades", "total_net_pnl", "sharpe_daily_ann", "sortino_daily_ann", "sharpe_per_trade", "max_drawdown")
 
 
+def significance(rows: list[dict], draws: int = 200_000, seed: int = 7) -> dict:
+    """Two permutation tests on the conservative view, seeded so a replay reproduces them.
+    selection: does the set of releases the strategy traded beat random sets of the same size drawn from
+    every release where the plain headline trade was possible? Scored on the headline trade (size 1),
+    so only the choice of release differs.
+    direction: does the chosen direction beat random directions on the same trades? Gross P&L at mid,
+    sign flipped, exact when there are 20 trades or fewer."""
+    import itertools
+    import random
+    rng = random.Random(seed)
+    pool = [(r["event_id"], r["naive"]["net_conservative"]) for r in rows if r.get("naive")]
+    picked = [v for e, v in pool if any(x["event_id"] == e and x.get("residual") for x in rows)]
+    out = {"method": "permutation, conservative funding view", "seed": seed}
+    if picked and len(pool) > len(picked):
+        vals, k, obs = [v for _, v in pool], len(picked), sum(picked)
+        hits = sum(sum(rng.sample(vals, k)) >= obs - 1e-9 for _ in range(draws))
+        out["selection"] = {"eligible": len(vals), "picked": k, "picked_headline_pnl": round(obs, 2),
+                            "random_mean_pnl": round(statistics.fmean(vals) * k, 2), "draws": draws,
+                            "p_value": round((hits + 1) / (draws + 1), 5)}
+    g = [r["residual"]["gross_mid"] for r in rows if r.get("residual")]
+    if g:
+        obs = sum(g)
+        if len(g) <= 20:
+            signs = itertools.product((1, -1), repeat=len(g))
+            n, hits = 2 ** len(g), sum(sum(a * b for a, b in zip(s, g)) >= obs - 1e-9 for s in signs)
+            p = hits / n
+        else:
+            n, hits = draws, sum(sum(x * rng.choice((1, -1)) for x in g) >= obs - 1e-9 for _ in range(draws))
+            p = (hits + 1) / (n + 1)
+        out["direction"] = {"trades": len(g), "gross_pnl": round(obs, 2), "exact": len(g) <= 20, "p_value": round(p, 5)}
+    return out
+
+
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
            hedge_pool=None, tickers=None) -> dict:
     events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
@@ -331,7 +364,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "summary_observed_zero_funding": summary_observed_zero,
         "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
         "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; the caps shown are the full period values, for disclosure", "summary_post_warmup": summary_post_warmup,
-        "holdout": holdout,
+        "holdout": holdout, "significance": significance(rows),
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }
