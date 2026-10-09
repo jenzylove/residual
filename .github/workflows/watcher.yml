@@ -1,0 +1,39 @@
+name: watcher
+
+# The live watcher, off the laptop: one cycle every 10 minutes. It checks SEC EDGAR for new earnings
+# releases, decides TRADE or NO_TRADE with the same frozen method, manages Bitget Demo pairs, and
+# commits its whole state back, because a runner keeps nothing between runs.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: watcher
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: One watcher cycle
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BITGET_DEMO_API_KEY: ${{ secrets.BITGET_DEMO_API_KEY }}
+          BITGET_DEMO_API_SECRET: ${{ secrets.BITGET_DEMO_API_SECRET }}
+          BITGET_DEMO_API_PASSPHRASE: ${{ secrets.BITGET_DEMO_API_PASSPHRASE }}
+        run: |
+          git config user.name "jenzylove"
+          git config user.email "jennifereze12@gmail.com"
+          python scripts/watch_once.py
+          tail -n 1 data/watcher.log

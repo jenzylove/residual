@@ -3,5 +3,16 @@
   "installCommand": "",
   "outputDirectory": "web",
   "cleanUrls": true,
-  "headers": [{ "source": "/data.json", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }]
+  "headers": [
+    {
+      "source": "/data.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ],
+  "ignoreCommand": "sh scripts/vercel_ignore.sh"
 }

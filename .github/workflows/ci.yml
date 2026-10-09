@@ -2,6 +2,7 @@ name: ci
 
 on:
   push:
+    paths-ignore: ["data/live_log.jsonl", "data/watcher.log", "web/live.json"]
   pull_request:
 
 jobs:
