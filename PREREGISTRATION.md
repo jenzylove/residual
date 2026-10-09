@@ -115,3 +115,21 @@ ORCL; NFLX was already listed), and only ADI and ANET joined the study. No snaps
 consensus file or event record for any of the others exists anywhere in the repository history, so
 none of them was ever scored. Why they were not added then is not recorded. Their inclusion now
 follows the rule above, not that earlier list.
+
+## Outcome, 9 October 2026 (results commit `aa9d939`)
+
+Appended after the run; nothing above was edited.
+
+- 107 releases from the 26 companies; 69 came before a usable Bitget market, 37 could be analysed, and
+  the gates passed 2 (LRCX-2026-07-29 +$33.10, DELL-2026-09-01 +$138.22). Thin books and hedges that
+  did not fit blocked most of the rest.
+- **H1** (selection p below 0.05 on the new companies): p = 0.020. Passes on paper, on two trades only.
+- **H2** (headline trade loses on the new companies, strategy beats it): **failed.** The headline trade on
+  every eligible new release made +$362.12 over 37 trades, against the strategy's +$171.31.
+- **H3** (direction stays insignificant): held, p = 0.25.
+- Combined, all 46 companies: 17 trades, +$360.97, Sharpe 1.037 daily, selection p = 0.008,
+  direction p = 0.078. The original 20 slice is unchanged at 15 trades and +$189.66.
+
+One deviation from the plan: CRDO-2026-03-03 is recorded as data incomplete because Credo's December
+2025 release is missing from the SEC submissions list, so the March release has no prior quarter
+outlook to compare against. No pattern or gate was changed for it.
