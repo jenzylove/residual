@@ -1,0 +1,25 @@
+{
+ "event_id": "AAOI-2026-08-07",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "ac0150b5fa632c86c99f04341f2ca0ceb7a8b9fe99c07677244df4d69c759df3",
+ "created_at": "2026-10-09T05:55:54Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat own guidance and Q3 outlook mid ($272.5M) implies strong sequential growth acceleration, with 800G/1.6T volumes doubling, capacity expansion plans, and demand outpacing supply into mid-2027, plus return to non-GAAP profitability\u2014supporting a lasting positive re-rating rather than a one-off beat.\", \"evidence_quotes\": [\"we saw a strong volume ramp of our 800G products, which more than doubled sequentially\", \"we forecast that demand will continue to outpace our production capacity through mid-2027\", \"Revenue in the range of $255 million to $290 million.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat own guidance and Q3 outlook mid ($272.5M) implies strong sequential growth acceleration, with 800G/1.6T volumes doubling, capacity expansion plans, and demand outpacing supply into mid-2027, plus return to non-GAAP profitability\u2014supporting a lasting positive re-rating rather than a one-off beat.\", \"evidence_quotes\": [\"we saw a strong volume ramp of our 800G products, which more than doubled sequentially\", \"we forecast that demand will continue to outpace our production capacity through mid-2027\", \"Revenue in the range of $255 million to $290 million.\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.72,
+ "rationale": "Revenue beat own guidance and Q3 outlook mid ($272.5M) implies strong sequential growth acceleration, with 800G/1.6T volumes doubling, capacity expansion plans, and demand outpacing supply into mid-2027, plus return to non-GAAP profitability\u2014supporting a lasting positive re-rating rather than a one-off beat.",
+ "evidence_quotes": [
+  "we saw a strong volume ramp of our 800G products, which more than doubled sequentially",
+  "we forecast that demand will continue to outpace our production capacity through mid-2027",
+  "Revenue in the range of $255 million to $290 million."
+ ]
+}

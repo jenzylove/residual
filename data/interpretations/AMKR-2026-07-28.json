@@ -1,0 +1,24 @@
+{
+ "event_id": "AMKR-2026-07-28",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "7198e53c4d0620e0d5548baad608c196f150f3bfcbbfd35b4ca1e0389eaa1a37",
+ "created_at": "2026-10-09T05:54:30Z",
+ "raw_response": "{\"label\": \"temporary\", \"confidence\": 0.46, \"rationale\": \"Residual is small (+0.27%) despite a clear revenue beat and raised Q3 guidance, suggesting the positive fundamentals are already mostly reflected in price; coupled with a guided deceleration in growth rate versus prior trend, the tiny company-specific pop looks likely to fade rather than extend.\", \"evidence_quotes\": [\"Net sales $1.90 billion, up 26% year-on-year\", \"Net sales of $1.95 billion to $2.05 billion\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"temporary\", \"confidence\": 0.46, \"rationale\": \"Residual is small (+0.27%) despite a clear revenue beat and raised Q3 guidance, suggesting the positive fundamentals are already mostly reflected in price; coupled with a guided deceleration in growth rate versus prior trend, the tiny company-specific pop looks likely to fade rather than extend.\", \"evidence_quotes\": [\"Net sales $1.90 billion, up 26% year-on-year\", \"Net sales of $1.95 billion to $2.05 billion\"]}"
+  }
+ ],
+ "label": "temporary",
+ "confidence": 0.46,
+ "rationale": "Residual is small (+0.27%) despite a clear revenue beat and raised Q3 guidance, suggesting the positive fundamentals are already mostly reflected in price; coupled with a guided deceleration in growth rate versus prior trend, the tiny company-specific pop looks likely to fade rather than extend.",
+ "evidence_quotes": [
+  "Net sales $1.90 billion, up 26% year-on-year",
+  "Net sales of $1.95 billion to $2.05 billion"
+ ]
+}

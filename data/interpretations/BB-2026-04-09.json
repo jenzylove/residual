@@ -1,0 +1,25 @@
+{
+ "event_id": "BB-2026-04-09",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "b0e3b54ca5b846b9f9e618f5d44b316ea919774c6102d0c86837113ba513bdad",
+ "created_at": "2026-10-09T05:53:41Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Residual is negative despite strong beat (revenue +9% vs own guidance, margins/EBITDA up sharply, QNX record results), but next-quarter guidance midpoint of $136M implies sequential decline and was lowered vs prior growth trajectory, conflicting with the negative residual direction given the otherwise strong print.\", \"evidence_quotes\": [\"Total company revenue was $156.0 million, up 10% year-over-year.\", \"Total company adjusted EBITDA increased by 71% year-over-year to $36.1 million\", \"QNX posted record quarterly revenue of $78.7 million, up 20% year-over-year\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Residual is negative despite strong beat (revenue +9% vs own guidance, margins/EBITDA up sharply, QNX record results), but next-quarter guidance midpoint of $136M implies sequential decline and was lowered vs prior growth trajectory, conflicting with the negative residual direction given the otherwise strong print.\", \"evidence_quotes\": [\"Total company revenue was $156.0 million, up 10% year-over-year.\", \"Total company adjusted EBITDA increased by 71% year-over-year to $36.1 million\", \"QNX posted record quarterly revenue of $78.7 million, up 20% year-over-year\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.62,
+ "rationale": "Residual is negative despite strong beat (revenue +9% vs own guidance, margins/EBITDA up sharply, QNX record results), but next-quarter guidance midpoint of $136M implies sequential decline and was lowered vs prior growth trajectory, conflicting with the negative residual direction given the otherwise strong print.",
+ "evidence_quotes": [
+  "Total company revenue was $156.0 million, up 10% year-over-year.",
+  "Total company adjusted EBITDA increased by 71% year-over-year to $36.1 million",
+  "QNX posted record quarterly revenue of $78.7 million, up 20% year-over-year"
+ ]
+}

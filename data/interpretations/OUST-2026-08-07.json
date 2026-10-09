@@ -1,0 +1,28 @@
+{
+ "event_id": "OUST-2026-08-07",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "a54ca56ab3feab28f2dfae7357bfb7859426516c987c03df68ab3d28ea6e853a",
+ "created_at": "2026-10-09T05:55:45Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.58, \"rationale\": \"Beat was solid and margins expanded, but next-quarter guide of $56M implies growth deceleration versus the 56% YoY pace just posted, and the guidance_direction field shows a lowered growth trajectory, which undercuts the modest positive residual.\", \"evidence_quotes\": [\"For the third quarter of 2026, Ouster expects to achieve $54.5 million to $57.5 million in total revenue.\", \"$55 million in revenue, up 56% year over year and up 12% sequentially.\"]}",
+ "attempts": [
+  {
+   "detail": "unexpected keys ['confidence', 'confidence_note', 'evidence_quotes', 'label', 'rationale']",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance midpoint, margins expanded sequentially and YoY, and next-quarter guidance midpoint (56M) implies continued sequential growth despite being framed as 'lowered' vs prior growth rate. Fundamentals support a modest positive residual.\", \"confidence_note\": \"\", \"evidence_quotes\": [\"$55 million in revenue, up 56% year over year and up 12% sequentially.\", \"GAAP gross margin was 49%, compared with 45% in the second quarter of 2025 and 43% in the first quarter of 2026.\", \"For the third quarter of 2026, Ouster expects to achieve $54.5 million to $57.5 million in total revenue.\"]}"
+  },
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.58, \"rationale\": \"Beat was solid and margins expanded, but next-quarter guide of $56M implies growth deceleration versus the 56% YoY pace just posted, and the guidance_direction field shows a lowered growth trajectory, which undercuts the modest positive residual.\", \"evidence_quotes\": [\"For the third quarter of 2026, Ouster expects to achieve $54.5 million to $57.5 million in total revenue.\", \"$55 million in revenue, up 56% year over year and up 12% sequentially.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.58,
+ "rationale": "Beat was solid and margins expanded, but next-quarter guide of $56M implies growth deceleration versus the 56% YoY pace just posted, and the guidance_direction field shows a lowered growth trajectory, which undercuts the modest positive residual.",
+ "evidence_quotes": [
+  "For the third quarter of 2026, Ouster expects to achieve $54.5 million to $57.5 million in total revenue.",
+  "$55 million in revenue, up 56% year over year and up 12% sequentially."
+ ]
+}

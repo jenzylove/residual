@@ -1,0 +1,25 @@
+{
+ "event_id": "BB-2025-12-19",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "68b5b227d167ecea9979dd724569483722e385f4e1669bae7614ebe75505817a",
+ "created_at": "2026-10-09T05:53:14Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Beat on revenue, EPS, EBITDA, cash flow; QNX record quarter and Secure Communications beat with raised full-year guidance support a lasting positive re-rating, not just a one-off.\", \"evidence_quotes\": [\"Achieves another quarter of higher-than-expected revenue and profitability and hits the top-end of cash flow guidance\", \"QNX division achieves highest revenue quarter ever\", \"Secure Communications division beats revenue and adjusted EBITDA guidance, raises full year guidance\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Beat on revenue, EPS, EBITDA, cash flow; QNX record quarter and Secure Communications beat with raised full-year guidance support a lasting positive re-rating, not just a one-off.\", \"evidence_quotes\": [\"Achieves another quarter of higher-than-expected revenue and profitability and hits the top-end of cash flow guidance\", \"QNX division achieves highest revenue quarter ever\", \"Secure Communications division beats revenue and adjusted EBITDA guidance, raises full year guidance\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Beat on revenue, EPS, EBITDA, cash flow; QNX record quarter and Secure Communications beat with raised full-year guidance support a lasting positive re-rating, not just a one-off.",
+ "evidence_quotes": [
+  "Achieves another quarter of higher-than-expected revenue and profitability and hits the top-end of cash flow guidance",
+  "QNX division achieves highest revenue quarter ever",
+  "Secure Communications division beats revenue and adjusted EBITDA guidance, raises full year guidance"
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "event_id": "PL-2026-09-03",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "360363d4258a866bbb7bd9fc995974a7a07db6b648f0e5f877490a74de6c253c",
+ "created_at": "2026-10-09T05:57:18Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Q2 beat was strong (+11.1% vs own guide), but next-quarter guidance midpoint ($103.0M) is below actual Q2 revenue and reflects a lowered growth trajectory, undercutting the bullish residual move driven by the beat.\", \"evidence_quotes\": [\"Second quarter revenue increased 58% year-over-year to a record $116.1 million.\", \"Second quarter non-GAAP gross margin was 59%, compared to 61% in the second quarter of fiscal year 2026.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Q2 beat was strong (+11.1% vs own guide), but next-quarter guidance midpoint ($103.0M) is below actual Q2 revenue and reflects a lowered growth trajectory, undercutting the bullish residual move driven by the beat.\", \"evidence_quotes\": [\"Second quarter revenue increased 58% year-over-year to a record $116.1 million.\", \"Second quarter non-GAAP gross margin was 59%, compared to 61% in the second quarter of fiscal year 2026.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.62,
+ "rationale": "Q2 beat was strong (+11.1% vs own guide), but next-quarter guidance midpoint ($103.0M) is below actual Q2 revenue and reflects a lowered growth trajectory, undercutting the bullish residual move driven by the beat.",
+ "evidence_quotes": [
+  "Second quarter revenue increased 58% year-over-year to a record $116.1 million.",
+  "Second quarter non-GAAP gross margin was 59%, compared to 61% in the second quarter of fiscal year 2026."
+ ]
+}

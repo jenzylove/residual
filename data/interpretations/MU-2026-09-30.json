@@ -1,0 +1,25 @@
+{
+ "event_id": "MU-2026-09-30",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "ce3292e33eaee4c9534761b9989ac99871a842afc82cc1f34866ff4b66434dea",
+ "created_at": "2026-10-09T05:57:47Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance by 8.5%, next-quarter guidance raised to $61.5B (+13% q/q) with record margins and bullish AI commentary, yet the company-specific residual was negative, conflicting with the strongly positive fundamental signal.\", \"evidence_quotes\": [\"Revenue of $54.23 billion versus $41.46 billion for the prior quarter\", \"Revenue | $61.5 billion \\u00b1 $1.5 billion\", \"we expect an even stronger fiscal 2027\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance by 8.5%, next-quarter guidance raised to $61.5B (+13% q/q) with record margins and bullish AI commentary, yet the company-specific residual was negative, conflicting with the strongly positive fundamental signal.\", \"evidence_quotes\": [\"Revenue of $54.23 billion versus $41.46 billion for the prior quarter\", \"Revenue | $61.5 billion \\u00b1 $1.5 billion\", \"we expect an even stronger fiscal 2027\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.72,
+ "rationale": "Revenue beat prior guidance by 8.5%, next-quarter guidance raised to $61.5B (+13% q/q) with record margins and bullish AI commentary, yet the company-specific residual was negative, conflicting with the strongly positive fundamental signal.",
+ "evidence_quotes": [
+  "Revenue of $54.23 billion versus $41.46 billion for the prior quarter",
+  "Revenue | $61.5 billion \u00b1 $1.5 billion",
+  "we expect an even stronger fiscal 2027"
+ ]
+}

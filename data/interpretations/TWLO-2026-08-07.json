@@ -1,0 +1,25 @@
+{
+ "event_id": "TWLO-2026-08-07",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "903f76eccfa4ea4f3e6b92797ec2d32d62f539b310aedeffbb00b05b175a1c1d",
+ "created_at": "2026-10-09T05:55:49Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat guidance, FY26 growth and profit outlook raised, next quarter guidance above estimates, yet residual is negative. Strong fundamentals and raised guidance contradict the negative company-specific move, suggesting it's likely noise or mispricing rather than durable negative signal.\", \"evidence_quotes\": [\"Twilio is raising its reported revenue growth range to 18% to 18.5% compared with 14% to 15% previously\", \"raising its 2026 non-GAAP income from operations range to $1.135 billion to $1.155 billion compared to $1.08 billion to $1.10 billion previously\", \"Revenue of $1.50 billion, up 22% reported and 17% organic year-over-year\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat guidance, FY26 growth and profit outlook raised, next quarter guidance above estimates, yet residual is negative. Strong fundamentals and raised guidance contradict the negative company-specific move, suggesting it's likely noise or mispricing rather than durable negative signal.\", \"evidence_quotes\": [\"Twilio is raising its reported revenue growth range to 18% to 18.5% compared with 14% to 15% previously\", \"raising its 2026 non-GAAP income from operations range to $1.135 billion to $1.155 billion compared to $1.08 billion to $1.10 billion previously\", \"Revenue of $1.50 billion, up 22% reported and 17% organic year-over-year\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.72,
+ "rationale": "Revenue beat guidance, FY26 growth and profit outlook raised, next quarter guidance above estimates, yet residual is negative. Strong fundamentals and raised guidance contradict the negative company-specific move, suggesting it's likely noise or mispricing rather than durable negative signal.",
+ "evidence_quotes": [
+  "Twilio is raising its reported revenue growth range to 18% to 18.5% compared with 14% to 15% previously",
+  "raising its 2026 non-GAAP income from operations range to $1.135 billion to $1.155 billion compared to $1.08 billion to $1.10 billion previously",
+  "Revenue of $1.50 billion, up 22% reported and 17% organic year-over-year"
+ ]
+}

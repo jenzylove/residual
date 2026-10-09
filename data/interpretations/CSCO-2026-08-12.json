@@ -1,0 +1,25 @@
+{
+ "event_id": "CSCO-2026-08-12",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "3c4ff129ae7be2d0c27650ebfbdaea349185063aa13a5d90b6f8cf83d53e732b",
+ "created_at": "2026-10-09T05:56:31Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.58, \"rationale\": \"Cisco beat its own prior revenue guide (17.3B vs 16.8B mid), posted record Q4/FY26 results, and guided Q1 FY27 revenue to 18.0-18.2B (above current quarter) plus a strong FY27 outlook and AI-order momentum. This bullish beat-and-raise narrative conflicts with the sharp -4.17% negative company-specific residual, suggesting the drop is not supported by the disclosed guidance/commentary.\", \"evidence_quotes\": [\"Record top and bottom-line performance with double-digit growth in Q4 and FY 2026, exceeding the high end of guidance ranges\", \"Q1 FY 2027 Guidance: \\u25e6 Revenue: $18.0 billion to $18.2 billion\", \"Significant momentum and raised expectations for AI infrastructure from hyperscalers\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.58, \"rationale\": \"Cisco beat its own prior revenue guide (17.3B vs 16.8B mid), posted record Q4/FY26 results, and guided Q1 FY27 revenue to 18.0-18.2B (above current quarter) plus a strong FY27 outlook and AI-order momentum. This bullish beat-and-raise narrative conflicts with the sharp -4.17% negative company-specific residual, suggesting the drop is not supported by the disclosed guidance/commentary.\", \"evidence_quotes\": [\"Record top and bottom-line performance with double-digit growth in Q4 and FY 2026, exceeding the high end of guidance ranges\", \"Q1 FY 2027 Guidance: \\u25e6 Revenue: $18.0 billion to $18.2 billion\", \"Significant momentum and raised expectations for AI infrastructure from hyperscalers\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.58,
+ "rationale": "Cisco beat its own prior revenue guide (17.3B vs 16.8B mid), posted record Q4/FY26 results, and guided Q1 FY27 revenue to 18.0-18.2B (above current quarter) plus a strong FY27 outlook and AI-order momentum. This bullish beat-and-raise narrative conflicts with the sharp -4.17% negative company-specific residual, suggesting the drop is not supported by the disclosed guidance/commentary.",
+ "evidence_quotes": [
+  "Record top and bottom-line performance with double-digit growth in Q4 and FY 2026, exceeding the high end of guidance ranges",
+  "Q1 FY 2027 Guidance: \u25e6 Revenue: $18.0 billion to $18.2 billion",
+  "Significant momentum and raised expectations for AI infrastructure from hyperscalers"
+ ]
+}

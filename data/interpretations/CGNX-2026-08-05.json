@@ -1,0 +1,25 @@
+{
+ "event_id": "CGNX-2026-08-05",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "e0d14cbb1186d09c3a2043074c2899570349d093fda7b32e2d132ef029f7299e",
+ "created_at": "2026-10-09T05:55:27Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Residual reflects strong margin expansion (8th consecutive quarter), 80% EPS growth, and record revenue despite only an in-line top-line beat vs company guidance; forward guidance still points to double-digit growth, supporting durability despite deceleration flag.\", \"evidence_quotes\": [\"Adjusted EBITDA margin of 32.2% , up 1,150 basis points year over year, marking the eighth consecutive quarter of margin expansion.\", \"Adjusted diluted earnings per share of $0.45, up 80% year over year, representing the eighth consecutive quarter of growth.\", \"Issued full-year 2026 guidance anticipating strong double-digit revenue growth and significant year-over-year expansion in profitability.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Residual reflects strong margin expansion (8th consecutive quarter), 80% EPS growth, and record revenue despite only an in-line top-line beat vs company guidance; forward guidance still points to double-digit growth, supporting durability despite deceleration flag.\", \"evidence_quotes\": [\"Adjusted EBITDA margin of 32.2% , up 1,150 basis points year over year, marking the eighth consecutive quarter of margin expansion.\", \"Adjusted diluted earnings per share of $0.45, up 80% year over year, representing the eighth consecutive quarter of growth.\", \"Issued full-year 2026 guidance anticipating strong double-digit revenue growth and significant year-over-year expansion in profitability.\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Residual reflects strong margin expansion (8th consecutive quarter), 80% EPS growth, and record revenue despite only an in-line top-line beat vs company guidance; forward guidance still points to double-digit growth, supporting durability despite deceleration flag.",
+ "evidence_quotes": [
+  "Adjusted EBITDA margin of 32.2% , up 1,150 basis points year over year, marking the eighth consecutive quarter of margin expansion.",
+  "Adjusted diluted earnings per share of $0.45, up 80% year over year, representing the eighth consecutive quarter of growth.",
+  "Issued full-year 2026 guidance anticipating strong double-digit revenue growth and significant year-over-year expansion in profitability."
+ ]
+}

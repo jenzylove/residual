@@ -1,0 +1,25 @@
+{
+ "event_id": "ALAB-2026-08-05",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "467159dc2228bbccfc36c694e48e80a443ecfda9ef927764436d4633435ceccd",
+ "created_at": "2026-10-09T05:55:04Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.74, \"rationale\": \"Beat was broad-based (record Aries revenue) and Q3 guidance of $540-560M implies further acceleration, with Scorpio ramp pulled forward a quarter, supporting continued momentum rather than a one-off beat.\", \"evidence_quotes\": [\"driven by broad-based strength across our portfolio, including record quarterly revenue for our Aries product line\", \"We expect momentum to accelerate in Q3 as Scorpio fabric switches become our largest product family, one quarter ahead of our prior expectations\", \"Revenue within a range of $540 million to $560 million\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.74, \"rationale\": \"Beat was broad-based (record Aries revenue) and Q3 guidance of $540-560M implies further acceleration, with Scorpio ramp pulled forward a quarter, supporting continued momentum rather than a one-off beat.\", \"evidence_quotes\": [\"driven by broad-based strength across our portfolio, including record quarterly revenue for our Aries product line\", \"We expect momentum to accelerate in Q3 as Scorpio fabric switches become our largest product family, one quarter ahead of our prior expectations\", \"Revenue within a range of $540 million to $560 million\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.74,
+ "rationale": "Beat was broad-based (record Aries revenue) and Q3 guidance of $540-560M implies further acceleration, with Scorpio ramp pulled forward a quarter, supporting continued momentum rather than a one-off beat.",
+ "evidence_quotes": [
+  "driven by broad-based strength across our portfolio, including record quarterly revenue for our Aries product line",
+  "We expect momentum to accelerate in Q3 as Scorpio fabric switches become our largest product family, one quarter ahead of our prior expectations",
+  "Revenue within a range of $540 million to $560 million"
+ ]
+}

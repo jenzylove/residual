@@ -1,0 +1,29 @@
+{
+ "event_id": "APP-2026-08-05",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "4d57ac83b204633fa7fa5aa9255459a161805517bef838335c5761c2b1416c2d",
+ "created_at": "2026-10-09T05:55:16Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue missed self-guidance by only 0.31% while EBITDA, margins, and EPS beat, and next-quarter guidance of $2,055-2,085M implies accelerating growth versus prior outlook. The -17.4% residual sell-off contradicts this raised, strong guidance.\", \"evidence_quotes\": [\"Revenue | $1,924 | | $1,259 | | 53 | % |\", \"Adjusted EBITDA | $1,614 | | $1,018 | | 58 | % |\", \"Revenue | $2,055 | | $2,085\"]}",
+ "attempts": [
+  {
+   "detail": "unexpected keys ['confidence', 'confidence_note', 'evidence_quotes', 'label', 'rationale']",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue missed company's own prior guide by only 0.31%, while 3Q26 guidance was raised to $2055-2085M (vs $1924M actual, +7% seq) with 83% EBITDA margins and 53% YoY growth. The -17.4% residual is disproportionate to a trivial beat/miss and conflicts with raised forward guidance.\", \"confidence_note\": \"\", \"evidence_quotes\": [\"Revenue | $2,055 | | $2,085\", \"Revenue | $1,924 | | $1,259 | | 53 | %\", \"Adjusted EBITDA Margin | 83 | % | | 83 | %\"]}"
+  },
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue missed self-guidance by only 0.31% while EBITDA, margins, and EPS beat, and next-quarter guidance of $2,055-2,085M implies accelerating growth versus prior outlook. The -17.4% residual sell-off contradicts this raised, strong guidance.\", \"evidence_quotes\": [\"Revenue | $1,924 | | $1,259 | | 53 | % |\", \"Adjusted EBITDA | $1,614 | | $1,018 | | 58 | % |\", \"Revenue | $2,055 | | $2,085\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.72,
+ "rationale": "Revenue missed self-guidance by only 0.31% while EBITDA, margins, and EPS beat, and next-quarter guidance of $2,055-2,085M implies accelerating growth versus prior outlook. The -17.4% residual sell-off contradicts this raised, strong guidance.",
+ "evidence_quotes": [
+  "Revenue | $1,924 | | $1,259 | | 53 | % |",
+  "Adjusted EBITDA | $1,614 | | $1,018 | | 58 | % |",
+  "Revenue | $2,055 | | $2,085"
+ ]
+}

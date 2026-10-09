@@ -1,0 +1,24 @@
+{
+ "event_id": "SNDK-2026-05-01",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "c37b47231ba97b7274c7ee252871eaa92615c4fb236d2fb63e0be25e5fc025c0",
+ "created_at": "2026-10-09T05:53:45Z",
+ "raw_response": "{\"label\": \"already_priced\", \"confidence\": 0.72, \"rationale\": \"Huge revenue beat and strong Q4 guidance, but company-specific residual is flat (+0.00%); move almost entirely explained by market/sector factors, indicating the earnings surprise is already reflected in price with no incremental idiosyncratic reaction to trade.\", \"evidence_quotes\": [\"Third quarter revenue was $5.95 billion, up 97% sequentially and above the guidance range\", \"Expect fourth quarter revenue to be in the range of $7.75 billion to $8.25 billion\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"already_priced\", \"confidence\": 0.72, \"rationale\": \"Huge revenue beat and strong Q4 guidance, but company-specific residual is flat (+0.00%); move almost entirely explained by market/sector factors, indicating the earnings surprise is already reflected in price with no incremental idiosyncratic reaction to trade.\", \"evidence_quotes\": [\"Third quarter revenue was $5.95 billion, up 97% sequentially and above the guidance range\", \"Expect fourth quarter revenue to be in the range of $7.75 billion to $8.25 billion\"]}"
+  }
+ ],
+ "label": "already_priced",
+ "confidence": 0.72,
+ "rationale": "Huge revenue beat and strong Q4 guidance, but company-specific residual is flat (+0.00%); move almost entirely explained by market/sector factors, indicating the earnings surprise is already reflected in price with no incremental idiosyncratic reaction to trade.",
+ "evidence_quotes": [
+  "Third quarter revenue was $5.95 billion, up 97% sequentially and above the guidance range",
+  "Expect fourth quarter revenue to be in the range of $7.75 billion to $8.25 billion"
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "event_id": "COHR-2026-08-13",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "cc793d76aa30777bc475dffdc3b3320c2e8984efd975aad025ce64cce45f26d2",
+ "created_at": "2026-10-09T05:56:34Z",
+ "raw_response": "{\"label\": \"already_priced\", \"confidence\": 0.62, \"rationale\": \"Strong beat and raised guidance, but company-specific residual is slightly negative (-0.09%) after accounting for market/sector/liquidity, suggesting the positive fundamentals were already reflected in price with little incremental reaction.\", \"evidence_quotes\": [\"Q4 REVENUE OF $2.05B, INCREASED 34% Y/Y AND 42% Y/Y ON A PRO FORMA BASIS\", \"We enter fiscal 2027 with exceptional customer demand, expanding production capacity, and multiple new growth platforms beginning to ramp.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"already_priced\", \"confidence\": 0.62, \"rationale\": \"Strong beat and raised guidance, but company-specific residual is slightly negative (-0.09%) after accounting for market/sector/liquidity, suggesting the positive fundamentals were already reflected in price with little incremental reaction.\", \"evidence_quotes\": [\"Q4 REVENUE OF $2.05B, INCREASED 34% Y/Y AND 42% Y/Y ON A PRO FORMA BASIS\", \"We enter fiscal 2027 with exceptional customer demand, expanding production capacity, and multiple new growth platforms beginning to ramp.\"]}"
+  }
+ ],
+ "label": "already_priced",
+ "confidence": 0.62,
+ "rationale": "Strong beat and raised guidance, but company-specific residual is slightly negative (-0.09%) after accounting for market/sector/liquidity, suggesting the positive fundamentals were already reflected in price with little incremental reaction.",
+ "evidence_quotes": [
+  "Q4 REVENUE OF $2.05B, INCREASED 34% Y/Y AND 42% Y/Y ON A PRO FORMA BASIS",
+  "We enter fiscal 2027 with exceptional customer demand, expanding production capacity, and multiple new growth platforms beginning to ramp."
+ ]
+}

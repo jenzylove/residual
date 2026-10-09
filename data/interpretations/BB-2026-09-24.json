@@ -1,0 +1,25 @@
+{
+ "event_id": "BB-2026-09-24",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "33b179b0b5d49f7bc0d64e84970975494a5ddf4607e408b4a9ac8b47269bbd52",
+ "created_at": "2026-10-09T05:57:40Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance by ~14.6%, EBITDA and cash flow surged, and FY27 outlook was explicitly raised, yet the residual move is sharply negative. The strong beat and raised full-year guidance conflict with a -3.77% company-specific reaction, suggesting the drop isn't supported by the guidance trajectory.\", \"evidence_quotes\": [\"Raised fiscal year 2027 revenue and Adjusted EBITDA outlook following strong first-half execution\", \"Total company revenue of $163.3 million increased 26% year-over-year.\", \"Adjusted EBITDA grew 81% year-over-year, resulting in the second consecutive Rule of 40\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance by ~14.6%, EBITDA and cash flow surged, and FY27 outlook was explicitly raised, yet the residual move is sharply negative. The strong beat and raised full-year guidance conflict with a -3.77% company-specific reaction, suggesting the drop isn't supported by the guidance trajectory.\", \"evidence_quotes\": [\"Raised fiscal year 2027 revenue and Adjusted EBITDA outlook following strong first-half execution\", \"Total company revenue of $163.3 million increased 26% year-over-year.\", \"Adjusted EBITDA grew 81% year-over-year, resulting in the second consecutive Rule of 40\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.62,
+ "rationale": "Revenue beat prior guidance by ~14.6%, EBITDA and cash flow surged, and FY27 outlook was explicitly raised, yet the residual move is sharply negative. The strong beat and raised full-year guidance conflict with a -3.77% company-specific reaction, suggesting the drop isn't supported by the guidance trajectory.",
+ "evidence_quotes": [
+  "Raised fiscal year 2027 revenue and Adjusted EBITDA outlook following strong first-half execution",
+  "Total company revenue of $163.3 million increased 26% year-over-year.",
+  "Adjusted EBITDA grew 81% year-over-year, resulting in the second consecutive Rule of 40"
+ ]
+}

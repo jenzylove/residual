@@ -1,0 +1,25 @@
+{
+ "event_id": "RDDT-2026-05-01",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "5a95926e5a6c90ecc80ff311578b378266c49a4ebf3ab449df71af20d85152d6",
+ "created_at": "2026-10-09T05:53:48Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat guidance by 10.5%, growth accelerated to 69% YoY, margins/profitability surged, and next-quarter guidance was raised well above this quarter's actual. This strong fundamental picture contradicts the negative company-specific residual, suggesting the negative move is unjustified by the data.\", \"evidence_quotes\": [\"Revenue grew 69% year-over-year to $663 million\", \"Revenue in the range of $715 million to $725 million\", \"Adj. EBITDA 1 of $266 million, 40% of revenue, up 131% year-over-year\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.72, \"rationale\": \"Revenue beat guidance by 10.5%, growth accelerated to 69% YoY, margins/profitability surged, and next-quarter guidance was raised well above this quarter's actual. This strong fundamental picture contradicts the negative company-specific residual, suggesting the negative move is unjustified by the data.\", \"evidence_quotes\": [\"Revenue grew 69% year-over-year to $663 million\", \"Revenue in the range of $715 million to $725 million\", \"Adj. EBITDA 1 of $266 million, 40% of revenue, up 131% year-over-year\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.72,
+ "rationale": "Revenue beat guidance by 10.5%, growth accelerated to 69% YoY, margins/profitability surged, and next-quarter guidance was raised well above this quarter's actual. This strong fundamental picture contradicts the negative company-specific residual, suggesting the negative move is unjustified by the data.",
+ "evidence_quotes": [
+  "Revenue grew 69% year-over-year to $663 million",
+  "Revenue in the range of $715 million to $725 million",
+  "Adj. EBITDA 1 of $266 million, 40% of revenue, up 131% year-over-year"
+ ]
+}

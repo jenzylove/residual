@@ -1,0 +1,25 @@
+{
+ "event_id": "TER-2026-07-29",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "ee901e279b8e32fe9c610260f6a2980c28c38dbb33f2e627f7f50cda24d077ed",
+ "created_at": "2026-10-09T05:54:42Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance by 10.75%, record Memory/Semiconductor Test strength, Q3 guidance maintains growth trajectory, and CEO cites AI-driven demand extending into 2027. Residual aligns with fundamentals, not a one-off.\", \"evidence_quotes\": [\"Second consecutive quarter of record revenue, exceeding the high end of our Q2 Guidance\", \"rapid increase in wafer fab equipment investment sets the stage for continued growth in 2027 and beyond\", \"our Q3 guidance reflects robust AI-related demand\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue beat prior guidance by 10.75%, record Memory/Semiconductor Test strength, Q3 guidance maintains growth trajectory, and CEO cites AI-driven demand extending into 2027. Residual aligns with fundamentals, not a one-off.\", \"evidence_quotes\": [\"Second consecutive quarter of record revenue, exceeding the high end of our Q2 Guidance\", \"rapid increase in wafer fab equipment investment sets the stage for continued growth in 2027 and beyond\", \"our Q3 guidance reflects robust AI-related demand\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.72,
+ "rationale": "Revenue beat prior guidance by 10.75%, record Memory/Semiconductor Test strength, Q3 guidance maintains growth trajectory, and CEO cites AI-driven demand extending into 2027. Residual aligns with fundamentals, not a one-off.",
+ "evidence_quotes": [
+  "Second consecutive quarter of record revenue, exceeding the high end of our Q2 Guidance",
+  "rapid increase in wafer fab equipment investment sets the stage for continued growth in 2027 and beyond",
+  "our Q3 guidance reflects robust AI-related demand"
+ ]
+}

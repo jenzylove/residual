@@ -1,0 +1,25 @@
+{
+ "event_id": "CRDO-2026-09-02",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "cde73e3d917650aa4766170b48e7adf89ba1140447552d57d2ae4dc54f3eaf0c",
+ "created_at": "2026-10-09T05:56:56Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat modestly but forward guidance was raised well above the reported quarter's growth rate, with expanding margins and strong net income growth, supporting a positive, fundamentally-backed residual rather than a one-off.\", \"evidence_quotes\": [\"Revenue is expected to be between $525 million and $535 million\", \"Revenue of $479.0 million, grew by 9.6% quarter over quarter and 114.7% year over year\", \"GAAP net income of $129.4 million and non-GAAP net income of $236.3 million\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat modestly but forward guidance was raised well above the reported quarter's growth rate, with expanding margins and strong net income growth, supporting a positive, fundamentally-backed residual rather than a one-off.\", \"evidence_quotes\": [\"Revenue is expected to be between $525 million and $535 million\", \"Revenue of $479.0 million, grew by 9.6% quarter over quarter and 114.7% year over year\", \"GAAP net income of $129.4 million and non-GAAP net income of $236.3 million\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Revenue beat modestly but forward guidance was raised well above the reported quarter's growth rate, with expanding margins and strong net income growth, supporting a positive, fundamentally-backed residual rather than a one-off.",
+ "evidence_quotes": [
+  "Revenue is expected to be between $525 million and $535 million",
+  "Revenue of $479.0 million, grew by 9.6% quarter over quarter and 114.7% year over year",
+  "GAAP net income of $129.4 million and non-GAAP net income of $236.3 million"
+ ]
+}

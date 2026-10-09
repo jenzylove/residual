@@ -1,0 +1,25 @@
+{
+ "event_id": "NFLX-2026-07-16",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "1d741014cbb9633e323e54578150183ea2730798accda11c1e41f4cdda02b90e",
+ "created_at": "2026-10-09T05:54:20Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue was essentially in-line with Netflix's own guidance (-0.11%), margin beat forecast, and 2026 outlook was narrowed/reaffirmed with consistent growth. The sharp -8.6% residual drop is not supported by the fundamentally in-line/positive guidance commentary.\", \"evidence_quotes\": [\"Q2 revenue of $12.6B was in-line with forecast and grew 13% year over year\", \"Our 2026 outlook is consistent with our prior forecast\", \"Q2 operating income and margin were slightly ahead of forecast due to the timing of expenses\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.78, \"rationale\": \"Revenue was essentially in-line with Netflix's own guidance (-0.11%), margin beat forecast, and 2026 outlook was narrowed/reaffirmed with consistent growth. The sharp -8.6% residual drop is not supported by the fundamentally in-line/positive guidance commentary.\", \"evidence_quotes\": [\"Q2 revenue of $12.6B was in-line with forecast and grew 13% year over year\", \"Our 2026 outlook is consistent with our prior forecast\", \"Q2 operating income and margin were slightly ahead of forecast due to the timing of expenses\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.78,
+ "rationale": "Revenue was essentially in-line with Netflix's own guidance (-0.11%), margin beat forecast, and 2026 outlook was narrowed/reaffirmed with consistent growth. The sharp -8.6% residual drop is not supported by the fundamentally in-line/positive guidance commentary.",
+ "evidence_quotes": [
+  "Q2 revenue of $12.6B was in-line with forecast and grew 13% year over year",
+  "Our 2026 outlook is consistent with our prior forecast",
+  "Q2 operating income and margin were slightly ahead of forecast due to the timing of expenses"
+ ]
+}

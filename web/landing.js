@@ -312,6 +312,7 @@ function proof(basis) {
     ${win && W.residual ? `<p class="note">Last 90 days of real history (${day(new Date(win.from_ms).toISOString())} to ${day(new Date(win.to_ms).toISOString())}, ${win.events} releases): residual Sharpe ${f(W.residual.sharpe_daily_ann)}, Sortino ${f(W.residual.sortino_daily_ann)}, max drawdown ${usd(W.residual.max_drawdown, 0)} over ${W.residual.trades} trades.</p>` : ""}
     ${R && R.defined ? `<p class="note">Rolling 30 day Sharpe, residual pair: median ${f(R.median_sharpe)}, worst ${f(R.min_sharpe)}, positive in ${Math.round(R.pct_positive * 100)}% of ${R.defined} windows with at least two trades. The other ${R.undefined_under_2_trades} of ${R.windows} windows hold fewer than two trades and have no Sharpe; they are counted, not filled with zero.</p>` : ""}
     ${HB ? `<p class="note">Frozen holdout: params and rule fit once on releases before ${day(H.split_utc)}, then left untouched. In sample Sharpe ${f(HB.in_sample.sharpe_daily_ann)} over ${HB.in_sample.trades} trades, out of sample ${f(HB.out_of_sample.sharpe_daily_ann)} over ${HB.out_of_sample.trades} trades across ${H.out_of_sample_days} days${HB.sharpe_decay == null ? " (no decay figure: the in sample side has no defined Sharpe on this basis)" : `, decay ${f(HB.sharpe_decay)} (negative means out of sample did better)`}. The split is the last 90 days rule above. This check was added after the full sample was known, so read it as robustness, not a preregistered test.</p>` : ""}
+    ${prereg()}
     <p class="note">Turnover is gross notional on both legs, entry and exit, per year against the $100,000 book. Sharpe and Sortino use daily paper P&amp;L on a $100,000 book, annualised over 365 days because Bitget perpetuals trade every day.</p></div>`);
   const tr = S.residual.trades;
   $("#res-note").textContent = {
@@ -399,6 +400,22 @@ function demoMode() {
       <tr><td>Plain headline, same releases<small>unhedged baseline</small></td><td class="num">${S.naive_same_events.trades}</td><td class="num ${cls(S.naive_same_events.total_net_pnl)}">${usd(S.naive_same_events.total_net_pnl, 0)}</td><td class="num">${S.naive_same_events.sharpe_daily_ann ?? "n/a"}</td><td class="num">${S.naive_same_events.hit_rate == null ? "n/a" : Math.round(S.naive_same_events.hit_rate * 100) + "%"}</td></tr>
     </tbody></table></div>
     <p class="note">Stress view (every trade, worst case funding). The ${tr.length} pairs: ${tr.map(r => esc(r.event_id.split("-")[0]) + " vs " + esc((r.hedge.symbol || "").replace("USDT", ""))).join(" · ")}. Backtest dollars only; Bitget Demo orders are shown separately below.</p>`;
+}
+
+function prereg() {
+  const P = D.populations;
+  if (!P || !P.original_20 || !P.new_companies) return "";
+  const c = (k, m) => P[k].summary_conservative_funding[m], g = (k, t) => P[k].significance[t];
+  const pv = v => v == null ? "n/a" : v < 0.01 ? v.toFixed(4) : v.toFixed(3);
+  const row = (name, f) => `<tr><td>${name}</td><td class="num">${f("original_20")}</td><td class="num">${f("new_companies")}</td></tr>`;
+  return `<table class="prereg"><thead><tr><th>Preregistered test</th><th class="num">Original 20</th><th class="num">26 new companies</th></tr></thead><tbody>
+    ${row("Releases", k => P[k].releases)}
+    ${row("Trades", k => c(k, "residual").trades)}
+    ${row("Strategy P&amp;L", k => usd(c(k, "residual").total_net_pnl, 0))}
+    ${row("Headline, every eligible", k => usd(c(k, "naive").total_net_pnl, 0))}
+    ${row("Selection p", k => pv(g(k, "selection") && g(k, "selection").p_value))}
+    ${row("Direction p", k => pv(g(k, "direction") && g(k, "direction").p_value))}</tbody></table>
+    <p class="note">Committed in PREREGISTRATION.md before any market data for the 26 new companies was pulled, with the method frozen. Selection passed on only two new trades, too few to confirm; on the new companies the plain headline trade made money on its own, so that prediction failed. Published as it came out.</p>`;
 }
 
 function demoStrategy() {

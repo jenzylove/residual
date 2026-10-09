@@ -1,0 +1,24 @@
+{
+ "event_id": "LITE-2026-08-12",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "bb08bc6ecbf353814f18f3857f8477d6af461b07e8ef27e65b907da2721ddbe6",
+ "created_at": "2026-10-09T05:55:57Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance, margins expanded sharply, and forward guidance raised well above prior trajectory on AI-driven optical demand, supporting a sustained positive residual rather than a one-off.\", \"evidence_quotes\": [\"our trajectory continues to accelerate as AI demand drives our Q1 revenue guidance midpoint to $1.25 billion, reaching our target model more than a quarter ahead of schedule\", \"Forecasting first quarter of fiscal year 2027 revenue of $1.225 billion to $1.275 billion; Non-GAAP operating margin of 39.5% to 40.5%\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.78, \"rationale\": \"Revenue beat prior guidance, margins expanded sharply, and forward guidance raised well above prior trajectory on AI-driven optical demand, supporting a sustained positive residual rather than a one-off.\", \"evidence_quotes\": [\"our trajectory continues to accelerate as AI demand drives our Q1 revenue guidance midpoint to $1.25 billion, reaching our target model more than a quarter ahead of schedule\", \"Forecasting first quarter of fiscal year 2027 revenue of $1.225 billion to $1.275 billion; Non-GAAP operating margin of 39.5% to 40.5%\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.78,
+ "rationale": "Revenue beat prior guidance, margins expanded sharply, and forward guidance raised well above prior trajectory on AI-driven optical demand, supporting a sustained positive residual rather than a one-off.",
+ "evidence_quotes": [
+  "our trajectory continues to accelerate as AI demand drives our Q1 revenue guidance midpoint to $1.25 billion, reaching our target model more than a quarter ahead of schedule",
+  "Forecasting first quarter of fiscal year 2027 revenue of $1.225 billion to $1.275 billion; Non-GAAP operating margin of 39.5% to 40.5%"
+ ]
+}

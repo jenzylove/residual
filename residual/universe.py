@@ -22,6 +22,11 @@ COMPANIES = {
     "NFLX": "internet", "RDDT": "internet",
 }
 
+# The 20 companies of the study as published before PREREGISTRATION.md; everything else in COMPANIES
+# was added under it and is reported as its own population.
+ORIGINAL = ["NVDA", "AMD", "AVGO", "MU", "INTC", "MRVL", "QCOM", "KLAC", "TXN", "ADI",
+            "META", "AMZN", "PLTR", "CRM", "PANW", "CRWD", "MDB", "HPE", "SMCI", "ANET"]
+
 # Equal-weight sector baskets (the company itself is always excluded; peers without
 # enough Bitget history at an event are dropped automatically).
 PEERS = {

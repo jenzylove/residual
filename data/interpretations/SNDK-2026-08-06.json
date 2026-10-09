@@ -1,0 +1,25 @@
+{
+ "event_id": "SNDK-2026-08-06",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "28c128b2ef90f96e170452edda85070a0efbf5cfbff379783d2a3bae8a2da5da",
+ "created_at": "2026-10-09T05:55:32Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance by 12%, margins expanded 6pt, datacenter +437% YoY, next-quarter guidance implies continued strong growth and $14B buyback signals confidence. Positive residual aligns with fundamentally improving business, not a one-off.\", \"evidence_quotes\": [\"Fiscal fourth quarter revenue was $8.97 billion, up 51% sequentially\", \"Datacenter up 437%, and higher pricing\", \"Expect first quarter 2027 revenue to be in the range of $10.30 billion to $10.80 billion\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Revenue beat prior guidance by 12%, margins expanded 6pt, datacenter +437% YoY, next-quarter guidance implies continued strong growth and $14B buyback signals confidence. Positive residual aligns with fundamentally improving business, not a one-off.\", \"evidence_quotes\": [\"Fiscal fourth quarter revenue was $8.97 billion, up 51% sequentially\", \"Datacenter up 437%, and higher pricing\", \"Expect first quarter 2027 revenue to be in the range of $10.30 billion to $10.80 billion\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Revenue beat prior guidance by 12%, margins expanded 6pt, datacenter +437% YoY, next-quarter guidance implies continued strong growth and $14B buyback signals confidence. Positive residual aligns with fundamentally improving business, not a one-off.",
+ "evidence_quotes": [
+  "Fiscal fourth quarter revenue was $8.97 billion, up 51% sequentially",
+  "Datacenter up 437%, and higher pricing",
+  "Expect first quarter 2027 revenue to be in the range of $10.30 billion to $10.80 billion"
+ ]
+}

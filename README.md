@@ -68,7 +68,7 @@ flowchart TD
 
 | Step | What happens | Where to see it |
 |---|---|---|
-| 1. Catch | Watcher polls EDGAR for Item 2.02 earnings filings across 20 companies | Watcher card, `data/live_log.jsonl` |
+| 1. Catch | Watcher polls EDGAR for Item 2.02 earnings filings across 46 companies | Watcher card, `data/live_log.jsonl` |
 | 2. Read | Revenue and the company's own guidance extracted, each with its snippet and document hash | Signal room evidence line, Audit |
 | 3. Split | Hourly betas against QQQ and a sector peer basket remove market and sector | Signal room bars |
 | 4. Second reading | Claude labels the move, quoting the filing; the label can only shrink a position | Signal room, AI card |
@@ -84,12 +84,13 @@ flowchart TD
 
 Every number on the site traces back to a document or an exchange response.
 
-- **Earnings numbers** keep the exact sentence they came from, the SEC URL and the SHA-256 of the document. All 83 filings (79 earnings releases) verify, offline, against the archive in `data/sources/`.
+- **Earnings numbers** keep the exact sentence they came from, the SEC URL and the SHA-256 of the document. All 192 filings (187 earnings releases) verify, offline, against the archive in `data/sources/`.
 - **Market inputs** are frozen per event in `data/snapshots/`, so the replay runs with no network at all.
 - **AI answers** are cached in `data/interpretations/` with the prompt hash and raw response. Every quote is checked against the press release; an invented quote is rejected and the trade does not happen.
 - **Paper orders** for both legs are in `data/ledger.csv`.
 - **Demo orders** are real Bitget Demo order IDs in `data/keyrun_report.json` and `data/demo_strategy_trades.jsonl`.
-- **CI** re-runs the replay on every push and fails if it does not reproduce the committed decisions.
+- **CI** re-runs the replay on every push and fails if it does not reproduce the committed decisions, metrics and significance tests.
+- **Deployment** serves `version.json`: the commit the data was built from and the SHA-256 of every result file.
 
 ## Results
 
@@ -97,12 +98,33 @@ Every number on the site traces back to a document or an exchange response.
   <img src="web/screenshots/proof.png" alt="Proof section: rules, size study and demo-executable mode" width="100%">
 </p>
 
+### The test we set ourselves
+
+On 9 October 2026 we committed [PREREGISTRATION.md](PREREGISTRATION.md) before downloading any market data for 26 companies the method had never seen: every Bitget listed US filer whose earnings release states a dollar outlook for next quarter's revenue. The method was frozen; only company entries and the patterns that read each release were added. Then we ran it, and publish what came out.
+
+| | Original 20 | 26 new companies | Combined |
+|---|---|---|---|
+| Earnings releases | 80 | 107 | 187 |
+| Releases with a tradeable Bitget market | 38 | 37 | 75 |
+| Trades | 15 | 2 | 17 |
+| Strategy net P&L | +$189.66 | +$171.31 | +$360.97 |
+| Headline trade, every eligible release | −$809.79 | +$362.12 | −$447.67 |
+| Selection beats chance (permutation p) | 0.0016 | 0.020 | 0.008 |
+| Direction beats chance (permutation p) | 0.198 | 0.250 | 0.078 |
+
+**How the predictions did.**
+H1, selection beats chance on the new companies: p = 0.020, below 0.05. It passes on paper, but it rests on two trades (Lam Research +$33.10, Dell +$138.22), which is too few to confirm anything.
+H2, the headline trade loses on the new companies and the strategy beats it: **failed.** Trading the headline direction on every eligible new release made +$362.12 over 37 trades, more than the strategy's +$171.31.
+H3, direction choice stays insignificant: held (p = 0.25).
+
+**Why so few new trades.** 69 of the 107 new releases came before the company's Bitget perpetual existed or had 21 days of history. Of the 37 that could be analysed, the gates passed 2: thin after hours books (26 releases) and hedges that did not fit (12) were the main reasons, which is what the gates are for on newly listed perpetuals.
+
 ### Five populations, never mixed
 
 | Population | What it is | Size |
 |---|---|---|
-| Earnings releases | Every release examined, with SEC source, hashes and verified numbers | 80 releases |
-| Main-mode backtest | Walk-forward strategy, hedged with index or sector ETFs | 15 trades (every trade counted) |
+| Earnings releases | Every release examined, with SEC source, hashes and verified numbers | 187 releases |
+| Main-mode backtest | Walk-forward strategy, hedged with index or sector ETFs | 17 trades (every trade counted) |
 | Demo-mode backtest | Same method, restricted to instruments Bitget Demo lists | 6 trades |
 | Demo execution checks | Historical decisions opened and closed in one pass on Bitget Demo | 6 pairs, net −$1.30 (venue cost) |
 | Demo held pairs | Historical decisions held on Bitget Demo under the strategy's own exits | 3 closed, net −$10.52 |
@@ -111,43 +133,43 @@ The first three are research and backtest. The last two are real Bitget Demo ord
 
 ### Scorecard
 
-Walk-forward over 80 releases, every trade counted, worst case funding charged where Bitget has no history (the conservative view). Sharpe and Sortino are on daily P&L over a $100,000 book, annualised over 365 days; Sharpe per trade is the mean over the standard deviation of each trade's return on its company notional. Turnover is gross notional on both legs, entry and exit, per year against the book.
+Walk-forward over 187 releases, every trade counted, worst case funding charged where Bitget has no history (the conservative view). Sharpe and Sortino are on daily P&L over a $100,000 book, annualised over 365 days; Sharpe per trade is the mean over the standard deviation of each trade's return on its company notional. Turnover is gross notional on both legs, entry and exit, per year against the book.
 
 | Metric | Strategy | Unhedged, same releases | Headline, same releases |
 |---|---|---|---|
-| Net P&L | +$189.66 | +$342.96 | +$547.47 |
-| Trades | 15 | 15 | 15 |
-| Sharpe, daily, annualised | 0.593 | 0.832 | 1.319 |
-| Sharpe per trade | −0.004 | 0.198 | 0.320 |
-| Sortino, daily, annualised | 1.453 | 2.109 | 3.915 |
+| Net P&L | +$360.97 | +$869.10 | +$1,073.61 |
+| Trades | 17 | 17 | 17 |
+| Sharpe, daily, annualised | 1.037 | 1.537 | 1.894 |
+| Sharpe per trade | 0.092 | 0.359 | 0.462 |
+| Sortino, daily, annualised | 2.766 | 5.346 | 7.678 |
 | Max drawdown | −$218.68 | −$231.25 | −$122.35 |
-| Turnover per year | 1.30x | 0.56x | 0.56x |
-| Rolling 30 day Sharpe | median 1.96, worst −4.92, positive in 61% of defined windows | | |
-| Frozen holdout | in sample 0.355, out of sample 1.538, decay −3.33 | | |
+| Turnover per year | 1.60x | 0.66x | 0.66x |
+| Rolling 30 day Sharpe | median 1.96, worst −4.92, positive in 64% of defined windows | | |
+| Frozen holdout | in sample 0.354, out of sample 1.925, decay −4.44 | | |
 
-**Sharpe per trade is slightly negative while P&L is positive.** The average trade return is a hair below zero; the profit comes from the full size trades that won, while smaller, liquidity capped trades lost more often. We show both rather than only the flattering one.
+**Rolling 30 day Sharpe** slides a 30 day window one day at a time. 138 of 316 windows hold at least two trades and have a Sharpe; the other 178 have no Sharpe, and are counted, not filled with zero. Costs (fees plus slippage) are 12.6 bps of turnover and 35% of gross P&L.
 
-**Rolling 30 day Sharpe** slides a 30 day window one day at a time. 137 of 316 windows hold at least two trades and have a Sharpe; the other 179 have no Sharpe, and are counted, not filled with zero. Costs (fees plus slippage) are 12.3 bps of turnover and 44% of gross P&L.
+**Frozen holdout.** Alongside the walk-forward, params and rule are fit once on every release before 2 July 2026 (the last 90 days boundary) and then left untouched. In sample: Sharpe 0.354 over 11 trades. Out of sample, 90 days: Sharpe 1.925 over 15 trades, so out of sample did better, not worse (decay −4.44; the alert level is out of sample below half of in sample). This check was added after the original sample was known, so read it as robustness. The preregistered test above is the one that was not.
 
-**Frozen holdout.** Alongside the walk-forward, params and rule are fit once on every release before 2 July 2026 (the last 90 days boundary) and then left untouched. In sample: Sharpe 0.355 over 11 trades. Out of sample, 90 days: Sharpe 1.538 over 11 trades, so out of sample did better, not worse (decay −3.33; the alert level is out of sample below half of in sample). This check was added after the full sample was known, so read it as robustness, not as a preregistered test. The walk-forward below remains the primary result.
+**Permutation tests.** Selection: the releases the strategy traded are scored with the plain headline trade and compared with 200,000 random sets of the same size drawn from every release where that trade was possible. Direction: the strategy's chosen direction against every possible flip of the same trades (exact). Both are seeded and reproduced in CI.
 
 ### Backtest, walk-forward, every trade counted
 
-Walk-forward over 80 releases at the $2,500 default size. Each decision used only information available before that release, including funding: each event's worst case funding charge uses only settlements before its release. Missing funding is charged at that worst rate.
+Walk-forward over 187 releases at the $2,500 default size. Each decision used only information available before that release, including funding: each event's worst case funding charge uses only settlements before its release. Missing funding is charged at that worst rate.
 
 | Rule | Net P&L | Trades | Sharpe (daily, annualised) | Max drawdown |
 |---|---|---|---|---|
-| **Strategy** (rule picked walk-forward) | **+$189.66** | 15 | 0.593 | −$218.68 |
-| Agreement rule | +$323.11 | 11 | 1.039 | −$85.22 |
-| Headline rule, hedged | +$237.89 | 21 | 0.731 | −$220.39 |
-| Residual rule | +$168.53 | 21 | 0.497 | −$222.30 |
-| Analyst consensus diagnostic (post hoc, never selected) | −$7.00 | 14 | -0.040 | −$152.92 |
-| **Headline direction, same events, unhedged** | **+$547.47** | 15 | 1.319 | −$122.35 |
-| Headline direction, every eligible event | −$738.51 | 37 | -1.157 | −$941.09 |
+| **Strategy** (rule picked walk-forward) | **+$360.97** | 17 | 1.037 | −$218.68 |
+| Agreement rule | +$494.43 | 13 | 1.455 | −$85.22 |
+| Headline rule, hedged | +$408.31 | 24 | 1.173 | −$220.39 |
+| Residual rule | +$333.73 | 24 | 0.924 | −$222.30 |
+| Analyst consensus diagnostic (post hoc, never selected) | +$25.20 | 16 | 0.150 | −$152.92 |
+| **Headline direction, same events, unhedged** | **+$1,073.61** | 17 | 1.894 | −$122.35 |
+| Headline direction, every eligible event | −$447.67 | 75 | -0.386 | −$1,169.29 |
 
-**Funding complete view.** Bitget keeps about 90 days of funding history. Counting only trades whose funding was actually observed leaves 5 trades: +$317.86, Sharpe 1.107 daily (0.299 per trade), max drawdown −$68.84. Every other number in this README uses the conservative view above unless it says otherwise.
+**Funding complete view.** Bitget keeps about 90 days of funding history. Counting only trades whose funding was actually observed leaves 7 trades: +$489.18, Sharpe 1.537 daily (0.429 per trade), max drawdown −$68.84. Every other number in this README uses the conservative view above unless it says otherwise.
 
-**What this shows.** The value is in which releases RESIDUAL agrees to trade. Taking the headline direction on every release loses $738.51; taking it only on the releases that clear RESIDUAL's gates makes +$547.47. Inside those releases the hedge cost more than it saved, so the unhedged baseline beats the strategy. We report the strategy the walk-forward selected, not the baseline, because picking the winner after seeing the results would be hindsight.
+**What this shows.** The value is in which releases RESIDUAL agrees to trade. Taking the headline direction on every eligible release loses $447.67; taking it only on the releases that clear RESIDUAL's gates makes +$1,073.61. Inside those releases the hedge cost more than it saved, so the unhedged baseline beats the strategy. We report the strategy the walk-forward selected, not the baseline, because picking the winner after seeing the results would be hindsight.
 
 **Demo-executable mode** (conservative view): +$122.19 over 6 trades (Sharpe 0.728) against the same-events baseline's +$64.60 (0.382). This is the one population where the strategy beats its baseline.
 
@@ -165,18 +187,18 @@ The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5
 
 ## Honest limitations
 
-- **The sample is bounded by the venue, not by the method.** 80 releases were examined across 344 days, but a release is only tradeable if the company's Bitget perpetual already existed with enough history at that moment. That leaves 37 analysable releases, of which 5 cleared every gate. Arista is the clearest case: its perpetual listed on 12 August 2026, eight days after its 4 August earnings, so that release can never be traded however good the signal was.
-- **Five trades cannot establish an edge, and cannot refute one either.** In the funding complete view, any Sharpe quoted on five trades is noise. What is visible at this sample size is the effect of the gates: taking every signal loses money (19 trades, -$69.80, Sharpe -0.03 per trade), while the subset that clears every gate makes money (5 trades, +$317.86, Sharpe 0.30 per trade). The abstention is doing the work.
-- **The hedge did not pay.** In the funding complete view, unhedged on the same releases returned $487.03 with a $37.64 drawdown, against $317.86 and $68.84 hedged. In the conservative view it is the same story: +$342.96 unhedged against +$189.66 hedged. On this sample the hedge cost return. That is published here rather than buried, and it is the first thing a larger sample should settle.
-- **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. A later-added analyst-EPS consensus series is published as a post-hoc diagnostic; it is never eligible for walk-forward selection and is the worst baseline.
-- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst case funding charge, computed point in time. The tables above count those trades; the view that drops them has 5 trades for +$317.86.
+- **The sample is bounded by the venue, not by the method.** 187 releases were examined across 344 days, but a release is only tradeable if the company's Bitget perpetual already existed with enough history at that moment. That leaves 75 analysable releases, of which 17 cleared every gate. Arista is the clearest case: its perpetual listed on 12 August 2026, eight days after its 4 August earnings, so that release can never be traded however good the signal was.
+- **Seventeen trades cannot establish an edge.** The selection test is significant in the original sample and in the combined one, but the out of sample test on new companies produced only two trades, and on those companies the plain headline trade made money on its own (prediction H2 failed). A larger out of sample record is what would settle it.
+- **The hedge did not pay.** Unhedged on the same releases returned +$869.10 against +$360.97 hedged in the conservative view, and +$1,013.17 against +$489.18 in the funding complete view. On this sample the hedge cost return. That is published here rather than buried, and it is the first thing a larger sample should settle.
+- **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. A later-added analyst-EPS consensus series is published as a post-hoc diagnostic; it is never eligible for walk-forward selection.
+- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst case funding charge, computed point in time. The tables above count those trades; the view that drops them has 7 trades for +$489.18.
 - **Bitget Demo lists no index or sector ETF**, so main-mode strategy pairs cannot execute there. Demo mode exists for that reason, and the adapter refuses substitutes.
 - **Thin books cap size rather than rejecting the release.** The position is the largest notional that stays inside 25% of the observed pre-event hourly volume, up to the $2,500 base, and the release is dropped only if that falls below a fifth of base. Volume is measured before the release, so this changes size and never the decision.
 - **AI labels are not deterministic** run to run; the cached answers are what make a replay reproducible.
 
 ## Sample window and out-of-sample split
 
-First release 2025-10-21, last release 2026-09-30: 344 days, comfortably past the 60-day minimum. There is no in-sample period to quote, because there is no in-sample fit. Every event is scored with parameters fitted only on events whose exit precedes that event's release, so all 316 days and every scored trade are out of sample by construction. The rule itself (residual, headline or agreement) is chosen the same way, walk-forward, and the selection for each event is recorded in `web/data.json`. The frozen holdout in the scorecard adds a conventional in sample and out of sample split for the decay metric.
+First release 2025-10-21, last release 2026-09-30: 344 days, comfortably past the 60-day minimum. Every event is scored with parameters fitted only on events whose exit precedes that event's release, so every scored trade is out of sample by construction. The rule itself (residual, headline or agreement) is chosen the same way, walk-forward, and the selection for each event is recorded in `web/data.json`. Two further out of sample checks sit on top: the frozen holdout (a conventional in sample and out of sample split, for the decay metric) and the preregistered test on 26 companies the method had never seen.
 
 ## Quick start
 

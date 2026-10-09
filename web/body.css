@@ -207,3 +207,4 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .ratios th{white-space:normal;vertical-align:bottom}
 #demo-strat{align-items:start}
 @media (max-width:860px){.vtable{display:block;overflow-x:auto}.vtable td:first-child,.ratios td:first-child{white-space:normal;min-width:130px}.vtable small{white-space:normal}}
+.ratios table.prereg{margin-top:18px}

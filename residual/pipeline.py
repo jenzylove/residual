@@ -322,6 +322,23 @@ def significance(rows: list[dict], draws: int = 200_000, seed: int = 7) -> dict:
     return out
 
 
+def populations(rows: list[dict], keys) -> dict:
+    """Reporting only, after scoring: the same walk-forward rows split into the original 20 companies and
+    the companies added under PREREGISTRATION.md. Each slice gets its own metrics and permutation tests."""
+    from . import universe
+    out = {}
+    for name, keep in (("original_20", lambda t: t in universe.ORIGINAL),
+                       ("new_companies", lambda t: t not in universe.ORIGINAL)):
+        sub = [r for r in rows if keep(r["event_id"].rsplit("-", 3)[0])]
+        if not sub:
+            continue
+        out[name] = {"releases": len(sub),
+                     "summary": {k: metrics(sub, k) for k in keys},
+                     "summary_conservative_funding": {k: metrics(sub, k, "conservative") for k in keys},
+                     "significance": significance(sub)}
+    return out
+
+
 def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool = True,
            hedge_pool=None, tickers=None) -> dict:
     events = [e for e in load_events() if e["status"] != "not_an_earnings_release"]
@@ -365,6 +382,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
         "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; the caps shown are the full period values, for disclosure", "summary_post_warmup": summary_post_warmup,
         "holdout": holdout, "significance": significance(rows),
+        "populations": populations(rows, keys),
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,
         "final_balance": balance,
     }

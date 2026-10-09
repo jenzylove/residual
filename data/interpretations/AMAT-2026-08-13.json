@@ -1,0 +1,24 @@
+{
+ "event_id": "AMAT-2026-08-13",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "25db5c132fa8821e124ddb1a17ac78587420d74d25ffaadce7440a7fce796088",
+ "created_at": "2026-10-09T05:56:39Z",
+ "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.75, \"rationale\": \"Company beat its own revenue guidance, raised full-year Semiconductor Systems outlook, and guided next quarter to $10.25B with strong DRAM/advanced packaging growth commentary, yet the residual reaction was sharply negative (-5.90%), conflicting with the positive guidance signal.\", \"evidence_quotes\": [\"we are further raising our Semiconductor Systems revenue expectations for calendar 2026 and are confident we will grow faster than the market this year\", \"We expect continued strong revenue growth in the second half of the calendar year, particularly in DRAM as well as leading-edge foundry-logic and advanced packaging\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"contradicted_by_guidance\", \"confidence\": 0.75, \"rationale\": \"Company beat its own revenue guidance, raised full-year Semiconductor Systems outlook, and guided next quarter to $10.25B with strong DRAM/advanced packaging growth commentary, yet the residual reaction was sharply negative (-5.90%), conflicting with the positive guidance signal.\", \"evidence_quotes\": [\"we are further raising our Semiconductor Systems revenue expectations for calendar 2026 and are confident we will grow faster than the market this year\", \"We expect continued strong revenue growth in the second half of the calendar year, particularly in DRAM as well as leading-edge foundry-logic and advanced packaging\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.75,
+ "rationale": "Company beat its own revenue guidance, raised full-year Semiconductor Systems outlook, and guided next quarter to $10.25B with strong DRAM/advanced packaging growth commentary, yet the residual reaction was sharply negative (-5.90%), conflicting with the positive guidance signal.",
+ "evidence_quotes": [
+  "we are further raising our Semiconductor Systems revenue expectations for calendar 2026 and are confident we will grow faster than the market this year",
+  "We expect continued strong revenue growth in the second half of the calendar year, particularly in DRAM as well as leading-edge foundry-logic and advanced packaging"
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "event_id": "CRDO-2026-06-02",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "b5b9d0a60575c0084e03502dbf74dc5d788ac4fa37b38541694de47fc26dc3ab",
+ "created_at": "2026-10-09T05:54:04Z",
+ "raw_response": "{\"label\":\"durable\",\"confidence\":0.62,\"rationale\":\"Revenue beat own guidance and next-quarter outlook of $465-475M implies continued strong sequential growth with stable high gross margins, supporting a positive company-specific residual rather than a one-off or contradicted move.\",\"evidence_quotes\":[\"Revenue of $437.0 million grew by 7.4% quarter over quarter and 157.0% year over year\",\"Revenue is expected to be between $465.0 million and $475.0 million\",\"As we enter into fiscal 2027, Credo expects to achieve continued strong financial performance\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\":\"durable\",\"confidence\":0.62,\"rationale\":\"Revenue beat own guidance and next-quarter outlook of $465-475M implies continued strong sequential growth with stable high gross margins, supporting a positive company-specific residual rather than a one-off or contradicted move.\",\"evidence_quotes\":[\"Revenue of $437.0 million grew by 7.4% quarter over quarter and 157.0% year over year\",\"Revenue is expected to be between $465.0 million and $475.0 million\",\"As we enter into fiscal 2027, Credo expects to achieve continued strong financial performance\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Revenue beat own guidance and next-quarter outlook of $465-475M implies continued strong sequential growth with stable high gross margins, supporting a positive company-specific residual rather than a one-off or contradicted move.",
+ "evidence_quotes": [
+  "Revenue of $437.0 million grew by 7.4% quarter over quarter and 157.0% year over year",
+  "Revenue is expected to be between $465.0 million and $475.0 million",
+  "As we enter into fiscal 2027, Credo expects to achieve continued strong financial performance"
+ ]
+}

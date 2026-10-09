@@ -1,0 +1,25 @@
+{
+ "event_id": "LRCX-2026-07-29",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "0f12e41aded54e035e15c5639b1376f737a784706d4acedf8210109ecdd9071e",
+ "created_at": "2026-10-09T05:54:53Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue and margins beat prior guidance, next-quarter guide raised well above this quarter's actuals ($8.1B vs $6.72B), with margin expansion and CEO citing sustained AI-driven demand, supporting continued outperformance rather than a one-off.\", \"evidence_quotes\": [\"Revenue of $6.72 billion.\", \"positioning Lam for a third consecutive year of outperformance in 2026.\", \"Revenue $8.10 Billion +/- $400 Million\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.72, \"rationale\": \"Revenue and margins beat prior guidance, next-quarter guide raised well above this quarter's actuals ($8.1B vs $6.72B), with margin expansion and CEO citing sustained AI-driven demand, supporting continued outperformance rather than a one-off.\", \"evidence_quotes\": [\"Revenue of $6.72 billion.\", \"positioning Lam for a third consecutive year of outperformance in 2026.\", \"Revenue $8.10 Billion +/- $400 Million\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.72,
+ "rationale": "Revenue and margins beat prior guidance, next-quarter guide raised well above this quarter's actuals ($8.1B vs $6.72B), with margin expansion and CEO citing sustained AI-driven demand, supporting continued outperformance rather than a one-off.",
+ "evidence_quotes": [
+  "Revenue of $6.72 billion.",
+  "positioning Lam for a third consecutive year of outperformance in 2026.",
+  "Revenue $8.10 Billion +/- $400 Million"
+ ]
+}

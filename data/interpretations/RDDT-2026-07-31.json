@@ -1,0 +1,24 @@
+{
+ "event_id": "RDDT-2026-07-31",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "d177b9749e91fc90c6cfda5d53d55f33f453da1e3ce893e97d0cc77e0b03014e",
+ "created_at": "2026-10-09T05:54:59Z",
+ "raw_response": "{\"label\": \"already_priced\", \"confidence\": 0.62, \"rationale\": \"Despite an 11.8% revenue beat vs own guidance and strong margin expansion, the company-specific residual is only +0.03%, implying the market had already absorbed the positive surprise via other channels (liquidity/sector), leaving little incremental alpha.\", \"evidence_quotes\": [\"Revenue of $805 million grew 61% year-over-year.\", \"Revenue in the range of $860 million to $870 million\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"already_priced\", \"confidence\": 0.62, \"rationale\": \"Despite an 11.8% revenue beat vs own guidance and strong margin expansion, the company-specific residual is only +0.03%, implying the market had already absorbed the positive surprise via other channels (liquidity/sector), leaving little incremental alpha.\", \"evidence_quotes\": [\"Revenue of $805 million grew 61% year-over-year.\", \"Revenue in the range of $860 million to $870 million\"]}"
+  }
+ ],
+ "label": "already_priced",
+ "confidence": 0.62,
+ "rationale": "Despite an 11.8% revenue beat vs own guidance and strong margin expansion, the company-specific residual is only +0.03%, implying the market had already absorbed the positive surprise via other channels (liquidity/sector), leaving little incremental alpha.",
+ "evidence_quotes": [
+  "Revenue of $805 million grew 61% year-over-year.",
+  "Revenue in the range of $860 million to $870 million"
+ ]
+}

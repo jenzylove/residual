@@ -1,0 +1,24 @@
+{
+ "event_id": "APP-2026-02-11",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "cedafe9643601177b0bb08d2c8e6a71db2fcae78bf3e6be1e58625cc571a93a2",
+ "created_at": "2026-10-09T05:53:37Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite the Q4 revenue beat, forward guidance implies decelerating growth versus prior trajectory ('lowered' growth guidance), which is a fundamental signal likely driving the negative residual rather than noise or already-priced reaction.\", \"evidence_quotes\": [\"Revenue | $1,658 | | $999 | | 66% |\", \"Revenue | $1,745 | | $1,775 |\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.62, \"rationale\": \"Despite the Q4 revenue beat, forward guidance implies decelerating growth versus prior trajectory ('lowered' growth guidance), which is a fundamental signal likely driving the negative residual rather than noise or already-priced reaction.\", \"evidence_quotes\": [\"Revenue | $1,658 | | $999 | | 66% |\", \"Revenue | $1,745 | | $1,775 |\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.62,
+ "rationale": "Despite the Q4 revenue beat, forward guidance implies decelerating growth versus prior trajectory ('lowered' growth guidance), which is a fundamental signal likely driving the negative residual rather than noise or already-priced reaction.",
+ "evidence_quotes": [
+  "Revenue | $1,658 | | $999 | | 66% |",
+  "Revenue | $1,745 | | $1,775 |"
+ ]
+}

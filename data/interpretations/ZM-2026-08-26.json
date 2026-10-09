@@ -1,0 +1,25 @@
+{
+ "event_id": "ZM-2026-08-26",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "2825f517893e1fce23ea0425b43fac79492f5836bde76959c5bf5c7c9c3fa063",
+ "created_at": "2026-10-09T05:56:47Z",
+ "raw_response": "{\"label\":\"contradicted_by_guidance\",\"confidence\":0.62,\"rationale\":\"Revenue beat guidance midpoint only slightly, but next quarter guidance implies near-zero sequential growth and overall growth is decelerating; guidance direction explicitly 'lowered' versus prior growth path, undercutting the modest positive residual.\",\"evidence_quotes\":[\"Total revenue for the second quarter was $1,277.2 million, up 4.9% year over year.\",\"Third Quarter Fiscal Year 2027: Total revenue is expected to be between $1.275 billion and $1.280 billion\",\"Online revenue was $489.7 million, up 0.6% year over year.\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\":\"contradicted_by_guidance\",\"confidence\":0.62,\"rationale\":\"Revenue beat guidance midpoint only slightly, but next quarter guidance implies near-zero sequential growth and overall growth is decelerating; guidance direction explicitly 'lowered' versus prior growth path, undercutting the modest positive residual.\",\"evidence_quotes\":[\"Total revenue for the second quarter was $1,277.2 million, up 4.9% year over year.\",\"Third Quarter Fiscal Year 2027: Total revenue is expected to be between $1.275 billion and $1.280 billion\",\"Online revenue was $489.7 million, up 0.6% year over year.\"]}"
+  }
+ ],
+ "label": "contradicted_by_guidance",
+ "confidence": 0.62,
+ "rationale": "Revenue beat guidance midpoint only slightly, but next quarter guidance implies near-zero sequential growth and overall growth is decelerating; guidance direction explicitly 'lowered' versus prior growth path, undercutting the modest positive residual.",
+ "evidence_quotes": [
+  "Total revenue for the second quarter was $1,277.2 million, up 4.9% year over year.",
+  "Third Quarter Fiscal Year 2027: Total revenue is expected to be between $1.275 billion and $1.280 billion",
+  "Online revenue was $489.7 million, up 0.6% year over year."
+ ]
+}

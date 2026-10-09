@@ -1,0 +1,25 @@
+{
+ "event_id": "AMAT-2026-05-14",
+ "status": "ok",
+ "detail": "ok",
+ "provider": "anthropic",
+ "model": "claude-sonnet-5",
+ "prompt_version": "interp-v1",
+ "prompt_sha256": "78d93e9524725e90b2c421dbcaf0302845cc370d9e29dbf64d1d0f56fa2e8032",
+ "created_at": "2026-10-09T05:54:00Z",
+ "raw_response": "{\"label\": \"durable\", \"confidence\": 0.75, \"rationale\": \"Revenue beat prior guidance, next-quarter guide raised to $8.95B, and CEO raised FY2026 growth outlook to 30%+ on AI-driven demand with multiple long-term partnerships (TSMC, SK hynix, Micron). Residual aligns with strong forward fundamentals, not a one-off.\", \"evidence_quotes\": [\"we now expect our semiconductor equipment business to grow more than 30 percent in calendar 2026\", \"The growth in AI that Applied has been investing for is now in full force\", \"Record revenue $7.91 billion, up 11 percent year over year\"]}",
+ "attempts": [
+  {
+   "detail": "ok",
+   "raw_response": "{\"label\": \"durable\", \"confidence\": 0.75, \"rationale\": \"Revenue beat prior guidance, next-quarter guide raised to $8.95B, and CEO raised FY2026 growth outlook to 30%+ on AI-driven demand with multiple long-term partnerships (TSMC, SK hynix, Micron). Residual aligns with strong forward fundamentals, not a one-off.\", \"evidence_quotes\": [\"we now expect our semiconductor equipment business to grow more than 30 percent in calendar 2026\", \"The growth in AI that Applied has been investing for is now in full force\", \"Record revenue $7.91 billion, up 11 percent year over year\"]}"
+  }
+ ],
+ "label": "durable",
+ "confidence": 0.75,
+ "rationale": "Revenue beat prior guidance, next-quarter guide raised to $8.95B, and CEO raised FY2026 growth outlook to 30%+ on AI-driven demand with multiple long-term partnerships (TSMC, SK hynix, Micron). Residual aligns with strong forward fundamentals, not a one-off.",
+ "evidence_quotes": [
+  "we now expect our semiconductor equipment business to grow more than 30 percent in calendar 2026",
+  "The growth in AI that Applied has been investing for is now in full force",
+  "Record revenue $7.91 billion, up 11 percent year over year"
+ ]
+}
