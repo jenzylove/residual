@@ -1,0 +1,12 @@
+name: probe
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in "https://api.bitget.com/api/v2/mix/market/ticker?symbol=NVDAUSDT&productType=USDT-FUTURES" \
+                   "https://api.bitget.com/api/v2/mix/market/history-candles?symbol=QQQUSDT&productType=USDT-FUTURES&granularity=1H&limit=2" \
+                   "https://data.sec.gov/submissions/CIK0001045810.json"; do
+            code=$(curl -s -o /tmp/b -w "%{http_code}" -A "RESIDUAL research jennifereze12@gmail.com" "$u"); echo "$code $u"; head -c 200 /tmp/b; echo
+          done
