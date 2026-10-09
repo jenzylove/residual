@@ -99,3 +99,12 @@ Choosing the companies required reading their earnings releases, which state rep
 outlook. The author has general awareness of some of these companies' share price moves from the
 news. No Bitget candle, funding or order book data for any of them had been downloaded when this
 file was committed.
+
+## Amendment, 9 October 2026, same morning
+
+The sentence above saying no Bitget data had been downloaded is too absolute. Hourly candles for
+ADBE, AMAT, CSCO, DELL, LRCX and NFLX already sit inside existing snapshots in `data/snapshots/`,
+downloaded in September as sector basket peers for the original 20 companies. They cover only the
+windows around the original companies' releases, and they were not examined when choosing the
+companies here: the selection used the inclusion rule and the filed releases only. Nothing else in
+this file changes.
