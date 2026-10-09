@@ -1,11 +1,17 @@
 name: watcher
 
-# The live watcher, off the laptop: one cycle every 10 minutes. It checks SEC EDGAR for new earnings
-# releases, decides TRADE or NO_TRADE with the same frozen method, manages Bitget Demo pairs, and
-# commits its whole state back, because a runner keeps nothing between runs.
+# The live watcher, off the laptop. It checks SEC EDGAR for new earnings releases every 10 minutes,
+# decides TRADE or NO_TRADE with the same frozen method, manages Bitget Demo pairs, and commits its
+# whole state back, because a runner keeps nothing between runs.
+#
+# GitHub's cron is unreliable for new schedules (it fired nothing for hours on 9 October 2026), so each
+# run is a loop: one cycle every 10 minutes for about five and a half hours, then it starts its own
+# successor. A workflow may re-trigger itself with workflow_dispatch using its own token. The cron stays
+# as a backup that restarts the chain if a run ever dies; every run loops, so whichever run survives
+# the concurrency queue carries the chain on.
 on:
   schedule:
-    - cron: "7,17,27,37,47,57 * * * *"  # off the round minutes, where GitHub drops scheduled runs under load
+    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       demo_check:
@@ -19,11 +25,12 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 358
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,7 +38,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: One watcher cycle
+      - name: Watcher loop, one cycle every 10 minutes
+        timeout-minutes: 345  # the step, not the job, times out, so the next run still starts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BITGET_DEMO_API_KEY: ${{ secrets.BITGET_DEMO_API_KEY }}
@@ -41,5 +49,16 @@ jobs:
           git config user.name "jenzylove"
           git config user.email "jennifereze12@gmail.com"
           if [ "${{ inputs.demo_check }}" = "true" ]; then python -m residual demo-check | head -5; fi
-          python scripts/watch_once.py
-          tail -n 1 data/watcher.log
+          end=$((SECONDS + 320 * 60))
+          while [ $SECONDS -lt $end ]; do
+            start=$SECONDS
+            python scripts/watch_once.py || true
+            tail -n 1 data/watcher.log | cut -c1-200
+            wait=$((600 - (SECONDS - start)))
+            if [ $wait -gt 0 ]; then sleep $wait; fi
+          done
+      - name: Start the next run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run watcher.yml --repo ${{ github.repository }}
