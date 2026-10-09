@@ -210,3 +210,4 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background
 .ratios table.prereg{margin-top:18px}
 .proof-grid>.card:has(#curve){align-self:start;position:sticky;top:96px}
 @media (max-width:980px){.proof-grid>.card:has(#curve){position:static}}
+.nw{white-space:nowrap}

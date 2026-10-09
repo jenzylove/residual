@@ -80,3 +80,5 @@ h1 em{font-style:normal;color:var(--violet)}
   .reveal{animation:none;opacity:1;transform:none;filter:none}
   .orb-glow,.scroll-btn,.dot.live{animation:none}
 }
+/* the fixed nav floats over content: give it a frosted backdrop so text never runs through it */
+.nav{background:rgba(239,238,244,.84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-top:18px;padding-bottom:18px}

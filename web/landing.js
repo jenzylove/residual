@@ -250,16 +250,19 @@ function execution(r, e) {
     return;
   }
   const at = t.attribution;
-  const items = [["Company's own move", at.residual], ["Hedge mismatch", at.factor_error], ["Fees", at.fees], ["Slippage", at.slippage], ["Funding", at.funding]];
+  // no published funding for this period: the headline charges the worst rate seen on these contracts
+  const est = t.funding_data !== "complete", net = est ? t.net_conservative : t.net;
+  const items = [["Company's own move", at.residual], ["Hedge mismatch", at.factor_error], ["Fees", at.fees], ["Slippage", at.slippage],
+                 est ? ["Funding, worst case", t.funding_conservative] : ["Funding", at.funding]];
   const max = Math.max(...items.map(i => Math.abs(i[1]))) || 1;
   $("#exec").innerHTML = `<div class="exec-grid">
     <div class="card">
       <h4>The pair</h4>
-      <div class="big ${cls(t.net)}">${usd(t.net, 2)}</div>
-      <p class="note">Paper result after fees, slippage and funding · ${t.stopped ? "closed by the stop" : "closed at the 24 hour horizon"}</p>
+      <div class="big ${cls(net)}">${usd(net, 2)}</div>
+      <p class="note">Paper result after fees, slippage and ${est ? "worst case " : ""}funding · ${t.stopped ? "closed by the stop" : "closed at the 24 hour horizon"}</p>
       <div class="legs">${t.legs.map(l => `<div class="legrow"><span><b>${esc(l.symbol.replace("USDT", ""))}</b> <small>${l.role === "company" ? "company leg" : "hedge leg"} · ${l.side}</small></span><span class="muted">${l.entry_fill.toFixed(2)} → ${l.exit_fill.toFixed(2)}</span><span class="${cls(l.net)}">${usd(l.net, 2)}</span></div>`).join("")}</div>
       <dl class="kv"><dt>Opened</dt><dd>${when(t.entry_ms)}</dd><dt>Closed</dt><dd>${when(t.exit_ms)}</dd></dl>
-      ${t.funding_data !== "complete" ? `<div class="warn">Bitget no longer publishes funding history for this period, so this trade is left out of the main result. A worst case funding charge of ${usd(t.funding_conservative, 2)} is used in the stress view.</div>` : ""}
+      ${t.funding_data !== "complete" ? `<div class="warn">Bitget no longer publishes funding for this period, so funding is charged at the worst rate ever seen on these contracts: ${usd(t.funding_conservative, 2)}. Before funding, the pair made ${usd(t.net, 2)}. The complete funding view leaves this trade out.</div>` : ""}
     </div>
     <div class="card">
       <h4>Where the result came from</h4>
@@ -425,7 +428,7 @@ function demoStrategy() {
   const checks = all.filter(t => !t.held_hours), held = all.filter(t => t.held_hours);
   const sum = xs => xs.reduce((a, t) => a + (t.realized ? t.realized.net : 0), 0);
   const legs = all.reduce((a, t) => a + t.orders.length * 2, 0);
-  const row = t => `<div class="orders"><div class="order"><span><b>${esc(t.event_id)}</b> ${t.decision.direction > 0 ? "long" : "short"} · ${esc(t.executed_at.slice(0, 10))}</span><span class="muted wrap">${t.held_hours ? `held ${t.held_hours}h · exit: ${esc(t.exit_reason || "holding period")} · ` : "execution check · "}net per Bitget ${usd(t.realized ? t.realized.net : 0, 2)}</span></div>
+  const row = t => `<div class="orders"><div class="order"><span><b class="nw">${esc(t.event_id)}</b> <span class="nw">${t.decision.direction > 0 ? "long" : "short"} · ${esc(t.executed_at.slice(0, 10))}</span></span><span class="muted wrap">${t.held_hours ? `held ${t.held_hours}h · exit: ${esc(t.exit_reason || "holding period")} · ` : "execution check · "}net per Bitget ${usd(t.realized ? t.realized.net : 0, 2)}</span></div>
       ${t.orders.map(o => `<div class="order"><span><b>${esc(o.symbol.replace("USDT", ""))}</b> ${o.side} · ${o.open_px} → ${o.close_px}</span><span class="muted">filled</span><code>open #${esc(o.open)}</code><code>close #${esc(o.close)}</code></div>`).join("")}</div>`;
   el.innerHTML = `<div><h4>On Bitget Demo: real orders, kept apart from the backtest</h4>
       <div class="big">${all.length} pairs · ${legs} orders</div>

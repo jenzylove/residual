@@ -186,6 +186,12 @@ def apply_point_in_time_funding_caps(events, snaps: dict) -> dict[str, float]:
         for sym, info in (snap or {}).get("funding", {}).items():
             settlements += [(x["t"], sym, abs(x["rate"])) for x in info.get("settlements", [])]
     settlements.sort()
+    # Bitget keeps about 90 days of funding history, so early releases have no earlier settlement at
+    # all. Charging those nothing made the "worst case" view equal to the zero funding view (found
+    # 9 October 2026). They now fall back to the worst rate in the symbol's whole collected history,
+    # then to the worst rate of any symbol: later data, used only to make a result worse.
+    full = funding_caps(snaps.values())
+    full_worst = max(full.values(), default=0.0)
     for ev in events:
         cutoff = ev["release_ms"]
         caps: dict[str, float] = {}
@@ -193,10 +199,13 @@ def apply_point_in_time_funding_caps(events, snaps: dict) -> dict[str, float]:
             if t >= cutoff:
                 break
             caps[sym] = max(caps.get(sym, 0.0), r)
-        worst = max(caps.values(), default=0.0)
         for sym, info in (snaps[ev["event_id"]] or {}).get("funding", {}).items():
-            info["max_abs_rate_observed"] = caps.get(sym) or worst
-    return funding_caps(snaps.values())
+            if caps.get(sym):
+                info["max_abs_rate_observed"], info["cap_source"] = caps[sym], "point_in_time"
+            else:
+                info["max_abs_rate_observed"] = full.get(sym) or full_worst
+                info["cap_source"] = "later_data_fallback"
+    return full
 
 
 def _score(analyzed, *, use_ai: bool, allow_llm_calls: bool, verbose: bool, frozen: dict | None = None):
@@ -380,7 +389,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         "summary": summary, "summary_conservative_funding": summary_conservative,
         "summary_observed_zero_funding": summary_observed_zero,
         "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
-        "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; the caps shown are the full period values, for disclosure", "summary_post_warmup": summary_post_warmup,
+        "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; where none exist yet, the worst rate in the symbol's whole collected history (later data, used only to make results worse); the caps shown are the full period values", "summary_post_warmup": summary_post_warmup,
         "holdout": holdout, "significance": significance(rows),
         "populations": populations(rows, keys),
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,

@@ -133,3 +133,17 @@ Appended after the run; nothing above was edited.
 One deviation from the plan: CRDO-2026-03-03 is recorded as data incomplete because Credo's December
 2025 release is missing from the SEC submissions list, so the March release has no prior quarter
 outlook to compare against. No pattern or gate was changed for it.
+
+## Correction after the run, 9 October 2026
+
+A bug in the worst case funding view, found after the outcome above was written. Bitget keeps about
+90 days of funding history, and the point in time cap only looked at settlements before each release,
+so every release before the summer had no earlier settlement and was charged zero: the "worst case"
+view was identical to counting missing funding as zero. Those releases are now charged the worst rate
+in the contract's whole collected history (later data, used only to make a result worse).
+
+No trade decision changed. The predictions are unaffected: both new company trades had complete
+funding data. In the conservative view the new companies' headline trade on every eligible release is
+now +$318.76 (H2 still failed), combined the strategy is +$226.06 over 17 trades, Sharpe 0.652 daily,
+selection p = 0.012, and the original 20 slice is +$54.74 instead of the +$189.66 quoted above. The
+README reports the corrected figures.
