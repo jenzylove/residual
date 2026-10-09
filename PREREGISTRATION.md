@@ -108,3 +108,10 @@ downloaded in September as sector basket peers for the original 20 companies. Th
 windows around the original companies' releases, and they were not examined when choosing the
 companies here: the selection used the inclusion rule and the filed releases only. Nothing else in
 this file changes.
+
+A second point found while preparing the extraction. On 21 September, SEC identifiers for eleven
+candidates were added to `residual/edgar.py` (ARM, SNOW, NOW, DELL, ANET, ADBE, CSCO, AMAT, LRCX, ADI,
+ORCL; NFLX was already listed), and only ADI and ANET joined the study. No snapshot, AI reading,
+consensus file or event record for any of the others exists anywhere in the repository history, so
+none of them was ever scored. Why they were not added then is not recorded. Their inclusion now
+follows the rule above, not that earlier list.
