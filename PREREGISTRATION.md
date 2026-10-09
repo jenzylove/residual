@@ -147,3 +147,16 @@ funding data. In the conservative view the new companies' headline trade on ever
 now +$318.76 (H2 still failed), combined the strategy is +$226.06 over 17 trades, Sharpe 0.652 daily,
 selection p = 0.012, and the original 20 slice is +$54.74 instead of the +$189.66 quoted above. The
 README reports the corrected figures.
+
+## Second correction, 9 October 2026
+
+The worst case charge above is a stress test, not an estimate of what funding would have cost. The
+headline view now charges trades without Bitget funding history the contract's average absolute
+rate, always against the position, and the worst case view is published beside it. We chose the
+average after seeing the worst case result. A median was tried first and rejected: most settlements
+are exactly zero, so it charged almost nothing. No trade decision changed.
+
+Headline (average funding): combined +$349.98 over 17 trades, Sharpe 1.005 daily, selection
+p = 0.009; original 20 +$178.67; new companies unchanged at +$171.31, with the headline trade on
+every eligible new release at +$355.59 (H2 still failed). Worst case view: combined +$226.06,
+Sharpe 0.652.

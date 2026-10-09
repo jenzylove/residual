@@ -107,14 +107,14 @@ On 9 October 2026 we committed [PREREGISTRATION.md](PREREGISTRATION.md) before d
 | Earnings releases | 80 | 107 | 187 |
 | Releases with a tradeable Bitget market | 38 | 37 | 75 |
 | Trades | 15 | 2 | 17 |
-| Strategy net P&L | +$54.74 | +$171.31 | +$226.06 |
-| Headline trade, every eligible release | −$972.17 | +$318.76 | −$653.41 |
-| Selection beats chance (permutation p) | 0.0024 | 0.020 | 0.012 |
+| Strategy net P&L | +$178.67 | +$171.31 | +$349.98 |
+| Headline trade, every eligible release | −$819.59 | +$355.59 | −$463.99 |
+| Selection beats chance (permutation p) | 0.0016 | 0.020 | 0.009 |
 | Direction beats chance (permutation p) | 0.198 | 0.250 | 0.078 |
 
 **How the predictions did.**
 H1, selection beats chance on the new companies: p = 0.020, below 0.05. It passes on paper, but it rests on two trades (Lam Research +$33.10, Dell +$138.22), which is too few to confirm anything.
-H2, the headline trade loses on the new companies and the strategy beats it: **failed.** Trading the headline direction on every eligible new release made +$318.76 over 37 trades, more than the strategy's +$171.31.
+H2, the headline trade loses on the new companies and the strategy beats it: **failed.** Trading the headline direction on every eligible new release made +$355.59 over 37 trades, more than the strategy's +$171.31.
 H3, direction choice stays insignificant: held (p = 0.25).
 
 **Why so few new trades.** 69 of the 107 new releases came before the company's Bitget perpetual existed or had 21 days of history. Of the 37 that could be analysed, the gates passed 2: thin after hours books (26 releases) and hedges that did not fit (12) were the main reasons, which is what the gates are for on newly listed perpetuals.
@@ -133,47 +133,47 @@ The first three are research and backtest. The last two are real Bitget Demo ord
 
 ### Scorecard
 
-Walk-forward over 187 releases, every trade counted, worst case funding charged where Bitget has no history (the conservative view). Sharpe and Sortino are on daily P&L over a $100,000 book, annualised over 365 days; Sharpe per trade is the mean over the standard deviation of each trade's return on its company notional. Turnover is gross notional on both legs, entry and exit, per year against the book.
+Walk-forward over 187 releases, every trade counted. Where Bitget no longer has funding history, funding is estimated at the contract's average absolute rate, always paid (the headline view); a worst case view charging the largest rate ever seen sits beside it. Sharpe and Sortino are on daily P&L over a $100,000 book, annualised over 365 days; Sharpe per trade is the mean over the standard deviation of each trade's return on its company notional. Turnover is gross notional on both legs, entry and exit, per year against the book.
 
-| Metric | Strategy | Unhedged, same releases | Headline, same releases |
-|---|---|---|---|
-| Net P&L | +$226.06 | +$779.24 | +$982.24 |
-| Trades | 17 | 17 | 17 |
-| Sharpe, daily, annualised | 0.652 | 1.381 | 1.738 |
-| Sharpe per trade | 0.005 | 0.317 | 0.414 |
-| Sortino, daily, annualised | 1.542 | 4.617 | 6.725 |
-| Max drawdown | −$331.96 | −$298.01 | −$148.55 |
-| Turnover per year | 1.60x | 0.66x | 0.66x |
-| Rolling 30 day Sharpe | median −0.04, worst −5.07, positive in 44% of defined windows | | |
-| Frozen holdout | in sample -0.797, out of sample 1.925, decay −3.42 | | |
+| Metric | Strategy | Strategy, worst case funding | Unhedged, same releases | Headline, same releases |
+|---|---|---|---|---|
+| Net P&L | +$349.98 | +$226.06 | +$865.83 | +$1,070.06 |
+| Trades | 17 | 17 | 17 | 17 |
+| Sharpe, daily, annualised | 1.005 | 0.652 | 1.532 | 1.887 |
+| Sharpe per trade | 0.083 | 0.005 | 0.356 | 0.458 |
+| Sortino, daily, annualised | 2.645 | 1.542 | 5.308 | 7.628 |
+| Max drawdown | −$226.37 | −$331.96 | −$233.57 | −$122.58 |
+| Turnover per year | 1.60x | 1.60x | 0.66x | 0.66x |
+| Rolling 30 day Sharpe | median 1.87, worst −4.92, positive in 64% of defined windows | median −0.04, positive in 44% | | |
+| Frozen holdout | in sample 0.276, out of sample 1.925, decay −5.98 | | | |
 
-**A correction, 9 October 2026.** Bitget keeps about 90 days of funding history, so for every trade before the summer no earlier settlement existed, and the "worst case" charge came out as zero: this view was identical to counting missing funding as zero. Those trades are now charged the worst rate seen anywhere in the contract's collected history. That uses later data, but only to make a result worse. No decision changed; the strategy fell from +$360.97 (Sharpe 1.037) to +$226.06 (Sharpe 0.652), and the original 20 from +$189.66 to +$54.74. The view with complete funding data is untouched.
+**A correction, 9 October 2026.** Bitget keeps about 90 days of funding history, and for every trade before the summer no earlier settlement existed, so the cost model charged those trades no funding at all, while this README called it a worst case. We found it after the preregistered run and fixed it in two steps, both published. First, those trades were charged the worst rate ever seen on the contract: the strategy fell from +$360.97 (Sharpe 1.037) to +$226.06 (0.652). That is a stress test, not an estimate, so the headline now charges the contract's average absolute rate, always paid, and the worst case stays beside it in the scorecard. We chose the average after seeing the worst case result, and say so here. No trade decision changed at any step.
 
 **Rolling 30 day Sharpe** slides a 30 day window one day at a time. 138 of 316 windows hold at least two trades and have a Sharpe; the other 178 have no Sharpe, and are counted, not filled with zero. Costs (fees plus slippage) are 12.6 bps of turnover and 35% of gross P&L.
 
-**Frozen holdout.** Alongside the walk-forward, params and rule are fit once on every release before 2 July 2026 (the last 90 days boundary) and then left untouched. In sample: Sharpe −0.797 over 11 trades. Out of sample, 90 days: Sharpe 1.925 over 15 trades, so out of sample did better, not worse (decay −3.42; the alert level is out of sample below half of in sample). This check was added after the original sample was known, so read it as robustness. The preregistered test above is the one that was not.
+**Frozen holdout.** Alongside the walk-forward, params and rule are fit once on every release before 2 July 2026 (the last 90 days boundary) and then left untouched. In sample: Sharpe 0.276 over 11 trades. Out of sample, 90 days: Sharpe 1.925 over 15 trades, so out of sample did better, not worse (decay −5.98; the alert level is out of sample below half of in sample). This check was added after the original sample was known, so read it as robustness. The preregistered test above is the one that was not.
 
 **Permutation tests.** Selection: the releases the strategy traded are scored with the plain headline trade and compared with 200,000 random sets of the same size drawn from every release where that trade was possible. Direction: the strategy's chosen direction against every possible flip of the same trades (exact). Both are seeded and reproduced in CI.
 
 ### Backtest, walk-forward, every trade counted
 
-Walk-forward over 187 releases at the $2,500 default size. Each decision used only information available before that release, including funding: each event's worst case funding charge uses only settlements before its release. Missing funding is charged at that worst rate.
+Walk-forward over 187 releases at the $2,500 default size. Each decision used only information available before that release. Funding uses Bitget's settlements before the release where they exist, and the contract's average absolute rate where Bitget no longer has history.
 
 | Rule | Net P&L | Trades | Sharpe (daily, annualised) | Max drawdown |
 |---|---|---|---|---|
-| **Strategy** (rule picked walk-forward) | **+$226.06** | 17 | 0.652 | −$331.96 |
-| Agreement rule | +$378.28 | 13 | 1.123 | −$179.73 |
-| Headline rule, hedged | +$273.14 | 24 | 0.791 | −$308.93 |
-| Residual rule | +$197.46 | 24 | 0.550 | −$336.94 |
-| Analyst consensus diagnostic (post hoc, never selected) | −$53.52 | 16 | -0.340 | −$210.01 |
-| **Headline direction, same events, unhedged** | **+$982.24** | 17 | 1.738 | −$148.55 |
-| Headline direction, every eligible event | −$653.41 | 75 | -0.559 | −$1,375.04 |
+| **Strategy** (rule picked walk-forward) | **+$349.98** | 17 | 1.005 | −$226.37 |
+| Agreement rule | +$487.22 | 13 | 1.434 | −$89.13 |
+| Headline rule, hedged | +$397.09 | 24 | 1.141 | −$227.31 |
+| Residual rule | +$322.52 | 24 | 0.893 | −$230.22 |
+| Analyst consensus diagnostic (post hoc, never selected) | +$17.79 | 16 | 0.106 | −$157.03 |
+| **Headline direction, same events, unhedged** | **+$1,070.06** | 17 | 1.887 | −$122.58 |
+| Headline direction, every eligible event | −$463.99 | 75 | -0.399 | −$1,185.62 |
 
-**Funding complete view.** Bitget keeps about 90 days of funding history. Counting only trades whose funding was actually observed leaves 7 trades: +$489.18, Sharpe 1.537 daily (0.429 per trade), max drawdown −$68.84. Every other number in this README uses the conservative view above unless it says otherwise.
+**Funding complete view.** Bitget keeps about 90 days of funding history. Counting only trades whose funding was actually observed leaves 7 trades: +$489.18, Sharpe 1.537 daily (0.429 per trade), max drawdown −$68.84. Every other number in this README uses the headline view above unless it says otherwise.
 
-**What this shows.** The value is in which releases RESIDUAL agrees to trade. Taking the headline direction on every eligible release loses $653.41; taking it only on the releases that clear RESIDUAL's gates makes +$982.24. Inside those releases the hedge cost more than it saved, so the unhedged baseline beats the strategy. We report the strategy the walk-forward selected, not the baseline, because picking the winner after seeing the results would be hindsight.
+**What this shows.** The value is in which releases RESIDUAL agrees to trade. Taking the headline direction on every eligible release loses $463.99; taking it only on the releases that clear RESIDUAL's gates makes +$1,070.06. Inside those releases the hedge cost more than it saved, so the unhedged baseline beats the strategy. We report the strategy the walk-forward selected, not the baseline, because picking the winner after seeing the results would be hindsight.
 
-**Demo-executable mode** (conservative view): +$116.72 over 6 trades (Sharpe 0.695) against the same-events baseline's +$59.75 (0.352). This is the one population where the strategy beats its baseline.
+**Demo-executable mode** (headline view): +$120.30 over 6 trades (Sharpe 0.717) against the same-events baseline's +$62.95 (0.372). This is the one population where the strategy beats its baseline.
 
 ### Real orders on Bitget Demo
 
@@ -191,9 +191,9 @@ The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5
 
 - **The sample is bounded by the venue, not by the method.** 187 releases were examined across 344 days, but a release is only tradeable if the company's Bitget perpetual already existed with enough history at that moment. That leaves 75 analysable releases, of which 17 cleared every gate. Arista is the clearest case: its perpetual listed on 12 August 2026, eight days after its 4 August earnings, so that release can never be traded however good the signal was.
 - **Seventeen trades cannot establish an edge.** The selection test is significant in the original sample and in the combined one, but the out of sample test on new companies produced only two trades, and on those companies the plain headline trade made money on its own (prediction H2 failed). A larger out of sample record is what would settle it.
-- **The hedge did not pay.** Unhedged on the same releases returned +$779.24 against +$226.06 hedged in the conservative view, and +$1,013.17 against +$489.18 in the funding complete view. On this sample the hedge cost return. That is published here rather than buried, and it is the first thing a larger sample should settle.
+- **The hedge did not pay.** Unhedged on the same releases returned +$865.83 against +$349.98 hedged in the headline view, and +$1,013.17 against +$489.18 in the funding complete view. On this sample the hedge cost return. That is published here rather than buried, and it is the first thing a larger sample should settle.
 - **The surprise is a guidance surprise**, reported revenue against the company's own prior outlook, because the SEC publishes no consensus. A later-added analyst-EPS consensus series is published as a post-hoc diagnostic; it is never eligible for walk-forward selection.
-- **Funding history** reaches back only about 90 days on Bitget, so older trades carry a worst case funding charge, computed point in time. The tables above count those trades; the view that drops them has 7 trades for +$489.18.
+- **Funding history** reaches back only about 90 days on Bitget, so for older trades funding is an estimate: the contract's average rate in the headline, its worst rate in the stress view. The view that drops those trades has 7 trades for +$489.18.
 - **Bitget Demo lists no index or sector ETF**, so main-mode strategy pairs cannot execute there. Demo mode exists for that reason, and the adapter refuses substitutes.
 - **Thin books cap size rather than rejecting the release.** The position is the largest notional that stays inside 25% of the observed pre-event hourly volume, up to the $2,500 base, and the release is dropped only if that falls below a fifth of base. Volume is measured before the release, so this changes size and never the decision.
 - **AI labels are not deterministic** run to run; the cached answers are what make a replay reproducible.

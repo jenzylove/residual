@@ -25,7 +25,7 @@ jobs:
           import json
           a = json.load(open("/tmp/committed.json"))
           b = json.load(open("data/results.json"))
-          for k in ("summary", "summary_conservative_funding", "summary_observed_zero_funding", "holdout", "significance"):
+          for k in ("summary", "summary_conservative_funding", "summary_observed_zero_funding", "summary_worst_case_funding", "holdout", "significance"):
               assert a[k] == b[k], f"{k} changed on replay"
           da = {r["event_id"]: r["decision"]["decision"] for r in a["rows"]}
           db = {r["event_id"]: r["decision"]["decision"] for r in b["rows"]}

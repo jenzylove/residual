@@ -27,7 +27,7 @@ document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
 });
 
 function render() {
-  // headline view: every trade counted, missing funding charged at the worst rate (same as the README)
+  // headline view: every trade counted, missing funding estimated at the average rate (same as the README)
   const s = D.summary_conservative_funding.residual, n = D.summary_conservative_funding.naive_same_events;
   const rej = D.rows.filter(r => r.decision.decision !== "TRADE").length;
   $("#kpis").innerHTML = [

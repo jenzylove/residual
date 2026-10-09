@@ -97,7 +97,8 @@ def risk_ratios(rows: list[dict], traded: list[dict]) -> dict:
 
 def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
     """primary: only trades with complete Bitget funding data count (others are excluded, P&L 0).
-    conservative: every trade counts, unavailable funding charged at the worst observed rate.
+    conservative: every trade counts, unavailable funding estimated at the contract's typical rate (headline).
+    worst: every trade counts, unavailable funding charged at the worst observed rate (stress view).
     observed_zero: every trade counts, unavailable funding taken as zero (comparison only)."""
     pnl, traded, excluded = [], [], 0
     for r in rows:
@@ -108,7 +109,7 @@ def metrics(rows: list[dict], key: str, basis: str = "primary") -> dict:
             excluded += 1
             pnl.append(0.0)
         else:
-            v = t["net_conservative"] if basis == "conservative" else t["net"]
+            v = t["net_conservative"] if basis == "conservative" else t["net_worst"] if basis == "worst" else t["net"]
             pnl.append(v)
             traded.append({**t, "net": v})
     eq, peak, mdd = 0.0, 0.0, 0.0
@@ -145,8 +146,8 @@ def _source_text(event, allow_network=True):
 def _slim_sim(sim):
     if not sim:
         return None
-    return {k: sim[k] for k in ("net", "net_conservative", "gross_mid", "fees", "slippage", "funding",
-                                "funding_conservative", "entry_ms", "exit_ms", "stopped", "holding_hours",
+    return {k: sim[k] for k in ("net", "net_conservative", "net_worst", "gross_mid", "fees", "slippage", "funding",
+                                "funding_conservative", "funding_worst", "entry_ms", "exit_ms", "stopped", "holding_hours",
                                 "funding_data", "legs")}
 
 
@@ -170,9 +171,16 @@ def apply_funding_caps(snaps) -> dict[str, float]:
     snaps = list(snaps)
     caps = funding_caps(snaps)
     worst = max(caps.values(), default=0.0)
+    by_sym: dict[str, list] = {}
+    for snap in snaps:
+        for s, info in (snap or {}).get("funding", {}).items():
+            by_sym.setdefault(s, []).extend(abs(x["rate"]) for x in info.get("settlements", []))
+    rates = [r for v in by_sym.values() for r in v]
+    all_typ = statistics.fmean(rates) if rates else 0.0
     for snap in snaps:
         for s, info in (snap or {}).get("funding", {}).items():
             info["max_abs_rate_observed"] = caps.get(s) or worst
+            info["typical_abs_rate"] = statistics.fmean(by_sym[s]) if by_sym.get(s) else all_typ
     return caps
 
 
@@ -190,20 +198,30 @@ def apply_point_in_time_funding_caps(events, snaps: dict) -> dict[str, float]:
     # all. Charging those nothing made the "worst case" view equal to the zero funding view (found
     # 9 October 2026). They now fall back to the worst rate in the symbol's whole collected history,
     # then to the worst rate of any symbol: later data, used only to make a result worse.
+    # The headline estimate uses the average absolute rate (most settlements are exactly zero, so a
+    # median would charge nothing); the worst case view uses the largest.
     full = funding_caps(snaps.values())
     full_worst = max(full.values(), default=0.0)
+    by_sym: dict[str, list] = {}
+    for _, sym, r in settlements:
+        by_sym.setdefault(sym, []).append(r)
+    full_typ = {k: statistics.fmean(v) for k, v in by_sym.items()}
+    all_typ = statistics.fmean([r for _, _, r in settlements]) if settlements else 0.0
     for ev in events:
         cutoff = ev["release_ms"]
-        caps: dict[str, float] = {}
+        seen: dict[str, list] = {}
         for t, sym, r in settlements:
             if t >= cutoff:
                 break
-            caps[sym] = max(caps.get(sym, 0.0), r)
+            seen.setdefault(sym, []).append(r)
         for sym, info in (snaps[ev["event_id"]] or {}).get("funding", {}).items():
-            if caps.get(sym):
-                info["max_abs_rate_observed"], info["cap_source"] = caps[sym], "point_in_time"
+            if seen.get(sym):
+                info["max_abs_rate_observed"] = max(seen[sym])
+                info["typical_abs_rate"] = statistics.fmean(seen[sym])
+                info["cap_source"] = "point_in_time"
             else:
                 info["max_abs_rate_observed"] = full.get(sym) or full_worst
+                info["typical_abs_rate"] = full_typ.get(sym, all_typ)
                 info["cap_source"] = "later_data_fallback"
     return full
 
@@ -368,6 +386,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
     summary_conservative = {k: metrics(rows, k, "conservative") for k in keys}
     summary_conservative["no_trade"] = metrics(rows, "__none__", "conservative")
     summary_observed_zero = {k: metrics(rows, k, "observed_zero") for k in keys}
+    summary_worst = {k: metrics(rows, k, "worst") for k in keys}
     # last 90 days of real history, as the Alpha Factory track reportedly asks for
     last = max(r["_release_ms"] for r in rows)
     recent = [r for r in rows if r["_release_ms"] >= last - 90 * 86_400_000]
@@ -387,9 +406,9 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
                       "whose exit precedes that event's release; no event is scored with parameters "
                       "trained on itself",
         "summary": summary, "summary_conservative_funding": summary_conservative,
-        "summary_observed_zero_funding": summary_observed_zero,
+        "summary_observed_zero_funding": summary_observed_zero, "summary_worst_case_funding": summary_worst,
         "summary_last_90d": summary_90d, "summary_last_90d_window": summary_90d_window,
-        "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; where none exist yet, the worst rate in the symbol's whole collected history (later data, used only to make results worse); the caps shown are the full period values", "summary_post_warmup": summary_post_warmup,
+        "funding_caps": caps, "funding_caps_method": "point in time: each event uses only settlements before its release; where none exist yet, the symbol's whole collected history (later data). Headline: average absolute rate, always paid; worst case view: largest absolute rate, always paid. The caps shown are the full period maxima", "summary_post_warmup": summary_post_warmup,
         "holdout": holdout, "significance": significance(rows),
         "populations": populations(rows, keys),
         "events": [ev for ev, _, _ in analyzed], "rows": rows, "orders": orders,

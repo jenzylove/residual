@@ -250,19 +250,19 @@ function execution(r, e) {
     return;
   }
   const at = t.attribution;
-  // no published funding for this period: the headline charges the worst rate seen on these contracts
+  // no published funding for this period: the headline charges the contracts' average rate
   const est = t.funding_data !== "complete", net = est ? t.net_conservative : t.net;
   const items = [["Company's own move", at.residual], ["Hedge mismatch", at.factor_error], ["Fees", at.fees], ["Slippage", at.slippage],
-                 est ? ["Funding, worst case", t.funding_conservative] : ["Funding", at.funding]];
+                 est ? ["Funding, estimated", t.funding_conservative] : ["Funding", at.funding]];
   const max = Math.max(...items.map(i => Math.abs(i[1]))) || 1;
   $("#exec").innerHTML = `<div class="exec-grid">
     <div class="card">
       <h4>The pair</h4>
       <div class="big ${cls(net)}">${usd(net, 2)}</div>
-      <p class="note">Paper result after fees, slippage and ${est ? "worst case " : ""}funding · ${t.stopped ? "closed by the stop" : "closed at the 24 hour horizon"}</p>
+      <p class="note">Paper result after fees, slippage and ${est ? "estimated " : ""}funding · ${t.stopped ? "closed by the stop" : "closed at the 24 hour horizon"}</p>
       <div class="legs">${t.legs.map(l => `<div class="legrow"><span><b>${esc(l.symbol.replace("USDT", ""))}</b> <small>${l.role === "company" ? "company leg" : "hedge leg"} · ${l.side}</small></span><span class="muted">${l.entry_fill.toFixed(2)} → ${l.exit_fill.toFixed(2)}</span><span class="${cls(l.net)}">${usd(l.net, 2)}</span></div>`).join("")}</div>
       <dl class="kv"><dt>Opened</dt><dd>${when(t.entry_ms)}</dd><dt>Closed</dt><dd>${when(t.exit_ms)}</dd></dl>
-      ${t.funding_data !== "complete" ? `<div class="warn">Bitget no longer publishes funding for this period, so funding is charged at the worst rate ever seen on these contracts: ${usd(t.funding_conservative, 2)}. Before funding, the pair made ${usd(t.net, 2)}. The complete funding view leaves this trade out.</div>` : ""}
+      ${t.funding_data !== "complete" ? `<div class="warn">Bitget no longer publishes funding for this period, so it is estimated at these contracts' average rate: ${usd(t.funding_conservative, 2)}. At the worst rate ever seen it would be ${usd(t.funding_worst, 2)}. The complete funding view leaves this trade out.</div>` : ""}
     </div>
     <div class="card">
       <h4>Where the result came from</h4>
@@ -293,7 +293,7 @@ function curve(S) {
 }
 
 function proof(basis) {
-  const views = { conservative: ["All trades, worst case funding", D.summary_conservative_funding], primary: ["Complete funding data only", D.summary], observed_zero: ["Missing funding as zero", D.summary_observed_zero_funding] };
+  const views = { conservative: ["All trades, estimated funding", D.summary_conservative_funding], worst: ["All trades, worst case funding", D.summary_worst_case_funding], primary: ["Complete funding data only", D.summary], observed_zero: ["Missing funding as zero", D.summary_observed_zero_funding] };
   $("#basis").innerHTML = Object.entries(views).map(([k, [n]]) => `<button class="chip ${k === basis ? "on" : ""}" data-b="${k}">${n}</button>`).join("");
   $("#basis").querySelectorAll("button").forEach(b => b.onclick = () => proof(b.dataset.b));
   const S = views[basis][1];
@@ -320,7 +320,8 @@ function proof(basis) {
   const tr = S.residual.trades;
   $("#res-note").textContent = {
     primary: `${tr} paper trades with complete funding data, up to $${Number(D.config.base_notional).toLocaleString()} on the company side each. On these releases the plain headline trade did better than the residual pair. A sample this small proves nothing either way, which is why every trade is published.`,
-    conservative: `All ${tr} paper trades, with any missing funding charged at the worst rate seen on Bitget.`,
+    conservative: `All ${tr} paper trades. Where Bitget no longer has funding history, funding is charged at the contract's average rate, always against the position.`,
+    worst: `All ${tr} paper trades, with missing funding charged at the worst rate ever seen on the contract: a stress test, not an estimate.`,
     observed_zero: `All ${tr} paper trades, with missing funding counted as zero. Shown for comparison only.`,
   }[basis];
   $("#curve").innerHTML = curve(S);
