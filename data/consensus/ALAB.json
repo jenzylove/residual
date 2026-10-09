@@ -1,0 +1,107 @@
+{
+ "ticker": "ALAB",
+ "provider": "alphavantage:EARNINGS",
+ "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=ALAB",
+ "fetched_at": "2026-10-09T05:38:23Z",
+ "quarters": [
+  {
+   "fiscalDateEnding": "2026-06-30",
+   "reportedDate": "2026-08-04",
+   "reportedEPS": "0.49",
+   "estimatedEPS": "0.42",
+   "surprise": "0.07",
+   "surprisePercentage": "16.6667",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2026-03-31",
+   "reportedDate": "2026-05-05",
+   "reportedEPS": "0.61",
+   "estimatedEPS": "0.54",
+   "surprise": "0.07",
+   "surprisePercentage": "12.963",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-12-31",
+   "reportedDate": "2026-02-10",
+   "reportedEPS": "0.58",
+   "estimatedEPS": "0.51",
+   "surprise": "0.07",
+   "surprisePercentage": "13.7255",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-09-30",
+   "reportedDate": "2025-11-04",
+   "reportedEPS": "0.49",
+   "estimatedEPS": "0.39",
+   "surprise": "0.1",
+   "surprisePercentage": "25.641",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-06-30",
+   "reportedDate": "2025-08-05",
+   "reportedEPS": "0.44",
+   "estimatedEPS": "0.32",
+   "surprise": "0.12",
+   "surprisePercentage": "37.5",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-03-31",
+   "reportedDate": "2025-05-06",
+   "reportedEPS": "0.33",
+   "estimatedEPS": "0.28",
+   "surprise": "0.05",
+   "surprisePercentage": "17.8571",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-12-31",
+   "reportedDate": "2025-02-10",
+   "reportedEPS": "0.37",
+   "estimatedEPS": "0.26",
+   "surprise": "0.11",
+   "surprisePercentage": "42.3077",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-09-30",
+   "reportedDate": "2024-11-04",
+   "reportedEPS": "0.23",
+   "estimatedEPS": "0.17",
+   "surprise": "0.06",
+   "surprisePercentage": "35.2941",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-06-30",
+   "reportedDate": "2024-08-06",
+   "reportedEPS": "0.13",
+   "estimatedEPS": "0.11",
+   "surprise": "0.02",
+   "surprisePercentage": "18.1818",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-03-31",
+   "reportedDate": "2024-05-07",
+   "reportedEPS": "0.27",
+   "estimatedEPS": "0.07",
+   "surprise": "0.2",
+   "surprisePercentage": "285.7143",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2023-12-31",
+   "reportedDate": "2024-03-21",
+   "reportedEPS": "0.12",
+   "estimatedEPS": "0",
+   "surprise": "0.12",
+   "surprisePercentage": "None",
+   "reportTime": "pre-market"
+  }
+ ]
+}

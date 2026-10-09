@@ -114,6 +114,102 @@ GUIDE = {
             (r"we are forecasting revenue of \$(\d+(?:\.\d+)?) billion", 0, _point)],
 }
 
+
+# Added 9 October 2026 under PREREGISTRATION.md: the frozen method on companies it has never seen.
+# Patterns only read the reported revenue and the next-quarter revenue outlook out of each filed
+# release; every value is re-derived from its stored snippet and document hash by verify_field.
+def _millions(g):
+    return _num(g[0])
+
+
+def _unit(g):
+    return _num(g[0]) * (B if g[1].lower() == "billion" else 1)
+
+
+def _range_units(g):
+    return _num(g[0]) * (B if g[1].lower() == "billion" else 1), _num(g[2]) * (B if g[3].lower() == "billion" else 1)
+
+
+def _band_mm(g):
+    mid, band = _num(g[0]), _num(g[1])
+    return mid - band, mid + band
+
+
+def _point_millions(g):
+    v = _num(g[0])
+    return v, v
+
+
+_NFLX_ROW = r"Forecast \| Revenue \| \$ \| [\d,]+ \| \| \$ \| [\d,]+ \| \| \$ \| [\d,]+ \| \| \$ \| [\d,]+ \| \| \$ \| ([\d,]+) \| \| \$ \| ([\d,]+) \|"
+
+ACTUAL.update({
+    "ALAB": (r"Record quarterly revenue of \$([\d,]+(?:\.\d+)?) million", 0, _millions),
+    "AMAT": (r"(?:Quarterly revenue|Record revenue|Revenue) \$(\d+(?:\.\d+)?) billion, (?:up|down)", 0, lambda g: _num(g[0]) * B),
+    "AMKR": (r"[Nn]et sales \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "CRDO": (r"Revenue of \$([\d,]+(?:\.\d+)?) million,? grew by", 0, _millions),
+    "LRCX": (r"Revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "SNDK": (r"quarter revenue was \$(\d+(?:\.\d+)?) billion", re.I, lambda g: _num(g[0]) * B),
+    "TER": (r"reported revenue of \$([\d,]+) million for the", 0, _millions),
+    "AAOI": (r"GAAP revenue was \$([\d,]+(?:\.\d+)?) million", 0, _millions),
+    "CGNX": (r"Revenue was \$([\d,]+) million ?, compared with", 0, _millions),
+    "CIEN": (r"(?:Q\d Revenue : |quarter \d{4} revenue was )\$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "COHR": (r"Revenue for the \w+ quarter of fiscal \d{4} was (?:a record )?\$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "CSCO": [(r"Results: ◦ Revenue: \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+             (r"Q4 revenue of \$(\d+(?:\.\d+)?) billion, up", 0, lambda g: _num(g[0]) * B),
+             (r"Revenue of \$(\d+(?:\.\d+)?) billion, up", 0, lambda g: _num(g[0]) * B)],
+    "DELL": (r"Record (?:\w+-quarter )?revenue of \$(\d+(?:\.\d+)?) billion, up", 0, lambda g: _num(g[0]) * B),
+    "FLEX": (r"(?:Net Sales: |net sales of )\$(\d+(?:\.\d+)?) billion(?! to)", 0, lambda g: _num(g[0]) * B),
+    "LITE": (r"Net revenue of \$([\d,]+(?:\.\d+)?) (million|billion)", 0, _unit),
+    "NTAP": (r"[Nn]et revenues of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "OUST": [(r"delivered (?:\w+ quarter )?(?:quarterly )?revenue of \$(\d+(?:\.\d+)?) million", 0, _millions),
+             (r"\$(\d+(?:\.\d+)?) million in revenue, up", 0, _millions)],
+    "STX": (r"Highlights ▪ Revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "VRT": (r"[Nn]et sales of \$([\d,]+) million", 0, _millions),
+    "ADBE": (r"Adobe achieved record revenue of \$(\d+(?:\.\d+)?) billion", 0, lambda g: _num(g[0]) * B),
+    "APP": (r"Revenue \| \$([\d,]+) \|", 0, _millions),
+    "BB": (r"company revenue (?:exceeded previously-provided guidance at|beat previously-provided guidance at|was|of) \$(\d+(?:\.\d+)?) million", 0, _millions),
+    "PL": (r"quarter revenue (?:increased|grew) \d+% year-over-year to a record \$(\d+(?:\.\d+)?) million", re.I, _millions),
+    "TWLO": (r"Revenue of \$(\d+(?:\.\d+)?) billion, up", 0, lambda g: _num(g[0]) * B),
+    "ZM": (r"quarter total revenue of \$([\d,]+(?:\.\d+)?) million", 0, _millions),
+    "NFLX": (_NFLX_ROW, 0, _millions),
+    "RDDT": (r"Revenue (?:grew \d+% year-over-year to|of) \$(\d+) million", 0, _millions),
+})
+
+GUIDE.update({
+    "ALAB": (r"Revenue within a range of \$([\d,]+) million to \$([\d,]+) million", 0, _range_millions),
+    "AMAT": (r"Total (?:net )?revenue \| \| \| \$ \| ([\d,]+) \| \| \+/- \| \$ \| ([\d,]+)", 0, _band_mm),
+    "AMKR": (r"• Net sales of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "CRDO": (r"Revenue is expected to be between \$([\d,]+(?:\.\d+)?) million and \$([\d,]+(?:\.\d+)?) million", 0, _range_millions),
+    "LRCX": (r"Revenue \| \$(\d+(?:\.\d+)?) Billion \| \+/- \| \$(\d+) Million", 0, _abs_band_millions),
+    "SNDK": (r"revenue (?:expected )?to be in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "TER": (r"Guidance for the \w+ quarter of \d{4} is revenue of \$([\d,]+) million to \$([\d,]+) million", 0, _range_millions),
+    "AAOI": (r"Revenue in the range of \$([\d,]+(?:\.\d+)?) million to \$([\d,]+(?:\.\d+)?) million", 0, _range_millions),
+    "CGNX": (r"Revenue \| \$([\d,]+) - \$([\d,]+) \|", 0, _range_millions),
+    # quarter anchored: the same releases state a fiscal year range in identical wording
+    "CIEN": [(r"quarter \d{4} (?:financial performance )?to include: • Revenue in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+             (r"guidance for revenue in the range of \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion for the \w+ fiscal quarter", 0, _range),
+             (r"revenue guidance (?:for fiscal \w+ quarter \d{4} )?of \$(\d+(?:\.\d+)?) billion plus or minus \$(\d+) million", 0, _abs_band_millions)],
+    "COHR": (r"Revenue for the \w+ quarter of fiscal \d{4} is expected to be between \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "CSCO": (r"Q\d FY \d{4} [| ]*Revenue [| ]*\$(\d+(?:\.\d+)?) billion - \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "DELL": [(r"(?:First|Second|Third|Fourth)-quarter FY\d+ revenue expected between \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range),
+             (r"Q\dFY\d+ \(% Y/Y\) \| Revenue \| \$ \| (\d+(?:\.\d+)?) \|", 0, _point)],
+    "FLEX": (r"(?:Revenue|Net Sales): \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "LITE": (r"(?:Net revenue in the range of|revenue of) \$([\d,]+(?:\.\d+)?) (million|billion) to \$([\d,]+(?:\.\d+)?) (million|billion)", 0, _range_units),
+    "NTAP": (r"Net revenues are expected to be in the range of: \| \$(\d+(?:\.\d+)?) billion - \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "OUST": (r"Ouster expects to achieve \$(\d+(?:\.\d+)?)(?: million)? to \$(\d+(?:\.\d+)?) million", 0, _range_millions),
+    "STX": (r"• Revenue of \$(\d+(?:\.\d+)?) billion, plus or minus \$(\d+) million", 0, _abs_band_millions),
+    "VRT": (r"Net sales \| \$([\d,]+)M - \$([\d,]+)M", 0, _range_millions),
+    "ADBE": (r"quarter (?:fiscal year |FY)?\d{4} targets[^$]{0,200}?Total revenue \| \$(\d+(?:\.\d+)?) billion to \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "APP": (r"Low \| \| High \| Revenue \| \$([\d,]+) \| \| \$([\d,]+)", 0, _range_millions),
+    "BB": (r"Total BlackBerry revenue: \| \$(\d+) - \$?(\d+) million", 0, _range_millions),
+    "PL": (r"Planet expects revenue to be in the range of approximately \$(\d+) million to \$(\d+) million", 0, _range_millions),
+    "TWLO": [(r"revenue range of \$(\d+(?:\.\d+)?) to \$(\d+(?:\.\d+)?) billion", 0, _range),
+             (r"Revenue \| \| \$([\d,]+) - \$([\d,]+) \|", 0, _range_millions)],
+    "ZM": (r"Total revenue is expected to be between \$(\d+(?:\.\d+)?) billion and \$(\d+(?:\.\d+)?) billion", 0, _range),
+    "NFLX": (_NFLX_ROW, 0, lambda g: _point_millions(g[1:])),
+    "RDDT": (r"Revenue in the range of \$(\d+) million to \$(\d+) million", 0, _range_millions),
+})
+
 EPS = [
     (r"(?:GAAP )?earnings per diluted share (?:was|were|of) \$(\d+(?:\.\d+)?)", re.I),
     (r"diluted earnings per share (?:was|were|of) \$(\d+(?:\.\d+)?)", re.I),

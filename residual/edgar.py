@@ -15,6 +15,8 @@ CIKS = {
     # the earnings release itself and have a Bitget perpetual with usable history in 2026.
     "ARM": 1973239, "SNOW": 1640147, "NOW": 1373715, "DELL": 1571996, "ANET": 1596532,
     "ADBE": 796343, "CSCO": 858877, "AMAT": 6951, "LRCX": 707549, "ADI": 6281, "ORCL": 1341439,
+    # Added 9 October 2026 under PREREGISTRATION.md: the frozen method on companies it has never seen.
+    "ALAB": 1736297, "AMKR": 1047127, "CRDO": 1807794, "SNDK": 2023554, "TER": 97210, "AAOI": 1158114, "CGNX": 851205, "CIEN": 936395, "COHR": 820318, "FLEX": 866374, "LITE": 1633978, "NTAP": 1002047, "OUST": 1816581, "STX": 1137789, "VRT": 1674101, "APP": 1751008, "BB": 1070235, "PL": 1836833, "TWLO": 1447669, "ZM": 1585521, "RDDT": 1713445,
 }
 
 

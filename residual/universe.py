@@ -15,6 +15,11 @@ COMPANIES = {
     "META": "internet", "AMZN": "internet",
     "PLTR": "software", "CRM": "software", "PANW": "software", "CRWD": "software", "MDB": "software",
     "HPE": "hardware", "SMCI": "hardware", "ANET": "hardware",
+    # Added 9 October 2026 under PREREGISTRATION.md (new companies; PEERS and HEDGES unchanged)
+    "ALAB": "semis", "AMAT": "semis", "AMKR": "semis", "CRDO": "semis", "LRCX": "semis", "SNDK": "semis", "TER": "semis",
+    "AAOI": "hardware", "CGNX": "hardware", "CIEN": "hardware", "COHR": "hardware", "CSCO": "hardware", "DELL": "hardware", "FLEX": "hardware", "LITE": "hardware", "NTAP": "hardware", "OUST": "hardware", "STX": "hardware", "VRT": "hardware",
+    "ADBE": "software", "APP": "software", "BB": "software", "PL": "software", "TWLO": "software", "ZM": "software",
+    "NFLX": "internet", "RDDT": "internet",
 }
 
 # Equal-weight sector baskets (the company itself is always excluded; peers without

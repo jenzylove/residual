@@ -1,0 +1,377 @@
+{
+ "ticker": "TWLO",
+ "provider": "alphavantage:EARNINGS",
+ "source_url": "https://www.alphavantage.co/query?function=EARNINGS&symbol=TWLO",
+ "fetched_at": "2026-10-09T05:38:57Z",
+ "quarters": [
+  {
+   "fiscalDateEnding": "2026-06-30",
+   "reportedDate": "2026-08-06",
+   "reportedEPS": "0.72",
+   "estimatedEPS": "0.59",
+   "surprise": "0.13",
+   "surprisePercentage": "22.0339",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2026-03-31",
+   "reportedDate": "2026-04-30",
+   "reportedEPS": "1.5",
+   "estimatedEPS": "1.27",
+   "surprise": "0.23",
+   "surprisePercentage": "18.1102",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-12-31",
+   "reportedDate": "2026-02-12",
+   "reportedEPS": "1.33",
+   "estimatedEPS": "1.23",
+   "surprise": "0.1",
+   "surprisePercentage": "8.1301",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-09-30",
+   "reportedDate": "2025-10-30",
+   "reportedEPS": "0.23",
+   "estimatedEPS": "0.14",
+   "surprise": "0.09",
+   "surprisePercentage": "64.2857",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-06-30",
+   "reportedDate": "2025-08-07",
+   "reportedEPS": "0.42",
+   "estimatedEPS": "0.33",
+   "surprise": "0.09",
+   "surprisePercentage": "27.2727",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2025-03-31",
+   "reportedDate": "2025-05-01",
+   "reportedEPS": "1.14",
+   "estimatedEPS": "0.96",
+   "surprise": "0.18",
+   "surprisePercentage": "18.75",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-12-31",
+   "reportedDate": "2025-02-13",
+   "reportedEPS": "1",
+   "estimatedEPS": "1.03",
+   "surprise": "-0.03",
+   "surprisePercentage": "-2.9126",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-09-30",
+   "reportedDate": "2024-10-30",
+   "reportedEPS": "1.02",
+   "estimatedEPS": "0.86",
+   "surprise": "0.16",
+   "surprisePercentage": "18.6047",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-06-30",
+   "reportedDate": "2024-08-01",
+   "reportedEPS": "0.87",
+   "estimatedEPS": "0.7",
+   "surprise": "0.17",
+   "surprisePercentage": "24.2857",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2024-03-31",
+   "reportedDate": "2024-05-07",
+   "reportedEPS": "0.8",
+   "estimatedEPS": "0.59",
+   "surprise": "0.21",
+   "surprisePercentage": "35.5932",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2023-12-31",
+   "reportedDate": "2024-02-14",
+   "reportedEPS": "0.86",
+   "estimatedEPS": "0.58",
+   "surprise": "0.28",
+   "surprisePercentage": "48.2759",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2023-09-30",
+   "reportedDate": "2023-11-08",
+   "reportedEPS": "0.58",
+   "estimatedEPS": "0.36",
+   "surprise": "0.22",
+   "surprisePercentage": "61.1111",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2023-06-30",
+   "reportedDate": "2023-08-08",
+   "reportedEPS": "0.54",
+   "estimatedEPS": "0.3",
+   "surprise": "0.24",
+   "surprisePercentage": "80",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2023-03-31",
+   "reportedDate": "2023-05-09",
+   "reportedEPS": "0.47",
+   "estimatedEPS": "0.21",
+   "surprise": "0.26",
+   "surprisePercentage": "123.8095",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2022-12-31",
+   "reportedDate": "2023-02-15",
+   "reportedEPS": "0.22",
+   "estimatedEPS": "-0.08",
+   "surprise": "0.3",
+   "surprisePercentage": "375",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2022-09-30",
+   "reportedDate": "2022-11-03",
+   "reportedEPS": "-0.27",
+   "estimatedEPS": "-0.35",
+   "surprise": "0.08",
+   "surprisePercentage": "22.8571",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2022-06-30",
+   "reportedDate": "2022-08-04",
+   "reportedEPS": "-0.11",
+   "estimatedEPS": "-0.2",
+   "surprise": "0.09",
+   "surprisePercentage": "45",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2022-03-31",
+   "reportedDate": "2022-05-04",
+   "reportedEPS": "-1.2251",
+   "estimatedEPS": "-0.21",
+   "surprise": "-1.0151",
+   "surprisePercentage": "-483.381",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2021-12-31",
+   "reportedDate": "2022-02-09",
+   "reportedEPS": "-0.2",
+   "estimatedEPS": "-0.22",
+   "surprise": "0.02",
+   "surprisePercentage": "9.0909",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2021-09-30",
+   "reportedDate": "2021-10-27",
+   "reportedEPS": "0.01",
+   "estimatedEPS": "-0.14",
+   "surprise": "0.15",
+   "surprisePercentage": "107.1429",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2021-06-30",
+   "reportedDate": "2021-07-29",
+   "reportedEPS": "-0.11",
+   "estimatedEPS": "-0.13",
+   "surprise": "0.02",
+   "surprisePercentage": "15.3846",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2021-03-31",
+   "reportedDate": "2021-05-05",
+   "reportedEPS": "0.05",
+   "estimatedEPS": "-0.1",
+   "surprise": "0.15",
+   "surprisePercentage": "150",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2020-12-31",
+   "reportedDate": "2021-02-17",
+   "reportedEPS": "0.04",
+   "estimatedEPS": "-0.07",
+   "surprise": "0.11",
+   "surprisePercentage": "157.1429",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2020-09-30",
+   "reportedDate": "2020-10-26",
+   "reportedEPS": "0.04",
+   "estimatedEPS": "-0.04",
+   "surprise": "0.08",
+   "surprisePercentage": "200",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2020-06-30",
+   "reportedDate": "2020-08-04",
+   "reportedEPS": "0.09",
+   "estimatedEPS": "-0.08",
+   "surprise": "0.17",
+   "surprisePercentage": "212.5",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2020-03-31",
+   "reportedDate": "2020-05-06",
+   "reportedEPS": "0.06",
+   "estimatedEPS": "-0.11",
+   "surprise": "0.17",
+   "surprisePercentage": "154.5455",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2019-12-31",
+   "reportedDate": "2020-02-05",
+   "reportedEPS": "0.04",
+   "estimatedEPS": "0.01",
+   "surprise": "0.03",
+   "surprisePercentage": "300",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2019-09-30",
+   "reportedDate": "2019-10-30",
+   "reportedEPS": "0.03",
+   "estimatedEPS": "0.01",
+   "surprise": "0.02",
+   "surprisePercentage": "200",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2019-06-30",
+   "reportedDate": "2019-07-31",
+   "reportedEPS": "0.03",
+   "estimatedEPS": "0.02",
+   "surprise": "0.01",
+   "surprisePercentage": "50",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2019-03-31",
+   "reportedDate": "2019-04-30",
+   "reportedEPS": "0.05",
+   "estimatedEPS": "0.01",
+   "surprise": "0.04",
+   "surprisePercentage": "400",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2018-12-31",
+   "reportedDate": "2019-02-12",
+   "reportedEPS": "0.04",
+   "estimatedEPS": "0.04",
+   "surprise": "0",
+   "surprisePercentage": "0",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2018-09-30",
+   "reportedDate": "2018-11-06",
+   "reportedEPS": "0.07",
+   "estimatedEPS": "0.02",
+   "surprise": "0.05",
+   "surprisePercentage": "250",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2018-06-30",
+   "reportedDate": "2018-08-06",
+   "reportedEPS": "0.03",
+   "estimatedEPS": "-0.05",
+   "surprise": "0.08",
+   "surprisePercentage": "160",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2018-03-31",
+   "reportedDate": "2018-05-08",
+   "reportedEPS": "-0.04",
+   "estimatedEPS": "-0.07",
+   "surprise": "0.03",
+   "surprisePercentage": "42.8571",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2017-12-31",
+   "reportedDate": "2018-02-13",
+   "reportedEPS": "-0.03",
+   "estimatedEPS": "-0.06",
+   "surprise": "0.03",
+   "surprisePercentage": "50",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2017-09-30",
+   "reportedDate": "2017-11-08",
+   "reportedEPS": "-0.08",
+   "estimatedEPS": "-0.08",
+   "surprise": "0",
+   "surprisePercentage": "0",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2017-06-30",
+   "reportedDate": "2017-08-07",
+   "reportedEPS": "-0.05",
+   "estimatedEPS": "-0.11",
+   "surprise": "0.06",
+   "surprisePercentage": "54.5455",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2017-03-31",
+   "reportedDate": "2017-05-02",
+   "reportedEPS": "-0.04",
+   "estimatedEPS": "-0.06",
+   "surprise": "0.02",
+   "surprisePercentage": "33.3333",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2016-12-31",
+   "reportedDate": "2017-02-07",
+   "reportedEPS": "-0.1464",
+   "estimatedEPS": "-0.05",
+   "surprise": "-0.0964",
+   "surprisePercentage": "-192.8",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2016-09-30",
+   "reportedDate": "2016-11-03",
+   "reportedEPS": "-0.04",
+   "estimatedEPS": "-0.08",
+   "surprise": "0.04",
+   "surprisePercentage": "50",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2016-06-30",
+   "reportedDate": "2016-08-08",
+   "reportedEPS": "-0.08",
+   "estimatedEPS": "-0.15",
+   "surprise": "0.07",
+   "surprisePercentage": "46.6667",
+   "reportTime": "post-market"
+  }
+ ]
+}
