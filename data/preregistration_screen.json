@@ -1,0 +1,1881 @@
+{
+ "checked": "2026-10-08/09",
+ "rule": "see PREREGISTRATION.md",
+ "companies": [
+  {
+   "ticker": "AAL",
+   "bitget_first_day": "2026-06-28",
+   "decision": "excluded",
+   "reason": "percent growth outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/6201/000000620126000051/a8kerexhibit991q2-26.htm",
+    "https://www.sec.gov/Archives/edgar/data/6201/000000620126000031/a8kerexhibit991q1-26.htm"
+   ]
+  },
+  {
+   "ticker": "AAOI",
+   "bitget_first_day": "2026-04-21",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/aaoi_ex9901.htm",
+    "https://www.sec.gov/Archives/edgar/data/1158114/000168316826003562/aaoi_ex9901.htm"
+   ]
+  },
+  {
+   "ticker": "AAPL",
+   "bitget_first_day": "2025-08-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+    "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/a8-kex991q2202603282026.htm"
+   ]
+  },
+  {
+   "ticker": "ABNB",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1559720/000119312526337928/d70413dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1559720/000119312526211816/d23351dex991.htm"
+   ]
+  },
+  {
+   "ticker": "ACHR",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1824502/000182450226000056/archerq226earningspressr.htm",
+    "https://www.sec.gov/Archives/edgar/data/1824502/000182450226000035/archerq126earningspressr.htm"
+   ]
+  },
+  {
+   "ticker": "ACN",
+   "bitget_first_day": "2026-09-29",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1467373/000146737326000037/q4fy26earnings8-kexhibit.htm",
+    "https://www.sec.gov/Archives/edgar/data/1467373/000146737326000031/q3fy26earnings8-kexhibit.htm"
+   ]
+  },
+  {
+   "ticker": "ADBE",
+   "bitget_first_day": "2026-06-07",
+   "decision": "included",
+   "reason": "software",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbeex991q326.htm",
+    "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbeex991q226.htm"
+   ]
+  },
+  {
+   "ticker": "AEHR",
+   "bitget_first_day": "2026-06-09",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1040470/000165495426003310/aehr_ex991.htm"
+   ]
+  },
+  {
+   "ticker": "AKAM",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1086222/000108622226000083/exhibit991-q22026.htm",
+    "https://www.sec.gov/Archives/edgar/data/1086222/000108622226000054/exhibit991-q12026.htm"
+   ]
+  },
+  {
+   "ticker": "ALAB",
+   "bitget_first_day": "2026-06-17",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/q226exhibit991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000017/q126exhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "AMAT",
+   "bitget_first_day": "2026-04-14",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/6951/000162828026056699/exhibit991q32026earningsre.htm",
+    "https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm"
+   ]
+  },
+  {
+   "ticker": "AMC",
+   "bitget_first_day": "2026-06-07",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1411579/000141157926000055/amc-20260720xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1411579/000141157926000049/amc-20260505xex99d1.htm"
+   ]
+  },
+  {
+   "ticker": "AMGN",
+   "bitget_first_day": "2026-08-02",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/318154/000031815426000124/amgn-20260630earningsrelea.htm",
+    "https://www.sec.gov/Archives/edgar/data/318154/000031815426000054/amgn-20260331earningsrelea.htm"
+   ]
+  },
+  {
+   "ticker": "AMKR",
+   "bitget_first_day": "2026-06-28",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr6302026erex-991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000017/amkr3312026erex-991.htm"
+   ]
+  },
+  {
+   "ticker": "APD",
+   "bitget_first_day": "2026-06-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2969/000000296926000034/exhibit99130jun26.htm",
+    "https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm"
+   ]
+  },
+  {
+   "ticker": "APLD",
+   "bitget_first_day": "2026-04-27",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000057/apldq127earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000044/apldq426earningsreleaseasf.htm"
+   ]
+  },
+  {
+   "ticker": "APP",
+   "bitget_first_day": "2025-09-08",
+   "decision": "included",
+   "reason": "software",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000057/exhibit991-2q26earningspre.htm",
+    "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000042/exhibit991-1q26earningspre.htm"
+   ]
+  },
+  {
+   "ticker": "ARM",
+   "bitget_first_day": "2025-09-07",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "ARQQ",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "ASML",
+   "bitget_first_day": "2025-09-07",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "ASTS",
+   "bitget_first_day": "2026-05-18",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1780312/000119312526342540/asts-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1780312/000149315226033365/ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "ASX",
+   "bitget_first_day": "2026-06-28",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "AVAV",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1368622/000110465926106304/avav-20260909xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1368622/000110465926078824/avav-20260629xex99d1.htm"
+   ]
+  },
+  {
+   "ticker": "AXON",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "percent growth outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1069183/000162828026053363/axon-20260805xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1069183/000162828026031285/axon-20260506xex991.htm"
+   ]
+  },
+  {
+   "ticker": "AXTI",
+   "bitget_first_day": "2026-05-10",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+    "https://www.sec.gov/Archives/edgar/data/1051627/000143774926014204/ex_906119.htm"
+   ]
+  },
+  {
+   "ticker": "BA",
+   "bitget_first_day": "2026-04-08",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/12927/000162828026049929/a202606jun308kprex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/12927/000162828026026391/a202603mar318kprex991.htm"
+   ]
+  },
+  {
+   "ticker": "BABA",
+   "bitget_first_day": "2025-09-07",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "BAC",
+   "bitget_first_day": "2026-06-28",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/70858/000007085826000353/bac-06302026ex993.htm",
+    "https://www.sec.gov/Archives/edgar/data/70858/000007085826000222/bac-03312026ex993.htm"
+   ]
+  },
+  {
+   "ticker": "BB",
+   "bitget_first_day": "2026-06-03",
+   "decision": "included",
+   "reason": "software",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1070235/000107023526000112/q2fy27ex-991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1070235/000107023526000071/q1fy27ex-991.htm"
+   ]
+  },
+  {
+   "ticker": "BE",
+   "bitget_first_day": "2026-04-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050150/ex991_q226financialresults.htm",
+    "https://www.sec.gov/Archives/edgar/data/1664703/000162828026027913/ex991_q126financialresults.htm"
+   ]
+  },
+  {
+   "ticker": "BHP",
+   "bitget_first_day": "2026-09-08",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "BKNG",
+   "bitget_first_day": "2026-08-03",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000036/q2-26bkngearningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000024/q1-26bkngearningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "BLSH",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "BMNR",
+   "bitget_first_day": "2026-06-15",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1829311/000149315225024555/ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1829311/000168316825000291/bitmine_ex9901.htm"
+   ]
+  },
+  {
+   "ticker": "BNC",
+   "bitget_first_day": "2026-07-05",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1482541/000148254126000053/bnc-2026x09x11xpr.htm",
+    "https://www.sec.gov/Archives/edgar/data/1482541/000148254126000021/bnc-2026x06x22xpr.htm"
+   ]
+  },
+  {
+   "ticker": "BOT",
+   "bitget_first_day": "2026-07-12",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "BRKB",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1067983/000119312526344495/d159922dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1067983/000119312526212148/d74313dex991.htm"
+   ]
+  },
+  {
+   "ticker": "BSP",
+   "bitget_first_day": "2026-07-05",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "BUD",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "BX",
+   "bitget_first_day": "2026-06-07",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1393818/000119312526313250/d153439dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1393818/000119312526171788/d60443dex991.htm"
+   ]
+  },
+  {
+   "ticker": "CAT",
+   "bitget_first_day": "2026-06-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/18230/000001823026000040/ex991toformcat2q2026earnin.htm",
+    "https://www.sec.gov/Archives/edgar/data/18230/000001823026000017/ex991toformcat1q2026earnin.htm"
+   ]
+  },
+  {
+   "ticker": "CBRS",
+   "bitget_first_day": "2026-05-11",
+   "decision": "excluded",
+   "reason": "core (non-GAAP) revenue outlook",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrsannouncesfinancialresu.htm",
+    "https://www.sec.gov/Archives/edgar/data/2021728/000162828026044941/cbrsannouncesfinancialresu.htm"
+   ]
+  },
+  {
+   "ticker": "CCL",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/815097/000081509726000104/a20263qearningsrelease8-k.htm",
+    "https://www.sec.gov/Archives/edgar/data/815097/000081509726000086/a20262qearningsrelease8-k.htm"
+   ]
+  },
+  {
+   "ticker": "CGNX",
+   "bitget_first_day": "2026-06-15",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/851205/000085120526000061/a07052026-xex991xq22026ear.htm",
+    "https://www.sec.gov/Archives/edgar/data/851205/000085120526000037/a04052026-xex991xq12026ear.htm"
+   ]
+  },
+  {
+   "ticker": "CIEN",
+   "bitget_first_day": "2026-06-07",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/936395/000162828026060245/ex9912026q3earningspressre.htm",
+    "https://www.sec.gov/Archives/edgar/data/936395/000162828026040614/ex9912026q2earningspressre.htm"
+   ]
+  },
+  {
+   "ticker": "CLSK",
+   "bitget_first_day": "2026-09-16",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/827876/000119312526337999/clsk-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/827876/000119312526216866/clsk-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "CMCSA",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1166691/000162828026049274/ex991-6302026.htm",
+    "https://www.sec.gov/Archives/edgar/data/1166691/000162828026026685/ex991-3312026.htm"
+   ]
+  },
+  {
+   "ticker": "COHR",
+   "bitget_first_day": "2026-04-21",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm"
+   ]
+  },
+  {
+   "ticker": "COIN",
+   "bitget_first_day": "2025-08-26",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000087/q226earningsdeck_sec.htm",
+    "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000053/q126earningsdeck-finalse.htm"
+   ]
+  },
+  {
+   "ticker": "COP",
+   "bitget_first_day": "2026-03-11",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1163165/000116316526000030/cop-20260806x8kexx991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1163165/000116316526000016/cop-20260430x8kexx991.htm"
+   ]
+  },
+  {
+   "ticker": "CORZ",
+   "bitget_first_day": "2026-09-20",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000013/q2fy26earningsdeck728am.htm",
+    "https://www.sec.gov/Archives/edgar/data/1839341/000162828026031246/q1fy26earningsdeck.htm"
+   ]
+  },
+  {
+   "ticker": "COST",
+   "bitget_first_day": "2026-03-01",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm",
+    "https://www.sec.gov/Archives/edgar/data/909832/000090983226000046/costex9918-k52826.htm"
+   ]
+  },
+  {
+   "ticker": "CPNG",
+   "bitget_first_day": "2026-07-15",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1834584/000183458426000070/cpng-06302026ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1834584/000183458426000039/cpng-03312026ex991.htm"
+   ]
+  },
+  {
+   "ticker": "CRCL",
+   "bitget_first_day": "2025-08-18",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1876042/000187604226000246/augustepr-circle_q22026f.htm",
+    "https://www.sec.gov/Archives/edgar/data/1876042/000187604226000148/final_05x11q1epr30.htm"
+   ]
+  },
+  {
+   "ticker": "CRDO",
+   "bitget_first_day": "2026-04-27",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm"
+   ]
+  },
+  {
+   "ticker": "CRML",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "CRWV",
+   "bitget_first_day": "2026-04-27",
+   "decision": "excluded",
+   "reason": "release says the outlook is given only on the conference call",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000362/coreweave2q26earningspress.htm",
+    "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000220/coreweave1q26earningspress.htm"
+   ]
+  },
+  {
+   "ticker": "CSCO",
+   "bitget_first_day": "2026-05-18",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+    "https://www.sec.gov/Archives/edgar/data/858877/000085887726000075/exhibit991pressrelease-q3f.htm"
+   ]
+  },
+  {
+   "ticker": "CVNA",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1690820/000169082026000054/ex99_1q22026.htm",
+    "https://www.sec.gov/Archives/edgar/data/1690820/000169082026000034/ex99_1q12026.htm"
+   ]
+  },
+  {
+   "ticker": "CVX",
+   "bitget_first_day": "2026-09-14",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/93410/000009341026000162/a06302026ex9918-k.htm",
+    "https://www.sec.gov/Archives/edgar/data/93410/000009341026000110/a03312026ex9918-k.htm"
+   ]
+  },
+  {
+   "ticker": "CYPH",
+   "bitget_first_day": "2026-09-17",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1509745/000110465926094445/tm2622925d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1509745/000110465926060686/tm2614533d1_ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "DDOG",
+   "bitget_first_day": "2026-08-09",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1561550/000162828026053829/ex-991x20260630x8k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1561550/000162828026031677/ex-991x20260331x8k.htm"
+   ]
+  },
+  {
+   "ticker": "DE",
+   "bitget_first_day": "2026-08-23",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/315189/000110465926064747/de-20260521xex99d1.htm"
+   ]
+  },
+  {
+   "ticker": "DELL",
+   "bitget_first_day": "2026-05-28",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/exhibit991earnings8kq2fy27.htm",
+    "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000021/exhibit991earnings8kq1fy27.htm"
+   ]
+  },
+  {
+   "ticker": "DJT",
+   "bitget_first_day": "2026-08-24",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1849635/000143774926026797/ex_1001984.htm",
+    "https://www.sec.gov/Archives/edgar/data/1849635/000114036126020117/ef20072756_ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "DKNG",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000027/q226-prx8kexx991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000019/q126-prx8kexx991.htm"
+   ]
+  },
+  {
+   "ticker": "DXYZ",
+   "bitget_first_day": "2026-06-07",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "ECHO",
+   "bitget_first_day": "2026-07-05",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1415404/000141540417000012/ex991_q4x16expandedearning.htm",
+    "https://www.sec.gov/Archives/edgar/data/1415404/000141540417000002/exhibit99_2.htm"
+   ]
+  },
+  {
+   "ticker": "ETN",
+   "bitget_first_day": "2026-05-12",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000027/etn06302026exhibit99.htm",
+    "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000010/etn03312026exhibit99.htm"
+   ]
+  },
+  {
+   "ticker": "EVEX",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1823652/000155485526001687/ex991_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1823652/000155485526000877/ex991_1.htm"
+   ]
+  },
+  {
+   "ticker": "FCX",
+   "bitget_first_day": "2026-09-08",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/831259/000083125926000043/fcx_261002.htm",
+    "https://www.sec.gov/Archives/edgar/data/831259/000083125926000033/a2q2026exhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "FLEX",
+   "bitget_first_day": "2026-06-21",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/866374/000086637426000026/flexex991-6262026.htm",
+    "https://www.sec.gov/Archives/edgar/data/866374/000086637426000009/flexex991-3312026.htm"
+   ]
+  },
+  {
+   "ticker": "FLNC",
+   "bitget_first_day": "2026-06-15",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1868941/000186894126000028/flncq3fy26earningspressrel.htm",
+    "https://www.sec.gov/Archives/edgar/data/1868941/000186894126000014/flncq2fy26earningspressrel.htm"
+   ]
+  },
+  {
+   "ticker": "FLY",
+   "bitget_first_day": "2026-04-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1860160/000186016026000022/fly-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1860160/000186016026000008/fly-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "FOXA",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1754301/000162828026053892/foxq42026earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1754301/000162828026033145/foxearningsreleaseq326.htm"
+   ]
+  },
+  {
+   "ticker": "FUTU",
+   "bitget_first_day": "2025-10-27",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "FWDI",
+   "bitget_first_day": "2026-07-05",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/38264/000168316826006277/forward_ex9901.htm",
+    "https://www.sec.gov/Archives/edgar/data/38264/000168316825009073/forward_ex-9901.htm"
+   ]
+  },
+  {
+   "ticker": "GE",
+   "bitget_first_day": "2025-09-08",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/40545/000004054526000047/ge2q2026earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/40545/000004054526000026/ge1q2026earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "GEV",
+   "bitget_first_day": "2026-06-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000147/gevpressrelease2q26.htm",
+    "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000063/gevpressrelease1q26.htm"
+   ]
+  },
+  {
+   "ticker": "GFS",
+   "bitget_first_day": "2026-08-03",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "GILD",
+   "bitget_first_day": "2026-07-27",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/882095/000088209526000028/exhibit991earningspressrel.htm",
+    "https://www.sec.gov/Archives/edgar/data/882095/000088209526000022/exhibit991earningspressrel.htm"
+   ]
+  },
+  {
+   "ticker": "GLW",
+   "bitget_first_day": "2026-06-09",
+   "decision": "excluded",
+   "reason": "core (non-GAAP) sales outlook",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728xex99xq22026.htm",
+    "https://www.sec.gov/Archives/edgar/data/24741/000002474126000198/glw-20260328xex991xq12026.htm"
+   ]
+  },
+  {
+   "ticker": "GME",
+   "bitget_first_day": "2025-09-09",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000050/a991-fy26q2earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000046/pressreleaseconvertiblenot.htm"
+   ]
+  },
+  {
+   "ticker": "GNRC",
+   "bitget_first_day": "2026-09-17",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1474735/000143774926024731/gnrc20260728_8k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1474735/000143774926013726/ex_952512.htm"
+   ]
+  },
+  {
+   "ticker": "GOOGL",
+   "bitget_first_day": "2025-08-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm"
+   ]
+  },
+  {
+   "ticker": "GPRO",
+   "bitget_first_day": "2026-09-02",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1500435/000150043526000034/gpro2026-6x30ex991xer.htm",
+    "https://www.sec.gov/Archives/edgar/data/1500435/000150043526000015/gpro2026-3x31ex991xer.htm"
+   ]
+  },
+  {
+   "ticker": "GS",
+   "bitget_first_day": "2026-06-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/886982/000088698226000294/a2q26gsearningsresults.htm",
+    "https://www.sec.gov/Archives/edgar/data/886982/000088698226000096/a1q26gsearningsresults.htm"
+   ]
+  },
+  {
+   "ticker": "GTLB",
+   "bitget_first_day": "2026-09-01",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1653482/000162828026059820/gitlab-ex99120260731fy27.htm",
+    "https://www.sec.gov/Archives/edgar/data/1653482/000162828026039805/gitlab-ex99120260430fy27.htm"
+   ]
+  },
+  {
+   "ticker": "HOOD",
+   "bitget_first_day": "2025-08-26",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000113/q22026robinhoodexhibit991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000061/q12026robinhoodexhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "HPQ",
+   "bitget_first_day": "2026-08-26",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/47217/000004721726000048/hp73126exhibit991q326.htm",
+    "https://www.sec.gov/Archives/edgar/data/47217/000004721726000027/hp43026exhibit991q226.htm"
+   ]
+  },
+  {
+   "ticker": "HUT",
+   "bitget_first_day": "2026-09-17",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090041/tm2621890d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1964789/000110465926055894/hut-20260506xex99d1.htm"
+   ]
+  },
+  {
+   "ticker": "IBM",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/51143/000005114326000077/ibm-20260722xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/51143/000005114326000070/ibm-20260714xex991.htm"
+   ]
+  },
+  {
+   "ticker": "INFQ",
+   "bitget_first_day": "2026-05-12",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2007825/000162828026056222/infq-20260630xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/2007825/000119312526224350/d89415dex991.htm"
+   ]
+  },
+  {
+   "ticker": "INTW",
+   "bitget_first_day": "2026-07-12",
+   "decision": "excluded",
+   "reason": "not an SEC registrant",
+   "releases_checked": []
+  },
+  {
+   "ticker": "IONQ",
+   "bitget_first_day": "2026-04-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1824920/000119312526335040/ionq-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1824920/000119312526208923/ionq-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "IREN",
+   "bitget_first_day": "2026-06-07",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000051/irenreportsfy26results.htm",
+    "https://www.sec.gov/Archives/edgar/data/1878848/000114036126028871/ef20078253_ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "ISRG",
+   "bitget_first_day": "2026-06-15",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000047/q226ex-991earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000029/q126ex-991earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "JD",
+   "bitget_first_day": "2025-10-27",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "JMKE",
+   "bitget_first_day": "2026-07-30",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2127043/000212704326000008/q22026earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "JOBY",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1819848/000181984826000432/joby-8kx20260805xexx99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1819848/000181984826000321/joby-8kx20260505xexx99_1.htm"
+   ]
+  },
+  {
+   "ticker": "JPM",
+   "bitget_first_day": "2026-06-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/19617/000162828026048078/a2q26erfex992supplement.htm",
+    "https://www.sec.gov/Archives/edgar/data/19617/000162828026024990/a1q26erfex992supplement.htm"
+   ]
+  },
+  {
+   "ticker": "KO",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/21344/000162828026049922/a2026q2earningsreleaseex-9.htm",
+    "https://www.sec.gov/Archives/edgar/data/21344/000162828026027723/a2026q1earningsreleaseex-9.htm"
+   ]
+  },
+  {
+   "ticker": "KOD",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1468748/000119312526349107/kod-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1468748/000119312526211811/kod-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "KOPN",
+   "bitget_first_day": "2026-05-10",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/771266/000149315226036857/ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/771266/000149315226022462/ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "KSTR",
+   "bitget_first_day": "2026-07-05",
+   "decision": "excluded",
+   "reason": "not an SEC registrant",
+   "releases_checked": []
+  },
+  {
+   "ticker": "KTOS",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "percent growth outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1069258/000106925826000075/ktos202606288kexhibit991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1069258/000106925826000051/ktos202603298kexhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "LIN",
+   "bitget_first_day": "2026-06-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1707925/000165495426007052/lin_ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm"
+   ]
+  },
+  {
+   "ticker": "LITE",
+   "bitget_first_day": "2026-04-14",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1633978/000162828026055726/lite_ex991xq4fy26.htm",
+    "https://www.sec.gov/Archives/edgar/data/1633978/000162828026030530/lite_ex991xq3fy26.htm"
+   ]
+  },
+  {
+   "ticker": "LLY",
+   "bitget_first_day": "2025-11-10",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/59478/000005947826000077/q226lillysalesandearningsp.htm",
+    "https://www.sec.gov/Archives/edgar/data/59478/000005947826000043/q126lillysalesandearningsp.htm"
+   ]
+  },
+  {
+   "ticker": "LMT",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/936468/000162828026049277/ex991q22026.htm",
+    "https://www.sec.gov/Archives/edgar/data/936468/000162828026026683/ex991q12026.htm"
+   ]
+  },
+  {
+   "ticker": "LRCX",
+   "bitget_first_day": "2026-06-17",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/707549/000070754926000033/lrcx_exhibitx991xq4x2026.htm",
+    "https://www.sec.gov/Archives/edgar/data/707549/000070754926000020/lrcx_exhibitx991xq3x2026.htm"
+   ]
+  },
+  {
+   "ticker": "LWLG",
+   "bitget_first_day": "2026-05-10",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "LYTE",
+   "bitget_first_day": "2026-08-16",
+   "decision": "excluded",
+   "reason": "not an SEC registrant",
+   "releases_checked": []
+  },
+  {
+   "ticker": "MAR",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1048286/000104828626000033/mar-2026q2xex99earningsrel.htm",
+    "https://www.sec.gov/Archives/edgar/data/1048286/000104828626000012/mar-2026q1xex99earningsrel.htm"
+   ]
+  },
+  {
+   "ticker": "MARA",
+   "bitget_first_day": "2026-08-25",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1507605/000150760526000020/q22026earningsannouncement.htm",
+    "https://www.sec.gov/Archives/edgar/data/1507605/000150760526000014/q12026earningsannouncement.htm"
+   ]
+  },
+  {
+   "ticker": "MCD",
+   "bitget_first_day": "2025-08-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/63908/000006390826000067/exhibit991-6302026.htm",
+    "https://www.sec.gov/Archives/edgar/data/63908/000006390826000048/exhibit991-33126xq1.htm"
+   ]
+  },
+  {
+   "ticker": "MELI",
+   "bitget_first_day": "2026-08-09",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000021/meli-20260805xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000014/meli-20260507xex991.htm"
+   ]
+  },
+  {
+   "ticker": "MP",
+   "bitget_first_day": "2026-04-27",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000047/mpmcq22026er.htm",
+    "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000027/mpmcq12026er.htm"
+   ]
+  },
+  {
+   "ticker": "MRK",
+   "bitget_first_day": "2026-08-19",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/310158/000110465926090045/tm2621496d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/310158/000110465926052081/tm2612241d1_ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "MRNA",
+   "bitget_first_day": "2026-08-19",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000147/exhibit9912026q2pressrelea.htm",
+    "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000057/exhibit9912026q1pressrelea.htm"
+   ]
+  },
+  {
+   "ticker": "MSFT",
+   "bitget_first_day": "2025-09-21",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "MSTR",
+   "bitget_first_day": "2025-08-26",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1050446/000162828026051027/mstr-20260730x8kxex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000024/mstr-20260505x8kxex991.htm"
+   ]
+  },
+  {
+   "ticker": "NBIS",
+   "bitget_first_day": "2026-04-21",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "NET",
+   "bitget_first_day": "2026-08-16",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000053/q226exhibit991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000033/q126exhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "NFLX",
+   "bitget_first_day": "2026-04-07",
+   "decision": "included",
+   "reason": "internet",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm",
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm"
+   ]
+  },
+  {
+   "ticker": "NIO",
+   "bitget_first_day": "2026-05-10",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "NKE",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/320187/000032018726000184/q1fy27exhibit991er.htm",
+    "https://www.sec.gov/Archives/edgar/data/320187/000032018726000076/q4fy26exhibit991er.htm"
+   ]
+  },
+  {
+   "ticker": "NOC",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000033/noc-06302026xearningsrelea.htm",
+    "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000015/noc-03312026xearningsrelea.htm"
+   ]
+  },
+  {
+   "ticker": "NOK",
+   "bitget_first_day": "2026-05-18",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "NOW",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "subscription revenue outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm",
+    "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000054/exh101-termloancreditagr.htm"
+   ]
+  },
+  {
+   "ticker": "NTAP",
+   "bitget_first_day": "2026-05-31",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1002047/000100204726000003/ntap-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1002047/000119312526245196/ntap-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "NVS",
+   "bitget_first_day": "2026-09-01",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "OKLO",
+   "bitget_first_day": "2026-04-27",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1849056/000110465925027276/tm2510004d1_ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1849056/000162828024047882/oklo_shareholder-letterx.htm"
+   ]
+  },
+  {
+   "ticker": "OKTA",
+   "bitget_first_day": "2026-08-27",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1660134/000166013426000068/okta-7312026_ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1660134/000166013426000050/okta-4302026_ex991.htm"
+   ]
+  },
+  {
+   "ticker": "ONDS",
+   "bitget_first_day": "2026-05-18",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1646188/000119312526347973/onds-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1646188/000121390026056235/ea029069001ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "ORCL",
+   "bitget_first_day": "2025-09-08",
+   "decision": "excluded",
+   "reason": "percent growth outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "OURA",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "OUST",
+   "bitget_first_day": "2026-05-18",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1816581/000162828026054297/exhibit991-6302026.htm",
+    "https://www.sec.gov/Archives/edgar/data/1816581/000119312526206501/d947395dex991.htm"
+   ]
+  },
+  {
+   "ticker": "OXY",
+   "bitget_first_day": "2026-03-11",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/797468/000162828026053377/oxyex9916-30x26earningsrel.htm",
+    "https://www.sec.gov/Archives/edgar/data/797468/000162828026047886/oxyex99163026preearningsre.htm"
+   ]
+  },
+  {
+   "ticker": "PATH",
+   "bitget_first_day": "2026-09-17",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000047/path-2026731xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000037/path-2026430xex991.htm"
+   ]
+  },
+  {
+   "ticker": "PCVX",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1649094/000164909426000041/pcvx-20260805xexx991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1649094/000164909426000015/pcvx-20260506xexx991.htm"
+   ]
+  },
+  {
+   "ticker": "PDD",
+   "bitget_first_day": "2026-06-28",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "PENG",
+   "bitget_first_day": "2026-07-21",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1616533/000119312526415645/d162527dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1616533/000161653326000046/pengq4-26form8xkxex991.htm"
+   ]
+  },
+  {
+   "ticker": "PEP",
+   "bitget_first_day": "2026-08-03",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/77476/000007747626000050/q320268-kxexhibit991.htm",
+    "https://www.sec.gov/Archives/edgar/data/77476/000007747626000037/q220268-kxexhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "PL",
+   "bitget_first_day": "2026-06-07",
+   "decision": "included",
+   "reason": "software",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1836833/000119312526381874/pl-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1836833/000119312526257401/pl-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "POET",
+   "bitget_first_day": "2026-05-18",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "PURR",
+   "bitget_first_day": "2026-08-25",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2078856/000119312526369668/purr-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/2078856/000119312526212109/purr-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "PYPL",
+   "bitget_first_day": "2026-08-02",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000080/pypl2q-26earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000065/pypl1q-26earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "QBTS",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1907982/000190798226000127/qbts-20260806xexx991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1907982/000190798226000057/qbts-20260512xexx991.htm"
+   ]
+  },
+  {
+   "ticker": "QNT",
+   "bitget_first_day": "2026-05-28",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2110105/000162828026055699/fy26q2_qntmxearningsxrelea.htm"
+   ]
+  },
+  {
+   "ticker": "QUBT",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1758009/000121390026087267/ea030143301ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1758009/000121390026054470/ea028987801ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "RDDT",
+   "bitget_first_day": "2025-10-27",
+   "decision": "included",
+   "reason": "internet",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000098/exhibit992q226.htm",
+    "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000067/exhibit992q126.htm"
+   ]
+  },
+  {
+   "ticker": "RDW",
+   "bitget_first_day": "2026-05-18",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000121/exhibit991redwire06302026e.htm",
+    "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000060/exhibit991redwire03312026e.htm"
+   ]
+  },
+  {
+   "ticker": "RGTI",
+   "bitget_first_day": "2026-05-25",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1838359/000110465926091979/rgti-20260806xex99d1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1838359/000110465926058635/rgti-20260511xex99d1.htm"
+   ]
+  },
+  {
+   "ticker": "RIO",
+   "bitget_first_day": "2026-09-08",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "RKLB",
+   "bitget_first_day": "2026-04-08",
+   "decision": "excluded",
+   "reason": "qualifies on guidance; aerospace fits no sector group",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000061/rklb-08102026ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000027/rklb-05072026ex991.htm"
+   ]
+  },
+  {
+   "ticker": "ROK",
+   "bitget_first_day": "2026-06-15",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1024478/000102447826000028/q3fy26ex99.htm",
+    "https://www.sec.gov/Archives/edgar/data/1024478/000102447826000020/q2fy26ex99.htm"
+   ]
+  },
+  {
+   "ticker": "RTX",
+   "bitget_first_day": "2026-05-31",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/101829/000010182926000025/a2026-07x238xkerexhibit99.htm",
+    "https://www.sec.gov/Archives/edgar/data/101829/000010182926000009/a2026-04x218xkerexhibit99.htm"
+   ]
+  },
+  {
+   "ticker": "RUM",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1830081/000121390026087234/ea030115001ex99-1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1830081/000121390026056619/ea029055101ex99-1.htm"
+   ]
+  },
+  {
+   "ticker": "SATL",
+   "bitget_first_day": "2026-06-07",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1874315/000143774926025939/R1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1874315/000143774926016159/R1.htm"
+   ]
+  },
+  {
+   "ticker": "SDGR",
+   "bitget_first_day": "2026-09-17",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000067/sdgr-20260630x8kxexx991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000036/sdgr-20260331x8kxexx991.htm"
+   ]
+  },
+  {
+   "ticker": "SHOP",
+   "bitget_first_day": "2026-08-02",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000046/exhibit991pressreleaseq220.htm",
+    "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000018/exhibit991pressreleaseq120.htm"
+   ]
+  },
+  {
+   "ticker": "SIMO",
+   "bitget_first_day": "2026-06-09",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "SITM",
+   "bitget_first_day": "2026-06-03",
+   "decision": "excluded",
+   "reason": "release says the outlook is given only on the conference call",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1451809/000145180926000059/sitm-q226x8kxexx991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1451809/000145180926000040/sitm-q126x8kxexx991.htm"
+   ]
+  },
+  {
+   "ticker": "SMR",
+   "bitget_first_day": "2026-06-03",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1822966/000182296626000086/R1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1822966/000182296626000052/R1.htm"
+   ]
+  },
+  {
+   "ticker": "SNDK",
+   "bitget_first_day": "2026-04-14",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/2023554/000162828026028879/sndkq3-26ex991xpressrelease.htm"
+   ]
+  },
+  {
+   "ticker": "SNOW",
+   "bitget_first_day": "2026-05-27",
+   "decision": "excluded",
+   "reason": "product revenue outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000033/fy2027q2earnings.htm",
+    "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000027/fy2027q1earnings.htm"
+   ]
+  },
+  {
+   "ticker": "SNXX",
+   "bitget_first_day": "2026-07-12",
+   "decision": "excluded",
+   "reason": "not an SEC registrant",
+   "releases_checked": []
+  },
+  {
+   "ticker": "SOFI",
+   "bitget_first_day": "2026-07-21",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1818874/000181887426000050/a2026q2earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1818874/000181887426000020/a2026q1earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "SPIR",
+   "bitget_first_day": "2026-06-07",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1816017/000119312526346835/spir-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1816017/000119312526221629/spir-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "STRC",
+   "bitget_first_day": "2026-06-28",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1050446/000162828026051027/mstr-20260730x8kxex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000024/mstr-20260505x8kxex991.htm"
+   ]
+  },
+  {
+   "ticker": "STX",
+   "bitget_first_day": "2026-04-14",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000153/stxq42026pressreleasefinan.htm",
+    "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000084/stxq32026pressreleasefinan.htm"
+   ]
+  },
+  {
+   "ticker": "TEAM",
+   "bitget_first_day": "2026-09-01",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm",
+    "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000024/ex991q3fy26.htm"
+   ]
+  },
+  {
+   "ticker": "TEM",
+   "bitget_first_day": "2026-08-19",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1717115/000119312526326083/tem-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1717115/000119312526206317/tem-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "TER",
+   "bitget_first_day": "2026-06-17",
+   "decision": "included",
+   "reason": "semis",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/97210/000119312526321933/ter-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/97210/000119312526188706/ter-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "TM",
+   "bitget_first_day": "2026-07-15",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "TSEM",
+   "bitget_first_day": "2026-06-09",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "TSLA",
+   "bitget_first_day": "2025-08-18",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/exhibit991111111.htm",
+    "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/exhibit991.htm"
+   ]
+  },
+  {
+   "ticker": "TSM",
+   "bitget_first_day": "2026-03-01",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "TTWO",
+   "bitget_first_day": "2026-07-05",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/946581/000162828026054580/ttwo1q27earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/946581/000162828026037260/ttwo4q26earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "TWLO",
+   "bitget_first_day": "2026-06-07",
+   "decision": "included",
+   "reason": "software",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1447669/000144766926000088/twloq226ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1447669/000144766926000046/twloq126ex991.htm"
+   ]
+  },
+  {
+   "ticker": "TWST",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1581280/000158128026000044/twst-2026630xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1581280/000158128026000037/twst-2026331xex991.htm"
+   ]
+  },
+  {
+   "ticker": "UBER",
+   "bitget_first_day": "2026-08-09",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uberq226earningspressrelea.htm",
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000019/uberq126earningspressrelea.htm"
+   ]
+  },
+  {
+   "ticker": "UNH",
+   "bitget_first_day": "2025-11-10",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/731766/000073176626000191/earningsrelease2q26_7152.htm",
+    "https://www.sec.gov/Archives/edgar/data/731766/000073176626000121/earningsrelease1q26press.htm"
+   ]
+  },
+  {
+   "ticker": "USAR",
+   "bitget_first_day": "2026-05-10",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1970622/000197062226000056/exhibit991-earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1970622/000197062226000034/exhibit991-earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "V",
+   "bitget_first_day": "2026-06-14",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm",
+    "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000077/q22026earningsrelease.htm"
+   ]
+  },
+  {
+   "ticker": "VALE",
+   "bitget_first_day": "2026-09-08",
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "VEEV",
+   "bitget_first_day": "2026-08-27",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1393052/000139305226000032/veev-20260731xex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1393052/000139305226000022/veev-20260430xex991.htm"
+   ]
+  },
+  {
+   "ticker": "VKTX",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1607678/000119312526323652/vktx-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1607678/000119312526191487/vktx-ex99_1.htm"
+   ]
+  },
+  {
+   "ticker": "VRT",
+   "bitget_first_day": "2026-05-12",
+   "decision": "included",
+   "reason": "hardware",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050323/q22026exhibit991vrt07292026.htm",
+    "https://www.sec.gov/Archives/edgar/data/1674101/000162828026026379/q12026exhibit991vrt04222026.htm"
+   ]
+  },
+  {
+   "ticker": "VST",
+   "bitget_first_day": "2026-08-02",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000017/vistra-20260630xearningsre.htm",
+    "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000011/vistra-20260331xearningsre.htm"
+   ]
+  },
+  {
+   "ticker": "WDC",
+   "bitget_first_day": "2026-05-18",
+   "decision": "excluded",
+   "reason": "percent growth outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/106040/000162828026053305/a4ex991-pressreleaseq426.htm",
+    "https://www.sec.gov/Archives/edgar/data/106040/000162828026028878/a4ex991-pressreleaseq326.htm"
+   ]
+  },
+  {
+   "ticker": "WEN",
+   "bitget_first_day": "2026-06-28",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/30697/000119312526339132/d130352dex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/30697/000119312526213270/d70702dex991.htm"
+   ]
+  },
+  {
+   "ticker": "WMT",
+   "bitget_first_day": "2026-03-01",
+   "decision": "excluded",
+   "reason": "percent growth outlook only",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/104169/000010416926000145/earningspresentationfy27.htm",
+    "https://www.sec.gov/Archives/edgar/data/104169/000010416926000095/earningspresentationfy27.htm"
+   ]
+  },
+  {
+   "ticker": "XOM",
+   "bitget_first_day": "2026-03-11",
+   "decision": "excluded",
+   "reason": "no next-quarter dollar revenue outlook in the latest filed release",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/2115436/000211543626000006/livef8k2q26991.htm"
+   ]
+  },
+  {
+   "ticker": "XP",
+   "bitget_first_day": null,
+   "decision": "excluded",
+   "reason": "no 8-K Item 2.02 earnings release (foreign 6-K filer or none)",
+   "releases_checked": []
+  },
+  {
+   "ticker": "ZM",
+   "bitget_first_day": "2026-08-02",
+   "decision": "included",
+   "reason": "software",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000119/zm-20260731ex991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000069/zm-20260430ex991.htm"
+   ]
+  },
+  {
+   "ticker": "ZS",
+   "bitget_first_day": "2026-09-01",
+   "decision": "excluded",
+   "reason": "perpetual listed too late for any release in the window",
+   "releases_checked": [
+    "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000156/zs-07312026_991.htm",
+    "https://www.sec.gov/Archives/edgar/data/1713683/000171368326000095/zs-04302026_991.htm"
+   ]
+  }
+ ]
+}
