@@ -378,14 +378,20 @@ def significance(rows: list[dict], draws: int = 200_000, seed: int = 7) -> dict:
     return out
 
 
+# PROSPECTIVE.md: releases accepted by the SEC in this window are the out of sample test of v1 and v2.
+PROSPECTIVE_FROM_MS = int(datetime(2026, 10, 13, tzinfo=timezone.utc).timestamp() * 1000)
+PROSPECTIVE_TO_MS = int(datetime(2027, 1, 1, tzinfo=timezone.utc).timestamp() * 1000)
+
+
 def populations(rows: list[dict], keys) -> dict:
     """Reporting only, after scoring: the same walk-forward rows split into the original 20 companies and
     the companies added under PREREGISTRATION.md. Each slice gets its own metrics and permutation tests."""
     from . import universe
     out = {}
-    for name, keep in (("original_20", lambda t: t in universe.ORIGINAL),
-                       ("new_companies", lambda t: t not in universe.ORIGINAL)):
-        sub = [r for r in rows if keep(r["event_id"].rsplit("-", 3)[0])]
+    for name, keep in (("original_20", lambda r: r["event_id"].rsplit("-", 3)[0] in universe.ORIGINAL),
+                       ("new_companies", lambda r: r["event_id"].rsplit("-", 3)[0] not in universe.ORIGINAL),
+                       ("prospective", lambda r: PROSPECTIVE_FROM_MS <= r["_release_ms"] < PROSPECTIVE_TO_MS)):
+        sub = [r for r in rows if keep(r)]
         if not sub:
             continue
         out[name] = {"releases": len(sub),

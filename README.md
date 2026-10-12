@@ -187,6 +187,10 @@ Execution checks: 6 pairs, net −$1.30 in total, which is the venue's round tri
 
 The size study (charted on the site) re-runs the whole walk-forward at $1k, $2.5k, $5k and $10k. Above $2,500, Bitget's after hours liquidity rejects most releases.
 
+### Next: a prospective test, already running
+
+The backtest suggested one change: the hedge cost more than it saved. Changing the strategy and re-scoring it on the same releases would only fit it to the past, so we did it the other way round. An **unhedged mode (v2)** now runs beside the frozen strategy (v1) on every release, and [PROSPECTIVE.md](PROSPECTIVE.md), committed before the next earnings season started, fixes what will be measured on releases from 13 October to 31 December 2026 and what counts as success. v2's backtest (+$851.26 over 19 trades) is in sample by construction and counts for nothing; only the new releases do. The live watcher records every decision, rejections included, and the result will be published here whatever it shows.
+
 ## Honest limitations
 
 - **The sample is bounded by the venue, not by the method.** 187 releases were examined across 344 days, but a release is only tradeable if the company's Bitget perpetual already existed with enough history at that moment. That leaves 75 analysable releases, of which 17 cleared every gate. Arista is the clearest case: its perpetual listed on 12 August 2026, eight days after its 4 August earnings, so that release can never be traded however good the signal was.
