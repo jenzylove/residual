@@ -226,6 +226,31 @@ def apply_point_in_time_funding_caps(events, snaps: dict) -> dict[str, float]:
     return full
 
 
+def unhedged_mode(a: dict, dec: dict, params: dict, sel: dict, interp) -> dict:
+    """Candidate v2, added 12 October 2026 after the frozen study showed the unhedged trade beating the
+    hedged one on the same releases. Same analysis, AI reading, walk-forward params and direction rule as
+    the strategy, with the hedge removed: no hedge gate, and the residual is weighed against company-only
+    trading costs. It is scored beside the frozen strategy and never replaces it; its backtest is in
+    sample by construction, so only releases after PROSPECTIVE.md count as evidence."""
+    out = {"decision": "NO_TRADE", "reasons": [], "direction": 0, "size": 0.0}
+    if "residual" not in a or "costs" not in a:
+        out["reasons"] = ["analysis incomplete"]
+        return out
+    rt = 2 * (a["costs"]["taker_fee"] + a["costs"]["slip_company"])
+    rob = a.get("robustness_residuals", {}).values()
+    gates = {k: v["pass"] for k, v in dec["gates"].items() if k not in ("hedge", "variant")}
+    gates["residual_vs_cost"] = abs(a["residual"]) >= params["k"] * rt
+    gates["robust"] = len({math.copysign(1, r) for r in rob}) == 1 and all(abs(r) >= rt for r in rob)
+    size = 1.0 if interp is None else strategy.AI_SIZE.get(interp.get("label"), 0.0) if interp.get("status") == "ok" else 0.0
+    size = round(size * float(a["costs"].get("liquidity_size", 1.0)), 4)
+    d = variant_direction(sel["variant"], a, params)
+    gates["variant"] = d != 0
+    out["reasons"] = [k for k, ok in gates.items() if not ok]
+    if not out["reasons"] and size > 0:
+        out.update({"decision": "TRADE", "direction": d, "size": size})
+    return out
+
+
 def _score(analyzed, *, use_ai: bool, allow_llm_calls: bool, verbose: bool, frozen: dict | None = None):
     """Score events in order. Walk-forward by default; with `frozen`, every event uses the same
     fixed params and rule (the in-sample / out-of-sample check)."""
@@ -242,6 +267,10 @@ def _score(analyzed, *, use_ai: bool, allow_llm_calls: bool, verbose: bool, froz
 
         row = {"event_id": ev["event_id"], "_release_ms": ev["release_ms"], "params": params, "decision": dec,
                "variant": sel, "interpretation": interp, "residual": None, "naive": None, "unhedged": None}
+        v2 = unhedged_mode(a, dec, params, sel, interp if use_ai else None)
+        row["v2_decision"] = v2
+        row["v2_unhedged"] = (_slim_sim(run_trade(ev, snap, a, v2["direction"], v2["size"], hedged=False, tag="v2_unhedged"))
+                              if v2["decision"] == "TRADE" else None)
         if dec["decision"] == "TRADE":
             # Score every baseline. Only SELECTOR_VARIANTS can drive the strategy;
             # later-added diagnostics remain published but cannot be selected.
@@ -380,7 +409,7 @@ def replay(*, use_ai: bool = True, allow_llm_calls: bool = True, verbose: bool =
         analyzed.append((ev, snap, analyze(ev, snap, pool)))
 
     rows, orders, balance = _score(analyzed, use_ai=use_ai, allow_llm_calls=allow_llm_calls, verbose=verbose)
-    keys = ("residual", "unhedged", "naive_same_events", "naive") + tuple(f"v_{v}" for v in VARIANTS)
+    keys = ("residual", "unhedged", "naive_same_events", "naive", "v2_unhedged") + tuple(f"v_{v}" for v in VARIANTS)
     summary = {k: metrics(rows, k) for k in keys}
     summary["no_trade"] = metrics(rows, "__none__")
     summary_conservative = {k: metrics(rows, k, "conservative") for k in keys}

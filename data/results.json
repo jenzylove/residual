@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T16:10:04+00:00",
+ "generated_at": "2026-10-12T19:29:33+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -939,6 +939,233 @@
     261.65,
     137.39,
     66.11
+   ]
+  },
+  "v2_unhedged": {
+   "sharpe_per_trade": 0.914,
+   "sortino_per_trade": 5.032,
+   "sharpe_daily_ann": 1.907,
+   "sortino_daily_ann": 27.234,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 64,
+    "undefined_under_2_trades": 252,
+    "median_sharpe": 4.967,
+    "min_sharpe": -3.984,
+    "max_sharpe": 6.187,
+    "pct_positive": 0.906
+   },
+   "turnover": {
+    "gross_notional": 26965.5,
+    "company_leg": 26965.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3370.69,
+    "annualised_x_start_balance": 0.285,
+    "fees_plus_slippage": 41.55,
+    "costs_bps_of_turnover": 15.41,
+    "costs_pct_of_gross_pnl": 4.0
+   },
+   "basis": "primary",
+   "total_net_pnl": 1007.56,
+   "trades": 8,
+   "excluded_funding_unavailable": 11,
+   "no_trades": 168,
+   "hit_rate": 0.75,
+   "avg_pnl_per_trade": 125.95,
+   "pnl_std_per_trade": 152.97,
+   "max_drawdown": -43.24,
+   "avg_holding_hours": 22.9,
+   "return_on_start_balance_pct": 1.008,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -5.61,
+    -5.61,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    323.28,
+    384.32,
+    384.32,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    772.29,
+    847.95,
+    847.95,
+    847.95,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56
    ]
   },
   "v_residual": {
@@ -2976,6 +3203,233 @@
     -463.99
    ]
   },
+  "v2_unhedged": {
+   "sharpe_per_trade": 0.289,
+   "sortino_per_trade": 0.771,
+   "sharpe_daily_ann": 1.505,
+   "sortino_daily_ann": 5.209,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 159,
+    "undefined_under_2_trades": 157,
+    "median_sharpe": 2.058,
+    "min_sharpe": -4.883,
+    "max_sharpe": 6.187,
+    "pct_positive": 0.579
+   },
+   "turnover": {
+    "gross_notional": 64186.5,
+    "company_leg": 64186.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3378.24,
+    "annualised_x_start_balance": 0.679,
+    "fees_plus_slippage": 95.52,
+    "costs_bps_of_turnover": 14.88,
+    "costs_pct_of_gross_pnl": 10.1
+   },
+   "basis": "conservative",
+   "total_net_pnl": 851.26,
+   "trades": 19,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 168,
+   "hit_rate": 0.526,
+   "avg_pnl_per_trade": 44.8,
+   "pnl_std_per_trade": 127.93,
+   "max_drawdown": -233.57,
+   "avg_holding_hours": 19.9,
+   "return_on_start_balance_pct": 0.851,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -122.58,
+    -113.11,
+    -113.11,
+    -113.11,
+    -113.11,
+    -106.21,
+    -106.21,
+    -106.21,
+    -106.21,
+    -106.21,
+    -106.21,
+    -106.21,
+    -106.21,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -191.78,
+    -219.0,
+    -219.0,
+    -219.0,
+    -233.57,
+    -233.57,
+    -233.57,
+    -233.57,
+    -233.57,
+    -233.57,
+    -233.57,
+    -169.5,
+    -169.5,
+    -169.5,
+    -169.5,
+    -169.5,
+    -213.84,
+    -213.84,
+    -213.84,
+    -213.84,
+    -213.84,
+    -213.84,
+    -213.84,
+    -213.84,
+    -213.84,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -109.14,
+    -147.34,
+    -147.34,
+    -147.34,
+    -147.34,
+    -147.34,
+    -156.3,
+    -161.91,
+    -161.91,
+    -199.55,
+    -199.55,
+    -199.55,
+    -199.55,
+    -199.55,
+    -199.55,
+    -199.55,
+    -199.55,
+    -199.55,
+    166.98,
+    228.01,
+    228.01,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    571.55,
+    615.99,
+    691.65,
+    691.65,
+    691.65,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26,
+    851.26
+   ]
+  },
   "v_residual": {
    "sharpe_per_trade": 0.047,
    "sortino_per_trade": 0.081,
@@ -5011,6 +5465,233 @@
     -440.42
    ]
   },
+  "v2_unhedged": {
+   "sharpe_per_trade": 0.292,
+   "sortino_per_trade": 0.782,
+   "sharpe_daily_ann": 1.511,
+   "sortino_daily_ann": 5.246,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 159,
+    "undefined_under_2_trades": 157,
+    "median_sharpe": 2.073,
+    "min_sharpe": -4.886,
+    "max_sharpe": 6.187,
+    "pct_positive": 0.579
+   },
+   "turnover": {
+    "gross_notional": 64186.5,
+    "company_leg": 64186.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3378.24,
+    "annualised_x_start_balance": 0.679,
+    "fees_plus_slippage": 95.52,
+    "costs_bps_of_turnover": 14.88,
+    "costs_pct_of_gross_pnl": 10.1
+   },
+   "basis": "observed_zero",
+   "total_net_pnl": 854.58,
+   "trades": 19,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 168,
+   "hit_rate": 0.526,
+   "avg_pnl_per_trade": 44.98,
+   "pnl_std_per_trade": 127.85,
+   "max_drawdown": -231.25,
+   "avg_holding_hours": 19.9,
+   "return_on_start_balance_pct": 0.855,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -122.35,
+    -112.54,
+    -112.54,
+    -112.54,
+    -112.54,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -105.63,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -191.02,
+    -217.75,
+    -217.75,
+    -217.75,
+    -231.25,
+    -231.25,
+    -231.25,
+    -231.25,
+    -231.25,
+    -231.25,
+    -231.25,
+    -167.18,
+    -167.18,
+    -167.18,
+    -167.18,
+    -167.18,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -211.29,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -106.04,
+    -144.07,
+    -144.07,
+    -144.07,
+    -144.07,
+    -144.07,
+    -152.99,
+    -158.59,
+    -158.59,
+    -196.23,
+    -196.23,
+    -196.23,
+    -196.23,
+    -196.23,
+    -196.23,
+    -196.23,
+    -196.23,
+    -196.23,
+    170.3,
+    231.33,
+    231.33,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    574.87,
+    619.31,
+    694.97,
+    694.97,
+    694.97,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58,
+    854.58
+   ]
+  },
   "v_residual": {
    "sharpe_per_trade": 0.053,
    "sortino_per_trade": 0.092,
@@ -6829,6 +7510,233 @@
     -653.41
    ]
   },
+  "v2_unhedged": {
+   "sharpe_per_trade": 0.254,
+   "sortino_per_trade": 0.667,
+   "sharpe_daily_ann": 1.355,
+   "sortino_daily_ann": 4.522,
+   "days": 345,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 316,
+    "defined": 159,
+    "undefined_under_2_trades": 157,
+    "median_sharpe": 1.751,
+    "min_sharpe": -4.883,
+    "max_sharpe": 6.187,
+    "pct_positive": 0.522
+   },
+   "turnover": {
+    "gross_notional": 64186.5,
+    "company_leg": 64186.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3378.24,
+    "annualised_x_start_balance": 0.679,
+    "fees_plus_slippage": 95.52,
+    "costs_bps_of_turnover": 14.88,
+    "costs_pct_of_gross_pnl": 10.1
+   },
+   "basis": "worst",
+   "total_net_pnl": 764.67,
+   "trades": 19,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 168,
+   "hit_rate": 0.474,
+   "avg_pnl_per_trade": 40.25,
+   "pnl_std_per_trade": 129.11,
+   "max_drawdown": -298.01,
+   "avg_holding_hours": 19.9,
+   "return_on_start_balance_pct": 0.765,
+   "equity_curve": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -124.89,
+    -117.32,
+    -117.32,
+    -117.32,
+    -117.32,
+    -148.55,
+    -148.55,
+    -148.55,
+    -148.55,
+    -148.55,
+    -148.55,
+    -148.55,
+    -148.55,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -235.65,
+    -263.14,
+    -263.14,
+    -263.14,
+    -278.53,
+    -278.53,
+    -278.53,
+    -278.53,
+    -278.53,
+    -278.53,
+    -278.53,
+    -252.4,
+    -252.4,
+    -252.4,
+    -252.4,
+    -252.4,
+    -298.01,
+    -298.01,
+    -298.01,
+    -298.01,
+    -298.01,
+    -298.01,
+    -298.01,
+    -298.01,
+    -298.01,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -195.28,
+    -233.93,
+    -233.93,
+    -233.93,
+    -233.93,
+    -233.93,
+    -242.89,
+    -248.49,
+    -248.49,
+    -286.13,
+    -286.13,
+    -286.13,
+    -286.13,
+    -286.13,
+    -286.13,
+    -286.13,
+    -286.13,
+    -286.13,
+    80.4,
+    141.43,
+    141.43,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    484.96,
+    529.4,
+    605.06,
+    605.06,
+    605.06,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67,
+    764.67
+   ]
+  },
   "v_residual": {
    "sharpe_per_trade": -0.006,
    "sortino_per_trade": -0.01,
@@ -8085,6 +8993,93 @@
     381.68,
     257.41,
     186.13
+   ]
+  },
+  "v2_unhedged": {
+   "sharpe_per_trade": 0.914,
+   "sortino_per_trade": 5.032,
+   "sharpe_daily_ann": 4.088,
+   "sortino_daily_ann": 57.648,
+   "days": 77,
+   "rolling_30d": {
+    "window_days": 30,
+    "windows": 48,
+    "defined": 43,
+    "undefined_under_2_trades": 5,
+    "median_sharpe": 4.967,
+    "min_sharpe": 4.492,
+    "max_sharpe": 6.187,
+    "pct_positive": 1.0
+   },
+   "turnover": {
+    "gross_notional": 26965.5,
+    "company_leg": 26965.5,
+    "hedge_leg": 0.0,
+    "per_trade": 3370.69,
+    "annualised_x_start_balance": 1.278,
+    "fees_plus_slippage": 41.55,
+    "costs_bps_of_turnover": 15.41,
+    "costs_pct_of_gross_pnl": 4.0
+   },
+   "basis": "primary",
+   "total_net_pnl": 1007.56,
+   "trades": 8,
+   "excluded_funding_unavailable": 0,
+   "no_trades": 39,
+   "hit_rate": 0.75,
+   "avg_pnl_per_trade": 125.95,
+   "pnl_std_per_trade": 152.97,
+   "max_drawdown": -43.24,
+   "avg_holding_hours": 22.9,
+   "return_on_start_balance_pct": 1.008,
+   "equity_curve": [
+    -5.61,
+    -5.61,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    -43.24,
+    323.28,
+    384.32,
+    384.32,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    727.85,
+    772.29,
+    847.95,
+    847.95,
+    847.95,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56,
+    1007.56
    ]
   },
   "v_residual": {
@@ -9472,6 +10467,126 @@
       -141.08
      ]
     },
+    "v2_unhedged": {
+     "sharpe_per_trade": 0.864,
+     "sortino_per_trade": 3.98,
+     "sharpe_daily_ann": 1.352,
+     "sortino_daily_ann": 13.31,
+     "days": 345,
+     "rolling_30d": {
+      "window_days": 30,
+      "windows": 316,
+      "defined": 57,
+      "undefined_under_2_trades": 259,
+      "median_sharpe": 3.653,
+      "min_sharpe": 1.121,
+      "max_sharpe": 5.049,
+      "pct_positive": 1.0
+     },
+     "turnover": {
+      "gross_notional": 16089.5,
+      "company_leg": 16089.5,
+      "hedge_leg": 0.0,
+      "per_trade": 3217.9,
+      "annualised_x_start_balance": 0.17,
+      "fees_plus_slippage": 23.59,
+      "costs_bps_of_turnover": 14.66,
+      "costs_pct_of_gross_pnl": 4.6
+     },
+     "basis": "primary",
+     "total_net_pnl": 487.03,
+     "trades": 5,
+     "excluded_funding_unavailable": 10,
+     "no_trades": 65,
+     "hit_rate": 0.8,
+     "avg_pnl_per_trade": 97.41,
+     "pnl_std_per_trade": 144.41,
+     "max_drawdown": -37.64,
+     "avg_holding_hours": 22.2,
+     "return_on_start_balance_pct": 0.487,
+     "equity_curve": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -37.64,
+      -37.64,
+      -37.64,
+      -37.64,
+      23.4,
+      366.93,
+      366.93,
+      366.93,
+      366.93,
+      366.93,
+      366.93,
+      411.37,
+      487.03,
+      487.03,
+      487.03,
+      487.03,
+      487.03,
+      487.03,
+      487.03
+     ]
+    },
     "v_residual": {
      "sharpe_per_trade": 0.052,
      "sortino_per_trade": 0.095,
@@ -10432,6 +11547,126 @@
       -670.38,
       -748.3,
       -819.59
+     ]
+    },
+    "v2_unhedged": {
+     "sharpe_per_trade": 0.194,
+     "sortino_per_trade": 0.439,
+     "sharpe_daily_ann": 0.824,
+     "sortino_daily_ann": 2.083,
+     "days": 345,
+     "rolling_30d": {
+      "window_days": 30,
+      "windows": 316,
+      "defined": 137,
+      "undefined_under_2_trades": 179,
+      "median_sharpe": 3.32,
+      "min_sharpe": -4.791,
+      "max_sharpe": 5.049,
+      "pct_positive": 0.664
+     },
+     "turnover": {
+      "gross_notional": 52714.5,
+      "company_leg": 52714.5,
+      "hedge_leg": 0.0,
+      "per_trade": 3514.3,
+      "annualised_x_start_balance": 0.558,
+      "fees_plus_slippage": 76.51,
+      "costs_bps_of_turnover": 14.51,
+      "costs_pct_of_gross_pnl": 18.2
+     },
+     "basis": "conservative",
+     "total_net_pnl": 339.69,
+     "trades": 15,
+     "excluded_funding_unavailable": 0,
+     "no_trades": 65,
+     "hit_rate": 0.533,
+     "avg_pnl_per_trade": 22.65,
+     "pnl_std_per_trade": 108.59,
+     "max_drawdown": -233.57,
+     "avg_holding_hours": 19.5,
+     "return_on_start_balance_pct": 0.34,
+     "equity_curve": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -122.58,
+      -113.11,
+      -113.11,
+      -106.21,
+      -106.21,
+      -106.21,
+      -106.21,
+      -191.78,
+      -191.78,
+      -191.78,
+      -191.78,
+      -191.78,
+      -191.78,
+      -191.78,
+      -191.78,
+      -191.78,
+      -219.0,
+      -219.0,
+      -233.57,
+      -233.57,
+      -169.5,
+      -169.5,
+      -213.84,
+      -213.84,
+      -213.84,
+      -213.84,
+      -213.84,
+      -213.84,
+      -109.14,
+      -109.14,
+      -109.14,
+      -109.14,
+      -109.14,
+      -109.14,
+      -109.14,
+      -109.14,
+      -109.14,
+      -147.34,
+      -147.34,
+      -147.34,
+      -184.98,
+      -184.98,
+      -184.98,
+      -184.98,
+      -123.95,
+      219.59,
+      219.59,
+      219.59,
+      219.59,
+      219.59,
+      219.59,
+      264.03,
+      339.69,
+      339.69,
+      339.69,
+      339.69,
+      339.69,
+      339.69,
+      339.69
      ]
     },
     "v_residual": {
@@ -11523,6 +12758,153 @@
       236.9,
       331.45,
       207.19
+     ]
+    },
+    "v2_unhedged": {
+     "sharpe_per_trade": 0.826,
+     "sortino_per_trade": 8.917,
+     "sharpe_daily_ann": 1.352,
+     "sortino_daily_ann": 96.356,
+     "days": 339,
+     "rolling_30d": {
+      "window_days": 30,
+      "windows": 310,
+      "defined": 17,
+      "undefined_under_2_trades": 293,
+      "median_sharpe": 3.433,
+      "min_sharpe": 3.433,
+      "max_sharpe": 3.433,
+      "pct_positive": 1.0
+     },
+     "turnover": {
+      "gross_notional": 10876.0,
+      "company_leg": 10876.0,
+      "hedge_leg": 0.0,
+      "per_trade": 3625.33,
+      "annualised_x_start_balance": 0.117,
+      "fees_plus_slippage": 17.96,
+      "costs_bps_of_turnover": 16.51,
+      "costs_pct_of_gross_pnl": 3.3
+     },
+     "basis": "primary",
+     "total_net_pnl": 520.53,
+     "trades": 3,
+     "excluded_funding_unavailable": 1,
+     "no_trades": 103,
+     "hit_rate": 0.667,
+     "avg_pnl_per_trade": 173.51,
+     "pnl_std_per_trade": 186.46,
+     "max_drawdown": -5.61,
+     "avg_holding_hours": 24.0,
+     "return_on_start_balance_pct": 0.521,
+     "equity_curve": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -5.61,
+      -5.61,
+      -5.61,
+      -5.61,
+      -5.61,
+      -5.61,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      360.92,
+      520.53,
+      520.53,
+      520.53,
+      520.53,
+      520.53,
+      520.53,
+      520.53
      ]
     },
     "v_residual": {
@@ -12701,6 +14083,153 @@
       385.29,
       479.85,
       355.59
+     ]
+    },
+    "v2_unhedged": {
+     "sharpe_per_trade": 0.518,
+     "sortino_per_trade": 2.564,
+     "sharpe_daily_ann": 1.329,
+     "sortino_daily_ann": 50.215,
+     "days": 339,
+     "rolling_30d": {
+      "window_days": 30,
+      "windows": 310,
+      "defined": 26,
+      "undefined_under_2_trades": 284,
+      "median_sharpe": 3.433,
+      "min_sharpe": -4.883,
+      "max_sharpe": 3.433,
+      "pct_positive": 0.654
+     },
+     "turnover": {
+      "gross_notional": 11472.0,
+      "company_leg": 11472.0,
+      "hedge_leg": 0.0,
+      "per_trade": 2868.0,
+      "annualised_x_start_balance": 0.124,
+      "fees_plus_slippage": 19.01,
+      "costs_bps_of_turnover": 16.57,
+      "costs_pct_of_gross_pnl": 3.6
+     },
+     "basis": "conservative",
+     "total_net_pnl": 511.57,
+     "trades": 4,
+     "excluded_funding_unavailable": 0,
+     "no_trades": 103,
+     "hit_rate": 0.5,
+     "avg_pnl_per_trade": 127.89,
+     "pnl_std_per_trade": 177.49,
+     "max_drawdown": -14.57,
+     "avg_holding_hours": 21.5,
+     "return_on_start_balance_pct": 0.512,
+     "equity_curve": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -8.96,
+      -14.57,
+      -14.57,
+      -14.57,
+      -14.57,
+      -14.57,
+      -14.57,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      351.96,
+      511.57,
+      511.57,
+      511.57,
+      511.57,
+      511.57,
+      511.57,
+      511.57
      ]
     },
     "v_residual": {
@@ -42622,6 +44151,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "NFLX-2025-10-21",
     "gates": {
@@ -42698,6 +44236,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TXN-2025-10-21",
     "gates": {
@@ -42774,6 +44321,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "VRT-2025-10-22",
     "gates": {
@@ -42844,6 +44400,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "LRCX-2025-10-22",
     "gates": {
@@ -42920,6 +44485,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "INTC-2025-10-23",
     "gates": {
@@ -42995,6 +44569,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMKR-2025-10-28",
     "gates": {
@@ -43071,6 +44654,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "STX-2025-10-28",
     "gates": {
@@ -43141,6 +44733,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TER-2025-10-29",
     "gates": {
@@ -43217,6 +44818,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "FLEX-2025-10-29",
     "gates": {
@@ -43287,6 +44897,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "META-2025-10-29",
     "gates": {
@@ -43362,6 +44981,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "KLAC-2025-10-29",
     "gates": {
@@ -43438,6 +45066,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CGNX-2025-10-29",
     "gates": {
@@ -43508,6 +45145,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMZN-2025-10-30",
     "gates": {
@@ -43583,6 +45229,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "RDDT-2025-10-31",
     "gates": {
@@ -43659,6 +45314,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TWLO-2025-10-31",
     "gates": {
@@ -43733,6 +45397,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PLTR-2025-11-03",
     "gates": {
@@ -43807,6 +45480,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ANET-2025-11-04",
     "gates": {
@@ -43877,6 +45559,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "SMCI-2025-11-04",
     "gates": {
@@ -43947,6 +45638,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMD-2025-11-04",
     "gates": {
@@ -44023,6 +45723,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ALAB-2025-11-05",
     "gates": {
@@ -44099,6 +45808,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "LITE-2025-11-05",
     "gates": {
@@ -44169,6 +45887,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "OUST-2025-11-05",
     "gates": {
@@ -44239,6 +45966,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "QCOM-2025-11-05",
     "gates": {
@@ -44315,6 +46051,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "APP-2025-11-05",
     "gates": {
@@ -44389,6 +46134,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "COHR-2025-11-06",
     "gates": {
@@ -44459,6 +46213,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AAOI-2025-11-07",
     "gates": {
@@ -44529,6 +46292,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "SNDK-2025-11-07",
     "gates": {
@@ -44605,6 +46377,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CSCO-2025-11-12",
     "gates": {
@@ -44675,6 +46456,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMAT-2025-11-13",
     "gates": {
@@ -44751,6 +46541,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PANW-2025-11-19",
     "gates": {
@@ -44990,6 +46789,52 @@
     ]
    },
    "unhedged": {
+    "net": -122.34891774431252,
+    "net_conservative": -122.58137921291468,
+    "net_worst": -124.88528334344889,
+    "gross_mid": -116.04893846707449,
+    "fees": 2.9304186759675606,
+    "slippage": 3.369560601270464,
+    "funding": 0.0,
+    "funding_conservative": -0.2324614686021667,
+    "funding_worst": -2.5363655991363796,
+    "entry_ms": 1763593200000,
+    "exit_ms": 1763658000000,
+    "stopped": true,
+    "holding_hours": 18.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "NVDAUSDT",
+      "side": "long",
+      "qty": 12.85148820233383,
+      "notional": 2500.0,
+      "entry_mid": 194.53,
+      "entry_fill": 194.66421113674292,
+      "exit_mid": 185.5,
+      "exit_fill": 185.37201888723686,
+      "fee_rate": 0.0006,
+      "fees": 2.9304186759675606,
+      "slippage": 3.369560601270464,
+      "funding": 0.0,
+      "funding_conservative": -0.2324614686021667,
+      "funding_settlements": 3,
+      "gross_mid": -116.04893846707449,
+      "net": -122.34891774431252,
+      "net_conservative": -122.58137921291468,
+      "funding_worst": -2.5363655991363796,
+      "net_worst": -124.88528334344889
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": -122.34891774431252,
     "net_conservative": -122.58137921291468,
     "net_worst": -124.88528334344889,
@@ -45507,6 +47352,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ZM-2025-11-25",
     "gates": {
@@ -45582,6 +47436,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ADI-2025-11-25",
     "gates": {
@@ -45658,6 +47521,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "DELL-2025-11-25",
     "gates": {
@@ -45728,6 +47600,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "NTAP-2025-11-26",
     "gates": {
@@ -45798,6 +47679,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "MDB-2025-12-01",
     "gates": {
@@ -45872,6 +47762,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRWD-2025-12-02",
     "gates": {
@@ -46029,6 +47928,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MRVL-2025-12-02",
@@ -46218,6 +48126,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRM-2025-12-03",
     "gates": {
@@ -46292,6 +48209,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "HPE-2025-12-04",
     "gates": {
@@ -46362,6 +48288,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PL-2025-12-10",
     "gates": {
@@ -46436,6 +48371,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ADBE-2025-12-10",
     "gates": {
@@ -46510,6 +48454,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CIEN-2025-12-11",
     "gates": {
@@ -46580,6 +48533,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AVGO-2025-12-11",
     "gates": {
@@ -46656,6 +48618,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "MU-2025-12-17",
     "gates": {
@@ -46815,6 +48786,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "BB-2025-12-19",
@@ -47003,6 +48983,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "NFLX-2026-01-20",
     "gates": {
@@ -47162,6 +49151,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "INTC-2026-01-22",
@@ -47351,6 +49349,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TXN-2026-01-27",
     "gates": {
@@ -47427,6 +49434,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "STX-2026-01-27",
     "gates": {
@@ -47662,6 +49678,52 @@
     ]
    },
    "unhedged": {
+    "net": 9.81349501648795,
+    "net_conservative": 9.47128316170912,
+    "net_worst": 7.5663300708694035,
+    "gross_mid": 12.409421535330805,
+    "fees": 1.5074424271433107,
+    "slippage": 1.0884840916995446,
+    "funding": 0.0,
+    "funding_conservative": -0.3422118547788305,
+    "funding_worst": -2.2471649456185467,
+    "entry_ms": 1769641200000,
+    "exit_ms": 1769727600000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "METAUSDT",
+      "side": "long",
+      "qty": 1.7187564453366702,
+      "notional": 1250.0,
+      "entry_mid": 727.27,
+      "entry_fill": 727.5850847224918,
+      "exit_mid": 734.49,
+      "exit_fill": 734.1717872621956,
+      "fee_rate": 0.0006,
+      "fees": 1.5074424271433107,
+      "slippage": 1.0884840916995446,
+      "funding": 0.0,
+      "funding_conservative": -0.3422118547788305,
+      "funding_settlements": 3,
+      "gross_mid": 12.409421535330805,
+      "net": 9.81349501648795,
+      "net_conservative": 9.47128316170912,
+      "funding_worst": -2.2471649456185467,
+      "net_worst": 7.5663300708694035
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 0.5
+   },
+   "v2_unhedged": {
     "net": 9.81349501648795,
     "net_conservative": 9.47128316170912,
     "net_worst": 7.5663300708694035,
@@ -48179,6 +50241,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "LRCX-2026-01-28",
     "gates": {
@@ -48255,6 +50326,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "KLAC-2026-01-29",
     "gates": {
@@ -48331,6 +50411,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "SNDK-2026-01-30",
     "gates": {
@@ -48572,6 +50661,52 @@
     ]
    },
    "unhedged": {
+    "net": 6.904779945447455,
+    "net_conservative": 6.904779945447455,
+    "net_worst": -31.231045178498196,
+    "gross_mid": 14.165217951194311,
+    "fees": 3.0084919236197325,
+    "slippage": 4.251946082127124,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": -38.13582512394565,
+    "entry_ms": 1770073200000,
+    "exit_ms": 1770159600000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "PLTRUSDT",
+      "side": "long",
+      "qty": 16.09683858090271,
+      "notional": 2500.0,
+      "entry_mid": 155.31,
+      "entry_fill": 155.44170083499662,
+      "exit_mid": 156.19,
+      "exit_fill": 156.05755293659055,
+      "fee_rate": 0.0006,
+      "fees": 3.0084919236197325,
+      "slippage": 4.251946082127124,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 14.165217951194311,
+      "net": 6.904779945447455,
+      "net_conservative": 6.904779945447455,
+      "funding_worst": -38.13582512394565,
+      "net_worst": -31.231045178498196
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": 6.904779945447455,
     "net_conservative": 6.904779945447455,
     "net_worst": -31.231045178498196,
@@ -49087,6 +51222,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TER-2026-02-03",
     "gates": {
@@ -49163,6 +51307,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMD-2026-02-03",
     "gates": {
@@ -49239,6 +51392,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "SMCI-2026-02-03",
     "gates": {
@@ -49309,6 +51471,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "LITE-2026-02-04",
     "gates": {
@@ -49379,6 +51550,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "FLEX-2026-02-04",
     "gates": {
@@ -49449,6 +51629,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "QCOM-2026-02-04",
     "gates": {
@@ -49525,6 +51714,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "COHR-2026-02-05",
     "gates": {
@@ -49759,6 +51957,52 @@
     ]
    },
    "unhedged": {
+    "net": -85.39336769544164,
+    "net_conservative": -85.57606855455441,
+    "net_worst": -87.09997498933686,
+    "gross_mid": -79.35718194935065,
+    "fees": 3.0476423240197907,
+    "slippage": 2.988543422071199,
+    "funding": 0.0,
+    "funding_conservative": -0.18270085911277634,
+    "funding_worst": -1.7066072938952186,
+    "entry_ms": 1770332400000,
+    "exit_ms": 1770375600000,
+    "stopped": true,
+    "holding_hours": 12.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AMZNUSDT",
+      "side": "short",
+      "qty": 12.438429772625502,
+      "notional": 2500.0,
+      "entry_mid": 200.99,
+      "entry_fill": 200.87174343309886,
+      "exit_mid": 207.37,
+      "exit_fill": 207.4920103700597,
+      "fee_rate": 0.0006,
+      "fees": 3.0476423240197907,
+      "slippage": 2.988543422071199,
+      "funding": 0.0,
+      "funding_conservative": -0.18270085911277634,
+      "funding_settlements": 2,
+      "gross_mid": -79.35718194935065,
+      "net": -85.39336769544164,
+      "net_conservative": -85.57606855455441,
+      "funding_worst": -1.7066072938952186,
+      "net_worst": -87.09997498933686
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": -1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": -85.39336769544164,
     "net_conservative": -85.57606855455441,
     "net_worst": -87.09997498933686,
@@ -50238,6 +52482,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "robust",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "RDDT-2026-02-06",
@@ -50428,6 +52682,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMKR-2026-02-10",
     "gates": {
@@ -50504,6 +52767,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ALAB-2026-02-11",
     "gates": {
@@ -50580,6 +52852,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "VRT-2026-02-11",
     "gates": {
@@ -50650,6 +52931,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CSCO-2026-02-11",
     "gates": {
@@ -50802,6 +53092,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "APP-2026-02-11",
@@ -50990,6 +53289,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CGNX-2026-02-11",
     "gates": {
@@ -51060,6 +53368,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMAT-2026-02-12",
     "gates": {
@@ -51137,6 +53454,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ANET-2026-02-12",
     "gates": {
@@ -51207,6 +53533,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TWLO-2026-02-13",
     "gates": {
@@ -51281,6 +53616,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PANW-2026-02-17",
     "gates": {
@@ -51356,6 +53700,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ADI-2026-02-18",
     "gates": {
@@ -51432,6 +53785,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRM-2026-02-25",
     "gates": {
@@ -51589,6 +53951,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "reaction_open"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "NVDA-2026-02-25",
@@ -51787,6 +54158,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ZM-2026-02-26",
     "gates": {
@@ -51861,6 +54241,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "DELL-2026-02-26",
     "gates": {
@@ -51931,6 +54320,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "NTAP-2026-02-27",
     "gates": {
@@ -52001,6 +54399,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AAOI-2026-02-27",
     "gates": {
@@ -52071,6 +54478,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "MDB-2026-03-02",
     "gates": {
@@ -52146,6 +54562,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRDO-2026-03-03",
     "gates": {
@@ -52224,6 +54649,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "OUST-2026-03-03",
     "gates": {
@@ -52294,6 +54728,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRWD-2026-03-03",
     "gates": {
@@ -52450,6 +54893,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AVGO-2026-03-04",
@@ -52648,6 +55100,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CIEN-2026-03-05",
     "gates": {
@@ -52883,6 +55344,52 @@
     ]
    },
    "unhedged": {
+    "net": -26.72417906760631,
+    "net_conservative": -27.215432117577592,
+    "net_worst": -27.49439135939264,
+    "gross_mid": -23.800976450315886,
+    "fees": 0.9607369167385069,
+    "slippage": 1.9624657005519146,
+    "funding": 0.0,
+    "funding_conservative": -0.49125304997128094,
+    "funding_worst": -0.7702122917863297,
+    "entry_ms": 1772751600000,
+    "exit_ms": 1772791200000,
+    "stopped": true,
+    "holding_hours": 11.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "MRVLUSDT",
+      "side": "long",
+      "qty": 9.333716255025848,
+      "notional": 812.5,
+      "entry_mid": 87.05,
+      "entry_fill": 87.15669044679676,
+      "exit_mid": 84.5,
+      "exit_fill": 84.39643489081763,
+      "fee_rate": 0.0006,
+      "fees": 0.9607369167385069,
+      "slippage": 1.9624657005519146,
+      "funding": 0.0,
+      "funding_conservative": -0.49125304997128094,
+      "funding_settlements": 2,
+      "gross_mid": -23.800976450315886,
+      "net": -26.72417906760631,
+      "net_conservative": -27.215432117577592,
+      "funding_worst": -0.7702122917863297,
+      "net_worst": -27.49439135939264
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 0.325
+   },
+   "v2_unhedged": {
     "net": -26.72417906760631,
     "net_conservative": -27.215432117577592,
     "net_worst": -27.49439135939264,
@@ -53409,6 +55916,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "HPE-2026-03-09",
     "gates": {
@@ -53479,6 +55995,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ADBE-2026-03-12",
     "gates": {
@@ -53722,6 +56247,52 @@
     ]
    },
    "unhedged": {
+    "net": -13.499471734807072,
+    "net_conservative": -14.576555976025823,
+    "net_worst": -15.39033638265301,
+    "gross_mid": -9.719271280683508,
+    "fees": 1.5058368474607187,
+    "slippage": 2.2743636066628468,
+    "funding": 0.0,
+    "funding_conservative": -1.0770842412187513,
+    "funding_worst": -1.890864647845938,
+    "entry_ms": 1773871200000,
+    "exit_ms": 1773957600000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "MUUSDT",
+      "side": "short",
+      "qty": 2.8253695583382306,
+      "notional": 1250.0,
+      "entry_mid": 442.42,
+      "entry_fill": 442.01906912363694,
+      "exit_mid": 445.86,
+      "exit_fill": 446.26404828112476,
+      "fee_rate": 0.0006,
+      "fees": 1.5058368474607187,
+      "slippage": 2.2743636066628468,
+      "funding": 0.0,
+      "funding_conservative": -1.0770842412187513,
+      "funding_settlements": 3,
+      "gross_mid": -9.719271280683508,
+      "net": -13.499471734807072,
+      "net_conservative": -14.576555976025823,
+      "funding_worst": -1.890864647845938,
+      "net_worst": -15.39033638265301
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": -1,
+    "size": 0.5
+   },
+   "v2_unhedged": {
     "net": -13.499471734807072,
     "net_conservative": -14.576555976025823,
     "net_worst": -15.39033638265301,
@@ -54127,6 +56698,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PL-2026-03-19",
     "gates": {
@@ -54296,6 +56876,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "reaction_open",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "BB-2026-04-09",
@@ -54500,6 +57092,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "NFLX-2026-04-16",
     "gates": {
@@ -54585,6 +57186,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "VRT-2026-04-22",
     "gates": {
@@ -54664,6 +57274,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TXN-2026-04-22",
     "gates": {
@@ -54752,6 +57371,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "LRCX-2026-04-22",
     "gates": {
@@ -55005,6 +57633,52 @@
     ]
    },
    "unhedged": {
+    "net": 64.07113713390089,
+    "net_conservative": 64.07113713390089,
+    "net_worst": 26.130162314653816,
+    "gross_mid": 71.9895287958116,
+    "fees": 3.043152199109158,
+    "slippage": 4.875239462801542,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": -37.940974819247074,
+    "entry_ms": 1776981600000,
+    "exit_ms": 1777068000000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "INTCUSDT",
+      "side": "long",
+      "qty": 31.164298180004987,
+      "notional": 2500.0,
+      "entry_mid": 80.22,
+      "entry_fill": 80.29710814612008,
+      "exit_mid": 82.53,
+      "exit_fill": 82.45067146223771,
+      "fee_rate": 0.0006,
+      "fees": 3.043152199109158,
+      "slippage": 4.875239462801542,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 71.9895287958116,
+      "net": 64.07113713390089,
+      "net_conservative": 64.07113713390089,
+      "funding_worst": -37.940974819247074,
+      "net_worst": 26.130162314653816
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": 64.07113713390089,
     "net_conservative": 64.07113713390089,
     "net_worst": 26.130162314653816,
@@ -55482,6 +58156,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AMKR-2026-04-28",
     "gates": {
@@ -55574,6 +58257,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "STX-2026-04-28",
     "gates": {
@@ -55655,6 +58347,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TER-2026-04-29",
     "gates": {
@@ -55747,6 +58448,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "QCOM-2026-04-29",
     "gates": {
@@ -56004,6 +58714,52 @@
     ]
    },
    "unhedged": {
+    "net": -44.11406565636912,
+    "net_conservative": -44.34114263418619,
+    "net_worst": -45.60518706955719,
+    "gross_mid": -41.33147526445809,
+    "fees": 1.4752143014377288,
+    "slippage": 1.3073760904732985,
+    "funding": 0.0,
+    "funding_conservative": -0.22707697781706954,
+    "funding_worst": -1.4911214131880661,
+    "entry_ms": 1777500000000,
+    "exit_ms": 1777543200000,
+    "stopped": true,
+    "holding_hours": 12.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "METAUSDT",
+      "side": "long",
+      "qty": 1.979476784696269,
+      "notional": 1250.0,
+      "entry_mid": 631.48,
+      "entry_fill": 631.8157841227096,
+      "exit_mid": 610.6,
+      "exit_fill": 610.27531863982,
+      "fee_rate": 0.0006,
+      "fees": 1.4752143014377288,
+      "slippage": 1.3073760904732985,
+      "funding": 0.0,
+      "funding_conservative": -0.22707697781706954,
+      "funding_settlements": 2,
+      "gross_mid": -41.33147526445809,
+      "net": -44.11406565636912,
+      "net_conservative": -44.34114263418619,
+      "funding_worst": -1.4911214131880661,
+      "net_worst": -45.60518706955719
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 0.5
+   },
+   "v2_unhedged": {
     "net": -44.11406565636912,
     "net_conservative": -44.34114263418619,
     "net_worst": -45.60518706955719,
@@ -56479,6 +59235,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "KLAC-2026-04-29",
     "gates": {
@@ -56655,6 +59420,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "reaction_open"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AMZN-2026-04-29",
@@ -56949,6 +59723,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "robust",
+     "reaction_open",
+     "residual_vs_cost",
+     "ai_interpretation"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "SNDK-2026-05-01",
@@ -57163,6 +59949,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "TWLO-2026-05-01",
     "gates": {
@@ -57333,6 +60128,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "robust",
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "RDDT-2026-05-01",
@@ -57626,6 +60432,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "PLTR-2026-05-04",
@@ -57832,6 +60648,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ANET-2026-05-05",
     "gates": {
@@ -57914,6 +60739,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "SMCI-2026-05-05",
     "gates": {
@@ -58165,6 +60999,52 @@
     ]
    },
    "unhedged": {
+    "net": 105.24923625542809,
+    "net_conservative": 104.70619898527967,
+    "net_worst": 102.73080253879772,
+    "gross_mid": 114.41922901575397,
+    "fees": 3.0685696371859796,
+    "slippage": 6.101423123139914,
+    "funding": 0.0,
+    "funding_conservative": -0.5430372701484222,
+    "funding_worst": -2.5184337166303634,
+    "entry_ms": 1778018400000,
+    "exit_ms": 1778104800000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AMDUSDT",
+      "side": "long",
+      "qty": 6.331999392128059,
+      "notional": 2500.0,
+      "entry_mid": 394.82,
+      "entry_fill": 395.2910141600851,
+      "exit_mid": 412.89,
+      "exit_fill": 412.3974286090939,
+      "fee_rate": 0.0006,
+      "fees": 3.0685696371859796,
+      "slippage": 6.101423123139914,
+      "funding": 0.0,
+      "funding_conservative": -0.5430372701484222,
+      "funding_settlements": 3,
+      "gross_mid": 114.41922901575397,
+      "net": 105.24923625542809,
+      "net_conservative": 104.70619898527967,
+      "funding_worst": -2.5184337166303634,
+      "net_worst": 102.73080253879772
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": 105.24923625542809,
     "net_conservative": 104.70619898527967,
     "net_worst": 102.73080253879772,
@@ -58707,6 +61587,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "FLEX-2026-05-06",
     "gates": {
@@ -58790,6 +61679,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ALAB-2026-05-06",
     "gates": {
@@ -58884,6 +61782,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "LITE-2026-05-06",
     "gates": {
@@ -58967,6 +61874,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "OUST-2026-05-06",
     "gates": {
@@ -59135,6 +62051,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "reaction_open"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "APP-2026-05-06",
@@ -59343,6 +62269,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CGNX-2026-05-06",
     "gates": {
@@ -59427,6 +62362,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "COHR-2026-05-07",
     "gates": {
@@ -59511,6 +62455,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "AAOI-2026-05-08",
     "gates": {
@@ -59595,6 +62548,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CSCO-2026-05-13",
     "gates": {
@@ -59763,6 +62725,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "reaction_open"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AMAT-2026-05-14",
@@ -59978,6 +62950,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ADI-2026-05-20",
     "gates": {
@@ -60158,6 +63139,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "ai_interpretation"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "NVDA-2026-05-20",
@@ -60373,6 +63363,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ZM-2026-05-22",
     "gates": {
@@ -60544,6 +63543,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "reaction_open"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MRVL-2026-05-27",
@@ -60759,6 +63767,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRM-2026-05-27",
     "gates": {
@@ -60847,6 +63864,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "MDB-2026-05-28",
     "gates": {
@@ -60935,6 +63961,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "DELL-2026-05-28",
     "gates": {
@@ -61019,6 +64054,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "NTAP-2026-05-29",
     "gates": {
@@ -61103,6 +64147,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "HPE-2026-06-01",
     "gates": {
@@ -61274,6 +64327,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "reaction_open"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "CRDO-2026-06-02",
@@ -61491,6 +64553,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PANW-2026-06-02",
     "gates": {
@@ -61579,6 +64650,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CRWD-2026-06-03",
     "gates": {
@@ -61832,6 +64912,52 @@
     ]
    },
    "unhedged": {
+    "net": -38.02665749744002,
+    "net_conservative": -38.20476721313049,
+    "net_worst": -38.64745484673459,
+    "gross_mid": -33.87606289487443,
+    "fees": 1.5203467364268204,
+    "slippage": 2.6302478661387667,
+    "funding": 0.0,
+    "funding_conservative": -0.17810971569046602,
+    "funding_worst": -0.6207973492945703,
+    "entry_ms": 1780524000000,
+    "exit_ms": 1780556400000,
+    "stopped": true,
+    "holding_hours": 9.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AVGOUSDT",
+      "side": "short",
+      "qty": 2.968980095957437,
+      "notional": 1250.0,
+      "entry_mid": 421.02,
+      "entry_fill": 420.5829671976392,
+      "exit_mid": 432.43,
+      "exit_fill": 432.87887676292064,
+      "fee_rate": 0.0006,
+      "fees": 1.5203467364268204,
+      "slippage": 2.6302478661387667,
+      "funding": 0.0,
+      "funding_conservative": -0.17810971569046602,
+      "funding_settlements": 1,
+      "gross_mid": -33.87606289487443,
+      "net": -38.02665749744002,
+      "net_conservative": -38.20476721313049,
+      "funding_worst": -0.6207973492945703,
+      "net_worst": -38.64745484673459
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": -1,
+    "size": 0.5
+   },
+   "v2_unhedged": {
     "net": -38.02665749744002,
     "net_conservative": -38.20476721313049,
     "net_worst": -38.64745484673459,
@@ -62315,6 +65441,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "CIEN-2026-06-04",
     "gates": {
@@ -62403,6 +65538,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "PL-2026-06-04",
     "gates": {
@@ -62492,6 +65636,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ADBE-2026-06-11",
     "gates": {
@@ -62666,6 +65819,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MU-2026-06-24",
@@ -62967,6 +66129,52 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": -1,
+    "size": 0.1192
+   },
+   "v2_unhedged": {
+    "net": -8.917207652097893,
+    "net_conservative": -8.962421445201342,
+    "net_worst": -8.962421445201342,
+    "gross_mid": -7.867456896551738,
+    "fees": 0.3623258477865054,
+    "slippage": 0.6874249077596495,
+    "funding": 0.0,
+    "funding_conservative": -0.04521379310344828,
+    "funding_worst": -0.04521379310344828,
+    "entry_ms": 1782406800000,
+    "exit_ms": 1782457200000,
+    "stopped": true,
+    "holding_hours": 14.0,
+    "funding_data": "unavailable_for_period",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "BBUSDT",
+      "side": "short",
+      "qty": 16056.034482758621,
+      "notional": 298.0,
+      "entry_mid": 0.01856,
+      "entry_fill": 0.018538871843245885,
+      "exit_mid": 0.01905,
+      "exit_fill": 0.019071685958306352,
+      "fee_rate": 0.0006,
+      "fees": 0.3623258477865054,
+      "slippage": 0.6874249077596495,
+      "funding": 0.0,
+      "funding_conservative": -0.04521379310344828,
+      "funding_settlements": 3,
+      "gross_mid": -7.867456896551738,
+      "net": -8.917207652097893,
+      "net_conservative": -8.962421445201342,
+      "funding_worst": -0.04521379310344828,
+      "net_worst": -8.962421445201342
+     }
+    ]
+   },
    "naive_direction": 1,
    "analysis": {
     "event_id": "BB-2026-06-25",
@@ -63273,6 +66481,52 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": -1,
+    "size": 0.1752
+   },
+   "v2_unhedged": {
+    "net": -5.605522364595793,
+    "net_conservative": -5.605522364595793,
+    "net_worst": -5.605522364595793,
+    "gross_mid": -4.67182933956753,
+    "fees": 0.5284043876002755,
+    "slippage": 0.40528863742798715,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1784239200000,
+    "exit_ms": 1784325600000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "NFLXUSDT",
+      "side": "short",
+      "qty": 6.399766218585623,
+      "notional": 438.0,
+      "entry_mid": 68.44,
+      "entry_fill": 68.40850364298994,
+      "exit_mid": 69.17,
+      "exit_fill": 69.20183230587938,
+      "fee_rate": 0.0006,
+      "fees": 0.5284043876002755,
+      "slippage": 0.40528863742798715,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": -4.67182933956753,
+      "net": -5.605522364595793,
+      "net_conservative": -5.605522364595793,
+      "funding_worst": 0.0,
+      "net_worst": -5.605522364595793
+     }
+    ]
+   },
    "naive_direction": -1,
    "analysis": {
     "event_id": "NFLX-2026-07-16",
@@ -63567,6 +66821,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "TXN-2026-07-22",
@@ -63960,6 +67223,52 @@
     ]
    },
    "unhedged": {
+    "net": -37.638176863093186,
+    "net_conservative": -37.638176863093186,
+    "net_worst": -37.638176863093186,
+    "gross_mid": -32.5779036827196,
+    "fees": 1.480481616644317,
+    "slippage": 3.579791563729265,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1784844000000,
+    "exit_ms": 1784898000000,
+    "stopped": true,
+    "holding_hours": 15.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "INTCUSDT",
+      "side": "long",
+      "qty": 11.803588290840414,
+      "notional": 1250.0,
+      "entry_mid": 105.9,
+      "entry_fill": 106.05364210572839,
+      "exit_mid": 103.14,
+      "exit_fill": 102.99036216444924,
+      "fee_rate": 0.0006,
+      "fees": 1.480481616644317,
+      "slippage": 3.579791563729265,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 2,
+      "gross_mid": -32.5779036827196,
+      "net": -37.638176863093186,
+      "net_conservative": -37.638176863093186,
+      "funding_worst": 0.0,
+      "net_worst": -37.638176863093186
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 0.5
+   },
+   "v2_unhedged": {
     "net": -37.638176863093186,
     "net_conservative": -37.638176863093186,
     "net_worst": -37.638176863093186,
@@ -64540,6 +67849,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AMKR-2026-07-28",
@@ -64857,6 +68177,19 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "reaction_open",
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "STX-2026-07-28",
@@ -65166,6 +68499,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": -26.112413492379787,
     "net_conservative": -26.112413492379787,
@@ -65666,6 +69008,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "TER-2026-07-29",
@@ -65983,6 +69335,20 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "reaction_open",
+     "residual_vs_cost",
+     "ai_interpretation",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": -1,
    "analysis": {
     "event_id": "VRT-2026-07-29",
@@ -66287,6 +69653,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "FLEX-2026-07-29",
@@ -66596,6 +69973,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": 20.235519837938597,
     "net_conservative": 20.235519837938597,
@@ -67101,6 +70487,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": -78.8846483549437,
     "net_conservative": -78.8846483549437,
@@ -67666,6 +71061,52 @@
     ]
    },
    "unhedged": {
+    "net": 366.5280640729293,
+    "net_conservative": 366.5280640729293,
+    "net_worst": 366.5280640729293,
+    "gross_mid": 376.4239722634965,
+    "fees": 3.225574174024929,
+    "slippage": 6.670334016542324,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1785362400000,
+    "exit_ms": 1785448800000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "LRCXUSDT",
+      "side": "long",
+      "qty": 9.524898083590504,
+      "notional": 2500.0,
+      "entry_mid": 262.47,
+      "entry_fill": 262.7956369993055,
+      "exit_mid": 301.99,
+      "exit_fill": 301.6153319715767,
+      "fee_rate": 0.0006,
+      "fees": 3.225574174024929,
+      "slippage": 6.670334016542324,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 376.4239722634965,
+      "net": 366.5280640729293,
+      "net_conservative": 366.5280640729293,
+      "funding_worst": 0.0,
+      "net_worst": 366.5280640729293
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": 366.5280640729293,
     "net_conservative": 366.5280640729293,
     "net_worst": 366.5280640729293,
@@ -68427,6 +71868,52 @@
      }
     ]
    },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 0.5
+   },
+   "v2_unhedged": {
+    "net": 61.03353420078007,
+    "net_conservative": 61.03353420078007,
+    "net_worst": 61.03353420078007,
+    "gross_mid": 63.904439779177245,
+    "fees": 1.538324124835149,
+    "slippage": 1.239671493216797,
+    "funding": -0.09290996034522976,
+    "funding_conservative": -0.09290996034522976,
+    "funding_worst": -0.09290996034522976,
+    "entry_ms": 1785448800000,
+    "exit_ms": 1785535200000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "AMZNUSDT",
+      "side": "long",
+      "qty": 4.859653215146567,
+      "notional": 1250.0,
+      "entry_mid": 257.22,
+      "entry_fill": 257.34436824732546,
+      "exit_mid": 270.37,
+      "exit_fill": 270.23927360613726,
+      "fee_rate": 0.0006,
+      "fees": 1.538324124835149,
+      "slippage": 1.239671493216797,
+      "funding": -0.09290996034522976,
+      "funding_conservative": -0.09290996034522976,
+      "funding_settlements": 3,
+      "gross_mid": 63.904439779177245,
+      "net": 61.03353420078007,
+      "net_conservative": 61.03353420078007,
+      "funding_worst": -0.09290996034522976,
+      "net_worst": 61.03353420078007
+     }
+    ]
+   },
    "v_residual": {
     "net": 60.95591805231974,
     "net_conservative": 60.95591805231974,
@@ -69018,6 +72505,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "robust",
+     "residual_vs_cost",
+     "ai_interpretation"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "RDDT-2026-07-31",
@@ -69402,6 +72900,52 @@
     ]
    },
    "unhedged": {
+    "net": 343.5330995410552,
+    "net_conservative": 343.5330995410552,
+    "net_worst": 343.5330995410552,
+    "gross_mid": 351.57917200170687,
+    "fees": 3.210756905676306,
+    "slippage": 4.835315554975324,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1785794400000,
+    "exit_ms": 1785880800000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "PLTRUSDT",
+      "side": "long",
+      "qty": 17.78346848769384,
+      "notional": 2500.0,
+      "entry_mid": 140.58,
+      "entry_fill": 140.70701833213545,
+      "exit_mid": 160.35,
+      "exit_fill": 160.20511886784806,
+      "fee_rate": 0.0006,
+      "fees": 3.210756905676306,
+      "slippage": 4.835315554975324,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 351.57917200170687,
+      "net": 343.5330995410552,
+      "net_conservative": 343.5330995410552,
+      "funding_worst": 0.0,
+      "net_worst": 343.5330995410552
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": 343.5330995410552,
     "net_conservative": 343.5330995410552,
     "net_worst": 343.5330995410552,
@@ -69898,6 +73442,15 @@
    "residual": null,
    "naive": null,
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "analysis": {
     "event_id": "ANET-2026-08-04",
     "gates": {
@@ -70088,6 +73641,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": -48.94564231841059,
     "net_conservative": -48.94564231841059,
@@ -70594,6 +74156,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "ALAB-2026-08-05",
@@ -70917,6 +74489,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": -1,
    "analysis": {
     "event_id": "APP-2026-08-05",
@@ -71232,6 +74813,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "CGNX-2026-08-05",
@@ -71544,6 +75135,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "SNDK-2026-08-06",
@@ -71870,6 +75471,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "reaction_open",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "OUST-2026-08-07",
@@ -72183,6 +75795,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "TWLO-2026-08-07",
@@ -72499,6 +76123,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AAOI-2026-08-07",
@@ -72815,6 +76448,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": 70.4796662545167,
     "net_conservative": 70.4796662545167,
@@ -73251,6 +76893,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "LITE-2026-08-12",
@@ -73562,6 +77214,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "CSCO-2026-08-12",
@@ -73874,6 +77536,19 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost",
+     "ai_interpretation",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "COHR-2026-08-13",
@@ -74190,6 +77865,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": -6.1106539876483845,
     "net_conservative": -6.1106539876483845,
@@ -74700,6 +78384,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost",
+     "ai_interpretation"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "ADI-2026-08-19",
@@ -75024,6 +78720,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "ZM-2026-08-26",
@@ -75342,6 +79049,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": -1,
    "analysis": {
     "event_id": "CRM-2026-08-26",
@@ -75740,6 +79457,52 @@
     ]
    },
    "unhedged": {
+    "net": 44.439340180778245,
+    "net_conservative": 44.439340180778245,
+    "net_worst": 44.439340180778245,
+    "gross_mid": 46.28764543200456,
+    "fees": 0.6814440548530563,
+    "slippage": 1.166861196373258,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1787781600000,
+    "exit_ms": 1787868000000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "CRWDUSDT",
+      "side": "long",
+      "qty": 2.597510967003624,
+      "notional": 544.75,
+      "entry_mid": 209.72,
+      "entry_fill": 209.9354576439422,
+      "exit_mid": 227.54,
+      "exit_fill": 227.30623482594604,
+      "fee_rate": 0.0006,
+      "fees": 0.6814440548530563,
+      "slippage": 1.166861196373258,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 46.28764543200456,
+      "net": 44.439340180778245,
+      "net_conservative": 44.439340180778245,
+      "funding_worst": 0.0,
+      "net_worst": 44.439340180778245
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 0.2179
+   },
+   "v2_unhedged": {
     "net": 44.439340180778245,
     "net_conservative": 44.439340180778245,
     "net_worst": 44.439340180778245,
@@ -76444,6 +80207,52 @@
      }
     ]
    },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
+    "net": 75.6634257813562,
+    "net_conservative": 75.6634257813562,
+    "net_worst": 75.6634257813562,
+    "gross_mid": 81.52173913043463,
+    "fees": 3.0488860008620744,
+    "slippage": 2.809427348216364,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1787781600000,
+    "exit_ms": 1787868000000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "NVDAUSDT",
+      "side": "long",
+      "qty": 11.417610522469857,
+      "notional": 2500.0,
+      "entry_mid": 218.96,
+      "entry_fill": 219.08105669201973,
+      "exit_mid": 226.1,
+      "exit_fill": 225.97499580715353,
+      "fee_rate": 0.0006,
+      "fees": 3.0488860008620744,
+      "slippage": 2.809427348216364,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 81.52173913043463,
+      "net": 75.6634257813562,
+      "net_conservative": 75.6634257813562,
+      "funding_worst": 0.0,
+      "net_worst": 75.6634257813562
+     }
+    ]
+   },
    "v_residual": {
     "net": 66.88859079653908,
     "net_conservative": 66.88859079653908,
@@ -77060,6 +80869,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "v_residual": {
     "net": -39.03844888252272,
     "net_conservative": -39.03844888252272,
@@ -77572,6 +81390,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MDB-2026-09-01",
@@ -77973,6 +81801,52 @@
     ]
    },
    "unhedged": {
+    "net": 159.6097674053312,
+    "net_conservative": 159.6097674053312,
+    "net_worst": 159.6097674053312,
+    "gross_mid": 166.73984632272226,
+    "fees": 3.099965872461904,
+    "slippage": 4.030113044929153,
+    "funding": 0.0,
+    "funding_conservative": 0.0,
+    "funding_worst": 0.0,
+    "entry_ms": 1788300000000,
+    "exit_ms": 1788386400000,
+    "stopped": false,
+    "holding_hours": 24.0,
+    "funding_data": "complete",
+    "legs": [
+     {
+      "role": "company",
+      "symbol": "DELLUSDT",
+      "side": "long",
+      "qty": 5.48847420417124,
+      "notional": 2500.0,
+      "entry_mid": 455.5,
+      "entry_fill": 455.8552949338589,
+      "exit_mid": 485.88,
+      "exit_fill": 485.5010083370728,
+      "fee_rate": 0.0006,
+      "fees": 3.099965872461904,
+      "slippage": 4.030113044929153,
+      "funding": 0.0,
+      "funding_conservative": 0.0,
+      "funding_settlements": 3,
+      "gross_mid": 166.73984632272226,
+      "net": 159.6097674053312,
+      "net_conservative": 159.6097674053312,
+      "funding_worst": 0.0,
+      "net_worst": 159.6097674053312
+     }
+    ]
+   },
+   "v2_decision": {
+    "decision": "TRADE",
+    "reasons": [],
+    "direction": 1,
+    "size": 1.0
+   },
+   "v2_unhedged": {
     "net": 159.6097674053312,
     "net_conservative": 159.6097674053312,
     "net_worst": 159.6097674053312,
@@ -78558,6 +82432,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost",
+     "ai_interpretation"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "PANW-2026-09-01",
@@ -78877,6 +82763,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "residual_vs_cost"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "CRDO-2026-09-02",
@@ -79206,6 +83101,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "HPE-2026-09-02",
@@ -79523,6 +83428,17 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "reaction_open",
+     "residual_vs_cost",
+     "ai_interpretation"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "AVGO-2026-09-02",
@@ -79851,6 +83767,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "NTAP-2026-09-03",
@@ -80172,6 +84100,18 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "robust",
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "CIEN-2026-09-03",
@@ -80490,6 +84430,15 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "PL-2026-09-03",
@@ -80813,6 +84762,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "ADBE-2026-09-10",
@@ -81136,6 +85095,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "liquidity",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "BB-2026-09-24",
@@ -81459,6 +85428,16 @@
     ]
    },
    "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "residual_vs_cost",
+     "variant"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
    "naive_direction": 1,
    "analysis": {
     "event_id": "MU-2026-09-30",
@@ -82850,6 +86829,58 @@
      255.8
     ]
    },
+   "v2_unhedged": {
+    "sharpe_per_trade": 0.416,
+    "sortino_per_trade": 1.02,
+    "sharpe_daily_ann": 0.592,
+    "sortino_daily_ann": 1.001,
+    "days": 303,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 274,
+     "defined": 28,
+     "undefined_under_2_trades": 246,
+     "median_sharpe": -0.381,
+     "min_sharpe": -0.381,
+     "max_sharpe": 1.862,
+     "pct_positive": 0.036
+    },
+    "turnover": {
+     "gross_notional": 12500.0,
+     "company_leg": 12500.0,
+     "hedge_leg": 0.0,
+     "per_trade": 4166.67,
+     "annualised_x_start_balance": 0.151,
+     "fees_plus_slippage": 14.94,
+     "costs_bps_of_turnover": 11.95,
+     "costs_pct_of_gross_pnl": 18.6
+    },
+    "basis": "primary",
+    "total_net_pnl": 65.21,
+    "trades": 3,
+    "excluded_funding_unavailable": 4,
+    "no_trades": 5,
+    "hit_rate": 0.667,
+    "avg_pnl_per_trade": 21.74,
+    "pnl_std_per_trade": 81.06,
+    "max_drawdown": -71.49,
+    "avg_holding_hours": 16.3,
+    "return_on_start_balance_pct": 0.065,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -71.49,
+     -10.45,
+     65.21
+    ]
+   },
    "v_residual": {
     "sharpe_per_trade": null,
     "sortino_per_trade": null,
@@ -83268,6 +87299,58 @@
      -236.35,
      -114.28,
      -38.62
+    ]
+   },
+   "v2_unhedged": {
+    "sharpe_per_trade": -0.003,
+    "sortino_per_trade": -0.004,
+    "sharpe_daily_ann": -0.579,
+    "sortino_daily_ann": -0.681,
+    "days": 303,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 274,
+     "defined": 50,
+     "undefined_under_2_trades": 224,
+     "median_sharpe": -0.381,
+     "min_sharpe": -3.089,
+     "max_sharpe": 1.862,
+     "pct_positive": 0.02
+    },
+    "turnover": {
+     "gross_notional": 27500.0,
+     "company_leg": 27500.0,
+     "hedge_leg": 0.0,
+     "per_trade": 3928.57,
+     "annualised_x_start_balance": 0.331,
+     "fees_plus_slippage": 32.66,
+     "costs_bps_of_turnover": 11.88,
+     "costs_pct_of_gross_pnl": 47.9
+    },
+    "basis": "conservative",
+    "total_net_pnl": -102.82,
+    "trades": 7,
+    "excluded_funding_unavailable": 0,
+    "no_trades": 5,
+    "hit_rate": 0.571,
+    "avg_pnl_per_trade": -14.69,
+    "pnl_std_per_trade": 77.92,
+    "max_drawdown": -239.52,
+    "avg_holding_hours": 18.1,
+    "return_on_start_balance_pct": -0.103,
+    "equity_curve": [
+     0.0,
+     0.0,
+     -122.56,
+     -113.48,
+     -199.01,
+     -199.01,
+     -168.03,
+     -168.03,
+     -168.03,
+     -239.52,
+     -178.49,
+     -102.82
     ]
    },
    "v_residual": {
@@ -84661,6 +88744,233 @@
      261.65,
      137.39,
      66.11
+    ]
+   },
+   "v2_unhedged": {
+    "sharpe_per_trade": 0.914,
+    "sortino_per_trade": 5.032,
+    "sharpe_daily_ann": 1.892,
+    "sortino_daily_ann": 13.857,
+    "days": 345,
+    "rolling_30d": {
+     "window_days": 30,
+     "windows": 316,
+     "defined": 64,
+     "undefined_under_2_trades": 252,
+     "median_sharpe": 4.967,
+     "min_sharpe": -3.984,
+     "max_sharpe": 6.512,
+     "pct_positive": 0.906
+    },
+    "turnover": {
+     "gross_notional": 32842.0,
+     "company_leg": 32842.0,
+     "hedge_leg": 0.0,
+     "per_trade": 4105.25,
+     "annualised_x_start_balance": 0.347,
+     "fees_plus_slippage": 50.32,
+     "costs_bps_of_turnover": 15.32,
+     "costs_pct_of_gross_pnl": 4.7
+    },
+    "basis": "primary",
+    "total_net_pnl": 1025.35,
+    "trades": 8,
+    "excluded_funding_unavailable": 12,
+    "no_trades": 167,
+    "hit_rate": 0.75,
+    "avg_pnl_per_trade": 128.17,
+    "pnl_std_per_trade": 158.03,
+    "max_drawdown": -86.49,
+    "avg_holding_hours": 22.9,
+    "return_on_start_balance_pct": 1.025,
+    "equity_curve": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -11.21,
+     -11.21,
+     -86.49,
+     -86.49,
+     -86.49,
+     -86.49,
+     -86.49,
+     -86.49,
+     -86.49,
+     -86.49,
+     -86.49,
+     280.04,
+     402.1,
+     402.1,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     745.64,
+     790.08,
+     865.74,
+     865.74,
+     865.74,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35,
+     1025.35
     ]
    },
    "v_residual": {
