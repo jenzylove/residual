@@ -29934,5 +29934,111 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "SMCI-2026-10-20",
+  "consensus": null,
+  "ticker": "SMCI",
+  "company_symbol": "SMCIUSDT",
+  "sector_group": "hardware",
+  "cik": 1375365,
+  "accession": "0001375365-26-000025",
+  "release_utc": "2026-10-20T20:44:26Z",
+  "release_ms": 1792529066000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/",
+   "sha256": null,
+   "cache_file": "data/cache/9f7d84467b98957b8cb6bed4.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/",
+   "accession": "0001375365-26-000021",
+   "cache_file": "data/cache/c3bc4b104ddaf9a872e761f8.bin"
+  },
+  "earnings": {
+   "revenue_actual": null,
+   "revenue_guidance_prior": {
+    "value": 15000.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales in the range of $14.5 billion and $15.5 billion",
+    "pattern": "The Company expects net sales in the range of \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
+    "source_sha256": "25b30e1dd189217fa5c4e6ad42d7ded5ed97eb619151fdb1f1821a11c25593ac",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 14500.0,
+    "high": 15500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": null,
+   "revenue_prior_actual": {
+    "value": 11100.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales of $11.1 billion versus",
+    "pattern": "Net sales of \\$(\\d+(?:\\.\\d+)?) billion versus",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
+    "source_sha256": "25b30e1dd189217fa5c4e6ad42d7ded5ed97eb619151fdb1f1821a11c25593ac",
+    "extractor": "regex-v1:SMCI:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_actual",
+    "revenue_guidance_next"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "not_an_earnings_release"
  }
 ]
