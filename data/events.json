@@ -29798,5 +29798,141 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "NFLX-2026-10-20",
+  "consensus": null,
+  "ticker": "NFLX",
+  "company_symbol": "NFLXUSDT",
+  "sector_group": "internet",
+  "cik": 1065280,
+  "accession": "0001065280-26-000290",
+  "release_utc": "2026-10-20T20:01:55Z",
+  "release_ms": 1792526515000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/",
+   "sha256": "6d873845682809c44096b29783bdc3c44306b1394f6b825a64141b737365f383",
+   "cache_file": "data/cache/ed0d862f8570d945134dc4f7.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/",
+   "accession": "0001065280-26-000211",
+   "cache_file": "data/cache/830f52318b97057de50eda28.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 12874.0,
+    "unit": "USD_millions",
+    "snippet": "Forecast | Revenue | $ | 11,510 | | $ | 12,051 | | $ | 12,250 | | $ | 12,560 | | $ | 12,874 | | $ | 13,442 |",
+    "pattern": "Forecast \\| Revenue \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| ([\\d,]+) \\| \\| \\$ \\| ([\\d,]+) \\|",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm",
+    "source_sha256": "6d873845682809c44096b29783bdc3c44306b1394f6b825a64141b737365f383",
+    "extractor": "regex-v1:NFLX:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 12860.0,
+    "unit": "USD_millions",
+    "snippet": "Forecast | Revenue | $ | 11,079 | | $ | 11,510 | | $ | 12,051 | | $ | 12,250 | | $ | 12,560 | | $ | 12,860 |",
+    "pattern": "Forecast \\| Revenue \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| ([\\d,]+) \\| \\| \\$ \\| ([\\d,]+) \\|",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm",
+    "source_sha256": "541ed64a856024cc4ada73a1e4fae6b48ce1a4752783b5d506cb94a370f1a2e3",
+    "extractor": "regex-v1:NFLX:revenue_guidance",
+    "low": 12860.0,
+    "high": 12860.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 13442.0,
+    "unit": "USD_millions",
+    "snippet": "Forecast | Revenue | $ | 11,510 | | $ | 12,051 | | $ | 12,250 | | $ | 12,560 | | $ | 12,874 | | $ | 13,442 |",
+    "pattern": "Forecast \\| Revenue \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| ([\\d,]+) \\| \\| \\$ \\| ([\\d,]+) \\|",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm",
+    "source_sha256": "6d873845682809c44096b29783bdc3c44306b1394f6b825a64141b737365f383",
+    "extractor": "regex-v1:NFLX:revenue_guidance",
+    "low": 13442.0,
+    "high": 13442.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 12560.0,
+    "unit": "USD_millions",
+    "snippet": "Forecast | Revenue | $ | 11,079 | | $ | 11,510 | | $ | 12,051 | | $ | 12,250 | | $ | 12,560 | | $ | 12,860 |",
+    "pattern": "Forecast \\| Revenue \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| [\\d,]+ \\| \\| \\$ \\| ([\\d,]+) \\| \\| \\$ \\| ([\\d,]+) \\|",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm",
+    "source_sha256": "541ed64a856024cc4ada73a1e4fae6b48ce1a4752783b5d506cb94a370f1a2e3",
+    "extractor": "regex-v1:NFLX:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 12860.0,
+   "revenue_actual": 12874.0,
+   "guidance_surprise_pct": 0.109,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 13442.0,
+   "guided_sequential_growth_pct": 4.412,
+   "prior_guided_sequential_growth_pct": 2.389,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
