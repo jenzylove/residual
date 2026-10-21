@@ -30328,5 +30328,157 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "LRCX-2026-10-21",
+  "consensus": null,
+  "ticker": "LRCX",
+  "company_symbol": "LRCXUSDT",
+  "sector_group": "semis",
+  "cik": 707549,
+  "accession": "0000707549-26-000052",
+  "release_utc": "2026-10-21T20:13:03Z",
+  "release_ms": 1792613583000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/",
+   "sha256": "b4ca6e79094ac4fd5e7f59fbe9ce5db207d04eaa3bee4f879f0fc59d384863a8",
+   "cache_file": "data/cache/8d8e2b5ea479d72e98bcc489.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000033/lrcx_exhibitx991xq4x2026.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000033/",
+   "accession": "0000707549-26-000033",
+   "cache_file": "data/cache/0cefe3e81918c995596cfc58.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 8220.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $8.22 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm",
+    "source_sha256": "b4ca6e79094ac4fd5e7f59fbe9ce5db207d04eaa3bee4f879f0fc59d384863a8",
+    "extractor": "regex-v1:LRCX:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 8100.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $8.10 Billion | +/- | $400 Million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) Billion \\| \\+/- \\| \\$(\\d+) Million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000033/lrcx_exhibitx991xq4x2026.htm",
+    "source_sha256": "68933a9a068f9d702468f14cf65435624027aac0e7d3d76e143f095bc78e9e04",
+    "extractor": "regex-v1:LRCX:revenue_guidance",
+    "low": 7700.0,
+    "high": 8500.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 8600.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue | $8.60 Billion | +/- | $400 Million",
+    "pattern": "Revenue \\| \\$(\\d+(?:\\.\\d+)?) Billion \\| \\+/- \\| \\$(\\d+) Million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm",
+    "source_sha256": "b4ca6e79094ac4fd5e7f59fbe9ce5db207d04eaa3bee4f879f0fc59d384863a8",
+    "extractor": "regex-v1:LRCX:revenue_guidance",
+    "low": 8200.0,
+    "high": 9000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 6720.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $6.72 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000033/lrcx_exhibitx991xq4x2026.htm",
+    "source_sha256": "68933a9a068f9d702468f14cf65435624027aac0e7d3d76e143f095bc78e9e04",
+    "extractor": "regex-v1:LRCX:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 2.19,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $2.19",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm",
+    "source_sha256": "b4ca6e79094ac4fd5e7f59fbe9ce5db207d04eaa3bee4f879f0fc59d384863a8",
+    "extractor": "regex-v1:LRCX:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "With AI driving higher semiconductor demand and greater device complexity, our focus on operational execution helped Lam deliver record revenue, profit, and earnings per share in the September quarter,",
+   "speaker": "Tim Archer, Lam Research's President and Chief Executive Officer",
+   "snippet": "\"With AI driving higher semiconductor demand and greater device complexity, our focus on operational execution helped Lam deliver record revenue, profit, and earnings per share in the September quarter,\" said Tim Archer, Lam Research's President and Chief Executive Officer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm",
+   "source_sha256": "b4ca6e79094ac4fd5e7f59fbe9ce5db207d04eaa3bee4f879f0fc59d384863a8"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 8100.0,
+   "revenue_actual": 8220.0,
+   "guidance_surprise_pct": 1.481,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 8600.0,
+   "guided_sequential_growth_pct": 4.623,
+   "prior_guided_sequential_growth_pct": 20.536,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
