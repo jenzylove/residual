@@ -30040,5 +30040,293 @@
    }
   },
   "status": "not_an_earnings_release"
+ },
+ {
+  "event_id": "META-2026-10-21",
+  "consensus": null,
+  "ticker": "META",
+  "company_symbol": "METAUSDT",
+  "sector_group": "internet",
+  "cik": 1326801,
+  "accession": "0001628280-26-066700",
+  "release_utc": "2026-10-21T20:03:35Z",
+  "release_ms": 1792613015000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/",
+   "sha256": "b8674578d323d84cf8e25e5bc1b09f036581a50c187b36a772ebf6c65784004d",
+   "cache_file": "data/cache/22a882bd9f4c60a9fbd7f715.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/",
+   "accession": "0001628280-26-050596",
+   "cache_file": "data/cache/ca063fe0f48acfe864b4d851.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 64600.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $64.60 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+    "source_sha256": "b8674578d323d84cf8e25e5bc1b09f036581a50c187b36a772ebf6c65784004d",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 62500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $61-64 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+    "source_sha256": "1e1495a06606b1511cf57a2079b1916a1e2d1e3bf0f0a115a7b3790d3740f1b8",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 61000.0,
+    "high": 64000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 74500.0,
+    "unit": "USD_millions",
+    "snippet": "total revenue to be in the range of $73-76 billion",
+    "pattern": "total revenue to be in the range of \\$(\\d+(?:\\.\\d+)?)-(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+    "source_sha256": "b8674578d323d84cf8e25e5bc1b09f036581a50c187b36a772ebf6c65784004d",
+    "extractor": "regex-v1:META:revenue_guidance",
+    "low": 73000.0,
+    "high": 76000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 60800.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue was $60.80 billion",
+    "pattern": "Revenue was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+    "source_sha256": "1e1495a06606b1511cf57a2079b1916a1e2d1e3bf0f0a115a7b3790d3740f1b8",
+    "extractor": "regex-v1:META:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 3.83,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $3.83",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+    "source_sha256": "b8674578d323d84cf8e25e5bc1b09f036581a50c187b36a772ebf6c65784004d",
+    "extractor": "regex-v1:META:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We hit major milestones this quarter toward delivering personal superintelligence for everyone - including launching Muse and Muse Wonder, our first frontier model,",
+   "speaker": "Mark Zuckerberg, Meta founder and CEO",
+   "snippet": "\"We hit major milestones this quarter toward delivering personal superintelligence for everyone - including launching Muse and Muse Wonder, our first frontier model,\" said Mark Zuckerberg, Meta founder and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+   "source_sha256": "b8674578d323d84cf8e25e5bc1b09f036581a50c187b36a772ebf6c65784004d"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 62500.0,
+   "revenue_actual": 64600.0,
+   "guidance_surprise_pct": 3.36,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 74500.0,
+   "guided_sequential_growth_pct": 15.325,
+   "prior_guided_sequential_growth_pct": 2.796,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "TXN-2026-10-21",
+  "consensus": null,
+  "ticker": "TXN",
+  "company_symbol": "TXNUSDT",
+  "sector_group": "semis",
+  "cik": 97476,
+  "accession": "0000097476-26-000165",
+  "release_utc": "2026-10-21T20:04:14Z",
+  "release_ms": 1792613054000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000165/q32026txnex99-eredgar.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000165/",
+   "sha256": "ac247ea8fa6ffeb2a9790817de4ba4a3dd6bd11cbeb75b109c7245ded4a4fa2a",
+   "cache_file": "data/cache/4a207c21b1b7e5cb95f73c13.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000148/q22026txnex99-eredgar.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000148/",
+   "accession": "0000097476-26-000148",
+   "cache_file": "data/cache/9a097e10ff8840b0414c914d.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 6060.0,
+    "unit": "USD_millions",
+    "snippet": "reported third quarter revenue of $6.06 billion",
+    "pattern": "reported \\w+ quarter revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000165/q32026txnex99-eredgar.htm",
+    "source_sha256": "ac247ea8fa6ffeb2a9790817de4ba4a3dd6bd11cbeb75b109c7245ded4a4fa2a",
+    "extractor": "regex-v1:TXN:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 5900.0,
+    "unit": "USD_millions",
+    "snippet": "outlook is for revenue in the range of $5.65 billion to $6.15 billion",
+    "pattern": "outlook is for revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000148/q22026txnex99-eredgar.htm",
+    "source_sha256": "c2d889a96786d68b653b3e30433e0a2e953f7bd57693cfa2e4dd7ada18fb3dd2",
+    "extractor": "regex-v1:TXN:revenue_guidance",
+    "low": 5650.0,
+    "high": 6150.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 6050.0,
+    "unit": "USD_millions",
+    "snippet": "outlook is for revenue in the range of $5.80 billion to $6.30 billion",
+    "pattern": "outlook is for revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000165/q32026txnex99-eredgar.htm",
+    "source_sha256": "ac247ea8fa6ffeb2a9790817de4ba4a3dd6bd11cbeb75b109c7245ded4a4fa2a",
+    "extractor": "regex-v1:TXN:revenue_guidance",
+    "low": 5800.0,
+    "high": 6300.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 5460.0,
+    "unit": "USD_millions",
+    "snippet": "reported second quarter revenue of $5.46 billion",
+    "pattern": "reported \\w+ quarter revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000148/q22026txnex99-eredgar.htm",
+    "source_sha256": "c2d889a96786d68b653b3e30433e0a2e953f7bd57693cfa2e4dd7ada18fb3dd2",
+    "extractor": "regex-v1:TXN:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 5900.0,
+   "revenue_actual": 6060.0,
+   "guidance_surprise_pct": 2.712,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 6050.0,
+   "guided_sequential_growth_pct": -0.165,
+   "prior_guided_sequential_growth_pct": 8.059,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
