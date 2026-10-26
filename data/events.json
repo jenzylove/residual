@@ -30480,5 +30480,147 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "AMKR-2026-10-26",
+  "consensus": null,
+  "ticker": "AMKR",
+  "company_symbol": "AMKRUSDT",
+  "sector_group": "semis",
+  "cik": 1047127,
+  "accession": "0001047127-26-000049",
+  "release_utc": "2026-10-26T20:07:24Z",
+  "release_ms": 1793045244000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr9302026erex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/",
+   "sha256": "6b9ec0e6b78d1fefb76297f00ab19f35dbf524229fc5f3869bd6f88d19baf4d9",
+   "cache_file": "data/cache/e7d3ab4deb4d95167ca6a638.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr6302026erex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/",
+   "accession": "0001047127-26-000043",
+   "cache_file": "data/cache/a6e0dfe674f0c5703049df87.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 1990.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales $1.99 billion",
+    "pattern": "[Nn]et sales \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr9302026erex-991.htm",
+    "source_sha256": "6b9ec0e6b78d1fefb76297f00ab19f35dbf524229fc5f3869bd6f88d19baf4d9",
+    "extractor": "regex-v1:AMKR:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 2000.0,
+    "unit": "USD_millions",
+    "snippet": "\u2022 Net sales of $1.95 billion to $2.05 billion",
+    "pattern": "\u2022 Net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr6302026erex-991.htm",
+    "source_sha256": "c21a9dde43f0dc535073940fc6108a85241b13634a135a7b9b9f17d52bc54045",
+    "extractor": "regex-v1:AMKR:revenue_guidance",
+    "low": 1950.0,
+    "high": 2050.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 1950.0,
+    "unit": "USD_millions",
+    "snippet": "\u2022 Net sales of $1.9 billion to $2.0 billion",
+    "pattern": "\u2022 Net sales of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr9302026erex-991.htm",
+    "source_sha256": "6b9ec0e6b78d1fefb76297f00ab19f35dbf524229fc5f3869bd6f88d19baf4d9",
+    "extractor": "regex-v1:AMKR:revenue_guidance",
+    "low": 1900.0,
+    "high": 2000.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 1900.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales $1.90 billion",
+    "pattern": "[Nn]et sales \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr6302026erex-991.htm",
+    "source_sha256": "c21a9dde43f0dc535073940fc6108a85241b13634a135a7b9b9f17d52bc54045",
+    "extractor": "regex-v1:AMKR:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Amkor delivered a strong quarter, with record revenue in Computing and Automotive & Industrial end markets and continued margin expansion, despite expected weakness in Communications,",
+   "speaker": "Kevin Engel, Amkor's president and chief executive officer",
+   "snippet": "\"Amkor delivered a strong quarter, with record revenue in Computing and Automotive & Industrial end markets and continued margin expansion, despite expected weakness in Communications,\" said Kevin Engel, Amkor's president and chief executive officer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr9302026erex-991.htm",
+   "source_sha256": "6b9ec0e6b78d1fefb76297f00ab19f35dbf524229fc5f3869bd6f88d19baf4d9"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 2000.0,
+   "revenue_actual": 1990.0,
+   "guidance_surprise_pct": -0.5,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 1950.0,
+   "guided_sequential_growth_pct": -2.01,
+   "prior_guided_sequential_growth_pct": 5.263,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
