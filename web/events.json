@@ -30622,5 +30622,157 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "STX-2026-10-27",
+  "consensus": null,
+  "ticker": "STX",
+  "company_symbol": "STXUSDT",
+  "sector_group": "hardware",
+  "cik": 1137789,
+  "accession": "0001137789-26-000300",
+  "release_utc": "2026-10-27T20:12:44Z",
+  "release_ms": 1793131964000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/stxq12027pressreleasefinan.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/",
+   "sha256": "39f207966e7e739c3fa08a24dccb93876ddc1febc8a26c71981655f3b96ad562",
+   "cache_file": "data/cache/e01ab61a4d7d0c6d189dcb6c.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000153/stxq42026pressreleasefinan.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000153/",
+   "accession": "0001137789-26-000153",
+   "cache_file": "data/cache/c28468109737407841321edb.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 4200.0,
+    "unit": "USD_millions",
+    "snippet": "Highlights \u25aa Revenue of $4.2 billion",
+    "pattern": "Highlights \u25aa Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/stxq12027pressreleasefinan.htm",
+    "source_sha256": "39f207966e7e739c3fa08a24dccb93876ddc1febc8a26c71981655f3b96ad562",
+    "extractor": "regex-v1:STX:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 4100.0,
+    "unit": "USD_millions",
+    "snippet": "\u2022 Revenue of $4.1 billion, plus or minus $100 million",
+    "pattern": "\u2022 Revenue of \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000153/stxq42026pressreleasefinan.htm",
+    "source_sha256": "e9999f9a13cad77368d6c15ebc55ab9c35b5bf8537b34aee8e97a22b44f6b3dd",
+    "extractor": "regex-v1:STX:revenue_guidance",
+    "low": 4000.0,
+    "high": 4200.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 4800.0,
+    "unit": "USD_millions",
+    "snippet": "\u2022 Revenue of $4.8 billion, plus or minus $100 million",
+    "pattern": "\u2022 Revenue of \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/stxq12027pressreleasefinan.htm",
+    "source_sha256": "39f207966e7e739c3fa08a24dccb93876ddc1febc8a26c71981655f3b96ad562",
+    "extractor": "regex-v1:STX:revenue_guidance",
+    "low": 4700.0,
+    "high": 4900.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 3600.0,
+    "unit": "USD_millions",
+    "snippet": "Highlights \u25aa Revenue of $3.6 billion",
+    "pattern": "Highlights \u25aa Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000153/stxq42026pressreleasefinan.htm",
+    "source_sha256": "e9999f9a13cad77368d6c15ebc55ab9c35b5bf8537b34aee8e97a22b44f6b3dd",
+    "extractor": "regex-v1:STX:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 7.68,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $7.68",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/stxq12027pressreleasefinan.htm",
+    "source_sha256": "39f207966e7e739c3fa08a24dccb93876ddc1febc8a26c71981655f3b96ad562",
+    "extractor": "regex-v1:STX:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Seagate delivered another quarter of record profitability and our highest ever free cash flow in the September quarter, demonstrating the earnings power of our business amid a strengthening demand environment,",
+   "speaker": "Dave Mosley, Seagate's chair and chief executive officer",
+   "snippet": "\"Seagate delivered another quarter of record profitability and our highest ever free cash flow in the September quarter, demonstrating the earnings power of our business amid a strengthening demand environment,\" said Dave Mosley, Seagate's chair and chief executive officer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/stxq12027pressreleasefinan.htm",
+   "source_sha256": "39f207966e7e739c3fa08a24dccb93876ddc1febc8a26c71981655f3b96ad562"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 4100.0,
+   "revenue_actual": 4200.0,
+   "guidance_surprise_pct": 2.439,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 4800.0,
+   "guided_sequential_growth_pct": 14.286,
+   "prior_guided_sequential_growth_pct": 13.889,
+   "guidance_direction": "maintained"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
