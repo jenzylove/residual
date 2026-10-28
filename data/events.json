@@ -31068,5 +31068,157 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "FLEX-2026-10-28",
+  "consensus": null,
+  "ticker": "FLEX",
+  "company_symbol": "FLEXUSDT",
+  "sector_group": "hardware",
+  "cik": 866374,
+  "accession": "0000866374-26-000039",
+  "release_utc": "2026-10-28T11:10:19Z",
+  "release_ms": 1793185819000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000039/flexex991-9252026.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000039/",
+   "sha256": "314caff641e09f82279c571e0c79041f05e7fca3d645cb6f4e77d822a80de2fa",
+   "cache_file": "data/cache/20f27164641d25eb97a3ab65.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000026/flexex991-6262026.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000026/",
+   "accession": "0000866374-26-000026",
+   "cache_file": "data/cache/61968a0d532547e9cdbb0d00.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 8500.0,
+    "unit": "USD_millions",
+    "snippet": "net sales of $8.5 billion",
+    "pattern": "(?:Net Sales: |net sales of )\\$(\\d+(?:\\.\\d+)?) billion(?! to)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000039/flexex991-9252026.htm",
+    "source_sha256": "314caff641e09f82279c571e0c79041f05e7fca3d645cb6f4e77d822a80de2fa",
+    "extractor": "regex-v1:FLEX:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 8100.0,
+    "unit": "USD_millions",
+    "snippet": "Net Sales: $7.95 billion to $8.25 billion",
+    "pattern": "(?:Revenue|Net Sales): \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000026/flexex991-6262026.htm",
+    "source_sha256": "374c318e468f73ab7b07d3bd721960fc0ca52df2f671897daece92c5fb81a25c",
+    "extractor": "regex-v1:FLEX:revenue_guidance",
+    "low": 7950.0,
+    "high": 8250.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 9020.0,
+    "unit": "USD_millions",
+    "snippet": "Net Sales: $8.87 billion to $9.17 billion",
+    "pattern": "(?:Revenue|Net Sales): \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000039/flexex991-9252026.htm",
+    "source_sha256": "314caff641e09f82279c571e0c79041f05e7fca3d645cb6f4e77d822a80de2fa",
+    "extractor": "regex-v1:FLEX:revenue_guidance",
+    "low": 8870.0,
+    "high": 9170.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 7900.0,
+    "unit": "USD_millions",
+    "snippet": "net sales of $7.9 billion",
+    "pattern": "(?:Net Sales: |net sales of )\\$(\\d+(?:\\.\\d+)?) billion(?! to)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000026/flexex991-6262026.htm",
+    "source_sha256": "374c318e468f73ab7b07d3bd721960fc0ca52df2f671897daece92c5fb81a25c",
+    "extractor": "regex-v1:FLEX:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 0.7,
+    "unit": "USD_per_share",
+    "snippet": "GAAP EPS of $0.70",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000039/flexex991-9252026.htm",
+    "source_sha256": "314caff641e09f82279c571e0c79041f05e7fca3d645cb6f4e77d822a80de2fa",
+    "extractor": "regex-v1:FLEX:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We continue to execute from a position of strength while advancing our planned spin-off of our Cloud and Power Infrastructure segment. Our acquisition of EPC Power further completes our end-to-end Power portfolio and will be immediately accretive in fiscal 2027, while the unveiling of the Axiom name and anticipated leadership marks another important step toward creating two focused companies positioned for long-term success,",
+   "speaker": "Revathi Advaithi, CEO of Flex",
+   "snippet": "\"We continue to execute from a position of strength while advancing our planned spin-off of our Cloud and Power Infrastructure segment. Our acquisition of EPC Power further completes our end-to-end Power portfolio and will be immediately accretive in fiscal 2027, while the unveiling of the Axiom name and anticipated leadership marks another important step toward creating two focused companies positioned for long-term success,\" said Revathi Advaithi, CEO of Flex",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000039/flexex991-9252026.htm",
+   "source_sha256": "314caff641e09f82279c571e0c79041f05e7fca3d645cb6f4e77d822a80de2fa"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 8100.0,
+   "revenue_actual": 8500.0,
+   "guidance_surprise_pct": 4.938,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 9020.0,
+   "guided_sequential_growth_pct": 6.118,
+   "prior_guided_sequential_growth_pct": 2.532,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
