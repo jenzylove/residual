@@ -31220,5 +31220,157 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "KLAC-2026-10-28",
+  "consensus": null,
+  "ticker": "KLAC",
+  "company_symbol": "KLACUSDT",
+  "sector_group": "semis",
+  "cik": 319201,
+  "accession": "0000319201-26-000032",
+  "release_utc": "2026-10-28T20:07:50Z",
+  "release_ms": 1793218070000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/exhibit991earningsrelease0.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/",
+   "sha256": "5e5e022ecaecf5e2f71a5bba3835ffd225ea18c9ba15f0c664e0301554a78541",
+   "cache_file": "data/cache/a2f4c60222e01f69993684d0.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000024/exhibit991earningsrelease7.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000024/",
+   "accession": "0000319201-26-000024",
+   "cache_file": "data/cache/02780e2e554791bc7c5a3391.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 4140.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenues were $4.14 billion",
+    "pattern": "total revenues were \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/exhibit991earningsrelease0.htm",
+    "source_sha256": "5e5e022ecaecf5e2f71a5bba3835ffd225ea18c9ba15f0c664e0301554a78541",
+    "extractor": "regex-v1:KLAC:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 4000.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenues are expected to be in a range of $4.0 billion +/- $200 million",
+    "pattern": "Total revenues are expected to be in a range of \\$(\\d+(?:\\.\\d+)?) billion \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000024/exhibit991earningsrelease7.htm",
+    "source_sha256": "a4ae78a48a2e5f1924f860ddf20380745c9a22c27f2b1129bbacb868c8e90ab5",
+    "extractor": "regex-v1:KLAC:revenue_guidance",
+    "low": 3800.0,
+    "high": 4200.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 4700.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenues are expected to be in a range of $4.7 billion +/- $200 million",
+    "pattern": "Total revenues are expected to be in a range of \\$(\\d+(?:\\.\\d+)?) billion \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/exhibit991earningsrelease0.htm",
+    "source_sha256": "5e5e022ecaecf5e2f71a5bba3835ffd225ea18c9ba15f0c664e0301554a78541",
+    "extractor": "regex-v1:KLAC:revenue_guidance",
+    "low": 4500.0,
+    "high": 4900.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 3660.0,
+    "unit": "USD_millions",
+    "snippet": "total revenues were $3.66 billion",
+    "pattern": "total revenues were \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000024/exhibit991earningsrelease7.htm",
+    "source_sha256": "a4ae78a48a2e5f1924f860ddf20380745c9a22c27f2b1129bbacb868c8e90ab5",
+    "extractor": "regex-v1:KLAC:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.18,
+    "unit": "USD_per_share",
+    "snippet": "EPS was $1.18",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/exhibit991earningsrelease0.htm",
+    "source_sha256": "5e5e022ecaecf5e2f71a5bba3835ffd225ea18c9ba15f0c664e0301554a78541",
+    "extractor": "regex-v1:KLAC:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "KLA's September quarter beat the midpoint of guidance across all key metrics, demonstrating the accelerated growth we expected for the second half of calendar 2026,",
+   "speaker": "Rick Wallace, president and CEO of KLA Corporation",
+   "snippet": "\"KLA's September quarter beat the midpoint of guidance across all key metrics, demonstrating the accelerated growth we expected for the second half of calendar 2026,\" said Rick Wallace, president and CEO of KLA Corporation",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/exhibit991earningsrelease0.htm",
+   "source_sha256": "5e5e022ecaecf5e2f71a5bba3835ffd225ea18c9ba15f0c664e0301554a78541"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 4000.0,
+   "revenue_actual": 4140.0,
+   "guidance_surprise_pct": 3.5,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 4700.0,
+   "guided_sequential_growth_pct": 13.527,
+   "prior_guided_sequential_growth_pct": 9.29,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
