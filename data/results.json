@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T21:36:13+00:00",
+ "generated_at": "2026-10-29T21:46:12+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -89594,7 +89594,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNZFPtcEoJBHe4R6SW\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8k411Sy7ZqNF3XBYe\"}"
      }
     },
     "size": 0.0
@@ -89617,7 +89617,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNZFPtcEoJBHe4R6SW\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8k411Sy7ZqNF3XBYe\"}"
    },
    "residual": null,
    "naive": {
@@ -89893,7 +89893,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNZntbj7M5Vx5eC7XE\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8keEaNYH2XuJQrCrH\"}"
      }
     },
     "size": 0.0
@@ -89916,7 +89916,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNZntbj7M5Vx5eC7XE\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8keEaNYH2XuJQrCrH\"}"
    },
    "residual": null,
    "naive": {
@@ -90193,7 +90193,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNaJeH6vqjcaWgxK74\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8mBDnFC6p2emcDTuU\"}"
      }
     },
     "size": 0.0
@@ -90216,7 +90216,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNaJeH6vqjcaWgxK74\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8mBDnFC6p2emcDTuU\"}"
    },
    "residual": null,
    "naive": {
@@ -90509,7 +90509,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNawMeht6EvNECHhUA\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8mekPwTkmh2MLKkku\"}"
      }
     },
     "size": 0.0
@@ -90532,7 +90532,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNawMeht6EvNECHhUA\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8mekPwTkmh2MLKkku\"}"
    },
    "residual": null,
    "naive": {
@@ -90828,7 +90828,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNbUqgzMxaucfLADsh\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8n5J33cipQpJxykAZ\"}"
      }
     },
     "size": 0.0
@@ -90851,7 +90851,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNbUqgzMxaucfLADsh\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8n5J33cipQpJxykAZ\"}"
    },
    "residual": null,
    "naive": {
@@ -91151,7 +91151,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNbyrqB5M4TcQKcfYh\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8nY5UGaoWhez68SS2\"}"
      }
     },
     "size": 0.0
@@ -91174,7 +91174,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNbyrqB5M4TcQKcfYh\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8nY5UGaoWhez68SS2\"}"
    },
    "residual": null,
    "naive": {
@@ -91467,7 +91467,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNcSPVCY2jKK7EtcrD\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8o5pyi2Vbq4AuafVE\"}"
      }
     },
     "size": 0.0
@@ -91490,7 +91490,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNcSPVCY2jKK7EtcrD\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8o5pyi2Vbq4AuafVE\"}"
    },
    "residual": null,
    "naive": {
@@ -91787,7 +91787,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNcxeF6341ojPHbo1a\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8oZbcBWNpwX5qH4SA\"}"
      }
     },
     "size": 0.0
@@ -91810,7 +91810,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNcxeF6341ojPHbo1a\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8oZbcBWNpwX5qH4SA\"}"
    },
    "residual": null,
    "naive": {
@@ -92096,7 +92096,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNdWPMDorwJFW4ZjxV\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8p1dxd5w75Pd74Ajs\"}"
      }
     },
     "size": 0.0
@@ -92119,7 +92119,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXFNdWPMDorwJFW4ZjxV\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXG8p1dxd5w75Pd74Ajs\"}"
    },
    "residual": null,
    "naive": {
