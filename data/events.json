@@ -32233,5 +32233,117 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "MRVL-2026-11-02",
+  "consensus": null,
+  "ticker": "MRVL",
+  "company_symbol": "MRVLUSDT",
+  "sector_group": "semis",
+  "cik": 1835632,
+  "accession": "0001193125-26-442714",
+  "release_utc": "2026-11-02T13:06:04Z",
+  "release_ms": 1793624764000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/",
+   "sha256": null,
+   "cache_file": "data/cache/4125e981e18f5182fe470637.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/",
+   "accession": "0001835632-26-000022",
+   "cache_file": "data/cache/60a923bfdb4063b594678b2e.bin"
+  },
+  "earnings": {
+   "revenue_actual": null,
+   "revenue_guidance_prior": {
+    "value": 3150.0,
+    "unit": "USD_millions",
+    "snippet": "Net revenue is expected to be $3.150 billion +/- 5%",
+    "pattern": "Net revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion \\+/- (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+    "source_sha256": "d1716f15152f71a1128438001d28ce360d707a9e8b2d4b267e002aaeaa36ede2",
+    "extractor": "regex-v1:MRVL:revenue_guidance",
+    "low": 2992.5,
+    "high": 3307.5,
+    "verified": true
+   },
+   "revenue_guidance_next": null,
+   "revenue_prior_actual": {
+    "value": 2739.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the second quarter of fiscal 2027 was $2.739 billion",
+    "pattern": "revenue for the \\w+ quarter of fiscal \\d{4} was \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm",
+    "source_sha256": "d1716f15152f71a1128438001d28ce360d707a9e8b2d4b267e002aaeaa36ede2",
+    "extractor": "regex-v1:MRVL:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "AI infrastructure is undergoing a fundamental architectural shift toward optical connectivity, creating an opportunity that comes along once in a generation,",
+   "speaker": "Matt Murphy, Chairman and CEO of Marvell",
+   "snippet": "\"AI infrastructure is undergoing a fundamental architectural shift toward optical connectivity, creating an opportunity that comes along once in a generation,\" said Matt Murphy, Chairman and CEO of Marvell",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
+   "source_sha256": "69151897719d3e3aa3b7b1940aeb3b0a5daef94d6abcd4c0b9a709dbbf697340"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_actual",
+    "revenue_guidance_next"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "not_an_earnings_release"
  }
 ]
