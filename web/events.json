@@ -32497,5 +32497,420 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "OUST-2026-11-03",
+  "consensus": null,
+  "ticker": "OUST",
+  "company_symbol": "OUSTUSDT",
+  "sector_group": "hardware",
+  "cik": 1816581,
+  "accession": "0001628280-26-069487",
+  "release_utc": "2026-11-03T21:08:12Z",
+  "release_ms": 1793740092000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/",
+   "sha256": "89162b05dd6808c6abe5942ef690008d4d8b2a5672f4ed24baee3928fa627629",
+   "cache_file": "data/cache/448710cbce77d47b82db5a88.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026054297/exhibit991-6302026.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026054297/",
+   "accession": "0001628280-26-054297",
+   "cache_file": "data/cache/649a272a7e2a27500aad419a.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 59.0,
+    "unit": "USD_millions",
+    "snippet": "delivered third quarter revenue of $59 million",
+    "pattern": "delivered (?:\\w+ quarter )?(?:quarterly )?revenue of \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm",
+    "source_sha256": "89162b05dd6808c6abe5942ef690008d4d8b2a5672f4ed24baee3928fa627629",
+    "extractor": "regex-v1:OUST:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 56.0,
+    "unit": "USD_millions",
+    "snippet": "Ouster expects to achieve $54.5 million to $57.5 million",
+    "pattern": "Ouster expects to achieve \\$(\\d+(?:\\.\\d+)?)(?: million)? to \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026054297/exhibit991-6302026.htm",
+    "source_sha256": "7498412d14ceb80f91db93471104a48b2e810d73779567ec6fdb62081a9049ab",
+    "extractor": "regex-v1:OUST:revenue_guidance",
+    "low": 54.5,
+    "high": 57.5,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 62.5,
+    "unit": "USD_millions",
+    "snippet": "Ouster expects to achieve $61 million to $64 million",
+    "pattern": "Ouster expects to achieve \\$(\\d+(?:\\.\\d+)?)(?: million)? to \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm",
+    "source_sha256": "89162b05dd6808c6abe5942ef690008d4d8b2a5672f4ed24baee3928fa627629",
+    "extractor": "regex-v1:OUST:revenue_guidance",
+    "low": 61.0,
+    "high": 64.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 55.0,
+    "unit": "USD_millions",
+    "snippet": "delivered second quarter revenue of $55 million",
+    "pattern": "delivered (?:\\w+ quarter )?(?:quarterly )?revenue of \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026054297/exhibit991-6302026.htm",
+    "source_sha256": "7498412d14ceb80f91db93471104a48b2e810d73779567ec6fdb62081a9049ab",
+    "extractor": "regex-v1:OUST:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We delivered a strong third quarter, with $59 million in revenue and more than 27,000 t otal sensors shipped, cementing Ouster's evolution into a comprehensive platform that meets the diverse, global demands of Physical AI. Our Stereolabs cameras had a record quarter of shipments, unlocked by our investments in capacity to meet surging growth in the robotics sector,",
+   "speaker": "Ouster CEO Angus Pacala",
+   "snippet": "\"We delivered a strong third quarter, with $59 million in revenue and more than 27,000 t otal sensors shipped, cementing Ouster's evolution into a comprehensive platform that meets the diverse, global demands of Physical AI. Our Stereolabs cameras had a record quarter of shipments, unlocked by our investments in capacity to meet surging growth in the robotics sector,\" said Ouster CEO Angus Pacala",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm",
+   "source_sha256": "89162b05dd6808c6abe5942ef690008d4d8b2a5672f4ed24baee3928fa627629"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 56.0,
+   "revenue_actual": 59.0,
+   "guidance_surprise_pct": 5.357,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 62.5,
+   "guided_sequential_growth_pct": 5.932,
+   "prior_guided_sequential_growth_pct": 1.818,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "ALAB-2026-11-03",
+  "consensus": null,
+  "ticker": "ALAB",
+  "company_symbol": "ALABUSDT",
+  "sector_group": "semis",
+  "cik": 1736297,
+  "accession": "0001736297-26-000044",
+  "release_utc": "2026-11-03T21:09:51Z",
+  "release_ms": 1793740191000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000044/q326exhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000044/",
+   "sha256": "7caefbf22702e37942d1e070c5c68a5bccb65053d7932a97d0f25bf3ea55c472",
+   "cache_file": "data/cache/54c13ee2c256d9c944b96211.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/q226exhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/",
+   "accession": "0001736297-26-000033",
+   "cache_file": "data/cache/e92c96ef45e5a5be71c507d6.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 584.9,
+    "unit": "USD_millions",
+    "snippet": "Record quarterly revenue of $584.9 million",
+    "pattern": "Record quarterly revenue of \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000044/q326exhibit991.htm",
+    "source_sha256": "7caefbf22702e37942d1e070c5c68a5bccb65053d7932a97d0f25bf3ea55c472",
+    "extractor": "regex-v1:ALAB:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 550.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue within a range of $540 million to $560 million",
+    "pattern": "Revenue within a range of \\$([\\d,]+) million to \\$([\\d,]+) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/q226exhibit991.htm",
+    "source_sha256": "69289f6f77e3a10cb7eea4fa97a16526d5e11e118b1b3ccda77e594d7286e9a7",
+    "extractor": "regex-v1:ALAB:revenue_guidance",
+    "low": 540.0,
+    "high": 560.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 740.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue within a range of $730 million to $750 million",
+    "pattern": "Revenue within a range of \\$([\\d,]+) million to \\$([\\d,]+) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000044/q326exhibit991.htm",
+    "source_sha256": "7caefbf22702e37942d1e070c5c68a5bccb65053d7932a97d0f25bf3ea55c472",
+    "extractor": "regex-v1:ALAB:revenue_guidance",
+    "low": 730.0,
+    "high": 750.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 392.4,
+    "unit": "USD_millions",
+    "snippet": "Record quarterly revenue of $392.4 million",
+    "pattern": "Record quarterly revenue of \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/q226exhibit991.htm",
+    "source_sha256": "69289f6f77e3a10cb7eea4fa97a16526d5e11e118b1b3ccda77e594d7286e9a7",
+    "extractor": "regex-v1:ALAB:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Astera Labs delivered outstanding Q3 2026 results, with record quarterly revenue of $584.9 million, up 49% sequentially and up 154% year-over-year, with broad-based growth led by Scorpio, which ramped to high-volume production and became our largest product family by revenue,",
+   "speaker": "Jitendra Mohan, Astera Labs' Chief Executive Officer",
+   "snippet": "\"Astera Labs delivered outstanding Q3 2026 results, with record quarterly revenue of $584.9 million, up 49% sequentially and up 154% year-over-year, with broad-based growth led by Scorpio, which ramped to high-volume production and became our largest product family by revenue,\" said Jitendra Mohan, Astera Labs' Chief Executive Officer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000044/q326exhibit991.htm",
+   "source_sha256": "7caefbf22702e37942d1e070c5c68a5bccb65053d7932a97d0f25bf3ea55c472"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 550.0,
+   "revenue_actual": 584.9,
+   "guidance_surprise_pct": 6.345,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 740.0,
+   "guided_sequential_growth_pct": 26.517,
+   "prior_guided_sequential_growth_pct": 40.163,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "ANET-2026-11-03",
+  "consensus": null,
+  "ticker": "ANET",
+  "company_symbol": "ANETUSDT",
+  "sector_group": "hardware",
+  "cik": 1596532,
+  "accession": "0001596532-26-000252",
+  "release_utc": "2026-11-03T21:10:17Z",
+  "release_ms": 1793740217000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/ex991q326-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/",
+   "sha256": "8d38db711ad4b8fc9d91ea7c2e7e287a653540a00949cda618a034c6e6154738",
+   "cache_file": "data/cache/d0c3b54b7ccba52746d6a68c.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/",
+   "accession": "0001596532-26-000174",
+   "cache_file": "data/cache/5de685d52502407edb759877.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 3660.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.66 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/ex991q326-earningsrelease.htm",
+    "source_sha256": "8d38db711ad4b8fc9d91ea7c2e7e287a653540a00949cda618a034c6e6154738",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 3300.0,
+    "unit": "USD_millions",
+    "snippet": "we expect: \u2022 Revenue of approximately $3.3 billion",
+    "pattern": "we expect: .{0,20}Revenue of approximately \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+    "source_sha256": "ce6b698f1bef7431c9290d3d3ee09c3721f7c182c8115fa42aa83ff87532ea58",
+    "extractor": "regex-v1:ANET:revenue_guidance",
+    "low": 3300.0,
+    "high": 3300.0,
+    "verified": true
+   },
+   "revenue_guidance_next": null,
+   "revenue_prior_actual": {
+    "value": 3036.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $3.036 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm",
+    "source_sha256": "ce6b698f1bef7431c9290d3d3ee09c3721f7c182c8115fa42aa83ff87532ea58",
+    "extractor": "regex-v1:ANET:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.22,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share of $1.22",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/ex991q326-earningsrelease.htm",
+    "source_sha256": "8d38db711ad4b8fc9d91ea7c2e7e287a653540a00949cda618a034c6e6154738",
+    "extractor": "regex-v1:ANET:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Arista registered another momentous quarter with the highest year-over-year revenue growth since our IPO and record profitability, surpassing even my high expectations,",
+   "speaker": "Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "snippet": "\"Arista registered another momentous quarter with the highest year-over-year revenue growth since our IPO and record profitability, surpassing even my high expectations,\" stated Jayshree Ullal, Chairperson and CEO of Arista Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/ex991q326-earningsrelease.htm",
+   "source_sha256": "8d38db711ad4b8fc9d91ea7c2e7e287a653540a00949cda618a034c6e6154738"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_guidance_next"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
  }
 ]
