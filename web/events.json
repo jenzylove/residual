@@ -33053,5 +33053,117 @@
    }
   },
   "status": "data_incomplete"
+ },
+ {
+  "event_id": "SMCI-2026-11-03",
+  "consensus": null,
+  "ticker": "SMCI",
+  "company_symbol": "SMCIUSDT",
+  "sector_group": "hardware",
+  "cik": 1375365,
+  "accession": "0001375365-26-000026",
+  "release_utc": "2026-11-03T21:31:04Z",
+  "release_ms": 1793741464000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/",
+   "sha256": "4e307d2fd56b9193188a11eb5b6a5331978cbb260521299185213225c4833eba",
+   "cache_file": "data/cache/c558076a079fbf25936bcfdd.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/",
+   "accession": "0001375365-26-000025",
+   "cache_file": "data/cache/9f7d84467b98957b8cb6bed4.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 19900.0,
+    "unit": "USD_millions",
+    "snippet": "Net sales of $19.9 billion versus",
+    "pattern": "Net sales of \\$(\\d+(?:\\.\\d+)?) billion versus",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm",
+    "source_sha256": "4e307d2fd56b9193188a11eb5b6a5331978cbb260521299185213225c4833eba",
+    "extractor": "regex-v1:SMCI:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": null,
+   "revenue_guidance_next": {
+    "value": 20500.0,
+    "unit": "USD_millions",
+    "snippet": "The Company expects net sales in the range of $19.5 billion and $21.5 billion",
+    "pattern": "The Company expects net sales in the range of \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm",
+    "source_sha256": "4e307d2fd56b9193188a11eb5b6a5331978cbb260521299185213225c4833eba",
+    "extractor": "regex-v1:SMCI:revenue_guidance",
+    "low": 19500.0,
+    "high": 21500.0,
+    "verified": true
+   },
+   "revenue_prior_actual": null,
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Supermicro's transformation into a Total AI and IT Datacenter Solution provider continues to accelerate, delivering record revenue of $19.9 billion for the first quarter fiscal 2027,",
+   "speaker": "Charles Liang, Founder, President, and CEO of Supermicro",
+   "snippet": "\"Supermicro's transformation into a Total AI and IT Datacenter Solution provider continues to accelerate, delivering record revenue of $19.9 billion for the first quarter fiscal 2027,\" said Charles Liang, Founder, President, and CEO of Supermicro",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm",
+   "source_sha256": "4e307d2fd56b9193188a11eb5b6a5331978cbb260521299185213225c4833eba"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_guidance_prior",
+    "revenue_prior_actual"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
  }
 ]
