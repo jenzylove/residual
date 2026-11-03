@@ -32912,5 +32912,146 @@
    }
   },
   "status": "data_incomplete"
+ },
+ {
+  "event_id": "AMD-2026-11-03",
+  "consensus": null,
+  "ticker": "AMD",
+  "company_symbol": "AMDUSDT",
+  "sector_group": "semis",
+  "cik": 2488,
+  "accession": "0000002488-26-000188",
+  "release_utc": "2026-11-03T21:16:27Z",
+  "release_ms": 1793740587000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/",
+   "sha256": "bf1b5ea74541c160425095131f750a6ed1c35bfa3974d8a5be0ebe3a8187dfa3",
+   "cache_file": "data/cache/fcb061dfe821ac56fcbfee97.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/",
+   "accession": "0000002488-26-000121",
+   "cache_file": "data/cache/11d60f7e129ca1f5b54ef1ff.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 13400.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $13.4 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
+    "source_sha256": "bf1b5ea74541c160425095131f750a6ed1c35bfa3974d8a5be0ebe3a8187dfa3",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 13000.0,
+    "unit": "USD_millions",
+    "snippet": "AMD expects revenue to be approximately $13 billion, plus or minus $300 million",
+    "pattern": "AMD expects revenue to be approximately \\$(\\d+(?:\\.\\d+)?) billion, plus or minus \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+    "source_sha256": "0607c0c472c279363defc4ab1d6045a044de7b4be25d1f2cc3ac1aacc20506df",
+    "extractor": "regex-v1:AMD:revenue_guidance",
+    "low": 12700.0,
+    "high": 13300.0,
+    "verified": true
+   },
+   "revenue_guidance_next": null,
+   "revenue_prior_actual": {
+    "value": 11500.0,
+    "unit": "USD_millions",
+    "snippet": "revenue was $11.5 billion",
+    "pattern": "revenue was (?:a record )?\\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+    "source_sha256": "0607c0c472c279363defc4ab1d6045a044de7b4be25d1f2cc3ac1aacc20506df",
+    "extractor": "regex-v1:AMD:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.46,
+    "unit": "USD_per_share",
+    "snippet": "diluted earnings per share was $1.46",
+    "pattern": "diluted earnings per share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
+    "source_sha256": "bf1b5ea74541c160425095131f750a6ed1c35bfa3974d8a5be0ebe3a8187dfa3",
+    "extractor": "regex-v1:AMD:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": {
+    "value": 54.0,
+    "unit": "percent",
+    "snippet": "gross margin was 54%",
+    "pattern": "gross margin was (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
+    "source_sha256": "bf1b5ea74541c160425095131f750a6ed1c35bfa3974d8a5be0ebe3a8187dfa3",
+    "extractor": "regex-v1:AMD:gross_margin",
+    "verified": true
+   }
+  },
+  "commentary": {
+   "text": "Third quarter revenue grew 45% year-over-year to a record $13.4 billion, while non-GAAP earnings per share grew 74%, demonstrating the significant operating leverage in our business model as our Data Center business drives scale,",
+   "speaker": "Jean Hu, AMD executive vice president, chief financial officer and treasurer",
+   "snippet": "\"Third quarter revenue grew 45% year-over-year to a record $13.4 billion, while non-GAAP earnings per share grew 74%, demonstrating the significant operating leverage in our business model as our Data Center business drives scale,\" said Jean Hu, AMD executive vice president, chief financial officer and treasurer",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
+   "source_sha256": "bf1b5ea74541c160425095131f750a6ed1c35bfa3974d8a5be0ebe3a8187dfa3"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": true,
+     "detail": "ok"
+    }
+   ],
+   "missing_required": [
+    "revenue_guidance_next"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "reported"
+   }
+  },
+  "status": "data_incomplete"
  }
 ]
