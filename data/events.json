@@ -33737,5 +33737,141 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "AAOI-2026-11-05",
+  "consensus": null,
+  "ticker": "AAOI",
+  "company_symbol": "AAOIUSDT",
+  "sector_group": "hardware",
+  "cik": 1158114,
+  "accession": "0001683168-26-008351",
+  "release_utc": "2026-11-05T21:10:28Z",
+  "release_ms": 1793913028000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/aaoi_ex9901.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/",
+   "sha256": "abd8cb620bd1ae258fdc113e5485674343ffc43184794c82c3c72713627c72c9",
+   "cache_file": "data/cache/223688c9ada369b659ba7e39.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/aaoi_ex9901.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/",
+   "accession": "0001683168-26-006055",
+   "cache_file": "data/cache/36e037e0d7e014acaa53ae09.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 269.9,
+    "unit": "USD_millions",
+    "snippet": "GAAP revenue was $269.9 million",
+    "pattern": "GAAP revenue was \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/aaoi_ex9901.htm",
+    "source_sha256": "abd8cb620bd1ae258fdc113e5485674343ffc43184794c82c3c72713627c72c9",
+    "extractor": "regex-v1:AAOI:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 272.5,
+    "unit": "USD_millions",
+    "snippet": "Revenue in the range of $255 million to $290 million",
+    "pattern": "Revenue in the range of \\$([\\d,]+(?:\\.\\d+)?) million to \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/aaoi_ex9901.htm",
+    "source_sha256": "9789b5a04e63a23f8c6ba9a4e836826bfa00f119a645fe56e9e54c1aa5c48e41",
+    "extractor": "regex-v1:AAOI:revenue_guidance",
+    "low": 255.0,
+    "high": 290.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 402.5,
+    "unit": "USD_millions",
+    "snippet": "Revenue in the range of $385 million to $420 million",
+    "pattern": "Revenue in the range of \\$([\\d,]+(?:\\.\\d+)?) million to \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/aaoi_ex9901.htm",
+    "source_sha256": "abd8cb620bd1ae258fdc113e5485674343ffc43184794c82c3c72713627c72c9",
+    "extractor": "regex-v1:AAOI:revenue_guidance",
+    "low": 385.0,
+    "high": 420.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 191.9,
+    "unit": "USD_millions",
+    "snippet": "GAAP revenue was $191.9 million",
+    "pattern": "GAAP revenue was \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/aaoi_ex9901.htm",
+    "source_sha256": "9789b5a04e63a23f8c6ba9a4e836826bfa00f119a645fe56e9e54c1aa5c48e41",
+    "extractor": "regex-v1:AAOI:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": null,
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 272.5,
+   "revenue_actual": 269.9,
+   "guidance_surprise_pct": -0.954,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 402.5,
+   "guided_sequential_growth_pct": 49.129,
+   "prior_guided_sequential_growth_pct": 42.001,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
