@@ -34006,5 +34006,157 @@
    }
   },
   "status": "data_incomplete"
+ },
+ {
+  "event_id": "CSCO-2026-11-12",
+  "consensus": null,
+  "ticker": "CSCO",
+  "company_symbol": "CSCOUSDT",
+  "sector_group": "hardware",
+  "cik": 858877,
+  "accession": "0000858877-26-000170",
+  "release_utc": "2026-11-12T21:06:24Z",
+  "release_ms": 1794517584000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/",
+   "sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+   "cache_file": "data/cache/7d1290a9f6d0e44cb15a1ad0.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/",
+   "accession": "0000858877-26-000106",
+   "cache_file": "data/cache/6d78ff3e205235693821bf8d.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 18500.0,
+    "unit": "USD_millions",
+    "snippet": "Results: \u25e6 Revenue: $18.5 billion",
+    "pattern": "Results: \u25e6 Revenue: \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+    "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+    "extractor": "regex-v1:CSCO:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 18100.0,
+    "unit": "USD_millions",
+    "snippet": "Q1 FY 2027 | | | Revenue | | $18.0 billion - $18.2 billion",
+    "pattern": "Q\\d FY \\d{4} [| ]*Revenue [| ]*\\$(\\d+(?:\\.\\d+)?) billion - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+    "source_sha256": "64a421c680888c5a8be90fab97d96faedf115b8702a771c9430eeadcbe7d6523",
+    "extractor": "regex-v1:CSCO:revenue_guidance",
+    "low": 18000.0,
+    "high": 18200.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 18100.0,
+    "unit": "USD_millions",
+    "snippet": "Q2 FY 2027 | | | Revenue | | $18.0 billion - $18.2 billion",
+    "pattern": "Q\\d FY \\d{4} [| ]*Revenue [| ]*\\$(\\d+(?:\\.\\d+)?) billion - \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+    "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+    "extractor": "regex-v1:CSCO:revenue_guidance",
+    "low": 18000.0,
+    "high": 18200.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 17300.0,
+    "unit": "USD_millions",
+    "snippet": "Results: \u25e6 Revenue: $17.3 billion",
+    "pattern": "Results: \u25e6 Revenue: \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+    "source_sha256": "64a421c680888c5a8be90fab97d96faedf115b8702a771c9430eeadcbe7d6523",
+    "extractor": "regex-v1:CSCO:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 1.14,
+    "unit": "USD_per_share",
+    "snippet": "EPS was $1.14",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+    "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+    "extractor": "regex-v1:CSCO:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "In Q1, we delivered the strongest revenue and non-GAAP earnings per share growth rates for Cisco in over 15 years,",
+   "speaker": "Chuck Robbins, chair and CEO of Cisco",
+   "snippet": "\"In Q1, we delivered the strongest revenue and non-GAAP earnings per share growth rates for Cisco in over 15 years,\" said Chuck Robbins, chair and CEO of Cisco",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+   "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 18100.0,
+   "revenue_actual": 18500.0,
+   "guidance_surprise_pct": 2.21,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 18100.0,
+   "guided_sequential_growth_pct": -2.162,
+   "prior_guided_sequential_growth_pct": 4.624,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]

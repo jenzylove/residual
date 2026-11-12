@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T21:09:57+00:00",
+ "generated_at": "2026-11-12T21:15:20+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "config": {
@@ -63,7 +63,7 @@
    "total_net_pnl": 489.18,
    "trades": 7,
    "excluded_funding_unavailable": 10,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.714,
    "avg_pnl_per_trade": 69.88,
    "pnl_std_per_trade": 112.28,
@@ -285,6 +285,7 @@
     489.18,
     489.18,
     489.18,
+    489.18,
     489.18
    ]
   },
@@ -318,7 +319,7 @@
    "total_net_pnl": 1013.17,
    "trades": 7,
    "excluded_funding_unavailable": 10,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.857,
    "avg_pnl_per_trade": 144.74,
    "pnl_std_per_trade": 154.94,
@@ -502,6 +503,7 @@
     853.56,
     853.56,
     853.56,
+    1013.17,
     1013.17,
     1013.17,
     1013.17,
@@ -573,7 +575,7 @@
    "total_net_pnl": 1013.17,
    "trades": 7,
    "excluded_funding_unavailable": 10,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.857,
    "avg_pnl_per_trade": 144.74,
    "pnl_std_per_trade": 154.94,
@@ -795,6 +797,7 @@
     1013.17,
     1013.17,
     1013.17,
+    1013.17,
     1013.17
    ]
   },
@@ -828,7 +831,7 @@
    "total_net_pnl": -1774.99,
    "trades": 70,
    "excluded_funding_unavailable": 28,
-   "no_trades": 117,
+   "no_trades": 118,
    "hit_rate": 0.286,
    "avg_pnl_per_trade": -25.36,
    "pnl_std_per_trade": 125.2,
@@ -1050,6 +1053,7 @@
     -1554.91,
     -1659.78,
     -1774.99,
+    -1774.99,
     -1774.99
    ]
   },
@@ -1083,7 +1087,7 @@
    "total_net_pnl": 1007.56,
    "trades": 8,
    "excluded_funding_unavailable": 11,
-   "no_trades": 196,
+   "no_trades": 197,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 125.95,
    "pnl_std_per_trade": 152.97,
@@ -1305,6 +1309,7 @@
     1007.56,
     1007.56,
     1007.56,
+    1007.56,
     1007.56
    ]
   },
@@ -1338,7 +1343,7 @@
    "total_net_pnl": 380.8,
    "trades": 14,
    "excluded_funding_unavailable": 10,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 27.2,
    "pnl_std_per_trade": 94.34,
@@ -1560,6 +1565,7 @@
     380.8,
     380.8,
     380.8,
+    380.8,
     380.8
    ]
   },
@@ -1593,7 +1599,7 @@
    "total_net_pnl": 457.25,
    "trades": 14,
    "excluded_funding_unavailable": 10,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.571,
    "avg_pnl_per_trade": 32.66,
    "pnl_std_per_trade": 87.78,
@@ -1815,6 +1821,7 @@
     457.25,
     457.25,
     457.25,
+    457.25,
     457.25
    ]
   },
@@ -1848,7 +1855,7 @@
    "total_net_pnl": 489.18,
    "trades": 7,
    "excluded_funding_unavailable": 6,
-   "no_trades": 202,
+   "no_trades": 203,
    "hit_rate": 0.714,
    "avg_pnl_per_trade": 69.88,
    "pnl_std_per_trade": 112.28,
@@ -2070,6 +2077,7 @@
     489.18,
     489.18,
     489.18,
+    489.18,
     489.18
    ]
   },
@@ -2103,7 +2111,7 @@
    "total_net_pnl": 100.69,
    "trades": 9,
    "excluded_funding_unavailable": 7,
-   "no_trades": 199,
+   "no_trades": 200,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 11.19,
    "pnl_std_per_trade": 46.88,
@@ -2325,6 +2333,7 @@
     100.69,
     100.69,
     100.69,
+    100.69,
     100.69
    ]
   },
@@ -2348,7 +2357,7 @@
    "total_net_pnl": 0.0,
    "trades": 0,
    "excluded_funding_unavailable": 0,
-   "no_trades": 215,
+   "no_trades": 216,
    "hit_rate": null,
    "avg_pnl_per_trade": null,
    "pnl_std_per_trade": null,
@@ -2356,6 +2365,7 @@
    "avg_holding_hours": null,
    "return_on_start_balance_pct": 0.0,
    "equity_curve": [
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -2605,7 +2615,7 @@
    "total_net_pnl": 345.29,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.471,
    "avg_pnl_per_trade": 20.31,
    "pnl_std_per_trade": 87.96,
@@ -2827,6 +2837,7 @@
     345.29,
     345.29,
     345.29,
+    345.29,
     345.29
    ]
   },
@@ -2860,7 +2871,7 @@
    "total_net_pnl": 863.47,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.588,
    "avg_pnl_per_trade": 50.79,
    "pnl_std_per_trade": 134.29,
@@ -3082,6 +3093,7 @@
     863.47,
     863.47,
     863.47,
+    863.47,
     863.47
    ]
   },
@@ -3115,7 +3127,7 @@
    "total_net_pnl": 1067.67,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.706,
    "avg_pnl_per_trade": 62.8,
    "pnl_std_per_trade": 129.51,
@@ -3337,6 +3349,7 @@
     1067.67,
     1067.67,
     1067.67,
+    1067.67,
     1067.67
    ]
   },
@@ -3370,7 +3383,7 @@
    "total_net_pnl": -2308.73,
    "trades": 98,
    "excluded_funding_unavailable": 0,
-   "no_trades": 117,
+   "no_trades": 118,
    "hit_rate": 0.316,
    "avg_pnl_per_trade": -23.56,
    "pnl_std_per_trade": 127.86,
@@ -3592,6 +3605,7 @@
     -2088.64,
     -2193.52,
     -2308.73,
+    -2308.73,
     -2308.73
    ]
   },
@@ -3625,7 +3639,7 @@
    "total_net_pnl": 848.91,
    "trades": 19,
    "excluded_funding_unavailable": 0,
-   "no_trades": 196,
+   "no_trades": 197,
    "hit_rate": 0.526,
    "avg_pnl_per_trade": 44.68,
    "pnl_std_per_trade": 127.93,
@@ -3847,6 +3861,7 @@
     848.91,
     848.91,
     848.91,
+    848.91,
     848.91
    ]
   },
@@ -3880,7 +3895,7 @@
    "total_net_pnl": 317.78,
    "trades": 24,
    "excluded_funding_unavailable": 0,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.458,
    "avg_pnl_per_trade": 13.24,
    "pnl_std_per_trade": 78.92,
@@ -4102,6 +4117,7 @@
     317.78,
     317.78,
     317.78,
+    317.78,
     317.78
    ]
   },
@@ -4135,7 +4151,7 @@
    "total_net_pnl": 392.39,
    "trades": 24,
    "excluded_funding_unavailable": 0,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 16.35,
    "pnl_std_per_trade": 74.46,
@@ -4357,6 +4373,7 @@
     392.39,
     392.39,
     392.39,
+    392.39,
     392.39
    ]
   },
@@ -4390,7 +4407,7 @@
    "total_net_pnl": 483.27,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 202,
+   "no_trades": 203,
    "hit_rate": 0.615,
    "avg_pnl_per_trade": 37.17,
    "pnl_std_per_trade": 94.37,
@@ -4612,6 +4629,7 @@
     483.27,
     483.27,
     483.27,
+    483.27,
     483.27
    ]
   },
@@ -4645,7 +4663,7 @@
    "total_net_pnl": 15.13,
    "trades": 16,
    "excluded_funding_unavailable": 0,
-   "no_trades": 199,
+   "no_trades": 200,
    "hit_rate": 0.562,
    "avg_pnl_per_trade": 0.95,
    "pnl_std_per_trade": 49.63,
@@ -4867,6 +4885,7 @@
     15.13,
     15.13,
     15.13,
+    15.13,
     15.13
    ]
   },
@@ -4890,7 +4909,7 @@
    "total_net_pnl": 0.0,
    "trades": 0,
    "excluded_funding_unavailable": 0,
-   "no_trades": 215,
+   "no_trades": 216,
    "hit_rate": null,
    "avg_pnl_per_trade": null,
    "pnl_std_per_trade": null,
@@ -4898,6 +4917,7 @@
    "avg_holding_hours": null,
    "return_on_start_balance_pct": 0.0,
    "equity_curve": [
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -5147,7 +5167,7 @@
    "total_net_pnl": 360.97,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.529,
    "avg_pnl_per_trade": 21.23,
    "pnl_std_per_trade": 87.63,
@@ -5369,6 +5389,7 @@
     360.97,
     360.97,
     360.97,
+    360.97,
     360.97
    ]
   },
@@ -5402,7 +5423,7 @@
    "total_net_pnl": 869.1,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.588,
    "avg_pnl_per_trade": 51.12,
    "pnl_std_per_trade": 134.19,
@@ -5624,6 +5645,7 @@
     869.1,
     869.1,
     869.1,
+    869.1,
     869.1
    ]
   },
@@ -5657,7 +5679,7 @@
    "total_net_pnl": 1073.61,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.706,
    "avg_pnl_per_trade": 63.15,
    "pnl_std_per_trade": 129.41,
@@ -5879,6 +5901,7 @@
     1073.61,
     1073.61,
     1073.61,
+    1073.61,
     1073.61
    ]
   },
@@ -5912,7 +5935,7 @@
    "total_net_pnl": -2281.52,
    "trades": 98,
    "excluded_funding_unavailable": 0,
-   "no_trades": 117,
+   "no_trades": 118,
    "hit_rate": 0.316,
    "avg_pnl_per_trade": -23.28,
    "pnl_std_per_trade": 127.84,
@@ -6134,6 +6157,7 @@
     -2061.43,
     -2166.3,
     -2281.52,
+    -2281.52,
     -2281.52
    ]
   },
@@ -6167,7 +6191,7 @@
    "total_net_pnl": 854.58,
    "trades": 19,
    "excluded_funding_unavailable": 0,
-   "no_trades": 196,
+   "no_trades": 197,
    "hit_rate": 0.526,
    "avg_pnl_per_trade": 44.98,
    "pnl_std_per_trade": 127.85,
@@ -6389,6 +6413,7 @@
     854.58,
     854.58,
     854.58,
+    854.58,
     854.58
    ]
   },
@@ -6422,7 +6447,7 @@
    "total_net_pnl": 333.73,
    "trades": 24,
    "excluded_funding_unavailable": 0,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 13.91,
    "pnl_std_per_trade": 78.76,
@@ -6644,6 +6669,7 @@
     333.73,
     333.73,
     333.73,
+    333.73,
     333.73
    ]
   },
@@ -6677,7 +6703,7 @@
    "total_net_pnl": 408.31,
    "trades": 24,
    "excluded_funding_unavailable": 0,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.542,
    "avg_pnl_per_trade": 17.01,
    "pnl_std_per_trade": 74.29,
@@ -6899,6 +6925,7 @@
     408.31,
     408.31,
     408.31,
+    408.31,
     408.31
    ]
   },
@@ -6932,7 +6959,7 @@
    "total_net_pnl": 494.43,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 202,
+   "no_trades": 203,
    "hit_rate": 0.692,
    "avg_pnl_per_trade": 38.03,
    "pnl_std_per_trade": 94.01,
@@ -7154,6 +7181,7 @@
     494.43,
     494.43,
     494.43,
+    494.43,
     494.43
    ]
   },
@@ -7187,7 +7215,7 @@
    "total_net_pnl": 25.2,
    "trades": 16,
    "excluded_funding_unavailable": 0,
-   "no_trades": 199,
+   "no_trades": 200,
    "hit_rate": 0.562,
    "avg_pnl_per_trade": 1.57,
    "pnl_std_per_trade": 49.55,
@@ -7409,6 +7437,7 @@
     25.2,
     25.2,
     25.2,
+    25.2,
     25.2
    ]
   }
@@ -7444,7 +7473,7 @@
    "total_net_pnl": 250.96,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.412,
    "avg_pnl_per_trade": 14.76,
    "pnl_std_per_trade": 88.22,
@@ -7666,6 +7695,7 @@
     250.96,
     250.96,
     250.96,
+    250.96,
     250.96
    ]
   },
@@ -7699,7 +7729,7 @@
    "total_net_pnl": 811.67,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.529,
    "avg_pnl_per_trade": 47.75,
    "pnl_std_per_trade": 135.76,
@@ -7921,6 +7951,7 @@
     811.67,
     811.67,
     811.67,
+    811.67,
     811.67
    ]
   },
@@ -7954,7 +7985,7 @@
    "total_net_pnl": 1014.67,
    "trades": 17,
    "excluded_funding_unavailable": 0,
-   "no_trades": 198,
+   "no_trades": 199,
    "hit_rate": 0.647,
    "avg_pnl_per_trade": 59.69,
    "pnl_std_per_trade": 131.2,
@@ -8176,6 +8207,7 @@
     1014.67,
     1014.67,
     1014.67,
+    1014.67,
     1014.67
    ]
   },
@@ -8209,7 +8241,7 @@
    "total_net_pnl": -2462.2,
    "trades": 98,
    "excluded_funding_unavailable": 0,
-   "no_trades": 117,
+   "no_trades": 118,
    "hit_rate": 0.306,
    "avg_pnl_per_trade": -25.12,
    "pnl_std_per_trade": 128.5,
@@ -8431,6 +8463,7 @@
     -2242.11,
     -2346.98,
     -2462.2,
+    -2462.2,
     -2462.2
    ]
   },
@@ -8464,7 +8497,7 @@
    "total_net_pnl": 797.11,
    "trades": 19,
    "excluded_funding_unavailable": 0,
-   "no_trades": 196,
+   "no_trades": 197,
    "hit_rate": 0.474,
    "avg_pnl_per_trade": 41.95,
    "pnl_std_per_trade": 129.17,
@@ -8686,6 +8719,7 @@
     797.11,
     797.11,
     797.11,
+    797.11,
     797.11
    ]
   },
@@ -8719,7 +8753,7 @@
    "total_net_pnl": 222.25,
    "trades": 24,
    "excluded_funding_unavailable": 0,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.417,
    "avg_pnl_per_trade": 9.26,
    "pnl_std_per_trade": 78.67,
@@ -8941,6 +8975,7 @@
     222.25,
     222.25,
     222.25,
+    222.25,
     222.25
    ]
   },
@@ -8974,7 +9009,7 @@
    "total_net_pnl": 297.99,
    "trades": 24,
    "excluded_funding_unavailable": 0,
-   "no_trades": 191,
+   "no_trades": 192,
    "hit_rate": 0.458,
    "avg_pnl_per_trade": 12.42,
    "pnl_std_per_trade": 74.22,
@@ -9196,6 +9231,7 @@
     297.99,
     297.99,
     297.99,
+    297.99,
     297.99
    ]
   },
@@ -9229,7 +9265,7 @@
    "total_net_pnl": 405.18,
    "trades": 13,
    "excluded_funding_unavailable": 0,
-   "no_trades": 202,
+   "no_trades": 203,
    "hit_rate": 0.538,
    "avg_pnl_per_trade": 31.17,
    "pnl_std_per_trade": 95.06,
@@ -9451,6 +9487,7 @@
     405.18,
     405.18,
     405.18,
+    405.18,
     405.18
    ]
   },
@@ -9484,7 +9521,7 @@
    "total_net_pnl": -60.42,
    "trades": 16,
    "excluded_funding_unavailable": 0,
-   "no_trades": 199,
+   "no_trades": 200,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": -3.78,
    "pnl_std_per_trade": 47.14,
@@ -9706,6 +9743,7 @@
     -60.42,
     -60.42,
     -60.42,
+    -60.42,
     -60.42
    ]
   }
@@ -9741,7 +9779,7 @@
    "total_net_pnl": 187.57,
    "trades": 3,
    "excluded_funding_unavailable": 0,
-   "no_trades": 43,
+   "no_trades": 44,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 62.52,
    "pnl_std_per_trade": 77.97,
@@ -9756,6 +9794,7 @@
     49.35,
     49.35,
     49.35,
+    187.57,
     187.57,
     187.57,
     187.57,
@@ -9827,7 +9866,7 @@
    "total_net_pnl": 279.71,
    "trades": 3,
    "excluded_funding_unavailable": 0,
-   "no_trades": 43,
+   "no_trades": 44,
    "hit_rate": 1.0,
    "avg_pnl_per_trade": 93.24,
    "pnl_std_per_trade": 59.56,
@@ -9842,6 +9881,7 @@
     120.1,
     120.1,
     120.1,
+    279.71,
     279.71,
     279.71,
     279.71,
@@ -9913,7 +9953,7 @@
    "total_net_pnl": 279.71,
    "trades": 3,
    "excluded_funding_unavailable": 0,
-   "no_trades": 43,
+   "no_trades": 44,
    "hit_rate": 1.0,
    "avg_pnl_per_trade": 93.24,
    "pnl_std_per_trade": 59.56,
@@ -9928,6 +9968,7 @@
     120.1,
     120.1,
     120.1,
+    279.71,
     279.71,
     279.71,
     279.71,
@@ -9999,7 +10040,7 @@
    "total_net_pnl": -2279.79,
    "trades": 41,
    "excluded_funding_unavailable": 0,
-   "no_trades": 5,
+   "no_trades": 6,
    "hit_rate": 0.195,
    "avg_pnl_per_trade": -55.6,
    "pnl_std_per_trade": 105.49,
@@ -10052,6 +10093,7 @@
     -2059.7,
     -2164.57,
     -2279.79,
+    -2279.79,
     -2279.79
    ]
   },
@@ -10085,7 +10127,7 @@
    "total_net_pnl": 279.71,
    "trades": 3,
    "excluded_funding_unavailable": 0,
-   "no_trades": 43,
+   "no_trades": 44,
    "hit_rate": 1.0,
    "avg_pnl_per_trade": 93.24,
    "pnl_std_per_trade": 59.56,
@@ -10100,6 +10142,7 @@
     120.1,
     120.1,
     120.1,
+    279.71,
     279.71,
     279.71,
     279.71,
@@ -10171,7 +10214,7 @@
    "total_net_pnl": 148.53,
    "trades": 4,
    "excluded_funding_unavailable": 0,
-   "no_trades": 42,
+   "no_trades": 43,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 37.13,
    "pnl_std_per_trade": 81.44,
@@ -10186,6 +10229,7 @@
     49.35,
     10.31,
     10.31,
+    148.53,
     148.53,
     148.53,
     148.53,
@@ -10257,7 +10301,7 @@
    "total_net_pnl": 205.12,
    "trades": 4,
    "excluded_funding_unavailable": 0,
-   "no_trades": 42,
+   "no_trades": 43,
    "hit_rate": 0.75,
    "avg_pnl_per_trade": 51.28,
    "pnl_std_per_trade": 67.52,
@@ -10272,6 +10316,7 @@
     49.35,
     66.9,
     66.9,
+    205.12,
     205.12,
     205.12,
     205.12,
@@ -10343,7 +10388,7 @@
    "total_net_pnl": 187.57,
    "trades": 3,
    "excluded_funding_unavailable": 0,
-   "no_trades": 43,
+   "no_trades": 44,
    "hit_rate": 0.667,
    "avg_pnl_per_trade": 62.52,
    "pnl_std_per_trade": 77.97,
@@ -10358,6 +10403,7 @@
     49.35,
     49.35,
     49.35,
+    187.57,
     187.57,
     187.57,
     187.57,
@@ -10429,7 +10475,7 @@
    "total_net_pnl": 27.85,
    "trades": 2,
    "excluded_funding_unavailable": 0,
-   "no_trades": 44,
+   "no_trades": 45,
    "hit_rate": 0.5,
    "avg_pnl_per_trade": 13.93,
    "pnl_std_per_trade": 74.9,
@@ -10482,14 +10528,15 @@
     27.85,
     27.85,
     27.85,
+    27.85,
     27.85
    ]
   }
  },
  "summary_last_90d_window": {
   "from_ms": 1787137393000,
-  "to_ms": 1794517366000,
-  "events": 46
+  "to_ms": 1794517584000,
+  "events": 47
  },
  "funding_caps": {
   "SMHUSDT": 0.000334,
@@ -10578,7 +10625,7 @@
    "total_net_pnl": 489.18,
    "trades": 7,
    "excluded_funding_unavailable": 4,
-   "no_trades": 112,
+   "no_trades": 113,
    "hit_rate": 0.714,
    "avg_pnl_per_trade": 69.88,
    "pnl_std_per_trade": 112.28,
@@ -10708,6 +10755,7 @@
     489.18,
     489.18,
     489.18,
+    489.18,
     489.18
    ]
   },
@@ -10741,7 +10789,7 @@
    "total_net_pnl": -1774.99,
    "trades": 70,
    "excluded_funding_unavailable": 15,
-   "no_trades": 38,
+   "no_trades": 39,
    "hit_rate": 0.286,
    "avg_pnl_per_trade": -25.36,
    "pnl_std_per_trade": 125.2,
@@ -10871,6 +10919,7 @@
     -1554.91,
     -1659.78,
     -1774.99,
+    -1774.99,
     -1774.99
    ]
   },
@@ -10904,7 +10953,7 @@
    "total_net_pnl": 1013.17,
    "trades": 7,
    "excluded_funding_unavailable": 4,
-   "no_trades": 112,
+   "no_trades": 113,
    "hit_rate": 0.857,
    "avg_pnl_per_trade": 144.74,
    "pnl_std_per_trade": 154.94,
@@ -11034,12 +11083,13 @@
     1013.17,
     1013.17,
     1013.17,
+    1013.17,
     1013.17
    ]
   }
  },
  "holdout": {
-  "split_utc": "2026-08-14T21:02Z",
+  "split_utc": "2026-08-14T21:06Z",
   "params": {
    "mode": 1,
    "k": 5.0,
@@ -11071,7 +11121,7 @@
   },
   "variant": "agreement",
   "in_sample_events": 169,
-  "out_of_sample_events": 46,
+  "out_of_sample_events": 47,
   "out_of_sample_days": 90,
   "conservative": {
    "in_sample": {
@@ -13499,7 +13549,7 @@
    }
   },
   "new_companies": {
-   "releases": 125,
+   "releases": 126,
    "summary": {
     "residual": {
      "sharpe_per_trade": 1.152,
@@ -13531,7 +13581,7 @@
      "total_net_pnl": 171.31,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 85.66,
      "pnl_std_per_trade": 74.33,
@@ -13663,6 +13713,7 @@
       171.31,
       171.31,
       171.31,
+      171.31,
       171.31
      ]
     },
@@ -13696,7 +13747,7 @@
      "total_net_pnl": 526.14,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 263.07,
      "pnl_std_per_trade": 146.31,
@@ -13804,6 +13855,7 @@
       366.53,
       366.53,
       366.53,
+      526.14,
       526.14,
       526.14,
       526.14,
@@ -13861,7 +13913,7 @@
      "total_net_pnl": 526.14,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 263.07,
      "pnl_std_per_trade": 146.31,
@@ -13993,6 +14045,7 @@
       526.14,
       526.14,
       526.14,
+      526.14,
       526.14
      ]
     },
@@ -14026,7 +14079,7 @@
      "total_net_pnl": -1264.97,
      "trades": 43,
      "excluded_funding_unavailable": 10,
-     "no_trades": 72,
+     "no_trades": 73,
      "hit_rate": 0.279,
      "avg_pnl_per_trade": -29.42,
      "pnl_std_per_trade": 130.12,
@@ -14158,6 +14211,7 @@
       -1044.88,
       -1149.76,
       -1264.97,
+      -1264.97,
       -1264.97
      ]
     },
@@ -14191,7 +14245,7 @@
      "total_net_pnl": 520.53,
      "trades": 3,
      "excluded_funding_unavailable": 1,
-     "no_trades": 121,
+     "no_trades": 122,
      "hit_rate": 0.667,
      "avg_pnl_per_trade": 173.51,
      "pnl_std_per_trade": 186.46,
@@ -14323,6 +14377,7 @@
       520.53,
       520.53,
       520.53,
+      520.53,
       520.53
      ]
     },
@@ -14356,7 +14411,7 @@
      "total_net_pnl": 165.2,
      "trades": 3,
      "excluded_funding_unavailable": 0,
-     "no_trades": 122,
+     "no_trades": 123,
      "hit_rate": 0.667,
      "avg_pnl_per_trade": 55.07,
      "pnl_std_per_trade": 74.63,
@@ -14488,6 +14543,7 @@
       165.2,
       165.2,
       165.2,
+      165.2,
       165.2
      ]
     },
@@ -14521,7 +14577,7 @@
      "total_net_pnl": 170.41,
      "trades": 3,
      "excluded_funding_unavailable": 0,
-     "no_trades": 122,
+     "no_trades": 123,
      "hit_rate": 0.667,
      "avg_pnl_per_trade": 56.8,
      "pnl_std_per_trade": 72.53,
@@ -14653,6 +14709,7 @@
       170.41,
       170.41,
       170.41,
+      170.41,
       170.41
      ]
     },
@@ -14686,7 +14743,7 @@
      "total_net_pnl": 171.31,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 85.66,
      "pnl_std_per_trade": 74.33,
@@ -14818,6 +14875,7 @@
       171.31,
       171.31,
       171.31,
+      171.31,
       171.31
      ]
     },
@@ -14851,7 +14909,7 @@
      "total_net_pnl": 32.2,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 0.5,
      "avg_pnl_per_trade": 16.1,
      "pnl_std_per_trade": 24.04,
@@ -14983,6 +15041,7 @@
       32.2,
       32.2,
       32.2,
+      32.2,
       32.2
      ]
     }
@@ -15018,7 +15077,7 @@
      "total_net_pnl": 171.31,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 85.66,
      "pnl_std_per_trade": 74.33,
@@ -15150,6 +15209,7 @@
       171.31,
       171.31,
       171.31,
+      171.31,
       171.31
      ]
     },
@@ -15183,7 +15243,7 @@
      "total_net_pnl": 526.14,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 263.07,
      "pnl_std_per_trade": 146.31,
@@ -15291,6 +15351,7 @@
       366.53,
       366.53,
       366.53,
+      526.14,
       526.14,
       526.14,
       526.14,
@@ -15348,7 +15409,7 @@
      "total_net_pnl": 526.14,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 263.07,
      "pnl_std_per_trade": 146.31,
@@ -15480,6 +15541,7 @@
       526.14,
       526.14,
       526.14,
+      526.14,
       526.14
      ]
     },
@@ -15513,7 +15575,7 @@
      "total_net_pnl": -1116.36,
      "trades": 53,
      "excluded_funding_unavailable": 0,
-     "no_trades": 72,
+     "no_trades": 73,
      "hit_rate": 0.321,
      "avg_pnl_per_trade": -21.06,
      "pnl_std_per_trade": 146.81,
@@ -15645,6 +15707,7 @@
       -896.28,
       -1001.15,
       -1116.36,
+      -1116.36,
       -1116.36
      ]
     },
@@ -15678,7 +15741,7 @@
      "total_net_pnl": 511.57,
      "trades": 4,
      "excluded_funding_unavailable": 0,
-     "no_trades": 121,
+     "no_trades": 122,
      "hit_rate": 0.5,
      "avg_pnl_per_trade": 127.89,
      "pnl_std_per_trade": 177.49,
@@ -15810,6 +15873,7 @@
       511.57,
       511.57,
       511.57,
+      511.57,
       511.57
      ]
     },
@@ -15843,7 +15907,7 @@
      "total_net_pnl": 165.2,
      "trades": 3,
      "excluded_funding_unavailable": 0,
-     "no_trades": 122,
+     "no_trades": 123,
      "hit_rate": 0.667,
      "avg_pnl_per_trade": 55.07,
      "pnl_std_per_trade": 74.63,
@@ -15975,6 +16039,7 @@
       165.2,
       165.2,
       165.2,
+      165.2,
       165.2
      ]
     },
@@ -16008,7 +16073,7 @@
      "total_net_pnl": 170.41,
      "trades": 3,
      "excluded_funding_unavailable": 0,
-     "no_trades": 122,
+     "no_trades": 123,
      "hit_rate": 0.667,
      "avg_pnl_per_trade": 56.8,
      "pnl_std_per_trade": 72.53,
@@ -16140,6 +16205,7 @@
       170.41,
       170.41,
       170.41,
+      170.41,
       170.41
      ]
     },
@@ -16173,7 +16239,7 @@
      "total_net_pnl": 171.31,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 1.0,
      "avg_pnl_per_trade": 85.66,
      "pnl_std_per_trade": 74.33,
@@ -16305,6 +16371,7 @@
       171.31,
       171.31,
       171.31,
+      171.31,
       171.31
      ]
     },
@@ -16338,7 +16405,7 @@
      "total_net_pnl": 32.2,
      "trades": 2,
      "excluded_funding_unavailable": 0,
-     "no_trades": 123,
+     "no_trades": 124,
      "hit_rate": 0.5,
      "avg_pnl_per_trade": 16.1,
      "pnl_std_per_trade": 24.04,
@@ -16470,6 +16537,7 @@
       32.2,
       32.2,
       32.2,
+      32.2,
       32.2
      ]
     }
@@ -16494,7 +16562,7 @@
    }
   },
   "prospective": {
-   "releases": 28,
+   "releases": 29,
    "summary": {
     "residual": {
      "sharpe_per_trade": null,
@@ -16516,7 +16584,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16524,6 +16592,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16574,7 +16643,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16582,6 +16651,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16632,7 +16702,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16640,6 +16710,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16700,7 +16771,7 @@
      "total_net_pnl": -1841.1,
      "trades": 23,
      "excluded_funding_unavailable": 0,
-     "no_trades": 5,
+     "no_trades": 6,
      "hit_rate": 0.13,
      "avg_pnl_per_trade": -80.05,
      "pnl_std_per_trade": 60.31,
@@ -16735,6 +16806,7 @@
       -1621.01,
       -1725.89,
       -1841.1,
+      -1841.1,
       -1841.1
      ]
     },
@@ -16758,7 +16830,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16766,6 +16838,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16816,7 +16889,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16824,6 +16897,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16874,7 +16948,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16882,6 +16956,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16932,7 +17007,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16940,6 +17015,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -16990,7 +17066,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -16998,6 +17074,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17050,7 +17127,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17058,6 +17135,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17108,7 +17186,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17116,6 +17194,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17166,7 +17245,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17174,6 +17253,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17234,7 +17314,7 @@
      "total_net_pnl": -1841.1,
      "trades": 23,
      "excluded_funding_unavailable": 0,
-     "no_trades": 5,
+     "no_trades": 6,
      "hit_rate": 0.13,
      "avg_pnl_per_trade": -80.05,
      "pnl_std_per_trade": 60.31,
@@ -17269,6 +17349,7 @@
       -1621.01,
       -1725.89,
       -1841.1,
+      -1841.1,
       -1841.1
      ]
     },
@@ -17292,7 +17373,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17300,6 +17381,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17350,7 +17432,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17358,6 +17440,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17408,7 +17491,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17416,6 +17499,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17466,7 +17550,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17474,6 +17558,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -17524,7 +17609,7 @@
      "total_net_pnl": 0.0,
      "trades": 0,
      "excluded_funding_unavailable": 0,
-     "no_trades": 28,
+     "no_trades": 29,
      "hit_rate": null,
      "avg_pnl_per_trade": null,
      "pnl_std_per_trade": null,
@@ -17532,6 +17617,7 @@
      "avg_holding_hours": null,
      "return_on_start_balance_pct": 0.0,
      "equity_curve": [
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -50817,6 +50903,158 @@
     }
    },
    "status": "data_incomplete"
+  },
+  {
+   "event_id": "CSCO-2026-11-12",
+   "consensus": null,
+   "ticker": "CSCO",
+   "company_symbol": "CSCOUSDT",
+   "sector_group": "hardware",
+   "cik": 858877,
+   "accession": "0000858877-26-000170",
+   "release_utc": "2026-11-12T21:06:24Z",
+   "release_ms": 1794517584000,
+   "release_session": "after_market",
+   "source": {
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/",
+    "sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+    "cache_file": "data/cache/7d1290a9f6d0e44cb15a1ad0.bin"
+   },
+   "prior_source": {
+    "press_release_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+    "filing_index_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/",
+    "accession": "0000858877-26-000106",
+    "cache_file": "data/cache/6d78ff3e205235693821bf8d.bin"
+   },
+   "earnings": {
+    "revenue_actual": {
+     "value": 18500.0,
+     "unit": "USD_millions",
+     "snippet": "Results: \u25e6 Revenue: $18.5 billion",
+     "pattern": "Results: \u25e6 Revenue: \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+     "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+     "extractor": "regex-v1:CSCO:revenue_actual",
+     "verified": true
+    },
+    "revenue_guidance_prior": {
+     "value": 18100.0,
+     "unit": "USD_millions",
+     "snippet": "Q1 FY 2027 | | | Revenue | | $18.0 billion - $18.2 billion",
+     "pattern": "Q\\d FY \\d{4} [| ]*Revenue [| ]*\\$(\\d+(?:\\.\\d+)?) billion - \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+     "source_sha256": "64a421c680888c5a8be90fab97d96faedf115b8702a771c9430eeadcbe7d6523",
+     "extractor": "regex-v1:CSCO:revenue_guidance",
+     "low": 18000.0,
+     "high": 18200.0,
+     "verified": true
+    },
+    "revenue_guidance_next": {
+     "value": 18100.0,
+     "unit": "USD_millions",
+     "snippet": "Q2 FY 2027 | | | Revenue | | $18.0 billion - $18.2 billion",
+     "pattern": "Q\\d FY \\d{4} [| ]*Revenue [| ]*\\$(\\d+(?:\\.\\d+)?) billion - \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+     "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+     "extractor": "regex-v1:CSCO:revenue_guidance",
+     "low": 18000.0,
+     "high": 18200.0,
+     "verified": true
+    },
+    "revenue_prior_actual": {
+     "value": 17300.0,
+     "unit": "USD_millions",
+     "snippet": "Results: \u25e6 Revenue: $17.3 billion",
+     "pattern": "Results: \u25e6 Revenue: \\$(\\d+(?:\\.\\d+)?) billion",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/exhibit991pressrelease-q4f.htm",
+     "source_sha256": "64a421c680888c5a8be90fab97d96faedf115b8702a771c9430eeadcbe7d6523",
+     "extractor": "regex-v1:CSCO:revenue_actual",
+     "verified": true
+    },
+    "eps_diluted": {
+     "value": 1.14,
+     "unit": "USD_per_share",
+     "snippet": "EPS was $1.14",
+     "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+     "flags": 0,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+     "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425",
+     "extractor": "regex-v1:CSCO:eps_diluted",
+     "verified": true
+    },
+    "gross_margin": null
+   },
+   "commentary": {
+    "text": "In Q1, we delivered the strongest revenue and non-GAAP earnings per share growth rates for Cisco in over 15 years,",
+    "speaker": "Chuck Robbins, chair and CEO of Cisco",
+    "snippet": "\"In Q1, we delivered the strongest revenue and non-GAAP earnings per share growth rates for Cisco in over 15 years,\" said Chuck Robbins, chair and CEO of Cisco",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+    "source_sha256": "989dcf3ab4f2e6d5cdcfa56c3b2b7a02c5d45f4d19fdd80c9117e5c133365425"
+   },
+   "surprise": {
+    "kind": "company-guidance surprise",
+    "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+    "revenue_guided_mid": 18100.0,
+    "revenue_actual": 18500.0,
+    "guidance_surprise_pct": 2.21,
+    "vs_guidance_band": "above",
+    "next_quarter_guidance_mid": 18100.0,
+    "guided_sequential_growth_pct": -2.162,
+    "prior_guided_sequential_growth_pct": 4.624,
+    "guidance_direction": "lowered"
+   },
+   "validation": {
+    "checks": [
+     {
+      "field": "revenue_actual",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "revenue_guidance_prior",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "revenue_guidance_next",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "revenue_prior_actual",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "eps_diluted",
+      "ok": true,
+      "detail": "ok"
+     },
+     {
+      "field": "gross_margin",
+      "ok": false,
+      "detail": "not found in source"
+     }
+    ],
+    "missing_required": [],
+    "all_required_verified": true,
+    "required_fields": [
+     "revenue_actual",
+     "revenue_guidance_prior",
+     "revenue_guidance_next",
+     "revenue_prior_actual"
+    ],
+    "optional_fields": {
+     "eps_diluted": "reported",
+     "gross_margin": "not_reported"
+    }
+   },
+   "status": "complete"
   }
  ],
  "rows": [
@@ -92395,7 +92633,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih7LSm4B9S1JCQ942Z\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6rLipiZNiQS21Spe8\"}"
      }
     },
     "size": 0.0
@@ -92418,7 +92656,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih7LSm4B9S1JCQ942Z\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6rLipiZNiQS21Spe8\"}"
    },
    "residual": null,
    "naive": {
@@ -92694,7 +92932,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih7hGgBeCkaE3ZjoPy\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6rgZSWuDoLbd5wRDa\"}"
      }
     },
     "size": 0.0
@@ -92717,7 +92955,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih7hGgBeCkaE3ZjoPy\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6rgZSWuDoLbd5wRDa\"}"
    },
    "residual": null,
    "naive": {
@@ -92994,7 +93232,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih8LUM9ot8FhSvXJjf\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6s3dMEtjQ8MNTKAts\"}"
      }
     },
     "size": 0.0
@@ -93017,7 +93255,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih8LUM9ot8FhSvXJjf\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6s3dMEtjQ8MNTKAts\"}"
    },
    "residual": null,
    "naive": {
@@ -93310,7 +93548,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih8goaMSSq6pXYvEvv\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6sUgPfBr848x3adnf\"}"
      }
     },
     "size": 0.0
@@ -93333,7 +93571,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih8goaMSSq6pXYvEvv\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6sUgPfBr848x3adnf\"}"
    },
    "residual": null,
    "naive": {
@@ -93629,7 +93867,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih967smTigHotvUgk8\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6soGivwR8mkD74Rup\"}"
      }
     },
     "size": 0.0
@@ -93652,7 +93890,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih967smTigHotvUgk8\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6soGivwR8mkD74Rup\"}"
    },
    "residual": null,
    "naive": {
@@ -93952,7 +94190,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih9QTzPJTxouP5bNyX\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6t9NBcxYbYjty2aDa\"}"
      }
     },
     "size": 0.0
@@ -93975,7 +94213,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih9QTzPJTxouP5bNyX\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6t9NBcxYbYjty2aDa\"}"
    },
    "residual": null,
    "naive": {
@@ -94268,7 +94506,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih9nnk8eHDjspbRuBD\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6tXg572okoTd8vPQS\"}"
      }
     },
     "size": 0.0
@@ -94291,7 +94529,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyih9nnk8eHDjspbRuBD\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6tXg572okoTd8vPQS\"}"
    },
    "residual": null,
    "naive": {
@@ -94588,7 +94826,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihA9NKdi36E8JqYi7T\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6txEfzroh6VDunkEJ\"}"
      }
     },
     "size": 0.0
@@ -94611,7 +94849,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihA9NKdi36E8JqYi7T\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6txEfzroh6VDunkEJ\"}"
    },
    "residual": null,
    "naive": {
@@ -94897,7 +95135,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihAVwauj418yCvjQMx\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6uP2MgCApTXHjcPms\"}"
      }
     },
     "size": 0.0
@@ -94920,7 +95158,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihAVwauj418yCvjQMx\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6uP2MgCApTXHjcPms\"}"
    },
    "residual": null,
    "naive": {
@@ -95207,7 +95445,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihAsGMVkLvR6wSQU8e\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6ujc3iAsVxrjaVePX\"}"
      }
     },
     "size": 0.0
@@ -95230,7 +95468,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihAsGMVkLvR6wSQU8e\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6ujc3iAsVxrjaVePX\"}"
    },
    "residual": null,
    "naive": {
@@ -95525,7 +95763,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihBGpfuUif4KqJucHR\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6vBQDPiS5sqcqe9xP\"}"
      }
     },
     "size": 0.0
@@ -95548,7 +95786,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihBGpfuUif4KqJucHR\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6vBQDPiS5sqcqe9xP\"}"
    },
    "residual": null,
    "naive": {
@@ -95829,7 +96067,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihBbvb4w3MQi9DCVR4\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6vYyL8Y2EHaKP9tsj\"}"
      }
     },
     "size": 0.0
@@ -95852,7 +96090,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihBbvb4w3MQi9DCVR4\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6vYyL8Y2EHaKP9tsj\"}"
    },
    "residual": null,
    "naive": {
@@ -96144,7 +96382,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihBw1o44BMuK42tYwR\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6vuZDMF8m35xKTDrg\"}"
      }
     },
     "size": 0.0
@@ -96167,7 +96405,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihBw1o44BMuK42tYwR\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6vuZDMF8m35xKTDrg\"}"
    },
    "residual": null,
    "naive": {
@@ -96726,7 +96964,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihCF7zvgSrj75gizBy\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6wEehBbcTyagzK5rK\"}"
      }
     },
     "size": 0.0
@@ -96749,7 +96987,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihCF7zvgSrj75gizBy\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6wEehBbcTyagzK5rK\"}"
    },
    "residual": null,
    "naive": {
@@ -97047,7 +97285,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihCbi323aeghGbLg5h\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6wY1Pr8o3FcVKaiER\"}"
      }
     },
     "size": 0.0
@@ -97070,7 +97308,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihCbi323aeghGbLg5h\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6wY1Pr8o3FcVKaiER\"}"
    },
    "residual": null,
    "naive": {
@@ -97360,7 +97598,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihCwJH4VeuUiuBCtHU\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6wrMKCd7okaNkQjRr\"}"
      }
     },
     "size": 0.0
@@ -97383,7 +97621,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihCwJH4VeuUiuBCtHU\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6wrMKCd7okaNkQjRr\"}"
    },
    "residual": null,
    "naive": {
@@ -97678,7 +97916,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihDGdcpq4UBzTjfJZU\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6xCw2BsEy8sJJ8HGj\"}"
      }
     },
     "size": 0.0
@@ -97701,7 +97939,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihDGdcpq4UBzTjfJZU\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6xCw2BsEy8sJJ8HGj\"}"
    },
    "residual": null,
    "naive": {
@@ -97993,7 +98231,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihDeCeeckjaStj77yR\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6xbVzXRwUxkin3t9Y\"}"
      }
     },
     "size": 0.0
@@ -98016,7 +98254,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihDeCeeckjaStj77yR\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6xbVzXRwUxkin3t9Y\"}"
    },
    "residual": null,
    "naive": {
@@ -99140,7 +99378,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihDyZ8JvB8jpmC6msE\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6xur9cYZ5AtRJMfoE\"}"
      }
     },
     "size": 0.0
@@ -99163,7 +99401,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihDyZ8JvB8jpmC6msE\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6xur9cYZ5AtRJMfoE\"}"
    },
    "residual": null,
    "naive": {
@@ -99463,7 +99701,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihEKPHZpDFAFx1ziTe\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6yESnLQmwV4LyDtKT\"}"
      }
     },
     "size": 0.0
@@ -99486,7 +99724,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihEKPHZpDFAFx1ziTe\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6yESnLQmwV4LyDtKT\"}"
    },
    "residual": null,
    "naive": {
@@ -99777,7 +100015,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihEeyXDNaTkkcXNbZw\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6yYon7xffgW3ckdYw\"}"
      }
     },
     "size": 0.0
@@ -99800,7 +100038,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihEeyXDNaTkkcXNbZw\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6yYon7xffgW3ckdYw\"}"
    },
    "residual": null,
    "naive": {
@@ -100096,7 +100334,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihEzKnBdGxB6c9erZb\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6yy7RMTyde5riaqpK\"}"
      }
     },
     "size": 0.0
@@ -100119,7 +100357,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihEzKnBdGxB6c9erZb\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6yy7RMTyde5riaqpK\"}"
    },
    "residual": null,
    "naive": {
@@ -100414,7 +100652,7 @@
      },
      "ai_interpretation": {
       "pass": false,
-      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihFPPWAFrhRro3aVMN\"}"
+      "detail": "interpretation unavailable: anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6zPeoPUbDeTDgqxAa\"}"
      }
     },
     "size": 0.0
@@ -100437,7 +100675,7 @@
    },
    "interpretation": {
     "status": "unavailable",
-    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgyihFPPWAFrhRro3aVMN\"}"
+    "detail": "anthropic HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgyj6zPeoPUbDeTDgqxAa\"}"
    },
    "residual": null,
    "naive": {
@@ -100754,6 +100992,120 @@
      "event_data": {
       "pass": false,
       "detail": "missing/unverified: revenue_actual"
+     },
+     "market_data": {
+      "pass": false,
+      "detail": "no market snapshot"
+     }
+    }
+   }
+  },
+  {
+   "event_id": "CSCO-2026-11-12",
+   "_release_ms": 1794517584000,
+   "params": {
+    "mode": 1,
+    "k": 5.0,
+    "source": "walk-forward",
+    "n_train": 38,
+    "train_pnl": -39.28745455003447,
+    "train_events": [
+     "NVDA-2025-11-19",
+     "META-2026-01-28",
+     "PLTR-2026-02-02",
+     "AMZN-2026-02-05",
+     "MRVL-2026-03-05",
+     "MU-2026-03-18",
+     "INTC-2026-04-23",
+     "META-2026-04-29",
+     "PLTR-2026-05-04",
+     "AMD-2026-05-05",
+     "AVGO-2026-06-03",
+     "INTC-2026-07-23",
+     "KLAC-2026-07-28",
+     "QCOM-2026-07-29",
+     "META-2026-07-29",
+     "LRCX-2026-07-29",
+     "AMZN-2026-07-30",
+     "PLTR-2026-08-03",
+     "AMD-2026-08-04",
+     "SMCI-2026-08-11",
+     "AMAT-2026-08-13",
+     "CRWD-2026-08-26",
+     "NVDA-2026-08-26",
+     "MRVL-2026-08-27",
+     "DELL-2026-09-01",
+     "CRDO-2026-09-02",
+     "META-2026-10-21",
+     "LRCX-2026-10-21",
+     "VRT-2026-10-28",
+     "AMZN-2026-10-29",
+     "INTC-2026-10-29",
+     "SNDK-2026-10-29",
+     "LITE-2026-11-02",
+     "PLTR-2026-11-02",
+     "OUST-2026-11-03",
+     "QCOM-2026-11-04",
+     "COHR-2026-11-04",
+     "APP-2026-11-04"
+    ]
+   },
+   "decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "market_data"
+    ],
+    "gates": {
+     "event_data": {
+      "pass": true,
+      "detail": "all required earnings fields verified"
+     },
+     "market_data": {
+      "pass": false,
+      "detail": "no market snapshot"
+     },
+     "ai_interpretation": {
+      "pass": true,
+      "detail": "AI gate disabled for this run"
+     }
+    },
+    "size": 0.0
+   },
+   "variant": {
+    "variant": "agreement",
+    "source": "walk-forward",
+    "n_train": 31,
+    "scores": {
+     "residual": -39.29,
+     "headline": -282.56,
+     "agreement": 236.31,
+     "consensus": 46.53
+    },
+    "eligible_variants": [
+     "residual",
+     "headline",
+     "agreement"
+    ]
+   },
+   "interpretation": null,
+   "residual": null,
+   "naive": null,
+   "unhedged": null,
+   "v2_decision": {
+    "decision": "NO_TRADE",
+    "reasons": [
+     "analysis incomplete"
+    ],
+    "direction": 0,
+    "size": 0.0
+   },
+   "v2_unhedged": null,
+   "analysis": {
+    "event_id": "CSCO-2026-11-12",
+    "gates": {
+     "event_data": {
+      "pass": true,
+      "detail": "all required earnings fields verified"
      },
      "market_data": {
       "pass": false,
@@ -103110,7 +103462,7 @@
     "total_net_pnl": 241.0,
     "trades": 10,
     "excluded_funding_unavailable": 10,
-    "no_trades": 195,
+    "no_trades": 196,
     "hit_rate": 0.5,
     "avg_pnl_per_trade": 24.1,
     "pnl_std_per_trade": 129.71,
@@ -103332,6 +103684,7 @@
      241.0,
      241.0,
      241.0,
+     241.0,
      241.0
     ]
    },
@@ -103365,7 +103718,7 @@
     "total_net_pnl": 810.14,
     "trades": 10,
     "excluded_funding_unavailable": 10,
-    "no_trades": 195,
+    "no_trades": 196,
     "hit_rate": 0.6,
     "avg_pnl_per_trade": 81.01,
     "pnl_std_per_trade": 171.41,
@@ -103584,6 +103937,7 @@
      901.15,
      901.15,
      828.29,
+     810.14,
      810.14,
      810.14,
      810.14,
@@ -103620,7 +103974,7 @@
     "total_net_pnl": 810.14,
     "trades": 10,
     "excluded_funding_unavailable": 10,
-    "no_trades": 195,
+    "no_trades": 196,
     "hit_rate": 0.6,
     "avg_pnl_per_trade": 81.01,
     "pnl_std_per_trade": 171.41,
@@ -103842,6 +104196,7 @@
      810.14,
      810.14,
      810.14,
+     810.14,
      810.14
     ]
    },
@@ -103875,7 +104230,7 @@
     "total_net_pnl": -1774.99,
     "trades": 70,
     "excluded_funding_unavailable": 28,
-    "no_trades": 117,
+    "no_trades": 118,
     "hit_rate": 0.286,
     "avg_pnl_per_trade": -25.36,
     "pnl_std_per_trade": 125.2,
@@ -104097,6 +104452,7 @@
      -1554.91,
      -1659.78,
      -1774.99,
+     -1774.99,
      -1774.99
     ]
    },
@@ -104130,7 +104486,7 @@
     "total_net_pnl": 558.07,
     "trades": 14,
     "excluded_funding_unavailable": 12,
-    "no_trades": 189,
+    "no_trades": 190,
     "hit_rate": 0.429,
     "avg_pnl_per_trade": 39.86,
     "pnl_std_per_trade": 160.21,
@@ -104352,6 +104708,7 @@
      558.07,
      558.07,
      558.07,
+     558.07,
      558.07
     ]
    },
@@ -104385,7 +104742,7 @@
     "total_net_pnl": -5.95,
     "trades": 23,
     "excluded_funding_unavailable": 10,
-    "no_trades": 182,
+    "no_trades": 183,
     "hit_rate": 0.391,
     "avg_pnl_per_trade": -0.26,
     "pnl_std_per_trade": 108.28,
@@ -104607,6 +104964,7 @@
      -5.95,
      -5.95,
      -5.95,
+     -5.95,
      -5.95
     ]
    },
@@ -104640,7 +104998,7 @@
     "total_net_pnl": -63.31,
     "trades": 23,
     "excluded_funding_unavailable": 10,
-    "no_trades": 182,
+    "no_trades": 183,
     "hit_rate": 0.391,
     "avg_pnl_per_trade": -2.75,
     "pnl_std_per_trade": 106.6,
@@ -104862,6 +105220,7 @@
      -63.31,
      -63.31,
      -63.31,
+     -63.31,
      -63.31
     ]
    },
@@ -104895,7 +105254,7 @@
     "total_net_pnl": 241.0,
     "trades": 10,
     "excluded_funding_unavailable": 6,
-    "no_trades": 199,
+    "no_trades": 200,
     "hit_rate": 0.5,
     "avg_pnl_per_trade": 24.1,
     "pnl_std_per_trade": 129.71,
@@ -105117,6 +105476,7 @@
      241.0,
      241.0,
      241.0,
+     241.0,
      241.0
     ]
    },
@@ -105150,7 +105510,7 @@
     "total_net_pnl": 160.05,
     "trades": 9,
     "excluded_funding_unavailable": 7,
-    "no_trades": 199,
+    "no_trades": 200,
     "hit_rate": 0.667,
     "avg_pnl_per_trade": 17.78,
     "pnl_std_per_trade": 66.51,
@@ -105372,6 +105732,7 @@
      160.05,
      160.05,
      160.05,
+     160.05,
      160.05
     ]
    },
@@ -105395,7 +105756,7 @@
     "total_net_pnl": 0.0,
     "trades": 0,
     "excluded_funding_unavailable": 0,
-    "no_trades": 215,
+    "no_trades": 216,
     "hit_rate": null,
     "avg_pnl_per_trade": null,
     "pnl_std_per_trade": null,
@@ -105403,6 +105764,7 @@
     "avg_holding_hours": null,
     "return_on_start_balance_pct": 0.0,
     "equity_curve": [
+     0.0,
      0.0,
      0.0,
      0.0,
@@ -105836,7 +106198,8 @@
    "APP-2026-11-04": "TRADE",
    "CGNX-2026-11-04": "NO_TRADE",
    "AAOI-2026-11-05": "NO_TRADE",
-   "AMAT-2026-11-12": "NO_TRADE"
+   "AMAT-2026-11-12": "NO_TRADE",
+   "CSCO-2026-11-12": "NO_TRADE"
   }
  }
 }
