@@ -33873,5 +33873,138 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "AMAT-2026-11-12",
+  "consensus": null,
+  "ticker": "AMAT",
+  "company_symbol": "AMATUSDT",
+  "sector_group": "semis",
+  "cik": 6951,
+  "accession": "0001628280-26-073360",
+  "release_utc": "2026-11-12T21:02:46Z",
+  "release_ms": 1794517366000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/exhibit991q42026earningsre.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/",
+   "sha256": null,
+   "cache_file": "data/cache/84b62988ce45112f7bf25a0d.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026056699/exhibit991q32026earningsre.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026056699/",
+   "accession": "0001628280-26-056699",
+   "cache_file": "data/cache/19be71e03330890afe777013.bin"
+  },
+  "earnings": {
+   "revenue_actual": null,
+   "revenue_guidance_prior": {
+    "value": 10250.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue | | | $ | 10,250 | | +/- | $ | 500",
+    "pattern": "Total (?:net )?revenue \\| \\| \\| \\$ \\| ([\\d,]+) \\| \\| \\+/- \\| \\$ \\| ([\\d,]+)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026056699/exhibit991q32026earningsre.htm",
+    "source_sha256": "db9ba61a81686640744ee4b7b848ffbee7067768b483ca623ae8bd539bfa9b11",
+    "extractor": "regex-v1:AMAT:revenue_guidance",
+    "low": 9750.0,
+    "high": 10750.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 11100.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue | | | $ | 11,100 | | +/- | $ | 500",
+    "pattern": "Total (?:net )?revenue \\| \\| \\| \\$ \\| ([\\d,]+) \\| \\| \\+/- \\| \\$ \\| ([\\d,]+)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/exhibit991q42026earningsre.htm",
+    "source_sha256": "a87c888a6ed662df3a90694e9d5ddb7deab51300c700f22ea8a0989f5fae4f11",
+    "extractor": "regex-v1:AMAT:revenue_guidance",
+    "low": 10600.0,
+    "high": 11600.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 9120.0,
+    "unit": "USD_millions",
+    "snippet": "Record revenue $9.12 billion, up",
+    "pattern": "(?:Quarterly revenue|Record revenue|Revenue) \\$(\\d+(?:\\.\\d+)?) billion, (?:up|down)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026056699/exhibit991q32026earningsre.htm",
+    "source_sha256": "db9ba61a81686640744ee4b7b848ffbee7067768b483ca623ae8bd539bfa9b11",
+    "extractor": "regex-v1:AMAT:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 4.16,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $4.16",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/exhibit991q42026earningsre.htm",
+    "source_sha256": "a87c888a6ed662df3a90694e9d5ddb7deab51300c700f22ea8a0989f5fae4f11",
+    "extractor": "regex-v1:AMAT:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Applied Materials delivered record results in fiscal 2026, and we are on track to grow our Semiconductor Systems business more than 40 percent in our calendar 2026,",
+   "speaker": "Gary Dickerson, President and CEO",
+   "snippet": "\"Applied Materials delivered record results in fiscal 2026, and we are on track to grow our Semiconductor Systems business more than 40 percent in our calendar 2026,\" said Gary Dickerson, President and CEO",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/exhibit991q42026earningsre.htm",
+   "source_sha256": "a87c888a6ed662df3a90694e9d5ddb7deab51300c700f22ea8a0989f5fae4f11"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_actual"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
  }
 ]
