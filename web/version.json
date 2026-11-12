@@ -1,13 +1,13 @@
 {
  "project": "residual",
- "commit": "aa1ece923f0c79934dd9da5c184473cbd89068ee",
- "generated_at": "2026-11-12T21:10:38+00:00",
+ "commit": "cf594d8a19f58503f206f8571a35c8caa90497d0",
+ "generated_at": "2026-11-12T21:16:00+00:00",
  "model_version": "residual-factor-v1",
  "extractor_version": "regex-v1",
  "sha256": {
-  "data/results.json": "7d6dcb1eac5e1f7ed000916c1dcf3674ad70b1b20a90288e1da4a68d41aa44b4",
-  "data/events.json": "25899059f73643558883bfb06e68158cd1a808cd00d09a5d0f2754877a8da8d6",
+  "data/results.json": "18e9574c88d586ffadd208c544d73974e6e34f2b14c1726fa7f6f198eb742634",
+  "data/events.json": "f9d5a6af3c3ffe5279d42a488fe8ac668b57e91bd28263667ada14a1840f7dc1",
   "data/ledger.csv": "6a5449abd0f6f3ee239c59554120a3b101d6b97ad5a856b6f00f0c29d5bbe3fd",
-  "web/data.json": "0bef589192d610163497e89d66858f6be8d194e2ce197bdec747f8206198a185"
+  "web/data.json": "f5eee60d089dc6609bd559e456541251bd75f74d35fd81789dbc5962e16f7040"
  }
 }
