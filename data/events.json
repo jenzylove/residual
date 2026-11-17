@@ -34158,5 +34158,167 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "NVDA-2026-11-17",
+  "consensus": null,
+  "ticker": "NVDA",
+  "company_symbol": "NVDAUSDT",
+  "sector_group": "semis",
+  "cik": 1045810,
+  "accession": "0001045810-26-000088",
+  "release_utc": "2026-11-17T21:20:51Z",
+  "release_ms": 1794950451000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/",
+   "sha256": "69d68c7fdaa4b663bde7b68953ecfde9bc4ae4ae43a02c64be081235e82a6539",
+   "cache_file": "data/cache/8e9715388feb8d0a47f19e77.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/",
+   "accession": "0001045810-26-000073",
+   "cache_file": "data/cache/973b6c1d75ea25e09c4739a9.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 115800.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the third quarter ended October 25, 2026, of $115.8 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+    "source_sha256": "69d68c7fdaa4b663bde7b68953ecfde9bc4ae4ae43a02c64be081235e82a6539",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 108000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $108.0 billion, plus or minus 2%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+    "source_sha256": "dc2f82fbec958c30d534468fd50f9f8b8fe892a12c960787c0d840e01787866c",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 105840.0,
+    "high": 110160.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 130000.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue is expected to be $130.0 billion, plus or minus 3%",
+    "pattern": "Revenue is expected to be \\$(\\d+(?:\\.\\d+)?) billion, plus or minus (\\d+(?:\\.\\d+)?)%",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+    "source_sha256": "69d68c7fdaa4b663bde7b68953ecfde9bc4ae4ae43a02c64be081235e82a6539",
+    "extractor": "regex-v1:NVDA:revenue_guidance",
+    "low": 126100.0,
+    "high": 133900.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 96200.0,
+    "unit": "USD_millions",
+    "snippet": "revenue for the second quarter ended July 26, 2026, of $96.2 billion",
+    "pattern": "revenue for the \\w+ quarter ended [A-Z][a-z]+ \\d{1,2}, \\d{4}, of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+    "source_sha256": "dc2f82fbec958c30d534468fd50f9f8b8fe892a12c960787c0d840e01787866c",
+    "extractor": "regex-v1:NVDA:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 2.7,
+    "unit": "USD_per_share",
+    "snippet": "GAAP earnings per diluted share were $2.70",
+    "pattern": "(?:GAAP )?earnings per diluted share (?:was|were|of) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 2,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+    "source_sha256": "69d68c7fdaa4b663bde7b68953ecfde9bc4ae4ae43a02c64be081235e82a6539",
+    "extractor": "regex-v1:NVDA:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": {
+    "value": 74.8,
+    "unit": "percent",
+    "snippet": "Gross margin | 74.8 | %",
+    "pattern": "Gross margin \\| (\\d+(?:\\.\\d+)?) \\| %",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+    "source_sha256": "69d68c7fdaa4b663bde7b68953ecfde9bc4ae4ae43a02c64be081235e82a6539",
+    "extractor": "regex-v1:NVDA:gross_margin",
+    "verified": true
+   }
+  },
+  "commentary": {
+   "text": "Our momentum is real. NVIDIA is an exceptional technology leader, powered by the relentless innovation of our people,",
+   "speaker": "Colette Kress, interim CEO and executive vice president and chief financial officer of NVIDIA",
+   "snippet": "\"Our momentum is real. NVIDIA is an exceptional technology leader, powered by the relentless innovation of our people,\" said Colette Kress, interim CEO and executive vice president and chief financial officer of NVIDIA",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+   "source_sha256": "69d68c7fdaa4b663bde7b68953ecfde9bc4ae4ae43a02c64be081235e82a6539"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 108000.0,
+   "revenue_actual": 115800.0,
+   "guidance_surprise_pct": 7.222,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 130000.0,
+   "guided_sequential_growth_pct": 12.263,
+   "prior_guided_sequential_growth_pct": 12.266,
+   "guidance_direction": "maintained"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": true,
+     "detail": "ok"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "reported"
+   }
+  },
+  "status": "complete"
  }
 ]
