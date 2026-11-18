@@ -34320,5 +34320,147 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "PANW-2026-11-18",
+  "consensus": null,
+  "ticker": "PANW",
+  "company_symbol": "PANWUSDT",
+  "sector_group": "software",
+  "cik": 1327567,
+  "accession": "0001327567-26-000030",
+  "release_utc": "2026-11-18T21:37:04Z",
+  "release_ms": 1795037824000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000030/ex991q127earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000030/",
+   "sha256": "53e0204407bf9db22a72885836d88c9d6782267cb303d7e9c5d975ebd67df0df",
+   "cache_file": "data/cache/07a0157836f82b8bf3314596.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000019/ex991q426earningsrelease.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000019/",
+   "accession": "0001327567-26-000019",
+   "cache_file": "data/cache/071aa54784af11bee86ffcf6.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 3440.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue for the fiscal first quarter 2027 grew 39% year over year to $3.44 billion",
+    "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000030/ex991q127earningsrelease.htm",
+    "source_sha256": "53e0204407bf9db22a72885836d88c9d6782267cb303d7e9c5d975ebd67df0df",
+    "extractor": "regex-v1:PANW:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 3305.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue in the range of $3.300 billion to $3.310 billion",
+    "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000019/ex991q426earningsrelease.htm",
+    "source_sha256": "32feff9c79919fb41c5b1f106ccf562d38dfaa72657b214fc6cdc9c676bf26ca",
+    "extractor": "regex-v1:PANW:revenue_guidance",
+    "low": 3300.0,
+    "high": 3310.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 3540.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue in the range of $3.530 billion to $3.550 billion",
+    "pattern": "Total revenue in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000030/ex991q127earningsrelease.htm",
+    "source_sha256": "53e0204407bf9db22a72885836d88c9d6782267cb303d7e9c5d975ebd67df0df",
+    "extractor": "regex-v1:PANW:revenue_guidance",
+    "low": 3530.0,
+    "high": 3550.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 3410.0,
+    "unit": "USD_millions",
+    "snippet": "Total revenue for the fiscal fourth quarter 2026 grew 34% year over year to $3.41 billion",
+    "pattern": "Total revenue for the fiscal \\w+ quarter \\d{4} grew \\d+% year over year to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000019/ex991q426earningsrelease.htm",
+    "source_sha256": "32feff9c79919fb41c5b1f106ccf562d38dfaa72657b214fc6cdc9c676bf26ca",
+    "extractor": "regex-v1:PANW:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We had a strong start to the year with a record Q1 and delivered one of our highest NGS ARR beats ever as our customers turn to us to protect them against an unprecedented threat environment,",
+   "speaker": "Nikesh Arora, chairman and chief executive officer of Palo Alto Networks",
+   "snippet": "\"We had a strong start to the year with a record Q1 and delivered one of our highest NGS ARR beats ever as our customers turn to us to protect them against an unprecedented threat environment,\" said Nikesh Arora, chairman and chief executive officer of Palo Alto Networks",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000030/ex991q127earningsrelease.htm",
+   "source_sha256": "53e0204407bf9db22a72885836d88c9d6782267cb303d7e9c5d975ebd67df0df"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 3305.0,
+   "revenue_actual": 3440.0,
+   "guidance_surprise_pct": 4.085,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 3540.0,
+   "guided_sequential_growth_pct": 2.907,
+   "prior_guided_sequential_growth_pct": -3.079,
+   "guidance_direction": "raised"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
