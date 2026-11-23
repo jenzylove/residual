@@ -7464,3 +7464,4 @@
 {"checked_at": "2026-11-23T10:39:11+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}, "publish": "github actions"}
 {"checked_at": "2026-11-23T10:49:11+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}, "publish": "github actions"}
 {"checked_at": "2026-11-23T10:59:11+00:00", "decision": "NO_TRADE", "reason": "no eligible earnings release since the last recorded event", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}, "publish": "github actions"}
+{"checked_at": "2026-11-23T11:09:12+00:00", "decision": "PENDING", "reason": "1 new event record(s) added; 1 event(s) evaluated", "demo_close": {"closed": 0, "still_open": 0, "marks": [], "results": []}, "publish": "github actions"}
