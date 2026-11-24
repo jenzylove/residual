@@ -35005,5 +35005,157 @@
    }
   },
   "status": "data_incomplete"
+ },
+ {
+  "event_id": "DELL-2026-11-24",
+  "consensus": null,
+  "ticker": "DELL",
+  "company_symbol": "DELLUSDT",
+  "sector_group": "hardware",
+  "cik": 1571996,
+  "accession": "0001571996-26-000050",
+  "release_utc": "2026-11-24T21:09:13Z",
+  "release_ms": 1795554553000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/",
+   "sha256": "282789a8bbb511e4eb3afb56b51f19b4071e6d017b48906c5f49ccf417266222",
+   "cache_file": "data/cache/1c2b42ed94f7e5c76325aa8f.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/exhibit991earnings8kq2fy27.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/",
+   "accession": "0001571996-26-000039",
+   "cache_file": "data/cache/4211fed2654651969938dcca.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 54900.0,
+    "unit": "USD_millions",
+    "snippet": "Record revenue of $54.9 billion, up",
+    "pattern": "Record (?:\\w+-quarter )?revenue of \\$(\\d+(?:\\.\\d+)?) billion, up",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm",
+    "source_sha256": "282789a8bbb511e4eb3afb56b51f19b4071e6d017b48906c5f49ccf417266222",
+    "extractor": "regex-v1:DELL:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 49000.0,
+    "unit": "USD_millions",
+    "snippet": "Q3FY27 (% Y/Y) | Revenue | $ | 49.0 |",
+    "pattern": "Q\\dFY\\d+ \\(% Y/Y\\) \\| Revenue \\| \\$ \\| (\\d+(?:\\.\\d+)?) \\|",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/exhibit991earnings8kq2fy27.htm",
+    "source_sha256": "9ef630c41bd4b8aeae804b7a38a161a4e7f1af546fe65869f2229b1cd9fda707",
+    "extractor": "regex-v1:DELL:revenue_guidance",
+    "low": 49000.0,
+    "high": 49000.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 56300.0,
+    "unit": "USD_millions",
+    "snippet": "Q4FY27 (% Y/Y) | Revenue | $ | 56.3 |",
+    "pattern": "Q\\dFY\\d+ \\(% Y/Y\\) \\| Revenue \\| \\$ \\| (\\d+(?:\\.\\d+)?) \\|",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm",
+    "source_sha256": "282789a8bbb511e4eb3afb56b51f19b4071e6d017b48906c5f49ccf417266222",
+    "extractor": "regex-v1:DELL:revenue_guidance",
+    "low": 56300.0,
+    "high": 56300.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 47000.0,
+    "unit": "USD_millions",
+    "snippet": "Record revenue of $47.0 billion, up",
+    "pattern": "Record (?:\\w+-quarter )?revenue of \\$(\\d+(?:\\.\\d+)?) billion, up",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/exhibit991earnings8kq2fy27.htm",
+    "source_sha256": "9ef630c41bd4b8aeae804b7a38a161a4e7f1af546fe65869f2229b1cd9fda707",
+    "extractor": "regex-v1:DELL:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": {
+    "value": 9.45,
+    "unit": "USD_per_share",
+    "snippet": "EPS of $9.45",
+    "pattern": "(?:GAAP )?EPS (?:of|was) \\$(\\d+(?:\\.\\d+)?)",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm",
+    "source_sha256": "282789a8bbb511e4eb3afb56b51f19b4071e6d017b48906c5f49ccf417266222",
+    "extractor": "regex-v1:DELL:eps_diluted",
+    "verified": true
+   },
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "We expect record full-year revenue of $202 billion , up 78%. We are now a different company, with Infrastructure Solutions Group (ISG) driving the vast majority of our profit and growth ,",
+   "speaker": "Jeff Clarke, vice chairman and chief operating officer, Dell Technologies",
+   "snippet": "\"We expect record full-year revenue of $202 billion , up 78%. We are now a different company, with Infrastructure Solutions Group (ISG) driving the vast majority of our profit and growth ,\" said Jeff Clarke, vice chairman and chief operating officer, Dell Technologies",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm",
+   "source_sha256": "282789a8bbb511e4eb3afb56b51f19b4071e6d017b48906c5f49ccf417266222"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 49000.0,
+   "revenue_actual": 54900.0,
+   "guidance_surprise_pct": 12.041,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 56300.0,
+   "guided_sequential_growth_pct": 2.55,
+   "prior_guided_sequential_growth_pct": 4.255,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
  }
 ]
