@@ -34598,5 +34598,412 @@
    }
   },
   "status": "complete"
+ },
+ {
+  "event_id": "ZM-2026-11-23",
+  "consensus": null,
+  "ticker": "ZM",
+  "company_symbol": "ZMUSDT",
+  "sector_group": "software",
+  "cik": 1585521,
+  "accession": "0001585521-26-000170",
+  "release_utc": "2026-11-23T21:05:46Z",
+  "release_ms": 1795467946000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/",
+   "sha256": "0abcc0776990d9e72ff6d841d54b1929254ac0573fc0a76b2a2db69b5c800b86",
+   "cache_file": "data/cache/3a873f2b66ac4063f676c718.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000119/zm-20260731ex991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000119/",
+   "accession": "0001585521-26-000119",
+   "cache_file": "data/cache/318c67501fe47756edc3f925.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 1290.6,
+    "unit": "USD_millions",
+    "snippet": "quarter total revenue of $1,290.6 million",
+    "pattern": "quarter total revenue of \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm",
+    "source_sha256": "0abcc0776990d9e72ff6d841d54b1929254ac0573fc0a76b2a2db69b5c800b86",
+    "extractor": "regex-v1:ZM:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 1277.5,
+    "unit": "USD_millions",
+    "snippet": "Total revenue is expected to be between $1.275 billion and $1.280 billion",
+    "pattern": "Total revenue is expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000119/zm-20260731ex991.htm",
+    "source_sha256": "cc0ee0c6a89e65e24e917a290e6fc18e5b7b53161c3c00dc8426326a72334daa",
+    "extractor": "regex-v1:ZM:revenue_guidance",
+    "low": 1275.0,
+    "high": 1280.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 1295.5,
+    "unit": "USD_millions",
+    "snippet": "Total revenue is expected to be between $1.293 billion and $1.298 billion",
+    "pattern": "Total revenue is expected to be between \\$(\\d+(?:\\.\\d+)?) billion and \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm",
+    "source_sha256": "0abcc0776990d9e72ff6d841d54b1929254ac0573fc0a76b2a2db69b5c800b86",
+    "extractor": "regex-v1:ZM:revenue_guidance",
+    "low": 1293.0,
+    "high": 1298.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 1277.2,
+    "unit": "USD_millions",
+    "snippet": "quarter total revenue of $1,277.2 million",
+    "pattern": "quarter total revenue of \\$([\\d,]+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000119/zm-20260731ex991.htm",
+    "source_sha256": "cc0ee0c6a89e65e24e917a290e6fc18e5b7b53161c3c00dc8426326a72334daa",
+    "extractor": "regex-v1:ZM:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Zoom delivered another strong quarter, with Enterprise revenue growth accelerating to its strongest pace in 13 quarters. Zoom Customer Experience was a key driver, posting its seventh consecutive quarter of high double-digit year-over-year ARR growth,",
+   "speaker": "Eric S",
+   "snippet": "\"Zoom delivered another strong quarter, with Enterprise revenue growth accelerating to its strongest pace in 13 quarters. Zoom Customer Experience was a key driver, posting its seventh consecutive quarter of high double-digit year-over-year ARR growth,\" said Eric S",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm",
+   "source_sha256": "0abcc0776990d9e72ff6d841d54b1929254ac0573fc0a76b2a2db69b5c800b86"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 1277.5,
+   "revenue_actual": 1290.6,
+   "guidance_surprise_pct": 1.025,
+   "vs_guidance_band": "above",
+   "next_quarter_guidance_mid": 1295.5,
+   "guided_sequential_growth_pct": 0.38,
+   "prior_guided_sequential_growth_pct": 0.023,
+   "guidance_direction": "maintained"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "HPE-2026-11-23",
+  "consensus": null,
+  "ticker": "HPE",
+  "company_symbol": "HPEUSDT",
+  "sector_group": "hardware",
+  "cik": 1645590,
+  "accession": "0001645590-26-000097",
+  "release_utc": "2026-11-23T21:12:08Z",
+  "release_ms": 1795468328000,
+  "release_session": "after_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/ex-991x11232026x8k.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/",
+   "sha256": "0af20af0b49b37054a1fa92f93678502ed2a465b8c38047f0786608626462c90",
+   "cache_file": "data/cache/cf92241e28a50e48e534899f.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000078/ex-991x922026x8k.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000078/",
+   "accession": "0001645590-26-000078",
+   "cache_file": "data/cache/db4e687c4d6373048003859d.bin"
+  },
+  "earnings": {
+   "revenue_actual": {
+    "value": 14500.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue : $14.5 billion, up 50% from the prior-year period",
+    "pattern": "Revenue : \\$(\\d+(?:\\.\\d+)?) billion, (?:up|down) \\d+% from the prior-year period",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/ex-991x11232026x8k.htm",
+    "source_sha256": "0af20af0b49b37054a1fa92f93678502ed2a465b8c38047f0786608626462c90",
+    "extractor": "regex-v1:HPE:revenue_actual",
+    "verified": true
+   },
+   "revenue_guidance_prior": {
+    "value": 14350.0,
+    "unit": "USD_millions",
+    "snippet": "HPE estimates revenue to be in the range of $13.9 billion to $14.8 billion",
+    "pattern": "HPE estimates revenue to be in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000078/ex-991x922026x8k.htm",
+    "source_sha256": "f680a995727dd7155dd9648e28354e2563ed1b86cb7fd1819a964ed21a5de8fe",
+    "extractor": "regex-v1:HPE:revenue_guidance",
+    "low": 13900.0,
+    "high": 14800.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 14300.0,
+    "unit": "USD_millions",
+    "snippet": "HPE estimates revenue to be in the range of $14.0 billion to $14.6 billion",
+    "pattern": "HPE estimates revenue to be in the range of \\$(\\d+(?:\\.\\d+)?) billion to \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/ex-991x11232026x8k.htm",
+    "source_sha256": "0af20af0b49b37054a1fa92f93678502ed2a465b8c38047f0786608626462c90",
+    "extractor": "regex-v1:HPE:revenue_guidance",
+    "low": 14000.0,
+    "high": 14600.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 12200.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue : $12.2 billion, up 34% from the prior-year period",
+    "pattern": "Revenue : \\$(\\d+(?:\\.\\d+)?) billion, (?:up|down) \\d+% from the prior-year period",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000078/ex-991x922026x8k.htm",
+    "source_sha256": "f680a995727dd7155dd9648e28354e2563ed1b86cb7fd1819a964ed21a5de8fe",
+    "extractor": "regex-v1:HPE:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "Fiscal 2026 was a defining year for HPE as we built a new networking industry leader and expanded our role in the AI infrastructure market,",
+   "speaker": "Antonio Neri, president and CEO of HPE",
+   "snippet": "\"Fiscal 2026 was a defining year for HPE as we built a new networking industry leader and expanded our role in the AI infrastructure market,\" said Antonio Neri, president and CEO of HPE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/ex-991x11232026x8k.htm",
+   "source_sha256": "0af20af0b49b37054a1fa92f93678502ed2a465b8c38047f0786608626462c90"
+  },
+  "surprise": {
+   "kind": "company-guidance surprise",
+   "basis": "reported revenue vs the company's own prior-quarter revenue outlook midpoint (not analyst consensus)",
+   "revenue_guided_mid": 14350.0,
+   "revenue_actual": 14500.0,
+   "guidance_surprise_pct": 1.045,
+   "vs_guidance_band": "inside",
+   "next_quarter_guidance_mid": 14300.0,
+   "guided_sequential_growth_pct": -1.379,
+   "prior_guided_sequential_growth_pct": 17.623,
+   "guidance_direction": "lowered"
+  },
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [],
+   "all_required_verified": true,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "complete"
+ },
+ {
+  "event_id": "ADI-2026-11-24",
+  "consensus": null,
+  "ticker": "ADI",
+  "company_symbol": "ADIUSDT",
+  "sector_group": "semis",
+  "cik": 6281,
+  "accession": "0000006281-26-000087",
+  "release_utc": "2026-11-24T12:03:22Z",
+  "release_ms": 1795521802000,
+  "release_session": "pre_market",
+  "source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/adiq426exhibit991.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/",
+   "sha256": null,
+   "cache_file": "data/cache/0ab5128870f7d7457a0e859b.bin"
+  },
+  "prior_source": {
+   "press_release_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+   "filing_index_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/",
+   "accession": "0000006281-26-000072",
+   "cache_file": "data/cache/310c5240a631ebce535f6546.bin"
+  },
+  "earnings": {
+   "revenue_actual": null,
+   "revenue_guidance_prior": {
+    "value": 4300.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $4.3 billion, +/- $100 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+    "source_sha256": "bec6691fe127ef390b3162d5bcbc3a49c53c32b679ba12bf69e4377c0ea3f382",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 4200.0,
+    "high": 4400.0,
+    "verified": true
+   },
+   "revenue_guidance_next": {
+    "value": 4400.0,
+    "unit": "USD_millions",
+    "snippet": "we are forecasting revenue of $4.4 billion, +/- $150 million",
+    "pattern": "we are forecasting revenue of \\$(\\d+(?:\\.\\d+)?) billion, \\+/- \\$(\\d+(?:\\.\\d+)?) million",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/adiq426exhibit991.htm",
+    "source_sha256": "938fd6b74f3adc745770b028e1369454b7a8c3701090a7b20c799fbdd27ed71e",
+    "extractor": "regex-v1:ADI:revenue_guidance",
+    "low": 4250.0,
+    "high": 4550.0,
+    "verified": true
+   },
+   "revenue_prior_actual": {
+    "value": 4020.0,
+    "unit": "USD_millions",
+    "snippet": "Revenue of $4.02 billion",
+    "pattern": "Revenue of \\$(\\d+(?:\\.\\d+)?) billion",
+    "flags": 0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000072/adi3q26exhibit991earnings.htm",
+    "source_sha256": "bec6691fe127ef390b3162d5bcbc3a49c53c32b679ba12bf69e4377c0ea3f382",
+    "extractor": "regex-v1:ADI:revenue_actual",
+    "verified": true
+   },
+   "eps_diluted": null,
+   "gross_margin": null
+  },
+  "commentary": {
+   "text": "ADI closed fiscal 2026 with record performance, demonstrating the continued strength of our business model,",
+   "speaker": "Vincent Roche, CEO and Chair",
+   "snippet": "\"ADI closed fiscal 2026 with record performance, demonstrating the continued strength of our business model,\" said Vincent Roche, CEO and Chair",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/adiq426exhibit991.htm",
+   "source_sha256": "938fd6b74f3adc745770b028e1369454b7a8c3701090a7b20c799fbdd27ed71e"
+  },
+  "surprise": null,
+  "validation": {
+   "checks": [
+    {
+     "field": "revenue_actual",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "revenue_guidance_prior",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_guidance_next",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "revenue_prior_actual",
+     "ok": true,
+     "detail": "ok"
+    },
+    {
+     "field": "eps_diluted",
+     "ok": false,
+     "detail": "not found in source"
+    },
+    {
+     "field": "gross_margin",
+     "ok": false,
+     "detail": "not found in source"
+    }
+   ],
+   "missing_required": [
+    "revenue_actual"
+   ],
+   "all_required_verified": false,
+   "required_fields": [
+    "revenue_actual",
+    "revenue_guidance_prior",
+    "revenue_guidance_next",
+    "revenue_prior_actual"
+   ],
+   "optional_fields": {
+    "eps_diluted": "not_reported",
+    "gross_margin": "not_reported"
+   }
+  },
+  "status": "data_incomplete"
  }
 ]
